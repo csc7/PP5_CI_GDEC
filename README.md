@@ -1081,7 +1081,7 @@ ___
 
     - I have used the learning material in the course as a guide and reference.
 
-    - "Boutique Ado" project: reference for building this PP5_CI_GDEC website/project.
+    - "Boutique Ado" project: reference for building this PP5_CI_GDEC website/project, and provision of code as commented out in the code.
         - ...
 
     - ...Tutor Assistance: Django models in app_weather could not be migrated as ...

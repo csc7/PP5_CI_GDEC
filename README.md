@@ -1097,6 +1097,8 @@ ___
 
 - Bootstrap:
 
+    - To find and check components : https://getbootstrap.com/docs/4.0/getting-started/introduction/.
+
     - Starter template: https://getbootstrap.com/docs/4.4/getting-started/introduction/, copied on March 1st, 2020, at 00:10.
 
     - ...
@@ -1129,6 +1131,8 @@ ___
 
 
 - Google:
+
+    - Google Fonts: Play (Regular 400 and Bold 700) and Roboto (Regular 400), import code copied on March 1st, 2022, at 05:05.
 
     - ...
 

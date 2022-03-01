@@ -1,0 +1,87 @@
+/* CSS File for GDEC Website */
+
+/* SECTION/GROUP OF PRINCIPAL CSS STYLES ARE COMMENTED WITH CAPITAL LETTERS plus 1 break line */
+/* Subsections/Subgroups of CSS styles are commented in lower-case plus 1 break line */
+/* Specific element styles are commented on top of the element, without break line */
+
+
+/* FONTS */
+/* Google Fonts: Play (Regular 400 and Bold 700) and Roboto (Regular 400) */
+/* Import code copied on March 1st, 2022, at 05:05*/
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto&display=swap');
+
+/* GENERAL STYLES */
+
+
+html {
+    height: 100%;
+}
+
+
+/* BODY */
+
+body {
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: aqua;
+    height: calc(100vh - 50px);
+    font-family: 'Play', sans-serif;
+}
+
+
+/* FOOTER */
+
+
+/* ********* */
+/* HOME PAGE */
+/* ********* */
+
+
+
+/* ************* */
+/* MEDIA QUERIES */
+/* ************* */
+
+
+/* FOOTHER ON BIG SCREEN SIZE, HEIGHT ABOVE 1080px */
+
+@media screen and (min-height: 1081px) {
+
+
+
+}
+
+
+/* SCREEN SIZE BELOW 1200px */
+
+@media screen and (max-width: 1200px) {
+
+
+}
+
+
+/* SCREEN SIZE BELOW 992px */
+
+@media screen and (max-width: 992px) {
+
+
+
+}
+
+
+/* SCREEN SIZE BELOW 768px */
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+
+/* SCREEN SIZE BELOW 575px */
+
+@media screen and (max-width: 576px) {
+
+
+
+}

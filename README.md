@@ -1166,7 +1166,7 @@ ___
 
     - As reference for testing in Python: https://docs.python.org/3/library/unittest.html .
 
-QGIS:
+- QGIS:
 
     - QGIS 3.18, to create the fictitious maps for data, created on February 24th, 2022.
 

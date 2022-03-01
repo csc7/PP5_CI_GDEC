@@ -1128,6 +1128,16 @@ ___
 
     - Icon for GDEC logo: link copied on March 1st, 2022, 04:00 from https://fontawesome.com/v4/icon/paw.
 
+    - Icon for Facebook: link copied on March 1st, 2022, 17:23 from https://fontawesome.com/v4/icon/facebook-square.
+
+    - Icon for LinkedIn: link copied on March 1st, 2022, 17:27 from https://fontawesome.com/v4/icon/linkedin-square.
+
+    - Icon for Twitter: link copied on March 1st, 2022, 17:28 from https://fontawesome.com/v4/icon/twitter-square.
+
+    - Icon for Instagram: link copied on March 1st, 2022, 17:28 from https://fontawesome.com/v4/icon/instagram.
+
+    - Icon for the envelope (for sending e-mails): link copied on March 1st, 2022, 17:29 from https://fontawesome.com/v4/icon/envelope.
+
 
 
 - Google:
@@ -1146,6 +1156,10 @@ ___
 
 - MDN Web Docs Moz://a;
     - ...
+
+- Natural Earth:
+
+    -  All images of maps have been generated with data of Natural Earth, using the "Natural Earth quick start kit" (50m raster), which was downloaded from https://www.naturalearthdata.com/downloads/ on February 23rd, 2022, at 22:22.
 
 
 - Python unittest:

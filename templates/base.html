@@ -36,7 +36,7 @@
         <title>GDEC {% block extra_title %}{% endblock %}</title>
     </head>
     <body>
-        <header class="container-fluid fixed-top">
+        <header class="container-fluid fixed-top bg-light">
             <div id="topnav" class="row d-none pt-sm-2 d-md-flex">
                 <div class="col-12 col-md-4 col-lg-4 my-auto py-1 py-lg-0 text-center text-md-left">
                     <a href="{% url 'home' %}" class="nav-link">
@@ -120,6 +120,48 @@
 
         {% block content %}
         {% endblock %}
+
+        <footer class="container-fluid bg-light">            
+            
+            <div class="row">
+                <div class="col-12 col-sm-4 text-center px-0 mx-0 mt-sm-3">
+                    <a id="contact-link-in-footer" href="https://www.facebook.com" 
+                        aria-label="Go to the Contact Form of the Geophysical Data E-Commerce Website (it does not open in a new tab)">Contact</a>
+                </div>
+                        
+            
+                <div class="col-12 col-sm-8 text-center">
+                    <ul class="social-contact-links px-0 mx-0 mt-sm-3">
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-3" href="https://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce Facebook page (it opens in a new tab)"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-3" href="https://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce LinkedIn page (it opens in a new tab)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-3" href="https://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Visit the GGeophysical Data E-Commerce Twitter page (it opens in a new tab)"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-3" href="https://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce Instagram page (it opens in a new tab)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-3" href="mailto:information@fictitioustgcemail.com" target="_blank" rel="noopener"
+                                aria-label="Send an e-mail to the Geophysical Data E-Commerce (it opens in a new tab)"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                       
+        </footer>
 
         {% block postloadjs %}
         <!-- Font Awesome Script / Kit

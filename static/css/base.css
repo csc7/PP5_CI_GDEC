@@ -25,15 +25,40 @@ html {
 /* BODY */
 
 body {
-    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    /* Image created with QGIS, using data from Natural Earth ("Natural Earth quick start kit", 50m raster) */
+    background: url('/media/global-map.PNG') no-repeat center center fixed;
     background-size: cover;
-    background-color: aqua;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 136px);
     font-family: 'Play', sans-serif;
 }
 
 
 /* FOOTER */
+
+footer {
+    width: 100%;
+    height: 80px;
+    position:fixed;
+    bottom:0;
+}
+
+.social-contact-links {
+    text-align: center;
+}
+
+.social-contact-links > li {
+    font-size: 200%;
+    display: inline;
+}
+
+.social-contact-links i {
+    /*padding: 1%;*/
+}
+
+#contact-link-in-footer {
+    font-size: 175%;
+}
+
 
 
 /* ********* */
@@ -86,6 +111,11 @@ body {
 
 @media screen and (max-width: 576px) {
 
+    /* FOOTER */
+
+    #contact-link-in-footer {
+        font-size: 150%;
+    }
 
 
 }

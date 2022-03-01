@@ -405,12 +405,12 @@ The following languages, software and tools were implemented using Windows 10 Pr
 ## **Software, Frameworks, Applications and Other Tools**
 - #### **GitHub**
 - #### **Gitpod**
-- #### **QGIS 3.18**
+- #### **QGIS 3.18 Zürich**
 - #### **Django 3.2**
 - #### **jQuery**
 - #### **django-allauth 0.41.0**
 - #### **PostgreSQL**
-- #### **Font Awesome (v5.15)**
+- #### **Font Awesome (v4)**
 - #### **Bootstrap (v4.0)**
 - #### **unittest**
 - #### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
@@ -1118,7 +1118,14 @@ ___
 
 - Font Awesome:
 
-    - ...
+    - Font Awesome Script / Kit, link copied on March 1st, 2022, 03:29 from Font Awesome personal account.
+
+    - Icon for My Account: link copied on March 1st, 2022, 03:32 from https://fontawesome.com/v4/icon/user.
+
+    - Icon for shopping cart: link copied on March 1st, 2022, 03:35 from https://fontawesome.com/v4/icon/shopping-cart.
+
+    - Icon for GDEC logo: link copied on March 1st, 2022, 04:00 from https://fontawesome.com/v4/icon/paw.
+
 
 
 - Google:

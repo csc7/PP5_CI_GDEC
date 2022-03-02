@@ -10,6 +10,7 @@ import os
 import glob
 import random
 
+
 # INTERNAL:
 
 ###############################################################################
@@ -27,8 +28,11 @@ magnetometry_files_found = 0
 # Open and write files in Python, continues below in ****
 # https://stackoverflow.com/questions/29223246/how-do-i-save-data-in-a-text-file-python
 # Accessed on March 2nd, 2022, at 00:57
-file_to_write = open('tools/products.csv', 'w')
+csv_file = open('tools/products.csv', 'w')
 
+# Write first line (header)
+csv_file.write('pk,model,category,sku,name,description,price,rating,' +
+               'image_url,image_name\n')
 
 # Read file path
 # https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
@@ -133,18 +137,24 @@ for file in glob.glob("media/*.png"):
     # https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file
     # Accessed on March 2nd, 2022, at 01:03
     # (Blank space, 6th element, is for rating)
-    file_to_write.write('%s, %s, %s, %s, %s, ' ', %s, %s\n' % (category,
-                                                               sku,
-                                                               name,
-                                                               description,
-                                                               price,
-                                                               png_file_path,
-                                                               png_file_name)
-                        )
+    model = 'products.product'
+    rating = ' '
+    csv_file.write('%i,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'
+                   % (file_names_found,
+                      model,
+                      category,
+                      sku,
+                      country,
+                      description,
+                      price,
+                      rating,
+                      png_file_path,
+                      png_file_name)
+                   )
 
 
 # Close file
-file_to_write.close()
+csv_file.close()
 
 
 # Print amount of files for QC
@@ -157,3 +167,23 @@ print("Gravimetry images found: " + str(gravimetry_files_found))
 print("Resistivity images found: " + str(resistivity_files_found))
 print("Magnetometry images found: " + str(magnetometry_files_found))
 print()
+
+
+# Open JSON file and write according to its structure
+json_file = open('tools/products.json', 'w')
+json_file.write('[')
+for i in range(1, file_paths_found+1):
+    # If last record, do not include comma
+    if i == file_paths_found:
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
+                        % (i, model, sku, name, description, price,
+                           png_file_path, png_file_name))
+    # Include comma for all other records
+    else:
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+                        % (i, model, sku, name, description, price,
+                           png_file_path, png_file_name))
+# Write last character of JSON format
+json_file.write(']')
+# Close the file
+json_file.close()

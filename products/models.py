@@ -1,5 +1,17 @@
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.db import models
 
+# INTERNAL:
+
+###############################################################################
+
+
+# Copied and modified from Code Institute "Boutique Ado" project
+# on March 2nd, 2022, at 16:00
 
 class Category(models.Model):
     name = models.CharField(max_length=254)

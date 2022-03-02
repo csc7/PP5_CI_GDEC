@@ -53,15 +53,18 @@ for file in glob.glob("media/*.png"):
         country = name[28:-4]
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] + country[0:3]).upper()      
+        sku = ('2022' + category[0:3] + serial_number[-4:] +
+               country[0:3]).upper()
         # Generate Description
         description = 'This file contains ' + category + ' data for ' + country
         # Price
-        # Random numbers from https://www.w3schools.com/python/ref_random_uniform.asp, accessed on March 2nd, 2022, at 01:42.
+        # Random numbers from
+        # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
+        # on March 2nd, 2022, at 01:42.
         price = format(random.uniform(10, 110), '.2f')
         # Count files in this category
         dem_files_found += 1
-    
+
     # If first character in file name is "r", then it is an image
     # for gravimetry
     if name[0] == 'g':
@@ -71,11 +74,14 @@ for file in glob.glob("media/*.png"):
         country = name[15:-4]
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] + country[0:3]).upper()      
+        sku = ('2022' + category[0:3] + serial_number[-4:] +
+               country[0:3]).upper()
         # Generate Description
         description = 'This file contains ' + category + ' data for ' + country
         # Price
-        # Random numbers from https://www.w3schools.com/python/ref_random_uniform.asp, accessed on March 2nd, 2022, at 01:42.
+        # Random numbers from
+        # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
+        # on March 2nd, 2022, at 01:42.
         price = format(random.uniform(10, 110), '.2f')
         # Count files in this category
         gravimetry_files_found += 1
@@ -89,11 +95,14 @@ for file in glob.glob("media/*.png"):
         country = name[16:-4]
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] + country[0:3]).upper()      
+        sku = ('2022' + category[0:3] + serial_number[-4:] +
+               country[0:3]).upper()
         # Generate Description
         description = 'This file contains ' + category + ' data for ' + country
         # Price
-        # Random numbers from https://www.w3schools.com/python/ref_random_uniform.asp, accessed on March 2nd, 2022, at 01:42.
+        # Random numbers from
+        # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
+        # on March 2nd, 2022, at 01:42.
         price = format(random.uniform(10, 110), '.2f')
         # Count files in this category
         resistivity_files_found += 1
@@ -107,11 +116,14 @@ for file in glob.glob("media/*.png"):
         country = name[17:-4]
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] + country[0:3]).upper()      
+        sku = ('2022' + category[0:3] + serial_number[-4:] +
+               country[0:3]).upper()
         # Generate Description
         description = 'This file contains ' + category + ' data for ' + country
         # Price
-        # Random numbers from https://www.w3schools.com/python/ref_random_uniform.asp, accessed on March 2nd, 2022, at 01:42.
+        # Random numbers from
+        # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
+        # on March 2nd, 2022, at 01:42.
         price = format(random.uniform(10, 110), '.2f')
         # Count files in this category
         magnetometry_files_found += 1
@@ -121,7 +133,14 @@ for file in glob.glob("media/*.png"):
     # https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file
     # Accessed on March 2nd, 2022, at 01:03
     # (Blank space, 6th element, is for rating)
-    file_to_write.write('%s, %s, %s, %s, %s, ' ', %s, %s\n' % (category, sku, name, description, price, png_file_path, png_file_name))
+    file_to_write.write('%s, %s, %s, %s, %s, ' ', %s, %s\n' % (category,
+                                                               sku,
+                                                               name,
+                                                               description,
+                                                               price,
+                                                               png_file_path,
+                                                               png_file_name)
+                        )
 
 
 # Close file
@@ -133,13 +152,8 @@ print()
 print("Files paths found: " + str(file_paths_found))
 print("Files names found: " + str(file_names_found))
 print()
-print("DEM images found: " + str( dem_files_found))
+print("DEM images found: " + str(dem_files_found))
 print("Gravimetry images found: " + str(gravimetry_files_found))
 print("Resistivity images found: " + str(resistivity_files_found))
 print("Magnetometry images found: " + str(magnetometry_files_found))
 print()
-
-
-
-
-

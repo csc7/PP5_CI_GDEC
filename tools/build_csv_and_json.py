@@ -152,8 +152,7 @@ for file in glob.glob("media/*.png"):
                       png_file_name)
                    )
 
-
-# Close file
+# Close the file
 csv_file.close()
 
 
@@ -183,6 +182,45 @@ for i in range(1, file_paths_found+1):
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (i, model, sku, name, description, price,
                            png_file_path, png_file_name))
+# Write last character of JSON format
+json_file.write(']')
+# Close the file
+json_file.close()
+
+
+# Values for the category model
+cats_model = '"products.category"'
+cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'last_arrivals']
+cats_friendly = ['DEM', 'Gravimetry', 'Resistivity', 'Magnetometry',
+                 'Last Arrivals']
+
+
+# Write five categories of products in a CSV file
+csv_file = csv_file = open('tools/categories.csv', 'w')
+# Write first line (header)
+csv_file.write('pk,model,category_name,friendly_name\n')
+for i in range(0, len(cats)):
+    csv_file.write('%i,%s,%s,%s\n'
+                   % (i+1,
+                      cats_model,
+                      cats[i],
+                      cats_friendly[i])
+                   )
+# Close the file
+csv_file.close()
+
+# Write five categories of products in a JSON file
+json_file = open('tools/categories.json', 'w')
+json_file.write('[')
+for i in range(1, len(cats)):
+    # If last record, do not include comma
+    if i == len(cats)-1:
+        json_file.write('{"pk":%s,"model":%s,"fields":{"name":"%s","friendly_name":"%s"}}'
+                        % (i, cats_model, cats[i], cats_friendly[i]))
+    # Include comma for all other records
+    else:
+        json_file.write('{"pk":%s,"model":%s,"fields":{"name":"%s","friendly_name":"%s"}},'
+                        % (i, cats_model, cats[i], cats_friendly[i]))
 # Write last character of JSON format
 json_file.write(']')
 # Close the file

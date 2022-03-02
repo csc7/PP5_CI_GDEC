@@ -1,0 +1,6 @@
+pk,model,category_name,friendly_name
+1,"products.category",dem,DEM
+2,"products.category",gravimetry,Gravimetry
+3,"products.category",resistivity,Resistivity
+4,"products.category",magnetometry,Magnetometry
+5,"products.category",last_arrivals,Last Arrivals

@@ -53,6 +53,7 @@ for file in glob.glob("media/*.png"):
     if name[0] == 'd':
         # Category
         category = 'DEM'
+        fk = 1
         # Country
         country = name[28:-4]
         # Generate SKU
@@ -74,6 +75,7 @@ for file in glob.glob("media/*.png"):
     if name[0] == 'g':
         # Category
         category = 'Gravimetry'
+        fk = 2
         # Country
         country = name[15:-4]
         # Generate SKU
@@ -95,6 +97,7 @@ for file in glob.glob("media/*.png"):
     if name[0] == 'r':
         # Category
         category = 'Resistivity'
+        fk = 3
         # Country
         country = name[16:-4]
         # Generate SKU
@@ -116,6 +119,7 @@ for file in glob.glob("media/*.png"):
     if name[0] == 'm':
         # Category
         category = 'Magnetometry'
+        fk = 4
         # Country
         country = name[17:-4]
         # Generate SKU
@@ -142,7 +146,7 @@ for file in glob.glob("media/*.png"):
     csv_file.write('%i,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'
                    % (file_names_found,
                       model,
-                      category,
+                      fk,
                       sku,
                       country,
                       description,
@@ -174,13 +178,13 @@ json_file.write('[')
 for i in range(1, file_paths_found+1):
     # If last record, do not include comma
     if i == file_paths_found:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
-                        % (i, model, sku, name, description, price,
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
+                        % (i, model, sku, name, description, price, fk,
                            png_file_path, png_file_name))
     # Include comma for all other records
     else:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
-                        % (i, model, sku, name, description, price,
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+                        % (i, model, sku, name, description, price, fk,
                            png_file_path, png_file_name))
 # Write last character of JSON format
 json_file.write(']')

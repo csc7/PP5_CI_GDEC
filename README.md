@@ -1174,14 +1174,21 @@ ___
 
 - Stack Overflow:
 
-    - ...
+    - Read file path with Python: https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory, accessed on March 1st, 2022, at 23_35.
+
+    - Read file name with Python: https://stackoverflow.com/questions/7336096/python-glob-without-the-whole-path-only-the-filename, accessed on March 1st, 2022, at 23_45.
+
+    - Open and write files in Python: https://stackoverflow.com/questions/29223246/how-do-i-save-data-in-a-text-file-python, accessed on March 2nd, 2022, at 00:57.
+
+    - Write several variables to file: https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file, accessed on March 2nd, 2022, at 01:03.
+
 
 - W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):
     - ...
 
 - W3Schools (Powered by W3.CSS), https://www.w3schools.com/:
 
-    - ...
+    - Generate random numbers (float format), https://www.w3schools.com/python/ref_random_uniform.asp, accessed on March 2nd, 2022, at 01:42.
 
 
 

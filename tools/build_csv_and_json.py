@@ -85,6 +85,7 @@ for file in glob.glob("media/*.png"):
             fk = 1
         # Country
         country = name[28:-4]
+        name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
         sku = ('2022' + category[0:3] + serial_number[-4:] +
@@ -114,6 +115,7 @@ for file in glob.glob("media/*.png"):
             fk = 2
         # Country
         country = name[15:-4]
+        name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
         sku = ('2022' + category[0:3] + serial_number[-4:] +
@@ -143,6 +145,7 @@ for file in glob.glob("media/*.png"):
             fk = 3
         # Country
         country = name[16:-4]
+        name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
         sku = ('2022' + category[0:3] + serial_number[-4:] +
@@ -172,6 +175,7 @@ for file in glob.glob("media/*.png"):
             fk = 4
         # Country
         country = name[17:-4]
+        name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
         sku = ('2022' + category[0:3] + serial_number[-4:] +
@@ -208,13 +212,13 @@ for file in glob.glob("media/*.png"):
 
     if file_paths_found == total_files:
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
-                        % (file_paths_found, model, sku, name[:-4],
+                        % (file_paths_found, model, sku, name_title,
                            description, price, fk,
                            png_file_path, png_file_name))
     # Include comma for all other records
     else:
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
-                        % (file_paths_found, model, sku, name[:-4],
+                        % (file_paths_found, model, sku, name_title,
                            description, price, fk,
                            png_file_path, png_file_name))
 

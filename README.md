@@ -1190,6 +1190,12 @@ ___
 
     - Generate random numbers (float format), https://www.w3schools.com/python/ref_random_uniform.asp, accessed on March 2nd, 2022, at 01:42.
 
+    - Check object-fit property for CSS: https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width, accessed on March 3rd, 2022, at 04:25.
+    
+    - Check object-fit property for CSS: https://www.w3schools.com/css/css3_object-fit.asp, accessed on March 3rd, 2022, at 04:27.
+
+    
+
 
 
 <br><br>

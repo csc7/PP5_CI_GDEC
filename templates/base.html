@@ -1,3 +1,4 @@
+<!-- Started from Bootstrap starter template: https://getbootstrap.com/docs/4.4/getting-started/introduction/, copied on March 1st, 2020, at 00:10, and later modified. -->
 {% load static %}
 
 <!doctype html>
@@ -107,7 +108,11 @@
                     {% include 'includes/cell-phone-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
                 </nav>
-
+            </div>
+            <div id="discount-banner" class="row text-center text-white">
+                <div class="col-12 bg-danger">
+                    <h4 class="my-1">Discount of 10% for orders over ${{ discount_threshold }}!</h4>                
+                </div>            
             </div>
         </header>
 

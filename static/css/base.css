@@ -22,6 +22,12 @@ html {
 }
 
 
+/* HEADER */
+
+.header-container {
+    padding-top: calc(136px + 36.8px);
+}
+
 /* BODY */
 
 body {
@@ -123,6 +129,12 @@ footer {
 /* SCREEN SIZE BELOW 768px */
 
 @media screen and (max-width: 768px) {
+
+    /* HEADER */
+
+    .header-container {
+    padding-top: calc(80px + 36.8px);
+    }
 
     /* FOOTER */
 

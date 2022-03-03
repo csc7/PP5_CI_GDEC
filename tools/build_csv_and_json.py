@@ -208,13 +208,13 @@ for file in glob.glob("media/*.png"):
 
     if file_paths_found == total_files:
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
-                        % (file_paths_found, model, sku, name,
+                        % (file_paths_found, model, sku, name[:-4],
                            description, price, fk,
                            png_file_path, png_file_name))
     # Include comma for all other records
     else:
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
-                        % (file_paths_found, model, sku, name,
+                        % (file_paths_found, model, sku, name[:-4],
                            description, price, fk,
                            png_file_path, png_file_name))
 

@@ -14,6 +14,10 @@ from django.db import models
 # on March 2nd, 2022, at 16:00
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+        
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

@@ -405,7 +405,7 @@ The following languages, software and tools were implemented using Windows 10 Pr
 ## **Software, Frameworks, Applications and Other Tools**
 - #### **GitHub**
 - #### **Gitpod**
-- #### **QGIS 3.18 Zürich**
+- #### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
 - #### **Django 3.2**
 - #### **jQuery**
 - #### **django-allauth 0.41.0**

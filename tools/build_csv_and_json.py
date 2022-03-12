@@ -72,7 +72,7 @@ for file in glob.glob("media/*.png"):
     png_file_name = name
     file_names_found += 1
 
-    # If first character in file name is "r", then it is an image
+    # If first character in file name is "d", then it is an image
     # for digital elevation model (DEM)
     if name[0] == 'd':
         # Category
@@ -102,7 +102,7 @@ for file in glob.glob("media/*.png"):
         # Count files in this category
         dem_files_found += 1
 
-    # If first character in file name is "r", then it is an image
+    # If first character in file name is "g", then it is an image
     # for gravimetry
     if name[0] == 'g':
         # Category
@@ -132,7 +132,7 @@ for file in glob.glob("media/*.png"):
         # Count files in this category
         gravimetry_files_found += 1
 
-    # If first character in file name is "r", then it is an image
+    # If first character are file name is "res", then it is an image
     # for resitivity
     if name[0:3] == 'res':
         # Category
@@ -162,7 +162,7 @@ for file in glob.glob("media/*.png"):
         # Count files in this category
         resistivity_files_found += 1
 
-    # If first character in file name is "r", then it is an image
+    # If first character in file name is "m", then it is an image
     # for magnetometry
     if name[0] == 'm':
         # Category
@@ -193,8 +193,8 @@ for file in glob.glob("media/*.png"):
         magnetometry_files_found += 1
 
 
-    # If first character in file name is "r", then it is an image
-    # for magnetometry
+    # If first characters in file name are "rep", then it is an image
+    # for a report
     if name[0:3] == 'rep':
         # Category
         category = 'Report'

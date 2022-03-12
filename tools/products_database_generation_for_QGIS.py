@@ -6,11 +6,11 @@ from qgis.core import *
 # https://realpython.com/python-sleep/
 import time
 
-NATURAL_EARTH_RASTER = 'D:/DATA/GIS/Natural_Earth_quick_start/packages/Natural_Earth_quick_start/50m_raster/NE1_50M_SR_W/NE1_50M_SR_W_other_by_CC_report.TIF'
+NATURAL_EARTH_RASTER = 'path_to_TIF_file/TIF_file.TIF'
 fi = QFileInfo(NATURAL_EARTH_RASTER)
 fname_r = fi.baseName()
 
-NATURAL_EARTH_VECTOR = 'D:/DATA/GIS/Natural_Earth_quick_start/packages/Natural_Earth_quick_start/50m_cultural/ne_50m_admin_0_countries.shp'
+NATURAL_EARTH_VECTOR = 'path_to_shape_with_country_borders/country_borders_file_name.shp'
 fi2 = QFileInfo(NATURAL_EARTH_VECTOR)
 fname_v = 'country_borders'
 
@@ -60,7 +60,7 @@ for i in range (0, len(countries)):
     #print(country_to_clip)
     
     #https://gis.stackexchange.com/questions/311919/saving-layer-as-shapefile-using-pyqgis
-    QgsVectorFileWriter.writeAsVectorFormat(current_layer,'D:/DATA/GIS/temp/' + countries[i],'utf-8',driverName='ESRI Shapefile')
+    QgsVectorFileWriter.writeAsVectorFormat(current_layer,'path_to_saving_directory/' + countries[i],'utf-8',driverName='ESRI Shapefile')
     
     # ACTIVATE IF YOU WANT TO LOAD FILTERED/SELECTED VECTOR LAYERS
     # IN CURRENT QGIS PROJECT, BE AWARE OF MEMORY REQUIREMENTS
@@ -88,7 +88,7 @@ for i in range (0, len(countries)):
     
     
     #raster_filepath = NATURAL_EARTH_RASTER
-    mask_filepath = 'D:/DATA/GIS/temp/' + countries[i] + '.shp'
+    mask_filepath = 'path_to_saving_directory/' + countries[i] + '.shp'
     
     
     mask_layer = QgsVectorLayer(mask_filepath, 'mask', 'ogr')
@@ -102,7 +102,7 @@ for i in range (0, len(countries)):
                 'KEEP_RESOLUTION': True,
                 'OPTIONS': None,
                 'DATA_TYPE': 0,
-                'OUTPUT': 'D:/DATA/GIS/temp/final/report_for_' + countries[i] + '.png'}
+                'OUTPUT': 'path_to_saving_directory/file_name_' + countries[i] + '.png'}
     
     
     # Changed from processing.runAndLoadResults to processing.run after reading
@@ -113,3 +113,4 @@ for i in range (0, len(countries)):
     # processing.runAndLoadResults('gdal:cliprasterbymasklayer', parameters)
     
     
+

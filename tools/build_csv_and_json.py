@@ -258,14 +258,14 @@ for file in glob.glob("media/*.png"):
 
 
 # Add 10 books to products
-for i in range(file_paths_found + 1, file_paths_found + 10):
+for i in range(file_paths_found + 1, file_paths_found + 11):
     serial_number = '000' + str(i)
     sku = ('2022' + 'BKS' + serial_number[-4:] +
                country[0:3]).upper()
     name_title = 'Book Name' + str(i)
     description = 'This book contains '
     price = format(random.uniform(20, 60), '.2f')
-    fk = 6
+    fk = 7
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
@@ -288,6 +288,41 @@ for i in range(file_paths_found + 1, file_paths_found + 10):
                       png_file_path,
                       png_file_name)
                    )
+
+
+
+# Add 10 courses to products
+for i in range(file_paths_found + 11, file_paths_found + 21):
+    serial_number = '000' + str(i)
+    sku = ('2022' + 'COU' + serial_number[-4:] +
+               country[0:3]).upper()
+    name_title = 'Course Name' + str(i)
+    description = 'This course is designated to train '
+    price = format(random.uniform(100, 200), '.2f')
+    fk = 8
+    png_file_path = 'media/'
+    png_file_name = 'file_name'
+
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+                        % (i, model, sku, name_title,
+                           description, price, fk,
+                           png_file_path, png_file_name))
+
+    country = 'N/A'
+    rating = ' '
+    csv_file.write('%i,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'
+                   % (i,
+                      model,
+                      fk,
+                      sku,
+                      country,
+                      description,
+                      price,
+                      rating,
+                      png_file_path,
+                      png_file_name)
+                   )
+
 
 
 # Close the CSV file
@@ -314,9 +349,9 @@ print()
 # Values for the category model
 cats_model = '"products.category"'
 cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'last_arrivals',
-        'reports', 'books']
+        'reports', 'books', 'course']
 cats_friendly = ['DEM', 'Gravimetry', 'Resistivity', 'Magnetometry',
-                 'Last Arrivals', 'Reports', 'Books']
+                 'Last Arrivals', 'Reports', 'Books', 'Course']
 
 
 # Create/Open file and write categories of products in a CSV file

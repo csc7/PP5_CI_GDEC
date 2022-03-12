@@ -1,4 +1,4 @@
-###############################################################################
+2###############################################################################
 
 # Load images or products in /media folder and run this program to generate the
 # products database
@@ -210,17 +210,52 @@ for file in glob.glob("media/*.png"):
                       png_file_name)
                    )
 
-    if file_paths_found == total_files:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
-                        % (file_paths_found, model, sku, name_title,
-                           description, price, fk,
-                           png_file_path, png_file_name))
+    ## Last record, no comma
+    #if file_paths_found == total_files:
+    #    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
+    #                    % (file_paths_found, model, sku, name_title,
+    #                       description, price, fk,
+    #                       png_file_path, png_file_name))
     # Include comma for all other records
     else:
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (file_paths_found, model, sku, name_title,
                            description, price, fk,
                            png_file_path, png_file_name))
+
+
+# Add 10 books to products
+for i in range(file_paths_found + 1, file_paths_found + 10):
+    serial_number = '000' + str(i)
+    sku = ('2022' + BKS + serial_number[-4:] +
+               country[0:3]).upper()
+    name_title = 'Book Name' + str(i)
+    description = 'This book contains '
+    price = format(random.uniform(20, 60), '.2f')
+    fk = 6
+    png_file_path = 'media/'
+    png_file_name = 'file_name'
+
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+                        % (i, model, sku, name_title,
+                           description, price, fk,
+                           png_file_path, png_file_name))
+
+    country = 'N/A'
+    rating = ' '
+    csv_file.write('%i,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'
+                   % (i,
+                      model,
+                      fk,
+                      sku,
+                      country,
+                      description,
+                      price,
+                      rating,
+                      png_file_path,
+                      png_file_name)
+                   )
+
 
 # Close the CSV file
 csv_file.close()

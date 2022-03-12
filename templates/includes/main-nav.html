@@ -6,10 +6,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Country</a>
-                <a href="" class="dropdown-item ">By Type</a>
-                <a href="" class="dropdown-item ">By Date</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="" class="dropdown-item ">By Country</a>
+                <a href="" class="dropdown-item">By Category</a>
+                <a href="" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -18,7 +17,7 @@
                 DEMs
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dems-link">
-                <a href="" class="dropdown-item">High Resolution</a>
+                <a href="{% url 'products' %}?category=activewear, essentials" class="dropdown-item">High Resolution</a>
                 <a href="" class="dropdown-item">Medium Resolution</a>
                 <a href="" class="dropdown-item">Low Resolution</a>
                 <a href="" class="dropdown-item">All</a>

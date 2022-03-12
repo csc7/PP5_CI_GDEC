@@ -24,6 +24,7 @@ dem_files_found = 0
 gravimetry_files_found = 0
 resistivity_files_found = 0
 magnetometry_files_found = 0
+report_files_found = 0
 
 model = 'products.product'
 
@@ -133,7 +134,7 @@ for file in glob.glob("media/*.png"):
 
     # If first character in file name is "r", then it is an image
     # for resitivity
-    if name[0] == 'r':
+    if name[0:3] == 'res':
         # Category
         category = 'Resistivity'
         # Assign fk, check first if it should be a last arrival product
@@ -191,6 +192,38 @@ for file in glob.glob("media/*.png"):
         # Count files in this category
         magnetometry_files_found += 1
 
+
+    # If first character in file name is "r", then it is an image
+    # for magnetometry
+    if name[0:3] == 'rep':
+        # Category
+        category = 'Report'
+        # Assign fk, check first if it should be a last arrival product
+        if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
+                (is_last_arrival_index < last_arrivals_items)):
+            fk = 5
+            is_last_arrival_index += 1
+        else:
+            fk = 6
+        # Country
+        country = name[11:-4]
+        name_title = country + ' ' + category
+        # Generate SKU
+        serial_number = '000' + str(file_names_found)
+        sku = ('2022' + category[0:3] + serial_number[-4:] +
+               country[0:3]).upper()
+        # Generate Description
+        description = ('This file contains a ' + category.lower() +
+                       ' for ' + country)
+        # Price
+        # Random numbers from
+        # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
+        # on March 2nd, 2022, at 01:42.
+        price = format(random.uniform(10, 110), '.2f')
+        # Count files in this category
+        report_files_found += 1
+
+
     # ****
     # Write several variables to file
     # https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file
@@ -217,8 +250,8 @@ for file in glob.glob("media/*.png"):
     #                       description, price, fk,
     #                       png_file_path, png_file_name))
     # Include comma for all other records
-    else:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+    #else:
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (file_paths_found, model, sku, name_title,
                            description, price, fk,
                            png_file_path, png_file_name))
@@ -227,7 +260,7 @@ for file in glob.glob("media/*.png"):
 # Add 10 books to products
 for i in range(file_paths_found + 1, file_paths_found + 10):
     serial_number = '000' + str(i)
-    sku = ('2022' + BKS + serial_number[-4:] +
+    sku = ('2022' + 'BKS' + serial_number[-4:] +
                country[0:3]).upper()
     name_title = 'Book Name' + str(i)
     description = 'This book contains '
@@ -274,14 +307,16 @@ print("DEM images found: " + str(dem_files_found))
 print("Gravimetry images found: " + str(gravimetry_files_found))
 print("Resistivity images found: " + str(resistivity_files_found))
 print("Magnetometry images found: " + str(magnetometry_files_found))
+print("Report images found: " + str(report_files_found))
 print()
 
 
 # Values for the category model
 cats_model = '"products.category"'
-cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'last_arrivals']
+cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'last_arrivals',
+        'reports', 'books']
 cats_friendly = ['DEM', 'Gravimetry', 'Resistivity', 'Magnetometry',
-                 'Last Arrivals']
+                 'Last Arrivals', 'Reports', 'Books']
 
 
 # Create/Open file and write categories of products in a CSV file

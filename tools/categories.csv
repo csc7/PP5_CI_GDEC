@@ -4,3 +4,5 @@ pk,model,category_name,friendly_name
 3,"products.category",resistivity,Resistivity
 4,"products.category",magnetometry,Magnetometry
 5,"products.category",last_arrivals,Last Arrivals
+6,"products.category",reports,Reports
+7,"products.category",books,Books

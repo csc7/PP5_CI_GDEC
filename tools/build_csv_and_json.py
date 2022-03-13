@@ -38,9 +38,9 @@ for file in glob.glob("media/*.png"):
 # will be considered as "Last Arrivals"
 is_last_arrival = []
 is_last_arrival_index = 0
-last_arrivals_items = 120
-for i in range(1, last_arrivals_items):
-    is_last_arrival.append(random.randint(1, total_files))
+last_arrivals_items = 20
+is_last_arrival = random.sample(range(total_files), last_arrivals_items)
+is_last_arrival.sort()
 
 
 # Open and write files in Python, continues below in ****
@@ -57,7 +57,7 @@ json_file.write('[')
 csv_file.write('pk,model,category,sku,name,description,price,rating,' +
                'image_url,image_name\n')
 
-
+print(is_last_arrival)
 # Read file path
 # https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
 # Accessed on March 1st, 2022, at 23_35
@@ -79,7 +79,7 @@ for file in glob.glob("media/*.png"):
         category = 'DEM'
         # Assign fk, check first if it should be a last arrival product
         if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
+                (is_last_arrival_index < last_arrivals_items - 1)):
             fk = 5
             is_last_arrival_index += 1
         else:
@@ -89,7 +89,8 @@ for file in glob.glob("media/*.png"):
         name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] +
+        year = str(random.randint(1970, 2022))
+        sku = (year + category[0:3] + serial_number[-4:] +
                country[0:3]).upper()
         # Generate Description
         description = ('This file contains ' + category.upper() +
@@ -109,7 +110,7 @@ for file in glob.glob("media/*.png"):
         category = 'Gravimetry'
         # Assign fk, check first if it should be a last arrival product
         if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
+                (is_last_arrival_index < last_arrivals_items - 1)):
             fk = 5
             is_last_arrival_index += 1
         else:
@@ -119,7 +120,8 @@ for file in glob.glob("media/*.png"):
         name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] +
+        year = str(random.randint(1970, 2022))
+        sku = (year + category[0:3] + serial_number[-4:] +
                country[0:3]).upper()
         # Generate Description
         description = ('This file contains ' + category.lower() +
@@ -139,7 +141,7 @@ for file in glob.glob("media/*.png"):
         category = 'Resistivity'
         # Assign fk, check first if it should be a last arrival product
         if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
+                (is_last_arrival_index < last_arrivals_items - 1)):
             fk = 5
             is_last_arrival_index += 1
         else:
@@ -149,7 +151,8 @@ for file in glob.glob("media/*.png"):
         name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] +
+        year = str(random.randint(1970, 2022))
+        sku = (year + category[0:3] + serial_number[-4:] +
                country[0:3]).upper()
         # Generate Description
         description = ('This file contains ' + category.lower() +
@@ -169,7 +172,7 @@ for file in glob.glob("media/*.png"):
         category = 'Magnetometry'
         # Assign fk, check first if it should be a last arrival product
         if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
+                (is_last_arrival_index < last_arrivals_items - 1)):
             fk = 5
             is_last_arrival_index += 1
         else:
@@ -179,7 +182,8 @@ for file in glob.glob("media/*.png"):
         name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] +
+        year = str(random.randint(1970, 2022))
+        sku = (year + category[0:3] + serial_number[-4:] +
                country[0:3]).upper()
         # Generate Description
         description = ('This file contains ' + category.lower() +
@@ -204,13 +208,15 @@ for file in glob.glob("media/*.png"):
             fk = 5
             is_last_arrival_index += 1
         else:
-            fk = 6
+            # Randomly assigned a category for the type of report
+            fk = random.randint(6, 8)
         # Country
         country = name[11:-4]
         name_title = country + ' ' + category
         # Generate SKU
         serial_number = '000' + str(file_names_found)
-        sku = ('2022' + category[0:3] + serial_number[-4:] +
+        year = str(random.randint(1970, 2022))
+        sku = (year + category[0:3] + serial_number[-4:] +
                country[0:3]).upper()
         # Generate Description
         description = ('This file contains a ' + category.lower() +
@@ -258,14 +264,29 @@ for file in glob.glob("media/*.png"):
 
 
 # Add 10 books to products
-for i in range(file_paths_found + 1, file_paths_found + 11):
+total_books = 10
+is_last_arrival = []
+is_last_arrival_index = 0
+last_arrivals_items = 3
+for i in range(1, total_books):
+    is_last_arrival.append(random.randint(file_paths_found + 1,
+                                          file_paths_found + total_books + 1))
+
+for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     serial_number = '000' + str(i)
-    sku = ('2022' + 'BKS' + serial_number[-4:] +
+    year = str(random.randint(1970, 2022))
+    sku = (year + 'BKS' + serial_number[-4:] +
                country[0:3]).upper()
     name_title = 'Book Name' + str(i)
     description = 'This book contains '
     price = format(random.uniform(20, 60), '.2f')
-    fk = 7
+    if ((i == is_last_arrival[is_last_arrival_index]) and
+                (is_last_arrival_index < last_arrivals_items)):
+            fk = 5
+            is_last_arrival_index += 1
+    else:
+        fk = 9
+
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
@@ -292,14 +313,29 @@ for i in range(file_paths_found + 1, file_paths_found + 11):
 
 
 # Add 10 courses to products
-for i in range(file_paths_found + 11, file_paths_found + 21):
+total_courses = 10
+is_last_arrival = []
+is_last_arrival_index = 0
+last_arrivals_items = 3
+for i in range(1, last_arrivals_items):
+    is_last_arrival.append(random.randint(file_paths_found + total_books + 1, 
+                                          file_paths_found + total_books + 
+                                          total_courses + 1))
+for i in range(file_paths_found + total_books + 1, file_paths_found
+               + total_books + total_courses + 1):
     serial_number = '000' + str(i)
-    sku = ('2022' + 'COU' + serial_number[-4:] +
+    year = str(random.randint(1970, 2022))
+    sku = (year + 'COU' + serial_number[-4:] +
                country[0:3]).upper()
     name_title = 'Course Name' + str(i)
     description = 'This course is designated to train '
     price = format(random.uniform(100, 200), '.2f')
-    fk = 8
+    if ((i == is_last_arrival[is_last_arrival_index]) and
+                (is_last_arrival_index < last_arrivals_items)):
+            fk = 5
+            is_last_arrival_index += 1
+    else:
+        fk = 10
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
@@ -322,6 +358,71 @@ for i in range(file_paths_found + 11, file_paths_found + 21):
                       png_file_path,
                       png_file_name)
                    )
+
+
+# Add 15 software to products
+total_software = 15
+is_last_arrival = []
+is_last_arrival_index = 0
+last_arrivals_items = 4
+for i in range(1, last_arrivals_items):
+    is_last_arrival.append(random.randint(file_paths_found + total_books +
+                                          total_courses + 1, 
+                                          file_paths_found + total_books + 
+                                          total_courses + total_software + 1))
+for i in range(file_paths_found + total_books + total_courses + 1, 
+               file_paths_found + total_books + total_courses +
+               total_software + 1):
+    serial_number = '000' + str(i)
+    year = str(random.randint(1970, 2022))
+    sku = (year + 'COU' + serial_number[-4:] +
+               country[0:3]).upper()
+    name_title = 'Course Name' + str(i)
+    description = 'This software package is a fundamental tool for '
+    price = format(random.uniform(500, 800), '.2f')
+    if ((i == is_last_arrival[is_last_arrival_index]) and
+                (is_last_arrival_index < last_arrivals_items)):
+            fk = 5
+            is_last_arrival_index += 1
+    else:
+        fk = random.randint(11, 13)
+    png_file_path = 'media/'
+    png_file_name = 'file_name'
+
+
+    # No "comma" in last record
+    if i == total_software:
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
+                        % (i, model, sku, name_title,
+                           description, price, fk,
+                           png_file_path, png_file_name))
+    
+    #Include comma for all other records, as before
+    else:
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+                        % (i, model, sku, name_title,
+                           description, price, fk,
+                           png_file_path, png_file_name))
+
+    country = 'N/A'
+    rating = ' '
+    csv_file.write('%i,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'
+                   % (i,
+                      model,
+                      fk,
+                      sku,
+                      country,
+                      description,
+                      price,
+                      rating,
+                      png_file_path,
+                      png_file_name)
+                   )
+
+
+
+
+
 
 
 

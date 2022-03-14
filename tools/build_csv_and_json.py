@@ -382,7 +382,7 @@ for i in range(file_paths_found + total_books + total_courses + 1,
     year = str(random.randint(1970, 2022))
     sku = (year + 'COU' + serial_number[-4:] +
                country[0:3]).upper()
-    name_title = 'Course Name'
+    name_title = 'Software Name'
     description = 'This software package is a fundamental tool for '
     price = format(random.uniform(500, 800), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and

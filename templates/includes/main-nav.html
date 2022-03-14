@@ -18,11 +18,11 @@
                 Digital Data
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dems-link">
-                <a href="{% url 'products' %}?category=activewear, essentials" class="dropdown-item">High Resolution</a>
-                <a href="" class="dropdown-item">Digital Elevation Models</a>
-                <a href="" class="dropdown-item">Gravimetry</a>
-                <a href="" class="dropdown-item">Magnetometry</a>
-                <a href="" class="dropdown-item">Resistivity</a>
+                <a href="{% url 'products' %}?category=dem" class="dropdown-item">Digital Elevation Models</a>
+                <a href="{% url 'products' %}?category=gravimetry" class="dropdown-item">Gravimetry</a>
+                <a href="{% url 'products' %}?category=magnetometry" class="dropdown-item">Magnetometry</a>
+                <a href="{% url 'products' %}?category=resistivity" class="dropdown-item">Resistivity</a>
+                <a href="{% url 'products' %}?category=dem,gravimetry,magnetometry,resistivity" class="dropdown-item">All</a>
             </div>
         </li>
 
@@ -31,10 +31,10 @@
                 Reports
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gravimetry-link">
-                <a href="" class="dropdown-item">Environmental Impact Assessments</a>
-                <a href="" class="dropdown-item">Geological Maps</a>
-                <a href="" class="dropdown-item">Weather Information</a>
-                <a href="" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=eia" class="dropdown-item">Environmental Impact Assessments</a>
+                <a href="{% url 'products' %}?category=geological_maps" class="dropdown-item">Geological Maps</a>
+                <a href="{% url 'products' %}?category=weather" class="dropdown-item">Weather Information</a>
+                <a href="{% url 'products' %}?category=eia,geological_maps,weather" class="dropdown-item">All</a>
             </div>
         </li>
 
@@ -43,9 +43,9 @@
                 Training
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="resistivity-link">
-                <a href="" class="dropdown-item">Courses</a>
-                <a href="" class="dropdown-item">Books</a>
-                <a href="" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=courses" class="dropdown-item">Courses</a>
+                <a href="{% url 'products' %}?category=books" class="dropdown-item">Books</a>
+                <a href="{% url 'products' %}?category=courses,books" class="dropdown-item">All</a>
             </div>
         </li>
 
@@ -54,10 +54,10 @@
                 Software
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="magnetometry-link">
-                <a href="" class="dropdown-item">Simulators</a>
-                <a href="" class="dropdown-item">Data Processing</a>
-                <a href="" class="dropdown-item">Data QC</a>
-                <a href="" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=simulators" class="dropdown-item">Simulators</a>
+                <a href="{% url 'products' %}?category=data_processing" class="dropdown-item">Data Processing</a>
+                <a href="{% url 'products' %}?category=data_qc" class="dropdown-item">Data QC</a>
+                <a href="{% url 'products' %}?category=simulators,data_processing,data_qc" class="dropdown-item">All</a>
             </div>
         </li>
 

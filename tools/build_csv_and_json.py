@@ -200,8 +200,7 @@ for file in glob.glob("media/*.png"):
     # If first characters in file name are "rep", then it is an image
     # for a report
     if name[0:3] == 'rep':
-        # Category
-        category = 'Report'
+        # Category, assigned later, based on fk
         # Assign fk, check first if it should be a last arrival product
         if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
@@ -210,6 +209,12 @@ for file in glob.glob("media/*.png"):
         else:
             # Randomly assigned a category for the type of report
             fk = random.randint(6, 8)
+        if fk == 6:
+            category = 'Environmental Impact Assessment'
+        elif fk == 7:
+            category = 'Weather Data'
+        else:
+            category = 'Geological Map'
         # Country
         country = name[11:-4]
         name_title = country + ' ' + category

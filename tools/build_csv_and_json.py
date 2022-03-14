@@ -454,11 +454,11 @@ print()
 
 # Values for the category model
 cats_model = '"products.category"'
-cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'last_arrivals',
+cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'offers',
         'eia', 'weather', 'geological_maps', 'books', 'courses',
         'simulators', 'data_processing', 'data_qc']
 cats_friendly = ['DEM', 'Gravimetry', 'Resistivity', 'Magnetometry',
-                 'Last Arrivals', 'EIA', 'Weather', 'Geological Maps',
+                 'Offers', 'EIA', 'Weather', 'Geological Maps',
                  'Books', 'Courses', 'Simulators', 'Data Processing',
                  'Data QC']
 

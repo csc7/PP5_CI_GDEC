@@ -3,7 +3,7 @@ pk,model,category_name,friendly_name
 2,"products.category",gravimetry,Gravimetry
 3,"products.category",resistivity,Resistivity
 4,"products.category",magnetometry,Magnetometry
-5,"products.category",last_arrivals,Last Arrivals
+5,"products.category",offers,Offers
 6,"products.category",eia,EIA
 7,"products.category",weather,Weather
 8,"products.category",geological_maps,Geological Maps

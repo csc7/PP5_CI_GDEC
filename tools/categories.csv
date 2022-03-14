@@ -4,6 +4,11 @@ pk,model,category_name,friendly_name
 3,"products.category",resistivity,Resistivity
 4,"products.category",magnetometry,Magnetometry
 5,"products.category",last_arrivals,Last Arrivals
-6,"products.category",reports,Reports
-7,"products.category",books,Books
-8,"products.category",course,Course
+6,"products.category",eia,EIA
+7,"products.category",weather,Weather
+8,"products.category",geological_maps,Geological Maps
+9,"products.category",books,Books
+10,"products.category",courses,Courses
+11,"products.category",simulators,Simulators
+12,"products.category",data_processing,Data Processing
+13,"products.category",data_qc,Data QC

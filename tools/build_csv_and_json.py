@@ -277,7 +277,7 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     year = str(random.randint(1970, 2022))
     sku = (year + 'BKS' + serial_number[-4:] +
                country[0:3]).upper()
-    name_title = 'Book Name' + str(i)
+    name_title = 'Book Name'
     description = 'This book contains '
     price = format(random.uniform(20, 60), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
@@ -327,7 +327,7 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
     year = str(random.randint(1970, 2022))
     sku = (year + 'COU' + serial_number[-4:] +
                country[0:3]).upper()
-    name_title = 'Course Name' + str(i)
+    name_title = 'Course Name'
     description = 'This course is designated to train '
     price = format(random.uniform(100, 200), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
@@ -377,7 +377,7 @@ for i in range(file_paths_found + total_books + total_courses + 1,
     year = str(random.randint(1970, 2022))
     sku = (year + 'COU' + serial_number[-4:] +
                country[0:3]).upper()
-    name_title = 'Course Name' + str(i)
+    name_title = 'Course Name'
     description = 'This software package is a fundamental tool for '
     price = format(random.uniform(500, 800), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
@@ -391,7 +391,7 @@ for i in range(file_paths_found + total_books + total_courses + 1,
 
 
     # No "comma" in last record
-    if i == total_software:
+    if i == file_paths_found + total_books + total_courses + total_software:
         json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
                         % (i, model, sku, name_title,
                            description, price, fk,
@@ -450,9 +450,12 @@ print()
 # Values for the category model
 cats_model = '"products.category"'
 cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'last_arrivals',
-        'reports', 'books', 'course']
+        'eia', 'weather', 'geological_maps', 'books', 'courses',
+        'simulators', 'data_processing', 'data_qc']
 cats_friendly = ['DEM', 'Gravimetry', 'Resistivity', 'Magnetometry',
-                 'Last Arrivals', 'Reports', 'Books', 'Course']
+                 'Last Arrivals', 'EIA', 'Weather', 'Geological Maps',
+                 'Books', 'Courses', 'Simulators', 'Data Processing',
+                 'Data QC']
 
 
 # Create/Open file and write categories of products in a CSV file

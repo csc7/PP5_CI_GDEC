@@ -98,7 +98,10 @@ for file in glob.glob("media/*.png"):
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
         # on March 2nd, 2022, at 01:42.
-        price = format(random.uniform(10, 110), '.2f')
+        price = format(random.uniform(50, 110), '.2f')
+        # If it is an offer, reduce the price
+        if fk == 5:
+            price = format(random.uniform(10, 49), '.2f')
         # Count files in this category
         dem_files_found += 1
 
@@ -129,7 +132,10 @@ for file in glob.glob("media/*.png"):
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
         # on March 2nd, 2022, at 01:42.
-        price = format(random.uniform(10, 110), '.2f')
+        price = format(random.uniform(50, 110), '.2f')
+        # If it is an offer, reduce the price
+        if fk == 5:
+            price = format(random.uniform(10, 49), '.2f')
         # Count files in this category
         gravimetry_files_found += 1
 
@@ -160,7 +166,10 @@ for file in glob.glob("media/*.png"):
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
         # on March 2nd, 2022, at 01:42.
-        price = format(random.uniform(10, 110), '.2f')
+        price = format(random.uniform(50, 110), '.2f')
+        # If it is an offer, reduce the price
+        if fk == 5:
+            price = format(random.uniform(10, 49), '.2f')
         # Count files in this category
         resistivity_files_found += 1
 
@@ -191,7 +200,10 @@ for file in glob.glob("media/*.png"):
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
         # on March 2nd, 2022, at 01:42.
-        price = format(random.uniform(10, 110), '.2f')
+        price = format(random.uniform(50, 110), '.2f')
+        # If it is an offer, reduce the price
+        if fk == 5:
+            price = format(random.uniform(10, 49), '.2f')
         # Count files in this category
         magnetometry_files_found += 1
 
@@ -229,7 +241,10 @@ for file in glob.glob("media/*.png"):
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
         # on March 2nd, 2022, at 01:42.
-        price = format(random.uniform(10, 110), '.2f')
+        price = format(random.uniform(50, 110), '.2f')
+        # If it is an offer, reduce the price
+        if fk == 14:
+            price = format(random.uniform(10, 49), '.2f')
         # Count files in this category
         report_files_found += 1
 
@@ -283,14 +298,16 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
                country[0:3]).upper()
     name_title = 'Book Name'
     description = 'This book contains '
-    price = format(random.uniform(20, 60), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
             fk = 15
             is_last_arrival_index += 1
     else:
         fk = 9
-
+    price = format(random.uniform(20, 60), '.2f')
+    # If it is an offer, reduce the price
+    if fk == 15:
+            price = format(random.uniform(10, 19), '.2f')
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
@@ -333,13 +350,16 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
                country[0:3]).upper()
     name_title = 'Course Name'
     description = 'This course is designated to train '
-    price = format(random.uniform(100, 200), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
             fk = 15
             is_last_arrival_index += 1
     else:
         fk = 10
+    price = format(random.uniform(100, 200), '.2f')
+    # If it is an offer, reduce the price
+    if fk == 15:
+            price = format(random.uniform(20, 99), '.2f')
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
@@ -383,13 +403,16 @@ for i in range(file_paths_found + total_books + total_courses + 1,
                country[0:3]).upper()
     name_title = 'Software Name'
     description = 'This software package is a fundamental tool for '
-    price = format(random.uniform(500, 800), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
             fk = 16
             is_last_arrival_index += 1
     else:
         fk = random.randint(11, 13)
+    price = format(random.uniform(500, 800), '.2f')
+    # If it is an offer, reduce the price
+    if fk == 16:
+            price = format(random.uniform(200, 499), '.2f')
     png_file_path = 'media/'
     png_file_name = 'file_name'
 

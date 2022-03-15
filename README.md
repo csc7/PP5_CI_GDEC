@@ -1182,6 +1182,9 @@ ___
 
     - Write several variables to file: https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file, accessed on March 2nd, 2022, at 01:03.
 
+    - Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55.
+
+
 
 - W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):
     - ...

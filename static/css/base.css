@@ -109,6 +109,7 @@ accessed on March 3rd, 2022, at 04:27.
     position: fixed;
     bottom: 100px;
     right: 20px;
+    border: blue;
 }
 
 .go-to-top-button-link {

@@ -94,6 +94,7 @@ for file in glob.glob("media/*.png"):
         # Generate Description
         description = ('This file contains ' + category.upper() +
                        ' data for ' + country)
+        resolution = True
         # Price
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
@@ -128,6 +129,7 @@ for file in glob.glob("media/*.png"):
         # Generate Description
         description = ('This file contains ' + category.lower() +
                        ' data for ' + country)
+        resolution = True
         # Price
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
@@ -162,6 +164,7 @@ for file in glob.glob("media/*.png"):
         # Generate Description
         description = ('This file contains ' + category.lower() +
                        ' data for ' + country)
+        resolution = True
         # Price
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
@@ -196,6 +199,7 @@ for file in glob.glob("media/*.png"):
         # Generate Description
         description = ('This file contains ' + category.lower() +
                        ' data for ' + country)
+        resolution = True
         # Price
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
@@ -237,6 +241,7 @@ for file in glob.glob("media/*.png"):
         # Generate Description
         description = ('This file contains a ' + category.lower() +
                        ' for ' + country)
+        resolution = False
         # Price
         # Random numbers from
         # https://www.w3schools.com/python/ref_random_uniform.asp, accessed
@@ -276,9 +281,9 @@ for file in glob.glob("media/*.png"):
     #                       png_file_path, png_file_name))
     # Include comma for all other records
     #else:
-    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (file_paths_found, model, sku, name_title,
-                           description, price, fk,
+                           description, price, resolution, fk,
                            png_file_path, png_file_name))
 
 
@@ -304,6 +309,7 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
             is_last_arrival_index += 1
     else:
         fk = 9
+    resolution = False
     price = format(random.uniform(20, 60), '.2f')
     # If it is an offer, reduce the price
     if fk == 15:
@@ -311,9 +317,9 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
-    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (i, model, sku, name_title,
-                           description, price, fk,
+                           description, price, resolution, fk,
                            png_file_path, png_file_name))
 
     country = 'N/A'
@@ -356,6 +362,7 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
             is_last_arrival_index += 1
     else:
         fk = 10
+    resolution = False
     price = format(random.uniform(100, 200), '.2f')
     # If it is an offer, reduce the price
     if fk == 15:
@@ -363,9 +370,9 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
     png_file_path = 'media/'
     png_file_name = 'file_name'
 
-    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (i, model, sku, name_title,
-                           description, price, fk,
+                           description, price, resolution, fk,
                            png_file_path, png_file_name))
 
     country = 'N/A'
@@ -419,16 +426,16 @@ for i in range(file_paths_found + total_books + total_courses + 1,
 
     # No "comma" in last record
     if i == file_paths_found + total_books + total_courses + total_software:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
                         % (i, model, sku, name_title,
-                           description, price, fk,
+                           description, price, resolution, fk,
                            png_file_path, png_file_name))
     
     #Include comma for all other records, as before
     else:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (i, model, sku, name_title,
-                           description, price, fk,
+                           description, price, resolution, fk,
                            png_file_path, png_file_name))
 
     country = 'N/A'

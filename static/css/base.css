@@ -103,6 +103,21 @@ accessed on March 3rd, 2022, at 04:27.
     object-fit: contain;
 }
 
+.go-to-top-button {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+}
+
+.go-to-top-button-link {
+    cursor: pointer;
+}
+
+.go-to-top-button-link > i{
+    color: blue;
+}
 
 
 /* ********* */

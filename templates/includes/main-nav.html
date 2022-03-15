@@ -66,12 +66,11 @@
                 Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="last-arrivals-link">
-                <a href="" class="dropdown-item">Vintage Data</a>                
-                <a href="" class="dropdown-item">Small Data Sets</a>
-                <a href="" class="dropdown-item">Special Reports</a>
-                <a href="" class="dropdown-item">Classic Courses</a>
-                <a href="" class="dropdown-item">Software Previous Versions</a>
-                <a href="" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=offers" class="dropdown-item">Vintage Data</a>                
+                <a href="{% url 'products' %}?category=offers" class="dropdown-item">Special Reports</a>
+                <a href="{% url 'products' %}?category=offers" class="dropdown-item">Classic Courses</a>
+                <a href="{% url 'products' %}?category=offers" class="dropdown-item">Software Previous Versions</a>
+                <a href="{% url 'products' %}?category=offers" class="dropdown-item">All</a>
             </div>
         </li>
     </ul>

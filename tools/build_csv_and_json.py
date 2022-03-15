@@ -57,7 +57,6 @@ json_file.write('[')
 csv_file.write('pk,model,category,sku,name,description,price,rating,' +
                'image_url,image_name\n')
 
-print(is_last_arrival)
 # Read file path
 # https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
 # Accessed on March 1st, 2022, at 23_35
@@ -204,7 +203,7 @@ for file in glob.glob("media/*.png"):
         # Assign fk, check first if it should be a last arrival product
         if ((file_paths_found == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
-            fk = 5
+            fk = 14
             is_last_arrival_index += 1
         else:
             # Randomly assigned a category for the type of report
@@ -287,7 +286,7 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     price = format(random.uniform(20, 60), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
-            fk = 5
+            fk = 15
             is_last_arrival_index += 1
     else:
         fk = 9
@@ -337,7 +336,7 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
     price = format(random.uniform(100, 200), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
-            fk = 5
+            fk = 15
             is_last_arrival_index += 1
     else:
         fk = 10
@@ -387,7 +386,7 @@ for i in range(file_paths_found + total_books + total_courses + 1,
     price = format(random.uniform(500, 800), '.2f')
     if ((i == is_last_arrival[is_last_arrival_index]) and
                 (is_last_arrival_index < last_arrivals_items)):
-            fk = 5
+            fk = 16
             is_last_arrival_index += 1
     else:
         fk = random.randint(11, 13)
@@ -454,13 +453,15 @@ print()
 
 # Values for the category model
 cats_model = '"products.category"'
-cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'offers',
+cats = ['dem', 'gravimetry', 'resistivity', 'magnetometry', 'data_offers',
         'eia', 'weather', 'geological_maps', 'books', 'courses',
-        'simulators', 'data_processing', 'data_qc']
+        'simulators', 'data_processing', 'data_qc', 'report_offers',
+        'training_offers', 'software_offers']
 cats_friendly = ['DEM', 'Gravimetry', 'Resistivity', 'Magnetometry',
-                 'Offers', 'EIA', 'Weather', 'Geological Maps',
+                 'Data Offers', 'EIA', 'Weather', 'Geological Maps',
                  'Books', 'Courses', 'Simulators', 'Data Processing',
-                 'Data QC']
+                 'Data QC', 'Report Offers', 'Training Offers',
+                 'Software Offers']
 
 
 # Create/Open file and write categories of products in a CSV file

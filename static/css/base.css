@@ -112,7 +112,9 @@ accessed on March 3rd, 2022, at 04:27.
     border: blue;
 }
 
-.go-to-top-button-link {
+.go-to-top-button-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 

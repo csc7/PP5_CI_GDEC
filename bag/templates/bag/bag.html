@@ -48,7 +48,37 @@
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                    <form class="form update-form" method="POST" action="">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-sm btn-primary rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control form-contro-sm qty_input" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-sm btn-primary rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                {% if item.product.resolution %}
+                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <a class="update-link text-info"><small>Update</small></a>
+                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.resolution }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">${{ item.product.price }}</p>
@@ -97,4 +127,12 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+<!-- Font Awesome Script / Kit
+Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
+<script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
+<!-- This page javascript file -->
+<script src="{% static 'js/quantity_incr_decr.js' %}"></script>
 {% endblock %}

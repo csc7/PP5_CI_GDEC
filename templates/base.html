@@ -111,7 +111,12 @@
             </div>
             <div id="discount-banner" class="row text-center text-white">
                 <div class="col-12 bg-danger">
-                    <h4 class="my-1">Discount of 10% for orders over ${{ discount_threshold }}!</h4>                
+                    <!-- Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
+                    Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
+                    accessed on March 16th, 2022, at 3:20. -->
+                    <div class="col-12 bg-danger my-0 holder">
+                        <div class="my-auto last-news"><h5>Discount of 10% for orders over ${{ discount_threshold }}!</h5></div>                
+                    </div>          
                 </div>            
             </div>
         </header>

@@ -1186,6 +1186,8 @@ ___
 
     - Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55.
 
+    - Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5; accessed on March 16th, 2022, at 3:20.
+
 
 
 - W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):
@@ -1198,6 +1200,8 @@ ___
     - Check object-fit property for CSS: https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width, accessed on March 3rd, 2022, at 04:25.
     
     - Check object-fit property for CSS: https://www.w3schools.com/css/css3_object-fit.asp, accessed on March 3rd, 2022, at 04:27.
+
+    - Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
 
     
 

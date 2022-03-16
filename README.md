@@ -1090,6 +1090,8 @@ ___
 
     - Tutor Assistance: ..s.
 
+    - Not to include "bag_tools" (Python function based on a Django template) as app; Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28-->
+
 
 - Balsamiq Wireframes: I have used it to create all the wireframes.
 

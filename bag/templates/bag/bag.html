@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Do not include bag_tools as app, Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28-->
+{% load bag_tools %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -48,7 +51,7 @@
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <form class="form update-form" method="POST" action="">
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -60,7 +63,7 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <input class="form-control form-contro-sm qty_input" type="number"
+                                                <input class="form-control form-control-sm qty_input" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
                                                     id="id_qty_{{ item.item_id }}">
                                                 <div class="input-group-append">
@@ -77,11 +80,11 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.resolution }}"><small>Remove</small></a>
+                                    <a class="update-link text-info float-right"><small>Update</small></a>
+                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.product.price }}</p>
+                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -134,5 +137,7 @@
 Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
 <script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
 <!-- This page javascript file -->
+<script>var csrfToken = "{{ csrf_token }}";</script>
 <script src="{% static 'js/quantity_incr_decr.js' %}"></script>
 {% endblock %}
+

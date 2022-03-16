@@ -102,6 +102,23 @@ footer {
 }
 
 
+/* MESSAGES */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast.capper {
+    height: 2px;
+}
+
 /* PRODUCTS */
 
 /* Object-fit property for CSS:

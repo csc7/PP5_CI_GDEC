@@ -31,7 +31,7 @@ def add_to_bag(request, item_id):
                 bag[item_id]['items_by_resolution'][resolution] = quantity
         else:
             bag[item_id] = {'items_by_resolution': {resolution: quantity}}
-
+            
 
     else:
 
@@ -40,11 +40,13 @@ def add_to_bag(request, item_id):
 
         else:
             bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            messages.success(request, f'{product.name} added to the bag')
+            
 
     request.session['bag'] = bag
 
     return redirect(redirect_url)
+
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of items in the purchasing bag"""

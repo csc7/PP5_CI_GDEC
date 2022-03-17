@@ -61,5 +61,4 @@ $('.remove-item').click(function(e) {
      });
 })
 
-// Show messages
-// $('.toast').toast('show');
+console.log("Incr/Decr JS loaded");

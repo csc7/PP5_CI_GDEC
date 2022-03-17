@@ -1,1 +1,17 @@
-<!--Bootstrap v4.6 Toasts, https://getbootstrap.com/docs/4.6/components/toasts/; copied on March 16th, 2022, at 15:00 -->
+<!--Bootstrap v4.6 Toasts, https://getbootstrap.com/docs/4.6/components/toasts/; copied on March 16th, 2022, at 15:00, later modified -->
+<div class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="10000">
+    <div class="arrow-up arrow-danger"></div>
+    <div class="w-100 toast-capper bg-danger"></div>
+    <div class="toast-header bg-white text-dark">
+        <img src="{{ product.image_name.url }}" class="rounded mr-2 toast-image" alt="{{ message }} added to bag image">
+        <strong class="mr-auto">Error</strong>
+        <small></small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        {{ message }}
+    </div>
+  </div>
+  

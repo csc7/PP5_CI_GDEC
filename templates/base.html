@@ -125,13 +125,13 @@
             
             console.log("Show messages loaded");
         </script>
-        {% if messages %}
-            <div class="message-container"></div>
+        <div class="message-container">
+        {% if messages %}            
                 {% for message in messages %}
                     {% include 'includes/toasts/toast_success.html' %}
                 {% endfor %}
         {% endif %}
-        
+        </div>
         {% block page_header %}
         {% endblock %}
 
@@ -144,11 +144,13 @@
 
        
         {% block postloadjs %}
+        {{ block.super }}
         
         <!-- Font Awesome Script / Kit
         Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
         <script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
-        
+        <!-- This page javascript file -->
+        <script src="{% static 'js/show_messages.js' %}"></script>
         {% endblock %}
 
   </body>

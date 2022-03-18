@@ -416,6 +416,7 @@ The following languages, software and tools were implemented using Windows 10 Pr
 - #### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
 - #### **ERDPlus, to make the data model graph**
 - #### **Google Fonts**
+- #### **Stripe**
 - #### **W3C Markup Validation Service**
 - #### **W3C CSS Validation Service**
 - #### **JSHint (version 2.13.0)**
@@ -1188,6 +1189,13 @@ ___
 
     - Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5; accessed on March 16th, 2022, at 3:20.
 
+    - Inclusion of Google fonts in Stripe elements based on https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working, accessed on March 18th, 2022, at 6:20.
+
+- Stripe:
+
+    - Core logic/payment flow: https://stripe.com/docs/payments/accept-a-payment.
+
+    - CSS styles: https://stripe.com/docs/stripe-js; https://stripe.com/docs/payments/elements.
 
 
 - W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):

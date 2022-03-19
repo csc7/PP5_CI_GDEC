@@ -43,10 +43,10 @@ https://stripe.com/docs/stripe-js
     color: #aab7c4;
 }
 
-.StripeElement--empty > iframe {
+/*.StripeElement--empty > iframe {
     background-color: blue;
     font-family: 'Play', sans-serif;
-}
+}*/
 
 /* End styles from Stripe */
 

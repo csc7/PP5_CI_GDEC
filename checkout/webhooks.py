@@ -13,7 +13,6 @@ import stripe
 
 @require_POST
 @csrf_exempt
-
 def webhook(request):
     """
     Listen webhooks from Stripe
@@ -29,7 +28,7 @@ def webhook(request):
     event = None
 
     try:
-        event = stripe.Event.construct_from(
+        event = stripe.Webhook.construct_from(
             payload, sig_header, wh_secret
         )
     except ValueError as e:

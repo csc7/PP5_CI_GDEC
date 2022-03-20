@@ -24,6 +24,82 @@ class StripeWH_Handler:
         intent = event.data.object
         print("intent: " + intent)
 
+        pid = intent.id
+        bag = intent.metadata.bag
+        save_info = intent.metadata.save_info
+
+        billing_details = intent.charges.data[0].billing_details
+        shipping_details = intent.shipping
+        grand_total = round (intent.data.charges[0].amount / 100, 2)
+
+        for field, value in shipping_details.address.items():
+            if value =="":
+                shipping_details.address[field] = None
+
+        order_exists = False
+        try:
+            order = Order.objects.get(
+                full_name__iexact=shipping_details.name,
+                email__iexact=billing_details.email,
+                phone_number__iexact=shipping_details.phone,
+                country__iexact=shipping_details.address.country,
+                postcode__iexact=shipping_details.address.postal_code,
+                town_or_city__iexact=shipping_details.address.city,
+                street_address1__iexact=shipping_details.address.line1,
+                street_address2__iexact=shipping_details.address.line2,
+                county__iexact=shipping_details.address.state,
+                grand_total=grand_total,
+                #original_bag=bag,
+                #stripe_pid=pid
+            )
+            order_exists = True
+            return HttpResponse(
+                content=f'Webhook received: {event["type"]} | SUCCESS: order \
+                    already in database',
+                status=200)
+        except Order.DoesNotExist:
+            try
+                for item_id, item_data in json.loads(bag).items():
+                    order = Order.objects.create(
+                        full_name=shipping_details.name,
+                        email=billing_details.email,
+                        phone_number=shipping_details.phone,
+                        country=shipping_details.address.country,
+                        postcode=shipping_details.address.postal_code,
+                        town_or_city=shipping_details.address.city,
+                        street_address1=shipping_details.address.line1,
+                        street_address2=shipping_details.address.line2,
+                        county=shipping_details.address.state,
+                    )
+                    product = Product.objects.get(id=item_id)
+                    try:
+                        product = Product.objects.get(id=item_id)
+                        # if integer, then the item does not have resolution
+                        if isinstance(item_data, int):
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                quantity=item_data,
+                            )
+                            order_line_item.save()
+                        # else, the item does have resolution
+                        else:
+                            for resolution, quantity in item_data['items_by_resolution'].items():
+                                print(item_data)
+                                order_line_item = OrderLineItem(
+                                    order=order,
+                                    product=product,
+                                    quantity=quantity,
+                                    product_resolution=resolution,
+                                )
+                                order_line_item.save()
+                    except Exception as e:
+                        if order:
+                            order.delete()
+                        return HttpResponse(content=f'Webhook received: \
+                            {event["type"]} | ERROR: {e}', status=500)
+
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)

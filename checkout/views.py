@@ -117,6 +117,9 @@ def checkout(request):
 
         order_form = OrderForm()
 
+        print("order_form: ")
+        print(order_form)
+
     if not stripe_public_key:
         messages.warning(request, 'Missing Stripe public key. \
             Check if it is set in your environment.')

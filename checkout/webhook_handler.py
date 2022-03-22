@@ -28,23 +28,27 @@ class StripeWH_Handler:
         Handle payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
-        print("intent: " + intent)
+        print("intent: ")
+        print(intent)
 
         pid = intent.id
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
+        print("Charges.data: ")
+        print(intent.charges.data)
+
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        grand_total = round (intent.charges.data[0].amount / 100, 2)
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         for field, value in shipping_details.address.items():
             if value =="":
                 shipping_details.address[field] = None
 
         order_exists = False
-        attemp = 1
-        while attemp <= 5:
+        attempt = 1
+        while attempt <= 5:
             try:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
@@ -64,7 +68,7 @@ class StripeWH_Handler:
                 break
                 
             except Order.DoesNotExist:
-                attemp += 1
+                attempt += 1
                 time.sleep(1)
         if order_exists:
             return HttpResponse(

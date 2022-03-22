@@ -1,3 +1,5 @@
+###############################################################################
+
 """
 ASGI config for PP5_CI_GDEC project.
 
@@ -7,9 +9,18 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 """
 
-import os
+###############################################################################
 
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
+import os
 from django.core.asgi import get_asgi_application
+
+# INTERNAL:
+
+###############################################################################
+
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PP5_CI_GDEC.settings')
 

@@ -1,7 +1,23 @@
+###############################################################################
+
+"""
+Context file for the bag app, computing grand total and delivery costs.
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+
+# INTERNAL:
 from products.models import Product
+
+###############################################################################
+
 
 def bag_contents(request):
 

@@ -1,5 +1,20 @@
+###############################################################################
+
+"""
+Django forms for the checkout app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django import forms
+
+# INTERNAL:
 from .models import Order
+
+###############################################################################
 
 
 class OrderForm(forms.ModelForm):

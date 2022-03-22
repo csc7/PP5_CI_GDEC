@@ -1,9 +1,24 @@
-import uuid
+###############################################################################
 
+"""
+Django models for the checkout app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
+import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+
+# INTERNAL:
 from products.models import Product
+
+###############################################################################
+
 
 # Create your models here.
 

@@ -1,4 +1,20 @@
+###############################################################################
+
+"""
+Python apps file for the Django products app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.apps import AppConfig
+
+# INTERNAL:
+
+
+###############################################################################
 
 
 class ProductsConfig(AppConfig):

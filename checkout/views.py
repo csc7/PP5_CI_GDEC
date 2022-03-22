@@ -1,3 +1,14 @@
+###############################################################################
+
+"""
+Django views for the checkout app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
@@ -5,12 +16,13 @@ from django.views.decorators.http import require_POST
 import stripe
 import json
 
+# INTERNAL:
 from bag.contexts import bag_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
 
-# Create your views here.
+###############################################################################
 
 
 # To check if the user has the "save info" box checked ruding payment

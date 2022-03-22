@@ -1,6 +1,22 @@
+###############################################################################
+
+"""
+Django URLs for the checkout app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.urls import path
+
+# INTERNAL:
 from . import views
 from .webhooks import webhook
+
+###############################################################################
+
 
 urlpatterns = [
     path('', views.checkout, name='checkout'),

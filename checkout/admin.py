@@ -1,9 +1,23 @@
+###############################################################################
+
+"""
+Python administration file for the Django checkout app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.contrib import admin
 
-# Register your models here.
-
+# INTERNAL:
 from .models import Order, OrderLineItem
 
+###############################################################################
+
+
+# Register your models here.
 
 class OrderLineItemAdminInline(admin.TabularInline):
     """ 

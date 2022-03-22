@@ -1,4 +1,19 @@
+###############################################################################
+
+"""
+Python apps file for the Django checkout app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.apps import AppConfig
+
+# INTERNAL:
+
+###############################################################################
 
 
 class CheckoutConfig(AppConfig):

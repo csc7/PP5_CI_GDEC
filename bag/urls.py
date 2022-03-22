@@ -1,5 +1,21 @@
+###############################################################################
+
+"""
+Django URLs for the bag app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.urls import path
+
+# INTERNAL:
 from . import views
+
+###############################################################################
+
 
 urlpatterns = [
     path('', views.view_bag, name='view_bag'),

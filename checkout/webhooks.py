@@ -1,15 +1,30 @@
-# Stripe DOCS, webhooks, copied and modified with Code Institue content
-# on March 19th, 2022, at 16:23, from https://stripe.com/docs/webhooks
+###############################################################################
 
-#mport json
+"""
+Webhook set up for Stripe payment events
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.http import HttpResponse
 from django.conf import settings
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
-from checkout.webhook_handler import StripeWH_Handler
-
 import stripe
 
+# INTERNAL:
+from checkout.webhook_handler import StripeWH_Handler
+
+###############################################################################
+
+
+# Stripe DOCS, webhooks, copied and modified with Code Institue content
+# on March 19th, 2022, at 16:23, from https://stripe.com/docs/webhooks
+
+#mport json
 
 @require_POST
 @csrf_exempt

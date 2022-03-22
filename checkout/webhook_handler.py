@@ -1,10 +1,23 @@
-from django.http import HttpResponse
+###############################################################################
 
+"""
+Webhook handler for Stripe payment events
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
+from django.http import HttpResponse
+import json
+import time
+
+# INTERNAL:
 from .models import Order, OrderLineItem
 from products.models import Product
 
-import json
-import time
+###############################################################################
 
 
 class StripeWH_Handler:

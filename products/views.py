@@ -1,11 +1,25 @@
+###############################################################################
+
+"""
+Django views for the products app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
 # Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55
 from django.db.models.functions import Lower
 
-# Create your views here.
+# INTERNAL:
+from .models import Product, Category
+
+###############################################################################
+
 
 def all_products(request):
     """View for all products"""

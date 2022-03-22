@@ -1,5 +1,21 @@
+###############################################################################
+
+"""
+Python administration file for the Django products app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.contrib import admin
+
+# INTERNAL:
 from .models import Product, Category
+
+###############################################################################
+
 
 # Register your models here.
 class ProductAdmin(admin.ModelAdmin):

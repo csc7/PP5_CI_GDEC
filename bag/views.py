@@ -1,10 +1,25 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+###############################################################################
+
+"""
+Django views for the bag app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import HttpResponse, get_object_or_404
 from django.contrib import messages
 
+# INTERNAL:
 from products.models import Product
 
-# Create your views here.
+###############################################################################
 
+
+# Create your views here.
 
 def view_bag(request):
     """View for the purchasing bag"""

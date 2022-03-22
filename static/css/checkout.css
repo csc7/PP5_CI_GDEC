@@ -40,7 +40,17 @@ https://stripe.com/docs/stripe-js
 }
 
 .stripe-style-input::placeholder {    /* Class of this project */
-    color: #aab7c4;
+  color: #aab7c4;
+}
+
+select:invalid,
+select option [value=""] {
+  color: #aab7c4;
+}
+
+select,
+select option {
+  color: black;
 }
 
 /*.StripeElement--empty > iframe {

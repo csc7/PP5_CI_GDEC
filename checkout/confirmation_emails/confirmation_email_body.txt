@@ -1,0 +1,22 @@
+Dear {{order.full_name }},
+
+This e-mail confirms your purchase at GDEC with the following details:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Grand Total: {{ order.grand_total }}
+
+The order is being shipped to the follosing address:
+{{ order.street_address1 }}
+{{ order.postcode }} {{ order.town_or_city }}
+{{ order.Country }}
+
+If you have any questions, please contact us at {{ contact_email }} .
+
+GDEC thanks you for your purchase and interest in our company.
+
+Kind regards,
+
+
+GDEC Team

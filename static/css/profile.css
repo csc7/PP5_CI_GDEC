@@ -15,3 +15,7 @@
     color: #aab7c4;
 }
 
+.order-history {
+    max-height: 450px; /* profile form + submit button heights */
+    overflow-y: auto;
+}

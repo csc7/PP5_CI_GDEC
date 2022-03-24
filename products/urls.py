@@ -19,5 +19,9 @@ from .import views
 
 urlpatterns = [
     path('', views.all_products, name='products'),
-    path('<product_id>', views.product_detail, name='product_detail'),
+    # Specify integer for product_id URL to avoid "add/" (in the next URL)
+    # being interpreted as a product ID, resulting in an error
+    path('<int:product_id>', views.product_detail, name='product_detail'),
+    path('add/', views.add_product, name='add_product'),
+
 ]

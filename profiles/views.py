@@ -16,15 +16,20 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
+from django.contrib.auth.decorators import login_required
 
 ###############################################################################
 
 
-
-# Create your views here.
-
+# Use Django login decorator to access this view
+@login_required()
 def profile(request):
     """ Display User Profile """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':

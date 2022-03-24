@@ -14,6 +14,7 @@ from django.contrib import messages
 from django.db.models import Q
 # Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 
 # INTERNAL:
 from .models import Product, Category
@@ -87,8 +88,15 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+# Use Django login decorator to access this view
+@login_required()
 def add_product(request):
     """ Add products to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     # If method is post, instantiate a product form, accepting images with
     # request.FILES
     if request.method == 'POST':
@@ -113,8 +121,15 @@ def add_product(request):
     return render(request, template, context)
 
 
+# Use Django login decorator to access this view
+@login_required()
 def edit_product(request, product_id):
     """ Edit products of the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     # Prefill the form
     product = get_object_or_404(Product, pk=product_id)
     # Instantiate the form if method is POST
@@ -139,8 +154,15 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+# Use Django login decorator to access this view
+@login_required()
 def delete_product(request, product_id):
     """ Delete products of the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

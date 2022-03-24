@@ -33,7 +33,7 @@ class StripeWH_Handler:
         self.request = request
 
     def _send_confirmation_email(self, order):
-        """Send the user a confirmation email"""
+        """Send confirmation email after purshcasing """
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
@@ -51,7 +51,7 @@ class StripeWH_Handler:
 
     def handle_event(self, event):
         """
-        Handle a generic/unknown/unexpected webhook event
+        Handle a generic or unknown webhook event
         """
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
@@ -62,15 +62,10 @@ class StripeWH_Handler:
         Handle payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
-        print("intent: ")
-        print(intent)
-
+        
         pid = intent.id
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
-
-        print("Charges.data: ")
-        print(intent.charges.data)
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
@@ -78,7 +73,7 @@ class StripeWH_Handler:
 
         # Clear shipping details
         for field, value in shipping_details.address.items():
-            if value =="":
+            if value == "":
                 shipping_details.address[field] = None
 
 
@@ -157,7 +152,7 @@ class StripeWH_Handler:
                     # else, the item does have resolution
                     else:
                         for resolution, quantity in item_data['items_by_resolution'].items():
-                            print(item_data)
+                            #print(item_data)
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,

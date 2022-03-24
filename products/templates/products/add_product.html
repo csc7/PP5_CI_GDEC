@@ -26,7 +26,13 @@
             <!-- Include encoding type in the form as images might be loaded -->
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {% for field in form %}
+                    {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
                 <div class="text-right">
                     <a class="btn btn-outline-dark rounded-0" href="{% url 'products' %}">Cancel</a>
                     <button class="btn btn-dark rounded-0" type="submit">Add Product</button>
@@ -40,7 +46,7 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- This page javascript file -->
-
+    <script src="{% static 'js/notify_image_change_in_admin.js' %}"></script>
 
 {% endblock %}
 

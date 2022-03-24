@@ -193,6 +193,20 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
+/* PRODUCT MANAGEMENT */
+
+/* from CI */
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #774fe6;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #774fe6;
+    border-color: #774fe6;
+    border-radius: 0;
+}
+/* end from CI */
 
 
 /* ********* */

@@ -345,7 +345,7 @@ accessed on March 3rd, 2022, at 04:27.
 
     #carouselExampleIndicators > a.carousel-control-prev,
     #carouselExampleIndicators > a.carousel-control-next {
-        color: red:
+        color: red;
         height: 400px;;
     }
 

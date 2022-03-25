@@ -1106,6 +1106,8 @@ ___
 
     - Bootstrap v4.6 Toasts, https://getbootstrap.com/docs/4.6/components/toasts/; copied on March 16th, 2022, at 15:00.
 
+    - Bootstrap Carousel, https://getbootstrap.com/docs/4.0/components/carousel/, copied and modified on March 25th, 2022, at 00:30.
+
 - Django-allauth: version 0.41.0, https://django-allauth.readthedocs.io/, installed on February 25th, 2022.
 
 - Django Documentation:

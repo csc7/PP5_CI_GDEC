@@ -10,15 +10,36 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 text-white">Available Data</h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="btn btn-lg rounded-0 text-uppercase py-3">Check Data and Buy!</a>
-                    </h4>
-                </div>
+    <div id="carousel-div" class="container-fluid h-100">
+        <div class="row">
+            <div class="col-12 my-auto">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    
+                    <div class="carousel-inner m-0">
+                      <div class="carousel-item active">
+                        <h4 class="text-primary text-center"><strong>Check out our last arrivals and deals</strong></h4>                            
+                      </div>
+                      <div class="carousel-item">
+                        <h4 class="text-primary text-center"><strong>Download them to avoid delivery costs</strong></h4>
+                      </div>
+                      <div class="carousel-item">
+                        <h4 class="text-primary text-center"><strong>No shipping costs on purchases above $100</strong></h4>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                  </div>
             </div>
         </div>
     </div>

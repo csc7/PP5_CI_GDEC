@@ -2,75 +2,75 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mx-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item ">By Country</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item text-primary">By Country</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-primary">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-primary">By Price</a>
+                <a href="" class="dropdown-item text-primary">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mx-2" href="#" id="dems-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="dems-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Digital Data
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dems-link">
-                <a href="{% url 'products' %}?category=dem" class="dropdown-item">Digital Elevation Models</a>
-                <a href="{% url 'products' %}?category=gravimetry" class="dropdown-item">Gravimetry</a>
-                <a href="{% url 'products' %}?category=magnetometry" class="dropdown-item">Magnetometry</a>
-                <a href="{% url 'products' %}?category=resistivity" class="dropdown-item">Resistivity</a>
-                <a href="{% url 'products' %}?category=dem,gravimetry,magnetometry,resistivity" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=dem" class="dropdown-item text-primary">Digital Elevation Models</a>
+                <a href="{% url 'products' %}?category=gravimetry" class="dropdown-item text-primary">Gravimetry</a>
+                <a href="{% url 'products' %}?category=magnetometry" class="dropdown-item text-primary">Magnetometry</a>
+                <a href="{% url 'products' %}?category=resistivity" class="dropdown-item text-primary">Resistivity</a>
+                <a href="{% url 'products' %}?category=dem,gravimetry,magnetometry,resistivity" class="dropdown-item text-primary">All</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mx-2" href="#" id="gravimetry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="gravimetry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Reports
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gravimetry-link">
-                <a href="{% url 'products' %}?category=eia" class="dropdown-item">Environmental Impact Assessments</a>
-                <a href="{% url 'products' %}?category=geological_maps" class="dropdown-item">Geological Maps</a>
-                <a href="{% url 'products' %}?category=weather" class="dropdown-item">Weather Information</a>
-                <a href="{% url 'products' %}?category=eia,geological_maps,weather" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=eia" class="dropdown-item text-primary">Environmental Impact Assessments</a>
+                <a href="{% url 'products' %}?category=geological_maps" class="dropdown-item text-primary">Geological Maps</a>
+                <a href="{% url 'products' %}?category=weather" class="dropdown-item text-primary">Weather Information</a>
+                <a href="{% url 'products' %}?category=eia,geological_maps,weather" class="dropdown-item text-primary">All</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mx-2" href="#" id="resistivity-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="resistivity-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Training
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="resistivity-link">
-                <a href="{% url 'products' %}?category=courses" class="dropdown-item">Courses</a>
-                <a href="{% url 'products' %}?category=books" class="dropdown-item">Books</a>
-                <a href="{% url 'products' %}?category=courses,books" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=courses" class="dropdown-item text-primary">Courses</a>
+                <a href="{% url 'products' %}?category=books" class="dropdown-item text-primary">Books</a>
+                <a href="{% url 'products' %}?category=courses,books" class="dropdown-item text-primary">All</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mx-2" href="#" id="magnetometry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="magnetometry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Software
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="magnetometry-link">
-                <a href="{% url 'products' %}?category=simulators" class="dropdown-item">Simulators</a>
-                <a href="{% url 'products' %}?category=data_processing" class="dropdown-item">Data Processing</a>
-                <a href="{% url 'products' %}?category=data_qc" class="dropdown-item">Data QC</a>
-                <a href="{% url 'products' %}?category=simulators,data_processing,data_qc" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=simulators" class="dropdown-item text-primary">Simulators</a>
+                <a href="{% url 'products' %}?category=data_processing" class="dropdown-item text-primary">Data Processing</a>
+                <a href="{% url 'products' %}?category=data_qc" class="dropdown-item text-primary">Data QC</a>
+                <a href="{% url 'products' %}?category=simulators,data_processing,data_qc" class="dropdown-item text-primary">All</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mx-2" href="#" id="last-arrivals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="last-arrivals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="last-arrivals-link">
-                <a href="{% url 'products' %}?category=data_offers" class="dropdown-item">Vintage Data</a>                
-                <a href="{% url 'products' %}?category=report_offers" class="dropdown-item">Special Reports</a>
-                <a href="{% url 'products' %}?category=training_offers" class="dropdown-item">Classic Training</a>
-                <a href="{% url 'products' %}?category=software_offers" class="dropdown-item">Software Previous Versions</a>
-                <a href="{% url 'products' %}?category=data_offers,report_offers,training_offers,software_offers" class="dropdown-item">All</a>
+                <a href="{% url 'products' %}?category=data_offers" class="dropdown-item text-primary">Vintage Data</a>                
+                <a href="{% url 'products' %}?category=report_offers" class="dropdown-item text-primary">Special Reports</a>
+                <a href="{% url 'products' %}?category=training_offers" class="dropdown-item text-primary">Classic Training</a>
+                <a href="{% url 'products' %}?category=software_offers" class="dropdown-item text-primary">Software Previous Versions</a>
+                <a href="{% url 'products' %}?category=data_offers,report_offers,training_offers,software_offers" class="dropdown-item text-primary">All</a>
             </div>
         </li>
     </ul>

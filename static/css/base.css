@@ -75,9 +75,13 @@ body {
 
 footer {
     width: 100%;
-    height: 80px;
+    height: 160px;
     position: fixed;
     bottom:0;
+}
+
+#div-for-address-in-footer > p {
+    font-size: 75%;
 }
 
 .social-contact-links {
@@ -93,13 +97,7 @@ footer {
     /*padding: 1%;*/
 }
 
-#contact-link-in-footer {
-    font-size: 175%;
-}
 
-#privacy-link-in-footer, #cookies-link-in-footer {
-    font-size: 125%;
-}
 
 #div-for-address-in-footer {
     margin-top: 0;
@@ -108,6 +106,7 @@ footer {
 #div-for-privacy-link-in-footer, #div-for-cookies-link-in-footer {
     padding-top: 25px;
 }
+
 
 
 /* MESSAGES */

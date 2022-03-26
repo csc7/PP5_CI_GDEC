@@ -195,6 +195,13 @@ accessed on March 3rd, 2022, at 04:27.
     color: blue;
 }
 
+.image-position {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 /* ALLAUTH STYLES */
 

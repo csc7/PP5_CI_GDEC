@@ -315,7 +315,7 @@ accessed on March 3rd, 2022, at 04:27.
     /* FOOTER */
 
     footer {
-        height: 280px;
+        height: 300px;
         position: relative;
     }
 
@@ -323,12 +323,12 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: absolute;
-        bottom: -560px;
+        bottom: -400px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: -590px;
+        bottom: -440px;
     }
 
     /* PRODUCTS */
@@ -373,19 +373,38 @@ accessed on March 3rd, 2022, at 04:27.
         padding-top: 0;
     }
     
+    #div-for-sign-up-for-newsletter-form {
+        position: absolute;
+        bottom: 22px;
+    }
+
+    #div-for-newsletter-form-message {
+        margin-top: 14px;
+    }
+
+
     /* HOME PAGE */
 
     .carousel-inner {
         position: absolute;
-        bottom: -560px;
+        bottom: -440px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: -590px;
+        bottom: -460px;
     }
 
 }
+
+
+/* SCREEN SIZE BELOW 704px, JUST FOR NEWSLETTER TITLE/MESSAGE */
+@media screen and (max-width: 703px) {
+    #div-for-newsletter-form-message {
+        margin-top: 0;
+    }
+}
+
 
 
 /* SCREEN SIZE BELOW 575px */
@@ -414,23 +433,26 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: absolute;
-        bottom: -90px;
+        bottom: 40px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: -140px;
+        bottom: -10px;
     }
 
 
     /* FOOTER */
 
     footer {
-        height: 725px;
+        height: 750px;
         position: relative;
     }
 
-
+    #div-for-sign-up-for-newsletter-form {
+        position: static;
+        
+    }
 
 
 

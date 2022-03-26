@@ -75,27 +75,27 @@
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="sign-up-link-in-footer" href="h" class="my-0 py-0 text-light"
+                    <a id="sign-up-link-in-footer" href="{% url 'products' %}?category=dem,gravimetry,magnetometry,resistivity" class="my-0 py-0 text-light"
                     aria-label="Sign Up in the Geophysical Data E-Commerce Website (it opens in a new tab)">Digital Data</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="sign-in-link-in-footer" href="h" class="my-0 py-0 text-light"
+                    <a id="sign-in-link-in-footer" href="{% url 'products' %}?category=eia,geological_maps,weather" class="my-0 py-0 text-light"
                     aria-label="Sign In in the Geophysical Data E-Commerce Website (it opens in a new tab)">Reports</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="privacy-link-in-footer" href="h" class="my-0 py-0 text-light"
+                    <a id="privacy-link-in-footer" href="{% url 'products' %}?category=courses,books" class="my-0 py-0 text-light"
                     aria-label="Go to the Privacy Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Training</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="cookies-link-in-footer" href="h" class="my-0 py-0 text-light"
+                    <a id="cookies-link-in-footer" href="{% url 'products' %}?category=simulators,data_processing,data_qc" class="my-0 py-0 text-light"
                     aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Software</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="cookies-link-in-footer" href="h" class="my-0 py-0 text-light"
+                    <a id="cookies-link-in-footer" href="{% url 'products' %}?category=data_offers,report_offers,training_offers,software_offers" class="my-0 py-0 text-light"
                     aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Offers</a>
                 </div>
             </div>
@@ -108,16 +108,36 @@
                 <div class="col-12 text-center text-md-left ">
                     <h6 class="pt-3 pt-sm-0 my-1 py-0 text-light"><strong>Website</strong></h6>
                 </div>
-                <div class="col-12 text-center text-md-left">
-                    <!-- Font Awesome Icon -->
-                    <a id="sign-up-link-in-footer" href="h" class="my-0 py-0 text-light"
-                    aria-label="Sign Up in the Geophysical Data E-Commerce Website (it opens in a new tab)">Sign Up</a>
-                </div>
-                <div class="col-12 text-center text-md-left">
-                    <!-- Font Awesome Icon -->
-                    <a id="sign-in-link-in-footer" href="h" class="my-0 py-0 text-light"
-                    aria-label="Sign In in the Geophysical Data E-Commerce Website (it opens in a new tab)">Sign In</a>
-                </div>
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <div class="col-12 text-center text-md-left">
+                            <!-- Font Awesome Icon -->
+                            <a id="sign-up-link-in-footer" href="{% url 'add_product' %}" class="my-0 py-0 text-light"
+                            aria-label="Go to Product Management in the Geophysical Data E-Commerce Website">Product Management</a>
+                        </div>
+                    {% endif %}
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="sign-up-link-in-footer" href="{% url 'profile' %}" class="my-0 py-0 text-light"
+                        aria-label="Go to my Profile in the Geophysical Data E-Commerce Website">My Profile</a>
+                    </div>
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="sign-in-link-in-footer" href="{% url 'account_logout' %}" class="my-0 py-0 text-light"
+                        aria-label="Log Out of the Geophysical Data E-Commerce Website">Log Out</a>
+                    </div>
+                {% else %}
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="sign-up-link-in-footer" href="{% url 'account_signup' %}" class="my-0 py-0 text-light"
+                        aria-label="Sign Up in the Geophysical Data E-Commerce Website">Sign Up</a>
+                    </div>
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="sign-in-link-in-footer" href="{% url 'account_login' %}" class="my-0 py-0 text-light"
+                        aria-label="Log In into the Geophysical Data E-Commerce Website">Log In</a>
+                    </div>
+                {% endif %}
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
                     <a id="privacy-link-in-footer" href="h" class="my-0 py-0 text-light"
@@ -132,19 +152,19 @@
         </div>
     </div>  
     
-    <div id="div-for-newsletter-in-footer" class="col-12 col-sm-6 order-sm-5 col-md-12 order-md-5 col-lg-3 text-center mx-0 px-0 mt-1">
+    <div id="div-for-newsletter-in-footer" class="col-12 col-sm-6 order-sm-5 col-md-12 order-md-5 col-lg-3 text-center mx-0 px-0 mt-1 mt-sm-2 mt-lg-1">
         
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 ml-lg-0 pl-lg-0">
                     <h6 class="mb-0 pt-3 pt-sm-0 p-md-2 my-lg-1 py-lg-0 text-center text-lg-left text-light"><strong>Newsletter</strong></h6>
                 </div>
-                <div class="col-12 col-md-6 col-lg-12 ml-lg-0 pl-lg-0">
+                <div id="div-for-newsletter-form-message" class="col-12 col-md-6 col-lg-12 ml-lg-0 pl-lg-0">
                     <p class="pt-1 pt-sm-0 mb-0 p-md-3 p-lg-2 mt-lg-1 py-0 text-center text-md-right text-lg-left text-light">
                        Sign up in our newsletter to receive our weekly news:
                     </p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-12 mt-md-2 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                <div id="div-for-sign-up-for-newsletter-form" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
                     <form id="sign-up-for-newsletter-form" method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100 pt-1 pt-sm-0">
                             <input class="form-control border-light rounded-0" type="text" name="q" placeholder="Your E-mail Here">

@@ -270,7 +270,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 .carousel-indicators {
     position: fixed;
-    bottom: 160px;
+    bottom: 180px;
 }
 
 
@@ -302,6 +302,12 @@ accessed on March 3rd, 2022, at 04:27.
 
 @media screen and (max-width: 991px) {
 
+    /* GENERAL */
+
+    body {
+        height: calc(80vh - 80px);
+    }
+
     /* FOOTER */
 
     footer {
@@ -309,6 +315,17 @@ accessed on March 3rd, 2022, at 04:27.
         position: relative;
     }
 
+    /* HOME PAGE */
+
+    .carousel-inner {
+        position: absolute;
+        bottom: -560px;
+    }
+    
+    .carousel-indicators {
+        position: absolute;
+        bottom: -590px;
+    }
    
 
 }
@@ -317,6 +334,8 @@ accessed on March 3rd, 2022, at 04:27.
 /* SCREEN SIZE BELOW 768px */
 
 @media screen and (max-width: 767px) {
+
+    /* GENERAL */
 
     body {
         height: calc(80vh - 80px);
@@ -345,6 +364,16 @@ accessed on March 3rd, 2022, at 04:27.
     }
     
     /* HOME PAGE */
+
+    .carousel-inner {
+        position: absolute;
+        bottom: -560px;
+    }
+    
+    .carousel-indicators {
+        position: absolute;
+        bottom: -590px;
+    }
 
 }
 
@@ -375,12 +404,12 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: absolute;
-        bottom: 80px;
+        bottom: -90px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: 0px;
+        bottom: -140px;
     }
 
 

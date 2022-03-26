@@ -24,6 +24,10 @@ html {
 
 /* HEADER */
 
+#main-header {
+    background-color: rgb(213, 234, 247);
+}
+
 .header-container {
     padding-top: calc(136px + 36.8px);
 }

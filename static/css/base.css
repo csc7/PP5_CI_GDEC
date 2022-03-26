@@ -337,7 +337,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 /* SCREEN SIZE BELOW 575px */
 
-@media screen and (max-width: 574px) {
+@media screen and (max-width: 575px) {
 
     /* HEADER */
 
@@ -373,13 +373,10 @@ accessed on March 3rd, 2022, at 04:27.
     /* FOOTER */
 
     footer {
-        height: 720px;
+        height: 725px;
         position: relative;
     }
 
-    #contact-link-in-footer {
-        font-size: 175%;
-    }
 
 
 

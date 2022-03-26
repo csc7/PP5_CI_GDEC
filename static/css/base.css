@@ -276,7 +276,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 /* SCREEN SIZE BELOW 1200px */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 
 
 
@@ -286,12 +286,13 @@ accessed on March 3rd, 2022, at 04:27.
 
 /* SCREEN SIZE BELOW 992px */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 
     /* FOOTER */
 
     footer {
-        height: 220px;
+        height: 280px;
+        position: relative;
     }
 
    
@@ -301,7 +302,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 /* SCREEN SIZE BELOW 768px */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     body {
         height: calc(80vh - 80px);
@@ -321,7 +322,7 @@ accessed on March 3rd, 2022, at 04:27.
     }
 
     footer {
-        height: 100px;
+        height: 320px;
     }
 
     #div-for-privacy-link-in-footer, #div-for-cookies-link-in-footer {
@@ -336,7 +337,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 /* SCREEN SIZE BELOW 575px */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 574px) {
 
     /* HEADER */
 
@@ -372,7 +373,7 @@ accessed on March 3rd, 2022, at 04:27.
     /* FOOTER */
 
     footer {
-        height: 280px;
+        height: 720px;
         position: relative;
     }
 

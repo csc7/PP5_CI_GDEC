@@ -184,7 +184,7 @@ accessed on March 3rd, 2022, at 04:27.
     height: 50px;
     width: 50px;
     position: fixed;
-    bottom: 100px;
+    bottom: 200px;
     right: 20px;
     border: blue;
 }
@@ -329,6 +329,12 @@ accessed on March 3rd, 2022, at 04:27.
     .carousel-indicators {
         position: absolute;
         bottom: -590px;
+    }
+
+    /* PRODUCTS */
+
+    .go-to-top-button {
+        bottom: 25px;
     }
    
 

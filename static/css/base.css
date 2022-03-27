@@ -152,7 +152,7 @@ footer {
 }
 
 .toast-image {
-    width: 50%;
+    width: 25%;
     height: 4vw;
     object-fit: contain;
 }

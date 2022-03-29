@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col bag-in-body">
+            <div class="col bottom-marging-for-large-screens">
             {% if bag_items %}
                 <div class="table-responsive rounded mb-5">
                     <table class="table table-sm table-borderless">
@@ -105,13 +105,13 @@
                         </tr>
                         <tr class="pb-5">
                             <td colspan="5" class="text-right pb-5">
-                                <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 btn-lg">
+                                <a href="{% url 'checkout' %}" class="btn btn-primary rounded-0 btn-lg">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -123,7 +123,7 @@
                 </div>
             {% else %}
                 <p class="lead mb-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+                <a href="{% url 'products' %}" class="btn btn-outline-primary btn-primary rounded-0 btn-lg">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>

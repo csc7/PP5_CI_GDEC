@@ -167,8 +167,8 @@ footer {
     object-fit: contain;
 }
 
-.bag-in-body {
-    margin-bottom: 150px;
+.bottom-marging-for-large-screens {
+    margin-bottom: 200px;
 }
 
 
@@ -348,7 +348,7 @@ accessed on March 3rd, 2022, at 04:27.
 
     /* BAG */
 
-    .bag-in-body {
+    .bottom-marging-for-large-screens {
         margin-bottom: 0;
     }
 

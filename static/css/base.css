@@ -85,6 +85,7 @@ footer {
     height: 180px;
     position: fixed;
     bottom:0;
+    z-index: 100;
 }
 
 #div-for-address-in-footer > p {

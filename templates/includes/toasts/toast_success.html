@@ -22,18 +22,19 @@
       </div>
   </div>
   {% if grand_total and not on_profile_page %}
-      <p class="bg-white text-dark py-1">Your Bag ({{ product_count }})</p>
+      <p class="bg-white text-dark py-1">Your Bag ({{ product_count }}) (showing last 4 items in bag)</p>
       <div class="bag-notification-wrapper">
-          {% for item in bag_items %}
+          <!-- Show last 4 items to avoid toast getting higher than body when bag contains too many items -->
+          {% for item in bag_items|slice:"-5:-1" reversed %}
               <div class="row">
                     <div class="col-3 my-1">
-                        {% if item.product.image %}
+                        {% if item.product.image_name %}
                         <img class="w-100" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
                         {% else %}
                         <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                         {% endif %}
                     </div>
-                    <div class="col-9">
+                    <div class="col-9">                       
                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                         <p class="my-0 small">Resolution: {% if item.product.resolution %}{{ item.resolution|upper }}{% else %}N/A{% endif %}</p>
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>

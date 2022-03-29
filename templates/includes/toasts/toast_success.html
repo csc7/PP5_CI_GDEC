@@ -24,7 +24,13 @@
   {% if grand_total and not on_profile_page %}
       <p class="bg-white text-dark py-1">Your Bag ({{ product_count }}) (showing last 4 items in bag)</p>
       <div class="bag-notification-wrapper">
-          <!-- Show last 4 items to avoid toast getting higher than body when bag contains too many items -->
+          <!-- Show last 4 items to avoid toast getting higher than body when bag contains too many items; 
+          to render last items in a "for" loop in Django templates:
+          https://stackoverflow.com/questions/68494568/how-to-display-latest-5-orders-by-using-for-loop-in-jinja-django;
+          https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result;
+          https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result;
+          accessed on March 29th, 2022, at 14:30.       
+          -->
           {% for item in bag_items|slice:"-5:-1" reversed %}
               <div class="row">
                     <div class="col-3 my-1">

@@ -1199,6 +1199,8 @@ ___
 
     - CSS styles: https://stripe.com/docs/stripe-js; https://stripe.com/docs/payments/elements.
 
+    - To render last items in a "for" loop in Django templates: https://stackoverflow.com/questions/68494568/how-to-display-latest-5-orders-by-using-for-loop-in-jinja-django; https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result; https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result; accessed on March 29th, 2022, at 14:30.
+
 
 - W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):
     - ...

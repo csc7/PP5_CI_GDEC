@@ -87,8 +87,8 @@
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <!-- Font Awesome Icon -->
-                                    <div><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
-                                    <p class="my-0">
+                                    <div><i class="fa fa-shopping-cart fa-lg text-primary" aria-hidden="true"></i></div>
+                                    <p class="my-0 text-primary">
                                         {% if grand_total %}
                                             ${{ grand_total|floatformat:2 }}
                                         {% else %}

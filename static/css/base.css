@@ -21,6 +21,10 @@ html {
     font-size: 1.5rem;
 }
 
+.dark-blue-font {
+    color: rgb(3, 3, 104);
+}
+
 
 /* HEADER */
 
@@ -61,7 +65,7 @@ body {
     /*height: calc(100vh - 136px);*/
     height: 1000px;
     font-family: 'Play', sans-serif;
-    color: rgb(6, 6, 155);
+    /*color: rgb(6, 6, 155);*/
 }
 
 .overlay {

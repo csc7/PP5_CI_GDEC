@@ -42,25 +42,25 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if resolution in bag[item_id]['items_by_resolution'].keys():
                 bag[item_id]['items_by_resolution'][resolution] += quantity
-                messages.success(request, f'ADD_TO_BAG Updated {resolution.upper()} resolution quantity for {bag[item_id]["items_by_resolution"]}')
+                messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}')
             else:
                 bag[item_id]['items_by_resolution'][resolution] = quantity
-                messages.success(request, f'ADD_TO_BAG {resolution.upper()} resolution for {product.name} added to the bag')
+                messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the bag')
         else:
             bag[item_id] = {'items_by_resolution': {resolution: quantity}}
-            messages.success(request, f'ADD_TO_BAG {resolution} resolution for {product.name} added to the bag')
+            messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the bag')
             
 
     else:
 
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            messages.success(request, f'ADD_TO_BAG Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
 
 
         else:
             bag[item_id] = quantity
-            messages.success(request, f'ADD_TO_BAG {product.name} added to the bag')
+            messages.success(request, f'{product.name} added to the bag')
             
 
     request.session['bag'] = bag

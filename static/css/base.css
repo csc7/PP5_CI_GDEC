@@ -158,6 +158,16 @@ footer {
     object-fit: contain;
 }
 
+
+/* BAG PAGE */
+
+.bag-image {
+    width: 50%;
+    height: 10vw;
+    object-fit: contain;
+}
+
+
 /* PRODUCTS */
 
 /* Object-fit property for CSS:

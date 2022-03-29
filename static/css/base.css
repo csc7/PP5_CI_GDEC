@@ -167,6 +167,10 @@ footer {
     object-fit: contain;
 }
 
+.bag-in-body {
+    margin-bottom: 150px;
+}
+
 
 /* PRODUCTS */
 
@@ -340,6 +344,12 @@ accessed on March 3rd, 2022, at 04:27.
     .carousel-indicators {
         position: absolute;
         bottom: -440px;
+    }
+
+    /* BAG */
+
+    .bag-in-body {
+        margin-bottom: 0;
     }
 
     /* PRODUCTS */

@@ -4,12 +4,12 @@
   <div class="w-100 toast-capper bg-success"></div>
   <div class="toast-header bg-white text-dark">
       {% if product.image_name %}
-        <img class="w-50" src="{{ product.image_name.url }}" alt="{{ product.name }}">
+        <img class="w-50 toast-image" src="{{ product.image_name.url }}" alt="{{ product.name }}">
       
       {% endif %}
-      <strong class="w-50 text-center">Success!</strong>
+      <strong class="w-100 text-right">Success!</strong>
       <small></small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <button type="button text-right" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
   </div>
@@ -22,7 +22,7 @@
   </div>
   {% if grand_total and not on_profile_page %}
     
-      <p class="bg-white text-dark py-1">Your Bag ({{ product_count }}) (showing up to the last 4 items in the bag)</p>
+      <p class="bg-white text-dark py-1">Your Bag has ({{ product_count }}) products (showing here up to the last 5 items in the bag)</p>
       <div class="bag-notification-wrapper">
         
           <!-- Show last 4 items to avoid toast getting higher than body when bag contains too many items; 

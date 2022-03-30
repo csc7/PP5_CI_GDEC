@@ -82,7 +82,7 @@ def adjust_bag(request, item_id):
     if resolution:
         if quantity > 0:
             bag[item_id]['items_by_resolution'][resolution] = quantity
-            messages.success(request, f'Updated {resolution.upper()} resolution quantity for {bag[item_id]["items_by_resolution"]}')
+            messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}')
         else:
             del bag[item_id]['items_by_resolution'][resolution]
             if not bag[item_id]['items_by_resolution']:
@@ -92,7 +92,7 @@ def adjust_bag(request, item_id):
         if quantity > 0:
             bag[item_id] = quantity
             
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to {product.name}')
             
         else:
             bag.pop(item_id)

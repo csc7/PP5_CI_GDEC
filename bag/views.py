@@ -114,6 +114,7 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
 
         if resolution:
+            
             del bag[item_id]['items_by_resolution'][resolution]
             if not bag[item_id]['items_by_resolution']:
                 bag.pop(item_id)
@@ -124,7 +125,9 @@ def remove_from_bag(request, item_id):
             messages.success(request, f'{product.name} removed from the bag')
 
         request.session['bag'] = bag
+
         return HttpResponse(status=200)
+
 
     except Exception as e:
         messages.error(request, f'Error removing item_ {e}')

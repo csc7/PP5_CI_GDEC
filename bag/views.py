@@ -73,9 +73,8 @@ def adjust_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    digital = request.POST.get('digital')
-    print(digital)
     resolution = None
+    digital = 0
     if 'product_resolution' in request.POST:
         resolution = request.POST['product_resolution']
         
@@ -85,21 +84,23 @@ def adjust_bag(request, item_id):
         if quantity > 0:
             bag[item_id]['items_by_resolution'][resolution] = quantity
             messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}')
+            print(bag[item_id])
         else:
             del bag[item_id]['items_by_resolution'][resolution]
             if not bag[item_id]['items_by_resolution']:
                 bag.pop(item_id)
             messages.success(request, f'Removed {resolution.upper()} resolution for {product.name} from the bag')
     else:
-        if quantity > 0:
+        if quantity > 0:               
+            
             bag[item_id] = quantity
-            
             messages.success(request, f'Updated {product.name} quantity to {product.name}')
-            
+            print(bag[item_id])
+
         else:
             bag.pop(item_id)
             messages.success(request, f'{product.name} removed from the bag')
-            #print("RESOLUTON =")
+            
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))

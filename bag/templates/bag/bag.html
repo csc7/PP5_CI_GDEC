@@ -78,10 +78,7 @@
                                                     <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
                                                 {% endif %}
                                             </div>
-                                            <div>
-                                                <input type="checkbox" id="digital_{{ item.item_id }}" name="digital" value="1">
-                                                <label for="digital_{{ item.item_id }}"> Digital?</label>
-                                            </div>
+                                            
                                         </div>
                                     </form>
                                     <a class="update-link text-info float-right"><small>Update</small></a>
@@ -159,10 +156,11 @@
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                <h6>Discount: ${{ discount|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if delta_for_discount > 0 %}
                                     <p class="mb-1 text-danger">
-                                        You could get the 10% discount if you spend <strong>${{ delta_for_discount }}</strong> more!
+                                        You could get the {{discount_percentage}}% discount if you spend <strong>${{ delta_for_discount }}</strong> more!
                                     </p>
                                 {% endif %}
                             </td>

@@ -470,6 +470,12 @@ accessed on March 3rd, 2022, at 04:27.
         bottom: -10px;
     }
 
+    /* CHECKOUT */
+
+    .small-font-size {
+        font-size: 75%;
+    }
+
 
     /* FOOTER */
 

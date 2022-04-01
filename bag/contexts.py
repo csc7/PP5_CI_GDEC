@@ -12,6 +12,8 @@ Context file for the bag app, computing grand total and delivery costs.
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+import json
+import re
 
 # INTERNAL:
 from products.models import Product
@@ -20,6 +22,20 @@ from products.models import Product
 
 
 def bag_contents(request):
+    """
+    Function
+    """
+
+
+
+    requested_html = re.search(r'^text/html',
+                               request.META.get('HTTP_ACCEPT')
+                               )
+
+    if not requested_html:
+        discount_delivery = json.dumps(request.POST.get('applyDiscount'))[1:-1]
+        print(discount_delivery)
+    
 
     bag_items = []
     total = 0
@@ -49,6 +65,9 @@ def bag_contents(request):
                     'product': product,
                     'resolution': resolution,
                 })
+
+    if 'product_resolution' in request.POST:
+        print("OK")
 
     if total < settings.DISCOUNT_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

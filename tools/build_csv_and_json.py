@@ -61,7 +61,7 @@ csv_file.write('pk,model,category,sku,name,description,price,rating,' +
 # https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
 # Accessed on March 1st, 2022, at 23_35
 for file in glob.glob("media/*.png"):
-    png_file_path = file
+    png_file_path = ''
     file_paths_found += 1
 
 # Read file name
@@ -314,7 +314,7 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     # If it is an offer, reduce the price
     if fk == 15:
             price = format(random.uniform(10, 19), '.2f')
-    png_file_path = 'media/'
+    png_file_path = ''
     png_file_name = 'file_name'
 
     json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
@@ -367,7 +367,7 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
     # If it is an offer, reduce the price
     if fk == 15:
             price = format(random.uniform(20, 99), '.2f')
-    png_file_path = 'media/'
+    png_file_path = ''
     png_file_name = 'file_name'
 
     json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
@@ -420,7 +420,7 @@ for i in range(file_paths_found + total_books + total_courses + 1,
     # If it is an offer, reduce the price
     if fk == 16:
             price = format(random.uniform(200, 499), '.2f')
-    png_file_path = 'media/'
+    png_file_path = ''
     png_file_name = 'file_name'
 
 

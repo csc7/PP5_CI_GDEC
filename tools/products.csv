@@ -1,326 +1,327 @@
 pk,model,category,sku,name,description,price,rating,image_url,image_name
-1,products.product,1,1977DEM0001AFG,Afghanistan,This file contains DEM data for Afghanistan,96.96, ,media/digital_elevation_model_for_Afghanistan.png,digital_elevation_model_for_Afghanistan.png
-2,products.product,1,1988DEM0002ANG,Angola,This file contains DEM data for Angola,101.93, ,media/digital_elevation_model_for_Angola.png,digital_elevation_model_for_Angola.png
-3,products.product,1,1984DEM0003AUS,Australia,This file contains DEM data for Australia,103.79, ,media/digital_elevation_model_for_Australia.png,digital_elevation_model_for_Australia.png
-4,products.product,1,2013DEM0004AUS,Austria,This file contains DEM data for Austria,106.96, ,media/digital_elevation_model_for_Austria.png,digital_elevation_model_for_Austria.png
-5,products.product,1,2014DEM0005BAN,Bangladesh,This file contains DEM data for Bangladesh,68.19, ,media/digital_elevation_model_for_Bangladesh.png,digital_elevation_model_for_Bangladesh.png
-6,products.product,1,1983DEM0006BOT,Botswana,This file contains DEM data for Botswana,61.83, ,media/digital_elevation_model_for_Botswana.png,digital_elevation_model_for_Botswana.png
-7,products.product,1,1998DEM0007BRA,Brazil,This file contains DEM data for Brazil,62.63, ,media/digital_elevation_model_for_Brazil.png,digital_elevation_model_for_Brazil.png
-8,products.product,1,1992DEM0008BUL,Bulgaria,This file contains DEM data for Bulgaria,89.27, ,media/digital_elevation_model_for_Bulgaria.png,digital_elevation_model_for_Bulgaria.png
-9,products.product,1,2007DEM0009CAB,Cabo Verde,This file contains DEM data for Cabo Verde,65.81, ,media/digital_elevation_model_for_Cabo Verde.png,digital_elevation_model_for_Cabo Verde.png
-10,products.product,1,2012DEM0010CAM,Cameroon,This file contains DEM data for Cameroon,63.07, ,media/digital_elevation_model_for_Cameroon.png,digital_elevation_model_for_Cameroon.png
-11,products.product,1,1988DEM0011CAN,Canada,This file contains DEM data for Canada,96.45, ,media/digital_elevation_model_for_Canada.png,digital_elevation_model_for_Canada.png
-12,products.product,1,2004DEM0012CHI,China,This file contains DEM data for China,94.51, ,media/digital_elevation_model_for_China.png,digital_elevation_model_for_China.png
-13,products.product,1,2008DEM0013CRO,Croatia,This file contains DEM data for Croatia,84.56, ,media/digital_elevation_model_for_Croatia.png,digital_elevation_model_for_Croatia.png
-14,products.product,1,1995DEM0014CUB,Cuba,This file contains DEM data for Cuba,59.58, ,media/digital_elevation_model_for_Cuba.png,digital_elevation_model_for_Cuba.png
-15,products.product,1,1995DEM0015DEN,Denmark,This file contains DEM data for Denmark,72.10, ,media/digital_elevation_model_for_Denmark.png,digital_elevation_model_for_Denmark.png
-16,products.product,1,2003DEM0016EST,Estonia,This file contains DEM data for Estonia,100.14, ,media/digital_elevation_model_for_Estonia.png,digital_elevation_model_for_Estonia.png
-17,products.product,1,2009DEM0017GAB,Gabon,This file contains DEM data for Gabon,61.37, ,media/digital_elevation_model_for_Gabon.png,digital_elevation_model_for_Gabon.png
-18,products.product,5,2008DEM0018GHA,Ghana,This file contains DEM data for Ghana,20.84, ,media/digital_elevation_model_for_Ghana.png,digital_elevation_model_for_Ghana.png
-19,products.product,1,2017DEM0019GUI,Guinea-Bissau,This file contains DEM data for Guinea-Bissau,79.38, ,media/digital_elevation_model_for_Guinea-Bissau.png,digital_elevation_model_for_Guinea-Bissau.png
-20,products.product,1,1978DEM0020GUI,Guinea,This file contains DEM data for Guinea,64.98, ,media/digital_elevation_model_for_Guinea.png,digital_elevation_model_for_Guinea.png
-21,products.product,1,2002DEM0021HAI,Haiti,This file contains DEM data for Haiti,60.66, ,media/digital_elevation_model_for_Haiti.png,digital_elevation_model_for_Haiti.png
-22,products.product,5,1982DEM0022IND,India,This file contains DEM data for India,43.16, ,media/digital_elevation_model_for_India.png,digital_elevation_model_for_India.png
-23,products.product,1,1975DEM0023IRA,Iraq,This file contains DEM data for Iraq,64.97, ,media/digital_elevation_model_for_Iraq.png,digital_elevation_model_for_Iraq.png
-24,products.product,1,1975DEM0024KAZ,Kazakhstan,This file contains DEM data for Kazakhstan,81.49, ,media/digital_elevation_model_for_Kazakhstan.png,digital_elevation_model_for_Kazakhstan.png
-25,products.product,1,1978DEM0025LAO,Laos,This file contains DEM data for Laos,73.13, ,media/digital_elevation_model_for_Laos.png,digital_elevation_model_for_Laos.png
-26,products.product,1,1972DEM0026LAT,Latvia,This file contains DEM data for Latvia,85.72, ,media/digital_elevation_model_for_Latvia.png,digital_elevation_model_for_Latvia.png
-27,products.product,1,1981DEM0027LES,Lesotho,This file contains DEM data for Lesotho,105.25, ,media/digital_elevation_model_for_Lesotho.png,digital_elevation_model_for_Lesotho.png
-28,products.product,1,2016DEM0028MAL,Mali,This file contains DEM data for Mali,64.50, ,media/digital_elevation_model_for_Mali.png,digital_elevation_model_for_Mali.png
-29,products.product,1,2011DEM0029MAU,Mauritania,This file contains DEM data for Mauritania,67.66, ,media/digital_elevation_model_for_Mauritania.png,digital_elevation_model_for_Mauritania.png
-30,products.product,1,2016DEM0030MEX,Mexico,This file contains DEM data for Mexico,80.59, ,media/digital_elevation_model_for_Mexico.png,digital_elevation_model_for_Mexico.png
-31,products.product,1,1994DEM0031MOL,Moldova,This file contains DEM data for Moldova,69.52, ,media/digital_elevation_model_for_Moldova.png,digital_elevation_model_for_Moldova.png
-32,products.product,1,2013DEM0032MON,Montenegro,This file contains DEM data for Montenegro,91.82, ,media/digital_elevation_model_for_Montenegro.png,digital_elevation_model_for_Montenegro.png
-33,products.product,1,1994DEM0033NIG,Niger,This file contains DEM data for Niger,55.30, ,media/digital_elevation_model_for_Niger.png,digital_elevation_model_for_Niger.png
-34,products.product,1,2019DEM0034NOR,North Korea,This file contains DEM data for North Korea,73.73, ,media/digital_elevation_model_for_North Korea.png,digital_elevation_model_for_North Korea.png
-35,products.product,1,2014DEM0035OMA,Oman,This file contains DEM data for Oman,54.80, ,media/digital_elevation_model_for_Oman.png,digital_elevation_model_for_Oman.png
-36,products.product,1,1992DEM0036PAN,Panama,This file contains DEM data for Panama,99.10, ,media/digital_elevation_model_for_Panama.png,digital_elevation_model_for_Panama.png
-37,products.product,1,1994DEM0037PAP,Papua New Guinea,This file contains DEM data for Papua New Guinea,85.62, ,media/digital_elevation_model_for_Papua New Guinea.png,digital_elevation_model_for_Papua New Guinea.png
-38,products.product,1,2018DEM0038POL,Poland,This file contains DEM data for Poland,87.87, ,media/digital_elevation_model_for_Poland.png,digital_elevation_model_for_Poland.png
-39,products.product,5,1987DEM0039SLO,Slovenia,This file contains DEM data for Slovenia,28.83, ,media/digital_elevation_model_for_Slovenia.png,digital_elevation_model_for_Slovenia.png
-40,products.product,1,2022DEM0040SOM,Somalia,This file contains DEM data for Somalia,81.08, ,media/digital_elevation_model_for_Somalia.png,digital_elevation_model_for_Somalia.png
-41,products.product,1,1973DEM0041SOU,South Africa,This file contains DEM data for South Africa,100.68, ,media/digital_elevation_model_for_South Africa.png,digital_elevation_model_for_South Africa.png
-42,products.product,1,1974DEM0042SPA,Spain,This file contains DEM data for Spain,84.37, ,media/digital_elevation_model_for_Spain.png,digital_elevation_model_for_Spain.png
-43,products.product,1,1985DEM0043SRI,Sri Lanka,This file contains DEM data for Sri Lanka,55.11, ,media/digital_elevation_model_for_Sri Lanka.png,digital_elevation_model_for_Sri Lanka.png
-44,products.product,1,2004DEM0044SWI,Switzerland,This file contains DEM data for Switzerland,92.56, ,media/digital_elevation_model_for_Switzerland.png,digital_elevation_model_for_Switzerland.png
-45,products.product,1,1997DEM0045TAI,Taiwan,This file contains DEM data for Taiwan,85.89, ,media/digital_elevation_model_for_Taiwan.png,digital_elevation_model_for_Taiwan.png
-46,products.product,1,1973DEM0046THA,Thailand,This file contains DEM data for Thailand,85.71, ,media/digital_elevation_model_for_Thailand.png,digital_elevation_model_for_Thailand.png
-47,products.product,5,2002DEM0047TRI,Trinidad and Tobago,This file contains DEM data for Trinidad and Tobago,36.75, ,media/digital_elevation_model_for_Trinidad and Tobago.png,digital_elevation_model_for_Trinidad and Tobago.png
-48,products.product,1,1973DEM0048TUN,Tunisia,This file contains DEM data for Tunisia,93.53, ,media/digital_elevation_model_for_Tunisia.png,digital_elevation_model_for_Tunisia.png
-49,products.product,1,2018DEM0049UNI,United Arab Emirates,This file contains DEM data for United Arab Emirates,94.06, ,media/digital_elevation_model_for_United Arab Emirates.png,digital_elevation_model_for_United Arab Emirates.png
-50,products.product,1,2000DEM0050VAN,Vanuatu,This file contains DEM data for Vanuatu,52.28, ,media/digital_elevation_model_for_Vanuatu.png,digital_elevation_model_for_Vanuatu.png
-51,products.product,1,1999DEM0051VIE,Vietnam,This file contains DEM data for Vietnam,55.23, ,media/digital_elevation_model_for_Vietnam.png,digital_elevation_model_for_Vietnam.png
-52,products.product,2,1987GRA0052AFG,Afghanistan,This file contains gravimetry data for Afghanistan,94.85, ,media/gravimetry_for_Afghanistan.png,gravimetry_for_Afghanistan.png
-53,products.product,5,1993GRA0053ALB,Albania,This file contains gravimetry data for Albania,24.60, ,media/gravimetry_for_Albania.png,gravimetry_for_Albania.png
-54,products.product,2,1987GRA0054ALG,Algeria,This file contains gravimetry data for Algeria,102.75, ,media/gravimetry_for_Algeria.png,gravimetry_for_Algeria.png
-55,products.product,2,1972GRA0055ANG,Angola,This file contains gravimetry data for Angola,68.94, ,media/gravimetry_for_Angola.png,gravimetry_for_Angola.png
-56,products.product,2,1993GRA0056ARM,Armenia,This file contains gravimetry data for Armenia,96.83, ,media/gravimetry_for_Armenia.png,gravimetry_for_Armenia.png
-57,products.product,2,1974GRA0057AUS,Austria,This file contains gravimetry data for Austria,76.24, ,media/gravimetry_for_Austria.png,gravimetry_for_Austria.png
-58,products.product,2,1999GRA0058BAN,Bangladesh,This file contains gravimetry data for Bangladesh,89.24, ,media/gravimetry_for_Bangladesh.png,gravimetry_for_Bangladesh.png
-59,products.product,2,1995GRA0059BEL,Belize,This file contains gravimetry data for Belize,55.59, ,media/gravimetry_for_Belize.png,gravimetry_for_Belize.png
-60,products.product,2,1978GRA0060BEN,Benin,This file contains gravimetry data for Benin,64.22, ,media/gravimetry_for_Benin.png,gravimetry_for_Benin.png
-61,products.product,2,2003GRA0061BHU,Bhutan,This file contains gravimetry data for Bhutan,91.50, ,media/gravimetry_for_Bhutan.png,gravimetry_for_Bhutan.png
-62,products.product,2,1972GRA0062BOT,Botswana,This file contains gravimetry data for Botswana,71.54, ,media/gravimetry_for_Botswana.png,gravimetry_for_Botswana.png
-63,products.product,2,1978GRA0063BUL,Bulgaria,This file contains gravimetry data for Bulgaria,75.82, ,media/gravimetry_for_Bulgaria.png,gravimetry_for_Bulgaria.png
-64,products.product,2,1978GRA0064BUR,Burundi,This file contains gravimetry data for Burundi,92.66, ,media/gravimetry_for_Burundi.png,gravimetry_for_Burundi.png
-65,products.product,2,1995GRA0065CAB,Cabo Verde,This file contains gravimetry data for Cabo Verde,52.05, ,media/gravimetry_for_Cabo Verde.png,gravimetry_for_Cabo Verde.png
-66,products.product,5,1972GRA0066CAM,Cameroon,This file contains gravimetry data for Cameroon,13.14, ,media/gravimetry_for_Cameroon.png,gravimetry_for_Cameroon.png
-67,products.product,2,1995GRA0067CAN,Canada,This file contains gravimetry data for Canada,73.81, ,media/gravimetry_for_Canada.png,gravimetry_for_Canada.png
-68,products.product,2,2003GRA0068CHA,Chad,This file contains gravimetry data for Chad,54.15, ,media/gravimetry_for_Chad.png,gravimetry_for_Chad.png
-69,products.product,2,1986GRA0069CHI,China,This file contains gravimetry data for China,104.15, ,media/gravimetry_for_China.png,gravimetry_for_China.png
-70,products.product,2,1971GRA0070COL,Colombia,This file contains gravimetry data for Colombia,54.77, ,media/gravimetry_for_Colombia.png,gravimetry_for_Colombia.png
-71,products.product,2,2009GRA0071COS,Costa Rica,This file contains gravimetry data for Costa Rica,89.51, ,media/gravimetry_for_Costa Rica.png,gravimetry_for_Costa Rica.png
-72,products.product,2,1980GRA0072CRO,Croatia,This file contains gravimetry data for Croatia,94.89, ,media/gravimetry_for_Croatia.png,gravimetry_for_Croatia.png
-73,products.product,2,2013GRA0073CUB,Cuba,This file contains gravimetry data for Cuba,66.16, ,media/gravimetry_for_Cuba.png,gravimetry_for_Cuba.png
-74,products.product,2,2018GRA0074CYP,Cyprus,This file contains gravimetry data for Cyprus,78.37, ,media/gravimetry_for_Cyprus.png,gravimetry_for_Cyprus.png
-75,products.product,2,1980GRA0075DEN,Denmark,This file contains gravimetry data for Denmark,101.22, ,media/gravimetry_for_Denmark.png,gravimetry_for_Denmark.png
-76,products.product,2,2014GRA0076EGY,Egypt,This file contains gravimetry data for Egypt,90.01, ,media/gravimetry_for_Egypt.png,gravimetry_for_Egypt.png
-77,products.product,5,1997GRA0077ERI,Eritrea,This file contains gravimetry data for Eritrea,23.95, ,media/gravimetry_for_Eritrea.png,gravimetry_for_Eritrea.png
-78,products.product,2,1987GRA0078GEO,Georgia,This file contains gravimetry data for Georgia,52.85, ,media/gravimetry_for_Georgia.png,gravimetry_for_Georgia.png
-79,products.product,2,2017GRA0079GHA,Ghana,This file contains gravimetry data for Ghana,82.53, ,media/gravimetry_for_Ghana.png,gravimetry_for_Ghana.png
-80,products.product,2,2019GRA0080GUI,Guinea,This file contains gravimetry data for Guinea,84.86, ,media/gravimetry_for_Guinea.png,gravimetry_for_Guinea.png
-81,products.product,2,1992GRA0081HAI,Haiti,This file contains gravimetry data for Haiti,67.56, ,media/gravimetry_for_Haiti.png,gravimetry_for_Haiti.png
-82,products.product,2,2012GRA0082HON,Honduras,This file contains gravimetry data for Honduras,90.81, ,media/gravimetry_for_Honduras.png,gravimetry_for_Honduras.png
-83,products.product,5,2008GRA0083ICE,Iceland,This file contains gravimetry data for Iceland,35.22, ,media/gravimetry_for_Iceland.png,gravimetry_for_Iceland.png
-84,products.product,2,2017GRA0084IND,India,This file contains gravimetry data for India,99.17, ,media/gravimetry_for_India.png,gravimetry_for_India.png
-85,products.product,2,1990GRA0085IRA,Iran,This file contains gravimetry data for Iran,86.02, ,media/gravimetry_for_Iran.png,gravimetry_for_Iran.png
-86,products.product,2,1999GRA0086IRE,Ireland,This file contains gravimetry data for Ireland,68.27, ,media/gravimetry_for_Ireland.png,gravimetry_for_Ireland.png
-87,products.product,2,2010GRA0087JAP,Japan,This file contains gravimetry data for Japan,84.36, ,media/gravimetry_for_Japan.png,gravimetry_for_Japan.png
-88,products.product,2,1971GRA0088JOR,Jordan,This file contains gravimetry data for Jordan,69.04, ,media/gravimetry_for_Jordan.png,gravimetry_for_Jordan.png
-89,products.product,2,1971GRA0089KAZ,Kazakhstan,This file contains gravimetry data for Kazakhstan,75.68, ,media/gravimetry_for_Kazakhstan.png,gravimetry_for_Kazakhstan.png
-90,products.product,2,2000GRA0090LAO,Laos,This file contains gravimetry data for Laos,94.39, ,media/gravimetry_for_Laos.png,gravimetry_for_Laos.png
-91,products.product,2,2010GRA0091LIT,Lithuania,This file contains gravimetry data for Lithuania,71.24, ,media/gravimetry_for_Lithuania.png,gravimetry_for_Lithuania.png
-92,products.product,2,2016GRA0092MAL,Malawi,This file contains gravimetry data for Malawi,67.83, ,media/gravimetry_for_Malawi.png,gravimetry_for_Malawi.png
-93,products.product,2,2015GRA0093MAL,Mali,This file contains gravimetry data for Mali,100.00, ,media/gravimetry_for_Mali.png,gravimetry_for_Mali.png
-94,products.product,2,1977GRA0094MON,Mongolia,This file contains gravimetry data for Mongolia,69.26, ,media/gravimetry_for_Mongolia.png,gravimetry_for_Mongolia.png
-95,products.product,2,2008GRA0095MOZ,Mozambique,This file contains gravimetry data for Mozambique,88.71, ,media/gravimetry_for_Mozambique.png,gravimetry_for_Mozambique.png
-96,products.product,2,2007GRA0096NAM,Namibia,This file contains gravimetry data for Namibia,107.18, ,media/gravimetry_for_Namibia.png,gravimetry_for_Namibia.png
-97,products.product,2,1984GRA0097NIG,Niger,This file contains gravimetry data for Niger,84.27, ,media/gravimetry_for_Niger.png,gravimetry_for_Niger.png
-98,products.product,2,2016GRA0098NOR,Norway,This file contains gravimetry data for Norway,90.43, ,media/gravimetry_for_Norway.png,gravimetry_for_Norway.png
-99,products.product,2,2000GRA0099PAK,Pakistan,This file contains gravimetry data for Pakistan,53.62, ,media/gravimetry_for_Pakistan.png,gravimetry_for_Pakistan.png
-100,products.product,2,1982GRA0100PAP,Papua New Guinea,This file contains gravimetry data for Papua New Guinea,70.69, ,media/gravimetry_for_Papua New Guinea.png,gravimetry_for_Papua New Guinea.png
-101,products.product,2,2014GRA0101POL,Poland,This file contains gravimetry data for Poland,76.09, ,media/gravimetry_for_Poland.png,gravimetry_for_Poland.png
-102,products.product,2,2011GRA0102RWA,Rwanda,This file contains gravimetry data for Rwanda,73.68, ,media/gravimetry_for_Rwanda.png,gravimetry_for_Rwanda.png
-103,products.product,2,1972GRA0103SLO,Slovenia,This file contains gravimetry data for Slovenia,70.93, ,media/gravimetry_for_Slovenia.png,gravimetry_for_Slovenia.png
-104,products.product,2,2005GRA0104SOU,South Korea,This file contains gravimetry data for South Korea,102.57, ,media/gravimetry_for_South Korea.png,gravimetry_for_South Korea.png
-105,products.product,2,1999GRA0105SUR,Suriname,This file contains gravimetry data for Suriname,105.51, ,media/gravimetry_for_Suriname.png,gravimetry_for_Suriname.png
-106,products.product,2,2012GRA0106SYR,Syria,This file contains gravimetry data for Syria,106.35, ,media/gravimetry_for_Syria.png,gravimetry_for_Syria.png
-107,products.product,2,1998GRA0107THA,Thailand,This file contains gravimetry data for Thailand,80.48, ,media/gravimetry_for_Thailand.png,gravimetry_for_Thailand.png
-108,products.product,2,1971GRA0108TUR,Turkmenistan,This file contains gravimetry data for Turkmenistan,97.69, ,media/gravimetry_for_Turkmenistan.png,gravimetry_for_Turkmenistan.png
-109,products.product,2,2013GRA0109UKR,Ukraine,This file contains gravimetry data for Ukraine,74.31, ,media/gravimetry_for_Ukraine.png,gravimetry_for_Ukraine.png
-110,products.product,2,2014GRA0110UZB,Uzbekistan,This file contains gravimetry data for Uzbekistan,108.49, ,media/gravimetry_for_Uzbekistan.png,gravimetry_for_Uzbekistan.png
-111,products.product,2,2014GRA0111VAN,Vanuatu,This file contains gravimetry data for Vanuatu,105.21, ,media/gravimetry_for_Vanuatu.png,gravimetry_for_Vanuatu.png
-112,products.product,4,1992MAG0112AFG,Afghanistan,This file contains magnetometry data for Afghanistan,57.21, ,media/magnetometry_for_Afghanistan.png,magnetometry_for_Afghanistan.png
-113,products.product,4,1986MAG0113ARG,Argentina,This file contains magnetometry data for Argentina,60.37, ,media/magnetometry_for_Argentina.png,magnetometry_for_Argentina.png
-114,products.product,4,1992MAG0114ARM,Armenia,This file contains magnetometry data for Armenia,81.25, ,media/magnetometry_for_Armenia.png,magnetometry_for_Armenia.png
-115,products.product,4,1999MAG0115AUS,Austria,This file contains magnetometry data for Austria,93.11, ,media/magnetometry_for_Austria.png,magnetometry_for_Austria.png
-116,products.product,4,2022MAG0116BAN,Bangladesh,This file contains magnetometry data for Bangladesh,62.61, ,media/magnetometry_for_Bangladesh.png,magnetometry_for_Bangladesh.png
-117,products.product,4,1976MAG0117BEL,Belgium,This file contains magnetometry data for Belgium,81.19, ,media/magnetometry_for_Belgium.png,magnetometry_for_Belgium.png
-118,products.product,4,1979MAG0118BEN,Benin,This file contains magnetometry data for Benin,63.99, ,media/magnetometry_for_Benin.png,magnetometry_for_Benin.png
-119,products.product,4,2015MAG0119BRA,Brazil,This file contains magnetometry data for Brazil,84.98, ,media/magnetometry_for_Brazil.png,magnetometry_for_Brazil.png
-120,products.product,4,1988MAG0120BUL,Bulgaria,This file contains magnetometry data for Bulgaria,55.04, ,media/magnetometry_for_Bulgaria.png,magnetometry_for_Bulgaria.png
-121,products.product,4,1976MAG0121CAN,Canada,This file contains magnetometry data for Canada,81.50, ,media/magnetometry_for_Canada.png,magnetometry_for_Canada.png
-122,products.product,4,1978MAG0122COS,Costa Rica,This file contains magnetometry data for Costa Rica,60.66, ,media/magnetometry_for_Costa Rica.png,magnetometry_for_Costa Rica.png
-123,products.product,4,2010MAG0123CZE,Czechia,This file contains magnetometry data for Czechia,105.00, ,media/magnetometry_for_Czechia.png,magnetometry_for_Czechia.png
-124,products.product,4,2002MAG0124DEN,Denmark,This file contains magnetometry data for Denmark,99.39, ,media/magnetometry_for_Denmark.png,magnetometry_for_Denmark.png
-125,products.product,4,2005MAG0125ECU,Ecuador,This file contains magnetometry data for Ecuador,93.67, ,media/magnetometry_for_Ecuador.png,magnetometry_for_Ecuador.png
-126,products.product,4,1979MAG0126EL ,El Salvador,This file contains magnetometry data for El Salvador,79.93, ,media/magnetometry_for_El Salvador.png,magnetometry_for_El Salvador.png
-127,products.product,4,2019MAG0127ETH,Ethiopia,This file contains magnetometry data for Ethiopia,68.94, ,media/magnetometry_for_Ethiopia.png,magnetometry_for_Ethiopia.png
-128,products.product,4,2003MAG0128GRE,Greece,This file contains magnetometry data for Greece,67.67, ,media/magnetometry_for_Greece.png,magnetometry_for_Greece.png
-129,products.product,4,1973MAG0129GUA,Guatemala,This file contains magnetometry data for Guatemala,55.38, ,media/magnetometry_for_Guatemala.png,magnetometry_for_Guatemala.png
-130,products.product,4,2016MAG0130GUY,Guyana,This file contains magnetometry data for Guyana,97.51, ,media/magnetometry_for_Guyana.png,magnetometry_for_Guyana.png
-131,products.product,4,2004MAG0131HON,Honduras,This file contains magnetometry data for Honduras,84.20, ,media/magnetometry_for_Honduras.png,magnetometry_for_Honduras.png
-132,products.product,4,1993MAG0132IND,India,This file contains magnetometry data for India,96.97, ,media/magnetometry_for_India.png,magnetometry_for_India.png
-133,products.product,4,2011MAG0133IRA,Iran,This file contains magnetometry data for Iran,69.69, ,media/magnetometry_for_Iran.png,magnetometry_for_Iran.png
-134,products.product,4,1996MAG0134ITA,Italy,This file contains magnetometry data for Italy,52.36, ,media/magnetometry_for_Italy.png,magnetometry_for_Italy.png
-135,products.product,4,1990MAG0135JAP,Japan,This file contains magnetometry data for Japan,76.88, ,media/magnetometry_for_Japan.png,magnetometry_for_Japan.png
-136,products.product,4,1991MAG0136KAZ,Kazakhstan,This file contains magnetometry data for Kazakhstan,78.23, ,media/magnetometry_for_Kazakhstan.png,magnetometry_for_Kazakhstan.png
-137,products.product,4,2008MAG0137KYR,Kyrgyzstan,This file contains magnetometry data for Kyrgyzstan,68.60, ,media/magnetometry_for_Kyrgyzstan.png,magnetometry_for_Kyrgyzstan.png
-138,products.product,4,2022MAG0138LES,Lesotho,This file contains magnetometry data for Lesotho,101.90, ,media/magnetometry_for_Lesotho.png,magnetometry_for_Lesotho.png
-139,products.product,5,1971MAG0139LIB,Liberia,This file contains magnetometry data for Liberia,41.67, ,media/magnetometry_for_Liberia.png,magnetometry_for_Liberia.png
-140,products.product,4,1997MAG0140LUX,Luxembourg,This file contains magnetometry data for Luxembourg,81.17, ,media/magnetometry_for_Luxembourg.png,magnetometry_for_Luxembourg.png
-141,products.product,4,1993MAG0141MAD,Madagascar,This file contains magnetometry data for Madagascar,51.79, ,media/magnetometry_for_Madagascar.png,magnetometry_for_Madagascar.png
-142,products.product,4,2011MAG0142MAL,Mali,This file contains magnetometry data for Mali,105.95, ,media/magnetometry_for_Mali.png,magnetometry_for_Mali.png
-143,products.product,4,1984MAG0143MAL,Malta,This file contains magnetometry data for Malta,100.57, ,media/magnetometry_for_Malta.png,magnetometry_for_Malta.png
-144,products.product,4,1989MAG0144MEX,Mexico,This file contains magnetometry data for Mexico,103.72, ,media/magnetometry_for_Mexico.png,magnetometry_for_Mexico.png
-145,products.product,4,2022MAG0145MOZ,Mozambique,This file contains magnetometry data for Mozambique,107.80, ,media/magnetometry_for_Mozambique.png,magnetometry_for_Mozambique.png
-146,products.product,4,1994MAG0146NAM,Namibia,This file contains magnetometry data for Namibia,99.09, ,media/magnetometry_for_Namibia.png,magnetometry_for_Namibia.png
-147,products.product,4,2020MAG0147NOR,North Macedonia,This file contains magnetometry data for North Macedonia,88.40, ,media/magnetometry_for_North Macedonia.png,magnetometry_for_North Macedonia.png
-148,products.product,4,1996MAG0148PAN,Panama,This file contains magnetometry data for Panama,85.59, ,media/magnetometry_for_Panama.png,magnetometry_for_Panama.png
-149,products.product,4,2006MAG0149POL,Poland,This file contains magnetometry data for Poland,93.09, ,media/magnetometry_for_Poland.png,magnetometry_for_Poland.png
-150,products.product,4,2013MAG0150QAT,Qatar,This file contains magnetometry data for Qatar,51.46, ,media/magnetometry_for_Qatar.png,magnetometry_for_Qatar.png
-151,products.product,4,2015MAG0151RWA,Rwanda,This file contains magnetometry data for Rwanda,58.32, ,media/magnetometry_for_Rwanda.png,magnetometry_for_Rwanda.png
-152,products.product,4,1995MAG0152SAU,Saudi Arabia,This file contains magnetometry data for Saudi Arabia,82.68, ,media/magnetometry_for_Saudi Arabia.png,magnetometry_for_Saudi Arabia.png
-153,products.product,4,1984MAG0153SIE,Sierra Leone,This file contains magnetometry data for Sierra Leone,60.81, ,media/magnetometry_for_Sierra Leone.png,magnetometry_for_Sierra Leone.png
-154,products.product,4,2007MAG0154SLO,Slovakia,This file contains magnetometry data for Slovakia,54.03, ,media/magnetometry_for_Slovakia.png,magnetometry_for_Slovakia.png
-155,products.product,4,2006MAG0155SOU,South Korea,This file contains magnetometry data for South Korea,58.41, ,media/magnetometry_for_South Korea.png,magnetometry_for_South Korea.png
-156,products.product,4,2013MAG0156SRI,Sri Lanka,This file contains magnetometry data for Sri Lanka,90.09, ,media/magnetometry_for_Sri Lanka.png,magnetometry_for_Sri Lanka.png
-157,products.product,4,2012MAG0157SUR,Suriname,This file contains magnetometry data for Suriname,82.44, ,media/magnetometry_for_Suriname.png,magnetometry_for_Suriname.png
-158,products.product,4,2001MAG0158TAI,Taiwan,This file contains magnetometry data for Taiwan,100.49, ,media/magnetometry_for_Taiwan.png,magnetometry_for_Taiwan.png
-159,products.product,5,1979MAG0159TOG,Togo,This file contains magnetometry data for Togo,45.51, ,media/magnetometry_for_Togo.png,magnetometry_for_Togo.png
-160,products.product,4,1981MAG0160TRI,Trinidad and Tobago,This file contains magnetometry data for Trinidad and Tobago,102.56, ,media/magnetometry_for_Trinidad and Tobago.png,magnetometry_for_Trinidad and Tobago.png
-161,products.product,4,2001MAG0161TUR,Turkey,This file contains magnetometry data for Turkey,82.38, ,media/magnetometry_for_Turkey.png,magnetometry_for_Turkey.png
-162,products.product,4,1984MAG0162UNI,United Kingdom,This file contains magnetometry data for United Kingdom,64.09, ,media/magnetometry_for_United Kingdom.png,magnetometry_for_United Kingdom.png
-163,products.product,4,2017MAG0163VAN,Vanuatu,This file contains magnetometry data for Vanuatu,80.32, ,media/magnetometry_for_Vanuatu.png,magnetometry_for_Vanuatu.png
-164,products.product,4,1998MAG0164VEN,Venezuela,This file contains magnetometry data for Venezuela,85.30, ,media/magnetometry_for_Venezuela.png,magnetometry_for_Venezuela.png
-165,products.product,4,1989MAG0165VIE,Vietnam,This file contains magnetometry data for Vietnam,75.33, ,media/magnetometry_for_Vietnam.png,magnetometry_for_Vietnam.png
-166,products.product,7,1979WEA0166AFG,Afghanistan,This file contains a weather data for Afghanistan,96.99, ,media/report_for_Afghanistan.png,report_for_Afghanistan.png
-167,products.product,7,1972WEA0167ANG,Angola,This file contains a weather data for Angola,60.68, ,media/report_for_Angola.png,report_for_Angola.png
-168,products.product,8,1972GEO0168ARG,Argentina,This file contains a geological map for Argentina,95.36, ,media/report_for_Argentina.png,report_for_Argentina.png
-169,products.product,6,2001ENV0169AUS,Australia,This file contains a environmental impact assessment for Australia,55.54, ,media/report_for_Australia.png,report_for_Australia.png
-170,products.product,7,1977WEA0170AUS,Austria,This file contains a weather data for Austria,51.86, ,media/report_for_Austria.png,report_for_Austria.png
-171,products.product,7,2007WEA0171AZE,Azerbaijan,This file contains a weather data for Azerbaijan,55.55, ,media/report_for_Azerbaijan.png,report_for_Azerbaijan.png
-172,products.product,8,2011GEO0172BAR,Barbados,This file contains a geological map for Barbados,73.92, ,media/report_for_Barbados.png,report_for_Barbados.png
-173,products.product,6,2018ENV0173BEL,Belize,This file contains a environmental impact assessment for Belize,68.13, ,media/report_for_Belize.png,report_for_Belize.png
-174,products.product,14,1979GEO0174BHU,Bhutan,This file contains a geological map for Bhutan,29.17, ,media/report_for_Bhutan.png,report_for_Bhutan.png
-175,products.product,8,2008GEO0175BOT,Botswana,This file contains a geological map for Botswana,77.71, ,media/report_for_Botswana.png,report_for_Botswana.png
-176,products.product,8,2005GEO0176BRA,Brazil,This file contains a geological map for Brazil,62.92, ,media/report_for_Brazil.png,report_for_Brazil.png
-177,products.product,8,1980GEO0177BUL,Bulgaria,This file contains a geological map for Bulgaria,95.22, ,media/report_for_Bulgaria.png,report_for_Bulgaria.png
-178,products.product,7,2007WEA0178BUR,Burkina Faso,This file contains a weather data for Burkina Faso,70.40, ,media/report_for_Burkina Faso.png,report_for_Burkina Faso.png
-179,products.product,6,1996ENV0179CAM,Cambodia,This file contains a environmental impact assessment for Cambodia,70.97, ,media/report_for_Cambodia.png,report_for_Cambodia.png
-180,products.product,8,1975GEO0180CAM,Cameroon,This file contains a geological map for Cameroon,91.60, ,media/report_for_Cameroon.png,report_for_Cameroon.png
-181,products.product,6,1996ENV0181CAN,Canada,This file contains a environmental impact assessment for Canada,90.04, ,media/report_for_Canada.png,report_for_Canada.png
-182,products.product,7,2017WEA0182CHA,Chad,This file contains a weather data for Chad,62.00, ,media/report_for_Chad.png,report_for_Chad.png
-183,products.product,8,2010GEO0183CHI,China,This file contains a geological map for China,66.79, ,media/report_for_China.png,report_for_China.png
-184,products.product,7,1994WEA0184COS,Costa Rica,This file contains a weather data for Costa Rica,102.43, ,media/report_for_Costa Rica.png,report_for_Costa Rica.png
-185,products.product,6,2020ENV0185CUB,Cuba,This file contains a environmental impact assessment for Cuba,100.46, ,media/report_for_Cuba.png,report_for_Cuba.png
-186,products.product,6,1983ENV0186CYP,Cyprus,This file contains a environmental impact assessment for Cyprus,69.78, ,media/report_for_Cyprus.png,report_for_Cyprus.png
-187,products.product,8,2014GEO0187DEN,Denmark,This file contains a geological map for Denmark,93.74, ,media/report_for_Denmark.png,report_for_Denmark.png
-188,products.product,8,2021GEO0188DJI,Djibouti,This file contains a geological map for Djibouti,73.38, ,media/report_for_Djibouti.png,report_for_Djibouti.png
-189,products.product,6,1985ENV0189ECU,Ecuador,This file contains a environmental impact assessment for Ecuador,68.34, ,media/report_for_Ecuador.png,report_for_Ecuador.png
-190,products.product,8,1997GEO0190EL ,El Salvador,This file contains a geological map for El Salvador,86.89, ,media/report_for_El Salvador.png,report_for_El Salvador.png
-191,products.product,8,1994GEO0191ERI,Eritrea,This file contains a geological map for Eritrea,78.06, ,media/report_for_Eritrea.png,report_for_Eritrea.png
-192,products.product,8,1979GEO0192ETH,Ethiopia,This file contains a geological map for Ethiopia,79.43, ,media/report_for_Ethiopia.png,report_for_Ethiopia.png
-193,products.product,6,2009ENV0193GAM,Gambia,This file contains a environmental impact assessment for Gambia,67.26, ,media/report_for_Gambia.png,report_for_Gambia.png
-194,products.product,14,1976GEO0194GER,Germany,This file contains a geological map for Germany,37.79, ,media/report_for_Germany.png,report_for_Germany.png
-195,products.product,7,2005WEA0195GHA,Ghana,This file contains a weather data for Ghana,85.38, ,media/report_for_Ghana.png,report_for_Ghana.png
-196,products.product,14,2004GEO0196GUA,Guatemala,This file contains a geological map for Guatemala,16.06, ,media/report_for_Guatemala.png,report_for_Guatemala.png
-197,products.product,8,1998GEO0197GUI,Guinea-Bissau,This file contains a geological map for Guinea-Bissau,76.07, ,media/report_for_Guinea-Bissau.png,report_for_Guinea-Bissau.png
-198,products.product,8,2007GEO0198GUY,Guyana,This file contains a geological map for Guyana,68.30, ,media/report_for_Guyana.png,report_for_Guyana.png
-199,products.product,7,1972WEA0199HAI,Haiti,This file contains a weather data for Haiti,86.02, ,media/report_for_Haiti.png,report_for_Haiti.png
-200,products.product,6,2001ENV0200HON,Honduras,This file contains a environmental impact assessment for Honduras,82.23, ,media/report_for_Honduras.png,report_for_Honduras.png
-201,products.product,8,1994GEO0201HUN,Hungary,This file contains a geological map for Hungary,97.30, ,media/report_for_Hungary.png,report_for_Hungary.png
-202,products.product,6,2010ENV0202IND,India,This file contains a environmental impact assessment for India,105.79, ,media/report_for_India.png,report_for_India.png
-203,products.product,7,1990WEA0203IND,Indonesia,This file contains a weather data for Indonesia,60.76, ,media/report_for_Indonesia.png,report_for_Indonesia.png
-204,products.product,7,2013WEA0204IRA,Iran,This file contains a weather data for Iran,87.53, ,media/report_for_Iran.png,report_for_Iran.png
-205,products.product,6,1973ENV0205IRE,Ireland,This file contains a environmental impact assessment for Ireland,96.02, ,media/report_for_Ireland.png,report_for_Ireland.png
-206,products.product,7,1997WEA0206ISR,Israel,This file contains a weather data for Israel,69.95, ,media/report_for_Israel.png,report_for_Israel.png
-207,products.product,6,1971ENV0207ITA,Italy,This file contains a environmental impact assessment for Italy,96.23, ,media/report_for_Italy.png,report_for_Italy.png
-208,products.product,7,1971WEA0208JAP,Japan,This file contains a weather data for Japan,101.18, ,media/report_for_Japan.png,report_for_Japan.png
-209,products.product,8,2005GEO0209JOR,Jordan,This file contains a geological map for Jordan,64.55, ,media/report_for_Jordan.png,report_for_Jordan.png
-210,products.product,7,1970WEA0210KEN,Kenya,This file contains a weather data for Kenya,64.24, ,media/report_for_Kenya.png,report_for_Kenya.png
-211,products.product,8,2008GEO0211KOS,Kosovo,This file contains a geological map for Kosovo,105.41, ,media/report_for_Kosovo.png,report_for_Kosovo.png
-212,products.product,14,2017GEO0212KYR,Kyrgyzstan,This file contains a geological map for Kyrgyzstan,23.22, ,media/report_for_Kyrgyzstan.png,report_for_Kyrgyzstan.png
-213,products.product,8,2022GEO0213LAO,Laos,This file contains a geological map for Laos,96.57, ,media/report_for_Laos.png,report_for_Laos.png
-214,products.product,7,1986WEA0214LAT,Latvia,This file contains a weather data for Latvia,53.69, ,media/report_for_Latvia.png,report_for_Latvia.png
-215,products.product,8,1987GEO0215LEB,Lebanon,This file contains a geological map for Lebanon,51.09, ,media/report_for_Lebanon.png,report_for_Lebanon.png
-216,products.product,7,2005WEA0216LIB,Liberia,This file contains a weather data for Liberia,87.14, ,media/report_for_Liberia.png,report_for_Liberia.png
-217,products.product,7,1998WEA0217LIT,Lithuania,This file contains a weather data for Lithuania,81.28, ,media/report_for_Lithuania.png,report_for_Lithuania.png
-218,products.product,7,2006WEA0218MAD,Madagascar,This file contains a weather data for Madagascar,106.70, ,media/report_for_Madagascar.png,report_for_Madagascar.png
-219,products.product,8,1986GEO0219MAL,Malaysia,This file contains a geological map for Malaysia,82.86, ,media/report_for_Malaysia.png,report_for_Malaysia.png
-220,products.product,6,2004ENV0220MAU,Mauritania,This file contains a environmental impact assessment for Mauritania,94.73, ,media/report_for_Mauritania.png,report_for_Mauritania.png
-221,products.product,7,2018WEA0221MOL,Moldova,This file contains a weather data for Moldova,67.07, ,media/report_for_Moldova.png,report_for_Moldova.png
-222,products.product,7,1986WEA0222MON,Mongolia,This file contains a weather data for Mongolia,59.43, ,media/report_for_Mongolia.png,report_for_Mongolia.png
-223,products.product,14,1994GEO0223MON,Montenegro,This file contains a geological map for Montenegro,28.89, ,media/report_for_Montenegro.png,report_for_Montenegro.png
-224,products.product,7,1982WEA0224MOR,Morocco,This file contains a weather data for Morocco,73.57, ,media/report_for_Morocco.png,report_for_Morocco.png
-225,products.product,6,1971ENV0225NAM,Namibia,This file contains a environmental impact assessment for Namibia,87.27, ,media/report_for_Namibia.png,report_for_Namibia.png
-226,products.product,6,2019ENV0226NIG,Niger,This file contains a environmental impact assessment for Niger,96.92, ,media/report_for_Niger.png,report_for_Niger.png
-227,products.product,8,1982GEO0227NOR,North Macedonia,This file contains a geological map for North Macedonia,59.63, ,media/report_for_North Macedonia.png,report_for_North Macedonia.png
-228,products.product,6,1972ENV0228OMA,Oman,This file contains a environmental impact assessment for Oman,96.87, ,media/report_for_Oman.png,report_for_Oman.png
-229,products.product,6,2011ENV0229PAK,Pakistan,This file contains a environmental impact assessment for Pakistan,76.32, ,media/report_for_Pakistan.png,report_for_Pakistan.png
-230,products.product,7,1989WEA0230PAP,Papua New Guinea,This file contains a weather data for Papua New Guinea,74.63, ,media/report_for_Papua New Guinea.png,report_for_Papua New Guinea.png
-231,products.product,6,2020ENV0231PER,Peru,This file contains a environmental impact assessment for Peru,86.52, ,media/report_for_Peru.png,report_for_Peru.png
-232,products.product,8,1993GEO0232SEN,Senegal,This file contains a geological map for Senegal,92.78, ,media/report_for_Senegal.png,report_for_Senegal.png
-233,products.product,7,2011WEA0233SIE,Sierra Leone,This file contains a weather data for Sierra Leone,58.16, ,media/report_for_Sierra Leone.png,report_for_Sierra Leone.png
-234,products.product,8,2000GEO0234SOM,Somalia,This file contains a geological map for Somalia,90.64, ,media/report_for_Somalia.png,report_for_Somalia.png
-235,products.product,8,2008GEO0235SOM,Somaliland,This file contains a geological map for Somaliland,88.41, ,media/report_for_Somaliland.png,report_for_Somaliland.png
-236,products.product,7,1994WEA0236SUD,Sudan,This file contains a weather data for Sudan,67.95, ,media/report_for_Sudan.png,report_for_Sudan.png
-237,products.product,6,2018ENV0237SUR,Suriname,This file contains a environmental impact assessment for Suriname,97.80, ,media/report_for_Suriname.png,report_for_Suriname.png
-238,products.product,8,1991GEO0238SWI,Switzerland,This file contains a geological map for Switzerland,94.55, ,media/report_for_Switzerland.png,report_for_Switzerland.png
-239,products.product,7,1983WEA0239UGA,Uganda,This file contains a weather data for Uganda,72.78, ,media/report_for_Uganda.png,report_for_Uganda.png
-240,products.product,7,2009WEA0240UNI,United Kingdom,This file contains a weather data for United Kingdom,107.64, ,media/report_for_United Kingdom.png,report_for_United Kingdom.png
-241,products.product,8,1984GEO0241URU,Uruguay,This file contains a geological map for Uruguay,75.10, ,media/report_for_Uruguay.png,report_for_Uruguay.png
-242,products.product,7,1982WEA0242ZAM,Zambia,This file contains a weather data for Zambia,84.24, ,media/report_for_Zambia.png,report_for_Zambia.png
-243,products.product,6,1995ENV0243ZIM,Zimbabwe,This file contains a environmental impact assessment for Zimbabwe,72.38, ,media/report_for_Zimbabwe.png,report_for_Zimbabwe.png
-244,products.product,3,1982RES0244ALG,Algeria,This file contains resistivity data for Algeria,63.97, ,media/resistivity_for_Algeria.png,resistivity_for_Algeria.png
-245,products.product,3,1993RES0245ARG,Argentina,This file contains resistivity data for Argentina,102.03, ,media/resistivity_for_Argentina.png,resistivity_for_Argentina.png
-246,products.product,3,2012RES0246AUS,Austria,This file contains resistivity data for Austria,72.57, ,media/resistivity_for_Austria.png,resistivity_for_Austria.png
-247,products.product,3,1988RES0247AZE,Azerbaijan,This file contains resistivity data for Azerbaijan,90.86, ,media/resistivity_for_Azerbaijan.png,resistivity_for_Azerbaijan.png
-248,products.product,3,2020RES0248BEL,Belize,This file contains resistivity data for Belize,108.23, ,media/resistivity_for_Belize.png,resistivity_for_Belize.png
-249,products.product,5,1980RES0249BOT,Botswana,This file contains resistivity data for Botswana,13.03, ,media/resistivity_for_Botswana.png,resistivity_for_Botswana.png
-250,products.product,3,2006RES0250CAB,Cabo Verde,This file contains resistivity data for Cabo Verde,88.97, ,media/resistivity_for_Cabo Verde.png,resistivity_for_Cabo Verde.png
-251,products.product,3,1976RES0251CAM,Cambodia,This file contains resistivity data for Cambodia,69.47, ,media/resistivity_for_Cambodia.png,resistivity_for_Cambodia.png
-252,products.product,3,1980RES0252CHI,China,This file contains resistivity data for China,57.16, ,media/resistivity_for_China.png,resistivity_for_China.png
-253,products.product,3,2011RES0253COL,Colombia,This file contains resistivity data for Colombia,51.18, ,media/resistivity_for_Colombia.png,resistivity_for_Colombia.png
-254,products.product,3,2004RES0254COS,Costa Rica,This file contains resistivity data for Costa Rica,64.97, ,media/resistivity_for_Costa Rica.png,resistivity_for_Costa Rica.png
-255,products.product,3,2003RES0255CRO,Croatia,This file contains resistivity data for Croatia,75.58, ,media/resistivity_for_Croatia.png,resistivity_for_Croatia.png
-256,products.product,5,2006RES0256CZE,Czechia,This file contains resistivity data for Czechia,23.46, ,media/resistivity_for_Czechia.png,resistivity_for_Czechia.png
-257,products.product,3,1971RES0257DJI,Djibouti,This file contains resistivity data for Djibouti,71.65, ,media/resistivity_for_Djibouti.png,resistivity_for_Djibouti.png
-258,products.product,3,1999RES0258ECU,Ecuador,This file contains resistivity data for Ecuador,95.46, ,media/resistivity_for_Ecuador.png,resistivity_for_Ecuador.png
-259,products.product,3,2017RES0259ERI,Eritrea,This file contains resistivity data for Eritrea,87.51, ,media/resistivity_for_Eritrea.png,resistivity_for_Eritrea.png
-260,products.product,3,1988RES0260GAB,Gabon,This file contains resistivity data for Gabon,52.71, ,media/resistivity_for_Gabon.png,resistivity_for_Gabon.png
-261,products.product,3,2004RES0261GEO,Georgia,This file contains resistivity data for Georgia,82.21, ,media/resistivity_for_Georgia.png,resistivity_for_Georgia.png
-262,products.product,3,2016RES0262GUI,Guinea,This file contains resistivity data for Guinea,95.48, ,media/resistivity_for_Guinea.png,resistivity_for_Guinea.png
-263,products.product,3,1990RES0263GUY,Guyana,This file contains resistivity data for Guyana,99.57, ,media/resistivity_for_Guyana.png,resistivity_for_Guyana.png
-264,products.product,3,2020RES0264HAI,Haiti,This file contains resistivity data for Haiti,72.72, ,media/resistivity_for_Haiti.png,resistivity_for_Haiti.png
-265,products.product,3,2003RES0265IND,Indonesia,This file contains resistivity data for Indonesia,106.96, ,media/resistivity_for_Indonesia.png,resistivity_for_Indonesia.png
-266,products.product,3,2004RES0266ITA,Italy,This file contains resistivity data for Italy,90.56, ,media/resistivity_for_Italy.png,resistivity_for_Italy.png
-267,products.product,3,1992RES0267JAM,Jamaica,This file contains resistivity data for Jamaica,88.50, ,media/resistivity_for_Jamaica.png,resistivity_for_Jamaica.png
-268,products.product,3,2012RES0268JOR,Jordan,This file contains resistivity data for Jordan,53.03, ,media/resistivity_for_Jordan.png,resistivity_for_Jordan.png
-269,products.product,3,2001RES0269LAT,Latvia,This file contains resistivity data for Latvia,98.67, ,media/resistivity_for_Latvia.png,resistivity_for_Latvia.png
-270,products.product,5,1984RES0270LIB,Liberia,This file contains resistivity data for Liberia,22.69, ,media/resistivity_for_Liberia.png,resistivity_for_Liberia.png
-271,products.product,3,2002RES0271MAL,Malawi,This file contains resistivity data for Malawi,70.42, ,media/resistivity_for_Malawi.png,resistivity_for_Malawi.png
-272,products.product,3,2017RES0272MAU,Mauritania,This file contains resistivity data for Mauritania,97.09, ,media/resistivity_for_Mauritania.png,resistivity_for_Mauritania.png
-273,products.product,3,2022RES0273MEX,Mexico,This file contains resistivity data for Mexico,76.03, ,media/resistivity_for_Mexico.png,resistivity_for_Mexico.png
-274,products.product,3,2013RES0274MOR,Morocco,This file contains resistivity data for Morocco,92.62, ,media/resistivity_for_Morocco.png,resistivity_for_Morocco.png
-275,products.product,3,1994RES0275NIC,Nicaragua,This file contains resistivity data for Nicaragua,57.31, ,media/resistivity_for_Nicaragua.png,resistivity_for_Nicaragua.png
-276,products.product,3,1981RES0276NIG,Niger,This file contains resistivity data for Niger,108.06, ,media/resistivity_for_Niger.png,resistivity_for_Niger.png
-277,products.product,5,2013RES0277NOR,North Macedonia,This file contains resistivity data for North Macedonia,32.75, ,media/resistivity_for_North Macedonia.png,resistivity_for_North Macedonia.png
-278,products.product,3,2001RES0278NOR,Norway,This file contains resistivity data for Norway,75.89, ,media/resistivity_for_Norway.png,resistivity_for_Norway.png
-279,products.product,3,2003RES0279PAK,Pakistan,This file contains resistivity data for Pakistan,73.31, ,media/resistivity_for_Pakistan.png,resistivity_for_Pakistan.png
-280,products.product,3,1983RES0280PAR,Paraguay,This file contains resistivity data for Paraguay,94.38, ,media/resistivity_for_Paraguay.png,resistivity_for_Paraguay.png
-281,products.product,3,1982RES0281PHI,Philippines,This file contains resistivity data for Philippines,93.74, ,media/resistivity_for_Philippines.png,resistivity_for_Philippines.png
-282,products.product,3,1990RES0282RWA,Rwanda,This file contains resistivity data for Rwanda,107.55, ,media/resistivity_for_Rwanda.png,resistivity_for_Rwanda.png
-283,products.product,3,2022RES0283SEN,Senegal,This file contains resistivity data for Senegal,71.65, ,media/resistivity_for_Senegal.png,resistivity_for_Senegal.png
-284,products.product,3,2011RES0284SLO,Slovakia,This file contains resistivity data for Slovakia,78.95, ,media/resistivity_for_Slovakia.png,resistivity_for_Slovakia.png
-285,products.product,3,2022RES0285SOU,South Korea,This file contains resistivity data for South Korea,92.33, ,media/resistivity_for_South Korea.png,resistivity_for_South Korea.png
-286,products.product,3,2003RES0286SWE,Sweden,This file contains resistivity data for Sweden,81.30, ,media/resistivity_for_Sweden.png,resistivity_for_Sweden.png
-287,products.product,3,1970RES0287TUN,Tunisia,This file contains resistivity data for Tunisia,81.37, ,media/resistivity_for_Tunisia.png,resistivity_for_Tunisia.png
-288,products.product,3,2000RES0288TUR,Turkmenistan,This file contains resistivity data for Turkmenistan,104.06, ,media/resistivity_for_Turkmenistan.png,resistivity_for_Turkmenistan.png
-289,products.product,3,1976RES0289UNI,United Kingdom,This file contains resistivity data for United Kingdom,97.98, ,media/resistivity_for_United Kingdom.png,resistivity_for_United Kingdom.png
-290,products.product,3,2001RES0290ZAM,Zambia,This file contains resistivity data for Zambia,99.58, ,media/resistivity_for_Zambia.png,resistivity_for_Zambia.png
-291,products.product,9,2015BKS0291ZAM,N/A,This book contains ,28.41, ,media/,file_name
-292,products.product,15,2005BKS0292N/A,N/A,This book contains ,11.01, ,media/,file_name
-293,products.product,9,1986BKS0293N/A,N/A,This book contains ,20.18, ,media/,file_name
-294,products.product,9,2021BKS0294N/A,N/A,This book contains ,48.85, ,media/,file_name
-295,products.product,9,1974BKS0295N/A,N/A,This book contains ,31.13, ,media/,file_name
-296,products.product,9,1978BKS0296N/A,N/A,This book contains ,47.40, ,media/,file_name
-297,products.product,9,1983BKS0297N/A,N/A,This book contains ,27.70, ,media/,file_name
-298,products.product,9,2021BKS0298N/A,N/A,This book contains ,58.68, ,media/,file_name
-299,products.product,9,1976BKS0299N/A,N/A,This book contains ,39.39, ,media/,file_name
-300,products.product,9,1996BKS0300N/A,N/A,This book contains ,26.53, ,media/,file_name
-301,products.product,10,2011COU0301N/A,N/A,This course is designated to train ,172.45, ,media/,file_name
-302,products.product,10,1976COU0302N/A,N/A,This course is designated to train ,122.49, ,media/,file_name
-303,products.product,10,1978COU0303N/A,N/A,This course is designated to train ,192.06, ,media/,file_name
-304,products.product,10,2001COU0304N/A,N/A,This course is designated to train ,184.56, ,media/,file_name
-305,products.product,10,1974COU0305N/A,N/A,This course is designated to train ,179.23, ,media/,file_name
-306,products.product,15,1991COU0306N/A,N/A,This course is designated to train ,44.65, ,media/,file_name
-307,products.product,10,1975COU0307N/A,N/A,This course is designated to train ,100.45, ,media/,file_name
-308,products.product,10,2016COU0308N/A,N/A,This course is designated to train ,137.49, ,media/,file_name
-309,products.product,10,2015COU0309N/A,N/A,This course is designated to train ,169.50, ,media/,file_name
-310,products.product,10,2006COU0310N/A,N/A,This course is designated to train ,127.30, ,media/,file_name
-311,products.product,12,1990COU0311N/A,N/A,This software package is a fundamental tool for ,635.24, ,media/,file_name
-312,products.product,11,1973COU0312N/A,N/A,This software package is a fundamental tool for ,602.36, ,media/,file_name
-313,products.product,12,2010COU0313N/A,N/A,This software package is a fundamental tool for ,788.63, ,media/,file_name
-314,products.product,11,1989COU0314N/A,N/A,This software package is a fundamental tool for ,647.93, ,media/,file_name
-315,products.product,12,2021COU0315N/A,N/A,This software package is a fundamental tool for ,527.92, ,media/,file_name
-316,products.product,13,1997COU0316N/A,N/A,This software package is a fundamental tool for ,629.48, ,media/,file_name
-317,products.product,13,2018COU0317N/A,N/A,This software package is a fundamental tool for ,520.50, ,media/,file_name
-318,products.product,16,2016COU0318N/A,N/A,This software package is a fundamental tool for ,443.89, ,media/,file_name
-319,products.product,12,2011COU0319N/A,N/A,This software package is a fundamental tool for ,558.35, ,media/,file_name
-320,products.product,13,2014COU0320N/A,N/A,This software package is a fundamental tool for ,560.14, ,media/,file_name
-321,products.product,12,1972COU0321N/A,N/A,This software package is a fundamental tool for ,592.37, ,media/,file_name
-322,products.product,16,1985COU0322N/A,N/A,This software package is a fundamental tool for ,224.21, ,media/,file_name
-323,products.product,12,2008COU0323N/A,N/A,This software package is a fundamental tool for ,581.89, ,media/,file_name
-324,products.product,11,1988COU0324N/A,N/A,This software package is a fundamental tool for ,672.15, ,media/,file_name
-325,products.product,13,2014COU0325N/A,N/A,This software package is a fundamental tool for ,682.63, ,media/,file_name
+1,products.product,1,1973DEM0001AFG,Afghanistan,This file contains DEM data for Afghanistan,70.38, ,,digital_elevation_model_for_Afghanistan.png
+2,products.product,1,1983DEM0002ANG,Angola,This file contains DEM data for Angola,70.19, ,,digital_elevation_model_for_Angola.png
+3,products.product,5,1988DEM0003AUS,Australia,This file contains DEM data for Australia,20.77, ,,digital_elevation_model_for_Australia.png
+4,products.product,1,2019DEM0004AUS,Austria,This file contains DEM data for Austria,60.26, ,,digital_elevation_model_for_Austria.png
+5,products.product,1,1993DEM0005BAN,Bangladesh,This file contains DEM data for Bangladesh,59.90, ,,digital_elevation_model_for_Bangladesh.png
+6,products.product,1,2017DEM0006BOT,Botswana,This file contains DEM data for Botswana,59.86, ,,digital_elevation_model_for_Botswana.png
+7,products.product,1,1993DEM0007BRA,Brazil,This file contains DEM data for Brazil,103.59, ,,digital_elevation_model_for_Brazil.png
+8,products.product,1,1990DEM0008BUL,Bulgaria,This file contains DEM data for Bulgaria,74.84, ,,digital_elevation_model_for_Bulgaria.png
+9,products.product,1,2011DEM0009CAB,Cabo Verde,This file contains DEM data for Cabo Verde,67.10, ,,digital_elevation_model_for_Cabo Verde.png
+10,products.product,1,2019DEM0010CAM,Cameroon,This file contains DEM data for Cameroon,52.92, ,,digital_elevation_model_for_Cameroon.png
+11,products.product,5,1992DEM0011CAN,Canada,This file contains DEM data for Canada,27.39, ,,digital_elevation_model_for_Canada.png
+12,products.product,1,1988DEM0012CHI,China,This file contains DEM data for China,70.03, ,,digital_elevation_model_for_China.png
+13,products.product,1,2020DEM0013CRO,Croatia,This file contains DEM data for Croatia,58.43, ,,digital_elevation_model_for_Croatia.png
+14,products.product,1,1992DEM0014CUB,Cuba,This file contains DEM data for Cuba,81.25, ,,digital_elevation_model_for_Cuba.png
+15,products.product,1,1970DEM0015DEN,Denmark,This file contains DEM data for Denmark,63.43, ,,digital_elevation_model_for_Denmark.png
+16,products.product,1,2010DEM0016EST,Estonia,This file contains DEM data for Estonia,102.81, ,,digital_elevation_model_for_Estonia.png
+17,products.product,1,1976DEM0017GAB,Gabon,This file contains DEM data for Gabon,84.35, ,,digital_elevation_model_for_Gabon.png
+18,products.product,1,1994DEM0018GHA,Ghana,This file contains DEM data for Ghana,89.27, ,,digital_elevation_model_for_Ghana.png
+19,products.product,5,2002DEM0019GUI,Guinea-Bissau,This file contains DEM data for Guinea-Bissau,38.66, ,,digital_elevation_model_for_Guinea-Bissau.png
+20,products.product,1,2004DEM0020GUI,Guinea,This file contains DEM data for Guinea,70.21, ,,digital_elevation_model_for_Guinea.png
+21,products.product,1,2006DEM0021HAI,Haiti,This file contains DEM data for Haiti,94.03, ,,digital_elevation_model_for_Haiti.png
+22,products.product,1,2019DEM0022IND,India,This file contains DEM data for India,58.33, ,,digital_elevation_model_for_India.png
+23,products.product,1,1997DEM0023IRA,Iraq,This file contains DEM data for Iraq,104.62, ,,digital_elevation_model_for_Iraq.png
+24,products.product,1,2021DEM0024KAZ,Kazakhstan,This file contains DEM data for Kazakhstan,104.38, ,,digital_elevation_model_for_Kazakhstan.png
+25,products.product,1,1982DEM0025LAO,Laos,This file contains DEM data for Laos,62.46, ,,digital_elevation_model_for_Laos.png
+26,products.product,1,2014DEM0026LAT,Latvia,This file contains DEM data for Latvia,50.91, ,,digital_elevation_model_for_Latvia.png
+27,products.product,1,1988DEM0027LES,Lesotho,This file contains DEM data for Lesotho,59.37, ,,digital_elevation_model_for_Lesotho.png
+28,products.product,1,1982DEM0028MAL,Mali,This file contains DEM data for Mali,108.85, ,,digital_elevation_model_for_Mali.png
+29,products.product,1,1983DEM0029MAU,Mauritania,This file contains DEM data for Mauritania,99.97, ,,digital_elevation_model_for_Mauritania.png
+30,products.product,1,2013DEM0030MEX,Mexico,This file contains DEM data for Mexico,100.95, ,,digital_elevation_model_for_Mexico.png
+31,products.product,1,2015DEM0031MOL,Moldova,This file contains DEM data for Moldova,65.65, ,,digital_elevation_model_for_Moldova.png
+32,products.product,1,2005DEM0032MON,Montenegro,This file contains DEM data for Montenegro,99.93, ,,digital_elevation_model_for_Montenegro.png
+33,products.product,1,2018DEM0033NIG,Niger,This file contains DEM data for Niger,85.85, ,,digital_elevation_model_for_Niger.png
+34,products.product,1,2008DEM0034NOR,North Korea,This file contains DEM data for North Korea,55.72, ,,digital_elevation_model_for_North Korea.png
+35,products.product,1,1985DEM0035OMA,Oman,This file contains DEM data for Oman,109.94, ,,digital_elevation_model_for_Oman.png
+36,products.product,1,2007DEM0036PAN,Panama,This file contains DEM data for Panama,52.86, ,,digital_elevation_model_for_Panama.png
+37,products.product,1,1995DEM0037PAP,Papua New Guinea,This file contains DEM data for Papua New Guinea,75.61, ,,digital_elevation_model_for_Papua New Guinea.png
+38,products.product,1,2020DEM0038POL,Poland,This file contains DEM data for Poland,67.26, ,,digital_elevation_model_for_Poland.png
+39,products.product,1,2015DEM0039SLO,Slovenia,This file contains DEM data for Slovenia,52.10, ,,digital_elevation_model_for_Slovenia.png
+40,products.product,1,2002DEM0040SOM,Somalia,This file contains DEM data for Somalia,84.76, ,,digital_elevation_model_for_Somalia.png
+41,products.product,1,1971DEM0041SOU,South Africa,This file contains DEM data for South Africa,69.82, ,,digital_elevation_model_for_South Africa.png
+42,products.product,1,1988DEM0042SPA,Spain,This file contains DEM data for Spain,59.13, ,,digital_elevation_model_for_Spain.png
+43,products.product,5,2007DEM0043SRI,Sri Lanka,This file contains DEM data for Sri Lanka,48.10, ,,digital_elevation_model_for_Sri Lanka.png
+44,products.product,1,1976DEM0044SWI,Switzerland,This file contains DEM data for Switzerland,102.51, ,,digital_elevation_model_for_Switzerland.png
+45,products.product,1,1983DEM0045TAI,Taiwan,This file contains DEM data for Taiwan,78.77, ,,digital_elevation_model_for_Taiwan.png
+46,products.product,1,1980DEM0046THA,Thailand,This file contains DEM data for Thailand,85.76, ,,digital_elevation_model_for_Thailand.png
+47,products.product,1,1992DEM0047TRI,Trinidad and Tobago,This file contains DEM data for Trinidad and Tobago,103.88, ,,digital_elevation_model_for_Trinidad and Tobago.png
+48,products.product,1,2004DEM0048TUN,Tunisia,This file contains DEM data for Tunisia,61.58, ,,digital_elevation_model_for_Tunisia.png
+49,products.product,1,2003DEM0049UNI,United Arab Emirates,This file contains DEM data for United Arab Emirates,102.66, ,,digital_elevation_model_for_United Arab Emirates.png
+50,products.product,1,2010DEM0050VAN,Vanuatu,This file contains DEM data for Vanuatu,103.98, ,,digital_elevation_model_for_Vanuatu.png
+51,products.product,1,2022DEM0051VIE,Vietnam,This file contains DEM data for Vietnam,57.83, ,,digital_elevation_model_for_Vietnam.png
+52,products.product,2,2010GRA0052AFG,Afghanistan,This file contains gravimetry data for Afghanistan,101.41, ,,gravimetry_for_Afghanistan.png
+53,products.product,2,2005GRA0053ALB,Albania,This file contains gravimetry data for Albania,78.51, ,,gravimetry_for_Albania.png
+54,products.product,2,1986GRA0054ALG,Algeria,This file contains gravimetry data for Algeria,74.78, ,,gravimetry_for_Algeria.png
+55,products.product,2,1992GRA0055ANG,Angola,This file contains gravimetry data for Angola,77.32, ,,gravimetry_for_Angola.png
+56,products.product,2,1989GRA0056ARM,Armenia,This file contains gravimetry data for Armenia,76.53, ,,gravimetry_for_Armenia.png
+57,products.product,2,2004GRA0057AUS,Austria,This file contains gravimetry data for Austria,81.77, ,,gravimetry_for_Austria.png
+58,products.product,2,1971GRA0058BAN,Bangladesh,This file contains gravimetry data for Bangladesh,61.33, ,,gravimetry_for_Bangladesh.png
+59,products.product,2,1973GRA0059BEL,Belize,This file contains gravimetry data for Belize,83.92, ,,gravimetry_for_Belize.png
+60,products.product,2,1999GRA0060BEN,Benin,This file contains gravimetry data for Benin,92.80, ,,gravimetry_for_Benin.png
+61,products.product,2,2011GRA0061BHU,Bhutan,This file contains gravimetry data for Bhutan,78.32, ,,gravimetry_for_Bhutan.png
+62,products.product,2,1975GRA0062BOT,Botswana,This file contains gravimetry data for Botswana,64.63, ,,gravimetry_for_Botswana.png
+63,products.product,2,1997GRA0063BUL,Bulgaria,This file contains gravimetry data for Bulgaria,76.44, ,,gravimetry_for_Bulgaria.png
+64,products.product,2,2012GRA0064BUR,Burundi,This file contains gravimetry data for Burundi,61.01, ,,gravimetry_for_Burundi.png
+65,products.product,2,1985GRA0065CAB,Cabo Verde,This file contains gravimetry data for Cabo Verde,88.53, ,,gravimetry_for_Cabo Verde.png
+66,products.product,2,1990GRA0066CAM,Cameroon,This file contains gravimetry data for Cameroon,74.40, ,,gravimetry_for_Cameroon.png
+67,products.product,2,1986GRA0067CAN,Canada,This file contains gravimetry data for Canada,83.08, ,,gravimetry_for_Canada.png
+68,products.product,2,1973GRA0068CHA,Chad,This file contains gravimetry data for Chad,93.78, ,,gravimetry_for_Chad.png
+69,products.product,2,2010GRA0069CHI,China,This file contains gravimetry data for China,89.91, ,,gravimetry_for_China.png
+70,products.product,2,1974GRA0070COL,Colombia,This file contains gravimetry data for Colombia,57.62, ,,gravimetry_for_Colombia.png
+71,products.product,5,1993GRA0071COS,Costa Rica,This file contains gravimetry data for Costa Rica,21.65, ,,gravimetry_for_Costa Rica.png
+72,products.product,2,1981GRA0072CRO,Croatia,This file contains gravimetry data for Croatia,78.29, ,,gravimetry_for_Croatia.png
+73,products.product,2,1983GRA0073CUB,Cuba,This file contains gravimetry data for Cuba,99.05, ,,gravimetry_for_Cuba.png
+74,products.product,2,1970GRA0074CYP,Cyprus,This file contains gravimetry data for Cyprus,71.70, ,,gravimetry_for_Cyprus.png
+75,products.product,2,2017GRA0075DEN,Denmark,This file contains gravimetry data for Denmark,71.80, ,,gravimetry_for_Denmark.png
+76,products.product,2,1996GRA0076EGY,Egypt,This file contains gravimetry data for Egypt,90.32, ,,gravimetry_for_Egypt.png
+77,products.product,2,1983GRA0077ERI,Eritrea,This file contains gravimetry data for Eritrea,103.75, ,,gravimetry_for_Eritrea.png
+78,products.product,2,2007GRA0078GEO,Georgia,This file contains gravimetry data for Georgia,105.31, ,,gravimetry_for_Georgia.png
+79,products.product,2,1977GRA0079GHA,Ghana,This file contains gravimetry data for Ghana,82.82, ,,gravimetry_for_Ghana.png
+80,products.product,2,1984GRA0080GUI,Guinea,This file contains gravimetry data for Guinea,75.56, ,,gravimetry_for_Guinea.png
+81,products.product,2,1998GRA0081HAI,Haiti,This file contains gravimetry data for Haiti,108.91, ,,gravimetry_for_Haiti.png
+82,products.product,2,1981GRA0082HON,Honduras,This file contains gravimetry data for Honduras,63.88, ,,gravimetry_for_Honduras.png
+83,products.product,2,1983GRA0083ICE,Iceland,This file contains gravimetry data for Iceland,53.65, ,,gravimetry_for_Iceland.png
+84,products.product,2,2003GRA0084IND,India,This file contains gravimetry data for India,98.40, ,,gravimetry_for_India.png
+85,products.product,2,1977GRA0085IRA,Iran,This file contains gravimetry data for Iran,59.13, ,,gravimetry_for_Iran.png
+86,products.product,2,2002GRA0086IRE,Ireland,This file contains gravimetry data for Ireland,57.81, ,,gravimetry_for_Ireland.png
+87,products.product,2,2002GRA0087JAP,Japan,This file contains gravimetry data for Japan,80.84, ,,gravimetry_for_Japan.png
+88,products.product,2,1988GRA0088JOR,Jordan,This file contains gravimetry data for Jordan,79.33, ,,gravimetry_for_Jordan.png
+89,products.product,2,1989GRA0089KAZ,Kazakhstan,This file contains gravimetry data for Kazakhstan,81.18, ,,gravimetry_for_Kazakhstan.png
+90,products.product,2,1988GRA0090LAO,Laos,This file contains gravimetry data for Laos,107.09, ,,gravimetry_for_Laos.png
+91,products.product,2,2022GRA0091LIT,Lithuania,This file contains gravimetry data for Lithuania,91.63, ,,gravimetry_for_Lithuania.png
+92,products.product,5,1989GRA0092MAL,Malawi,This file contains gravimetry data for Malawi,10.73, ,,gravimetry_for_Malawi.png
+93,products.product,5,2006GRA0093MAL,Mali,This file contains gravimetry data for Mali,20.37, ,,gravimetry_for_Mali.png
+94,products.product,2,1994GRA0094MON,Mongolia,This file contains gravimetry data for Mongolia,53.41, ,,gravimetry_for_Mongolia.png
+95,products.product,2,1973GRA0095MOZ,Mozambique,This file contains gravimetry data for Mozambique,78.82, ,,gravimetry_for_Mozambique.png
+96,products.product,2,1980GRA0096NAM,Namibia,This file contains gravimetry data for Namibia,59.06, ,,gravimetry_for_Namibia.png
+97,products.product,2,1995GRA0097NIG,Niger,This file contains gravimetry data for Niger,56.63, ,,gravimetry_for_Niger.png
+98,products.product,5,1971GRA0098NOR,Norway,This file contains gravimetry data for Norway,23.45, ,,gravimetry_for_Norway.png
+99,products.product,2,2020GRA0099PAK,Pakistan,This file contains gravimetry data for Pakistan,75.33, ,,gravimetry_for_Pakistan.png
+100,products.product,2,1979GRA0100PAP,Papua New Guinea,This file contains gravimetry data for Papua New Guinea,75.87, ,,gravimetry_for_Papua New Guinea.png
+101,products.product,2,2006GRA0101POL,Poland,This file contains gravimetry data for Poland,54.91, ,,gravimetry_for_Poland.png
+102,products.product,2,1998GRA0102RWA,Rwanda,This file contains gravimetry data for Rwanda,58.80, ,,gravimetry_for_Rwanda.png
+103,products.product,2,1990GRA0103SLO,Slovenia,This file contains gravimetry data for Slovenia,92.82, ,,gravimetry_for_Slovenia.png
+104,products.product,2,2015GRA0104SOU,South Korea,This file contains gravimetry data for South Korea,108.09, ,,gravimetry_for_South Korea.png
+105,products.product,2,1995GRA0105SUR,Suriname,This file contains gravimetry data for Suriname,98.10, ,,gravimetry_for_Suriname.png
+106,products.product,2,1981GRA0106SYR,Syria,This file contains gravimetry data for Syria,54.36, ,,gravimetry_for_Syria.png
+107,products.product,2,2021GRA0107THA,Thailand,This file contains gravimetry data for Thailand,73.52, ,,gravimetry_for_Thailand.png
+108,products.product,2,2003GRA0108TUR,Turkmenistan,This file contains gravimetry data for Turkmenistan,109.10, ,,gravimetry_for_Turkmenistan.png
+109,products.product,2,1986GRA0109UKR,Ukraine,This file contains gravimetry data for Ukraine,87.64, ,,gravimetry_for_Ukraine.png
+110,products.product,2,1997GRA0110UZB,Uzbekistan,This file contains gravimetry data for Uzbekistan,62.58, ,,gravimetry_for_Uzbekistan.png
+111,products.product,2,1974GRA0111VAN,Vanuatu,This file contains gravimetry data for Vanuatu,73.28, ,,gravimetry_for_Vanuatu.png
+112,products.product,4,1984MAG0112AFG,Afghanistan,This file contains magnetometry data for Afghanistan,70.56, ,,magnetometry_for_Afghanistan.png
+113,products.product,4,2012MAG0113ARG,Argentina,This file contains magnetometry data for Argentina,51.11, ,,magnetometry_for_Argentina.png
+114,products.product,4,1988MAG0114ARM,Armenia,This file contains magnetometry data for Armenia,84.92, ,,magnetometry_for_Armenia.png
+115,products.product,4,1977MAG0115AUS,Austria,This file contains magnetometry data for Austria,85.03, ,,magnetometry_for_Austria.png
+116,products.product,4,2008MAG0116BAN,Bangladesh,This file contains magnetometry data for Bangladesh,57.65, ,,magnetometry_for_Bangladesh.png
+117,products.product,4,1974MAG0117BEL,Belgium,This file contains magnetometry data for Belgium,62.09, ,,magnetometry_for_Belgium.png
+118,products.product,4,1990MAG0118BEN,Benin,This file contains magnetometry data for Benin,105.82, ,,magnetometry_for_Benin.png
+119,products.product,4,1974MAG0119BRA,Brazil,This file contains magnetometry data for Brazil,55.85, ,,magnetometry_for_Brazil.png
+120,products.product,4,2014MAG0120BUL,Bulgaria,This file contains magnetometry data for Bulgaria,56.69, ,,magnetometry_for_Bulgaria.png
+121,products.product,5,2001MAG0121CAN,Canada,This file contains magnetometry data for Canada,11.82, ,,magnetometry_for_Canada.png
+122,products.product,4,2009MAG0122COS,Costa Rica,This file contains magnetometry data for Costa Rica,78.42, ,,magnetometry_for_Costa Rica.png
+123,products.product,4,1973MAG0123CZE,Czechia,This file contains magnetometry data for Czechia,85.34, ,,magnetometry_for_Czechia.png
+124,products.product,4,2000MAG0124DEN,Denmark,This file contains magnetometry data for Denmark,89.75, ,,magnetometry_for_Denmark.png
+125,products.product,4,1974MAG0125ECU,Ecuador,This file contains magnetometry data for Ecuador,68.62, ,,magnetometry_for_Ecuador.png
+126,products.product,4,1984MAG0126EL ,El Salvador,This file contains magnetometry data for El Salvador,85.86, ,,magnetometry_for_El Salvador.png
+127,products.product,4,1990MAG0127ETH,Ethiopia,This file contains magnetometry data for Ethiopia,56.07, ,,magnetometry_for_Ethiopia.png
+128,products.product,4,1983MAG0128GRE,Greece,This file contains magnetometry data for Greece,92.40, ,,magnetometry_for_Greece.png
+129,products.product,4,2014MAG0129GUA,Guatemala,This file contains magnetometry data for Guatemala,62.00, ,,magnetometry_for_Guatemala.png
+130,products.product,4,1988MAG0130GUY,Guyana,This file contains magnetometry data for Guyana,93.56, ,,magnetometry_for_Guyana.png
+131,products.product,4,1973MAG0131HON,Honduras,This file contains magnetometry data for Honduras,64.88, ,,magnetometry_for_Honduras.png
+132,products.product,4,1985MAG0132IND,India,This file contains magnetometry data for India,99.67, ,,magnetometry_for_India.png
+133,products.product,4,2022MAG0133IRA,Iran,This file contains magnetometry data for Iran,88.39, ,,magnetometry_for_Iran.png
+134,products.product,4,2007MAG0134ITA,Italy,This file contains magnetometry data for Italy,71.11, ,,magnetometry_for_Italy.png
+135,products.product,4,1977MAG0135JAP,Japan,This file contains magnetometry data for Japan,96.44, ,,magnetometry_for_Japan.png
+136,products.product,5,1976MAG0136KAZ,Kazakhstan,This file contains magnetometry data for Kazakhstan,43.43, ,,magnetometry_for_Kazakhstan.png
+137,products.product,4,2022MAG0137KYR,Kyrgyzstan,This file contains magnetometry data for Kyrgyzstan,76.81, ,,magnetometry_for_Kyrgyzstan.png
+138,products.product,4,2019MAG0138LES,Lesotho,This file contains magnetometry data for Lesotho,96.74, ,,magnetometry_for_Lesotho.png
+139,products.product,4,1981MAG0139LIB,Liberia,This file contains magnetometry data for Liberia,79.83, ,,magnetometry_for_Liberia.png
+140,products.product,4,1972MAG0140LUX,Luxembourg,This file contains magnetometry data for Luxembourg,61.73, ,,magnetometry_for_Luxembourg.png
+141,products.product,4,2009MAG0141MAD,Madagascar,This file contains magnetometry data for Madagascar,64.63, ,,magnetometry_for_Madagascar.png
+142,products.product,4,1982MAG0142MAL,Mali,This file contains magnetometry data for Mali,75.63, ,,magnetometry_for_Mali.png
+143,products.product,4,2004MAG0143MAL,Malta,This file contains magnetometry data for Malta,91.29, ,,magnetometry_for_Malta.png
+144,products.product,4,2013MAG0144MEX,Mexico,This file contains magnetometry data for Mexico,61.25, ,,magnetometry_for_Mexico.png
+145,products.product,4,2012MAG0145MOZ,Mozambique,This file contains magnetometry data for Mozambique,56.71, ,,magnetometry_for_Mozambique.png
+146,products.product,4,2005MAG0146NAM,Namibia,This file contains magnetometry data for Namibia,68.55, ,,magnetometry_for_Namibia.png
+147,products.product,4,2009MAG0147NOR,North Macedonia,This file contains magnetometry data for North Macedonia,78.23, ,,magnetometry_for_North Macedonia.png
+148,products.product,4,1994MAG0148PAN,Panama,This file contains magnetometry data for Panama,93.26, ,,magnetometry_for_Panama.png
+149,products.product,4,2011MAG0149POL,Poland,This file contains magnetometry data for Poland,99.30, ,,magnetometry_for_Poland.png
+150,products.product,4,1999MAG0150QAT,Qatar,This file contains magnetometry data for Qatar,103.39, ,,magnetometry_for_Qatar.png
+151,products.product,4,1975MAG0151RWA,Rwanda,This file contains magnetometry data for Rwanda,103.57, ,,magnetometry_for_Rwanda.png
+152,products.product,4,2019MAG0152SAU,Saudi Arabia,This file contains magnetometry data for Saudi Arabia,100.63, ,,magnetometry_for_Saudi Arabia.png
+153,products.product,5,2017MAG0153SIE,Sierra Leone,This file contains magnetometry data for Sierra Leone,31.46, ,,magnetometry_for_Sierra Leone.png
+154,products.product,4,2005MAG0154SLO,Slovakia,This file contains magnetometry data for Slovakia,51.10, ,,magnetometry_for_Slovakia.png
+155,products.product,4,1977MAG0155SOU,South Korea,This file contains magnetometry data for South Korea,92.86, ,,magnetometry_for_South Korea.png
+156,products.product,4,2017MAG0156SRI,Sri Lanka,This file contains magnetometry data for Sri Lanka,52.85, ,,magnetometry_for_Sri Lanka.png
+157,products.product,4,1999MAG0157SUR,Suriname,This file contains magnetometry data for Suriname,80.58, ,,magnetometry_for_Suriname.png
+158,products.product,4,2000MAG0158TAI,Taiwan,This file contains magnetometry data for Taiwan,83.67, ,,magnetometry_for_Taiwan.png
+159,products.product,4,1976MAG0159TOG,Togo,This file contains magnetometry data for Togo,109.14, ,,magnetometry_for_Togo.png
+160,products.product,5,1980MAG0160TRI,Trinidad and Tobago,This file contains magnetometry data for Trinidad and Tobago,33.83, ,,magnetometry_for_Trinidad and Tobago.png
+161,products.product,4,2003MAG0161TUR,Turkey,This file contains magnetometry data for Turkey,76.21, ,,magnetometry_for_Turkey.png
+162,products.product,4,1988MAG0162UNI,United Kingdom,This file contains magnetometry data for United Kingdom,54.54, ,,magnetometry_for_United Kingdom.png
+163,products.product,4,1981MAG0163VAN,Vanuatu,This file contains magnetometry data for Vanuatu,55.01, ,,magnetometry_for_Vanuatu.png
+164,products.product,4,2009MAG0164VEN,Venezuela,This file contains magnetometry data for Venezuela,77.67, ,,magnetometry_for_Venezuela.png
+165,products.product,4,2014MAG0165VIE,Vietnam,This file contains magnetometry data for Vietnam,52.89, ,,magnetometry_for_Vietnam.png
+166,products.product,4,2014MAG0165VIE,Vietnam,This file contains magnetometry data for Vietnam,52.89, ,,noimage.png
+167,products.product,8,2007GEO0167AFG,Afghanistan,This file contains a geological map for Afghanistan,83.38, ,,report_for_Afghanistan.png
+168,products.product,6,1993ENV0168ANG,Angola,This file contains a environmental impact assessment for Angola,93.77, ,,report_for_Angola.png
+169,products.product,8,1995GEO0169ARG,Argentina,This file contains a geological map for Argentina,50.00, ,,report_for_Argentina.png
+170,products.product,6,2018ENV0170AUS,Australia,This file contains a environmental impact assessment for Australia,95.86, ,,report_for_Australia.png
+171,products.product,7,1970WEA0171AUS,Austria,This file contains a weather data for Austria,60.72, ,,report_for_Austria.png
+172,products.product,8,2006GEO0172AZE,Azerbaijan,This file contains a geological map for Azerbaijan,53.15, ,,report_for_Azerbaijan.png
+173,products.product,8,1998GEO0173BAR,Barbados,This file contains a geological map for Barbados,83.10, ,,report_for_Barbados.png
+174,products.product,8,1978GEO0174BEL,Belize,This file contains a geological map for Belize,54.83, ,,report_for_Belize.png
+175,products.product,8,2000GEO0175BHU,Bhutan,This file contains a geological map for Bhutan,50.05, ,,report_for_Bhutan.png
+176,products.product,8,1998GEO0176BOT,Botswana,This file contains a geological map for Botswana,54.19, ,,report_for_Botswana.png
+177,products.product,7,2003WEA0177BRA,Brazil,This file contains a weather data for Brazil,59.76, ,,report_for_Brazil.png
+178,products.product,8,2013GEO0178BUL,Bulgaria,This file contains a geological map for Bulgaria,73.23, ,,report_for_Bulgaria.png
+179,products.product,7,1981WEA0179BUR,Burkina Faso,This file contains a weather data for Burkina Faso,91.17, ,,report_for_Burkina Faso.png
+180,products.product,6,1975ENV0180CAM,Cambodia,This file contains a environmental impact assessment for Cambodia,108.65, ,,report_for_Cambodia.png
+181,products.product,6,2016ENV0181CAM,Cameroon,This file contains a environmental impact assessment for Cameroon,85.12, ,,report_for_Cameroon.png
+182,products.product,7,2011WEA0182CAN,Canada,This file contains a weather data for Canada,64.69, ,,report_for_Canada.png
+183,products.product,7,1988WEA0183CHA,Chad,This file contains a weather data for Chad,78.30, ,,report_for_Chad.png
+184,products.product,7,1992WEA0184CHI,China,This file contains a weather data for China,98.75, ,,report_for_China.png
+185,products.product,6,2004ENV0185COS,Costa Rica,This file contains a environmental impact assessment for Costa Rica,89.34, ,,report_for_Costa Rica.png
+186,products.product,8,2001GEO0186CUB,Cuba,This file contains a geological map for Cuba,57.12, ,,report_for_Cuba.png
+187,products.product,6,1984ENV0187CYP,Cyprus,This file contains a environmental impact assessment for Cyprus,50.18, ,,report_for_Cyprus.png
+188,products.product,7,2017WEA0188DEN,Denmark,This file contains a weather data for Denmark,96.57, ,,report_for_Denmark.png
+189,products.product,8,2022GEO0189DJI,Djibouti,This file contains a geological map for Djibouti,95.41, ,,report_for_Djibouti.png
+190,products.product,8,2018GEO0190ECU,Ecuador,This file contains a geological map for Ecuador,61.41, ,,report_for_Ecuador.png
+191,products.product,6,2003ENV0191EL ,El Salvador,This file contains a environmental impact assessment for El Salvador,70.45, ,,report_for_El Salvador.png
+192,products.product,8,2021GEO0192ERI,Eritrea,This file contains a geological map for Eritrea,109.28, ,,report_for_Eritrea.png
+193,products.product,7,1997WEA0193ETH,Ethiopia,This file contains a weather data for Ethiopia,83.22, ,,report_for_Ethiopia.png
+194,products.product,6,1981ENV0194GAM,Gambia,This file contains a environmental impact assessment for Gambia,89.26, ,,report_for_Gambia.png
+195,products.product,7,1997WEA0195GER,Germany,This file contains a weather data for Germany,105.41, ,,report_for_Germany.png
+196,products.product,7,2006WEA0196GHA,Ghana,This file contains a weather data for Ghana,95.34, ,,report_for_Ghana.png
+197,products.product,6,1991ENV0197GUA,Guatemala,This file contains a environmental impact assessment for Guatemala,61.67, ,,report_for_Guatemala.png
+198,products.product,7,2009WEA0198GUI,Guinea-Bissau,This file contains a weather data for Guinea-Bissau,68.21, ,,report_for_Guinea-Bissau.png
+199,products.product,6,1976ENV0199GUY,Guyana,This file contains a environmental impact assessment for Guyana,100.42, ,,report_for_Guyana.png
+200,products.product,7,1984WEA0200HAI,Haiti,This file contains a weather data for Haiti,95.13, ,,report_for_Haiti.png
+201,products.product,14,1976GEO0201HON,Honduras,This file contains a geological map for Honduras,36.29, ,,report_for_Honduras.png
+202,products.product,8,2021GEO0202HUN,Hungary,This file contains a geological map for Hungary,76.38, ,,report_for_Hungary.png
+203,products.product,8,1997GEO0203IND,India,This file contains a geological map for India,62.30, ,,report_for_India.png
+204,products.product,6,1975ENV0204IND,Indonesia,This file contains a environmental impact assessment for Indonesia,75.75, ,,report_for_Indonesia.png
+205,products.product,8,1972GEO0205IRA,Iran,This file contains a geological map for Iran,62.79, ,,report_for_Iran.png
+206,products.product,8,1997GEO0206IRE,Ireland,This file contains a geological map for Ireland,108.23, ,,report_for_Ireland.png
+207,products.product,7,1986WEA0207ISR,Israel,This file contains a weather data for Israel,109.67, ,,report_for_Israel.png
+208,products.product,6,2005ENV0208ITA,Italy,This file contains a environmental impact assessment for Italy,82.91, ,,report_for_Italy.png
+209,products.product,6,2010ENV0209JAP,Japan,This file contains a environmental impact assessment for Japan,59.67, ,,report_for_Japan.png
+210,products.product,14,1987GEO0210JOR,Jordan,This file contains a geological map for Jordan,25.86, ,,report_for_Jordan.png
+211,products.product,6,1973ENV0211KEN,Kenya,This file contains a environmental impact assessment for Kenya,87.97, ,,report_for_Kenya.png
+212,products.product,6,2011ENV0212KOS,Kosovo,This file contains a environmental impact assessment for Kosovo,107.30, ,,report_for_Kosovo.png
+213,products.product,8,1984GEO0213KYR,Kyrgyzstan,This file contains a geological map for Kyrgyzstan,81.38, ,,report_for_Kyrgyzstan.png
+214,products.product,7,1974WEA0214LAO,Laos,This file contains a weather data for Laos,50.26, ,,report_for_Laos.png
+215,products.product,7,1989WEA0215LAT,Latvia,This file contains a weather data for Latvia,88.42, ,,report_for_Latvia.png
+216,products.product,8,2022GEO0216LEB,Lebanon,This file contains a geological map for Lebanon,87.35, ,,report_for_Lebanon.png
+217,products.product,7,1985WEA0217LIB,Liberia,This file contains a weather data for Liberia,91.67, ,,report_for_Liberia.png
+218,products.product,14,1985GEO0218LIT,Lithuania,This file contains a geological map for Lithuania,21.41, ,,report_for_Lithuania.png
+219,products.product,6,1990ENV0219MAD,Madagascar,This file contains a environmental impact assessment for Madagascar,56.92, ,,report_for_Madagascar.png
+220,products.product,8,2019GEO0220MAL,Malaysia,This file contains a geological map for Malaysia,85.73, ,,report_for_Malaysia.png
+221,products.product,6,2018ENV0221MAU,Mauritania,This file contains a environmental impact assessment for Mauritania,104.21, ,,report_for_Mauritania.png
+222,products.product,8,1992GEO0222MOL,Moldova,This file contains a geological map for Moldova,62.65, ,,report_for_Moldova.png
+223,products.product,7,2004WEA0223MON,Mongolia,This file contains a weather data for Mongolia,83.41, ,,report_for_Mongolia.png
+224,products.product,8,2006GEO0224MON,Montenegro,This file contains a geological map for Montenegro,69.53, ,,report_for_Montenegro.png
+225,products.product,7,2017WEA0225MOR,Morocco,This file contains a weather data for Morocco,94.18, ,,report_for_Morocco.png
+226,products.product,7,1976WEA0226NAM,Namibia,This file contains a weather data for Namibia,95.74, ,,report_for_Namibia.png
+227,products.product,8,1989GEO0227NIG,Niger,This file contains a geological map for Niger,85.62, ,,report_for_Niger.png
+228,products.product,6,2021ENV0228NOR,North Macedonia,This file contains a environmental impact assessment for North Macedonia,93.47, ,,report_for_North Macedonia.png
+229,products.product,6,1978ENV0229OMA,Oman,This file contains a environmental impact assessment for Oman,84.28, ,,report_for_Oman.png
+230,products.product,7,1988WEA0230PAK,Pakistan,This file contains a weather data for Pakistan,56.57, ,,report_for_Pakistan.png
+231,products.product,7,1992WEA0231PAP,Papua New Guinea,This file contains a weather data for Papua New Guinea,95.54, ,,report_for_Papua New Guinea.png
+232,products.product,6,1971ENV0232PER,Peru,This file contains a environmental impact assessment for Peru,57.38, ,,report_for_Peru.png
+233,products.product,7,2012WEA0233SEN,Senegal,This file contains a weather data for Senegal,73.29, ,,report_for_Senegal.png
+234,products.product,8,1987GEO0234SIE,Sierra Leone,This file contains a geological map for Sierra Leone,86.96, ,,report_for_Sierra Leone.png
+235,products.product,8,1979GEO0235SOM,Somalia,This file contains a geological map for Somalia,74.10, ,,report_for_Somalia.png
+236,products.product,14,2019GEO0236SOM,Somaliland,This file contains a geological map for Somaliland,17.05, ,,report_for_Somaliland.png
+237,products.product,6,2021ENV0237SUD,Sudan,This file contains a environmental impact assessment for Sudan,65.48, ,,report_for_Sudan.png
+238,products.product,6,2016ENV0238SUR,Suriname,This file contains a environmental impact assessment for Suriname,87.43, ,,report_for_Suriname.png
+239,products.product,7,1972WEA0239SWI,Switzerland,This file contains a weather data for Switzerland,61.33, ,,report_for_Switzerland.png
+240,products.product,7,2013WEA0240UGA,Uganda,This file contains a weather data for Uganda,82.72, ,,report_for_Uganda.png
+241,products.product,7,1975WEA0241UNI,United Kingdom,This file contains a weather data for United Kingdom,107.21, ,,report_for_United Kingdom.png
+242,products.product,6,1996ENV0242URU,Uruguay,This file contains a environmental impact assessment for Uruguay,109.02, ,,report_for_Uruguay.png
+243,products.product,8,1979GEO0243ZAM,Zambia,This file contains a geological map for Zambia,108.71, ,,report_for_Zambia.png
+244,products.product,8,2004GEO0244ZIM,Zimbabwe,This file contains a geological map for Zimbabwe,60.33, ,,report_for_Zimbabwe.png
+245,products.product,3,2021RES0245ALG,Algeria,This file contains resistivity data for Algeria,85.79, ,,resistivity_for_Algeria.png
+246,products.product,3,1978RES0246ARG,Argentina,This file contains resistivity data for Argentina,70.78, ,,resistivity_for_Argentina.png
+247,products.product,3,1997RES0247AUS,Austria,This file contains resistivity data for Austria,55.22, ,,resistivity_for_Austria.png
+248,products.product,3,1994RES0248AZE,Azerbaijan,This file contains resistivity data for Azerbaijan,85.73, ,,resistivity_for_Azerbaijan.png
+249,products.product,3,1980RES0249BEL,Belize,This file contains resistivity data for Belize,108.57, ,,resistivity_for_Belize.png
+250,products.product,3,2000RES0250BOT,Botswana,This file contains resistivity data for Botswana,70.39, ,,resistivity_for_Botswana.png
+251,products.product,3,2011RES0251CAB,Cabo Verde,This file contains resistivity data for Cabo Verde,65.05, ,,resistivity_for_Cabo Verde.png
+252,products.product,3,2006RES0252CAM,Cambodia,This file contains resistivity data for Cambodia,103.42, ,,resistivity_for_Cambodia.png
+253,products.product,3,1988RES0253CHI,China,This file contains resistivity data for China,105.24, ,,resistivity_for_China.png
+254,products.product,3,1980RES0254COL,Colombia,This file contains resistivity data for Colombia,59.92, ,,resistivity_for_Colombia.png
+255,products.product,3,2011RES0255COS,Costa Rica,This file contains resistivity data for Costa Rica,56.92, ,,resistivity_for_Costa Rica.png
+256,products.product,3,1976RES0256CRO,Croatia,This file contains resistivity data for Croatia,94.61, ,,resistivity_for_Croatia.png
+257,products.product,3,2017RES0257CZE,Czechia,This file contains resistivity data for Czechia,58.24, ,,resistivity_for_Czechia.png
+258,products.product,3,2015RES0258DJI,Djibouti,This file contains resistivity data for Djibouti,99.57, ,,resistivity_for_Djibouti.png
+259,products.product,3,1982RES0259ECU,Ecuador,This file contains resistivity data for Ecuador,88.07, ,,resistivity_for_Ecuador.png
+260,products.product,3,2018RES0260ERI,Eritrea,This file contains resistivity data for Eritrea,94.11, ,,resistivity_for_Eritrea.png
+261,products.product,3,1973RES0261GAB,Gabon,This file contains resistivity data for Gabon,59.07, ,,resistivity_for_Gabon.png
+262,products.product,3,1978RES0262GEO,Georgia,This file contains resistivity data for Georgia,66.91, ,,resistivity_for_Georgia.png
+263,products.product,5,1972RES0263GUI,Guinea,This file contains resistivity data for Guinea,27.42, ,,resistivity_for_Guinea.png
+264,products.product,3,1985RES0264GUY,Guyana,This file contains resistivity data for Guyana,66.85, ,,resistivity_for_Guyana.png
+265,products.product,3,2004RES0265HAI,Haiti,This file contains resistivity data for Haiti,88.75, ,,resistivity_for_Haiti.png
+266,products.product,3,1988RES0266IND,Indonesia,This file contains resistivity data for Indonesia,91.01, ,,resistivity_for_Indonesia.png
+267,products.product,3,1994RES0267ITA,Italy,This file contains resistivity data for Italy,62.45, ,,resistivity_for_Italy.png
+268,products.product,3,2005RES0268JAM,Jamaica,This file contains resistivity data for Jamaica,81.55, ,,resistivity_for_Jamaica.png
+269,products.product,3,2010RES0269JOR,Jordan,This file contains resistivity data for Jordan,89.10, ,,resistivity_for_Jordan.png
+270,products.product,5,1999RES0270LAT,Latvia,This file contains resistivity data for Latvia,11.40, ,,resistivity_for_Latvia.png
+271,products.product,3,1984RES0271LIB,Liberia,This file contains resistivity data for Liberia,109.09, ,,resistivity_for_Liberia.png
+272,products.product,3,2011RES0272MAL,Malawi,This file contains resistivity data for Malawi,88.38, ,,resistivity_for_Malawi.png
+273,products.product,3,1981RES0273MAU,Mauritania,This file contains resistivity data for Mauritania,103.82, ,,resistivity_for_Mauritania.png
+274,products.product,3,1994RES0274MEX,Mexico,This file contains resistivity data for Mexico,89.19, ,,resistivity_for_Mexico.png
+275,products.product,3,1989RES0275MOR,Morocco,This file contains resistivity data for Morocco,58.16, ,,resistivity_for_Morocco.png
+276,products.product,5,2003RES0276NIC,Nicaragua,This file contains resistivity data for Nicaragua,44.45, ,,resistivity_for_Nicaragua.png
+277,products.product,3,2017RES0277NIG,Niger,This file contains resistivity data for Niger,109.90, ,,resistivity_for_Niger.png
+278,products.product,3,1992RES0278NOR,North Macedonia,This file contains resistivity data for North Macedonia,77.20, ,,resistivity_for_North Macedonia.png
+279,products.product,3,2002RES0279NOR,Norway,This file contains resistivity data for Norway,75.13, ,,resistivity_for_Norway.png
+280,products.product,3,2008RES0280PAK,Pakistan,This file contains resistivity data for Pakistan,57.80, ,,resistivity_for_Pakistan.png
+281,products.product,3,2017RES0281PAR,Paraguay,This file contains resistivity data for Paraguay,109.39, ,,resistivity_for_Paraguay.png
+282,products.product,3,2011RES0282PHI,Philippines,This file contains resistivity data for Philippines,75.02, ,,resistivity_for_Philippines.png
+283,products.product,3,1970RES0283RWA,Rwanda,This file contains resistivity data for Rwanda,105.83, ,,resistivity_for_Rwanda.png
+284,products.product,3,1999RES0284SEN,Senegal,This file contains resistivity data for Senegal,80.91, ,,resistivity_for_Senegal.png
+285,products.product,3,2015RES0285SLO,Slovakia,This file contains resistivity data for Slovakia,77.27, ,,resistivity_for_Slovakia.png
+286,products.product,3,2005RES0286SOU,South Korea,This file contains resistivity data for South Korea,75.86, ,,resistivity_for_South Korea.png
+287,products.product,3,1986RES0287SWE,Sweden,This file contains resistivity data for Sweden,67.25, ,,resistivity_for_Sweden.png
+288,products.product,3,2020RES0288TUN,Tunisia,This file contains resistivity data for Tunisia,51.52, ,,resistivity_for_Tunisia.png
+289,products.product,3,2001RES0289TUR,Turkmenistan,This file contains resistivity data for Turkmenistan,51.40, ,,resistivity_for_Turkmenistan.png
+290,products.product,3,1976RES0290UNI,United Kingdom,This file contains resistivity data for United Kingdom,68.52, ,,resistivity_for_United Kingdom.png
+291,products.product,3,2002RES0291ZAM,Zambia,This file contains resistivity data for Zambia,89.01, ,,resistivity_for_Zambia.png
+292,products.product,9,1979BKS0292ZAM,N/A,This book contains ,45.10, ,,file_name
+293,products.product,15,2012BKS0293N/A,N/A,This book contains ,17.35, ,,file_name
+294,products.product,9,2013BKS0294N/A,N/A,This book contains ,47.51, ,,file_name
+295,products.product,15,1981BKS0295N/A,N/A,This book contains ,14.24, ,,file_name
+296,products.product,9,1980BKS0296N/A,N/A,This book contains ,52.83, ,,file_name
+297,products.product,9,1987BKS0297N/A,N/A,This book contains ,45.30, ,,file_name
+298,products.product,9,1999BKS0298N/A,N/A,This book contains ,29.04, ,,file_name
+299,products.product,9,1983BKS0299N/A,N/A,This book contains ,39.09, ,,file_name
+300,products.product,9,1973BKS0300N/A,N/A,This book contains ,39.13, ,,file_name
+301,products.product,9,1983BKS0301N/A,N/A,This book contains ,50.38, ,,file_name
+302,products.product,10,1996COU0302N/A,N/A,This course is designated to train ,106.13, ,,file_name
+303,products.product,10,1975COU0303N/A,N/A,This course is designated to train ,153.78, ,,file_name
+304,products.product,10,1989COU0304N/A,N/A,This course is designated to train ,110.26, ,,file_name
+305,products.product,10,2006COU0305N/A,N/A,This course is designated to train ,122.99, ,,file_name
+306,products.product,10,1990COU0306N/A,N/A,This course is designated to train ,134.97, ,,file_name
+307,products.product,10,1977COU0307N/A,N/A,This course is designated to train ,180.77, ,,file_name
+308,products.product,10,2011COU0308N/A,N/A,This course is designated to train ,142.40, ,,file_name
+309,products.product,10,2017COU0309N/A,N/A,This course is designated to train ,105.35, ,,file_name
+310,products.product,10,2018COU0310N/A,N/A,This course is designated to train ,142.77, ,,file_name
+311,products.product,15,2005COU0311N/A,N/A,This course is designated to train ,48.01, ,,file_name
+312,products.product,11,2000COU0312N/A,N/A,This software package is a fundamental tool for ,792.21, ,,file_name
+313,products.product,13,2008COU0313N/A,N/A,This software package is a fundamental tool for ,656.60, ,,file_name
+314,products.product,12,1974COU0314N/A,N/A,This software package is a fundamental tool for ,757.19, ,,file_name
+315,products.product,13,1976COU0315N/A,N/A,This software package is a fundamental tool for ,786.60, ,,file_name
+316,products.product,12,2012COU0316N/A,N/A,This software package is a fundamental tool for ,717.21, ,,file_name
+317,products.product,13,2002COU0317N/A,N/A,This software package is a fundamental tool for ,554.05, ,,file_name
+318,products.product,13,1986COU0318N/A,N/A,This software package is a fundamental tool for ,589.94, ,,file_name
+319,products.product,12,1988COU0319N/A,N/A,This software package is a fundamental tool for ,791.90, ,,file_name
+320,products.product,12,1990COU0320N/A,N/A,This software package is a fundamental tool for ,523.34, ,,file_name
+321,products.product,16,1991COU0321N/A,N/A,This software package is a fundamental tool for ,206.17, ,,file_name
+322,products.product,12,1985COU0322N/A,N/A,This software package is a fundamental tool for ,504.84, ,,file_name
+323,products.product,12,1982COU0323N/A,N/A,This software package is a fundamental tool for ,630.55, ,,file_name
+324,products.product,13,1977COU0324N/A,N/A,This software package is a fundamental tool for ,621.21, ,,file_name
+325,products.product,13,2004COU0325N/A,N/A,This software package is a fundamental tool for ,586.27, ,,file_name
+326,products.product,11,1992COU0326N/A,N/A,This software package is a fundamental tool for ,642.69, ,,file_name

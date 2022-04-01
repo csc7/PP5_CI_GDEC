@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 bottom-marging-for-large-screens">
             <p class="text-muted">Please complete your order below</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}

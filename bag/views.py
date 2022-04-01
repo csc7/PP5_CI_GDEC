@@ -73,6 +73,8 @@ def adjust_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
+    digital = request.POST.get('digital')
+    print(digital)
     resolution = None
     if 'product_resolution' in request.POST:
         resolution = request.POST['product_resolution']

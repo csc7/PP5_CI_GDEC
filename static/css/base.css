@@ -342,12 +342,12 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: absolute;
-        bottom: -400px;
+        bottom: -520px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: -440px;
+        bottom: -570px;
     }
 
     /* BAG */
@@ -412,12 +412,12 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: absolute;
-        bottom: -440px;
+        bottom: -540px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: -460px;
+        bottom: -590px;
     }
 
     /* BAG */
@@ -462,12 +462,12 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: absolute;
-        bottom: 40px;
+        bottom: -90px;
     }
     
     .carousel-indicators {
         position: absolute;
-        bottom: -10px;
+        bottom: -140px;
     }
 
     /* CHECKOUT */

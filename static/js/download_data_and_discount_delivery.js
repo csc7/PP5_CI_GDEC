@@ -6,7 +6,7 @@ $('#digital').change(function() {
         console.log("clicking");
         $.ajax({
             type: 'POST',        
-            url: '/contexts.py',
+            url: {% url 'adjust_bag' %},
             data: {
                 'applyDiscount' : applyDiscount },                
             success: function (data) {

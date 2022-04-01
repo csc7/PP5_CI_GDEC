@@ -12,6 +12,7 @@ Context file for the bag app, computing grand total and delivery costs.
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+
 import json
 import re
 
@@ -26,7 +27,7 @@ def bag_contents(request):
     Function
     """
 
-
+    
 
     requested_html = re.search(r'^text/html',
                                request.META.get('HTTP_ACCEPT')

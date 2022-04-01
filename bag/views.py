@@ -78,6 +78,9 @@ def adjust_bag(request, item_id):
     if 'product_resolution' in request.POST:
         resolution = request.POST['product_resolution']
         
+    if 'digital' in request.POST:
+        print("OK")
+
     bag = request.session.get('bag', {})
 
     if resolution:

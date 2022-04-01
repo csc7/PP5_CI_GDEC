@@ -156,8 +156,13 @@
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                <input type="checkbox" id="digital" name="digital" value="1">
-                                <label for="digital">Check this box to download the data and avoid shipment costs</label><br>                                    
+
+                                
+                                    {% csrf_token %}
+                                    <input type="checkbox" id="digital" name="digital" value="Download and Discount Delivery">
+                                    <label for="digital">Check this box to download the data and avoid shipment costs</label>  
+                                
+
                                 <h6>Discount: ${{ discount|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if delta_for_discount > 0 %}

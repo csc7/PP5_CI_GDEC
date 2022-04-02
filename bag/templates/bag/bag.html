@@ -159,8 +159,12 @@
                                 <form id="cancel_delivery_cost" class="form update-form" method="POST" action="{% url 'view_bag' %}">
                                     {% csrf_token %}                                    
                                     <!-- <input type="submit" id="digital" name="digital" value="Click to download and avoid delivery costs"> -->
-                                    <input type="checkbox" id="digital" name="digital" {% if cancel_delivery_cost %} checked {%endif%}>                                   
-                                    <label for="digital">Check this box to download the data and avoid shipment costs</label>  
+                                    <input type="checkbox" id="digital" name="digital" {% if cancel_delivery_cost %} checked {%endif%}>
+                                    {% if cancel_delivery_cost %}
+                                        <label for="digital">Uncheck this box to receive the data in USB drives (delivery costs apply)</label>
+                                    {% else %}
+                                        <label for="digital">Check this box to download the data and avoid shipment costs</label>
+                                    {% endif %}
                                 </form>
                                 <h6>Discount: ${{ discount|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>

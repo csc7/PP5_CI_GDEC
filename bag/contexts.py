@@ -16,7 +16,6 @@ from django.shortcuts import get_object_or_404
 
 # INTERNAL:
 from products.models import Product
-from .forms import DownloadAndCancelDeliveryCost
 
 ###############################################################################
 
@@ -27,14 +26,7 @@ def bag_contents(request):
     Function
     """
 
-    #cancel_delivery_cost = False
-    
-    #requested_html = re.search(r'^text/html',
-    #                           request.META.get('HTTP_ACCEPT')
-    #                           )
-
     if request.method == 'POST':
-        #discount_delivery = json.dumps(request.POST.get('applyDiscount'))[1:-1]
         cancel_delivery_cost = request.POST.get('digital', False)
         if cancel_delivery_cost:
             cancel_delivery_cost_factor = 0
@@ -49,23 +41,6 @@ def bag_contents(request):
         else:
             cancel_delivery_cost_factor = 1
         print(cancel_delivery_cost)
-        #cancel_delivery_cost = not cancel_delivery_cost
-        #cancel_delivery_cost = DownloadAndCancelDeliveryCost(request.POST)
-        
-        #cancel_delivery_cost = not cancel_delivery_cost
-        
-        #if cancel_delivery_cost.is_valid():
-        #    
-        #    print(request.POST)#prints only csrf_token in Query_dict
-        #    print(cancel_delivery_cost.cleaned_data["repeat"])#Always false
-    
-   
-
-    
-    #if request.method == 'POST':
-    #    digital = request.POST['digital']
-    #    print(digital)
-
 
 
     bag_items = []

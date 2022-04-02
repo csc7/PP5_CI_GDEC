@@ -1,20 +1,16 @@
 console.log("Download data loaded")
 
-$('#digital').change(function() {
-    if ($('#digital').is(':checked')) {
-        let applyDiscount = 1;
-        console.log("clicking");
-        $.ajax({
-            type: 'POST',        
-            url: {% url 'adjust_bag' %},
-            data: {
-                'applyDiscount' : applyDiscount },                
-            success: function (data) {
-              if (applyDiscount){
-                  alert("Database updated, new data will appear below.");
-                }
-            }               
-        });
 
-    }
+
+$('#digital').change(function() {
+    let status = $("#digital").is(':checked');
+    console.log(status);
+    this.form.submit();
+    //if (status) {
+    //    $('#digital').prop('checked', true);
+    //} else {
+    //    $('#digital').prop('checked', false);
+    //}
+    
+    
 });

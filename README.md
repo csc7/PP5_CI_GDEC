@@ -1021,7 +1021,7 @@ Bugs that required more time and specific solutions were the following ones:
 
 | Bug | Solution |
 | ---- | ---- |
-| It was not possible to ... | The issue arises for ...; solved with ... | 
+| It was not possible to keep the checkbox for cancelling the delivery cost activated, sending the form to the backend but deactivating it immediately after.  | The issue was caused by addressing the checkbox with both JavaScript and an "if" statement in the HTML template, strangely requiring an assignment of the "cancel_delivery_cost" twice, one row after the other, likely due to the time taken for the view to be loaded. The issue was solved by addressing the checkbox with an "if" statement only in the checkbox HTML tag. | 
 | It was not possible to ... | The issue arises for ...; solved with ... |
 
 

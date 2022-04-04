@@ -1113,7 +1113,7 @@ heroku login (it will require to log in through a different browser)
 or
 heroku login -i (to log in directly in the Gitpod CLI)
 
-15 - Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process):
+15 - OPTIONAL: Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process, in case you want to look the website before deploying in Amazon Web Services):
 heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
 
 16 - Set ALLOWED_HOSTS variable in settings.py file as follows:
@@ -1163,6 +1163,26 @@ Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off 
  * "Add user to group", select the policy you have just created and click "Next: Tags", then "Next: Review" and finally "Create User".
  * IMPORTANT: AFTER ADDING THE USER TO THE GROUP, DOWLOAD THE .CSV FILE AS IT MIGHT NOT BE AVAILABLE LATER. The file is required for authentication for the Django app.
 
+20 - Install boto3 with the following command:
+pip3 install boto3
+
+21 - Install django-storages with the following command:
+pip3 install django-storages
+
+22 - Again, freeze the environment requirements:
+pip3 freeze > requirements.txt
+
+23 - Add storages in INSTALLED APPS of settings.py:
+'storages',
+
+24 - Check that the variables of "if 'USE_AWS' in os.environ:" in settings.py correspond to your app name and AWS settings. Please note that you need to have defined the following variables in Config Vars of Heroku (in "Settings"):
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+USE_AWS
+
+IMPORTANT: At this point, DISABLE_COLLECSTATICS of point 15 can be deleted if you opted for enabling it), so Django loads the static files from Amazon Web Services
+
+25 - Check that your "custom_storages.py" file is properly defined according to your app and AWS account.
 
 #### Additional notes:
 

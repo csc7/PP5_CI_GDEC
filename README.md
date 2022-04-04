@@ -1032,6 +1032,98 @@ Bugs that required more time and specific solutions were the following ones:
 ___
 # 13 . Deployment
 
+AWS and S3.
+
+1 - Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
+
+2 - Add Postgres resource to the Heroku app (in Heroku website, "Resources", "add-ons"), where a "Hobby Dev - Free" plan is enough.
+
+3 - In Gitpod (or your development environment), install dj_database_url with this command:
+pip3 install dj_database_url
+
+4 - In Gitpod (or your development environment), install psycopg2-binary with this command:
+pip3 install psycopg2-binary
+
+5 - Freeze the environment requirements:
+pip3 freeze > requirements.txt
+
+6 - Add/Import the following line/pakage in your settings.py file (on top of the file, with other "import" commands):
+import dj_database_url
+
+
+7 - In settings.py update the DATABASES variable to the following lines, so the database is read from the local repository in not set up in Heroku;
+from:
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+
+to:
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+
+8 - Install gunicorn to work as a webserver:
+pip3 install gunicorn
+
+9 - Again, freeze the environment requirements:
+pip3 freeze > requirements.txt
+
+
+10 - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
+web: gunicorn boutique_ado.wsgi:application
+
+11 - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
+heroku login (it will require to log in through a different browser)
+or
+heroku login -i (to log in directly in the Gitpod CLI)
+
+12 - Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process):
+heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
+
+13 - Set ALLOWED_HOSTS variable in settings.py file as follows:
+ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost']
+
+
+10 - Connect to Heroku database and run migrations with the following commands:
+
+If you want to verify that effectively all migrations need to be run, execute
+python3 manage.py showmigrations
+
+Then migrate:
+python3 manage.py migrate
+
+11 - Load/Import database (categories and products):
+a) If you use the database of this repository, use the following commands (in this order, since products depends on categories):
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+
+b) If you manually create the database, please follow this steps:
+Credits: Code Institute:
+ - Make sure your manage.py file is connected to your mysql database
+ - Use this command to backup your current database and load it into a db.json file:
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+ - Connect your manage.py file to your postgres database
+ - Then use this command to load your data from the db.json file into postgres:
+./manage.py loaddata db.json
+
+12 - Create superuser in Heroku:
+python3 manage.py createsuperuser
+
+
+-------------------------------
+-------------------------------
+
 The website was fully written in Gitpod, permanently tested with Gitpod preview, and periodically deployed to GigHub Pages (in a main branch) and Heroku.
 
 The fully deployed website, accessible by anyone, is found [here](https://pp4-ci-wqcs.herokuapp.com/), whose URL is https://pp4-ci-wqcs.herokuapp.com/ . Its repository is found [here](https://github.com/csc7/PP4_CI_WQCS), whose URL is https://github.com/csc7/PP4_CI_WQCS.

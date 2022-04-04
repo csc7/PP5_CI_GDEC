@@ -1106,7 +1106,7 @@ pip3 freeze > requirements.txt
 
 
 13 - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
-web: gunicorn boutique_ado.wsgi:application
+web: gunicorn your_app_name.wsgi:application
 
 14 - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
 heroku login (it will require to log in through a different browser)

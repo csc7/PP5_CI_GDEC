@@ -1,1 +1,1 @@
-web: gunicorn pp5-ci-gdec.wsgi
+web: gunicorn PP5_CI_GDEC.wsgi:application

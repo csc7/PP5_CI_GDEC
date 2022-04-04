@@ -1073,29 +1073,7 @@ else
     }
 
 
-8 - Install gunicorn to work as a webserver:
-pip3 install gunicorn
-
-9 - Again, freeze the environment requirements:
-pip3 freeze > requirements.txt
-
-
-10 - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
-web: gunicorn boutique_ado.wsgi:application
-
-11 - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
-heroku login (it will require to log in through a different browser)
-or
-heroku login -i (to log in directly in the Gitpod CLI)
-
-12 - Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process):
-heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
-
-13 - Set ALLOWED_HOSTS variable in settings.py file as follows:
-ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost']
-
-
-10 - Connect to Heroku database and run migrations with the following commands:
+8 - Connect to Heroku database and run migrations with the following commands:
 
 If you want to verify that effectively all migrations need to be run, execute
 python3 manage.py showmigrations
@@ -1103,7 +1081,7 @@ python3 manage.py showmigrations
 Then migrate:
 python3 manage.py migrate
 
-11 - Load/Import database (categories and products):
+9 - Load/Import database (categories and products):
 a) If you use the database of this repository, use the following commands (in this order, since products depends on categories):
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
@@ -1117,8 +1095,63 @@ Credits: Code Institute:
  - Then use this command to load your data from the db.json file into postgres:
 ./manage.py loaddata db.json
 
-12 - Create superuser in Heroku:
+10 - Create superuser in Heroku:
 python3 manage.py createsuperuser
+
+
+
+
+11 - Install gunicorn to work as a webserver:
+pip3 install gunicorn
+
+12 - Again, freeze the environment requirements:
+pip3 freeze > requirements.txt
+
+
+13 - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
+web: gunicorn boutique_ado.wsgi:application
+
+14 - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
+heroku login (it will require to log in through a different browser)
+or
+heroku login -i (to log in directly in the Gitpod CLI)
+
+15 - Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process):
+heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
+
+16 - Set ALLOWED_HOSTS variable in settings.py file as follows:
+ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost']
+
+
+
+17 - Create a SECRET_KEY, e.g., using https://miniwebtool.com/django-secret-key-generator/.
+Then assig a SECRET_KEY value in Config Vars of the Settings section in Heroku.
+Then, in settings.py file, ensure SECRET_KEY variable is set as follows:
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
+
+#### Additional notes:
+
+Remember you can commit and push your changes to both GitHub and/or Heroku
+for GitHub:
+git add .
+git commit -m "Your update commit message"
+git push
+
+for Heroku:
+If initialization is needed:
+git init
+heroku git:remote -a your_app_name
+
+Then:
+git add .
+git commit -m "Your update commit message"
+git push heroku main
+
+You can also set automatic deployments by going to Heroku website, "Deploy" section of your_app_name, and connecting to GitHub (after serching for your_app_name in the corresponding "Connect to GitHub" section and finally clicking on the "Enable Automatic Deploys" button at the bottom).
+
+In settings.py file, you can set the DEBUG variables as follows if you want to control the debug mode from Heroku Config Vars:
+'DEVELOPMENT' in os.environ
 
 
 -------------------------------

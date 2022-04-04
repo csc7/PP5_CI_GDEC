@@ -36,10 +36,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2glapt69bmym1vm5nt34m#j2&d(--%e&#af(d*=4$3rtxwd6cb'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['pp5-ci-gdec.herokuapp.com', 'localhost']
 
@@ -140,7 +140,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

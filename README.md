@@ -1032,7 +1032,7 @@ Bugs that required more time and specific solutions were the following ones:
 ___
 # 13 . Deployment
 
-AWS and S3.
+Amazon Web Services and S3.
 
 1 - Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
 
@@ -1098,9 +1098,6 @@ Credits: Code Institute:
 10 - Create superuser in Heroku:
 python3 manage.py createsuperuser
 
-
-
-
 11 - Install gunicorn to work as a webserver:
 pip3 install gunicorn
 
@@ -1129,8 +1126,47 @@ Then assig a SECRET_KEY value in Config Vars of the Settings section in Heroku.
 Then, in settings.py file, ensure SECRET_KEY variable is set as follows:
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+18 - Crease Amazon Web Services account (if needed) and S3 bucket.
+Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off public access" disables (accepting warning message below), and then set the following variables:
+ * Properties tab: Static website hosting, using it to host a website, incidating index.html and error.html in the index and error documents.
+ * Permissions tab:
+    - CORS configuration (required to have access between Heroku and S3), copying these lines of code:
+        [
+          {
+              "AllowedHeaders": [
+                  "Authorization"
+              ],
+              "AllowedMethods": [
+                  "GET"
+              ],
+              "AllowedOrigins": [
+                  "*"
+              ],
+              "ExposeHeaders": []
+          }
+        ]
+ * Buccket Policy: click on "Policy Generator" at the bottom and, in the new page, select "S3 Bucket Policy" as the type of policy, assing a start ("*") to "Principal" to allow all of them, "GetObject" in "Actions", paste the ARN of the bucket (found in the "Properties" of the bucket) in the corresponding field, generate policy, copy the resulting code in the "Bucket Policy" that originated this new page, and save.
+ * Access Control List: enable "List objects" for "Everyone.
+
+19 - Add Amazon Web Services Identify and Access Management (IAM) to create a user to access the S3 bucket and apply the following changes:
+ * Open IAM from AWS available services.
+ * Go to "User Groups" (left), "Create group" (top right), assign a name (e.g., manage_your_app_name) and create (bottom).
+ * Go to "Policies", "Create Policy", go to "JSON" tab, "Import managed policy", select "AmazonS3FullAccess", "Import". In the "Resource" field of the JSON structure, assign the ARN of your app as follows:
+ ...
+ "Resource": [
+     "arn",
+     "arn/*"
+ ]
+ * Then click "Next:Tags", "Next:Review" (assign a name, e.g., your_app_name_policy; and a description, e.g., "Access to S3")and "Create Policy". The policy will appear in the list of policies.
+ * Go to "User Groups", select your app, "Permissions", "Attach Policies" (in "Add Permissions" button), select the one you have just created and click "Add Permissions" on the bottom.
+ * Go to "Users", "Add user", assign a name (e.g., "your_app_name_access_to_static_files"), select "Programatic access", and "Next:Permissions".
+ * "Add user to group", select the policy you have just created and click "Next: Tags", then "Next: Review" and finally "Create User".
+ * IMPORTANT: AFTER ADDING THE USER TO THE GROUP, DOWLOAD THE .CSV FILE AS IT MIGHT NOT BE AVAILABLE LATER. The file is required for authentication for the Django app.
+
 
 #### Additional notes:
+
+Please note that these are the steps according to the user interface as of April 4th, 2022. There might be changes after a while.
 
 Remember you can commit and push your changes to both GitHub and/or Heroku
 for GitHub:

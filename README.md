@@ -1191,6 +1191,10 @@ IMPORTANT: At this point, DISABLE_COLLECSTATICS of point 15 can be deleted if yo
 28 - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and asign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
 Ensure the variables match the names in the settings.py file.
 
+29 - Add automatic e-mail variables in Config Vars of Heroku (to send automatic e-mails from the app), EMAIL_HOST_PASS (password given by your e-mail service provider) and EMAIL_HOST_USER (the e-mail address from where e-mails are sent).
+
+Replace EMAIL_HOST in settings.py if you are using a different service provider than GMail.
+
 #### Additional notes:
 
 Please note that these are the steps according to the user interface as of April 4th, 2022. There might be changes after a while.

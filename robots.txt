@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profile/
+Disallow: /admin/
+Sitemap: https://pp5-ci-gdec.herokuapp.com/sitemap.xml

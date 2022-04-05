@@ -1077,14 +1077,14 @@ E-commerce in first page = 5)
 <details>
     <summary>SEO Analysis</summary>
 
-![SEO Analysis](docs/features-and-evidence/Esri-map.PNG) 
+![SEO Analysis](docs/features-and-evidence/SEO_Analysis.PNG) 
 </details>
 <br><br>
 
 <details>
     <summary>SEO Analysis (Ordered)</summary>
 
-![SEO Analysis](docs/features-and-evidence/Esri-map.PNG) 
+![SEO Analysis](docs/features-and-evidence/SEO_Analysis_Ordered.PNG) 
 </details>
 <br><br>
 
@@ -1095,11 +1095,18 @@ As it can be observed, the following keywords produce high volume of searches wi
 Then, those with a "quality factor" of 5 (where an e-commerce appears in the first page of a Google search, since we are interested in promoting an e-commerce( are the following ones:
 "Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books".
 
-These 17 keywords are included in our ...
+These 17 keywords are considered as the most relevant ones and included in our ...
 
 Since they show a clear trend for unique words like "DEM", "Geophysical", "Buy" and "Data", they are analized included as well.
 
 As examples, after analyzing "DEM" with wordtracker.com, it is observed that it produces a high volume and good competition comparisson. Therefore "DEM" is also included as keyword.
+
+On the other hand, keyworkd staffing was also carried out when possible, for example, in headings and "<strong>" tags. Social links include the attibute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the descritpion of the e-commerce and these 17 keyworkds.
+
+Finally, we include the sitemap.xml (in the root folder) to increase the chances of a higher rank in search engines and help them on finding relevant content, and a robots.txt to "tell" them where "not to navigate" (which simoultaneously increase the ranking of the site since they consider a site that contains a file like this of goog quality), from CI SEO lessons.
+
+sitemap.xml: created using XML-Sitemaps.com
+robots.txt: tested with https://support.google.com/webmasters/answer/6062598?hl=en
 
 <details>
     <summary>wordtracker.com analysis for "DEM" keyword</summary>

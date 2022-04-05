@@ -1010,7 +1010,9 @@ The following are testing of User Stories previously described above:
 
 
 ___
-# 12 . SEO Analysis
+# 12 . Marketing Strategy
+
+## SEO Analysis
 
 
 The search engine optimization is focused on Google search engine since it accounts for more than 90% of user searches.
@@ -1030,6 +1032,8 @@ No e-commerce/service provider after first page= 2;
 No e-commerce/service provider in first page = 3;
 E-commerce after first page = 4
 E-commerce in first page = 5)
+Just to have an idea and assign a quantification to the selection, the "Volume" is multiplied by the "Quality Factor" (and divided by 1000000 to have smaller figures). This is a subjective approach, however the results are still interesting:
+
 | Keywords | Volume (from Google.com) | Content, general description (searching in Google.com) | "Quality Factor" | Volume x "Quality Factor" / 1000000 |
 | ---- | ---- | ---- | ---- | ---- |
 | Keywords                      | Volume (from Google.com)  | Content, general description (searching in Google.com)                                           | "Quality Factor"     |   Volume x "Quality Factor" / 1000000 |
@@ -1131,7 +1135,7 @@ Reference: Code Institue, SEO lessons.
 <br><br>
 
 
-
+## Organic Growth with Social Media (Facebook)
 
 
 

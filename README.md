@@ -1030,48 +1030,47 @@ No e-commerce/service provider after first page= 2;
 No e-commerce/service provider in first page = 3;
 E-commerce after first page = 4
 E-commerce in first page = 5)
-| Keywords | Volume (from Google.com) | Content, general description (searching in Google.com) | "Quality Factor" |
-| ---- | ---- | ---- | ---- |
-| Geophysical data | 55,300,000 | No e-commerce in first three pages, most science sites | 1 |
-| Digital elevation model | 68,200,000 | No e-commerce in first three pages, software provider in second page | 2 |
-| DEM | 4,950,000,000 | No e-commerce in first three pages, most science sites, data acquisition provider in second page | 2 |
-| Magnetometry | 2,010,000 | No e-commerce in first three pages, service providers in first page | 3 |
-| Gravimetry | 22,900,000 | No e-commerce, service providers in third page | 2 |
-| Resistivity | 101,000,000 | No e-commerce in first three pages, book in third page | 2 |
-| Buy geophysical data | 3,940,000 results | E-commerce and books on first page | 5 |
-| Buy DEM data | 52,800,000 | E-commerce on first page, science sites | 5 |
-| Buy Magnetometry data | 10,500,000 | E-commerce and data acquisition providers on first page | 5 |
-| Buy Gravimetry data | 15,500,000 | E-commerce and data acquisition providers on first page | 5 |
-| Buy Resistivity data |  24,300,000 | Service providers and e-commerce on first page | 5 |
-| DEM data | 3,870,000,000 | E-commerce on first page (bottom), science sites | 5 |
-| Magnetometry data | 10,500,000 | Science sites, equipment in second page, images of equipment on first page | 2 |
-| Gravimetry data | 17,200,000 | E-commerce on first page (top), science sites | 5 |
-| Resistivity data | 17,200,000 | No e-commerce in first three pages, most science sites | 1 |
-| Geophysical book | 30,900,000 | Lot of books and e-commerce right from the top of first page | 5 |
-| Geophysical training | 16,500,000 | Training service provider on first page | 4 |
-| Geophysical data acquisition | 8,740,000 | Science, data acquisition service provider on second page | 3 |
-| Geophysical data | 201,000,000 | Science, e-commerce for paper and books in third page | 4 |
-| DEM acquisition | 113,000,000 | Science | 1 |
-| Magnetometry acquisition | 1,930,000 | Science, equipment on second page | 2 |
-| Gravimetry acquisition | 3,100,000 | Science, with service provider and book and first page | 3 |
-| Resistivity acquisition | 6,810,000 | Science, book in first page and service provider in second one | 3 |
-| DEM processing | 389,000,000 | Science | 1 |
-| Magnetometry processing | 4,810,000 |Service, equipment provider in first page; science | 3 |
-| Gravimetry processing | 7,440,000 | Science | 1 |
-| Resistivity processing | 31,700,000 | Service provider in second page | 2 |
-| DEM books | 6,420,000,000 | E-commerce from first page | 5 |
-| Magnetometry books | 1,950,000 | E-commerce from first page | 5 |
-| Gravimetry books |  4,400,000 | E-commerce from first page | 5 |
-| Resistivity books |11,000,000 | E-commerce from first page | 5 |
-| DEM training | 4,140,000,000 | Science | 1 |
-| Magnetometry training | 1,680,000 | Many training courses in first page, service provider in second page, science | 4 |
-| Gravimetry training | 1,840,000 | training courses in first page, science | 4 |
-| Resistivity training | 26,500,000 | Non-related topics from first page (resistance) | 1 |
-| DEM software | 3,640,000,000 | E-commerce in first page, many products | 5 |
-| Magnetometry software | 4,770,000 | Service providers, e-commerce and books in first page | 5 |
-| Gravimetry software | 4,890,000 | Science, service provider in first page | 3 |
-| Resistivity software | 11,000,000 | Service providers from first page | 3 |
-
+| Keywords | Volume (from Google.com) | Content, general description (searching in Google.com) | "Quality Factor" | Volume x "Quality Factor" / 1000000 |
+| ---- | ---- | ---- | ---- | ---- |
+ | Geophysical data              |                55,300,000 | No e-commerce in first three pages, most science sites                                           |                     1|         55                            |
+| Digital elevation model       |                68,200,000 | No e-commerce in first three pages, software provider in second page                             |                     2|        136                            |
+| DEM                           |             4,950,000,000 | No e-commerce in first three pages, most science sites, data acquisition provider in second page |                     2|      9,900                            |
+| Magnetometry                  |                 2,010,000 | No e-commerce in first three pages, service providers in first page                              |                     3|          6                            |
+| Gravimetry                    |                22,900,000 | No e-commerce, service providers in third page                                                   |                     2|         46                            |
+| Resistivity                   |               101,000,000 | No e-commerce in first three pages, book in third page                                           |                     2|        202                            |
+| Buy geophysical data          |                 3,940,000 | E-commerce and books on first page                                                               |                     5|         20                            |
+| Buy DEM data                  |                52,800,000 | E-commerce on first page, science sites                                                          |                     5|        264                            |
+| Buy Magnetometry data         |                10,500,000 | E-commerce and data acquisition providers on first page                                          |                     5|         53                            |
+| Buy Gravimetry data           |                15,500,000 | E-commerce and data acquisition providers on first page                                          |                     5|         78                            |
+| Buy Resistivity data          |                24,300,000 | Service providers and e-commerce on first page                                                   |                     5|        122                            |
+| DEM data                      |             3,870,000,000 | E-commerce on first page (bottom), science sites                                                 |                     5|     19,350                            |
+| Magnetometry data             |                10,500,000 | Science sites, equipment in second page, images of equipment on first page                       |                     2|         21                            |
+| Gravimetry data               |                17,200,000 | E-commerce on first page (top), science sites                                                    |                     5|         86                            |
+| Resistivity data              |                17,200,000 | No e-commerce in first three pages, most science sites                                           |                     1|         17                            |
+| Geophysical book              |                30,900,000 | Lot of books and e-commerce right from the top of first page                                     |                     5|        155                            |
+| Geophysical training          |                16,500,000 | Training service provider on first page                                                          |                     4|         66                            |
+| Geophysical data acquisition  |                 8,740,000 | Science, data acquisition service provider on second page                                        |                     3|         26                            |
+| Geophysical data              |               201,000,000 | Science, e-commerce for paper and books in third page                                            |                     4|        804                            |
+| DEM acquisition               |               113,000,000 | Science                                                                                          |                     1|        113                            |
+| Magnetometry acquisition      |                 1,930,000 | Science, equipment on second page                                                                |                     2|          4                            |
+| Gravimetry acquisition        |                 3,100,000 | Science, with service provider and book and first page                                           |                     3|          9                            |
+| Resistivity acquisition       |                 6,810,000 | Science, book in first page and service provider in second one                                   |                     3|         20                            |
+| DEM processing                |               389,000,000 | Science                                                                                          |                     1|        389                            |
+| Magnetometry processing       |                 4,810,000 | Service, equipment provider in first page; science                                               |                     3|         14                            |
+| Gravimetry processing         |                 7,440,000 | Science                                                                                          |                     1|          7                            |
+| Resistivity processing        |                31,700,000 | Service provider in second page                                                                  |                     2|         63                            |
+| DEM books                     |             6,420,000,000 | E-commerce from first page                                                                       |                     5|     32,100                            |
+| Magnetometry books            |                 1,950,000 | E-commerce from first page                                                                       |                     5|         10                            |
+| Gravimetry books              |                 4,400,000 | E-commerce from first page                                                                       |                     5|         22                            |
+| Resistivity books             |                11,000,000 | E-commerce from first page                                                                       |                     5|         55                            |
+| DEM training                  |             4,140,000,000 | Science                                                                                          |                     1|      4,140                            |
+| Magnetometry training         |                 1,680,000 | Many training courses in first page, service provider in second page, science                    |                     4|          7                            |
+| Gravimetry training           |                 1,840,000 | training courses in first page, science                                                          |                     4|          7                            |
+| Resistivity training          |                26,500,000 | Non-related topics from first page (resistance)                                                  |                     1|         27                            |
+| DEM software                  |             3,640,000,000 | E-commerce in first page, many products                                                          |                     5|     18,200                            |
+| Magnetometry software         |                 4,770,000 | Service providers, e-commerce and books in first page                                            |                     5|         24                            |
+| Gravimetry software           |                 4,890,000 | Science, service provider in first page                                                          |                     3|         15                            |
+| Resistivity software          |                11,000,000 | Service providers from first page                                                                |                     3|         33                            |
 
 
 <br><br>

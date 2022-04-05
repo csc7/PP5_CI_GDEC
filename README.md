@@ -1009,6 +1009,70 @@ The following are testing of User Stories previously described above:
 
 
 
+___
+# 12 . SEO Analysis
+
+
+The search engine optimization is focused on Google search engine since it accounts for more than 90% of user searches.
+
+Basically, Google ellaborates a ranking of pages (according to the criteria being searched) and shows them in the result according to this ranking. Algorithms and human raters are used to position pages in these search resutls.
+
+In order to have our page in the first results (user will usually not read after the first page of results), we need our page to be highly ranked in the resarch resutls.
+
+A way to do it is by including keywords, which can be short-tail (one or two words, highly ranking but giving a lot of "competitors") or long-tail (phrases, more specific to our products or page, but with less ranking). Therefore, the best solution might be considered that one that produces a high volume of results with low competition.
+
+First, a list of important keywords is created, thinking in our buyers and user personas. Then, the most relevant ones are selected based on volume (high) and competition (low).
+
+| Keywords | Volume (from Google.com) | Competitors (searching in Google.com) |
+| ---- | ---- | ---- |
+| Geophysical data | 55,300,000 | No e-commerce in first three pages, most science sites |
+| Digital elevation model | 68,200,000 | No e-commerce in first three pages, software provider in second page |
+| DEM | 4,950,000,000 | No e-commerce in first three pages, most science sites, data acquisition provider in second page |
+| Magnetometry | 2,010,000 | No e-commerce in first three pages, service providers in first page |
+| Gravimetry | 22,900,000 | No e-commerce in first three pages, service providers in third page |
+| Resistivity | 101,000,000 | No e-commerce in first three pages, book in third page |
+| Buy geophysical data | 3,940,000 results | E-commerce and books on first page |
+| Buy DEM data | 52,800,000 | E-commerce on first page, science sites |
+| Buy Magnetometry data | 10,500,000 | E-commerce and data acquisition providers on first page |
+| Buy Gravimetry data | 15,500,000 | E-commerce and data acquisition providers on first page |
+| Buy Resistivity data | Service providers and e-commerce on first page |
+| DEM data | 3,870,000,000 | E-commerce on first page (bottom), science sites |
+| Magnetometry data | 10,500,000 | Science sites, equipment in second page, images of equipment on first page |
+| Gravimetry data | 17,200,000 | E-commerce on first page (top), science sites |
+| Resistivity data | 17,200,000 | No e-commerce in first three pages, most science sites |
+| Geophysical book | 30,900,000 | Lot of books and e-commerce right from the top of first page |
+| Geophysical training | 16,500,000 | Training service provider on first page |
+| Geophysical data acquisition | 8,740,000 | Sciende, data acquisition service provider on second page |
+| Geophysical data |
+| DEM acquisition |
+| Magnetometry acquisition |
+| Gravimetry acquisition |
+| Resistivity acquisition |
+| DEM processing |
+| Magnetometry processing |
+| Gravimetry processing |
+| Resistivity processing |
+| DEM books |
+| Magnetometry books |
+| Gravimetry books |
+| Resistivity books |
+| DEM training |
+| Magnetometry training |
+| Gravimetry training |
+| Resistivity training |
+| DEM software |
+| Magnetometry software |
+| Gravimetry software |
+| Resistivity software |
+
+
+<br><br>
+## [Back to Index](#index)
+<br><br>
+
+
+
+
 ## [Back to Index](#index)
 <br><br>
 

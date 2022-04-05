@@ -1032,7 +1032,8 @@ E-commerce after first page = 4
 E-commerce in first page = 5)
 | Keywords | Volume (from Google.com) | Content, general description (searching in Google.com) | "Quality Factor" | Volume x "Quality Factor" / 1000000 |
 | ---- | ---- | ---- | ---- | ---- |
- | Geophysical data              |                55,300,000 | No e-commerce in first three pages, most science sites                                           |                     1|         55                            |
+| Keywords                      | Volume (from Google.com)  | Content, general description (searching in Google.com)                                           | "Quality Factor"     |   Volume x "Quality Factor" / 1000000 |
+| Geophysical data              |                55,300,000 | No e-commerce in first three pages, most science sites                                           |                     1|         55                            |
 | Digital elevation model       |                68,200,000 | No e-commerce in first three pages, software provider in second page                             |                     2|        136                            |
 | DEM                           |             4,950,000,000 | No e-commerce in first three pages, most science sites, data acquisition provider in second page |                     2|      9,900                            |
 | Magnetometry                  |                 2,010,000 | No e-commerce in first three pages, service providers in first page                              |                     3|          6                            |
@@ -1073,9 +1074,51 @@ E-commerce in first page = 5)
 | Resistivity software          |                11,000,000 | Service providers from first page                                                                |                     3|         33                            |
 
 
+<details>
+    <summary>SEO Analysis</summary>
+
+![SEO Analysis](docs/features-and-evidence/Esri-map.PNG) 
+</details>
 <br><br>
-## [Back to Index](#index)
+
+<details>
+    <summary>SEO Analysis (Ordered)</summary>
+
+![SEO Analysis](docs/features-and-evidence/Esri-map.PNG) 
+</details>
 <br><br>
+
+
+As it can be observed, the following keywords produce high volume of searches with a focus in our e-commerce nature:
+"DEM books", "DEM data", "DEM software", "DEM", "DEM training", "Geophysical data".
+
+Then, those with a "quality factor" of 5 (where an e-commerce appears in the first page of a Google search, since we are interested in promoting an e-commerce( are the following ones:
+"Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books".
+
+These 17 keywords are included in our ...
+
+Since they show a clear trend for unique words like "DEM", "Geophysical", "Buy" and "Data", they are analized included as well.
+
+As examples, after analyzing "DEM" with wordtracker.com, it is observed that it produces a high volume and good competition comparisson. Therefore "DEM" is also included as keyword.
+
+<details>
+    <summary>wordtracker.com analysis for "DEM" keyword</summary>
+
+![DEM Analysis with wordtracker](docs/features-and-evidence/wordtracker-com-for-dem.jpg) 
+</details>
+<br><br>
+
+Also, after analyzing "Geophysical" with wordtracker.com, it is observer a great score for volume and competition, achiving the first place in both for similar keyworkds.
+
+<details>
+    <summary>wordtracker.com analysis for "Geophysical" keyword</summary>
+
+![DEM Analysis with wordtracker](docs/features-and-evidence/wordtracker-com-for-geophysical.jpg) 
+</details>
+<br><br>
+
+
+
 
 
 

@@ -1116,7 +1116,7 @@ heroku login -i (to log in directly in the Gitpod CLI)
 15 - OPTIONAL: Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process, in case you want to look the website before deploying in Amazon Web Services):
 heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
 
-16 - Set ALLOWED_HOSTS variable in settings.py file as follows:
+16 - Ensure ALLOWED_HOSTS variable in settings.py file is set as follows:
 ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost']
 
 
@@ -1183,6 +1183,13 @@ USE_AWS
 IMPORTANT: At this point, DISABLE_COLLECSTATICS of point 15 can be deleted if you opted for enabling it), so Django loads the static files from Amazon Web Services
 
 25 - Check that your "custom_storages.py" file is properly defined according to your app and AWS account.
+
+26 - In the app bucket of your Amazon Web Services account create a folder named "media" (in the same level that the "static" folder is located)
+
+27 - Check that superuser e-mail in Django admin user interface is verified.
+
+28 - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and asign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
+Ensure the variables match the names in the settings.py file.
 
 #### Additional notes:
 

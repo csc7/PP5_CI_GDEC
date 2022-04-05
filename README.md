@@ -1137,7 +1137,14 @@ Reference: Code Institue, SEO lessons.
 
 ## Organic Growth with Social Media (Facebook)
 
+Facebook, as well as other social media like, gives the opportunity to grow the business organically, without paid marketing (which should also be considered in line with organica growth). The page below was built in Facebook with the aim of interacting with potential users, answer consultations, promoting our products, connect to clients and potential clients and have the change to connect to other potential buyers (users) and/or other social networks through them.
 
+<details>
+    <summary>GDEC Facebook Page</summary>
+
+![GDEC Facebook Page](docs/features-and-evidence/wordtracker-com-for-geophysical.jpg) 
+</details>
+<br><br>
 
 
 ## [Back to Index](#index)

@@ -1108,10 +1108,12 @@ Therefore, the final keywords for the projects are the following 18 ones:
 
 On the other hand, keyworkd staffing was also carried out when possible, for example, in headings and "<strong>" tags. Social links include the attibute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the descritpion of the e-commerce and these 17 keyworkds.
 
-Finally, we include the sitemap.xml (in the root folder) to increase the chances of a higher rank in search engines and help them on finding relevant content, and a robots.txt to "tell" them where "not to navigate" (which simoultaneously increase the ranking of the site since they consider a site that contains a file like this of goog quality), from CI SEO lessons.
+Finally, we include the sitemap.xml (in the root folder) to increase the chances of a higher rank in search engines and help them on finding relevant content, and a robots.txt to "tell" them where "not to navigate" (which simoultaneously increase the ranking of the site since they consider a site that contains a file like this of goog quality).
 
 sitemap.xml: created using XML-Sitemaps.com
 robots.txt: tested with https://support.google.com/webmasters/answer/6062598?hl=en
+
+Reference: Code Institue, SEO lessons.
 
 <details>
     <summary>wordtracker.com analysis for "DEM" keyword</summary>

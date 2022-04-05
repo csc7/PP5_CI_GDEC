@@ -22,3 +22,9 @@ def index(request):
     """View for index page"""
 
     return render(request, 'home/index.html')
+
+
+def gdpr_privacy_policy(request):
+    """View for index page"""
+
+    return render(request, 'gdpr-privacy-policy.html')

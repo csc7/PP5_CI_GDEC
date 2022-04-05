@@ -1090,16 +1090,21 @@ E-commerce in first page = 5)
 
 
 As it can be observed, the following keywords produce high volume of searches with a focus in our e-commerce nature:
-"DEM books", "DEM data", "DEM software", "DEM", "DEM training", "Geophysical data".
+"DEM books", "DEM data", "DEM software", "DEM training", "Geophysical data".
 
 Then, those with a "quality factor" of 5 (where an e-commerce appears in the first page of a Google search, since we are interested in promoting an e-commerce( are the following ones:
 "Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books".
 
-These 17 keywords are considered as the most relevant ones and included in our ...
+Also, it can be observed a clear trend for unique words like "DEM", "Geophysical", "Buy" and "Data", so they were analized as well.
 
-Since they show a clear trend for unique words like "DEM", "Geophysical", "Buy" and "Data", they are analized included as well.
+After analyzing "DEM" with wordtracker.com, it is observed that it produces a high volume and good competition comparisson. Therefore "DEM" is also included as keyword.
 
-As examples, after analyzing "DEM" with wordtracker.com, it is observed that it produces a high volume and good competition comparisson. Therefore "DEM" is also included as keyword.
+Also, after analyzing "Geophysical" with wordtracker.com, it is observer a great score for volume and competition, achiving the first place in both for similar keyworkds.
+
+"Buy" and "Data" are not finally included in the keywords as they are too general.
+
+Therefore, the final keywords for the projects are the following 18 ones:
+"DEM books", "DEM data", "DEM software", "DEM training", "Geophysical data", "Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books", "DEM", "Geophysical".
 
 On the other hand, keyworkd staffing was also carried out when possible, for example, in headings and "<strong>" tags. Social links include the attibute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the descritpion of the e-commerce and these 17 keyworkds.
 
@@ -1115,7 +1120,6 @@ robots.txt: tested with https://support.google.com/webmasters/answer/6062598?hl=
 </details>
 <br><br>
 
-Also, after analyzing "Geophysical" with wordtracker.com, it is observer a great score for volume and competition, achiving the first place in both for similar keyworkds.
 
 <details>
     <summary>wordtracker.com analysis for "Geophysical" keyword</summary>

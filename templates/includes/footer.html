@@ -21,9 +21,7 @@
     </div>
 
     <div id="div-for-contact-in-footer" class="col-12 col-sm-6 order-sm-4 col-md-5 order-md-2 col-lg-3 text-center px-0 mx-0 mt-1">
-        <a href="{% url 'contact' %}" class="nav-link">
-            <h6 class="my-1 pt-3 pt-sm-0 text-center text-light"><strong>Contact</strong></h6>
-        </a>
+        <h6 class="my-1 pt-3 pt-sm-0 text-center text-light"><strong>Contact</strong></h6>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 my-2">
@@ -146,7 +144,7 @@
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="cookies-link-in-footer" href="h" class="my-0 py-0 text-light"
+                    <a id="cookies-link-in-footer" href="{% url 'gdpr_cookies' %}" class="my-0 py-0 text-light"
                     aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Cookies</a>
                 </div>
             </div>

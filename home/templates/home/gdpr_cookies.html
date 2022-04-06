@@ -1,0 +1,38 @@
+<!-- Structure based on Code Institute "Boutique Ado" project -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col bottom-marging-for-large-screens">
+        
+            <h1>Cookies</h1>
+
+            <p>This site, PP5-CI-GDEC, accessible from https://pp5-ci-gdec.herokuapp.com/, is a fictitious e-commerce; its website is part of the Code Institute Project Portfolio 5.
+
+            <p>This site does not collect any cookies.</p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- Font Awesome Script / Kit
+Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
+<script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
+<!-- This page javascript file -->
+
+
+{% endblock %}

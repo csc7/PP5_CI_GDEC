@@ -28,3 +28,9 @@ def gdpr_privacy_policy(request):
     """View for index page"""
 
     return render(request, 'home/gdpr_privacy_policy.html')
+
+
+def gdpr_cookies(request):
+    """View for index page"""
+
+    return render(request, 'home/gdpr_cookies.html')

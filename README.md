@@ -1135,9 +1135,13 @@ Reference: Code Institue, SEO lessons.
 <br><br>
 
 
-## Organic Growth with Social Media (Facebook)
+## Organic Growth with Social Media (Facebook and LinkedIn)
 
-Facebook, as well as other social media like, gives the opportunity to grow the business organically, without paid marketing (which should also be considered in line with organica growth). The page below was built in Facebook with the aim of interacting with potential users, answer consultations, promoting our products, connect to clients and potential clients and have the change to connect to other potential buyers (users) and/or other social networks through them.
+Since the e-commerce is oriented to a professional and specialized community, the organic growth (which should simoultaneously be considered with organic growth) is suitable for LinkedIn. This social network makes possible the interaction with users and allow them to take training related to the products of the GDEC e-commerce. This social network seems to be very suitable for universities and research institutions that use these kind of data.
+
+Similarly, Facebook, achieves the same goal, with better perspective towards advertising and user interaction, and with a higher amount of users.
+
+The page below was built in Facebook with the aim of interacting with potential users, answer consultations, promoting our products, connect to clients and potential clients and have the change to connect to other potential buyers (users) and/or other social networks through them. It was built trying to use as much content from the GDEC site as possible, so there is a good match between the content of the website and the Facebook page.
 
 <details>
     <summary>GDEC Facebook Page</summary>
@@ -1145,6 +1149,13 @@ Facebook, as well as other social media like, gives the opportunity to grow the 
 ![GDEC Facebook Page](docs/features-and-evidence/wordtracker-com-for-geophysical.jpg) 
 </details>
 <br><br>
+
+
+## Paid Marketing
+
+As mentioned before, the above strategies should be carried out with a paid strategy, focusing the expenditures (which might not be necessarily high but constant through time) in geopysical exhibitions (like EAGE or SEG among many others), and on those news or science websites that could caught the atention of authorities (since these kind of data are usually used by them.)
+
+
 
 
 ## [Back to Index](#index)

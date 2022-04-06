@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- https://docs.djangoproject.com/en/4.0/topics/forms/ -->
+<div id="contact-form" class="container">
+    <form action="{% url 'contact' %}" method="post">
+        <!-- Django Token -->
+        {% csrf_token %}
+        <!-- Contact Form -->       
+        <div id="form-row" class="row">
+            <div class="col-12 col-lg-6">
+                <!-- Name -->
+                <div id="form-left-1" class="col-12">
+                    {{ form.name.errors }}
+                    <label class="form-labels" for="{{ form.name.id_for_label }}">Name</label>
+                    {{ form.name }}
+                </div>
+                <!-- Surname -->
+                <div id="form-left-2" class="col-12">
+                    {{ form.surname.errors }}
+                    <label class="form-labels" for="{{ form.surname.id_for_label }}">Surname</label>
+                    {{ form.surname }}
+                </div>
+                <!-- E-mail -->
+                <div id="form-left-3" id="e-mail-contact" class="col-12">
+                    {{ form.email.errors }}
+                    <label class="form-labels" for="{{ form.email.id_for_label }}">E-mail</label>
+                    {{ form.email }}
+                </div>
+            </div>
+            <!-- Description -->
+            <div class="col-12 col-lg-6">
+                <div id="form-right-1" class="col-12">
+                    {{ form.text_content.errors }}
+                    <label class="form-labels" for="{{ form.text_content.id_for_label }}">Description</label>
+                    {{ form.text_content }}
+                </div>
+            </div>
+            <div id="form-right-2" class="col-12">
+                <!-- Check if user is authenticated to send information -->
+                {% if user.is_authenticated %} 
+                <input id="contact-form-button" type="submit" value="Submit">
+                {% else %}
+                <p>(Log in to send data to database)</p>
+                {% endif %}
+            
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1146,7 +1146,14 @@ The page below was built in Facebook with the aim of interacting with potential 
 <details>
     <summary>GDEC Facebook Page</summary>
 
-![GDEC Facebook Page](docs/features-and-evidence/wordtracker-com-for-geophysical.jpg) 
+![GDEC Facebook Page Image](docs/features-and-evidence/Facebook_Page.png) 
+</details>
+<br><br>
+
+<details>
+    <summary>GDEC Facebook Page</summary>
+
+![GDEC Facebook Page PDF](docs/features-and-evidence/Facebook_Page.pdf) 
 </details>
 <br><br>
 

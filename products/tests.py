@@ -41,7 +41,7 @@ class TestProductApp(unittest.TestCase):
             'product_description',          # description
             'product_price',                # price
             'product_resolution',           # resolution
-            'product_rating',              # rating
+            'product_rating',               # rating
             'product_image_url',            # image_url
             'product_image_name'            # image_name
         )

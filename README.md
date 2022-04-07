@@ -80,44 +80,56 @@ In addition, issues can directly be found [here](https://github.com/csc7/PP5_CI_
 ___
 # **4 . User Experience**
 
-UX has been addressed around Jesse James Garrett's process, whose five planes involves the following matters:
-- **STRATEGY**: to build a website (product) that helps on the planning and activities of a seismic/geophysical data acquisition crew.
+UX has been addressed around Jesse James Garrett's process and its five planes:
+- **STRATEGY**: to develop an e-commerce website (product) that makes purchasing of geophysical data simple and intuitive.
 - **SCOPE**: the minimum viable product needs to include features that allow the user to know the following:
-    - Instruction page to let the user how to use the site.
-    - Weather page where the user can gather and analyse weather data from any point in the world that is picked on a map.
-    - Blog page where the user can use to post issues, comment, send consultations and find solutions.
-    - Contact page where the user can send feedback or report site issues.
+    - Home page that act as staring point and welcome page for the site.
+    - A main navigation menu where, along with a footer, gives access to the main parts of the website, including registration and sign-in for users.
+    - Images and the products with their associated price for purchasing.
+    - A method to pay the products; for instance, stripe.
+    - A database that accounts for all the data in the website and allows interaction of the users with the products (purchase) and their accounts.
 - **STRUCTURE**: the information is structured as follows:
-    - Instructions page (index.html).
-    - Weather page with a map on top left, selection of point top right, current data below this selection panel, and visualization of data on the bottom of this page.
-    - Blog page where topics are shown on the body.
-    - Topic pages, corresponding to the topics mentioned above, to read and post comments.
+    - Home page (act as welcome page).
+    - Fixed navigation bar on top that allows searching and filtering products for display and buy.
+    - A page showing the selected or filtered products.
+    - A page for details of a specific product when selected, giving the option to buy it.
+    - A bag page with selected products to buy.
+    - A checkout page showing the products the user is about to buy, with the final price to pay, linking with the payment method (e.g., Stripe).
+    - Footer, showing the main structure of the website and giving access to the social networks of the e-commerce and a field for the user to sign up in the newsletter of the e-commerce (to help on marketing), a contact form, contact information, and general data protection regulation requirements.
+    - A profile page, including the option to show the purchase history of the user.
     - Contact form page.
-    - Fixed navigation bar on top.
-    - Footer.
+    - Pop-up messages informing the interaction of the user with the website (purchase, sign in, sign out, sign up, errors and success messages as the main ones).
     - Sign-in page.
     - Sign-up page.
     - Sign-out page.
     - 404 page to let the user know of any error while loading the site.
-- **SKELETON**: the information is accessed through a fixed navigation menu on top of the pages.
-- **SURFACE**: the website is based on a contrast between white and RGB(49, 49, 48), with some titles in RGB(76, 76, 211); some other variations close to these three colours are also present to enhance contrast.
+- **SKELETON**: the information and products are accessed through a fixed navigation menu on top of the pages and a footer.
+- **SURFACE**: the website is based on a contrast different tonalities of blue (with fonts in strong dark blue); with red banners (the top one including advertising messages) separating the fixed navigation menu, the body and the footer.
+
 
 ## **User Goals**
+- To easily find and buy products (geophyical data, and training and software products).
 - To find an interactive website.
 - To navigate through a responsive website.
-- ...
+- To have the website accessible at all times through a fixed navigation menu and a footer.
+- To have an account in the website for future purchases or review of past purchases, giving the change to store personal data.
 - To be able to contact the site administrator, owner and/or developer if desired.
+- To be informed of the events created when navigating the website as soon as they happen.
 
 #### [Back to Index](#index)
 
 ## **Site Owner Goals**
+- To sell geophyical data, and training and software products.
+- To promote different products.
+- To have the website helping on the marketing of the e-commerce (e.g., linking to contact information and options, social networks, and giving the option to sign up for a newsletter).
+- To capture clients.
+- To increase the amount of users interested in and buyint geophyical data, and training and software products.
 - To provide an interactive website.
 - To provide a responsive website.
-- ...
 - To give users the chance to contact the site administrator, owner and/or developer.
 
 ## **Developer Goals**
-- To provide a basic and scalable e-commerce website to show my capabilities.
+- To provide a scalable e-commerce website to show my current development capabilities.
 
 #### [Back to Index](#index)
 <br>
@@ -151,31 +163,44 @@ User stories are divided into the following three groups:
 19. As a shopper, I want to have categories of products, so I find a product easily if I do not know its name.
 20. As a shopper, I want to have prices always visible, so I know the value of the products at all times.
 21. As a shopper, I want to have the different resolutions of the products visible, close to the product it belongs to, so I can easily select it without further action.
+22. As a shopper, I want to have a secure payment method, so I can rest assured that the purchase procedure is safe.
 
 - ### **Site Owner**
-22. As owner, I want to provide an introductory page, so users know what can be found in the website and what can be purchased.
-23. As owner, I want to provide an easy process for registration, so I ensure a connection with a potential buyer.
-24. As owner, I want to provide a search field for products on top, so I require users/shoppers the minimum possible time to find a product (and therefore reduce the risk of leaving).
-25. As owner, I want to organize products in categories, so users find an organized site and can find products easily.
-26. As owner, I want to receive feedback from users, so I can take actions in response to them if needed.
-27. As owner, I want to provide a navigation menu on top and always visible, so users can access any content at any time without needing the back button.
-28. As owner, I want to give as many options to be contacted as possible, so users can choose forms or links in the footer to send their consultations and/or feedback in a very fast way.
-29. As owner, I want to provide a responsive website, so user can access it from any device without any constraint to navigate, find and/or use the website.
-30. As owner, I want to inform users if their consultation/message was successfully sent, so they know if they need to resend it or they do not.
-31. As owner, I want to inform the user, through an error page, if there is any error when loading the website.
+23. As owner, I want to provide an introductory page, so users know what can be found in the website and what can be purchased.
+24. As owner, I want to provide an easy process for registration, so I ensure a connection with a potential buyer.
+25. As owner, I want to provide a search field for products on top, so I require users/shoppers the minimum possible time to find a product (and therefore reduce the risk of leaving).
+26. As owner, I want to organize products in categories, so users find an organized site and can find products easily.
+27. As owner, I want to receive feedback from users, so I can take actions in response to them if needed.
+28. As owner, I want to provide a navigation menu on top and always visible, so users can access any content at any time without needing the back button.
+29. As owner, I want to give as many options to be contacted as possible, so users can choose forms or links in the footer to send their consultations and/or feedback in a very fast way.
+30. As owner, I want to provide a responsive website, so user can access it from any device without any constraint to navigate, find and/or use the website.
+31. As owner, I want to inform users if their consultation/message was successfully sent, so they know if they need to resend it or they do not.
+32. As owner, I want to inform the user, through an error page, if there is any error when loading the website.
 
 - ### **Developer**
-32. As developer, along with other points of this section, I want to show my work and give the option to users to contact me if they wish.
+33. As developer, along with other points of this section, I want to show my work and give the option to users to contact me if they wish.
 
 
 #### [Back to Index](#index)
 
 ## **User Requirements and Expectations**
-- A fixed and responsive navigation menu on top.
-- ...
-- A dedicated page for the contact form.
-- A footer with contact links to the developer.
-- Use of Django templates/pages for sign-up, sign-in, sign-out.
+- Home page.
+- A responsive navigation throughout the website.
+- A fixed navigation top that allows searching and filtering products for display and buy.
+- A page showing the selected or filtered products.
+- A page for details of a specific product when selected, giving the option to buy it.
+- A bag page with selected products to buy.
+- A checkout page, showing the final price to pay and linking with the payment method (e.g., Stripe).
+- Footer, showing the main structure of the website and giving access to the social networks of the e-commerce and a field for the user to sign up in the newsletter of the e-commerce (to help on marketing), a contact form, contact information, and general data protection regulation requirements.
+- A profile page with purchase history.
+- A contact form.
+- Pop-up messages informing the interaction of the user with the website.
+- Sign-in page.
+- Sign-up page.
+- Sign-out page.
+- 404 page..
+
+
 
 <br><br>
 ## [Back to Index](#index)

@@ -185,21 +185,21 @@ User stories are divided into the following three groups:
 #### [Back to Index](#index)
 
 ## **User Requirements and Expectations**
-- Home page.
+- A home page.
 - A responsive navigation throughout the website.
 - A fixed navigation top that allows searching and filtering products for display and buy.
 - A page showing the selected or filtered products.
 - A page for details of a specific product when selected, giving the option to buy it.
 - A bag page with selected products to buy.
 - A checkout page, showing the final price to pay and linking with the payment method (e.g., Stripe).
-- Footer, showing the main structure of the website and giving access to the social networks of the e-commerce and a field for the user to sign up in the newsletter of the e-commerce (to help on marketing), a contact form, contact information, and general data protection regulation requirements.
+- A Footer, showing the main structure of the website and giving access to the social networks of the e-commerce and a field for the user to sign up in the newsletter of the e-commerce (to help on marketing), a contact form, contact information, and general data protection regulation requirements.
 - A profile page with purchase history.
 - A contact form.
 - Pop-up messages informing the interaction of the user with the website.
-- Sign-in page.
-- Sign-up page.
-- Sign-out page.
-- 404 page..
+- A Sign-in page.
+- A Sign-up page.
+- A Sign-out page.
+- A 404 page.
 
 
 
@@ -495,14 +495,34 @@ The development of the project employed the following languages, software, frame
 ___
 # **9 . Features**
 
-The site consists of four pages, where each of them is divided in three parts: header, body and footer. The features contained in each of the pages and parts are the following ones:
+The features are designed to address the goals, user stories, and user requirements and expectations given in section 4, User Experience.
 
+The features of the site are the following ones:
+
+- Home page
+- Products (with product administration for the site owner)
+- Product details ((with product administration for the site owner)
+- Bag page
+- Checkout page
+- Secure payment method
+- Checkout success page
+- Site access (sign-in and sign-out)
+- Registration (sign-up)
+- Profile with history order
+- Contact form
+- Footer
+- 404 page
+
+This pages are accessible from a fixed navigation menu on top and a footer, and several pop-up messages are included to inform the user of their interactions with the site.
+
+
+Details of these features, including the user story they cover, are the following:
 
 - ### **Fixed navigation menu**
 
-It is in the header, fixed on all pages to facilitate navigation, and responsive.
+It is in the header, fixed on all pages to facilitate navigation, and responsiveness.
 
-*User Stories Addressed by this Feature: 19; 21; 29; 33 and 34.*
+*User Stories Addressed by this Feature: 1; 2; 5; 7, 8, 15, 16, 17, 18, 19, 20, 24, 25, 26, 28, 30, and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -515,11 +535,11 @@ It is in the header, fixed on all pages to facilitate navigation, and responsive
 </details>
 <br>
 
-- ### **Instructions App**
+- ### **Banner with latest news**
 
-They can be found in the Instructions page (home), they explain how to use the weather and blog pages.
+It separates the fixed navigation menu and the body of the site, and shows advertising messages for the e-commerce.
 
-*User Stories Addressed by this Feature: 1; 25; 33 and 34.*
+*User Stories Addressed by this Feature: 1; 2; 30 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -533,12 +553,30 @@ They can be found in the Instructions page (home), they explain how to use the w
 <br>
 
 
-- ### **Weather App**
+- ### **Home page**
 
-It can be found in the Weather page and allows users to collect and analyse weather information.
+It is the welcome page, with a world map image and advertising messages in a Bootstrap carousel.
+
+*User Stories Addressed by this Feature: 1; 2; 23; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Images</summary>
+
+![Instructions Page Top Image](docs/features-and-evidence/instructions-page-top.PNG)
+
+![Instructions Page Bottom Image](docs/features-and-evidence/instructions-page-bottom.PNG)
+
+</details>
+<br>
 
 
-*User Stories Addressed by this Feature: 2; 3; 4; 5; 6; 7; 26; 33 and 34.*
+- ### **Products (with product administration for the site owner)**
+
+Products appear after selecting categories or searching in the fixed navigation menu; they can be ordered by different criteria. The have an image, price, resolution (if applicable), a short description, and it also gives the site owner the option to edit it.
+
+
+*User Stories Addressed by this Feature: 1; 2; 13; 14; 19; 20; 21; 26; 30 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -549,11 +587,11 @@ It can be found in the Weather page and allows users to collect and analyse weat
 </details>
 <br>
 
-- ### **Blog App**
+- ### **Product details ((with product administration for the site owner)**
 
-It can be found in the Blog page and allows users to send and consult issues they find in their daily activities and find solutions for them.
+It can accessed by cliking on a specific product; it provides detailed information about it, including the price, short description and resolutions available if applicable. It also gives the site owner the option to edit it.
 
-*User Stories Addressed by this Feature: 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 27; 33 and 34.*
+*User Stories Addressed by this Feature: 1; 2; 13; 14; 20; 21; 30 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -565,11 +603,11 @@ It can be found in the Blog page and allows users to send and consult issues the
 <br>
 
 
-- ### **Contact App**
+- ### **Bag page**
 
-It can be found in the Contact and allows users to contact the website developer. It prevents the form to be sent with incomplete fields, informs the user if the message goes through and disables the send button in order not to send the consultation more than once.
+It can be accessed through the icot in the fixed navigation menu, top right, and shows the current products being purchased/added to the bag.
 
-*User Stories Addressed by this Feature: 18; 20; 28; 30; 33 and 34.*
+*User Stories Addressed by this Feature: 1; 2; 15; 16; 20; 30 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -582,11 +620,11 @@ It can be found in the Contact and allows users to contact the website developer
 
 
 
-- ### **Footer**
+- ### **Checkout page**
 
-It is located at the bottom of all pages, containing icons with links to LinkedIn, GitHub and e-mail application (to automatically load developer's e-mail address in the addressee field).
+It is presented when the user/shopper finishes the purchase process and is ready to pay.
 
-*User Stories Addressed by this Feature: 18; 20; 23; 28; 30; 33 and 34.*
+*User Stories Addressed by this Feature: 1; 2; 15; 22; 30 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -598,11 +636,60 @@ It is located at the bottom of all pages, containing icons with links to LinkedI
 <br>
 
 
-- ### **Registration**
+- ### **Secure payment method**
 
-They are Django complementary tools and pages to have registration options in the site for users. There are sign-in, sign-up and sign-out pages that work as interfaces for this purpose. 
+It is the payment process for the e-commerce, poweverd by Stripe.
 
-*User Stories Addressed by this Feature: 19; 24; 31; 33; 34; and 35.*
+*User Stories Addressed by this Feature: 1; 2; 22; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Footer Image](docs/features-and-evidence/footer.PNG)
+
+</details>
+<br>
+
+
+- ### **Checkout success page**
+
+It is presented after a successful payment carried out by the user/shopper.
+
+*User Stories Addressed by this Feature: 1; 2; 22; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Footer Image](docs/features-and-evidence/footer.PNG)
+
+</details>
+<br>
+
+
+- ### **Site access (sign-in and sign-out)**
+
+They are Django complementary tools and pages to have sigh-in and sign-out options in the site for users. 
+
+*User Stories Addressed by this Feature: 1; 2; 5; 8; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Footer Image](docs/features-and-evidence/footer.PNG)
+
+</details>
+<br>
+
+
+
+- ### **Registration (sign-up)**
+
+They are Django complementary tools and pages to have a sign-up option for users. 
+
+*User Stories Addressed by this Feature: 1; 2; 3; 5; 8; 30 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
@@ -616,6 +703,110 @@ They are Django complementary tools and pages to have registration options in th
 <br><br>
 ## [Back to Index](#index)
 <br><br>
+
+
+
+- ### **Profile with history order**
+
+It is a page that shows the user information and history order after selected the option in the fixed navigation menu when the user is signed in. 
+
+*User Stories Addressed by this Feature: 1; 2; 8; 12; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
+![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
+![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+</details>
+
+<br><br>
+## [Back to Index](#index)
+<br><br>
+
+
+- ### **Contact form**
+
+It is a contact form in a separate page, accessible from the footer, that gives the option to send a consultation to the site owner, without needing to buy and/or be signed in/up. Its goal is to receive feedback from as many sources as possible. 
+
+*User Stories Addressed by this Feature: 1; 2; 4; 6; 9; 27; 29; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
+![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
+![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+</details>
+
+<br><br>
+## [Back to Index](#index)
+<br><br>
+
+
+- ### **Footer**
+
+They are Django complementary tools and pages to have a sign-up option for users. 
+
+*User Stories Addressed by this Feature: 1; 2; 4; 5; 6; 8; 9; 24; 27; 29; 30 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
+![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
+![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+</details>
+
+<br><br>
+## [Back to Index](#index)
+<br><br>
+
+
+- ### **404 page**
+
+They are Django complementary tools and pages to have an error page that informs the user that something has gone wrong (e.g., wrong address, broken URL). 
+
+*User Stories Addressed by this Feature: 1; 2; 10; 30; 32 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
+![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
+![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+</details>
+
+<br><br>
+## [Back to Index](#index)
+<br><br>
+
+
+- ### **Pop-up status messages**
+
+They are Django complementary messages that informs the user, with pop-ups, that an action has been executed in the site. The action can be adding a product, deleting a product, editing a product (for the site owner), changing the amount of products in the bag, signing in, signing up, signing out and the payment outcome.
+
+*User Stories Addressed by this Feature: 1; 2; 3; 10; 30, 31 and 33.*
+
+*Please check "11. Testing of User Stories" for more details.*
+<details>
+    <summary>Check Image</summary>
+
+![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
+![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
+![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+</details>
+
+<br><br>
+## [Back to Index](#index)
+<br><br>
+
+
+
 
 ___
 # **10 . Validation**

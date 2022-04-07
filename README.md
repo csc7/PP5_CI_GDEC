@@ -212,7 +212,8 @@ ___
 
 The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are build with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 
-![Data Model Image](static/images/data-model.PNG)
+![Data Model Image](docs/data_model.PNG)
+*Chart created with ERDPlus (https://erdplus.com/standalone).*
 
 The following are the tables involved in the relational model and the field types in each of them.
 
@@ -220,7 +221,7 @@ The following are the tables involved in the relational model and the field type
 
     - **ID:** integer, primary key    
     - **Order Number:** char
-    - **User Profile:** , foreign key
+    - **User Profile:** integer, foreign key
     - **Full Name:** char
     - **E-mail:** e-mail
     - **Phone Number:** char
@@ -237,12 +238,11 @@ The following are the tables involved in the relational model and the field type
     - **Original Bag:** text)
     - **Stripe PID:** char
 
-
 - #### **ORDER LINE ITEM**
 
     - **ID:** integer, primary key 
     - **Order:** integer, foreign key
-    - **Product:** , foreign key
+    - **Product:** integer, foreign key
     - **Product Resolution:** char
     - **Quantity:** integer
     - **Line Item Total:** decimal
@@ -256,67 +256,38 @@ The following are the tables involved in the relational model and the field type
     - **E-mail:** e-mail
     - **Description:** char
 
-
-
-
-
-
-
-- #### **WEATHER TEMPERATURE DATA**
-
-    - **ID:** integer, primary key 
-    - **Order:** float, Kelvin, converted to Celsius
-    - **Product:** float, Kelvin, converted to Celsius
-    - **Product Resolution:** float, Kelvin, converted to Celsius
-    - **Quantity:** float, Kelvin, converted to Celsius
-    - **Line Item Total:** integer, foreign key
-
-- #### **WEATHER OTHER DATA**
-
-    - **ID:** integer
-    - **Pressure:** float, hPa (atmospheric pressure)
-    - **Humidity:** float, percentage
-    - **Visibility:** float, meters
-    - **Sky:** float, cloudiness, percentage
-    - **Main:** text, weather parameters (rain, snow, etc.)
-    - **Description:** text, weather condition
-    - **Sunrise:** custom (time), sunrise time, UNIX, UTC
-    - **Sunset:** custom (time), sunset time, UNIX, UTC
-    - **Rec ID:** integer, foreign key
-
-- #### **POST**
+- #### **CATEGORY**
 
     - **ID:** integer, primary key
-    - **Title:** text
-    - **Slug:** text
-    - **Author:** text
-    - **Feature Image:** image
-    - **Excerpt:** text
-    - **Updated:** date
-    - **Content:** text
-    - **Created:** date
-    - **Status:** integer
-    - **Like:** boolean
+    - **Name:** char
+    - **Friendly Name:** char
 
-- #### **COMMENT**
+- #### **PRODUCT**
 
-    - **ID:** integer, primary key
-    - **Name:** text
-    - **E-mail:** text
-    - **Body:** text
-    - **Created:** date
-    - **Approved:** boolean
-    - **Post:** integer, foreign key
-
-- #### **CONTACT FORM**
-
-    - **ID:** integer, primary key
-    - **Date:** date
-    - **Time:** custom (time)
-    - **Name:** text
-    - **Surname:** text
-    - **E-mail:** text
+    - **ID:** integer, primary key    
+    - **Category:** integer, foreign key
+    - **SKU:** char
+    - **Name:** char
     - **Description:** text
+    - **Price:** decimal
+    - **Resolution:** Boolean
+    - **Rating:** decimal
+    - **Image URL:** URL
+    - **Image Name:** image
+
+- #### **USER PROFILE**
+
+    - **ID:** integer, primary key    
+    - **User:** char
+    - **Default Phone Number:** char
+    - **Default Street Address 1:** char
+    - **Default Street Address 2:** char
+    - **Default Town or City:** char
+    - **Default County:** char
+    - **Default Postcode:** char
+    - **Default Country:** char
+
+
 
 <br><br>
 ## [Back to Index](#index)

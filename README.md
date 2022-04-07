@@ -210,38 +210,66 @@ User stories are divided into the following three groups:
 ___
 # **5 . Data Model**
 
-The project is based in data provided by OpenWeather (https://openweathermap.org/) and Django models for the support (blog) page. Design and structure of Post and Comment tables are copied from the Code Institute "I Think Therefore I Blog" project. The following chart shows the data involved and how they are related:
+The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are build with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 
 ![Data Model Image](static/images/data-model.PNG)
 
-The following are the tables involved in the relational model, along with data types and measurement units.
+The following are the tables involved in the relational model and the field types in each of them.
 
-Find OpenWeather API information [here](https://openweathermap.org/current) (https://openweathermap.org/current).
-
-Since the planning should be based on date and time, **all entries and tables are related to the Weather Data and Time table**, whose primary key (ID) relates the data to the specific date and time.
-
-
-- #### **WEATHER DATA AND TIME**
+- #### **ORDER**
 
     - **ID:** integer, primary key    
-    - **Date:** date    
-    - **Time:** custom field (time)
+    - **Order Number:** char
+    - **User Profile:** , foreign key
+    - **Full Name:** char
+    - **E-mail:** e-mail
+    - **Phone Number:** char
+    - **Country:** country
+    - **Postcode:** char
+    - **Town or City:** char
+    - **Street Address 1:** char
+    - **Street Address 2:** char
+    - **County:** char
+    - **Date:** date
+    - **Delivery Cost:** decimal
+    - **Order Total:** decimal
+    - **Grand Total:** decimal
+    - **Original Bag:** text)
+    - **Stripe PID:** char
 
-- #### **WEATHER WIND DATA**
 
-    - **ID:** integer
-    - **Wind Speed:** float, meter/second
-    - **Wind Direction:** float, degrees
-    - **Rec ID:** integer, foreign key
+- #### **ORDER LINE ITEM**
+
+    - **ID:** integer, primary key 
+    - **Order:** integer, foreign key
+    - **Product:** , foreign key
+    - **Product Resolution:** char
+    - **Quantity:** integer
+    - **Line Item Total:** decimal
+
+- #### **CONTACT FORM**
+
+    - **ID:** integer, primary key
+    - **Date:** date
+    - **Time:** custom (time)
+    - **Full Name:** char
+    - **E-mail:** e-mail
+    - **Description:** char
+
+
+
+
+
+
 
 - #### **WEATHER TEMPERATURE DATA**
 
-    - **ID:** integer
-    - **Temperature:** float, Kelvin, converted to Celsius
-    - **Feels Like:** float, Kelvin, converted to Celsius
-    - **Minimum Temperature:** float, Kelvin, converted to Celsius
-    - **Maximum Temperature:** float, Kelvin, converted to Celsius
-    - **Rec ID:** integer, foreign key
+    - **ID:** integer, primary key 
+    - **Order:** float, Kelvin, converted to Celsius
+    - **Product:** float, Kelvin, converted to Celsius
+    - **Product Resolution:** float, Kelvin, converted to Celsius
+    - **Quantity:** float, Kelvin, converted to Celsius
+    - **Line Item Total:** integer, foreign key
 
 - #### **WEATHER OTHER DATA**
 

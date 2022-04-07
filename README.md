@@ -1,10 +1,10 @@
-# **Sorry, site under consturction**
+# **GDEC - Geophysical Data E-Commerce (Site Under Construction)**
 <br><br>
-#### **This project is about an e-commerce for geophysical data. It is a FICTITIOUS SITE where the user will be able to shop geophysical data that comprises digital elevation models, and gravimetry, resistivity and magnetometry data. Data are FICTITIOUS.**
+#### **This project is about an e-commerce for geophysical data. It is a FICTITIOUS SITE where the user will be able to buy geophysical data that comprises digital elevation models, gravimetry, resistivity and magnetometry data; along with training, books and software products. Data and products are FICTITIOUS. The project is part of the Code Institute Full-Stack Software Development program.**
 <br><br>
 
 # **Index**
-#### [*Site Live Link*](https://pp4-ci-wqcs.herokuapp.com/) (https://pp4-ci-wqcs.herokuapp.com/)
+#### [*Site Live Link*](https://pp5-ci-gdec.herokuapp.com/) (https://pp5-ci-gdec.herokuapp.com/)
 
 
 ### [1. Project Goals](#1--project-goals)
@@ -43,7 +43,7 @@
 
 ___
 # **1 . Project Goals**
-The goal of the project is to create an e-commerce for geophysical data.
+The goal of the project is to develop an e-commerce for geophysical data, where users can find and buy digital elevation models, gravimetry, resistivity and magnetometry data; along with training, books and software products. In addition, users can register in the site to track their purchases, contact the site owner and/or developer, navigate to social network sites of the e-commerce, filter and search products, and pay the products through Stripe.
 
 ...
 
@@ -58,7 +58,7 @@ ___
 If opening the project with Gitpod from GitHub (top right green button), please run the following command as new workspaces need to have their dependencies:
 pip3 install -r requirements.txt
 
-Please keep in mind that the interaction with the database and corresponding display of data is slow, it might take several seconds until the data is display on tables and/or Google Charts.
+Please keep in mind that the interaction with the database and corresponding display of data is slow, it might take several seconds until the data is displayed.
 
 <br><br>
 ## [Back to Index](#index)
@@ -69,9 +69,9 @@ Please keep in mind that the interaction with the database and corresponding dis
 ___
 # **3 . Project Board**
 
-A project board was created in GitHub to help on the planning of the work when building the site; it can be observed [here](https://github.com/csc7/PP4_CI_WQCS/projects/1) (https://github.com/csc7/PP4_CI_WQCS/projects/1).
+A project board was created in GitHub to help on the planning and follow-up of the work when developing the site; it can be observed [here](https://github.com/csc7/PP5_CI_GDEC/projects/1) (https://github.com/csc7/PP5_CI_GDEC/projects/1).
 
-In addition, issues can directly be found [here](https://github.com/csc7/PP4_CI_WQCS/issues) (https://github.com/csc7/PP4_CI_WQCS/issues)
+In addition, issues can directly be found [here](https://github.com/csc7/PP5_CI_GDEC/issues) (https://github.com/csc7/PP5_CI_GDEC/issues)
 
 <br><br>
 ## [Back to Index](#index)

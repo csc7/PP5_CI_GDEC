@@ -417,7 +417,8 @@ Please check the PDFs files for each case in the following links:
 ___
 # **8 . Technologies Used**
 
-The following languages, software and tools were implemented using Windows 10 Pro:
+The development of the project employed the following languages, software, frameworks, applications and tools:
+
 ## **Languages**
 - #### **HTML**
 - #### **CSS**
@@ -427,20 +428,45 @@ The following languages, software and tools were implemented using Windows 10 Pr
 #### [Back to Index](#index)
 
 ## **Software, Frameworks, Applications and Other Tools**
+- #### **jQuery**
 - #### **GitHub**
 - #### **Gitpod**
 - #### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
 - #### **Django 3.2**
-- #### **jQuery**
 - #### **django-allauth 0.41.0**
+- #### **dj-database-url (v0.5.0)
+- #### **django-allauth (v0.41.0)
+- #### **django-countries (v7.3.2)
+- #### **django-crispy-forms (v1.14.0)
+- #### **django-storages (v1.12.3)
 - #### **PostgreSQL**
 - #### **Font Awesome (v4)**
 - #### **Bootstrap (v4.0)**
 - #### **unittest**
+- #### **asgiref (v3.5.0)
+- #### **backports.zoneinfo (v0.2.1)
+- #### **boto3 (v1.21.33)
+- #### **botocore (v1.24.33)
+- #### **gunicorn (v20.1.0)
+- #### **jmespath (v1.0.0)
+- #### **oauthlib (v3.2.0)
+- #### **Pillow (v9.0.1)
+- #### **psycopg2-binary (v2.9.3)
+- #### **python3-openid (v3.2.0)
+- #### **pytz (v2021.3)
+- #### **requests-oauthlib (v1.3.1)
+- #### **s3transfer (v0.5.2)
+- #### **sqlparse (v0.4.2)
+- #### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
+- #### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
+- #### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
+- #### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
+- #### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
 - #### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
-- #### **ERDPlus, to make the data model graph**
+- #### **ERDPlus (to make the data model graph)**
 - #### **Google Fonts**
 - #### **Stripe**
+- #### **stripe (v2.67.0)
 - #### **W3C Markup Validation Service**
 - #### **W3C CSS Validation Service**
 - #### **JSHint (version 2.13.0)**

@@ -42,10 +42,11 @@
 <br>
 
 ___
-# **1 . Project Goals**
+# **1 . E-commerce Project Goals**
 The goal of the project is to develop an e-commerce for geophysical data, where users can find and buy digital elevation models, gravimetry, resistivity and magnetometry data; along with training, books and software products. In addition, users can register in the site to track their purchases, contact the site owner and/or developer, navigate to social network sites of the e-commerce, filter and search products, and pay the products through Stripe.
 
-...
+In addition, besides products and users, it is expected to provide a proper management for the site owner, registering order information and history, administration tasks like product updates and interaction with users.
+
 
 <br><br>
 ## [Back to Index](#index)
@@ -209,6 +210,12 @@ User stories are divided into the following three groups:
 
 ___
 # **5 . Data Model**
+
+The e-commerce business model underlying the application is designed in such a way that a **"user"** (who is uniquely identified by ID) can buy **"products"** (that are also uniquely identified by ID and SKU) by sending a **"order"** (that is uniquely identified by ID and order number). Then, since an order can have many products, and simoutaneously a product can be requested by many orders, an **"order line item"** is created to uniquely relate a specific product to a specific order. This "order line item" divides the many-to-many relation between "order" and "product" in two one-to-many relations ("order-order line item" and "order line item-product").
+
+Then, a **"category"** is created and related to the type of product in order to help on the search of them.
+
+Finally, a **"contact"** model is created, unrelated to the previous tables, to contact the site owner in any case, regardless of an order is issued or is not by a user.
 
 The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are build with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 

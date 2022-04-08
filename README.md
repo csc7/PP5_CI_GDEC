@@ -61,6 +61,12 @@ pip3 install -r requirements.txt
 
 Please keep in mind that the interaction with the database and corresponding display of data is slow, it might take several seconds until the data is displayed.
 
+
+## **Generation of the products of the site**
+
+As stated at the begining, the site is a fictitious e-commerce. To generate the products, ArcGIS
+
+
 <br><br>
 ## [Back to Index](#index)
 <br><br>
@@ -1221,16 +1227,16 @@ The data model and Python files were tested with unittest; it was used to test t
 
 ## **Testing of User Stories**
 
-## **First time users**
+- ### **First time users**
 
 The following are testing of User Stories previously described above:
 <br><br>
 
-1. As a user, I want to have a description of the site with instructions, so I know how to use it and refer to them if needed.
+1. As a user, I want to find a well-organized and simple site, so I immediately get the whole picture of the site.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Instructions App | Include steps to use the site, separated by sections | Design Instructions App/Page with separated steps and sections | Same as expected result | 
+| ... | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1240,11 +1246,26 @@ The following are testing of User Stories previously described above:
 </details>
 <br><br>
 
-2. As a user, I want to have a weather application so I can find a place on the world and get its current weather information.
+2. As a user, I want to find a responsive site, so I can easily navigate in it in different devices.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Weather App | Include Esri/ArcGIS map on the Weather App to select/pick a location | Get coordinates of picked location/place | Works as expected | 
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Instructions Page Top Image](docs/features-and-evidence/instructions-page-top.PNG)
+![Instructions Page Bottom Image](docs/features-and-evidence/instructions-page-bottom.PNG)
+</details>
+<br><br>
+
+3. As a user, I want to receive a confirmation of registration when I sign up, so I know that the process for creating my account went well.
+
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1253,7 +1274,435 @@ The following are testing of User Stories previously described above:
 </details>
 <br><br>
 
-3. ...
+
+4. As a user, I want to be able to contact the site administrator, owner and/or developer, so I can send feedback to them.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+5. As a user, I want to have access to my account easily, so I can quickly sign in.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+- ### **Returning users**
+
+
+6. As a returning user, I want to be able to contact the site administrator and/or owner and/or developer, so I can send feedback to them.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+7. As a returning user, I want a navigation menu on top, always visible, so I can access any content on the website from there and do not need to use the back button of the browser.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+8. As a returning user, I want to have access to my account easily, so I can quickly sign in.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+9. As a returning user, I want to have a way to contact the developer so I can contribute and/or indicate errors or bugs.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+10. As a returning user, I want to be informed if the contact form goes through, so I know if my message is being sent or it is not.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+11. As a returning user, I want to recover my password easily if I forget it, so I do not worry about remembering and/or keeping it.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+12. As a returning user, I want to have a history of my purchases, so I know what I have bought and spent through time.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+
+- ### **Shoppers**
+
+13. As a shopper, I want to have the products to buy visible (without many details so I can see more), so I can select them for purchase.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+14. As a shopper, I want to have access to the product details, so I can access them in case I am not sure about the purchase and/or want to have a better description of the product.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+15. As a shopper, I want to have a detailed view of my shopping cart, so I know what I am buying and have the current purchase details just before paying.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+16. As a shopper, I want to have the amount I am spending always visible, so I know how much I am spending.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+17. As a shopper, I want to have special offers easily accessible, so I can buy them before they disappear if I find them useful.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+18. As a shopper, I want to have a search field, so I do not spend much time finding the product I want to buy
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+19. As a shopper, I want to have categories of products, so I find a product easily if I do not know its name.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+20. As a shopper, I want to have prices always visible, so I know the value of the products at all times.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+21. As a shopper, I want to have the different resolutions of the products visible, close to the product it belongs to, so I can easily select it without further action.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+22. As a shopper, I want to have a secure payment method, so I can rest assured that the purchase procedure is safe.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+- ### **Site Owner**
+
+23. As owner, I want to provide an introductory page, so users know what can be found in the website and what can be purchased.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+24. As owner, I want to provide an easy process for registration, so I ensure a connection with a potential buyer.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+25. As owner, I want to provide a search field for products on top, so I require users/shoppers the minimum possible time to find a product (and therefore reduce the risk of leaving).
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+26. As owner, I want to organize products in categories, so users find an organized site and can find products easily.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+27. As owner, I want to receive feedback from users, so I can take actions in response to them if needed.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+28. As owner, I want to provide a navigation menu on top and always visible, so users can access any content at any time without needing the back button.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+29. As owner, I want to give as many options to be contacted as possible, so users can choose forms or links in the footer to send their consultations and/or feedback in a very fast way.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+30. As owner, I want to provide a responsive website, so user can access it from any device without any constraint to navigate, find and/or use the website.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+31. As owner, I want to inform users if their consultation/message was successfully sent, so they know if they need to resend it or they do not.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+32. As owner, I want to inform the user, through an error page, if there is any error when loading the website.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
+
+
+- ### **Developer**
+
+33. As developer, along with other points of this section, I want to show my work and give the option to users to contact me if they wish.
+
+| FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
+| --- | --- | --- | --- |
+| ... | ... | ... | ... | 
+
+<details>
+    <summary>Screenshot</summary>
+
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<br><br>
 
 
 

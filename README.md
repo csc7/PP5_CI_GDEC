@@ -43,7 +43,7 @@
 
 ___
 # **1 . E-commerce Project Goals**
-The goal of the project is to develop an e-commerce for geophysical data, where users can find and buy digital elevation models, gravimetry, resistivity and magnetometry data; along with training, books and software products. In addition, users can register in the site to track their purchases, contact the site owner and/or developer, navigate to social network sites of the e-commerce, filter and search products, and pay the products through Stripe.
+The goal of the project is to develop an e-commerce for geophysical data, where users can find and buy digital elevation models, gravimetry, resistivity and magnetometry data; along with reports, training (courses and books) and software products. In addition, users can register in the site to track their purchases, contact the site owner and/or developer, navigate to social network sites of the e-commerce, filter and search products, and pay the products through Stripe.
 
 In addition, besides products and users, it is expected to provide a proper management for the site owner, registering order information and history, administration tasks like product updates and interaction with users.
 
@@ -64,7 +64,18 @@ Please keep in mind that the interaction with the database and corresponding dis
 
 ## **Generation of the products of the site**
 
-As stated at the begining, the site is a fictitious e-commerce. To generate the products, ArcGIS
+As stated at the begining, the site is a **fictitious** e-commerce. To generate the products, the Natural Earth quick start kit" (50m raster) was downloaded from Natural Earth's website https://www.naturalearthdata.com/downloads/. This kit contains a planisphere from where QGIS was used to filter it by countries, by running the file "products_database_generation_for_QGIS.py" (in the "/tools" folder in the project root directory) in the Python console of QGIS.
+
+Once all countries were filtered, different scale colours were applied for them, one for each category (digital elevation models, gravimetry, resistivity and magnetometry data), to simulate different products. To simulate some "randomness" of the products, some products were randomly deleted (this way, not all countries have the same products).
+
+Then, free images were downloaded from Pexels (please see Credit section for details) and assigned to the remaining products of the e-commerce (reports, training courses, training books and software products).
+
+A Python file was created to build CSV and JSON structures for the Products and Category models (with fields matching their fields, including the name and URL of the images). This file, "build_csv_and_json.py" (in the "/tools" folder in the project root directory), saves the CSV file in the same "/tools" folder and the JSON file in the "/fixtures" folder of the products Django app.
+
+Since the JSON file in already in the "/fixtures" folder, the data can be loaded into the Django models using the following commands (in this order, since the products are related to categories and therefore the latter must be defined before):
+
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
 
 
 <br><br>
@@ -1892,7 +1903,13 @@ Bugs that required more time and specific solutions were the following ones:
 ___
 # 13 . Deployment
 
-Amazon Web Services and S3.
+The website was fully written in Gitpod, permanently tested in Gitpod terminal, and periodically deployed to GigHub Pages (in a main branch) and Heroku Platform (to handle backend languages). After first deployment, several updates have been carried out before the final version. These updates were implemented in the deployed website from Gitpod, just by using the "push" command for every commit (change) in the ongoing development. Amazon Web Services S3 is also implemented to contain the static files.
+
+The project repository can be forked from GitHub [here](https://github.com/csc7/PP5_CI_GDEC) (https://github.com/csc7/PP5_CI_GDEC), please check for the "Fork" button, top-right of the page, to achieve this task.
+
+The fully deployed program, accessible by anyone, is found [here](https://pp5-ci-gdec.herokuapp.com/), whose URL is https://pp5-ci-gdec.herokuapp.com/ . Its repository is found [here](https://github.com/csc7/PP5_CI_GDEC), whose URL is https://github.com/csc7/PP5_CI_GDEC.
+
+Follow these steps to deploy the content of this project:
 
 1 - Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
 
@@ -2081,47 +2098,12 @@ In settings.py file, you can set the DEBUG variables as follows if you want to c
 'DEVELOPMENT' in os.environ
 
 
--------------------------------
--------------------------------
-
-The website was fully written in Gitpod, permanently tested with Gitpod preview, and periodically deployed to GigHub Pages (in a main branch) and Heroku.
-
-The fully deployed website, accessible by anyone, is found [here](https://pp4-ci-wqcs.herokuapp.com/), whose URL is https://pp4-ci-wqcs.herokuapp.com/ . Its repository is found [here](https://github.com/csc7/PP4_CI_WQCS), whose URL is https://github.com/csc7/PP4_CI_WQCS.
-
-The site requires access to OpenWeather and Google Chart API, whose configuration have been carried out following the instructions of their developers:
-
-OpenWeather: https://openweathermap.org/current
-Google Charts: https://developers.google.com/chart/interactive/docs/gallery/linechart
-
-Follow these steps to deploy in Heroku platform:
-
-1 - Create JSON file (use the command line "npm init" as a wizard, installing the Heroku CLI in Gitpod if necessary and if this environment is being used) to be able to run JavaScript on Heroku. More details in Heroku site, https://devcenter.heroku.com/articles/deploying-nodejs#:~:text=To%20create%20a%20package.,json%20file .
-
-2 - Include dependencies in a requirements.txt file, which is used by Heroku to install the dependencies. Use this command: "pip3 freeze > requirements.txt"
-
-3 - Create new app from the dashboard of your Heroku account.
-
-4 - Go to settings of the apps (do that before deploying the code).
-
-5 - Ignore this step if you do not use credentials to access other services. In Config Vars, create a new one giving the name of CREDS, and assign to content of the JSON file with credentials to its value.
-
-6 - Go to Buildpacks and add Python and Node.js, in that order, keeping Python on top and NodeJS below.
-
-7 - Go to the deploy sections of the app, select GitHub as the Deployment method, assign a name for the repository to connect to GitHub, and connect.
-
-8 - Go to the bottom and select whether you want automatic (rebuilding for each commit) or manual deployment.
-
-You will get a button with a link to your app if successfully deployed.
-
 <details>
     <summary>GitHub Pages Screenshot</summary>
 
 ![Deployment on Heroku Image](docs/features-and-evidence/heroku-deployment.PNG) 
 </details>
 
-After first deployment, several updates have been carried out before the final version. These updates were implemented in the deployed website from Gitpod, just by using the "push" command for every commit (change) in the ongoing development.
-
-The project repository can be forked from GitHub (https://github.com/csc7/PP4_CI_WQCS), please check for the "Fork" button, top-right of the page, to achieve this task.
 
 <br><br>
 ## [Back to Index](#index)

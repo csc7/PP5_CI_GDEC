@@ -111,7 +111,7 @@ UX has been addressed around Jesse James Garrett's process and its five planes:
     - Sign-out page.
     - 404 page to let the user know of any error while loading the site.
 - **SKELETON**: the information and products are accessed through a fixed navigation menu on top of the pages and a footer.
-- **SURFACE**: the website is based on a contrast different tonalities of blue (with fonts in strong dark blue); with red banners (the top one including advertising messages) separating the fixed navigation menu, the body and the footer.
+- **SURFACE**: the website is based on a contrast of different tonalities of blue for the header and footer, white for body, and fonts in strong dark blue; with red banners (the top one including advertising messages) separating the fixed navigation menu, the body and the footer.
 
 
 ## **User Goals**
@@ -312,14 +312,13 @@ ___
 The design was planned to cover screen sizes from 320x568px to 1920x1370px.
 
 ## **Colours**
-White and RGB(49, 49, 48), with some titles in RGB(76, 76, 211). Other variations close to these three colours are also present to enhance contrast. The background of the body was set to RGB(236, 238, 238) in order to have a good contrast as well.
+Colours are based on different tonalities of blue for header (fixed navigation menu) and footer, contrasting with a white background for the body (where products and all other content appear). The header (fixed navigation menu) and body, as well as body and footer, are separated by a red banners (the top one containing moving messages with white fonts).
 
 #### [Back to Index](#index)
 <br>
 
 ## **Fonts**
-Google fonts (please see credits section below) were implemented on the website. Heebo (Medium 500) for titles and Oxygen (Regular 400) for paragraphs.
-Sans-serif font is used as a back-up in case the previous font cannot be loaded.
+Google fonts (please see credits section below) were implemented on the website; Play (Regular 400 and Bold 700) and Roboto (Regular 400). Play is used for the body; Sans-serif font is used as a back-up in case the previous font cannot be loaded.
 
 #### [Back to Index](#index)
 <br>
@@ -1311,7 +1310,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | Implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user story 4, implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1325,7 +1324,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | Include menu with links to main parts of the site | Navigate to the selected sites, without using the back button, without scrolling down, and without manually editing the URL  | Works as expected | 
+| Fixed navigation menu<br> | Include a fixed navigation menu on top, in the header of pages, with links to main parts of the site | Navigate to the selected sites, without using the back button, without scrolling down, and without manually editing the URL  | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1353,7 +1352,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | Implement a contact form in a separated page and add contact options in the footer | Access contact form and other options directly from the footer | Works as expected | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user stories 4 and 6, implement a contact form in a separated page and add contact options in the footer | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1510,7 +1509,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br> | Compute total of bag and return it to the view containing the fixed navigation menu | Show spent amount, at all times, in fixed navigation menu | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1524,7 +1523,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | Add a field in the products model that activate a product feature related to the resolution (if applicable), giving the user the option to select it | Show the different available resolutions for the products (e.g., in a dropdown element), considering them as other product if a different resolution (than the one in the bag) is selected, updating the quantities in the bag accordingly | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1538,7 +1537,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | Implement a payment method that is well known and secure | Process payments from users/shoppers | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1554,7 +1553,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Home page<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Home page<br> | Design the home page to give a quick overview of the e-commerce | Find the home page, giving the idea of the e-commerce and a few messages to give the user an idea of what can be found in the site | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1568,7 +1567,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Footer<br> | Include a Django app and page to easily register/sign up in the site if the user opts for this, with links to this option in the fixed navigation menu and footer | Access page for sign-up easily from menu and footer, with a few steps to achieve the task | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1582,7 +1581,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | ... | ... | ... | 
+| Fixed navigation menu<br> | As user story 18, include a search field in the fixed navigation menu that looks for products (according to the search criteria) in the backend and return the results to the products page | Show products related to the search criteria | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1596,7 +1595,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Products (with product administration for the site owner)<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br> | As user story 19, include links/list item elements in the fixed navigation menu that filter the data in the backend according to categories (previously created) and return the result to the products page/view | Show products related to the selected category in the menu | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1610,7 +1609,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user stories 4; 6 and 9; implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1624,7 +1623,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | ... | ... | ... | 
+| Fixed navigation menu<br> | As user story 7, Include a fixed navigation menu on top, in the header of pages, with links to main parts of the site | Navigate to the selected sites, without using the back button, without scrolling down, and without manually editing the URL  | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1638,7 +1637,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user stories 4; 6; 9 and 27; implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1652,7 +1651,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Similar to user story 2, use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1666,7 +1665,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Pop-up status messages<br> | Similar to user story 10, use a Django confirmation page to inform the user if sending the contact form is successful | Show a successful page after sending the form | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1680,7 +1679,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>404 page<br> | ... | ... | ... | 
+| Fixed navigation menu<br>404 page<br> | Use Django error page to inform the user if any action when navigating the site produces an error | Show an error message on a page after facing a problem, e.g., a broken URL | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1696,7 +1695,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Implement all knowledge gathered so far in full-stack software development, with as many features as possible according to the Code Institute program time frame | Show as many full-stack software development capabilities as possible | Expecting results and feedback | 
 
 <details>
     <summary>Screenshot</summary>

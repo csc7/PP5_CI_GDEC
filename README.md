@@ -1236,7 +1236,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1250,7 +1250,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1265,7 +1265,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Registration (sign-up)<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1279,7 +1279,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1293,7 +1293,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1310,7 +1310,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1324,7 +1324,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1338,7 +1338,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1352,7 +1352,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1366,7 +1366,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1380,7 +1380,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1394,7 +1394,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Profile with history order<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1411,7 +1411,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1425,7 +1425,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1439,7 +1439,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Bag page<br>Checkout page<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1453,7 +1453,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Bag page<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1467,7 +1467,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1481,7 +1481,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1495,7 +1495,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1509,7 +1509,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1523,7 +1523,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1537,7 +1537,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1553,7 +1553,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Home page<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1567,7 +1567,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1581,7 +1581,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1595,7 +1595,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1609,7 +1609,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1623,7 +1623,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1637,7 +1637,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1651,7 +1651,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1665,7 +1665,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1679,7 +1679,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>404 page<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1695,7 +1695,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| ... | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
 
 <details>
     <summary>Screenshot</summary>

@@ -324,34 +324,41 @@ Google fonts (please see credits section below) were implemented on the website;
 <br>
 
 ## **Structure**
-The metadata includes the following keywords to help search engines to find the website: Seismic, geophysical, acquisition, processing, crew, field, weather, technical support, database, wind, temperature, Code Institute, software development, student, full-stack course, milestone project.
 
-The website consists of four pages (with subpages for the blog topics), organised in a header, a body and a footer. Django templates/pages have been used for sign-up, sign-in, sign-out and 404.
+The website consists of a header with fixed navigation menu on top, a body and the a footer. It is designed to navigate the e-commerce from the header and footer, having them always available. The header is fixed, while the footer is fixed only for screens whose wide is greater than 992px, so it does not use space from the body in smaller screen sizes. There are two banners separating the header and body, and the body and footer. The one below the header contains moving messages to advertise special features of the e-commerce at all times.
 
-Wireframes were developed at the beginning in order to have a first design of the website.
+The metadata in the head tag of the base HTML includes the following keywords to help search engines to find the website: "DEM books, DEM data, DEM software, DEM training, Geophysical data, Buy DEM data, Geophysical book, Buy Resistivity data, Gravimetry data, Buy Gravimetry data, Resistivity books, Buy Magnetometry data, Magnetometry software, Gravimetry books, Buy geophysical data, 
+Magnetometry books, DEM, Geophysical, Code Institute, software development, and full-stack course, milestone project".
+
+The metadata also includes the following description: "Code Institute Student Milestone Project 5, an e-commerce application that sells digital elevation models, gravimetry, magnetometry and resistivity data; along with training, books and software for data acquisition and processing".
+
+Wireframes were developed at the beginning of the project to have a first structure of the e-commerce site and analyse eventual changes. Please see section 7, Wireframes, for images about these wireframes.
 
 - ### **Header**
 
-In order to achieve the goals related to easiness and/or simplicity, a fixed navigation area in the header is provided. In the same area, a logo with the idea of the website is place to the left.
-The header contains the logo on the left, the navigation bar with the four links to the body pages in the middle and the sign-up, sign-in and sign-out buttons on the right.
+In order to achieve the goals related to an easy navigation and finding of products, a fixed navigation menu in the header is implemented, which also contributes on accessibility to the main parts of the e-commerce and on responsiveness.In the same area.
+The logo of the e-commerce is placed to the left, in the middle there are a search field on top and the navigation menu below, and on the right two icons can be found that link to the account sign-in/sign-up/sign-out and bag.
+
+- ### **Top banner**
+
+It is a thin section (height of 25px), from side to side of the screen, in red colour, that separates the header/fixed navigation menu on top from the body. It contains moving messages to advertise special features of the e-commerce at all times.
+
 
 - ### **Body**
 
-The body of the pages are structured as follows for each of the pages:
-- #### *Instructions:*
-    It contains a description of the main purpose of the website and three sections with instructions for each of the other pages: Weather, Blog and Contact.
-- #### *Weather:*
-    It has a map on top left, selection of point on top right, current data below this selection panel, and a visualization panel of the data on the bottom of this page, below a row panel to select the amount of days to visualise and other data to show.
+The products are displayed in this area, from where the products details can be accessed by clicking on the product itself and displayed in the same body.
 
-- #### *Blog:*
-    It contains boxes with each topic of the blog to access.
-- #### *Contact:*
-    It has a simple contact form with name, surname, e-mail and description fields.
+The body also holds the pages for the bag, the checkout, the success checkout, sign-in, sign-up, sign-out, profile, contact form and 404 pages.
 <br>
     
+- ### **Top banner**
+
+It is another thin section (height of 25px), from side to side of the screen, in red colour, that separates the body from the footer.
+
+
 - ### **Footer**
 
-The footer contains links for social media (LinkedIn and GitHub) and e-mail. It is designed to remain at the bottom of the pages to have the links visible to promote the developer of the website.\
+The footer contains links contact information of the e-commerce on the left (below the e-commerce logo), a contact form, social media links, links to product categories, links to account sign-in/sign-up/sign-out, General Data Protection Regulation (GDPR) information about the privacy policy and cookies, and an area on the right to sign up for the e-commerce newsletter.
 <br><br>
 ## [Back to Index](#index)
 <br><br>
@@ -440,56 +447,56 @@ The development of the project employed the following languages, software, frame
 #### [Back to Index](#index)
 
 ## **Software, Frameworks, Applications and Other Tools**
-- #### **jQuery**
-- #### **GitHub**
-- #### **Gitpod**
-- #### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
-- #### **Django 3.2**
-- #### **django-allauth 0.41.0**
-- #### **dj-database-url (v0.5.0)
-- #### **django-allauth (v0.41.0)
-- #### **django-countries (v7.3.2)
-- #### **django-crispy-forms (v1.14.0)
-- #### **django-storages (v1.12.3)
-- #### **PostgreSQL**
-- #### **Font Awesome (v4)**
-- #### **Bootstrap (v4.0)**
-- #### **unittest**
-- #### **asgiref (v3.5.0)
-- #### **backports.zoneinfo (v0.2.1)
-- #### **boto3 (v1.21.33)
-- #### **botocore (v1.24.33)
-- #### **gunicorn (v20.1.0)
-- #### **jmespath (v1.0.0)
-- #### **oauthlib (v3.2.0)
-- #### **Pillow (v9.0.1)
-- #### **psycopg2-binary (v2.9.3)
-- #### **python3-openid (v3.2.0)
-- #### **pytz (v2021.3)
-- #### **requests-oauthlib (v1.3.1)
-- #### **s3transfer (v0.5.2)
-- #### **sqlparse (v0.4.2)
-- #### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
-- #### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
-- #### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
-- #### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
-- #### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
-- #### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
-- #### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
-- #### **ERDPlus (to make the data model graph)**
-- #### **Google Fonts**
-- #### **Stripe**
-- #### **stripe (v2.67.0)
-- #### **W3C Markup Validation Service**
-- #### **W3C CSS Validation Service**
-- #### **JSHint (version 2.13.0)**
-- #### **JavaScript AJAX**
-- #### **WAVE Web Accessibility Evaluation Tool**
-- #### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
-- #### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
-- #### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
-- #### **Firefox, 96.0.3, 64-bit (and its development tool)**
-- #### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
+- ##### **jQuery**
+- ##### **GitHub**
+- ##### **Gitpod**
+- ##### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
+- ##### **Django 3.2**
+- ##### **django-allauth 0.41.0**
+- ##### **dj-database-url (v0.5.0)
+- ##### **django-allauth (v0.41.0)
+- ##### **django-countries (v7.3.2)
+- ##### **django-crispy-forms (v1.14.0)
+- ##### **django-storages (v1.12.3)
+- ##### **PostgreSQL**
+- ##### **Font Awesome (v4)**
+- ##### **Bootstrap (v4.0)**
+- ##### **unittest**
+- ##### **asgiref (v3.5.0)
+- ##### **backports.zoneinfo (v0.2.1)
+- ##### **boto3 (v1.21.33)
+- ##### **botocore (v1.24.33)
+- ##### **gunicorn (v20.1.0)
+- ##### **jmespath (v1.0.0)
+- ##### **oauthlib (v3.2.0)
+- ##### **Pillow (v9.0.1)
+- ##### **psycopg2-binary (v2.9.3)
+- ##### **python3-openid (v3.2.0)
+- ##### **pytz (v2021.3)
+- ##### **requests-oauthlib (v1.3.1)
+- ##### **s3transfer (v0.5.2)
+- ##### **sqlparse (v0.4.2)
+- ##### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
+- ##### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
+- ##### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
+- ##### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
+- ##### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
+- ##### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
+- ##### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
+- ##### **ERDPlus (to make the data model graph)**
+- ##### **Google Fonts**
+- ##### **Stripe**
+- ##### **stripe (v2.67.0)
+- ##### **W3C Markup Validation Service**
+- ##### **W3C CSS Validation Service**
+- ##### **JSHint (version 2.13.0)**
+- ##### **JavaScript AJAX**
+- ##### **WAVE Web Accessibility Evaluation Tool**
+- ##### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
+- ##### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
+- ##### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
+- ##### **Firefox, 96.0.3, 64-bit (and its development tool)**
+- ##### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
 
 
 <br><br>

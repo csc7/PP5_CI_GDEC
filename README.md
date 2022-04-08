@@ -153,7 +153,7 @@ User stories are divided into the following three groups:
 
 - ### **Returning users**
 6. As a returning user, I want to be able to contact the site administrator and/or owner and/or developer, so I can send feedback to them.
-7. As a returning user, I want a navigation menu on top, always visible, so I can access any content on the website from there and do not need to use the back button of the browser.
+7. As a returning user, I want a navigation menu on top, always visible, so I can access the main content on the website from there and do not need to use the back button of the browser.
 8. As a returning user, I want to have access to my account easily, so I can quickly sign in.
 9. As a returning user, I want to have a way to contact the developer so I can contribute and/or indicate errors or bugs.
 10. As a returning user, I want to be informed if the contact form goes through, so I know if my message is being sent or it is not.
@@ -475,6 +475,7 @@ The development of the project employed the following languages, software, frame
 - #### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
 - #### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
 - #### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
+- #### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
 - #### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
 - #### **ERDPlus (to make the data model graph)**
 - #### **Google Fonts**
@@ -1236,7 +1237,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Organize the structure of the site with a fixed navigation menu and footer that includes almost all pages of the site | Navigat to any page of the site from these two features, except to the pages that require a previous step (e.g., adding items to the bag) | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1250,7 +1251,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1265,7 +1266,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Registration (sign-up)<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Registration (sign-up)<br>Pop-up status messages<br> | Use Django confirmation page to inform the user of a successgul sign-up | Show a successful message on a page after signing up | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1279,7 +1280,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Implement a contact form in a separated page, give contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1293,7 +1294,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Footer<br> | Include access links to account in fixed navigation menu and footer | Access sign-in page from these features | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1310,7 +1311,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1320,11 +1321,11 @@ The following are testing of User Stories previously described above:
 <br><br>
 
 
-7. As a returning user, I want a navigation menu on top, always visible, so I can access any content on the website from there and do not need to use the back button of the browser.
+7. As a returning user, I want a navigation menu on top, always visible, so I can access the main content on the website from there and do not need to use the back button of the browser.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | ... | ... | ... | 
+| Fixed navigation menu<br> | Include menu with links to main parts of the site | Navigate to the selected sites, without using the back button, without scrolling down, and without manually editing the URL  | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1338,7 +1339,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Footer<br> | Include access links to account in fixed navigation menu and footer | Access sign-in page from these features | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1352,7 +1353,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Contact form<br>Footer<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Contact form<br>Footer<br> | Implement a contact form in a separated page and add contact options in the footer | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1366,7 +1367,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>404 page<br>Pop-up status messages<br> | ... | ... | ... | 
+| Fixed navigation menu<br>404 page<br>Pop-up status messages<br> | Use a Django confirmation page to inform the user if sending the contact form is successful | Show a successful page after sending the form | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1394,7 +1395,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Profile with history order<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Profile with history order<br> | Store orders and link them to the user profile that originated it | Show purchase history in profile | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1411,7 +1412,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | Create a data model where products are viewed in the body of a unique page according to a specific selection | Show all products in a page (in the body) according to the selection and/or sort in the fixed navigation menu | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1425,7 +1426,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | Create a view with product details after clicking on the product itself  | Show product details in a different page/view | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1439,7 +1440,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Bag page<br>Checkout page<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Bag page<br>Checkout page<br> | Create a bag app to show the current shopping cart, with a link in the fixed navigation menu | Show shopping cart in a different page/view | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1453,7 +1454,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Bag page<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Bag page<br> | Compute total of bag and return it to the view containing the fixed navigation menu | Show spent amount, at all times, in fixed navigation menu | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1467,7 +1468,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | ... | ... | ... | 
+| Fixed navigation menu<br> | Include a link/list item element to special offers in the fixed navigation menu | Access special offers after cliking on this link/list item element of the menu | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1481,7 +1482,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | ... | ... | ... | 
+| Fixed navigation menu<br> | Include a search field in the fixed navigation menu that looks for products (according to the search criteria) in the backend and return the results to the products page | Show products related to the search criteria | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -1495,7 +1496,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Products (with product administration for the site owner)<br> | ... | ... | ... | 
+| Fixed navigation menu<br>Products (with product administration for the site owner)<br> | Include links/list item elements in the fixed navigation menu that filter the data in the backend according to categories (previously created) and return the result to the products page/view | Show products related to the selected category in the menu | Works as expected | 
 
 <details>
     <summary>Screenshot</summary>
@@ -2203,6 +2204,10 @@ ___
 - jQuery:
 
     - jQuery Core 3.6.0, minified version, https://releases.jquery.com/, copied on March 1st, 2020, at 00:20.
+
+- Mailchimp:
+
+    - Sign-up of newsletter, generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com); later modified
 
 - MDN Web Docs Moz://a;
     - ...

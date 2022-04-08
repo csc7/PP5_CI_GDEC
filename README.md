@@ -2204,6 +2204,200 @@ ___
 
     -  All images of maps have been generated with data of Natural Earth, using the "Natural Earth quick start kit" (50m raster), which was downloaded from https://www.naturalearthdata.com/downloads/ on February 23rd, 2022, at 22:22.
 
+- Pexels:
+
+    - Images of products that are not maps were downloaded from Pexels: https://www.pexels.com/ . The following are the file details and credits (author, link to image, file name, date it was downloaded):
+
+    Paul IJsendoorn-
+    https://www.pexels.com/es-es/foto/canon-del-antilope-33041/
+    pexels-paul-ijsendoorn-33041.jpg
+    2022-03-12 at 19:00
+
+    Tomáš Malík
+    https://www.pexels.com/es-es/foto/foto-de-primer-plano-del-glaciar-svinafellsjokull-3591596/
+    pexels-tomáš-malík-3591596
+    Renamed as pexels-tomas-malik-3591596
+    2022-03-12 at 19:08
+
+    Martins Krastins
+    https://www.pexels.com/es-es/foto/muro-de-piedra-agrietada-838981/
+    pexels-martins-krastins-838981
+    2022-03-12 at 19:11
+
+    Curioso Photography
+    https://www.pexels.com/es-es/foto/vista-aerea-del-cuerpo-de-agua-288100/
+    pexels-curioso-photography-288100
+    2022-03-12 at 19:14
+
+    Pixabay
+    https://www.pexels.com/es-es/foto/planeta-tierra-220201/
+    pexels-pixabay-220201
+    2022-03-12 at 19:19
+
+    Tom D'Arby
+    https://www.pexels.com/es-es/foto/paisaje-desierto-seco-suelo-5949017/
+    pexels-tom-d'arby-5949017
+    Renamed as pexels-tom-d-arby-5949017
+    2022-03-13 at 14:26
+
+    Pok Rie
+    https://www.pexels.com/es-es/foto/fotografia-aerea-de-la-isla-1726310/
+    pexels-pok-rie-1726310
+    2022-03-13 at 14:28
+
+    Pok Rie
+    https://www.pexels.com/es-es/foto/mar-gente-mujer-arte-11192678/
+    pexels-pok-rie-11192678
+    2022-03-13 at 14:31
+
+    NastyaSensei
+    https://www.pexels.com/es-es/foto/vista-superior-de-un-rio-2782115/
+    pexels-nastyasensei-2782115
+    2022-03-13 at 14:34
+
+    Dids
+    https://www.pexels.com/es-es/foto/resfriado-naturaleza-seco-modelo-4949961/
+    pexels-dids-4949961
+    2022-03-13 at 14:43
+
+    Rachel Claire
+    https://www.pexels.com/es-es/foto/naturaleza-textura-montana-acantilado-4993089/
+    pexels-rachel-claire-4993089
+    2022-03-13 at 14:46
+
+    MART PRODUCTION
+    https://www.pexels.com/es-es/foto/arena-desierto-seco-duna-8869235/
+    pexels-mart-production-8869235
+    2022-03-13 at 15:17
+
+    Mengliu Di
+    https://www.pexels.com/es-es/foto/vista-aerea-del-paisaje-3064079/
+    pexels-mengliu-di-3064079
+    2022-03-13 at 15:40
+
+    Johannes Havn
+    https://www.pexels.com/es-es/foto/foto-de-la-plataforma-petrolera-1716008/
+    pexels-johannes-havn-1716008
+    2022-03-13 at 15:47
+
+    Jan Zakelj
+    https://www.pexels.com/es-es/foto/amanecer-cielo-puesta-de-sol-noche-9291512/
+    pexels-jan-zakelj-9291512
+    2022-03-13 at 18:20
+
+    Aron Razif
+    https://www.pexels.com/es-es/foto/mar-agua-puerto-industria-9336586/
+    pexels-aron-razif-9336586
+    2022-03-13 at 18:33
+
+    Simon Berger
+    https://www.pexels.com/es-es/foto/un-glaciar-azul-bajo-el-sol-3660696/
+    pexels-simon-berger-3660696
+    2022-03-13 at 18:37 
+
+    Mikhail Nilov
+    https://www.pexels.com/es-es/foto/mar-paisaje-naturaleza-oceano-8332570/
+    pexels-mikhail-nilov-8332570
+    2022-03-13 at 18:40
+
+    Markus Spiske
+    https://www.pexels.com/es-es/foto/codigos-en-la-lente-de-cambio-de-inclinacion-2004161/
+    pexels-markus-spiske-2004161
+    2022-03-13 at 18:45
+
+    Torsten Dettlaff
+    https://www.pexels.com/es-es/foto/dispositivo-digital-en-blanco-y-negro-que-muestra-el-grafico-70911/
+    pexels-torsten-dettlaff-70911
+    2022-03-13 at 18:48
+
+    Monstera
+    Pexels.com
+    https://www.pexels.com/es-es/foto/ligero-creativo-de-viaje-direccion-7412095/
+    pexels-monstera-7412095
+    2022-03-13 at 18:53
+
+    Burak Kebapci
+    https://www.pexels.com/es-es/foto/visualizacion-de-graficos-en-un-i-pad-187041/
+    pexels-burak-kebapci-187041
+    2022-03-13 at 18:58
+
+    Alesia Kozik
+    https://www.pexels.com/es-es/foto/manos-telefono-inteligente-ordenador-portatil-graficas-6772076/
+    pexels-alesia-kozik-6772076
+    2022-03-13 at 19:28
+
+    Pok Rie
+    Pexels.com
+    https://www.pexels.com/es-es/foto/vista-de-pajaro-de-la-orilla-del-mar-1426827/
+    pexels-pok-rie-1426827
+    2022-03-14  at 12:44
+
+    Pok Rie
+    https://www.pexels.com/es-es/foto/mar-naturaleza-playa-vacaciones-10981948/
+    pexels-pok-rie-10981948
+    2022-03-14 at 12:47
+
+    Jake Ganse
+    https://www.pexels.com/es-es/foto/mar-agua-oceano-olas-9181889/
+    pexels-jake-ganse-9181889
+    2022-03-14 at 13:07
+
+    Ian Beckley
+    https://www.pexels.com/es-es/foto/foto-escenica-del-gran-canon-durante-el-dia-2757641/
+    pexels-ian-beckley-2757641
+    2022-03-14 at 13:10
+
+    Ian Beckley
+    https://www.pexels.com/es-es/foto/arte-creativo-sucio-industria-2588870/
+    pexels-ian-beckley-2588870
+    2022-03-14 at 13:14
+
+    Mikhail Nilov
+    https://www.pexels.com/es-es/foto/resfriado-nieve-paisaje-montanas-7456226/
+    pexels-mikhail-nilov-7456226
+    2022-03-15 at 13:29
+
+    Hugo Heimendinger
+    https://www.pexels.com/es-es/foto/arena-marron-y-cuerpo-de-agua-4026047/
+    pexels-hugo-heimendinger-4026047
+    2022-03-15 at 13:34
+
+    Martin Sanchez
+    https://www.pexels.com/es-es/foto/resfriado-iceberg-naturaleza-sucio-4325680/
+    pexels-martin-sanchez-4325680
+    2022-03-15 at 13:37
+
+    Kristina Gain
+    https://www.pexels.com/es-es/foto/resfriado-glaciar-iceberg-derritiendo-4042406/
+    pexels-kristina-gain-4042406
+    2022-03-15 at 13:40
+
+    Curioso Photography
+    https://www.pexels.com/es-es/foto/arboles-y-suelo-durante-el-dia-288093/
+    pexels-curioso-photography-288093
+    2022-03-15 at 13:46
+
+    Curioso Photography
+    https://www.pexels.com/es-es/foto/cuadro-abstracto-amarillo-y-azul-3719622/
+    pexels-curioso-photography-3719622
+    2022-03-15 at 13:49
+
+    Leon Macapagal
+    https://www.pexels.com/es-es/foto/modelo-textura-rock-ciencia-6622887/
+    pexels-leon-macapagal-6622887
+    2022-03-15 at 13:51
+
+    Alex Qian
+    Pexels.com
+    https://www.pexels.com/es-es/foto/fotografia-de-drones-de-la-gran-muralla-china-2304791/
+    pexels-alex-qian-2304791
+    2022-03-15 at 13:55
+
+    ArtHouse Studio
+    https://www.pexels.com/es-es/foto/resfriado-nieve-ligero-paisaje-4641210/
+    pexels-arthouse-studio-4641210
+    2022-03-15 at 13:59
+
 
 - Python unittest:
 

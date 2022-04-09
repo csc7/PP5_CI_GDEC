@@ -1,6 +1,10 @@
+// Check if a form is submitted with jQuery
+// https://stackoverflow.com/questions/14969467/how-to-check-with-jquery-if-any-form-is-submitted,
+// accessed on April 9th, 2022, at 15:30.
+
 $("#mc-embedded-subscribe-form").submit(function(e) {
     e.preventDefault();
-    
+
     // Do not show form again after submitting it
     $("#mce-EMAIL").hide();
     $("#mc-embedded-subscribe-form > div > div.input-group-append > button").hide();

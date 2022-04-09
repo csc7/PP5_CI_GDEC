@@ -26,6 +26,8 @@ html {
 }
 
 
+
+
 /* HEADER */
 
 #main-header {
@@ -240,7 +242,9 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
-/* ALLAUTH STYLES */
+
+/* ALLAUTH FORMS AND PAGES */
+
 
 .allauth-form-inner-content p {
     margin-top: 1rem;
@@ -249,7 +253,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 .allauth-form-inner-content input {
     margin-top: 1rem;
-    color: #269c75;
+    color: rgb(3, 3, 104);
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -258,6 +262,21 @@ accessed on March 3rd, 2022, at 04:27.
 
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
+}
+
+.allauth-form-inner-content {
+    margin-bottom: 25px;
+    color: rgb(3, 3, 104);
+}
+
+#id_remember {
+    bottom: 5px;
+}
+
+#id_email, #id_email2, #id_username,
+#id_password1, #id_password2,
+#id_login, #id_password {
+    width: 100%;
 }
 
 
@@ -406,6 +425,14 @@ accessed on March 3rd, 2022, at 04:27.
 
     body {
         height: calc(80vh - 80px);
+    }
+
+    /* ALLAUTH FORMS AND PAGES */
+
+    #id_email, #id_email2, #id_username,
+    #id_password1, #id_password2,
+    #id_login, #id_password {
+        width: 200%;
     }
     
 

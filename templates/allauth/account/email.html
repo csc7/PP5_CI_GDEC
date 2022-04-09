@@ -31,9 +31,12 @@
   {% endfor %}
 
 <div class="buttonHolder">
-      <button class="secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+      <!-- Modified to add GDEC style to button with Bootstrap -->
+      <button class="secondaryAction btn btn-primary rounded-0 text-uppercase" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+      <!-- Modified to add GDEC style to button with Bootstrap -->
+      <button class="secondaryAction btn btn-primary rounded-0 text-uppercase" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+      <!-- Modified to add GDEC style to button with Bootstrap -->
+      <button class="primaryAction btn btn-primary rounded-0 text-uppercase" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
 
 </fieldset>

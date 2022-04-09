@@ -296,6 +296,13 @@ accessed on March 3rd, 2022, at 04:27.
 /* end from CI */
 
 
+/* PROFILE */
+
+#profile-and-history-container {
+    padding-bottom: 200px;
+}
+
+
 /* ********* */
 /* HOME PAGE */
 /* ********* */
@@ -413,6 +420,11 @@ accessed on March 3rd, 2022, at 04:27.
         bottom: 25px;
     }
    
+
+    /* PROFILE */
+    #profile-and-history-container {
+        padding-bottom: 0;
+    }
 
 }
 

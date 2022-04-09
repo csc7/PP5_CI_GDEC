@@ -302,6 +302,29 @@ accessed on March 3rd, 2022, at 04:27.
     padding-bottom: 200px;
 }
 
+/* 404 PAGE */
+
+#message-in-404-page {
+    padding-top: 200px;
+    font-size: 150%;
+}
+
+#home-button-in-404 {
+    margin-left: 16px;
+}
+
+.overlay-404 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+
 
 /* ********* */
 /* HOME PAGE */

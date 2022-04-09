@@ -2,14 +2,15 @@
 {% load static %}
 
 {% block content %}
+    <div class="overlay-404"></div>
     <div id="404-div" class="container-fluid h-100">
         <div class="row">
             <div class="col-12 my-auto">
-                <p class="dark-blue-font">Sorry, something went wrong... Please, try later.</p>
-            </div>
-            <p class="mt-2">
-                <a class="btn btn-primary rounded-0 text-uppercase" href="{% url 'home' %}">Home</a>
-            </p>
+                <p id="message-in-404-page" class="dark-blue-font">Sorry, something went wrong... Please, try later.</p>            
+                <p class="mt-2">
+                    <a id="home-button-in-404" class="btn btn-primary rounded-0 text-uppercase" href="{% url 'home' %}">Home</a>
+                </p>
+        </div>
         </div>
     </div>
 {% endblock %}

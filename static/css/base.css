@@ -310,7 +310,7 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 #home-button-in-404 {
-    margin-left: 16px;
+    margin-left: 0;
 }
 
 .overlay-404 {
@@ -321,7 +321,20 @@ accessed on March 3rd, 2022, at 04:27.
     position: fixed;
     background: white;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.5;
+}
+
+
+/* GDPR PAGES */
+
+.overlay-GDPR {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgb(176, 215, 250);
+    z-index: -1;
 }
 
 
@@ -578,7 +591,7 @@ accessed on March 3rd, 2022, at 04:27.
     /* FOOTER */
 
     footer {
-        height: 770px;
+        height: 810px;
         position: relative;
     }
 

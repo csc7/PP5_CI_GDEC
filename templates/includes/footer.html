@@ -160,8 +160,9 @@
                 </div>
                 <div id="div-for-newsletter-form-message" class="col-12 col-md-6 col-lg-12 ml-lg-0 pl-lg-0">
                     <p class="pt-1 pt-sm-0 mb-0 p-md-3 p-lg-2 mt-lg-1 py-0 text-center text-md-right text-lg-left text-light">
-                       Sign up in our newsletter to receive our weekly news:
+                       Sign up in our newsletter to receive our weekly news
                     </p>
+                    
                 </div>
                 <div id="div-for-sign-up-for-newsletter-form" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
                     <!-- MAILCHIMP */
@@ -194,20 +195,17 @@
                     </form>
                     
                 </div>
+                <div class="col-12 col-md-12 col-lg-12 ml-lg-0 pl-lg-0">
+                    <p class="text-light pr-1">
+                        Powered by <span><a class="text-white" href="http://eepurl.com/hYYIJX" title="Mailchimp - email marketing made easy and fun" rel="noopener" target="_blank"><u>Mailchimp</u></a></span>
+                    </p>
+                </div>
                 <div id="div-for-sign-up-for-newsletter-form" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                         <input type="text" name="b_0d5a7a481825cdc6a8cea5aea_00935812af" tabindex="-1" value="">
                     </div>
-                    <div class="optionalParent mt-2 mr-0 pr-0">
-                        <div class="clear foot">
-                            <p class="brandingLogo">
-                                <a href="http://eepurl.com/hYYIJX" title="Mailchimp - email marketing made easy and fun" rel="noopener">
-                                    <img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg">
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+
                     <!--End mc_embed_signup-->
                 </div>
             </div>
@@ -226,3 +224,6 @@ Automation & Email Platform, https://mailchimp.com) -->
 <!-- Begin Mailchimp Signup Form -->
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
+{% load static %}
+<!-- This page javascript file -->
+<script src="{% static 'js/mailchimp_form_submission.js' %}"></script>

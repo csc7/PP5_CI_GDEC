@@ -134,11 +134,15 @@ footer {
 /* Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
 Automation & Email Platform, https://mailchimp.com) */
 /* Begin Mailchimp Signup Form */
-#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+#mc_embed_signup{background:rgb(255, 255, 255); clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 /* End mc_embed_signup */
 
+
+#div-for-newsletter-in-footer > div > div > div:nth-child(4) > p {
+    text-align: right;
+}
 
 
 /* MESSAGES */
@@ -312,6 +316,18 @@ accessed on March 3rd, 2022, at 04:27.
 /* ************* */
 
 
+/* SCREEN SIZE BELOW 1080px - Just for Newsletter section in footer */
+
+@media screen and (max-width: 1400px) {
+    
+    #div-for-newsletter-form-message {
+        margin-top: -10px;
+        padding-top: 0;
+    }
+
+}
+
+
 /* FOOTHER ON BIG SCREEN SIZE, HEIGHT ABOVE 1080px */
 
 @media screen and (min-height: 1081px) {
@@ -325,10 +341,10 @@ accessed on March 3rd, 2022, at 04:27.
 
 @media screen and (max-width: 1199px) {
 
-
-
-
 }
+
+
+
 
 
 /* SCREEN SIZE BELOW 992px */

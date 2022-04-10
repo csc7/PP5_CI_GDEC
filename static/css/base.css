@@ -434,7 +434,7 @@ accessed on March 3rd, 2022, at 04:27.
     /* FOOTER */
 
     footer {
-        height: 340px;
+        height: 360px;
         position: relative;
     }
 
@@ -443,13 +443,13 @@ accessed on March 3rd, 2022, at 04:27.
     /* HOME PAGE */
 
     .carousel-inner {
-        position: absolute;
-        bottom: -520px;
+        position: fixed;
+        top: calc(100vh - 450px);
     }
     
     .carousel-indicators {
-        position: absolute;
-        bottom: -570px;
+        position: fixed;
+        top: calc(100vh - 400px);
     }
 
     /* BAG */
@@ -529,15 +529,7 @@ accessed on March 3rd, 2022, at 04:27.
 
     /* HOME PAGE */
 
-    .carousel-inner {
-        position: absolute;
-        bottom: -540px;
-    }
     
-    .carousel-indicators {
-        position: absolute;
-        bottom: -590px;
-    }
 
     /* BAG */
 
@@ -579,15 +571,6 @@ accessed on March 3rd, 2022, at 04:27.
         height: 400px;;
     }
 
-    .carousel-inner {
-        position: absolute;
-        bottom: -90px;
-    }
-    
-    .carousel-indicators {
-        position: absolute;
-        bottom: -140px;
-    }
 
     /* CHECKOUT */
 
@@ -612,6 +595,17 @@ accessed on March 3rd, 2022, at 04:27.
         padding-top: 0;
         text-align: center;
     }
+
+    /* HOME */
+
+    .carousel-inner {
+        position: relative;
+    }
+    
+    .carousel-indicators {
+        position: relative;
+    }
+
 
 }
 

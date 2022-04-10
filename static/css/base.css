@@ -38,17 +38,25 @@ html {
     padding-top: calc(136px + 36.8px);
 }
 
+/* Multiply width by the amount of messages to simulate
+they are one "behind" each other, in a row */
+#banner-div {
+    width: 300%;
+}
+
+
 /* Equivalent of marquee tag for HTML5,
 https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
 accessed on March 16th, 2022, at 3:20.*/
 .holder {
     height: 25px;
 }
+
 .last-news {
     animation : slide 20s linear infinite;
 }
 @keyframes slide {
-    100% {transform: translate(-100%);}
+    100% {transform: translate(-300%);}
     0% {transform: translate(100%);}
 }
 
@@ -236,9 +244,9 @@ accessed on March 3rd, 2022, at 04:27.
 
 .image-position {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 
@@ -604,5 +612,41 @@ accessed on March 3rd, 2022, at 04:27.
         padding-top: 0;
         text-align: center;
     }
+
+}
+
+
+/* SCREEN SIZE BELOW 460px */
+
+@media screen and (max-width: 460px) {
+
+    /* HEADER */
+    /* TOP BANNER */
+
+    #banner-div > div > h5 {
+        padding-top: 2px;
+        font-size: 105%;
+    }
+
+    /* Multiply width by the amount of messages to simulate
+    they are one "behind" each other, in a row.
+    In small screen sizes, add extra width (here 100%) to avoid
+    reducing the font size too much */
+    #banner-div {
+        width: 400%;
+    }
+
+    /* Equivalent of marquee tag for HTML5,
+    https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
+    accessed on March 16th, 2022, at 3:20.
+    Here just changing the translate on top to the previous width (400%)*/
+    
+    @keyframes slide {
+        100% {transform: translate(-400%);}
+        0% {transform: translate(100%);}
+    }
+
+
+
 
 }

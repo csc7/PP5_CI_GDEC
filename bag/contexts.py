@@ -23,9 +23,12 @@ from products.models import Product
 
 def bag_contents(request):
     """
-    Function
+    This function computes the grand total amount based on the products
+    in the bag and the user's delivery preferences
     """
 
+    # Check if user has activated the option to receive the data
+    # digitally and therefore cancel delivery costs
     if request.method == 'POST':
         cancel_delivery_cost = request.POST.get('digital', False)
         if cancel_delivery_cost:
@@ -43,12 +46,15 @@ def bag_contents(request):
         print(cancel_delivery_cost)
 
 
+    # Initialize bag item and costs amounts
     bag_items = []
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
     
 
+    # Iterate elements in the bag, accounting for item, quantity, product
+    # and, if applies, resolution 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
             
@@ -72,9 +78,10 @@ def bag_contents(request):
                     'resolution': resolution,
                 })
 
-    if 'product_resolution' in request.POST:
-        print("OK")
+    #if 'product_resolution' in request.POST:
+    #    print("OK")
 
+    # Compute grand total
     if total < settings.DISCOUNT_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
         delivery = delivery * cancel_delivery_cost_factor
@@ -88,6 +95,8 @@ def bag_contents(request):
     
     grand_total = total + delivery - discount
     
+
+    # Return context to bag template
     context = {
         'bag_items': bag_items,
         'total': total,

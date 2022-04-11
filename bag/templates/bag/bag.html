@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-<!-- Do not include bag_tools as app, Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28-->
+<!-- Do not include bag_tools as app, Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28 -->
 {% load bag_tools %}
 
 {% block page_header %}
@@ -17,17 +17,23 @@
     <div class="container mb-2">
         <div class="row">
             <div class="col dark-blue-font">
+                <!-- Page Title -->
                 <h2 class="mt-4 mb-4">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
+            <!-- Bag Items -->
             <div class="col bottom-marging-for-large-screens">
             {% if bag_items %}
                 <div class="table-responsive rounded mb-5">
+                    <!-- Products table, repeat rows and but show only one of them based on screen size -->
                     <table class="table table-sm table-borderless dark-blue-font">                   
                         {% for item in bag_items %}
+                            <!-- Table for medium size (and larger) screens -->
+                            <!-- Product details -->
                             <tr class="d-none d-md-table-row">
+                                <!-- Product details -->
                                 <th scope="col">Product Info</th>
                                 <th scope="col"></th>
                                 <th scope="col">Price</th>
@@ -36,6 +42,7 @@
                             </tr>
                             <tr class="d-none d-md-table-row">
                                 <td class="p-3 w-25">
+                                    <!-- Assign image to product or default "no-image" in database -->
                                     {% if item.product.image_name %}
                                     <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
                                     {% else %}
@@ -43,6 +50,7 @@
                                     {% endif %}
                                 </td>
                                 <td class="py-3">
+                                    <!-- Include resolution if applicable -->
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
@@ -51,6 +59,7 @@
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-15">
+                                    <!-- Update bag if requested -->
                                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
@@ -88,7 +97,9 @@
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
+                            <!-- Table for small size screens -->
                             <tr class="d-table-row d-md-none">
+                                <!-- Product details -->
                                 <th scope="col">Product Info</th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
@@ -97,6 +108,7 @@
                             </tr>
                             <tr class="d-table-row d-md-none">
                                 <td class="p-3 w-50" colspan="2">
+                                    <!-- Assign image to product or default "no-image" in database -->
                                     {% if item.product.image_name %}
                                     <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
                                     {% else %}
@@ -104,6 +116,7 @@
                                     {% endif %}
                                 </td>
                                 <td class="py-3 w-50" colspan="2">
+                                    <!-- Include resolution if applicable -->
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
@@ -117,6 +130,7 @@
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-75" colspan="2">
+                                    <!-- Update bag if requested -->
                                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
@@ -153,12 +167,13 @@
                         {% endfor %}
                         
                         <tr>
+                            <!-- Bottom of table, with totals, it is the same for all screen sizes -->
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                 <form id="cancel_delivery_cost" class="form update-form" method="POST" action="{% url 'view_bag' %}">
                                     {% csrf_token %}                                    
-                                    <!-- <input type="submit" id="digital" name="digital" value="Click to download and avoid delivery costs"> -->
+                                    <!-- Option to cancel delivery costs -->
                                     <input type="checkbox" id="digital" name="digital" {% if cancel_delivery_cost %} checked {%endif%}>
                                     {% if cancel_delivery_cost %}
                                         <label for="digital">Uncheck this box to receive the data in USB drives (delivery costs apply)</label>
@@ -167,7 +182,9 @@
                                     {% endif %}
                                 </form>
                                 <h6>Discount: ${{ discount|floatformat:2 }}</h6>
+                                <!-- Total to be paid -->
                                 <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                <!-- Show missing amount to receive the discount -->
                                 {% if delta_for_discount > 0 %}
                                     <p class="mb-1 text-danger">
                                         You could get the {{discount_percentage}}% discount if you spend <strong>${{ delta_for_discount }}</strong> more!
@@ -176,6 +193,7 @@
                             </td>
                         </tr>
                         <tr class="pb-5">
+                            <!-- Buttons to check out or keep shopping -->
                             <td colspan="5" class="text-right pb-5">
                                 <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
                                     <span class="icon">
@@ -194,6 +212,7 @@
                     </table>
                 </div>
             {% else %}
+                <!-- Inform the user if there are no items in the bag -->
                 <p class="lead mb-5">Your bag is empty.</p>
                 <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
                     <span class="icon">

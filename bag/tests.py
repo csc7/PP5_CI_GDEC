@@ -9,7 +9,6 @@ Testing for the bag app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.test import TestCase
 
 # INTERNAL:
 

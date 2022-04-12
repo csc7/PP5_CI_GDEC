@@ -1,14 +1,28 @@
+/*
+CSS File for the GDEC (Geophysical Data E-Commerce) project, payment process
+Code Institute - Milestone Project 5
+*/
+
+/* SECTION/GROUP OF PRINCIPAL CSS STYLES ARE COMMENTED WITH CAPITAL LETTERS plus 1 break line */
+/* Subsections/Subgroups of CSS styles are commented in lower-case plus 1 break line */
+/* Specific element styles are commented on top of the element, without break line */
+
+
 /* FONTS */
 /* Google Fonts: Play (Regular 400 and Bold 700) and Roboto (Regular 400) */
 /* Import code copied on March 1st, 2022, at 05:05*/
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto&display=swap');
 
 
+/* GENERAL BODY STYLE*/
+
 body {
     height: calc(100vh - 136px);
     font-family: 'Play', sans-serif;
 }
 
+
+/* STRIPE */
 
 /*
 https://stripe.com/docs/payments/accept-a-payment
@@ -53,14 +67,9 @@ select option {
   color: black;
 }
 
-/*.StripeElement--empty > iframe {
-    background-color: blue;
-    font-family: 'Play', sans-serif;
-}*/
-
 /* End styles from Stripe */
 
-/* from CI*/ 
+/* Overlay when paying, from Code Institute */ 
 #loading-overlay {
 	  display: none;
 	  position: fixed;

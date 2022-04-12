@@ -1,4 +1,7 @@
-/* CSS File for GDEC Website */
+/*
+CSS File for the GDEC (Geophysical Data E-Commerce) project
+Code Institute - Milestone Project 5
+*/
 
 /* SECTION/GROUP OF PRINCIPAL CSS STYLES ARE COMMENTED WITH CAPITAL LETTERS plus 1 break line */
 /* Subsections/Subgroups of CSS styles are commented in lower-case plus 1 break line */
@@ -10,8 +13,8 @@
 /* Import code copied on March 1st, 2022, at 05:05*/
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto&display=swap');
 
-/* GENERAL STYLES */
 
+/* GENERAL STYLES */
 
 html {
     height: 100%;
@@ -24,8 +27,6 @@ html {
 .dark-blue-font {
     color: rgb(3, 3, 104);
 }
-
-
 
 
 /* HEADER */
@@ -48,21 +49,22 @@ they are one "behind" each other, in a row */
 /* Equivalent of marquee tag for HTML5,
 https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
 accessed on March 16th, 2022, at 3:20.*/
+
 .holder {
     height: 25px;
 }
 
 .last-news {
-    animation : slide 20s linear infinite;
+    animation : slide 30s linear infinite;
 }
+
 @keyframes slide {
     100% {transform: translate(-300%);}
     0% {transform: translate(100%);}
 }
 
-
 .border {
-    border: 1px solid #007bff;!important;
+    border: 1px solid #007bff!important;
 }
 
 
@@ -91,6 +93,7 @@ body {
 #products-body {
     margin-bottom: 200px;
 }
+
 
 /* FOOTER */
 
@@ -139,7 +142,6 @@ footer {
     font-size: 85%;
 }
 
-
 /* MAILCHIMP */
 /* Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
 Automation & Email Platform, https://mailchimp.com) */
@@ -149,21 +151,12 @@ Automation & Email Platform, https://mailchimp.com) */
  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 /* End mc_embed_signup */
 
-
 #div-for-newsletter-in-footer > div > div > div:nth-child(4) > p {
     text-align: right;
 }
 
 
 /* MESSAGES */
-
-/*.toast {
-    position: fixed;
-    top: 80px;    
-    right: 20px;
-    z-index: 100000;
-    opacity: 100%;
-}*/
 
 .message-container {
     position: fixed;
@@ -187,7 +180,38 @@ Automation & Email Platform, https://mailchimp.com) */
 }
 
 
-/* BAG PAGE */
+/* HOME PAGE */
+
+.navbar-light .navbar-toggler {
+    color: #007bff;
+    border-color: #007bff;
+    background-color: #0083ff52;
+}
+
+.navbar-toggler {
+    margin-bottom: 5px;
+    border: 2px solid #007bff;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    border-radius: 0.25rem;
+}    
+
+#carouselExampleIndicators > div > div > h4 {
+    height: 50px;
+}
+
+.carousel-inner {
+    position: fixed;
+    bottom: 200px;
+}
+
+.carousel-indicators {
+    position: fixed;
+    bottom: 180px;
+}
+
+
+/* BAG */
 
 .bag-image {
     width: 50%;
@@ -210,12 +234,10 @@ https://www.w3schools.com/css/css3_object-fit.asp,
 accessed on March 3rd, 2022, at 04:27.
 */
 
-
 .products-card {
     width: 200px;
     min-height: 200px;
     max-height: 200px;
-    /*height: 15vw;*/
     object-fit: contain;
 }
 
@@ -250,9 +272,7 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
-
 /* ALLAUTH FORMS AND PAGES */
-
 
 .allauth-form-inner-content p {
     margin-top: 1rem;
@@ -290,7 +310,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 /* PRODUCT MANAGEMENT */
 
-/* from CI */
+/* from Code Institute */
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #774fe6;
@@ -309,6 +329,7 @@ accessed on March 3rd, 2022, at 04:27.
 #profile-and-history-container {
     padding-bottom: 200px;
 }
+
 
 /* 404 PAGE */
 
@@ -346,41 +367,6 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
-
-/* ********* */
-/* HOME PAGE */
-/* ********* */
-
-
-.navbar-light .navbar-toggler {
-    color: #007bff;
-    border-color: #007bff;
-    background-color: #0083ff52;
-}
-
-.navbar-toggler {
-    margin-bottom: 5px;
-    border: 2px solid #007bff;
-    background-color: transparent;
-    /* border: 1px solid transparent; */
-    border-radius: 0.25rem;
-}    
-
-#carouselExampleIndicators > div > div > h4 {
-    height: 50px;
-}
-
-.carousel-inner {
-    position: fixed;
-    bottom: 200px;
-}
-
-.carousel-indicators {
-    position: fixed;
-    bottom: 180px;
-}
-
-
 /* ************* */
 /* MEDIA QUERIES */
 /* ************* */
@@ -398,25 +384,6 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
-/* FOOTHER ON BIG SCREEN SIZE, HEIGHT ABOVE 1080px */
-
-@media screen and (min-height: 1081px) {
-
-
-
-}
-
-
-/* SCREEN SIZE BELOW 1200px */
-
-@media screen and (max-width: 1199px) {
-
-}
-
-
-
-
-
 /* SCREEN SIZE BELOW 992px */
 
 @media screen and (max-width: 991px) {
@@ -427,19 +394,13 @@ accessed on March 3rd, 2022, at 04:27.
         height: calc(80vh - 80px);
     }
 
-    /* PRODUCTS */
-
-
-
     /* FOOTER */
 
     footer {
         height: 360px;
         position: relative;
     }
-
     
-
     /* HOME PAGE */
 
     .carousel-inner {
@@ -458,12 +419,12 @@ accessed on March 3rd, 2022, at 04:27.
         margin-bottom: 0;
     }
 
+
     /* PRODUCTS */
 
     .go-to-top-button {
         bottom: 25px;
     }
-   
 
     /* PROFILE */
     #profile-and-history-container {
@@ -490,7 +451,6 @@ accessed on March 3rd, 2022, at 04:27.
     #id_login, #id_password {
         width: 200%;
     }
-    
 
     /* HEADER */
 
@@ -526,25 +486,17 @@ accessed on March 3rd, 2022, at 04:27.
         margin-top: 14px;
     }
 
-
-    /* HOME PAGE */
-
-    
-
-    /* BAG */
-
-    
-
 }
 
 
 /* SCREEN SIZE BELOW 704px, JUST FOR NEWSLETTER TITLE/MESSAGE */
 @media screen and (max-width: 703px) {
+
     #div-for-newsletter-form-message {
         margin-top: 0;
     }
-}
 
+}
 
 
 /* SCREEN SIZE BELOW 575px */
@@ -571,13 +523,11 @@ accessed on March 3rd, 2022, at 04:27.
         height: 400px;;
     }
 
-
     /* CHECKOUT */
 
     .small-font-size {
         font-size: 75%;
     }
-
 
     /* FOOTER */
 
@@ -605,7 +555,6 @@ accessed on March 3rd, 2022, at 04:27.
     .carousel-indicators {
         position: relative;
     }
-
 
 }
 
@@ -639,8 +588,5 @@ accessed on March 3rd, 2022, at 04:27.
         100% {transform: translate(-400%);}
         0% {transform: translate(100%);}
     }
-
-
-
 
 }

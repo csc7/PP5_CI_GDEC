@@ -1,3 +1,15 @@
+/*
+CSS File for the GDEC (Geophysical Data E-Commerce) project, payment process
+Code Institute - Milestone Project 5
+*/
+
+/* SECTION/GROUP OF PRINCIPAL CSS STYLES ARE COMMENTED WITH CAPITAL LETTERS plus 1 break line */
+/* Subsections/Subgroups of CSS styles are commented in lower-case plus 1 break line */
+/* Specific element styles are commented on top of the element, without break line */
+
+
+/* PROFILE */
+
 #profile-update-form .form-control {
     color: black
 }

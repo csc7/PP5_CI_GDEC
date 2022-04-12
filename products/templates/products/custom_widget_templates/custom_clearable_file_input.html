@@ -24,7 +24,7 @@ that is later customized below.
     <p class="mt-4"><strong>Default "No Image" file, select an image to upload:</strong></p>
 {% endif %}
 <span class="btn rounded-0 dark-blue-font text-left ml-0 pl-0">
-    Select Image: <input id="new-image" class="dark-blue-font" type="{{ widget.type }}" name="{{ widget.name }}"{% include 'django/forms/widgets/attrs.html' %}>
+    Select Image: <input id="new-image" class="dark-blue-font btn" type="{{ widget.type }}" name="{{ widget.name }}"{% include 'django/forms/widgets/attrs.html' %}>
 </span>
 <strong><p class="text-danger" id="filename"></p></strong>
 

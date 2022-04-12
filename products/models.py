@@ -12,6 +12,7 @@ Django models for the products app
 from django.db import models
 
 # INTERNAL:
+from profiles.models import UserProfile
 
 ###############################################################################
 
@@ -47,3 +48,30 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+# https://djangocentral.com/creating-comments-system-with-django/
+class ProductComment(models.Model):
+
+    class Meta:
+        ordering = ['created_on']
+
+    # https://docs.djangoproject.com/en/4.0/ref/models/fields/
+    RATING_VALUES = [
+        (5, 'Fantastic'),
+        (4, 'Good'),
+        (3, 'Average'),
+        (2, 'Poor'),
+        (1, 'Very Poor'),
+    ]
+
+    user = models.ForeignKey(UserProfile, null=True, on_delete=models.SET_NULL, related_name='comments')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product_rating_value = models.IntegerField(choices=RATING_VALUES, default=5)
+
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+
+    def __str__(self):
+        return 'Comment {} by {}'.format(self.body, self.user)

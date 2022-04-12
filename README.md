@@ -906,15 +906,37 @@ Please check the evidence below:
 </p>
      
 <details>
-    <summary>CSS File</summary>
+    <summary>base.css File</summary>
 
-![Evidence of no errors in the CSS file](docs/validation/validation-css-1.PNG) 
+![Evidence of no errors in the CSS file](docs/validation/validation-base-css.PNG) 
 </details>
 <details>
-    <summary>CSS File (Warnings)</summary>
+    <summary>base.css File (Warnings)</summary>
 
-![Evidence of no errors in the CSS file](docs/validation/validation-css-2.PNG) 
+![Evidence of no errors in the CSS file](docs/validation/validation-base-css-warnings.PNG) 
 </details>
+
+<details>
+    <summary>checkout.css File</summary>
+
+![Evidence of no errors in the CSS file](docs/validation/validation-checkout-css.PNG) 
+</details>
+<details>
+    <summary>checkout.css File (Warnings)</summary>
+
+![Evidence of no errors in the CSS file](docs/validation/validation-checkout-css-warnings.PNG) 
+</details>
+
+<details>
+    <summary>profile.css File</summary>
+
+![Evidence of no errors in the CSS file](docs/validation/validation-profile-css.PNG) 
+</details>
+<details>
+    <summary>profile.css File (Warnings)</summary>
+No warnings
+</details>
+
 
 #### [Back to Index](#index)
 

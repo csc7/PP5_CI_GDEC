@@ -12,7 +12,7 @@ Django forms for the product app, to add, update and delete products
 from django import forms
 
 # INTERNAL:
-from .models import Product, Category
+from .models import Product, Category, ProductComment
 from products.widgets import CustomClearableFileInput
 
 ###############################################################################
@@ -36,3 +36,10 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-dark rounded-0'
+
+
+# https://djangocentral.com/creating-comments-system-with-django/
+class ProductCommentForm(forms.ModelForm):
+    class Meta:
+        model = ProductComment
+        fields = ('user', 'body', 'product_rating_value')

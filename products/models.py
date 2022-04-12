@@ -12,7 +12,7 @@ Django models for the products app
 from django.db import models
 
 # INTERNAL:
-from profiles.models import UserProfile
+from profiles.models import User
 
 ###############################################################################
 
@@ -64,7 +64,7 @@ class ProductComment(models.Model):
         (1, 'Very Poor'),
     ]
 
-    user = models.ForeignKey(UserProfile, null=True, on_delete=models.SET_NULL, related_name='comments')
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     product_rating_value = models.IntegerField(choices=RATING_VALUES, default=5)
 

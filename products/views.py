@@ -17,8 +17,8 @@ from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 
 # INTERNAL:
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, ProductComment
+from .forms import ProductForm, ProductCommentForm
 
 ###############################################################################
 
@@ -79,10 +79,13 @@ def all_products(request):
 def product_detail(request, product_id):
     """View for details of a product"""
 
-    products = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
+
+    comments = ProductComment.objects.filter(product=product)
 
     context = {
-        'product': products,
+        'product': product,
+        'comments': comments,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -146,6 +149,7 @@ def edit_product(request, product_id):
         messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_product.html'
+
     context = {
         'form': form,
         'product': product,
@@ -170,3 +174,41 @@ def delete_product(request, product_id):
     
 
     return redirect(reverse('products'))
+
+
+# https://djangocentral.com/creating-comments-system-with-django/
+def product_review(request, product_id):
+    """
+    Function
+    """
+    #template_name = 'products/product_detail.html'
+    product = get_object_or_404(Product, pk=product_id)
+    comments = ProductComment.objects.filter(product=product,
+                                             active=True)
+    new_comment = None
+
+    # Comment posted
+    if request.method == 'POST':
+        
+        comment_form = ProductCommentForm(request.POST)
+
+        if comment_form.is_valid():
+
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.product = product
+            # Save the comment to the database
+            new_comment.save()
+
+            context = {'product': product,
+                        'comments': comments,
+                        'new_comment': new_comment,
+                        'comment_form': comment_form,
+            }
+
+    else:
+        comment_form = ProductCommentForm()
+    
+
+    return render(request, 'products/product_detail.html', context)

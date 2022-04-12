@@ -12,7 +12,7 @@ Python administration file for the Django products app
 from django.contrib import admin
 
 # INTERNAL:
-from .models import Product, Category
+from .models import Product, Category, ProductComment
 
 ###############################################################################
 
@@ -37,5 +37,19 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+# https://djangocentral.com/creating-comments-system-with-django/
+#@admin.register(ProductComment)
+class ProductCommentAdmin(admin.ModelAdmin):
+    list_display = ('user', 'body', 'created_on', 'active')
+    list_filter = ('active', 'created_on')
+    search_fields = ('user', 'email', 'body')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)
+
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(ProductComment, ProductCommentAdmin)

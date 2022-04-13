@@ -81,11 +81,15 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    comments = ProductComment.objects.filter(product=product)
+    comments = ProductComment.objects.filter(product=product,
+                                             active=True)
+
+    comment_form = ProductCommentForm(request.POST)
 
     context = {
         'product': product,
         'comments': comments,
+        'comment_form': comment_form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -176,20 +180,22 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-# https://djangocentral.com/creating-comments-system-with-django/
+# modified from https://djangocentral.com/creating-comments-system-with-django/
 def product_review(request, product_id):
     """
     Function
     """
     #template_name = 'products/product_detail.html'
-    product = get_object_or_404(Product, pk=product_id)
-    comments = ProductComment.objects.filter(product=product,
-                                             active=True)
+    #product = get_object_or_404(Product, pk=product_id)
+    #comments = ProductComment.objects.filter(product=product,
+    #                                         active=True)
     new_comment = None
 
     # Comment posted
     if request.method == 'POST':
-        
+        product = get_object_or_404(Product, pk=product_id)
+        comments = ProductComment.objects.filter(product=product,
+                                                 active=True)
         comment_form = ProductCommentForm(request.POST)
 
         if comment_form.is_valid():
@@ -202,13 +208,36 @@ def product_review(request, product_id):
             new_comment.save()
 
             context = {'product': product,
-                        'comments': comments,
-                        'new_comment': new_comment,
-                        'comment_form': comment_form,
+                       'comments': comments,
+                       'new_comment': new_comment,
+                       'comment_form': comment_form,
             }
+            messages.success(request, 'Comment sent!')
+            return render(request, 'products/product_detail.html', context)
+
+        else:
+            messages.error(request, 'Sorry, comment could not be sent')
 
     else:
-        comment_form = ProductCommentForm()
-    
+            messages.error(request, 'Sorry, comment could not be sent')
 
-    return render(request, 'products/product_detail.html', context)
+    return redirect(reverse('product_detail', args=[product_id]))
+
+
+# Use Django login decorator to access this view
+@login_required()
+def delete_product_review(request, product_id, comment_id):
+    """ Delete comment from product detilas """
+    product = get_object_or_404(Product, pk=product_id)
+    comments = ProductComment.objects.filter(product=product,
+                                                 active=True)
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('product_detail', args=[product_id]))
+
+    comment_to_delete = get_object_or_404(ProductComment, pk=comment_id)
+    comment_to_delete.delete()
+    #messages.success(request, 'Comment deleted!')
+   
+    return redirect(reverse('product_detail', args=[product_id]))

@@ -124,9 +124,17 @@
                                 </span>
                                 </p>
                                 {{ comment.body | linebreaks }}
-                                <hr>
                             </div>
+                            {% if request.user.is_superuser %}
+                                <div>
+                                    <small class="ml-3">
+                                        <a class="text-danger" href="{% url 'delete_product_review' product.id comment.id %}">Delete Comment</a>                                        
+                                    </small>
+                                </div>
+                            {% endif %}
+                            <hr>
                         {% endfor %}
+                        
                     </div>  
 
                     <div>           
@@ -138,16 +146,16 @@
                             {% if request.user.is_authenticated %}
                             
                             <p>Leave a comment</p>
-                            <form method="post" action="{% url 'product_review' product.id %}">
+                            <form method="POST" action="{% url 'product_review' product.id %}">
                                 {% csrf_token %}
                                 {{ comment_form | crispy }}
                                 <button class="btn btn-primary rounded-0 text-uppercase" type="submit">Comment</button>
                             </form>
                             {% else %}
-                            <p class="font-weight-bold">Log in to comment <span><a href="{% url 'products' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
+                            <p class="font-weight-bold">Log in to comment <span><a href="{% url 'login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
                             {% endif %}
                         {% endif %}
-                </div>
+                    </div>
 
 
             </div>

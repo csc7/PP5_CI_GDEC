@@ -24,6 +24,7 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile()
         exclude = ('user',)
+        
 
     def __init__(self, *args, **kwargs):
         """
@@ -49,4 +50,10 @@ class UserProfileForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-dark rounded-0'
-            self.fields[field].label = False
+            if field == 'default_street_address1':
+                self.fields[field].label = 'Street Address 1'
+            if field == 'default_street_address2':
+                self.fields[field].label = 'Street Address 2'
+            # Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string,
+            # accessed on April 14th, 2022, at 01:54
+            self.fields[field].label = self.fields[field].label.title()

@@ -20,9 +20,9 @@
                         <a href="{{ product.image_name.url }}" target="blank">
                             <img class="card-img-top products-card" src="{{ product.image_name.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
+                    {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="card-img-top products-card img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -145,12 +145,16 @@
                             </div>
                         {% else %} 
                             {% if request.user.is_authenticated %}
-                            <button class="btn btn-primary rounded-0 text-uppercase mt-1 mb-4" type="submit" id="comment-form-button">Leave a Comment</button>
-                            <form id="comment-form" method="POST" action="{% url 'product_review' product.id %}">
-                                {% csrf_token %}
-                                {{ comment_form | crispy }}
-                                <button class="btn btn-primary rounded-0 text-uppercase" type="submit">Comment</button>
-                            </form>
+                                {% if user_has_commented %}
+                                <p class="font-weight-bold dark-blue-font">Product already commented</p>
+                                {% else %}
+                                <button class="btn btn-primary rounded-0 text-uppercase mt-1 mb-4" type="submit" id="comment-form-button">Leave a Comment</button>
+                                <form id="comment-form" class="dark-blue-font" method="POST" action="{% url 'product_review' product.id %}">
+                                    {% csrf_token %}
+                                    {{ comment_form | crispy }}
+                                    <button class="btn btn-primary rounded-0 text-uppercase" type="submit">Comment</button>
+                                </form>
+                                {% endif %}
                             {% else %}
                             <p class="font-weight-bold">Log in to comment <span><a href="{% url 'login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
                             {% endif %}

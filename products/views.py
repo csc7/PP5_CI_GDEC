@@ -84,12 +84,17 @@ def product_detail(request, product_id):
     comments = ProductComment.objects.filter(product=product,
                                              active=True)
 
+    user_has_commented = False
+    if(ProductComment.objects.filter(product=product, user=request.user, active=True)):
+        user_has_commented = True
+
     comment_form = ProductCommentForm(request.POST)
 
     context = {
         'product': product,
         'comments': comments,
         'comment_form': comment_form,
+        'user_has_commented': user_has_commented,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -203,8 +208,6 @@ def product_review(request, product_id):
         comment_form = ProductCommentForm(request.POST)
 
         if comment_form.is_valid():
-
-
 
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)

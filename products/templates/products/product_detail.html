@@ -123,6 +123,7 @@
                                 {{ comment.created_on }}
                                 </span>
                                 </p>
+                                <p><small class="text-muted"><i class="fas fa-star mr-1"></i>{{ comment.product_rating_value }} / 5</small></p>
                                 {{ comment.body | linebreaks }}
                             </div>
                             {% if request.user.is_superuser %}

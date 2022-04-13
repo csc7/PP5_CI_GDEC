@@ -66,11 +66,45 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+
+    # Read the first category and assign the corresponding product group
+    # title (based on top navigation menu). If no categories, then the 
+    # query is for all products
+    if (categories is None):
+        title = "All Products"
+
+    else:  
+        if (str(categories.first()) == 'dem' or
+                str(categories.first()) == 'gravimetry' or 
+                str(categories.first()) == 'magnetometry' or
+                str(categories.first()) == 'resistivity'):
+            title = "Digital Data"
+        elif (str(categories.first()) == 'eia' or
+                str(categories.first()) == 'weather' or 
+                str(categories.first()) == 'geological_maps'):
+            title = "Reports"
+        elif (str(categories.first()) == 'eia' or
+                str(categories.first()) == 'weather' or 
+                str(categories.first()) == 'geological_maps'):
+            title = "Training"
+        elif (str(categories.first()) == 'simulators' or
+                str(categories.first()) == 'data_processing' or 
+                str(categories.first()) == 'data_qc'):
+            title = "Software"
+        elif (str(categories.first()) == 'data_offers' or
+                str(categories.first()) == 'software_offers' or 
+                str(categories.first()) == 'training_offers' or
+                str(categories.first()) == 'report_offers'):
+            title = "Offers"
+        else:
+            title = "All Products"
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'title_in_body': title,
 
     }
 

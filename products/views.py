@@ -180,7 +180,10 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-# modified from https://djangocentral.com/creating-comments-system-with-django/
+# Copied and modified (except computation of product rating) 
+# from https://djangocentral.com/creating-comments-system-with-django/,
+# Abhijeet Pal, Author and Editor in Chief @djangocentral,
+# on April 12th, 2022.
 def product_review(request, product_id):
     """
     Function
@@ -196,9 +199,12 @@ def product_review(request, product_id):
         product = get_object_or_404(Product, pk=product_id)
         comments = ProductComment.objects.filter(product=product,
                                                  active=True)
+
         comment_form = ProductCommentForm(request.POST)
 
         if comment_form.is_valid():
+
+
 
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
@@ -206,6 +212,10 @@ def product_review(request, product_id):
             new_comment.product = product
             # Save the comment to the database
             new_comment.save()
+
+            product.rating = compute_product_rating_value(product_id)
+            product.save()
+            
 
             context = {'product': product,
                        'comments': comments,
@@ -238,6 +248,25 @@ def delete_product_review(request, product_id, comment_id):
 
     comment_to_delete = get_object_or_404(ProductComment, pk=comment_id)
     comment_to_delete.delete()
-    #messages.success(request, 'Comment deleted!')
+    messages.success(request, 'Comment deleted!')
    
     return redirect(reverse('product_detail', args=[product_id]))
+
+
+# Compute Product Rating Value
+def compute_product_rating_value (product_id):
+    """
+    This function computes the product rating value
+    for each product
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    comments = ProductComment.objects.filter(product=product,
+                                                 active=True)
+
+    rate = 0
+    i = 0
+    for comment in comments:
+        rate += comment.product_rating_value
+        i += 1
+    
+    return (rate/i)

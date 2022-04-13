@@ -107,9 +107,9 @@
             </div>
 
             <!-- REVIEWS -->
-            <div class="col-12 col-md-6 col-lg-4 bottom-marging-for-large-screens">
+            <div class="col-12 col-md-6 offset-md-3 bottom-marging-for-large-screens">
                 <div>
-                    <h4 class="font-weight-bold dark-blue-font mt-4">Product Reviews</h4>
+                    <h4 class="font-weight-bold dark-blue-font mt-4 text-left text-md-center">Product Reviews</h4>
                     <hr>
                 </div>
 
@@ -145,9 +145,8 @@
                             </div>
                         {% else %} 
                             {% if request.user.is_authenticated %}
-                            
-                            <p>Leave a comment</p>
-                            <form method="POST" action="{% url 'product_review' product.id %}">
+                            <button class="btn btn-primary rounded-0 text-uppercase mt-1 mb-4" type="submit" id="comment-form-button">Leave a Comment</button>
+                            <form id="comment-form" method="POST" action="{% url 'product_review' product.id %}">
                                 {% csrf_token %}
                                 {{ comment_form | crispy }}
                                 <button class="btn btn-primary rounded-0 text-uppercase" type="submit">Comment</button>
@@ -171,6 +170,5 @@
 Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
 <script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
 <!-- This page javascript file -->
-
-
+<script src="{% static 'js/show_comment_form.js' %}"></script>
 {% endblock %}

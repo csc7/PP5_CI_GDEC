@@ -308,6 +308,12 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
+/* PRODUCT DETAILS */
+
+#comment-form {
+    display: none;
+}
+
 /* PRODUCT MANAGEMENT */
 
 /* from Code Institute */

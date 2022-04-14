@@ -45,7 +45,7 @@
 {% if request.user.is_authenticated %}
 <li class="list-inline-item my-auto py-1 pl-md-0">
     <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none" href="{% url 'view_wish_list' %}">
-        <div class="text-center">
+        <div class="text-center text-primary">
             <!-- Font Awesome Icon -->
             <div><i class="fa fa-list" aria-hidden="true"></i></div>
             <p class="my-0 d-none d-sm-block">My Wish List</p>

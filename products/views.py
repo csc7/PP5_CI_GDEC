@@ -83,9 +83,8 @@ def all_products(request):
                 str(categories.first()) == 'weather' or 
                 str(categories.first()) == 'geological_maps'):
             title = "Reports"
-        elif (str(categories.first()) == 'eia' or
-                str(categories.first()) == 'weather' or 
-                str(categories.first()) == 'geological_maps'):
+        elif (str(categories.first()) == 'courses' or
+                str(categories.first()) == 'books'):
             title = "Training"
         elif (str(categories.first()) == 'simulators' or
                 str(categories.first()) == 'data_processing' or 

@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Do not include bag_tools as app, Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28 -->
+{% load bag_tools %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col dark-blue-font">
+                <!-- Page Title -->
+                <h2 class="mt-4 mb-4">Wish List</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Wish List Items -->
+            <div class="col bottom-marging-for-large-screens">
+            {% if wish_list_items %}
+                <div class="table-responsive rounded mb-5">
+                    <!-- Products table, repeat rows and but show only one of them based on screen size -->
+                    <table class="table table-sm table-borderless dark-blue-font">                   
+                        {% for item in wish_list_items %}
+                            <!-- Table for medium size (and larger) screens -->
+                            <!-- Product details -->
+                            <tr class="d-none d-md-table-row">
+                                <!-- Product details -->
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                            <tr class="d-none d-md-table-row">
+                                <td class="p-3 w-25">
+                                    <!-- Assign image to product or default "no-image" in database -->
+                                    {% if item.product.image_name %}
+                                    <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    {% endif %}
+                                </td>
+                                <td class="py-3">
+                                    <!-- Include resolution if applicable -->
+                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
+                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                </td>
+                                <td class="py-3 w-10">
+                                    <p class="my-0">${{ item.product.price }}</p>
+                                </td>
+                                <td class="py-3 w-15">
+                                    <!-- Update wish list if requested -->
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_wish_list' item.item_id %}">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-sm btn-primary rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control form-control-sm qty_input text-center" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-sm btn-primary rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                {% if item.product.resolution %}
+                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                {% endif %}
+                                            </div>
+                                            
+                                        </div>
+                                    </form>
+                                    <a class="update-link text-info float-right"><small>Update</small></a>
+                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                </td>
+                            </tr>
+                            <!-- Table for small size screens -->
+                            <tr class="d-table-row d-md-none">
+                                <!-- Product details -->
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                            <tr class="d-table-row d-md-none">
+                                <td class="p-3 w-50" colspan="2">
+                                    <!-- Assign image to product or default "no-image" in database -->
+                                    {% if item.product.image_name %}
+                                    <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    {% endif %}
+                                </td>
+                                <td class="py-3 w-50" colspan="2">
+                                    <!-- Include resolution if applicable -->
+                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
+                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                </td>
+                                <td class="py-3" rowspan="2">
+                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                </td>
+                            </tr>
+                            <tr class="d-table-row d-md-none">
+                                <td class="py-3 w-25" colspan="2">
+                                    <p class="my-0">${{ item.product.price }}</p>
+                                </td>
+                                <td class="py-3 w-75" colspan="2">
+                                    <!-- Update wish list if requested -->
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_wish_list' item.item_id %}">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-sm btn-primary rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control form-control-sm qty_input text-center" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-sm btn-primary rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                {% if item.product.resolution %}
+                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <a class="update-link text-info float-right"><small>Update</small></a>
+                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
+                                </td>   
+                            </tr>
+                        {% endfor %}
+                        
+                        
+                        <tr class="pb-5">
+                            <!-- Buttons to check out or keep shopping -->
+                            <td colspan="5" class="text-right pb-5">
+                                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="btn btn-primary rounded-0 btn-lg">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            {% else %}
+                <!-- Inform the user if there are no items in the wish list -->
+                <p class="lead mb-5">Your wish list is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+<!-- Font Awesome Script / Kit
+Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
+<script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
+<!-- This page javascript file -->
+<script>var csrfToken = "{{ csrf_token }}";</script>
+<script src="{% static 'js/quantity_incr_decr.js' %}"></script>
+<script src="{% static 'js/show_messages.js' %}"></script>
+<script src="{% static 'js/download_data_and_discount_delivery.js' %}"></script>
+{% endblock %}
+

@@ -29,7 +29,7 @@ class WishList(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='orders'
+        related_name='user_wishlist'
     )
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     product_resolution = models.CharField(max_length=2, null=True, blank=True) # High, medium and low

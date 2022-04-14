@@ -39,6 +39,7 @@
                                 <th scope="col">Price</th>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Subtotal</th>
+                                <th scope="col"></th>
                             </tr>
                             <tr class="d-none d-md-table-row">
                                 <td class="p-3 w-25">
@@ -102,6 +103,7 @@
                                     </div>
                                 </td>
                                 </form>
+                            
                             </tr>
                             <!-- Table for small size screens -->
                             <tr class="d-table-row d-md-none">
@@ -131,14 +133,16 @@
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
+                            <form class="form update-form" method="POST" action="{% url 'adjust_wish_list' item.item_id %}">
+                                {% csrf_token %}
                             <tr class="d-table-row d-md-none">
                                 <td class="py-3 w-25" colspan="2">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
+                                
                                 <td class="py-3 w-75" colspan="2">
                                     <!-- Update wish list if requested -->
-                                    <form class="form update-form" method="POST" action="{% url 'adjust_wish_list' item.item_id %}">
-                                        {% csrf_token %}
+                                    
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -165,11 +169,21 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                    </form>
+                                    
                                     <a class="update-link text-info float-right"><small>Update</small></a>
                                     <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
-                                </td>   
+                                </td>
                             </tr>
+                            <tr class="d-table-row d-md-none">
+                                <td class="py-3 text-center" colspan="6">
+                                        <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-75">Add to Bag</button>
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        <hr>  
+                                </td>
+                                
+                            </tr>
+                        </form>
+                        
                         {% endfor %}
                         
                         

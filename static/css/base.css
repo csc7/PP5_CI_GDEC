@@ -28,6 +28,9 @@ html {
     color: rgb(3, 3, 104);
 }
 
+.bottom-marging-for-large-screens {
+    margin-bottom: 200px;
+}
 
 /* HEADER */
 
@@ -219,10 +222,6 @@ Automation & Email Platform, https://mailchimp.com) */
     object-fit: contain;
 }
 
-.bottom-marging-for-large-screens {
-    margin-bottom: 200px;
-}
-
 
 /* PRODUCTS */
 
@@ -313,6 +312,7 @@ accessed on March 3rd, 2022, at 04:27.
 #comment-form {
     display: none;
 }
+
 
 /* PRODUCT MANAGEMENT */
 

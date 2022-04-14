@@ -55,10 +55,10 @@
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
-                                <td class="py-3 w-10">
+                                <td class="py-3">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
-                                <td class="py-3 w-15">
+                                <td class="py-3">
                                     <!-- Update wish list if requested -->
                                     <form class="form update-form" method="POST" action="{% url 'adjust_wish_list' item.item_id %}">
                                         {% csrf_token %}
@@ -87,8 +87,15 @@
                                                     <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
                                                 {% endif %}
                                             </div>
-                                            
                                         </div>
+                                        <div>
+                                            <button type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5 w-50">Update Wish List</button>
+                                        </div>
+                                        <div>
+                                            <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-info rounded-0 text-uppercase mt-5 w-50">Add to Bag</button>
+                                        </div>
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        
                                     </form>
                                     <a class="update-link text-info float-right"><small>Update</small></a>
                                     <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
@@ -96,6 +103,7 @@
                                 <td class="py-3">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
+                                
                             </tr>
                             <!-- Table for small size screens -->
                             <tr class="d-table-row d-md-none">

@@ -109,7 +109,5 @@ def wish_list_contents(request):
         #'discount_percentage': settings.DISCOUNT_PERCENTAGE,
         #'cancel_delivery_cost': cancel_delivery_cost,
     }
-    print("WITH LIST: ")
-    print(context)
 
     return context

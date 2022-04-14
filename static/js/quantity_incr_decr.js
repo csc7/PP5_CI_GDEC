@@ -42,18 +42,47 @@ $('.decrement-qty').click(function(e) {
    handleEnableDisable(itemId);
 });
 
-// Update quantity on click
+// Update quantity on click for the bag
 $('.update-link').click(function(e) {
     var form = $(this).prev('.update-form');
     form.submit();
 })
 
-// Remove item and reload on click
+// Remove item and reload on click the bag
 $('.remove-item').click(function(e) {
     //var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr('id').split('remove_')[1];
     var resolution = $(this).data('product_resolution');
     var url = `/bag/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
+    $.post(url, data)
+     .done(function() {
+         location.reload();
+     });
+})
+
+// Update quantity on click for the wish list
+$('.update-link-wish-list').click(function(e) {
+
+    if ($(window).width() < 768) {
+        $('#form-wish-list-small-screen').submit();
+    } else {
+        $('#form-wish-list-large-screen').submit();
+    } 
+})
+
+// Remove item and reload on click for the wish list in large screens
+console.log($(this).attr('id'))
+$('.remove-item-wish-list').click(function(e) {
+    //var csrfToken = "{{ csrf_token }}";
+    var itemId;
+    if ($(window).width() < 768) {
+        itemId = $(this).attr('id').split('remove-from-wish-list-small-screen_')[1];
+    } else {
+        itemId = $(this).attr('id').split('remove-from-wish-list-large-screen_')[1];
+    }    
+    var resolution = $(this).data('product_resolution');
+    var url = `/wish_list/remove_from_wish_list/${itemId}/`;
     var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
     $.post(url, data)
      .done(function() {

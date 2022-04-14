@@ -86,7 +86,7 @@ def adjust_wish_list(request, item_id):
     quantity = int(request.POST.get('quantity'))
     resolution = None
     # Consider, initially, that user wants a delivery
-    digital = 0
+    #digital = 0
 
     # Check if product to update has resolution and read it
     if 'product_resolution' in request.POST:

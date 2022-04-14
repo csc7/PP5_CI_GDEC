@@ -90,16 +90,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
+                            <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase btn-outline-primary">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5 w-50" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <div class="col-12">
+                                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase btn-outline-primary">View Wish List</span>
+                                </a>
+                                <input type="submit" class="btn btn-info rounded-0 text-uppercase mt-5 w-50" value="Add to Wish List">
+                            </div>
                             {% endwith %}
                         </div>
                     </form>
@@ -158,11 +167,11 @@
                                 <form id="comment-form" class="dark-blue-font" method="POST" action="{% url 'product_review' product.id %}">
                                     {% csrf_token %}
                                     {{ comment_form | crispy }}
-                                    <button class="btn btn-primary rounded-0 text-uppercase" type="submit">Comment</button>
+                                    <button class="btn btn-primary rounded-0 text-uppercase mb-4" type="submit">Comment</button>
                                 </form>
                                 {% endif %}
                             {% else %}
-                            <p class="font-weight-bold">Log in to comment <span><a href="{% url 'account_login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
+                            <p class="font-weight-bold mb-4">Log in to comment <span><a href="{% url 'account_login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
                             {% endif %}
                         {% endif %}
                     </div>

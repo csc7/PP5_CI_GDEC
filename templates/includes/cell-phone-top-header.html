@@ -3,10 +3,10 @@
     <a class="nav-link d-block d-md-none px-0" href="#" id="cell-phone-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0">Search</p>
+            <p class="my-0 d-none d-sm-block">Search</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="cell-phone-search">
+    <div class="dropdown-menu border-0 w-100 px-0 rounded-0 my-0" aria-labelledby="cell-phone-search">
         <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
@@ -21,12 +21,12 @@
         </form>
     </div>
 </li>
-<li class="list-inline-item dropdown">
-    <a class="nav-link d-block d-md-none px-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li class="list-inline-item dropdown pl-2">
+    <a class="nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <!-- Font Awesome Icon -->
             <div><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0 d-none d-sm-block">My Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -42,12 +42,23 @@
         {% endif %}
     </div>
 </li>
-<li class="list-inline-item">
+{% if request.user.is_authenticated %}
+<li class="list-inline-item my-auto py-1 pl-md-0">
+    <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none" href="{% url 'view_bag' %}">
+        <div class="text-center">
+            <!-- Font Awesome Icon -->
+            <div><i class="fa fa-list" aria-hidden="true"></i></div>
+            <p class="my-0 d-none d-sm-block">My Wish List</p>
+        </div>
+    </a>
+</li>
+{% endif %}
+<li class="list-inline-item px-0">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none px-0" href="{% url 'view_bag' %}">
         <div class="text-center">
             <!-- Font Awesome Icon -->
             <div><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
-            <p class="my-0">
+            <p class="my-0 d-none d-sm-block">
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                 {% else %}

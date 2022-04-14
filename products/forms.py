@@ -38,7 +38,10 @@ class ProductForm(forms.ModelForm):
             field.widget.attrs['class'] = 'border-dark rounded-0'
 
 
-# https://djangocentral.com/creating-comments-system-with-django/
+# To add a comment feature:
+# copied and modified from https://djangocentral.com/creating-comments-system-with-django/,
+# Abhijeet Pal, Author and Editor in Chief @djangocentral,
+# on April 12th, 2022.
 class ProductCommentForm(forms.ModelForm):
     class Meta:
         model = ProductComment

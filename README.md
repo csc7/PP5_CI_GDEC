@@ -2168,8 +2168,13 @@ ___
 
 - Django Documentation:
 
-    - ...
+    - Several consultations to check and remember methods, configuration, elements and syntaxis.
 
+    - To limit field content to specific values, https://docs.djangoproject.com/en/4.0/ref/models/fields/, accessed on April 12th, 2022.
+
+- Djangocentral:
+
+    - To add a comment feature: copied and modified (except computation of product rating) from https://djangocentral.com/creating-comments-system-with-django/, Abhijeet Pal, Author and Editor in Chief @djangocentral, on April 12th, 2022.  
 
 - ERD:
     - ERDPlus, to make the data model graph, https://erdplus.com/standalone 
@@ -2446,6 +2451,8 @@ ___
     - Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5; accessed on March 16th, 2022, at 3:20.
 
     - Inclusion of Google fonts in Stripe elements based on https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working, accessed on March 18th, 2022, at 6:20.
+
+    - Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string, accessed on April 14th, 2022, at 01:54
 
 - Stripe:
 

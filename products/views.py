@@ -219,7 +219,8 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-# Copied and modified (except computation of product rating) 
+# To add a comment feature:
+# copied and modified (except computation of product rating) 
 # from https://djangocentral.com/creating-comments-system-with-django/,
 # Abhijeet Pal, Author and Editor in Chief @djangocentral,
 # on April 12th, 2022.

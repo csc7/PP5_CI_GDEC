@@ -115,7 +115,13 @@
 
                 <div>                                        
                     <div>
-                        <!-- comments -->                           
+                        <!-- Comments 
+                        To add a comment feature:
+                        copied and modified (except computation of product rating) 
+                        from https://djangocentral.com/creating-comments-system-with-django/,
+                        Abhijeet Pal, Author and Editor in Chief @djangocentral,
+                        on April 12th, 2022.                        
+                        -->                           
                         {% for comment in comments %}
                             <div class="dark-blue-font">
                                 <p class="text-primary">Comment by <strong class="font-weight-bold">{{ comment.user }}</strong> on                                

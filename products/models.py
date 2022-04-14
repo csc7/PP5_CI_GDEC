@@ -49,13 +49,20 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-# https://djangocentral.com/creating-comments-system-with-django/
+
+# To add a comment feature:
+# copied and modified (except RATING VALUES) 
+# from https://djangocentral.com/creating-comments-system-with-django/,
+# Abhijeet Pal, Author and Editor in Chief @djangocentral,
+# on April 12th, 2022.
 class ProductComment(models.Model):
 
     class Meta:
         ordering = ['created_on']
 
-    # https://docs.djangoproject.com/en/4.0/ref/models/fields/
+    # To limit field content to specific values,
+    # https://docs.djangoproject.com/en/4.0/ref/models/fields/,
+    # accessed on April 12th, 2022.
     RATING_VALUES = [
         (5, 'Fantastic'),
         (4, 'Good'),

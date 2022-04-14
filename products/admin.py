@@ -37,7 +37,10 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-# https://djangocentral.com/creating-comments-system-with-django/
+# To add a comment feature:
+# copied and modified from https://djangocentral.com/creating-comments-system-with-django/,
+# Abhijeet Pal, Author and Editor in Chief @djangocentral,
+# on April 12th, 2022.
 #@admin.register(ProductComment)
 class ProductCommentAdmin(admin.ModelAdmin):
     list_display = ('user', 'body', 'created_on', 'active')

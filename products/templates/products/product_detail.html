@@ -100,18 +100,18 @@
                                 <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5 w-50" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase btn-outline-primary">View Wish List</span>
-                                </a>
-                                <input type="submit" class="btn btn-info rounded-0 text-uppercase mt-5 w-50" value="Add to Wish List">
-                            </div>
                             {% endwith %}
                         </div>
                     </form>
+                    <div>
+                        <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase btn-outline-primary">View Wish List</span>
+                        </a>
+                        <input type="submit" class="btn btn-info rounded-0 text-uppercase mt-5 w-50" value="Add to Wish List">
+                    </div>
                 </div>
             </div>
 

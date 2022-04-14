@@ -10,3 +10,14 @@ $('#comment-form-button').click(function() {
         }
     }
 });
+
+
+// Change form action to have it sent to the bag or wish list, based
+// on the clicked button
+
+$('#send-to-wish-list-button').click(function() {
+    $('#add-product-form').attr('action', '{% url "add_to_wish_list" product.id %}');
+    $("form").submit();
+    //var page_id = document.getElementById("add-product-form").options.selectedIndex;
+
+});

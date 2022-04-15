@@ -47,7 +47,7 @@
                                     {% if item.product.image_name %}
                                     <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
                                     {% else %}
-                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.PNG" alt="{{ item.product.name }}">
                                     {% endif %}
                                 </td>
                                 <td class="py-3">
@@ -55,6 +55,12 @@
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    <p></p>
+                                    {% for product in products_in_history_orders %}
+                                        {% if product|stringformat:"s" == item.item_id|stringformat:"s" %}
+                                        <p class="text-info"><strong>Buy it again!</strong></p>
+                                        {% endif %}
+                                    {% endfor %}                            
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">${{ item.product.price }}</p>
@@ -120,7 +126,7 @@
                                     {% if item.product.image_name %}
                                     <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
                                     {% else %}
-                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.PNG" alt="{{ item.product.name }}">
                                     {% endif %}
                                 </td>
                                 <td class="py-3 w-50" colspan="2">

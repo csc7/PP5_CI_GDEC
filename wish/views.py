@@ -15,6 +15,8 @@ from django.contrib import messages
 
 # INTERNAL:
 from products.models import Product
+from checkout.models import OrderLineItem
+from profiles.models import UserProfile
 
 ###############################################################################
 
@@ -23,7 +25,29 @@ from products.models import Product
 def view_wish_list(request):
     """View for the wish list"""
 
-    return render(request, 'wish/wish_list.html')
+    profile = get_object_or_404(UserProfile, user=request.user)
+    print("Profile: ")
+    print (profile)
+    user_orders = profile.orders.all()
+    #user_orders_ids = user_orders.id
+    
+    print(user_orders)
+    #products_in_history_orders = {}
+    for user_order in user_orders:
+        
+        print(user_order)
+
+    products_in_history_orders = OrderLineItem.objects.filter(order=user_order)
+    #products_in_history_orders = OrderLineItem.objects.all()
+    a = products_in_history_orders.values_list('product_id', flat=True)
+    print(a)
+        #print(products_in_history_orders[user_order])
+
+    context = {
+        'products_in_history_orders': a,
+    }
+
+    return render(request, 'wish/wish_list.html', context)
 
 
 # View for adding products to the wish list

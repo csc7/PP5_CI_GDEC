@@ -164,7 +164,7 @@ pk,model,category,sku,name,description,price,rating,image_url,image_name
 163,products.product,4,1981MAG0163VAN,Vanuatu,This file contains magnetometry data for Vanuatu,55.01, ,,magnetometry_for_Vanuatu.png
 164,products.product,4,2009MAG0164VEN,Venezuela,This file contains magnetometry data for Venezuela,77.67, ,,magnetometry_for_Venezuela.png
 165,products.product,4,2014MAG0165VIE,Vietnam,This file contains magnetometry data for Vietnam,52.89, ,,magnetometry_for_Vietnam.png
-166,products.product,4,2014MAG0165VIE,Vietnam,This file contains magnetometry data for Vietnam,52.89, ,,noimage.png
+166,products.product,4,2014MAG0165VIE,Vietnam,This file contains magnetometry data for Vietnam,52.89, ,,noimage.PNG
 167,products.product,8,2007GEO0167AFG,Afghanistan,This file contains a geological map for Afghanistan,83.38, ,,report_for_Afghanistan.png
 168,products.product,6,1993ENV0168ANG,Angola,This file contains a environmental impact assessment for Angola,93.77, ,,report_for_Angola.png
 169,products.product,8,1995GEO0169ARG,Argentina,This file contains a geological map for Argentina,50.00, ,,report_for_Argentina.png

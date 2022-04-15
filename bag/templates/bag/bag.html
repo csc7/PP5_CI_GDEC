@@ -36,9 +36,9 @@
                                 <!-- Product details -->
                                 <th scope="col">Product Info</th>
                                 <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
+                                <th scope="col" class="text-center">Price</th>
+                                <th scope="col" class="text-center">Quantity</th>
+                                <th scope="col" class="text-center">Subtotal</th>
                             </tr>
                             <tr class="d-none d-md-table-row">
                                 <td class="p-3 w-25">
@@ -55,10 +55,10 @@
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
-                                <td class="py-3 w-10">
+                                <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
-                                <td class="py-3 w-15">
+                                <td class="py-3 quantity-control-width text-center">
                                     <!-- Update bag if requested -->
                                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
@@ -90,10 +90,10 @@
                                             
                                         </div>
                                     </form>
-                                    <a class="update-link text-info float-right"><small>Update</small></a>
-                                    <a class="remove-item text-danger" id="remove-from-bag-large-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
+                                    <a class="update-link text-info w-100 text-center float-right"><small>Update Quantity</small></a>
+                                    <a class="remove-item text-danger w-100 text-center float-right" id="remove-from-bag-large-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
@@ -160,8 +160,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info float-right"><small>Update</small></a>
-                                    <a class="remove-item text-danger" id="remove-from-bag-small-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove</small></a>
+                                    <a class="update-link text-info w-100 text-center float-right"><small>Update Quantity</small></a>
+                                    <a class="remove-item text-danger w-100 text-center float-right" id="remove-from-bag-small-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
                                 </td>   
                             </tr>
                         {% endfor %}

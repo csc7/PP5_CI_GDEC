@@ -51,7 +51,12 @@ $('.update-link').click(function(e) {
 // Remove item and reload on click the bag
 $('.remove-item').click(function(e) {
     //var csrfToken = "{{ csrf_token }}";
-    var itemId = $(this).attr('id').split('remove_')[1];
+    var itemId;
+    if ($(window).width() < 768) {
+        itemId = $(this).attr('id').split('remove-from-bag-small-screen_')[1];
+    } else {
+        itemId = $(this).attr('id').split('remove-from-bag-large-screen_')[1];
+    } 
     var resolution = $(this).data('product_resolution');
     var url = `/bag/remove/${itemId}/`;
     var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
@@ -91,3 +96,12 @@ $('.remove-item-wish-list').click(function(e) {
 })
 
 console.log("Incr/Decr JS loaded");
+
+// Change "Update Quantity" and "Remove Product" to "Update" and "Remove"
+// in middle size screens
+if ($(window).width() < 992 && $(window).width() >=768) {
+    $('.remove-item').html('Remove');
+    $('.remove-item-wish-list').html('Remove');
+    $('.update-link').html('Update');
+    $('.update-link-wish-list').html('Update');
+}

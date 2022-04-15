@@ -217,6 +217,10 @@ Automation & Email Platform, https://mailchimp.com) */
     object-fit: contain;
 }
 
+.quantity-control-width {
+    width: 15%;
+}
+
 
 /* PRODUCTS */
 

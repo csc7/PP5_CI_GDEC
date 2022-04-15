@@ -2458,7 +2458,7 @@ ___
 
 - Simpleisbetterthancomplex: https://simpleisbetterthancomplex.com/
 
-    - By Vitor Freitas, missing line for proper pagination, "paginator.page(page)", https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html, accessed on April 15th, 2022, at 2:00.
+    - By Vitor Freitas, missing line for proper pagination, "paginator.page(page)", and option to address no integers, https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html, accessed on April 15th, 2022, at 2:00.
 
 - Stripe:
 

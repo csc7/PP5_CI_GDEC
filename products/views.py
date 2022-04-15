@@ -15,7 +15,7 @@ from django.db.models import Q
 # Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # INTERNAL:
@@ -108,10 +108,16 @@ def all_products(request):
     page_obj = paginator.get_page(page_number)
 
     # By Vitor Freitas, "paginator.page(page)", missing line for proper
-    # pagination,
+    # pagination, and option to address no integers,
     # https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
     # accessed on April 15th, 2022, at 2:00
-    products = paginator.page(page_number)
+    
+    try:
+        products = paginator.page(page_number)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
     context = {
         'products': products,

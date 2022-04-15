@@ -121,6 +121,38 @@
                     {% endfor %}
                 </div>
             </div>
+            <!-- Pagination by Django Documentaiton:
+            https://docs.djangoproject.com/en/4.0/topics/pagination/,
+            accessed on April 15th, 2022, at 2:00, style modified later -->
+            <div class="col-12 bottom-marging-for-large-screens text-center pt-4 pb-4 px-0">
+                <div class="row">
+                    {% if page_obj.has_previous %}
+                    <div class="col-3 offset-0 col-sm-2 offset-sm-2 offset-md-1 offset-lg-3 col-lg-1 text-uppercase order-1">                        
+                        <a href="?page=1">&laquo; first</a>
+                    </div>
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-2">
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    </div>
+                    {% else %}
+                    <!-- If no previous, include empty divs to avoid a shift of page number in centre of row -->
+                    <div class="col-3 offset-0 col-sm-2 offset-sm-2 offset-md-1 offset-lg-3 col-lg-1 text-uppercase order-1">                        
+                    </div>
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-2">
+                    </div>
+                    {% endif %}
+                    <div class="col-12 col-md-2 col-lg-2 order-md-3 dark-blue-font order-5 px-0">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </div>
+                    {% if page_obj.has_next %}
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-3">                        
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    </div>
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-4"> 
+                        <a href="?page={{ page_obj.paginator.num_pages }}" >last &raquo;</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
     <div class="go-to-top-button shadow-sm rounded-0 border border-dark">
@@ -129,23 +161,6 @@
         </a>	
     </div>
 
-    <div class="pagination">
-        <span class="step-links">
-            {% if page_obj.has_previous %}
-                <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-            {% endif %}
-    
-            <span class="current">
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-            </span>
-    
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-            {% endif %}
-        </span>
-    </div>
 
 {% endblock %}
 

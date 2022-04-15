@@ -48,7 +48,6 @@ they are one "behind" each other, in a row */
     width: 300%;
 }
 
-
 /* Equivalent of marquee tag for HTML5,
 https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
 accessed on March 16th, 2022, at 3:20.*/
@@ -477,6 +476,7 @@ increase the height of the header */
     .header-container {
         padding-top: calc(80px + 36.8px);
     }
+
 
     /* FOOTER */
 

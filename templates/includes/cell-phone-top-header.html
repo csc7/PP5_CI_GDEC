@@ -68,3 +68,10 @@
         </div>
     </a>
 </li>
+{% if request.user.is_authenticated %}
+<div id="log-in-status-header" class="col-12 d-md-none my-0">
+    <div>                    
+        <p class="text-success text-center text-md-right"><strong>Logged as {{request.user}}</strong></p>
+    </div>
+</div>
+{% endif %}

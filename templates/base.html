@@ -140,8 +140,8 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
-            <div id="footer-body-separator" class="row text-center text-white">
-                <div class="col-12 bg-danger">
+            <div id="footer-body-separator" class="row text-center text-white bg-danger">
+                <div class="col-12 col-md-9 order-2 order-md-1 bg-danger">
                     <!-- Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
                     Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
                     accessed on March 16th, 2022, at 3:20. -->
@@ -158,11 +158,19 @@
                                     <h5>Download data and cancel delivery costs!</h5>
                                 </div>
                             </div>
-                        </div>   
-                                   
-                    </div>          
-                </div>            
+                        </div>        
+                    </div>        
+                </div>
+                {% if request.user.is_authenticated %}
+                <div id="log-in-status-banner" class="d-none d-md-inline col-md-3 order-1 order-md-2 bg-danger my-0">
+                    <div class="col-12 bg-danger my-0 holder">
+                    
+                    <p class="text-light text-center text-md-right"><strong>Logged as {{request.user}}</strong></p>
+                    </div>
+                </div>
+                {% endif %}       
             </div>
+
         </header>
                 
         {% if messages %}

@@ -415,7 +415,7 @@ accessed on March 3rd, 2022, at 04:27.
     }
     
     .carousel-indicators {
-        position: fixed;
+        position: absolute;
         top: calc(100vh - 400px);
     }
 

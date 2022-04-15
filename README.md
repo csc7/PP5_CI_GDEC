@@ -2172,6 +2172,8 @@ ___
 
     - To limit field content to specific values, https://docs.djangoproject.com/en/4.0/ref/models/fields/, accessed on April 12th, 2022.
 
+    - Pagination by Django Documentaiton: https://docs.djangoproject.com/en/4.0/topics/pagination/, accessed on April 15th, 2022, at 2:00.
+
 - Djangocentral:
 
     - To add a comment feature: copied and modified (except computation of product rating) from https://djangocentral.com/creating-comments-system-with-django/, Abhijeet Pal, Author and Editor in Chief @djangocentral, on April 12th, 2022.  
@@ -2453,6 +2455,10 @@ ___
     - Inclusion of Google fonts in Stripe elements based on https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working, accessed on March 18th, 2022, at 6:20.
 
     - Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string, accessed on April 14th, 2022, at 01:54
+
+- Simpleisbetterthancomplex: https://simpleisbetterthancomplex.com/
+
+    - By Vitor Freitas, missing line for proper pagination, "paginator.page(page)", https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html, accessed on April 15th, 2022, at 2:00.
 
 - Stripe:
 

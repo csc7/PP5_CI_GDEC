@@ -15,6 +15,8 @@ from django.db.models import Q
 # Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+
 
 # INTERNAL:
 from .models import Product, Category, ProductComment
@@ -98,16 +100,33 @@ def all_products(request):
         else:
             title = "All Products"
 
+    # Pagination by Django Documentaiton:
+    # https://docs.djangoproject.com/en/4.0/topics/pagination/,
+    # accessed on April 15th, 2022, at 2:00
+    page_number = request.GET.get('page')
+    paginator = Paginator(products, 12) # Show 12 contacts per page.
+    page_obj = paginator.get_page(page_number)
+
+    # By Vitor Freitas, "paginator.page(page)", missing line for proper
+    # pagination,
+    # https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
+    # accessed on April 15th, 2022, at 2:00
+    products = paginator.page(page_number)
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
         'title_in_body': title,
+        'page_obj': page_obj,
 
     }
 
     return render(request, 'products/products.html', context)
+
+
+
 
 def product_detail(request, product_id):
     """View for details of a product"""

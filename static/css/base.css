@@ -66,7 +66,11 @@ accessed on March 16th, 2022, at 3:20.*/
 }
 
 .border {
-    border: 1px solid #007bff!important;
+    border: 1px solid #073f7a!important;
+}
+
+#log-in-status-banner, #log-in-status-header {
+    color: rgb(11, 11, 204);
 }
 
 
@@ -213,7 +217,7 @@ Automation & Email Platform, https://mailchimp.com) */
 
 .bag-image {
     width: 50%;
-    height: 10vw;
+    height: 7vw;
     object-fit: contain;
 }
 
@@ -254,7 +258,9 @@ accessed on March 3rd, 2022, at 04:27.
 
 .go-to-top-button-link,
 .update-link,
-.remove-item {
+.remove-item,
+.update-link-wish-list,
+.remove-item-wish-list {
     cursor: pointer;
 }
 

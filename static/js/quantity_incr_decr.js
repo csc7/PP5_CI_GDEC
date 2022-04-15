@@ -99,9 +99,18 @@ console.log("Incr/Decr JS loaded");
 
 // Change "Update Quantity" and "Remove Product" to "Update" and "Remove"
 // in middle size screens
-if ($(window).width() < 992 && $(window).width() >=768) {
-    $('.remove-item').html('Remove');
-    $('.remove-item-wish-list').html('Remove');
-    $('.update-link').html('Update');
-    $('.update-link-wish-list').html('Update');
-}
+$(window).on('resize', function(){
+    if ($(window).width() < 992 && $(window).width() >=768) {
+        $('.remove-item').html('<small>Remove</small>');
+        $('.remove-item-wish-list').html('<small>Remove</small>');
+        $('.update-link').html('<small>Update</small>');
+        $('.update-link-wish-list').html('<small>Update</small>');
+    } else {
+        $('.remove-item').html('<small>Remove Product</small>');
+        $('.remove-item-wish-list').html('<small>Remove Product</small>');
+        $('.update-link').html('<small>Update Quantity</small>');
+        $('.update-link-wish-list').html('<small>Update Quantity</small>');
+    }
+
+});
+

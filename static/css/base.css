@@ -399,7 +399,7 @@ accessed on March 3rd, 2022, at 04:27.
     /* FOOTER */
 
     footer {
-        height: 360px;
+        height: 380px;
         position: relative;
     }
     
@@ -440,14 +440,14 @@ accessed on March 3rd, 2022, at 04:27.
 /* To avoid size of icons, when logged in, to
 increase the height of the header */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 782px) {
 
     /* GENERAL */
-
+    #topnav > div.col-12.col-md-6.col-lg-5.my-auto.py-1.py-md-0 > ul {
+        font-size: 90%;
+    }
 
 }
-
-
 
 
 /* SCREEN SIZE BELOW 768px */
@@ -458,6 +458,10 @@ increase the height of the header */
 
     body {
         height: calc(80vh - 80px);
+    }
+
+    #topnav > div.col-12.col-md-6.col-lg-5.my-auto.py-1.py-md-0 > ul {
+        font-size: 100%;
     }
 
     /* ALLAUTH FORMS AND PAGES */

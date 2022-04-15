@@ -98,7 +98,7 @@ body {
 
 footer {
     width: 100%;
-    height: 180px;
+    height: 210px;
     position: fixed;
     bottom:0;
     z-index: 100;
@@ -436,6 +436,20 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
+/* SCREEN SIZE BELOW 782px */
+/* To avoid size of icons, when logged in, to
+increase the height of the header */
+
+@media screen and (max-width: 767px) {
+
+    /* GENERAL */
+
+
+}
+
+
+
+
 /* SCREEN SIZE BELOW 768px */
 
 @media screen and (max-width: 767px) {
@@ -467,7 +481,7 @@ accessed on March 3rd, 2022, at 04:27.
     }
 
     footer {
-        height: 337px;
+        height: 347px;
     }
 
     #div-for-privacy-link-in-footer, #div-for-cookies-link-in-footer {

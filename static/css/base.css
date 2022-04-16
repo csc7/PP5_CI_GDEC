@@ -666,11 +666,11 @@ increase the height of the header */
 }
 
 
-/* HEIGHT RESPONSIVENESS FOR VERY LARGE SCREENS */
+/* HEIGHT RESPONSIVENESS FOR LARGE SCREENS */
 
 @media screen and (min-height: 700px) {
 
-    /* FOOTER */
+    /* ALLAUTH */
 
     #allauth-email-confirm,
     #allauth-email,
@@ -686,7 +686,8 @@ increase the height of the header */
 
     /* THANK YOU */
 
-    #thanks-div-3 {
+    #thanks-div-3,
+    #shopping-bag-content {
         margin-bottom: 275px;
     }
 
@@ -694,7 +695,7 @@ increase the height of the header */
 
 @media screen and (min-height: 900px) {
 
-    /* FOOTER */
+    /* ALLAUTH */
 
     #allauth-email-confirm,
     #allauth-email,
@@ -710,7 +711,8 @@ increase the height of the header */
 
     /* THANK YOU */
 
-    #thanks-div-3 {
+    #thanks-div-3,
+    #shopping-bag-content {
         margin-bottom: 475px;
     }
 
@@ -721,8 +723,10 @@ increase the height of the header */
     /* FOOTER */
 
     footer {
-        position: static;
+        /*position: static;*/
     }
+
+    /* ALLAUTH */
 
     #contact-form-container > form > fieldset,
     #allauth-email-confirm,
@@ -737,9 +741,11 @@ increase the height of the header */
         padding-bottom: 600px;
     }
 
-    /* THANK YOU */
+    /* THANK YOU AND BAG */
 
-    #thanks-div-3 {
+    #thanks-div-3,
+    #shopping-bag-content {
         margin-bottom: 700px;
     }
+
 }

@@ -16,19 +16,19 @@
 <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
-            <div class="col dark-blue-font">
+            <div class="col dark-blue-font mt-5 mt-md-4">
                 <!-- Page Title -->
-                <h2 class="mt-4 mb-4">Shopping Bag</h2>
+                <h2 class="mb-4">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
             <!-- Bag Items -->
-            <div class="col bottom-marging-for-large-screens">
+            <div id="shopping-bag-content" class="col bottom-marging-for-large-screens mb-4">
             {% if bag_items %}
                 <div class="table-responsive rounded mb-5">
                     <!-- Products table, repeat rows and but show only one of them based on screen size -->
-                    <table class="table table-sm table-borderless dark-blue-font">                   
+                    <table class="table table-sm table-borderless dark-blue-font bottom-marging-for-large-screens">                   
                         {% for item in bag_items %}
                             <!-- Table for medium size (and larger) screens -->
                             <!-- Product details -->

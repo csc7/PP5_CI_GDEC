@@ -32,10 +32,9 @@ def get_contact_page(request):
             # process the data in form.cleaned_data as required
             record = DataFromContactForm(date = datetime.datetime.now().date(),
                                          time = datetime.datetime.now().time(),
-                                         name = form.cleaned_data['name'],
-                                         surname = form.cleaned_data['surname'],
+                                         full_name = form.cleaned_data['full_name'],
                                          email = form.cleaned_data['email'],
-                                         description = form.cleaned_data[
+                                         text_content = form.cleaned_data[
                                              'text_content']
                                         )
             record.save()

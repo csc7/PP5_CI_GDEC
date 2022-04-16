@@ -83,7 +83,6 @@ body {
     /*height: calc(100vh - 136px);*/
     height: 50px;
     font-family: 'Play', sans-serif;
-    /*color: rgb(6, 6, 155);*/
 }
 
 .overlay {
@@ -382,6 +381,23 @@ accessed on March 3rd, 2022, at 04:27.
 }
 
 
+/* CONTACT */
+
+.overlay-world {
+    height: 100%;
+    width: 100%;    
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: url('/media/overlay-world-blue-2.PNG') center fixed;
+    z-index: -1;
+}
+
+#contact-form-container {
+    margin-top: 200px;
+}
+
+
 /* ************* */
 /* MEDIA QUERIES */
 /* ************* */
@@ -520,6 +536,12 @@ increase the height of the header */
         margin-top: 14px;
     }
 
+    /* CONTACT */
+
+    #div_id_email {
+        width: 50%;
+    }
+
 }
 
 
@@ -623,4 +645,36 @@ increase the height of the header */
         0% {transform: translate(100%);}
     }
 
+}
+
+
+/* HEIGHT RESPONSIVENESS FOR VERY LARGE SCREENS */
+
+@media screen and (min-height: 700px) {
+
+    body > div > div.row > div > div > form {
+        margin-bottom: 400px;
+    }
+
+}
+
+@media screen and (min-height: 900px) {
+
+    #signup_form,
+    body > div > div.row > div > div > form {
+        margin-bottom: 500px;
+    }
+
+}
+
+@media screen and (min-height: 1200px) {
+    
+    footer {
+        position: static;
+    }
+
+    #contact-form-container > form > fieldset,
+    body > div > div.row > div {
+        padding-bottom: 600px;
+    }
 }

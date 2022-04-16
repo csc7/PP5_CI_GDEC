@@ -2,50 +2,52 @@
 {% block content %}
 
 <!-- https://docs.djangoproject.com/en/4.0/topics/forms/ -->
-<div id="contact-form" class="container">
-    <form action="{% url 'contact' %}" method="post">
+<div class="overlay-world"></div>
+<div id="contact-form-container" class="container">
+    <div class="row">
+        <div class="col dark-blue-font">
+            <!-- Page Title -->
+            <h2 class="mt-4 mb-4">Contact Us</h2>
+            <hr>
+        </div>
+    </div>
+
+    <form action="/contact/" method="post" class="mx-0 px-0">
         <!-- Django Token -->
         {% csrf_token %}
-        <!-- Contact Form -->       
-        <div id="form-row" class="row">
-            <div class="col-12 col-lg-6">
-                <!-- Name -->
-                <div id="form-left-1" class="col-12">
-                    {{ form.name.errors }}
-                    <label class="form-labels" for="{{ form.name.id_for_label }}">Name</label>
-                    {{ form.name }}
-                </div>
-                <!-- Surname -->
-                <div id="form-left-2" class="col-12">
-                    {{ form.surname.errors }}
-                    <label class="form-labels" for="{{ form.surname.id_for_label }}">Surname</label>
-                    {{ form.surname }}
+        <fieldset class="rounded mx-0 mb-5">
+            
+                <div id="form-left-1" class="col-12 mx-0 px-0">
+                    {{ form.full_name.errors }}
+                    {{ form.full_name | as_crispy_field }}
                 </div>
                 <!-- E-mail -->
-                <div id="form-left-3" id="e-mail-contact" class="col-12">
+                <div id="form-left-3" id="e-mail-contact" class="col-12 mx-0 px-0">
                     {{ form.email.errors }}
-                    <label class="form-labels" for="{{ form.email.id_for_label }}">E-mail</label>
-                    {{ form.email }}
+                    {{ form.email | as_crispy_field  }}
                 </div>
-            </div>
-            <!-- Description -->
-            <div class="col-12 col-lg-6">
-                <div id="form-right-1" class="col-12">
-                    {{ form.text_content.errors }}
-                    <label class="form-labels" for="{{ form.text_content.id_for_label }}">Description</label>
-                    {{ form.text_content }}
+                <!-- Description -->
+                <div id="form-right-1" class="col-12 mx-0 px-0">
+                    {{ form.description.errors }}
+                    {{ form.description | as_crispy_field  }}
                 </div>
-            </div>
-            <div id="form-right-2" class="col-12">
-                <!-- Check if user is authenticated to send information -->
-                {% if user.is_authenticated %} 
-                <input id="contact-form-button" type="submit" value="Submit">
-                {% else %}
-                <p>(Log in to send data to database)</p>
-                {% endif %}
-            
-            </div>
-        </div>
+
+            {% if request.user.is_authenticated %}
+                <div>
+                    <a href="{% url 'account_login' %}" class="btn btn-outline-primary rounded-0 mt-5">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase btn-outline-primary">Submit</span>
+                    </a>
+                    <button id="send-to-wish-list-button" formaction="{% url 'add_to_wish_list' product.id %}" class="btn btn-info rounded-0 text-uppercase mt-5 w-50">Add to Wish List</button>
+                </div>
+            {% else %}
+                <p class="font-weight-bold mt-4 mb-4 dark-blue-font text-right">Log in to send a comment <span><a href="{% url 'account_login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
+            {% endif %}
+        </fieldset>
+        
+        
     </form>
 </div>
 

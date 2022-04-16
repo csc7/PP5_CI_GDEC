@@ -17,7 +17,7 @@ class DataFromContactForm(models.Model):
     time = models.TimeField(default="00:00:00", max_length=200)
     full_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
-    description = models.CharField(max_length=2000)
+    description = models.TextField(max_length=2000)
 
     def __str__(self):
         return f"Contact form from {self.name} {self.surname}"

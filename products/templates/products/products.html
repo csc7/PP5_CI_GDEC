@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3 dark-blue-font">
-                <a href="{% url 'products' %}{{ category_in_title_url }}"><h2>{{ title_in_body }}</h2></a>
+                <a href="{% url 'products' %}{{ category_in_title_url }}"><h2 class="dark-blue-font">{{ title_in_body }}</h2></a>
                 {% for c in current_categories %}
                     <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -66,7 +66,7 @@
                                 {% endif %}
                                 <div id="product-title-in-card" class="card-body pb-0">
                                     <a href="{% url 'product_detail' product.id %}">
-                                        <p class="mb-0 text-center text-sm-left">{{ product.name }}</p>
+                                        <p class="mb-0 text-center">{{ product.name }}</p>
                                     </a>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">

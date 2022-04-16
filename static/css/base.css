@@ -157,6 +157,10 @@ Automation & Email Platform, https://mailchimp.com) */
     text-align: right;
 }
 
+#Mailchimp-newsletter-button {
+    display: none;
+}
+
 
 /* MESSAGES */
 
@@ -495,7 +499,7 @@ increase the height of the header */
     }
 
     footer {
-        height: 347px;
+        height: 357px;
     }
 
     #div-for-privacy-link-in-footer, #div-for-cookies-link-in-footer {

@@ -20,4 +20,4 @@ class DataFromContactForm(models.Model):
     description = models.TextField(max_length=2000)
 
     def __str__(self):
-        return f"Contact form from {self.name} {self.surname}"
+        return f"Contact form from {self.full_name}"

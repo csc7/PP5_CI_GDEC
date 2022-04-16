@@ -11,7 +11,7 @@
 <!-- Modified, change title from "sign In" to "log In" to match other links in the site -->
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}"><u>log in</u></a>.{% endblocktrans %}</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form  class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}

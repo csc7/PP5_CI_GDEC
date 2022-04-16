@@ -588,7 +588,7 @@ increase the height of the header */
     /* FOOTER */
 
     footer {
-        height: 810px;
+        height: 830px;
         position: relative;
     }
 
@@ -652,7 +652,15 @@ increase the height of the header */
 
 @media screen and (min-height: 700px) {
 
-    body > div > div.row > div > div > form {
+    #allauth-email-confirm,
+    #allauth-email,
+    #allauth-login,
+    #allauth-logout,
+    #allauth-password-change,
+    #allauth-password-reset-from-key,
+    #allauth-password-reset,
+    #allauth-password-set,
+    #signup_form {
         margin-bottom: 400px;
     }
 
@@ -660,8 +668,15 @@ increase the height of the header */
 
 @media screen and (min-height: 900px) {
 
-    #signup_form,
-    body > div > div.row > div > div > form {
+    #allauth-email-confirm,
+    #allauth-email,
+    #allauth-login,
+    #allauth-logout,
+    #allauth-password-change,
+    #allauth-password-reset-from-key,
+    #allauth-password-reset,
+    #allauth-password-set,
+    #signup_form {
         margin-bottom: 500px;
     }
 
@@ -674,7 +689,15 @@ increase the height of the header */
     }
 
     #contact-form-container > form > fieldset,
-    body > div > div.row > div {
+    #allauth-email-confirm,
+    #allauth-email,
+    #allauth-login,
+    #allauth-logout,
+    #allauth-password-change,
+    #allauth-password-reset-from-key,
+    #allauth-password-reset,
+    #allauth-password-set,
+    #signup_form {
         padding-bottom: 600px;
     }
 }

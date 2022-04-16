@@ -74,6 +74,7 @@ def all_products(request):
     # query is for all products
     if (categories is None):
         title = "All Products"
+        title_url = "?sort=name&direction=asc"
 
     else:  
         if (str(categories.first()) == 'dem' or
@@ -81,24 +82,30 @@ def all_products(request):
                 str(categories.first()) == 'magnetometry' or
                 str(categories.first()) == 'resistivity'):
             title = "Digital Data"
+            title_url = "?category=dem,gravimetry,magnetometry,resistivity"
         elif (str(categories.first()) == 'eia' or
                 str(categories.first()) == 'weather' or 
                 str(categories.first()) == 'geological_maps'):
             title = "Reports"
+            title_url = "?category=eia,geological_maps,weather"
         elif (str(categories.first()) == 'courses' or
                 str(categories.first()) == 'books'):
             title = "Training"
+            title_url = "?category=courses,books"
         elif (str(categories.first()) == 'simulators' or
                 str(categories.first()) == 'data_processing' or 
                 str(categories.first()) == 'data_qc'):
             title = "Software"
+            title_url = "?category=simulators,data_processing,data_qc"
         elif (str(categories.first()) == 'data_offers' or
                 str(categories.first()) == 'software_offers' or 
                 str(categories.first()) == 'training_offers' or
                 str(categories.first()) == 'report_offers'):
             title = "Offers"
+            title_url = "?category=data_offers,report_offers,training_offers,software_offers"
         else:
             title = "All Products"
+            title_url = "?sort=name&direction=asc"
 
     # Pagination by Django Documentaiton:
     # https://docs.djangoproject.com/en/4.0/topics/pagination/,
@@ -125,8 +132,8 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
         'title_in_body': title,
+        'category_in_title_url': title_url,
         'page_obj': page_obj,
-
     }
 
     return render(request, 'products/products.html', context)

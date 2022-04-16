@@ -14,7 +14,7 @@
                 <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item text-primary">By Country</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-primary">By Category</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-primary">By Price</a>
-                <a href="" class="dropdown-item text-primary">All Products</a>
+                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item text-primary">All Products</a>
             </div>
         </li>
 

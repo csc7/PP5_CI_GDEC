@@ -397,6 +397,24 @@ accessed on March 3rd, 2022, at 04:27.
     margin-top: 200px;
 }
 
+/* THANK YOU */
+
+#thanks-div-1 {
+    margin-top: 200px;
+}
+
+#thanks-div-3 {
+    
+}
+
+#thanks-div-1 > div > div > p {
+
+}
+
+#thanks-div-2 > div > div > p, #thanks-div-3 > div > div > p {
+
+}
+
 
 /* ************* */
 /* MEDIA QUERIES */
@@ -652,6 +670,8 @@ increase the height of the header */
 
 @media screen and (min-height: 700px) {
 
+    /* FOOTER */
+
     #allauth-email-confirm,
     #allauth-email,
     #allauth-login,
@@ -664,9 +684,17 @@ increase the height of the header */
         margin-bottom: 400px;
     }
 
+    /* THANK YOU */
+
+    #thanks-div-3 {
+        margin-bottom: 275px;
+    }
+
 }
 
 @media screen and (min-height: 900px) {
+
+    /* FOOTER */
 
     #allauth-email-confirm,
     #allauth-email,
@@ -680,10 +708,18 @@ increase the height of the header */
         margin-bottom: 500px;
     }
 
+    /* THANK YOU */
+
+    #thanks-div-3 {
+        margin-bottom: 475px;
+    }
+
 }
 
 @media screen and (min-height: 1200px) {
     
+    /* FOOTER */
+
     footer {
         position: static;
     }
@@ -699,5 +735,11 @@ increase the height of the header */
     #allauth-password-set,
     #signup_form {
         padding-bottom: 600px;
+    }
+
+    /* THANK YOU */
+
+    #thanks-div-3 {
+        margin-bottom: 700px;
     }
 }

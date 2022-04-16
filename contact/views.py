@@ -34,8 +34,8 @@ def get_contact_page(request):
                                          time = datetime.datetime.now().time(),
                                          full_name = form.cleaned_data['full_name'],
                                          email = form.cleaned_data['email'],
-                                         text_content = form.cleaned_data[
-                                             'text_content']
+                                         description = form.cleaned_data[
+                                             'description']
                                         )
             record.save()
             # redirect to a new URL:

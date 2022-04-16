@@ -4,16 +4,18 @@
 <div class="overlay-world"></div>
 <div class="container" id="thanks-div-1">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 dark-blue-font">
             <p>
+                <strong>
                 Thanks {{ form_data.name }} {{ form_data.surname }} ({{ form_data.email }}) for contacting us.
+                </strong>
             </p>
         </div>
     </div>
 </div>
 <div class="container" id="thanks-div-2">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 dark-blue-font">
             <p>
                 This is the text you have just sent (on {{ form_data.date }}, at{{ form_data.time }}):
             </p>
@@ -22,7 +24,7 @@
 </div>
 <div class="container" id="thanks-div-3">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 dark-blue-font">
             <p>
                 {{ form_data.description }}.
             </p>

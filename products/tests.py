@@ -47,12 +47,12 @@ class TestProductApp(unittest.TestCase):
         )
 
         self.test_data_for_product_comment_model = ProductComment(
-            '50',                            # id
-            '50',                            # user (foreign key)
-            '50',                            # product (foreign key)
+            '50',                           # id
+            '50',                           # user (foreign key)
+            '50',                           # product (foreign key)
             '5',                            # product rating value
             'Text in comment field',        # body
-            '2022-01-01',          # create on
+            '2022-01-01',                   # create on
             True,                           # active
     
         )

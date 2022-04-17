@@ -15,7 +15,7 @@ from datetime import datetime
 
 # INTERNAL:
 import unittest
-from .models import Category, Product
+from .models import Category, Product, ProductComment
 
 ###############################################################################
 
@@ -34,7 +34,7 @@ class TestProductApp(unittest.TestCase):
         )
 
         self.test_data_for_product_model = Product(
-            '1',                            # (Foreign key)
+            '1',                            # category (foreign key)
             '1',                            # id
             '1',                            # sku
             'product_name',                 # name
@@ -44,6 +44,17 @@ class TestProductApp(unittest.TestCase):
             'product_rating',               # rating
             'product_image_url',            # image_url
             'product_image_name'            # image_name
+        )
+
+        self.test_data_for_product_comment_model = ProductComment(
+            '50',                            # id
+            '50',                            # user (foreign key)
+            '50',                            # product (foreign key)
+            '5',                            # product rating value
+            'Text in comment field',        # body
+            '2022-01-01',          # create on
+            True,                           # active
+    
         )
 
 
@@ -85,8 +96,6 @@ class TestProductApp(unittest.TestCase):
         self.assertEqual(str(self.test_data_for_product_model.name),
                          'product_name'
                          )
-
-##
 
     def test_sku_in_product_model(self):
         print("Testing SKU in product model")
@@ -130,7 +139,50 @@ class TestProductApp(unittest.TestCase):
                          'product_image_name'
                          )
             
+    # Test of ProductComment model return
+    def test_product_comment_model_return(self):
+        print("Testing the return of ProductComment model instantiation")
+        self.assertEqual(str(self.test_data_for_product_comment_model),
+                         'Comment product description by admin'
+                         )
 
+    # Test of ProductComment model elements
+
+    def test_user_in_product_comment_model(self):
+        print("Testing user in ProductComment model")
+        self.assertEqual(str(self.test_data_for_product_comment_model.user),
+                         'admin'
+                         )
+                
+    def test_product_in_product_comment_model(self):
+        print("Testing product in ProductComment model")
+        self.assertEqual(str(self.test_data_for_product_comment_model.product),
+                         'Vanuatu DEM'
+                         )
+
+    def test_rating_value_in_product_comment_model(self):
+        print("Testing product rating value in ProductComment model")
+        self.assertEqual(str(self.test_data_for_product_comment_model.product_rating_value),
+                         '5'
+                         )
+
+    def test_body_in_product_comment_model(self):
+        print("Testing body in ProductComment model")
+        self.assertEqual(str(self.test_data_for_product_comment_model.body),
+                         'Text in comment field'
+                         )
+
+    def test_date_created_on_in_product_comment_model(self):
+        print("Testing date created on in ProductComment model")
+        self.assertEqual(str(self.test_data_for_product_comment_model.created_on),
+                         '2022-01-01'
+                         )
+
+    def test_active_comment_in_product_comment_model(self):
+        print("Testing active comment in ProductComment model")
+        self.assertEqual(str(self.test_data_for_product_comment_model.active),
+                         'True'
+                         )
 
 
 if __name__ == '__main__':

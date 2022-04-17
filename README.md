@@ -2470,6 +2470,11 @@ ___
 
     - To check if a form is submitted with jQuery: https://stackoverflow.com/questions/14969467/how-to-check-with-jquery-if-any-form-is-submitted, accessed on April 9th, 2022, at 15:30.
 
+- StudyGyaan:
+
+    - Definition based on this article: https://studygyaan.com/django/how-to-use-bootstrap-4-forms-with-django-crispy-forms#html-code, accessed on April 16th, 2022.
+    
+
 - W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):
     - ...
 

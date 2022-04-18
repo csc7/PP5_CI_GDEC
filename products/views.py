@@ -146,14 +146,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    comments = None
-    
+    comments = ProductComment.objects.filter(product=product,
+                                             active=True)
     user_has_commented = False
     if (request.user.is_authenticated):        
         if(ProductComment.objects.filter(product=product, user=request.user, active=True)):
             user_has_commented = True
-            comments = ProductComment.objects.filter(product=product,
-                                                     active=True)
 
     comment_form = ProductCommentForm(request.POST)
 

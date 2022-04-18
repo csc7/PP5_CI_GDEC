@@ -335,8 +335,10 @@ def delete_product_review(request, product_id, comment_id):
 
     comment_to_delete = get_object_or_404(ProductComment, pk=comment_id)
     comment_to_delete.delete()
+
     product.rating = compute_product_rating_value(product_id)
     product.save()
+
     messages.success(request, 'Comment deleted!')
    
     return redirect(reverse('product_detail', args=[product_id]))
@@ -356,8 +358,8 @@ def compute_product_rating_value (product_id):
     rate = 0
     i = 0
     for comment in comments:
-        rate += (comment.product_rating_value)
-        i += (i)
+        rate = rate + (comment.product_rating_value)
+        i = i+1
     if i == 0:
         rate = product.rating # If no comments, read default
     else:

@@ -20,7 +20,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import dj_database_url
 from pathlib import Path
-
+if os.path.isfile('env.py'):
+    import env
 
 
 # INTERNAL:
@@ -36,14 +37,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2glapt69bmym1vm5nt34m#j2&d(--%e&#af(d*=4$3rtxwd6cb'
-#SECRET_KEY = os.environ.get('SECRET_KEY', '')
+# SECRET_KEY = 'django-insecure-2glapt69bmym1vm5nt34m#j2&d(--%e&#af(d*=4$3rtxwd6cb'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 #DEBUG = 1
 
-ALLOWED_HOSTS = ['pp5-ci-gdec.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'pp5-ci-gdec.herokuapp.com',
+    'https://pp5-ci-gdec.herokuapp.com/',
+    'localhost']
 
 
 # Application definition
@@ -241,7 +245,8 @@ STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # For development:
-if 'DEVELOPMENT' in os.environ:
+#if 'DEVELOPMENT' in os.environ:
+if DEBUG == 1:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'gdec@gdectestexample.com'
 

@@ -149,7 +149,8 @@ def product_detail(request, product_id):
     comments = ProductComment.objects.filter(product=product,
                                              active=True)
     user_has_commented = False
-    if (request.user.is_authenticated):        
+    print(request.user)
+    if (request.user.is_authenticated or request.user == None):        
         if(ProductComment.objects.filter(product=product, user=request.user, active=True)):
             user_has_commented = True
 
@@ -337,5 +338,12 @@ def compute_product_rating_value (product_id):
     for comment in comments:
         rate += comment.product_rating_value
         i += 1
-    
-    return (rate/i)
+    if i == 0:
+        rate = product.rating # If no comments, read default
+    else:
+        rate = rate/i
+    print(i)
+    print(rate)
+
+
+    return (rate)

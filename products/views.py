@@ -148,10 +148,15 @@ def product_detail(request, product_id):
 
     comments = ProductComment.objects.filter(product=product,
                                              active=True)
+
+    product.rating = compute_product_rating_value(product_id)
+    product.save()
+
     user_has_commented = False
+    print("User: ")
     print(request.user)
-    if (request.user.is_authenticated or request.user == None):        
-        if(ProductComment.objects.filter(product=product, user=request.user, active=True)):
+    if (request.user.is_authenticated):        
+        if(ProductComment.objects.filter(product=product, user=request.user, active=True)  or request.user == None):
             user_has_commented = True
 
     comment_form = ProductCommentForm(request.POST)
@@ -271,20 +276,32 @@ def product_review(request, product_id):
         product = get_object_or_404(Product, pk=product_id)
         comments = ProductComment.objects.filter(product=product,
                                                  active=True)
+        
 
         comment_form = ProductCommentForm(request.POST)
 
         if comment_form.is_valid():
 
+            
+
+            #comment_form.user = request.user
+            
+
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
             # Assign the current post to the comment
             new_comment.product = product
+
+            # Save user that is commenting
+            print("User in product review: ")
+            new_comment.user = request.user
+            print(new_comment.user)
+
             # Save the comment to the database
             new_comment.save()
 
-            product.rating = compute_product_rating_value(product_id)
-            product.save()
+            #product.rating = compute_product_rating_value(product_id)
+            #product.save()
             
 
             context = {'product': product,
@@ -318,6 +335,8 @@ def delete_product_review(request, product_id, comment_id):
 
     comment_to_delete = get_object_or_404(ProductComment, pk=comment_id)
     comment_to_delete.delete()
+    product.rating = compute_product_rating_value(product_id)
+    product.save()
     messages.success(request, 'Comment deleted!')
    
     return redirect(reverse('product_detail', args=[product_id]))
@@ -333,17 +352,18 @@ def compute_product_rating_value (product_id):
     comments = ProductComment.objects.filter(product=product,
                                                  active=True)
 
+    print(comments)
     rate = 0
     i = 0
     for comment in comments:
-        rate += comment.product_rating_value
-        i += 1
+        rate += (comment.product_rating_value)
+        i += (i)
     if i == 0:
         rate = product.rating # If no comments, read default
     else:
         rate = rate/i
-    print(i)
-    print(rate)
+    print("i: " + str(i))
+    print("Rate: " + str(rate))
 
 
     return (rate)

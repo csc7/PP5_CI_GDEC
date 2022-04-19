@@ -48,10 +48,10 @@ def bag_contents(request):
 
     # Initialize bag item and costs amounts
     bag_items = []
-    total = 0
-    product_count = 0
+    order_total = 0
+    order_product_count = 0
     bag = request.session.get('bag', {})
-    
+    print(bag)
 
     # Iterate elements in the bag, accounting for item, quantity, product
     # and, if applies, resolution 
@@ -59,8 +59,8 @@ def bag_contents(request):
         if isinstance(item_data, int):
             
             product = get_object_or_404(Product, pk=item_id)
-            total += item_data * product.price
-            product_count += item_data
+            order_total += item_data * product.price
+            order_product_count += item_data
             bag_items.append({
                 'item_id': item_id,
                 'quantity': item_data,
@@ -69,8 +69,8 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for resolution, quantity in item_data['items_by_resolution'].items():
-                total += quantity * product.price
-                product_count += quantity
+                order_total += quantity * product.price
+                order_product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': quantity,
@@ -82,25 +82,37 @@ def bag_contents(request):
     #    print("OK")
 
     # Compute grand total
-    if total < settings.DISCOUNT_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+    if order_total < settings.DISCOUNT_THRESHOLD:
+        delivery = order_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
         delivery = delivery * cancel_delivery_cost_factor
         discount = 0
-        delta_for_discount = settings.DISCOUNT_THRESHOLD - total
+        delta_for_discount = Decimal(settings.DISCOUNT_THRESHOLD) - order_total
+        
     else:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+        delivery = order_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
         delivery = delivery * cancel_delivery_cost_factor
-        discount = total * Decimal(settings.DISCOUNT_PERCENTAGE/100)
+        discount = order_total * Decimal(settings.DISCOUNT_PERCENTAGE/100)
         delta_for_discount = 0
+        
+    grand_total = order_total + delivery - discount
     
-    grand_total = total + delivery - discount
+    print("Total: ")
+    print(order_total)
+    print("Delivery: ")
+    print(delivery)
+    print("Discount: ")
+    print(discount)
+    print("Grand Total: ")
+    print(grand_total)
+    print("Delta for discount: ")
+    print(delta_for_discount)
     
 
     # Return context to bag template
     context = {
         'bag_items': bag_items,
-        'total': total,
-        'product_count': product_count,
+        'order_total': order_total,
+        'order_product_count': order_product_count,
         'delivery': delivery,
         'delta_for_discount': delta_for_discount,
         'discount_threshold': settings.DISCOUNT_THRESHOLD,

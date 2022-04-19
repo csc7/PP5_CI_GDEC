@@ -169,7 +169,7 @@
                         <tr>
                             <!-- Bottom of table, with totals, it is the same for all screen sizes -->
                             <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                <h6><strong>Bag Total: ${{ order_total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                 <form id="cancel_delivery_cost" class="form update-form" method="POST" action="{% url 'view_bag' %}">
                                     {% csrf_token %}                                    
@@ -210,6 +210,7 @@
                             </td>
                         </tr>
                     </table>
+                    <pre>{% filter force_escape %}{% debug %}{% endfilter %}</pre>
                 </div>
             {% else %}
                 <!-- Inform the user if there are no items in the bag -->

@@ -22,7 +22,7 @@
   </div>
   {% if grand_total and not on_profile_page %}
     
-      <p class="bg-white text-dark py-1">Your Bag has ({{ product_count }}) products (showing here up to the last 5 items in the bag)</p>
+      <p class="bg-white text-dark py-1">Your Bag has ({{ order_product_count }}) products (showing here up to the last 5 items in the bag)</p>
       <div class="bag-notification-wrapper">
         
           <!-- Show last 4 items to avoid toast getting higher than body when bag contains too many items; 

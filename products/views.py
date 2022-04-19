@@ -221,6 +221,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product successfully updated!')
+            
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to edit product. Please ensure the form is valid.')
@@ -233,6 +234,7 @@ def edit_product(request, product_id):
     context = {
         'form': form,
         'product': product,
+        'do_not_show_bag_in_toast': True,
     }
 
     return render(request, template, context)
@@ -251,7 +253,6 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
 
-    
 
     return redirect(reverse('products'))
 
@@ -340,7 +341,7 @@ def delete_product_review(request, product_id, comment_id):
     product.save()
 
     messages.success(request, 'Comment deleted!')
-   
+  
     return redirect(reverse('product_detail', args=[product_id]))
 
 

@@ -20,7 +20,7 @@
           <hr class="mt-1 mb-3">
       </div>
   </div>
-  {% if grand_total and not on_profile_page %}
+  {% if grand_total and 'show_bag_in_toast' in message.tags %}
     
       <p class="bg-white text-dark py-1">Your Bag has ({{ order_product_count }}) products (showing here up to the last 5 items in the bag)</p>
       <div class="bag-notification-wrapper">

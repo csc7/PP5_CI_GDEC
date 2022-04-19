@@ -52,13 +52,13 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if resolution in bag[item_id]['items_by_resolution'].keys():
                 bag[item_id]['items_by_resolution'][resolution] += quantity
-                messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}')
+                messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}', extra_tags='show_bag_in_toast')
             else:
                 bag[item_id]['items_by_resolution'][resolution] = quantity
-                messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the bag')
+                messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the bag', extra_tags='show_bag_in_toast')
         else:
             bag[item_id] = {'items_by_resolution': {resolution: quantity}}
-            messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the bag')
+            messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the bag', extra_tags='show_bag_in_toast')
             
     # If product does not have resolution, just add it according to
     # user's request.
@@ -104,13 +104,13 @@ def adjust_bag(request, item_id):
     if resolution:
         if quantity > 0:
             bag[item_id]['items_by_resolution'][resolution] = quantity
-            messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}')
+            messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}', extra_tags='show_bag_in_toast')
             print(bag[item_id])
         else:
             del bag[item_id]['items_by_resolution'][resolution]
             if not bag[item_id]['items_by_resolution']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed {resolution.upper()} resolution for {product.name} from the bag')
+            messages.success(request, f'Removed {resolution.upper()} resolution for {product.name} from the bag', extra_tags='show_bag_in_toast')
 
     # If product does not have resolution, just update it according to
     # user's request.
@@ -119,12 +119,12 @@ def adjust_bag(request, item_id):
         if quantity > 0:               
             
             bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {product.name}')
+            messages.success(request, f'Updated {product.name} quantity to {product.name}', extra_tags='show_bag_in_toast')
             print(bag[item_id])
 
         else:
             bag.pop(item_id)
-            messages.success(request, f'{product.name} removed from the bag')
+            messages.success(request, f'{product.name} removed from the bag', extra_tags='show_bag_in_toast')
             
     # Update bag to current session
     request.session['bag'] = bag
@@ -153,14 +153,14 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_resolution'][resolution]
             if not bag[item_id]['items_by_resolution']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed {resolution.upper()} resolution for {product.name} from the bag')
+            messages.success(request, f'Removed {resolution.upper()} resolution for {product.name} from the bag', extra_tags='show_bag_in_toast')
         
         # If product does not have resolution, just delete it according to
         # user's request.
         # Alert user with Django message.
         else:
             bag.pop(item_id)
-            messages.success(request, f'{product.name} removed from the bag')
+            messages.success(request, f'{product.name} removed from the bag', extra_tags='show_bag_in_toast')
 
         # Update bag to current session
         request.session['bag'] = bag

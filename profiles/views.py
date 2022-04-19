@@ -46,9 +46,10 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True # To avoid showing bag in success message
-                                # after updating profile details, variable
-                                # sent to success message toast
+        'do_not_show_bag_in_toast': True # To avoid showing bag in success
+                                         # message after updating profile
+                                         # details, variable sent to success
+                                         # message toast
     }
 
     return render(request, template, context)

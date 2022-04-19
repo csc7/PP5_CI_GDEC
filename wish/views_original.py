@@ -18,7 +18,6 @@ from products.models import Product
 from checkout.models import OrderLineItem
 from profiles.models import UserProfile
 from wish.models import WishList
-from bag.templatetags.bag_tools import calc_subtotal
 
 ###############################################################################
 
@@ -57,60 +56,53 @@ def view_wish_list(request):
 # View for adding products to the wish list
 def add_to_wish_list(request, item_id):
     """ Add items to the wish list """
-    
-    # Read product being added
-    product = get_object_or_404(Product, pk=item_id)    
 
-    # Initialize resolution and check if product has already one
+    # Read wish list content
+    product = get_object_or_404(Product, pk=item_id)
+
+    quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
     resolution = None
+    # Consider, initially, that user wants a delivery
+    digital = 0
+
+    # Check if product has resolution and read it
     if 'product_resolution' in request.POST:
         resolution = request.POST['product_resolution']
-        print(resolution)
 
-    # Read user profile
-    profile = get_object_or_404(UserProfile, user=request.user)
+    # Get current session of the wish list
+    wish_list = request.session.get('wish_list', {})
 
-    # Read quantity, URL to redirect and compute line_item_total
-    quantity = int(request.POST.get('quantity'))   
-    redirect_url = request.POST.get('redirect_url')
-    line_item_total = calc_subtotal(product.price, quantity)
-    items_in_wish_list = WishList.objects.all()
-    
-    # Create or update new wish item
-    if product.id in items_in_wish_list.values_list('product', flat=True): 
-        existent_wish_item = WishList.objects.filter(product=product.id)
-        existent_wish_item_resolution = existent_wish_item.values_list(
-                'product_resolution', flat=True
-        )
-        existent_wish_item_quantity = existent_wish_item.values_list(
-                'quantity', flat=True
-        )
-        print(resolution)
-        print(existent_wish_item_resolution[0])
-        print(quantity)
-        print(existent_wish_item_quantity[0])
-        if (existent_wish_item_resolution[0] == resolution and 
-                existent_wish_item_quantity[0] == quantity):
-            # Record exists
-            print("Product, resolution and quantity already in wish list")
+    # Check if product has resolution and consider it as a product (to be
+    # added) if requested by user.
+    # Alert user with Django message.
+    if resolution:
+        if item_id in list(wish_list.keys()):
+            if resolution in wish_list[item_id]['items_by_resolution'].keys():
+                wish_list[item_id]['items_by_resolution'][resolution] += quantity
+                messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}')
+            else:
+                wish_list[item_id]['items_by_resolution'][resolution] = quantity
+                messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the wish list')
         else:
-            # Update record
-            new_wish_item = WishList.objects.get(user_profile=profile,
-                                        product=product)
-            new_wish_item.product_resolution = resolution
-            new_wish_item.quantity = quantity
-            new_wish_item.lineitem_total = line_item_total
-            print("Record updated")
-            new_wish_item.save()
+            wish_list[item_id] = {'items_by_resolution': {resolution: quantity}}
+            messages.success(request, f'{resolution.upper()} resolution for {product.name} added to the wish list')
+            
+    # If product does not have resolution, just add it according to
+    # user's request.
+    # Alert user with Django message.
     else:
-        new_wish_item = WishList.objects.create(user_profile=profile,
-                                        product=product,
-                                        product_resolution=resolution,
-                                        quantity=quantity,
-                                        lineitem_total=line_item_total,)
-        print("Record created")
-        new_wish_item.save()
+        if item_id in list(wish_list.keys()):
+            wish_list[item_id] += quantity
+            messages.success(request, f'Updated {product.name} quantity to {wish_list[item_id]}')
+        else:
+            wish_list[item_id] = quantity
+            messages.success(request, f'{product.name} added to the wish list')
+            
+    # Add wish list to current session
+    request.session['wish_list'] = wish_list
     
+
     return redirect(redirect_url)
 
 

@@ -95,18 +95,6 @@ def bag_contents(request):
         delta_for_discount = 0
         
     grand_total = order_total + delivery - discount
-    
-    print("Total: ")
-    print(order_total)
-    print("Delivery: ")
-    print(delivery)
-    print("Discount: ")
-    print(discount)
-    print("Grand Total: ")
-    print(grand_total)
-    print("Delta for discount: ")
-    print(delta_for_discount)
-    
 
     # Return context to bag template
     context = {

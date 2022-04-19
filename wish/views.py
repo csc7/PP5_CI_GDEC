@@ -28,23 +28,21 @@ def view_wish_list(request):
     profile = get_object_or_404(UserProfile, user=request.user)
     print("Profile: ")
     print (profile)
-    user_orders = profile.orders.all()
+    user_wish_orders = profile.orders.all()
     #user_orders_ids = user_orders.id
     
-    print(user_orders)
+    print(user_wish_orders)
     #products_in_history_orders = {}
-    for user_order in user_orders:
+    for user_wish_order in user_wish_orders:
         
-        print(user_order)
+        print(user_wish_order)
 
-    products_in_history_orders = OrderLineItem.objects.filter(order=user_order)
-    #products_in_history_orders = OrderLineItem.objects.all()
-    a = products_in_history_orders.values_list('product_id', flat=True)
-    print(a)
-        #print(products_in_history_orders[user_order])
+    products_in_wish_orders = OrderLineItem.objects.filter(order=user_wish_orders)
+    products_in_wish_orders = OrderLineItem.objects.all()
+    products_to_show_in_wish_list = products_in_wish_orders.values_list('product_id', flat=True)
 
     context = {
-        'products_in_history_orders': a,
+        'products_in_wish_orders': products_to_show_in_wish_list,
     }
 
     return render(request, 'wish/wish_list.html', context)

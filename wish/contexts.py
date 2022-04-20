@@ -62,9 +62,9 @@ def wish_list_contents(request):
 
     # Return context to bag template
     context = {
-        'wish_list_items': wish_list_items,
-        'total': total,
-        'product_count': product_count,
+        'wish_list_items_': wish_list_items,
+        'total_': total,
+        'product_count_': product_count,
     }
 
     return context

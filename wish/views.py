@@ -12,6 +12,7 @@ Django views for the wish list app
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import HttpResponse, get_object_or_404
 from django.contrib import messages
+import json
 
 # INTERNAL:
 from products.models import Product
@@ -37,6 +38,7 @@ def view_wish_list(request):
     products_in_wish_orders = OrderLineItem.objects.all()
     products_to_show_in_wish_list = wish_list_items.values_list('product_id', flat=True)
     
+    print(wish_list_items.values())
     context = {
         'products_in_wish_orders': wish_list_items,
     }
@@ -79,37 +81,44 @@ def add_to_wish_list(request, item_id):
         existent_wish_item_resolution = existent_wish_item.values_list(
                 'product_resolution', flat=True
         )
-        existent_wish_item_quantity = existent_wish_item.values_list(
-                'quantity', flat=True
-        )
+        existent_wish_item_quantity = int(request.POST.get('quantity'))
         print(resolution)
         print(existent_wish_item_resolution[0])
         print(quantity)
-        print(existent_wish_item_quantity[0])
+        print(existent_wish_item_quantity)
         if (existent_wish_item_resolution[0] == resolution and 
-                existent_wish_item_quantity[0] == quantity):
+                existent_wish_item_quantity == quantity):
             # Record exists
-            print("Product, resolution and quantity already in wish list")
+            print("Nothing to update")
+        elif (existent_wish_item_resolution[0] == resolution):
+            update_wish_item = WishList.objects.get(user_profile=profile,
+                                        product=product)
+            update_wish_item.quantity = quantity
+            print("Quantity updated")
+            update_wish_item.save()
         else:
             # Update record
-            new_wish_item = WishList.objects.get(user_profile=profile,
-                                        product=product)
-            new_wish_item.product_resolution = resolution
-            new_wish_item.quantity = quantity
-            new_wish_item.lineitem_total = line_item_total
+            new_wish_item_quantity = int(request.POST.get('quantity'))
+            new_wish_item_resolution = request.POST.get('product_resolution')
+            new_wish_item = WishList.objects.create(user_profile=profile,
+                                        product=product,
+                                        product_resolution=new_wish_item_resolution,
+                                        quantity=new_wish_item_quantity,
+                                        lineitem_total=line_item_total
+                                        )
             print("Record updated")
-            new_wish_item.save()
+
     else:
+        resolution = request.POST['product_resolution']
+        print(resolution)
         new_wish_item = WishList.objects.create(user_profile=profile,
                                         product=product,
                                         product_resolution=resolution,
                                         quantity=quantity,
-                                        lineitem_total=line_item_total,)
+                                        lineitem_total=line_item_total)
         print("Record created")
         new_wish_item.save()
     
-    #request.session['wish_list'] = wish_list
-
     return redirect(redirect_url)
 
 
@@ -118,22 +127,59 @@ def adjust_wish_list(request, item_id):
     """Adjust the quantity of items in the wish list"""
 
     # Read wish list content
-    item_to_delete = get_object_or_404(WishList, pk=item_id)
-    print(item_to_delete)
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    # Read values
+    temp_reading = WishList.objects.filter(user_profile=profile,
+                                        product=item_id)
+    resolution = temp_reading.values_list('product_resolution', flat=True)[0]
+    quantity = int(request.POST.get('quantity'))
+
+    # Get record and update
+    wish_item_to_update = WishList.objects.get(user_profile=profile,
+                                        product=item_id,
+                                        product_resolution=resolution)
+
+    # Update record
+    wish_item_to_update.quantity = quantity
+    wish_item_to_update.save()    
 
     return redirect(reverse('view_wish_list'))
 
 
-
-def remove_from_wish_list(request, item_id):
+def remove_from_wish_list(request):
     """Remove items from the wish_list"""
+    resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+    ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
+    print("AJAX resolution:")
+    print(resolution)
+    print("AJAX ID:")
+    print(ajax_id)
 
     try:
-        item_to_delete = get_object_or_404(WishList, pk=item_id)
-        print(item_to_delete)
-        
+        # Read wish list content
+        profile = get_object_or_404(UserProfile, user=request.user)
+
+        # Delete record
+        if (resolution == 'low' or resolution == 'medium' or 
+                resolution == 'high'):
+            wish_item_to_delete = WishList.objects.get(
+                user_profile=profile,
+                product=ajax_id,
+                product_resolution=resolution
+            )
+        else:
+            wish_item_to_delete = WishList.objects.get(
+                user_profile=profile,
+                product=ajax_id
+            )
+
+        # Update record
+        wish_item_to_delete.delete()
 
         return HttpResponse(status=200)
+        #return redirect(reverse('view_wish_list'))
+        #return render(request, 'wish/wish_list.html')
 
     # Show an error if item cannot be removed.
     # Alert user with Django message.

@@ -53,7 +53,7 @@
                                 <td class="py-3">
                                     <!-- Include resolution if applicable -->
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
+                                    <p class="my-0 resolution-in-wish-list_{{ item.product.id }}">Resolution: {% if item.product.resolution %}{{ item.product_resolution|upper }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     <p></p>
                                     {% for product in products_in_wish_orders %}
@@ -65,7 +65,7 @@
                                 <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
-                                <form id="form-wish-list-large-screen" class="form update-form-wish-list" method="POST" action="{% url 'adjust_wish_list' item.product_id %}">
+                                <form id="form-wish-list-large-screen" class="form update-form-wish-list" method="POST" action="{% url 'adjust_wish_list' item.product.id %}">
                                 {% csrf_token %}
                                 <td class="py-3 quantity-control-width text-center">
                                     <!-- Update wish list if requested -->                                    
@@ -96,7 +96,7 @@
                                             </div>
                                         </div>                                   
                                         <a class="update-link-wish-list text-info w-100 text-center float-right"><small>Update Quantity</small></a>
-                                        <a class="remove-item-wish-list text-danger w-100 text-center float-right" id="remove-from-wish-list-large-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
+                                        <a class="remove-item-wish-list text-danger w-100 text-center float-right" id="remove-from-wish-list-large-screen_{{ item.product.id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
 
                                 </td>
                                 <td class="py-3 text-center">
@@ -139,7 +139,7 @@
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
-                            <form id="form-wish-list-small-screen" class="form update-form-wish-list" method="POST" action="{% url 'adjust_wish_list' item.product_id %}">
+                            <form id="form-wish-list-small-screen" class="form update-form-wish-list" method="POST" action="{% url 'adjust_wish_list' item.product.id %}">
                                 {% csrf_token %}
                             <tr class="d-table-row d-md-none">
                                 <td class="py-3 w-25" colspan="2">

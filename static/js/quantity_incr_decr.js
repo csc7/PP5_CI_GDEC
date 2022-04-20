@@ -77,23 +77,62 @@ $('.update-link-wish-list').click(function(e) {
 })
 
 // Remove item and reload on click for the wish list in large screens
-console.log($(this).attr('id'))
-$('.remove-item-wish-list').click(function(e) {
-    //var csrfToken = "{{ csrf_token }}";
-    var itemId;
+//console.log($(this).attr('id'))
+//$('.remove-item-wish-list').click(function(e) {
+//    //var csrfToken = "{{ csrf_token }}";
+//    var itemId;
+//    if ($(window).width() < 768) {
+//        itemId = $(this).attr('id').split('remove-from-wish-list-small-screen_')[1];
+//    } else {
+//        itemId = $(this).attr('id').split('remove-from-wish-list-large-screen_')[1];
+//    }
+//
+//    var resolution = $(this).data('product_resolution');
+//    var url = `/wish_list/remove_from_wish_list/${itemId}/`;
+//    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
+//    $.post(url, data)
+//     .done(function() {
+//         location.reload();
+//     });
+//})
+
+
+// Send data to database using AJAX
+//$("#send-weather-data-button").click (e => sendWeatherData(e, true));
+$(document).on("click", ".remove-item-wish-list", function() {
+    
+    var full_itemId = $(this).attr('id');
+    
+    console.log(full_itemId);
     if ($(window).width() < 768) {
-        itemId = $(this).attr('id').split('remove-from-wish-list-small-screen_')[1];
+        itemId = full_itemId.split('remove-from-wish-list-small-screen_')[1];
     } else {
-        itemId = $(this).attr('id').split('remove-from-wish-list-large-screen_')[1];
-    }    
-    var resolution = $(this).data('product_resolution');
-    var url = `/wish_list/remove_from_wish_list/${itemId}/`;
-    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
-    $.post(url, data)
-     .done(function() {
-         location.reload();
-     });
-})
+        itemId = full_itemId.split('remove-from-wish-list-large-screen_')[1];
+    }
+
+    // Read resolution, if available, of item in wish list
+    resolutionText = $(this).closest('tr').children("td:nth-child(2)").children("p:nth-child(2)").text()
+    resolution = resolutionText.split(' ')[1]
+    console.log(resolution);
+    //#wish-list-content > div > table > tbody > tr:nth-child(26) > td:nth-child(2) > p.my-0.resolution-in-wish-list_121
+    
+    // Send AJAX post to remove_from_wish_list in views.py of wish app
+    $.ajax({
+        type: 'POST',        
+        url: '/wish_list/remove_from_wish_list/',
+        //dataType: 'json',
+        data: {
+            'csrfmiddlewaretoken': csrfToken,
+            'itemId': itemId,
+            'resolution' : resolution},
+        success: function () {
+             location.reload();
+        }
+    });
+});
+
+
+
 
 console.log("Incr/Decr JS loaded");
 

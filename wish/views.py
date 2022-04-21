@@ -32,7 +32,6 @@ def view_wish_list(request):
     wish_list_items = WishList.objects.filter(user_profile=profile)
 
     user_wish_orders = profile.orders.all()
-    #products_in_wish_orders = OrderLineItem.objects.filter(order=user_wish_orders)
     products_in_wish_orders = OrderLineItem.objects.filter(order=user_wish_orders)
     products_in_wish_orders = OrderLineItem.objects.all()
     products_to_show_in_wish_list = wish_list_items.values_list('product_id', flat=True)
@@ -124,7 +123,13 @@ def add_to_wish_list(request, item_id):
 def adjust_wish_list(request):
     """Adjust the quantity of items in the wish list"""
 
-    resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+    # Just check that AJAX post does not add "\n" at the end (last character)
+    # is an "n", remember AJAX post inclue quotes ("") so first and last
+    # characters need to be removed ([1:1] below)
+    if (json.dumps(request.POST.get('resolution'))[-2].lower() == 'n'):
+        resolution = json.dumps(request.POST.get('resolution'))[1:-3].lower()
+    else:
+        resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
     quantity = json.dumps(request.POST.get('quantity'))[1:-1]
     print(resolution)
@@ -136,9 +141,6 @@ def adjust_wish_list(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     # Read values
-    temp_reading = WishList.objects.filter(user_profile=profile,
-                                        product=ajax_id,
-                                        product_resolution=resolution)
     #resolution = temp_reading.values_list('product_resolution', flat=True)[0]
 
     #quantity = int(request.POST.get('quantity'))
@@ -148,18 +150,19 @@ def adjust_wish_list(request):
                 resolution == 'high'):
     # Get record and update
         wish_item_to_update = WishList.objects.get(user_profile=profile,
-                                            product=ajax_id,
-                                            product_resolution=resolution)
+                                        product=ajax_id,
+                                        product_resolution=resolution)
         # Update record
         wish_item_to_update.quantity = quantity
-        #wish_item_to_update.resolution = resolution
         wish_item_to_update.save()
+        #wish_item_to_update.resolution = resolution
+
+
     else:
         wish_item_to_update = WishList.objects.get(user_profile=profile,
-                                            product=ajax_id)
+                                        product=ajax_id)
         # Update record
         wish_item_to_update.quantity = quantity
-        #wish_item_to_update.resolution = resolution
         wish_item_to_update.save()
 
     #return redirect(reverse('view_wish_list'))
@@ -191,6 +194,7 @@ def remove_from_wish_list(request):
 
         # Update record
         wish_item_to_delete.delete()
+        WishList.objects.all().order_by('-id')
 
         return HttpResponse(status=200)
         #return redirect(reverse('view_wish_list'))

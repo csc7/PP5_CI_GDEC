@@ -98,6 +98,8 @@ $('.update-link-wish-list').click(function(e) {
         resolution = resolutionText.split(' ')[0];
         console.log(resolution);
 
+        toReload = $(this).closest('tr');
+
     } else {
 
         itemId = full_itemId.split('update-from-wish-list-large-screen_')[1];
@@ -107,6 +109,8 @@ $('.update-link-wish-list').click(function(e) {
         resolutionText = $(this).closest('tr').children("td:nth-child(2)").children("p:nth-child(2)").text();
         resolution = resolutionText.split(' ')[1];
         console.log(resolution);
+
+        toReload = $(this).closest('tr');
     }
 
     // Send AJAX post to adjust_wish_list in views.py of wish app, with ID and resolution

@@ -7,6 +7,12 @@ function handleEnableDisable(itemId) {
     var plusDisabled = currentValue > 98;
     $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
     $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+
+    //$(`#decrement-qty_${itemId}_low`).prop('disabled', minusDisabled);
+    //$(`#decrement-qty_${itemId}_medium`).prop('disabled', minusDisabled);
+    //$(`#decrement-qty_${itemId}_high`).prop('disabled', minusDisabled);
+
+
 }
 
 // Ensure proper enabling/disabling of all inputs on page load
@@ -24,29 +30,61 @@ $('.qty_input').change(function() {
 
 // Increment quantity
 $('.increment-qty').click(function(e) {
-   e.preventDefault();
-   var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-   var currentValue = parseInt($(closestInput).val());
-   $(closestInput).val(currentValue + 1);
-   var itemId = $(this).data('item_id');
-   handleEnableDisable(itemId);
+    e.preventDefault();
+    var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+    var currentValue = parseInt($(closestInput).val());
+    $(closestInput).val(currentValue + 1);
+    var itemId = $(this).data('item_id');
+
+    // For bag
+    handleEnableDisable(itemId);
+
+    // For wish list
+    if (currentValue <= 2) {
+        var itemId2 = $(this).closest('td').find('button')[0];
+        $(`#${itemId2.id}`).prop('disabled',false);
+    }
+    if (currentValue >=98) {
+        var itemId2 = $(this).closest('td').find('button')[1];
+        $(`#${itemId2.id}`).prop('disabled',true);
+        console.log(itemId2.id);
+    }
 });
+
+
 
 // Decrement quantity
 $('.decrement-qty').click(function(e) {
-   e.preventDefault();
-   var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-   var currentValue = parseInt($(closestInput).val());
-   $(closestInput).val(currentValue - 1);
-   var itemId = $(this).data('item_id');
-   handleEnableDisable(itemId);
+    e.preventDefault();
+    var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+    var currentValue = parseInt($(closestInput).val());
+    $(closestInput).val(currentValue - 1);
+    var itemId = $(this).data('item_id');
+
+    // For bag
+    handleEnableDisable(itemId);
+   
+    // For wish list
+    if (currentValue >= 98) {
+        var itemId2 = $(this).closest('td').find('button')[1];
+        $(`#${itemId2.id}`).prop('disabled',false);
+    }
+    if (currentValue <=2) {
+        var itemId2 = $(this).closest('td').find('button')[0];
+        $(`#${itemId2.id}`).prop('disabled',true);
+        console.log(itemId2.id);
+    }
+    
+
 });
+
 
 // Update quantity on click for the bag
 $('.update-link').click(function(e) {
     var form = $(this).prev('.update-form');
     form.submit();
 })
+
 
 // Remove item and reload on click the bag
 $('.remove-item').click(function(e) {
@@ -65,8 +103,6 @@ $('.remove-item').click(function(e) {
          location.reload();
      });
 })
-
-
 
 
 
@@ -98,8 +134,6 @@ $('.update-link-wish-list').click(function(e) {
         resolution = resolutionText.split(' ')[0];
         console.log(resolution);
 
-        toReload = $(this).closest('tr');
-
     } else {
 
         itemId = full_itemId.split('update-from-wish-list-large-screen_')[1];
@@ -110,7 +144,6 @@ $('.update-link-wish-list').click(function(e) {
         resolution = resolutionText.split(' ')[1];
         console.log(resolution);
 
-        toReload = $(this).closest('tr');
     }
 
     // Send AJAX post to adjust_wish_list in views.py of wish app, with ID and resolution

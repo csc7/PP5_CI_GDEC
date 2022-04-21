@@ -38,7 +38,7 @@ def view_wish_list(request):
     products_to_show_in_wish_list = wish_list_items.values_list('product_id', flat=True)
     
     print(wish_list_items.values())
-    
+
     context = {
         'products_in_wish_orders': wish_list_items,
     }
@@ -144,15 +144,23 @@ def adjust_wish_list(request):
     #quantity = int(request.POST.get('quantity'))
     #print(quantity)
 
+    if (resolution == 'low' or resolution == 'medium' or 
+                resolution == 'high'):
     # Get record and update
-    wish_item_to_update = WishList.objects.get(user_profile=profile,
-                                        product=ajax_id,
-                                        product_resolution=resolution)
-
-    # Update record
-    wish_item_to_update.quantity = quantity
-    #wish_item_to_update.resolution = resolution
-    wish_item_to_update.save()    
+        wish_item_to_update = WishList.objects.get(user_profile=profile,
+                                            product=ajax_id,
+                                            product_resolution=resolution)
+        # Update record
+        wish_item_to_update.quantity = quantity
+        #wish_item_to_update.resolution = resolution
+        wish_item_to_update.save()
+    else:
+        wish_item_to_update = WishList.objects.get(user_profile=profile,
+                                            product=ajax_id)
+        # Update record
+        wish_item_to_update.quantity = quantity
+        #wish_item_to_update.resolution = resolution
+        wish_item_to_update.save()
 
     #return redirect(reverse('view_wish_list'))
     return HttpResponse(status=200)

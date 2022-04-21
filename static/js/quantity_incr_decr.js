@@ -77,7 +77,8 @@ $('.update-link-wish-list').click(function(e) {
     console.log(full_itemId);
     var resolutionText;
     var resolution;
-    var quantity = $(`#id_qty_${itemId}`).val();
+    //var quantity = parseInt($(`#id_qty_${itemId}`).val());
+    var quantity = $(this).closest('td').children().children().children("input").val();
     console.log(quantity);
 
     

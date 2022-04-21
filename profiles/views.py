@@ -9,7 +9,7 @@ Django views for the checkout app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 
 # INTERNAL:
@@ -26,9 +26,11 @@ from django.contrib.auth.decorators import login_required
 def profile(request):
     """ Display User Profile """
 
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+    #if not request.user.is_superuser:
+    #    messages.error(request, 'Sorry, only store owners can do that.')
+    #    return redirect(reverse('home'))
+
+
 
     profile = get_object_or_404(UserProfile, user=request.user)
 

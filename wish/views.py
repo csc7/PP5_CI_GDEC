@@ -32,8 +32,8 @@ def view_wish_list(request):
     wish_list_items = WishList.objects.filter(user_profile=profile)
 
     user_orders = profile.orders.all()
-    products_in_wish_orders = OrderLineItem.objects.filter(order=user_orders)
-    #products_in_wish_orders = OrderLineItem.objects.all()
+    #products_in_wish_orders = OrderLineItem.objects.filter(order=user_orders)
+    products_in_wish_orders = OrderLineItem.objects.all()
     products_to_label_in_wish_list = products_in_wish_orders.values_list('product_id', flat=True)
     
     print(wish_list_items.values())

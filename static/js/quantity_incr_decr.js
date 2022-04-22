@@ -81,28 +81,134 @@ $('.decrement-qty').click(function(e) {
 
 // Update quantity on click for the bag
 $('.update-link').click(function(e) {
-    var form = $(this).prev('.update-form');
-    form.submit();
+    //var form = $(this).prev('.update-form');
+    //form.submit();
+
+    var full_itemId = $(this).attr('id');
+    console.log(full_itemId);
+    var resolutionText;
+    var resolution;
+    //var quantity = parseInt($(`#id_qty_${itemId}`).val());
+    var quantity = $(this).closest('td').find('.qty_input').val();
+    
+
+    if ($(window).width() < 768) {        
+        itemId = full_itemId.split('update-bag-small-screen_')[1];
+        itemId = itemId.split('_')[0];
+        console.log(itemId);
+        console.log(quantity);
+        // Split text in different statges until resolution is achieved
+        // This way in order to guarantee we are accessing it regardless
+        // the amount of rows in the table for small screens, which does not
+        // contain all elements in the same row
+  
+        resolutionText = $(this).closest('tr').prevAll('tr').first().text();
+        resolutionText = resolutionText.split('Resolution: ')[1];
+        resolution = resolutionText.split(' ')[0];
+        url=`adjust/${itemId}/`
+        console.log(resolution);
+
+    } else {
+        itemId = full_itemId.split('update-bag-large-screen_')[1];
+        itemId = itemId.split('_')[0];
+        console.log(itemId);
+        console.log(quantity);
+        // Read resolution, if available, of item in wish list, by accessing
+        // the resolution in the same row (product) of the table
+        resolutionText = $(this).closest('tr').children("td:nth-child(2)").children("p:nth-child(2)").text();
+        resolution = resolutionText.split(' ')[1];
+        url=`adjust/${itemId}/`
+        console.log(resolution);
+
+    }
+
+    $.ajax({
+    type: 'POST',        
+    url: url,
+    //dataType: 'json',
+    data: {
+        'csrfmiddlewaretoken': csrfToken,
+        'itemId': itemId,
+        'resolution' : resolution,
+        'quantity': quantity},
+    success: function () {
+        window.location = '/bag/';
+    }
+    });
+
+
+
+
 })
 
 
 // Remove item and reload on click the bag
+//$('.remove-item').click(function(e) {
+//    //var csrfToken = "{{ csrf_token }}";
+//    var itemId;
+//    if ($(window).width() < 768) {
+//        itemId = $(this).attr('id').split('remove-from-bag-small-screen_')[1];
+//    } else {
+//        itemId = $(this).attr('id').split('remove-from-bag-large-screen_')[1];
+//    } 
+//    var resolution = $(this).data('product_resolution');
+//    var url = `/bag/remove/${itemId}/`;
+//    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
+//    $.post(url, data)
+//     .done(function() {
+//         location.reload();
+//     });
+//})
 $('.remove-item').click(function(e) {
-    //var csrfToken = "{{ csrf_token }}";
-    var itemId;
+    var full_itemId = $(this).attr('id');
+    console.log(full_itemId);
+    var resolutionText;
+    var resolution;
+
     if ($(window).width() < 768) {
-        itemId = $(this).attr('id').split('remove-from-bag-small-screen_')[1];
+        itemId = full_itemId.split('remove-from-bag-small-screen_')[1];
+        itemId = itemId.split('_')[0];
+        // Split text in different statges until resolution is achieved
+        // This way in order to guarantee we are accessing it regardless
+        // the amount of rows in the table for small screens, which does not
+        // contain all elements in the same row
+        console.log(itemId);
+        resolutionText = $(this).closest('tr').prevAll('tr').first().text();
+        resolutionText = resolutionText.split('Resolution: ')[1];
+        resolution = resolutionText.split(' ')[0];
+        url=`remove/${itemId}/`
+        console.log(resolution);
     } else {
-        itemId = $(this).attr('id').split('remove-from-bag-large-screen_')[1];
-    } 
-    var resolution = $(this).data('product_resolution');
-    var url = `/bag/remove/${itemId}/`;
-    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
-    $.post(url, data)
-     .done(function() {
-         location.reload();
-     });
+        itemId = full_itemId.split('remove-from-bag-large-screen_')[1];
+        itemId = itemId.split('_')[0];
+        console.log(itemId);
+        // Read resolution, if available, of item in wish list, by accessing
+        // the resolution in the same row (product) of the table
+        resolutionText = $(this).closest('tr').children("td:nth-child(2)").children("p:nth-child(2)").text();
+        resolution = resolutionText.split(' ')[1];
+        url=`remove/${itemId}/`
+        console.log(resolution);
+    }
+
+    
+    //#wish-list-content > div > table > tbody > tr:nth-child(26) > td:nth-child(2) > p.my-0.resolution-in-wish-list_121
+    
+    // Send AJAX post to remove_from_wish_list in views.py of wish app
+    $.ajax({
+        type: 'POST',        
+        url: url,
+        //dataType: 'json',
+        data: {
+            'csrfmiddlewaretoken': csrfToken,
+            'itemId': itemId,
+            'resolution' : resolution},
+        success: function () {
+             location.reload();
+        }
+    });
 })
+
+
 
 
 
@@ -114,7 +220,8 @@ $('.update-link-wish-list').click(function(e) {
     var resolutionText;
     var resolution;
     //var quantity = parseInt($(`#id_qty_${itemId}`).val());
-    var quantity = $(this).closest('td').children().children().children("input").val();
+    //var quantity = $(this).closest('td').children().children().children("input").val();
+    var quantity = $(this).closest('td').find('.qty_input').val();
     console.log(quantity);
 
     

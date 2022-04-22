@@ -30,6 +30,7 @@
                     <!-- Products table, repeat rows and but show only one of them based on screen size -->
                     <table class="table table-sm table-borderless dark-blue-font">                   
                         {% for item in products_in_wish_orders %}
+
                             <!-- Table for medium size (and larger) screens -->
                             <!-- Product details -->
                             <tr class="d-none d-md-table-row">
@@ -85,6 +86,9 @@
                                                         </span>
                                                     </button>
                                                 </div>
+                                                {% if item.product_resolution %}
+                                                    <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
+                                                {% endif %}
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
                                                     id="id_qty_{{ item.product.id }}">
@@ -96,9 +100,7 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                {% if item.product.resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
-                                                {% endif %}
+                                                
                                             </div>
                                         </div>                                   
                                         <a class="update-link-wish-list text-info w-100 text-center float-right" id="update-from-wish-list-large-screen_{{ item.product.id }}"><small>Update Quantity</small></a>
@@ -177,7 +179,7 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                    <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
                                                 {% endif %}
                                             </div>
                                         </div>

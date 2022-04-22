@@ -77,7 +77,8 @@ def bag_contents(request):
                     'product': product,
                     'resolution': resolution,
                 })
-
+            print("RESOLUTION: ")
+            print(bag_items)
     #if 'product_resolution' in request.POST:
     #    print("OK")
 

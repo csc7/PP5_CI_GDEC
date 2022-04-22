@@ -66,7 +66,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}_{{ item.resolution }}">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -74,24 +74,24 @@
                                                 </div>
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
-                                                    id="id_qty_{{ item.item_id }}">
+                                                    id="id_qty_{{ item.item_id }}_{{ item.resolution }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}_{{ item.resolution }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                    <input type="hidden" name="product_resolution" value="{{ item.product.resolution }}">
                                                 {% endif %}
                                             </div>
                                             
                                         </div>
                                     </form>
-                                    <a class="update-link text-info w-100 text-center float-right"><small>Update Quantity</small></a>
-                                    <a class="remove-item text-danger w-100 text-center float-right" id="remove-from-bag-large-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
+                                    <a class="update-link text-info w-100 text-center float-right" id="update-bag-large-screen_{{ item.item_id }}_{{ item.resolution }}"><small>Update Quantity</small></a>
+                                    <a class="remove-item text-danger w-100 text-center float-right" id="remove-from-bag-large-screen_{{ item.item_id }}_{{ item.resolution }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
                                 </td>
                                 <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -118,7 +118,7 @@
                                 <td class="py-3 w-50" colspan="2">
                                     <!-- Include resolution if applicable -->
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.Resolution }}{% else %}N/A{% endif %}</p>
+                                    <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.resolution|upper }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3" rowspan="2">
@@ -137,7 +137,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}_{{ item.resolution }}">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -145,10 +145,10 @@
                                                 </div>
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
-                                                    id="id_qty_{{ item.item_id }}">
+                                                    id="id_qty_{{ item.item_id }}_{{ item.resolution }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}_{{ item.resolution }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
@@ -160,8 +160,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info w-100 text-center float-right"><small>Update Quantity</small></a>
-                                    <a class="remove-item text-danger w-100 text-center float-right" id="remove-from-bag-small-screen_{{ item.item_id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
+                                    <a class="update-link text-info w-100 text-center float-right" id="update-bag-small-screen_{{ item.item_id }}_{{ item.resolution }}"><small>Update Quantity</small></a>
+                                    <a class="remove-item text-danger w-100 text-center float-right" id="remove-from-bag-small-screen_{{ item.item_id }}_{{ item.resolution }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
                                 </td>   
                             </tr>
                         {% endfor %}

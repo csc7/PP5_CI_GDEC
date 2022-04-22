@@ -12,6 +12,8 @@ Django views for the bag app
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import HttpResponse, get_object_or_404
 from django.contrib import messages
+import re
+import json
 
 # INTERNAL:
 from products.models import Product
@@ -30,6 +32,10 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add items to the purchasing bag """
 
+    if isinstance(item_id, int):
+        item_id = str(item_id)
+
+
     # Read bag content
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -40,10 +46,11 @@ def add_to_bag(request, item_id):
 
     # Check if product has resolution and read it
     if 'product_resolution' in request.POST:
-        resolution = request.POST['product_resolution']
+        resolution = request.POST['product_resolution'].lower()
 
     # Get current session bag
     bag = request.session.get('bag', {})
+
 
     # Check if product has resolution and consider it as a product (to be
     # added) if requested by user.
@@ -77,31 +84,67 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
+
 # View for updating the bag
 def adjust_bag(request, item_id):
     """Adjust the quantity of items in the purchasing bag"""
-
-    # Read bag content
-    product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    
     resolution = None
-    # Consider, initially, that user wants a delivery
-    digital = 0
 
-    # Check if product to update has resolution and read it
-    if 'product_resolution' in request.POST:
-        resolution = request.POST['product_resolution']
-        
-    #if 'digital' in request.POST:
-    #    print("OK")
+    # If not HTML request, it is AJAX request
+    requested_html = re.search(r'^text/html',
+                               request.META.get('HTTP_ACCEPT')
+                               )
+
+    if not requested_html:
+        # Just check that AJAX post does not add "\n" at the end (last character)
+        # is an "n", remember AJAX post inclue quotes ("") so first and last
+        # characters need to be removed ([1:1] below)
+        if (json.dumps(request.POST.get('resolution'))[-2].lower() == 'n'):
+            resolution = json.dumps(request.POST.get('resolution'))[1:-3].lower()
+            ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
+            quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
+            product = get_object_or_404(Product, pk=ajax_id)
+        else:
+            resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+            ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
+            quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
+            product = get_object_or_404(Product, pk=ajax_id)
+
+    # Read bag content if not from AJAX
+    else:
+        product = get_object_or_404(Product, pk=item_id)
+        quantity = int(request.POST.get('quantity'))
+    
+    print("BAG AJAX")
+    print(resolution)
+    print(ajax_id)
+    print(quantity)
+    # Consider, initially, that user wants a delivery
+    #digital = 0
 
     # Get current session bag
     bag = request.session.get('bag', {})
 
+    # Check if product to update has resolution and read it
+    # if not from AJAX
+    if 'product_resolution' in request.POST:
+        resolution = request.POST['product_resolution'].lower()
+        
+    #if 'digital' in request.POST:
+    #    print("OK")
+
+    
+
+    print("RESOLUTIONS")
+    print(bag)
+    print(resolution)
+
     # Check if product has resolution and consider it as a product (to be
     # updated) if requested by user.
     # Alert user with Django message.
-    if resolution:
+    if (resolution.lower() == 'high' or resolution.lower() == 'medium'
+            or resolution.lower() == 'low'):
         if quantity > 0:
             bag[item_id]['items_by_resolution'][resolution] = quantity
             messages.success(request, f'Updated {resolution.upper()} resolution quantity for {product.name}', extra_tags='show_bag_in_toast')
@@ -145,8 +188,7 @@ def remove_from_bag(request, item_id):
         # Get current session bag
         bag = request.session.get('bag', {})
 
-        # Check if product has resolution and consider it as a product (to be
-        # deleted) if requested by user.
+        # Check if product has resolution.
         # Alert user with Django message.
         if resolution:
             

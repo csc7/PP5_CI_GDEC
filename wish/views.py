@@ -193,7 +193,7 @@ def remove_from_wish_list(request):
                 product=ajax_id
             )
 
-        # Update record
+        # Delete record
         wish_item_to_delete.delete()
         WishList.objects.all().order_by('-id')
 

@@ -102,14 +102,13 @@ def adjust_bag(request, item_id):
         # characters need to be removed ([1:1] below)
         if (json.dumps(request.POST.get('resolution'))[-2].lower() == 'n'):
             resolution = json.dumps(request.POST.get('resolution'))[1:-3].lower()
-            ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
-            quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
-            product = get_object_or_404(Product, pk=ajax_id)
+            
         else:
             resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
-            ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
-            quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
-            product = get_object_or_404(Product, pk=ajax_id)
+
+        ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
+        quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
+        product = get_object_or_404(Product, pk=ajax_id)
 
     # Read bag content if not from AJAX
     else:
@@ -178,19 +177,23 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove items from the purchasing bag"""
-
+    print(item_id)
+    print(item_id)
+    print(item_id)
+    resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+    ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
+    item_id = ajax_id
+    
     try:
         product = get_object_or_404(Product, pk=item_id)
-        resolution = None
-        # Check if product to update has resolution
-        if 'product_resolution' in request.POST:
-            resolution = request.POST['product_resolution']
+             
         # Get current session bag
         bag = request.session.get('bag', {})
 
         # Check if product has resolution.
         # Alert user with Django message.
-        if resolution:
+        if (resolution == 'low' or resolution == 'medium' or 
+                resolution == 'high'):
             
             del bag[item_id]['items_by_resolution'][resolution]
             if not bag[item_id]['items_by_resolution']:

@@ -164,6 +164,7 @@ $('.remove-item').click(function(e) {
     console.log(full_itemId);
     var resolutionText;
     var resolution;
+    var url;
 
     if ($(window).width() < 768) {
         itemId = full_itemId.split('remove-from-bag-small-screen_')[1];
@@ -320,6 +321,7 @@ $(document).on("click", ".remove-item-wish-list", function() {
         itemId = full_itemId.split('remove-from-wish-list-large-screen_')[1];
         // Read resolution, if available, of item in wish list, by accessing
         // the resolution in the same row (product) of the table
+        console.log(itemId);
         resolutionText = $(this).closest('tr').children("td:nth-child(2)").children("p:nth-child(2)").text();
         resolution = resolutionText.split(' ')[1];
         console.log(resolution);

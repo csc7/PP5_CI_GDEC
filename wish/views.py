@@ -54,6 +54,14 @@ def view_wish_list(request):
 # View for adding products to the wish list
 def add_to_wish_list(request, item_id):
     """ Add items to the wish list """
+    resolution = None
+    resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+    ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
+    item_id = ajax_id
+
+    redirect_url = json.dumps(request.POST.get('redirect_url'))[1:-1]
+    quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
+    
 
     #wish_list = request.session.get('wish_list', {})
 
@@ -61,61 +69,145 @@ def add_to_wish_list(request, item_id):
     product = get_object_or_404(Product, pk=item_id)    
 
     # Initialize resolution and check if product has already one
-    resolution = None
-    if 'product_resolution' in request.POST:
-        resolution = request.POST['product_resolution']
-        print(resolution)
+    #resolution = None
+    #if 'product_resolution' in request.POST:
+    #    resolution = request.POST['product_resolution']
+    #    print(resolution)
 
     # Read user profile
     profile = get_object_or_404(UserProfile, user=request.user)
-
-    # Read quantity, URL to redirect and compute line_item_total
-    quantity = int(request.POST.get('quantity'))   
-    redirect_url = request.POST.get('redirect_url')
-    line_item_total = calc_subtotal(product.price, quantity)
-    items_in_wish_list = WishList.objects.all()
     
-    # Create or update new wish item
-    if product.id in items_in_wish_list.values_list('product', flat=True): 
-        existent_wish_item = WishList.objects.filter(product=product.id)
-        existent_wish_item_resolution = existent_wish_item.values_list(
-                'product_resolution', flat=True
-        )
-        existent_wish_item_quantity = int(request.POST.get('quantity'))
-        print(resolution)
-        print(existent_wish_item_resolution[0])
-        print(quantity)
-        print(existent_wish_item_quantity)
-        if (existent_wish_item_resolution[0] == resolution and 
-                existent_wish_item_quantity == quantity):
-            # Record exists
-            print("Nothing to update")
-        elif (existent_wish_item_resolution[0] == resolution):
+    # Read quantity, URL to redirect and compute line_item_total
+    #quantity = int(request.POST.get('quantity'))   
+    #redirect_url = request.POST.get('redirect_url')
+    line_item_total = calc_subtotal(product.price, quantity)
+    items_in_wish_list = WishList.objects.filter(user_profile=profile)
+
+    print(items_in_wish_list.values_list('product', flat=True))
+    print("OKOKOKOKOK")
+    print(resolution)
+    print(ajax_id)
+    print(redirect_url)
+    print(quantity)
+
+    if (resolution.lower() == 'high'
+            or resolution.lower() == 'medium'
+            or resolution.lower() == 'low'):
+
+        try:
+            print("Trying to update quantity of product with resolution")
             update_wish_item = WishList.objects.get(user_profile=profile,
-                                        product=product)
-            update_wish_item.quantity = quantity
-            print("Quantity updated")
-            update_wish_item.save()
-        else:
-            # Update record
-            new_wish_item_quantity = int(request.POST.get('quantity'))
-            new_wish_item_resolution = request.POST.get('product_resolution')
-            new_wish_item = WishList.objects.create(user_profile=profile,
                                         product=product,
-                                        product_resolution=new_wish_item_resolution,
-                                        quantity=new_wish_item_quantity,
-                                        lineitem_total=line_item_total
+                                        product_resolution=resolution
                                         )
-            print("Record updated")
+        except:
+            print("Product not in wish list")
+            new_wish_item = WishList.objects.create(user_profile=profile,
+                                            product=product,
+                                            product_resolution=resolution,
+                                            quantity=quantity,
+                                            lineitem_total=line_item_total)
+            print("Wish list record for product with resolution created")
+            new_wish_item.save()
+
+        else:
+            update_wish_item.quantity = quantity
+            print("Quantity of existing product with resolution updated")
+            update_wish_item.save()
+
 
     else:
-        new_wish_item = WishList.objects.create(user_profile=profile,
+
+        try:
+            print("Trying to update quantity of product with no resolution")
+            update_wish_item = WishList.objects.get(user_profile=profile,
                                         product=product,
-                                        product_resolution=resolution,
-                                        quantity=quantity,
-                                        lineitem_total=line_item_total)
-        print("Record created")
-        new_wish_item.save()
+                                        )
+        except:
+            print("Product not in wish list")
+            new_wish_item = WishList.objects.create(user_profile=profile,
+                                            product=product,
+                                            quantity=quantity,
+                                            lineitem_total=line_item_total)
+            print("Wish list record of product with no resolution created")
+            new_wish_item.save()
+
+        else:
+            update_wish_item.quantity = quantity
+            print("Quantity of existing of product with no resolution updated")
+            update_wish_item.save()
+
+
+    #i = 0
+    #for j in items_in_wish_list.values_list('product', flat=True):
+    #    if str(j) == item_id:
+    #        i = i + 1
+    #print(i)
+    ## Create or update new wish item
+    ##if product.id in items_in_wish_list.values_list('product', flat=True):
+    #if (i != 0 and (resolution.lower() == 'high'
+    #        or resolution.lower() == 'medium'
+    #        or resolution.lower() == 'low')):
+#
+    #    print("PRODUCT IN WISH LIST")
+    #    
+    #    # Try if there are more than one resolution already, else read
+    #    # the only product (with a specific ID) in the wish list
+#
+    #    existent_wish_items = WishList.objects.filter(
+    #        product=product.id,
+    #        user_profile=profile,
+    #        product_resolution=resolution
+    #        )
+    #    print(existent_wish_items.values(''))
+#
+    #    
+    #    existent_wish_item_quantity = int(existent_wish_item.quantity)
+    #    existent_wish_item_resolution = existent_wish_item.product_resolution
+    #    #existent_wish_item_resolution = existent_wish_item.values_list(
+    #    #        'product_resolution', flat=True
+    #    #)
+    #    print("AJAX RESOLUTION: " + resolution)
+    #    print("IN WISH LIST RESOLUTION: " + existent_wish_item_resolution)
+    #    print(existent_wish_item_quantity)
+    #    print("-----")
+    #    #existent_wish_item_quantity = int(request.POST.get('quantity'))
+    #    print(quantity)
+    #    print(existent_wish_item_quantity)
+    #    if (existent_wish_item_resolution == resolution and 
+    #            existent_wish_item_quantity == quantity):
+    #        # Record exists
+    #        print("Nothing to update, product already in the wish list.")
+    #    elif (existent_wish_item_resolution == resolution):
+    #        print("Trying to update quantity")
+    #        update_wish_item = WishList.objects.get(user_profile=profile,
+    #                                    product=product,
+    #                                    product_resolution=resolution
+    #                                    )
+    #        update_wish_item.quantity = quantity
+    #        print("Quantity of existing product updated")
+    #        update_wish_item.save()
+    #    else:
+    #        print("Trying to create")
+    #        # Update record
+    #        # new_wish_item_quantity = int(request.POST.get('quantity'))
+    #        #new_wish_item_resolution = request.POST.get('product_resolution')
+    #        new_wish_item = WishList.objects.create(user_profile=profile,
+    #                                    product=product,
+    #                                    product_resolution=resolution,
+    #                                    quantity=quantity,
+    #                                    lineitem_total=line_item_total
+    #                                    )
+    #        print("Record updated")
+    #else:
+    #    # Check if it exists, otherwise create it
+    #    new_wish_item = WishList.objects.create(user_profile=profile,
+    #                                    product=product,
+    #                                    product_resolution=resolution,
+    #                                    quantity=quantity,
+    #                                    lineitem_total=line_item_total)
+    #    print("Record created")
+    #    new_wish_item.save()
     
     return redirect(redirect_url)
 

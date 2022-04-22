@@ -35,7 +35,6 @@ def bag_contents(request):
             cancel_delivery_cost_factor = 0
         else:
             cancel_delivery_cost_factor = 1
-        print(cancel_delivery_cost)
 
     else:
         cancel_delivery_cost = request.POST.get('digital', False)
@@ -43,7 +42,6 @@ def bag_contents(request):
             cancel_delivery_cost_factor = 0
         else:
             cancel_delivery_cost_factor = 1
-        print(cancel_delivery_cost)
 
 
     # Initialize bag item and costs amounts
@@ -51,7 +49,6 @@ def bag_contents(request):
     order_total = 0
     order_product_count = 0
     bag = request.session.get('bag', {})
-    print(bag)
 
     # Iterate elements in the bag, accounting for item, quantity, product
     # and, if applies, resolution 
@@ -77,8 +74,7 @@ def bag_contents(request):
                     'product': product,
                     'resolution': resolution,
                 })
-            print("RESOLUTION: ")
-            print(bag_items)
+
     #if 'product_resolution' in request.POST:
     #    print("OK")
 

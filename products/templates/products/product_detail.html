@@ -110,7 +110,8 @@
                                 </span>
                                 <span class="text-uppercase btn-outline-primary">View Wish List</span>
                             </a>
-                            <button id="send-to-wish-list-button" formaction="{% url 'add_to_wish_list' product.id %}" class="btn btn-info rounded-0 text-uppercase mt-5 w-50">Add to Wish List</button>
+                            <!--<button id="send-to-wish-list-button" formaction="{% url 'add_to_wish_list' product.id %}" class="btn btn-info rounded-0 text-uppercase mt-5 w-50">Add to Wish List</button>-->
+                            <a href="" id="send-to-wish-list-button" class="btn btn-info rounded-0 text-uppercase mt-5 w-50"><span class="text-uppercase text-light btn-outline-primary">Add to Wish List</span></a>
                         </div>
                         {% else %}
                         <p class="font-weight-bold mt-4 mb-4">Log in to view your wish list <span><a href="{% url 'account_login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
@@ -193,5 +194,6 @@
 Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
 <script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
 <!-- This page javascript file -->
+<script>var csrfToken = "{{ csrf_token }}";</script>
 <script src="{% static 'js/product_details.js' %}"></script>
 {% endblock %}

@@ -21,6 +21,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # INTERNAL:
 from .models import Product, Category, ProductComment
 from .forms import ProductForm, ProductCommentForm
+from checkout.models import OrderLineItem
 
 ###############################################################################
 
@@ -162,8 +163,7 @@ def product_detail(request, product_id):
     product.save()
 
     user_has_commented = False
-    print("User: ")
-    print(request.user)
+
     if (request.user.is_authenticated):        
         if(ProductComment.objects.filter(product=product, user=request.user, active=True)  or request.user == None):
             user_has_commented = True
@@ -303,9 +303,7 @@ def product_review(request, product_id):
             new_comment.product = product
 
             # Save user that is commenting
-            print("User in product review: ")
             new_comment.user = request.user
-            print(new_comment.user)
 
             # Save the comment to the database
             new_comment.save()
@@ -364,7 +362,6 @@ def compute_product_rating_value (product_id):
     comments = ProductComment.objects.filter(product=product,
                                                  active=True)
 
-    print(comments)
     rate = 0
     i = 0
     for comment in comments:
@@ -374,8 +371,5 @@ def compute_product_rating_value (product_id):
         rate = product.rating # If no comments, read default
     else:
         rate = rate/i
-    print("i: " + str(i))
-    print("Rate: " + str(rate))
-
 
     return (rate)

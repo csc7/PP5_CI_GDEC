@@ -2457,7 +2457,9 @@ ___
     - Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string, accessed on April 14th, 2022, at 01:54
 
     - To capitalize first letter in Django template: https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template,
-    accessed on April 18th, at 15:35 -->
+    accessed on April 18th, at 15:35.
+
+    - To replace correct URL for filtered Django queries, for first/previous/next/last pages, accessed on April 22nd, 2022, at 02:00, at https://stackoverflow.com/questions/68820700/paginate-a-filter.
 
 - Simpleisbetterthancomplex: https://simpleisbetterthancomplex.com/
 

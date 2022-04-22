@@ -34,6 +34,7 @@ def all_products(request):
     sort = None
     direction = None
 
+    
     # Check if there is a request to select products
     if request.GET:
 
@@ -49,8 +50,7 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
-    
+            products = products.order_by(sortkey)    
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -68,6 +68,7 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    
 
     # Read the first category and assign the corresponding product group
     # title (based on top navigation menu). If no categories, then the 
@@ -107,27 +108,13 @@ def all_products(request):
             title = "All Products"
             title_url = "?sort=name&direction=asc"
 
-    # Pagination by Django Documentaiton:
-    # https://docs.djangoproject.com/en/4.0/topics/pagination/,
-    # accessed on April 15th, 2022, at 2:00
-    page_number = request.GET.get('page')
-    paginator = Paginator(products, 12) # Show 12 contacts per page.
-    page_obj = paginator.get_page(page_number)
+    # Pagination
+    page_obj, products = pagination(request, products)
 
-    # By Vitor Freitas, "paginator.page(page)", missing line for proper
-    # pagination, and option to address no integers,
-    # https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
-    # accessed on April 15th, 2022, at 2:00
-    
-    try:
-        products = paginator.page(page_number)
-    except PageNotAnInteger:
-        products = paginator.page(1)
-    except EmptyPage:
-        products = paginator.page(paginator.num_pages)
 
     context = {
         'products': products,
+        'filter_char': "?",
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -139,6 +126,28 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+def pagination (request, items):
+
+    # Pagination by Django Documentaiton:
+    # https://docs.djangoproject.com/en/4.0/topics/pagination/,
+    # accessed on April 15th, 2022, at 2:00
+    page_number = request.GET.get('page')
+    paginator = Paginator(items, 12) # Show 12 contacts per page.
+    
+    page_obj = paginator.get_page(page_number)
+
+    # By Vitor Freitas, "paginator.page(page)", missing line for proper
+    # pagination, and option to address no integers,
+    # https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
+    # accessed on April 15th, 2022, at 2:00    
+    try:
+        items = paginator.page(page_number)
+    except PageNotAnInteger:
+        items = paginator.page(1)
+    except EmptyPage:
+        items = paginator.page(paginator.num_pages)
+
+    return (page_obj, items)
 
 
 def product_detail(request, product_id):

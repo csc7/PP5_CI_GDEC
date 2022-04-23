@@ -63,11 +63,9 @@
                                     <p class="my-0 resolution-in-wish-list_{{ item.product.id }}">Resolution: {% if item.product.resolution %}{{ item.product_resolution|upper }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     <p></p>
-                                    {% for product in products_to_label_in_wish_list %}
-                                        {% if product|stringformat:"s" == item.product.id|stringformat:"s" %}
+                                    {% if item.product.id in products_to_label_in_wish_list %}
                                         <p class="text-info"><strong>Buy it again!</strong></p>
-                                        {% endif %}
-                                    {% endfor %}                            
+                                    {% endif %}                          
                                 </td>
                                 <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price }}</p>

@@ -109,11 +109,13 @@ def add_to_wish_list(request, item_id):
                                             lineitem_total=line_item_total)
             print("Wish list record for product with resolution created")
             new_wish_item.save()
+            messages.success(request, 'Product added to the wish list')
 
         else:
             update_wish_item.quantity = quantity
             print("Quantity of existing product with resolution updated")
             update_wish_item.save()
+            messages.success(request, 'Product updated in wish list')
 
 
     else:
@@ -131,11 +133,13 @@ def add_to_wish_list(request, item_id):
                                             lineitem_total=line_item_total)
             print("Wish list record of product with no resolution created")
             new_wish_item.save()
+            messages.success(request, 'Product added to the wish list')
 
         else:
             update_wish_item.quantity = quantity
             print("Quantity of existing of product with no resolution updated")
             update_wish_item.save()
+            messages.success(request, 'Product updated in wish list')
 
 
     #i = 0
@@ -248,6 +252,7 @@ def adjust_wish_list(request):
         # Update record
         wish_item_to_update.quantity = quantity
         wish_item_to_update.save()
+        messages.success(request, 'Product updated in wish list')
         #wish_item_to_update.resolution = resolution
 
 
@@ -257,6 +262,7 @@ def adjust_wish_list(request):
         # Update record
         wish_item_to_update.quantity = quantity
         wish_item_to_update.save()
+        messages.success(request, 'Product updated in wish list')
 
     #return redirect(reverse('view_wish_list'))
     return HttpResponse(status=200)
@@ -288,6 +294,7 @@ def remove_from_wish_list(request):
         # Delete record
         wish_item_to_delete.delete()
         WishList.objects.all().order_by('-id')
+        messages.success(request, 'Product deleted from wish list')
 
         return HttpResponse(status=200)
         #return redirect(reverse('view_wish_list'))
@@ -297,4 +304,5 @@ def remove_from_wish_list(request):
     # Alert user with Django message.
     except Exception as e:
         messages.error(request, f'Error removing item_ {e}')
+        messages.error(request, 'Exception ocurred')
         return HttpResponse(status=500)

@@ -44,14 +44,20 @@
                                 <td class="p-3 w-25">
                                     <!-- Assign image to product or default "no-image" in database -->
                                     {% if item.product.image_name %}
-                                    <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
+                                    <a href="{{ item.product.image_name.url }}" target="blank">
+                                        <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
+                                    </a>
                                     {% else %}
-                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.PNG" alt="{{ item.product.name }}">
+                                    <a href="">
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.PNG" alt="{{ item.product.name }}">
+                                    </a>
                                     {% endif %}
                                 </td>
                                 <td class="py-3">
                                     <!-- Include resolution if applicable -->
-                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    </a>
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.resolution|upper }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>

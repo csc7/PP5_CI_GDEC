@@ -36,10 +36,10 @@ def view_wish_list(request):
     products_in_wish_orders = OrderLineItem.objects.all()
     products_to_label_in_wish_list = products_in_wish_orders.values_list('product_id', flat=True)
     
-    print(wish_list_items.values())
+    #print(wish_list_items.values())
 
     context = {
-        'products_in_wish_orders': wish_list_items,
+        'products_in_wish_orders': wish_list_items.order_by('-id'),
         'products_to_label_in_wish_list': products_to_label_in_wish_list,
     }
 

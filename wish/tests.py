@@ -45,14 +45,14 @@ class TestWishListApp(unittest.TestCase):
     def test_wish_list_model_return(self):
         print("Testing the return of wish list model instantiation")
         self.assertEqual(str(self.test_data_for_wish_list_model),
-                         'Wish list for admin2'
+                         'Wish list for admin'
                          )
 
     # Test of WishList model elements
     def test_user_profile_in_wish_list_model(self):
         print("Testing user profile in wish list model")
         self.assertEqual(str(self.test_data_for_wish_list_model.user_profile),
-                         'admin2'
+                         'admin'
                          )
 
     def test_product_in_wish_list_model(self):

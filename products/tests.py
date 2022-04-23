@@ -140,19 +140,19 @@ class TestProductApp(unittest.TestCase):
                          )
             
     # Test of ProductComment model return
-    def test_product_comment_model_return(self):
-        print("Testing the return of ProductComment model instantiation")
-        self.assertEqual(str(self.test_data_for_product_comment_model),
-                         'Comment product description by admin'
-                         )
+    #def test_product_comment_model_return(self):
+    #    print("Testing the return of ProductComment model instantiation")
+    #    self.assertEqual(str(self.test_data_for_product_comment_model),
+    #                     'Comment product description by admin'
+    #                     )
 
     # Test of ProductComment model elements
 
-    def test_user_in_product_comment_model(self):
-        print("Testing user in ProductComment model")
-        self.assertEqual(str(self.test_data_for_product_comment_model.user),
-                         'admin'
-                         )
+    #def test_user_in_product_comment_model(self):
+    #    print("Testing user in ProductComment model")
+    #    self.assertEqual(str(self.test_data_for_product_comment_model.user),
+    #                     'admin'
+    #                     )
                 
     def test_product_in_product_comment_model(self):
         print("Testing product in ProductComment model")

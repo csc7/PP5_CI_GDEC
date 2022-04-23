@@ -78,7 +78,7 @@ class TestCheckoutApp(unittest.TestCase):
     def test_user_profile_in_order_model(self):
         print("Testing user profile in Order model")
         self.assertEqual(str(self.test_data_for_order.user_profile),
-                         'admin'
+                         'Test'
                          )
 
     def test_full_name_in_order_model(self):

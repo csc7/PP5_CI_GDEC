@@ -34,7 +34,7 @@ $('.increment-qty').click(function(e) {
     var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
     var currentValue = parseInt($(closestInput).val());
     $(closestInput).val(currentValue + 1);
-    var itemId = $(this).data('item_id');
+    //var itemId = $(this).data('item_id');
 
     // For bag
     handleEnableDisable(itemId);
@@ -52,6 +52,44 @@ $('.increment-qty').click(function(e) {
 });
 
 
+// Decrement quantity in product details only
+$('.decrement-qty-prod-det').click(function(e) {
+    e.preventDefault();
+    var closestInput = $(this).closest('div').siblings();
+    
+    var currentValue = parseInt($(closestInput).val());
+    $(closestInput).val(currentValue - 1);
+    //var itemId3 = $(this).data('item_id');
+    if (currentValue <=2) {
+        var itemIdMinus = $(this).closest('button');
+        $(itemIdMinus).prop('disabled',true);
+    }
+    if (currentValue >= 98) {
+        var itemIdMinus = $(this).parents().siblings('div').children('button');
+        $(itemIdMinus).prop('disabled',false);
+    } 
+})
+
+// Increment quantity in product details only
+$('.increment-qty-prod-det').click(function(e) {
+    e.preventDefault();
+    var closestInput = $(this).closest('div').prev();
+    
+    var currentValue = parseInt($(closestInput).val());
+    console.log(currentValue);
+    $(closestInput).val(currentValue + 1);
+    //var itemId3 = $(this).data('item_id');
+    if (currentValue >= 98) {
+        var itemIdPlus = $(this).closest('button');
+        $(itemIdPlus).prop('disabled',true);
+    }
+    if (currentValue <=2) {
+        var itemIdPlus = $(this).parents().siblings('div').children('button');
+        $(itemIdPlus).prop('disabled',false);
+    }
+    
+})
+
 
 // Decrement quantity
 $('.decrement-qty').click(function(e) {
@@ -68,13 +106,13 @@ $('.decrement-qty').click(function(e) {
     if (currentValue >= 98) {
         var itemId2 = $(this).closest('td').find('button')[1];
         $(`#${itemId2.id}`).prop('disabled',false);
+        console.log(itemId2.id);
     }
     if (currentValue <=2) {
         var itemId2 = $(this).closest('td').find('button')[0];
         $(`#${itemId2.id}`).prop('disabled',true);
         console.log(itemId2.id);
     }
-    
 
 });
 

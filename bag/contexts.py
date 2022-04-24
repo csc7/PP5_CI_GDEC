@@ -25,6 +25,21 @@ def bag_contents(request):
     """
     This function computes the grand total amount based on the products
     in the bag and the user's delivery preferences
+
+    Parameters In: HTTP request object
+
+    Parameters Out: context with variables to process the bag purchase
+    amounts:
+        'bag_items'
+        'order_total'
+        'order_product_count'
+        'delivery'
+        'delta_for_discount'
+        'discount_threshold'
+        'grand_total'
+        'discount'
+        'discount_percentage'
+        'cancel_delivery_cost'
     """
 
     # Check if user has activated the option to receive the data
@@ -74,9 +89,6 @@ def bag_contents(request):
                     'product': product,
                     'resolution': resolution,
                 })
-
-    #if 'product_resolution' in request.POST:
-    #    print("OK")
 
     # Compute grand total
     if order_total < settings.DISCOUNT_THRESHOLD:

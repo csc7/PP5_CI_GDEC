@@ -23,24 +23,39 @@ from products.models import Product
 
 # Bag view
 def view_bag(request):
-    """View for the purchasing bag"""
+    """View for the purchasing bag
+    This function computes the grand total amount based on the products
+    in the bag and the user's delivery preferences
+
+    Parameters In: HTTP request object
+
+    Parameters Out: HTTP request object to bag/bag.html template
+    """
 
     return render(request, 'bag/bag.html')
 
 
 # View for adding products to the bag
 def add_to_bag(request, item_id):
-    """ Add items to the purchasing bag """
+    """ Add items to the purchasing bag
 
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: redirect URL
+    """
+
+    # Convert to string if product ID is not an integer
     if isinstance(item_id, int):
         item_id = str(item_id)
-
 
     # Read bag content
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    
+    # Assing none to resolution in case the product does not contain it
     resolution = None
+
     # Consider, initially, that user wants a delivery
     digital = 0
 
@@ -50,7 +65,6 @@ def add_to_bag(request, item_id):
 
     # Get current session bag
     bag = request.session.get('bag', {})
-
 
     # Check if product has resolution and consider it as a product (to be
     # added) if requested by user.
@@ -84,11 +98,16 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
-
 # View for updating the bag
 def adjust_bag(request, item_id):
-    """Adjust the quantity of items in the purchasing bag"""
+    """Adjust the quantity of items in the purchasing bag
     
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: HttpResponse onbject (200 or 500)
+    """
+    
+    # Assing none to resolution in case the product does not contain it
     resolution = None
 
     # If not HTML request, it is AJAX request
@@ -115,13 +134,6 @@ def adjust_bag(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         quantity = int(request.POST.get('quantity'))
     
-    print("BAG AJAX")
-    print(resolution)
-    print(ajax_id)
-    print(quantity)
-    # Consider, initially, that user wants a delivery
-    #digital = 0
-
     # Get current session bag
     bag = request.session.get('bag', {})
 
@@ -130,15 +142,6 @@ def adjust_bag(request, item_id):
     if 'product_resolution' in request.POST:
         resolution = request.POST['product_resolution'].lower()
         
-    #if 'digital' in request.POST:
-    #    print("OK")
-
-    
-
-    print("RESOLUTIONS")
-    print(bag)
-    print(resolution)
-
     # Check if product has resolution and consider it as a product (to be
     # updated) if requested by user.
     # Alert user with Django message.
@@ -174,16 +177,20 @@ def adjust_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
-
 def remove_from_bag(request, item_id):
-    """Remove items from the purchasing bag"""
-    print(item_id)
-    print(item_id)
-    print(item_id)
+    """Remove items from the purchasing bag
+    
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: redirect URL (reverse) to 'view_bag'
+    
+    """
+    # Read resolution and product ID to delete
     resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
     item_id = ajax_id
     
+    # Remove product or inform user
     try:
         product = get_object_or_404(Product, pk=item_id)
              

@@ -9,7 +9,6 @@ Django models for the bag app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.db import models
 
 # INTERNAL:
 

@@ -54,8 +54,13 @@ def view_wish_list(request):
 # View for adding products to the wish list
 def add_to_wish_list(request, item_id):
     """ Add items to the wish list """
-    resolution = None
-    resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+    resolution = None# Just check that AJAX post does not add "\n" at the end (last character)
+    # is an "n", remember AJAX post inclue quotes ("") so first and last
+    # characters need to be removed ([1:1] below)
+    if (json.dumps(request.POST.get('resolution'))[-2].lower() == 'n'):
+        resolution = json.dumps(request.POST.get('resolution'))[1:-3].lower()
+    else:
+        resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
     item_id = ajax_id
 
@@ -270,9 +275,16 @@ def adjust_wish_list(request):
 
 def remove_from_wish_list(request):
     """Remove items from the wish_list"""
-    resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
+    # Just check that AJAX post does not add "\n" at the end (last character)
+    # is an "n", remember AJAX post inclue quotes ("") so first and last
+    # characters need to be removed ([1:1] below)
+    if (json.dumps(request.POST.get('resolution'))[-2].lower() == 'n'):
+        resolution = json.dumps(request.POST.get('resolution'))[1:-3].lower()
+    else:
+        resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
-
+    print(resolution)
+    print(ajax_id)
     try:
         # Read wish list content
         profile = get_object_or_404(UserProfile, user=request.user)

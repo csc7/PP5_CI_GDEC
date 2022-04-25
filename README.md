@@ -1145,32 +1145,32 @@ The tool can be accessed with this link: http://pep8online.com .
 <details>
     <summary>admin.py</summary>
 
-![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-admin.PNG) 
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-home-admin.PNG) 
 </details>
 <details>
     <summary>apps.py</summary>
 
-![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-apps.PNG) 
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-home-apps.PNG) 
 </details>
 <details>
     <summary>models.py</summary>
 
-![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-models.PNG) 
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-home-models.PNG) 
 </details>
 <details>
     <summary>tests.py</summary>
 
-![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-tests.PNG) 
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-home-tests.PNG) 
 </details>
 <details>
     <summary>urls.py</summary>
 
-![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-urls.PNG) 
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-home-urls.PNG) 
 </details>
 <details>
     <summary>views.py</summary>
 
-![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-views.PNG) 
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-home-views.PNG) 
 </details>
 <br>
 

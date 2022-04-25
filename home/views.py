@@ -20,7 +20,7 @@ from django.shortcuts import render
 
 def index(request):
     """View for index page
-    
+
     Parameters In: HTTP request object
 
     Parameters Out: request object to home/index.html
@@ -31,7 +31,7 @@ def index(request):
 
 def gdpr_privacy_policy(request):
     """View for index page
-    
+
     Parameters In: HTTP request object
 
     Parameters Out: request object to home/gdpr_privacy_policy.html

@@ -1,3 +1,6 @@
+// This JavaScript function shows and hide the button to make comments in the product details
+
+
 // Show comment form in product details
 $('#comment-form-button').click(function() {
     if ($('#comment-form-button').text() =='Leave a Comment') {

@@ -53,6 +53,7 @@ card.addEventListener('change', function (event) {
     }
 });
 
+
 // Handle form submit
 var form = document.getElementById('payment-form');
 
@@ -132,6 +133,4 @@ form.addEventListener('submit', function(ev) {
 
 });
 
-
 // End of Stripe core logic/payment flow
-console.log("Stripe loaded");

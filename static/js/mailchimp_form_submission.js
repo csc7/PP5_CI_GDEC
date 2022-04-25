@@ -1,3 +1,5 @@
+// This Javascript functions deals with the Mailchimp newsletter registration form
+
 // Disable Mailchimp submit button to avoid sending a blank e-mail address
 $( "#mce-EMAIL" ).click(function() {
     $("#mce-EMAIL").val('');

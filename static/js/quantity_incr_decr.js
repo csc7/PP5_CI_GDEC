@@ -1,4 +1,10 @@
-// From Code Institute
+// This Javascript function disables the minus and plus buttons when quantities
+// are below 1 and above 98 respectively
+
+// Copied and modified from Code Institute "Boutique Ado" project, except functions for
+// classes ".update-link-wish-list", ".increment-qty-prod-det", ".decrement-qty-prod-det" and
+// ".remove-item-wish-list"
+
 
 // Disable +/- buttons outside 1-99 range
 function handleEnableDisable(itemId) {
@@ -22,11 +28,13 @@ for(var i = 0; i < allQtyInputs.length; i++){
     handleEnableDisable(itemId);
 }
 
+
 // Check enable/disable every time the input is changed
 $('.qty_input').change(function() {
     var itemId = $(this).data('item_id');
     handleEnableDisable(itemId);
 });
+
 
 // Increment quantity
 $('.increment-qty').click(function(e) {
@@ -69,6 +77,7 @@ $('.decrement-qty-prod-det').click(function(e) {
         $(itemIdMinus).prop('disabled',false);
     } 
 })
+
 
 // Increment quantity in product details only
 $('.increment-qty-prod-det').click(function(e) {
@@ -174,29 +183,9 @@ $('.update-link').click(function(e) {
     }
     });
 
-
-
-
 })
 
 
-// Remove item and reload on click the bag
-//$('.remove-item').click(function(e) {
-//    //var csrfToken = "{{ csrf_token }}";
-//    var itemId;
-//    if ($(window).width() < 768) {
-//        itemId = $(this).attr('id').split('remove-from-bag-small-screen_')[1];
-//    } else {
-//        itemId = $(this).attr('id').split('remove-from-bag-large-screen_')[1];
-//    } 
-//    var resolution = $(this).data('product_resolution');
-//    var url = `/bag/remove/${itemId}/`;
-//    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
-//    $.post(url, data)
-//     .done(function() {
-//         location.reload();
-//     });
-//})
 $('.remove-item').click(function(e) {
     var full_itemId = $(this).attr('id');
     console.log(full_itemId);
@@ -228,9 +217,6 @@ $('.remove-item').click(function(e) {
         url=`remove/${itemId}/`
         console.log(resolution);
     }
-
-    
-    //#wish-list-content > div > table > tbody > tr:nth-child(26) > td:nth-child(2) > p.my-0.resolution-in-wish-list_121
     
     // Send AJAX post to remove_from_wish_list in views.py of wish app
     $.ajax({
@@ -248,23 +234,15 @@ $('.remove-item').click(function(e) {
 })
 
 
-
-
-
 // Update quantity on click for the wish list
 $('.update-link-wish-list').click(function(e) {
 
     var full_itemId = $(this).attr('id');
-    console.log(full_itemId);
     var resolutionText;
     var resolution;
     //var quantity = parseInt($(`#id_qty_${itemId}`).val());
     //var quantity = $(this).closest('td').children().children().children("input").val();
     var quantity = $(this).closest('td').find('.qty_input').val();
-    console.log(quantity);
-
-    
-    //console.log($(id_for_input).val());
 
     if ($(window).width() < 768) {
 
@@ -309,33 +287,7 @@ $('.update-link-wish-list').click(function(e) {
 })
 
 
-
-
-
-
-// Remove item and reload on click for the wish list in large screens
-//console.log($(this).attr('id'))
-//$('.remove-item-wish-list').click(function(e) {
-//    //var csrfToken = "{{ csrf_token }}";
-//    var itemId;
-//    if ($(window).width() < 768) {
-//        itemId = $(this).attr('id').split('remove-from-wish-list-small-screen_')[1];
-//    } else {
-//        itemId = $(this).attr('id').split('remove-from-wish-list-large-screen_')[1];
-//    }
-//
-//    var resolution = $(this).data('product_resolution');
-//    var url = `/wish_list/remove_from_wish_list/${itemId}/`;
-//    var data = {'csrfmiddlewaretoken': csrfToken, 'product_resolution': resolution};
-//    $.post(url, data)
-//     .done(function() {
-//         location.reload();
-//     });
-//})
-
-
 // Send data to database using AJAX
-//$("#send-weather-data-button").click (e => sendWeatherData(e, true));
 $(document).on("click", ".remove-item-wish-list", function() {
     
     var full_itemId = $(this).attr('id');
@@ -364,9 +316,6 @@ $(document).on("click", ".remove-item-wish-list", function() {
         resolution = resolutionText.split(' ')[1];
         console.log(resolution);
     }
-
-    
-    //#wish-list-content > div > table > tbody > tr:nth-child(26) > td:nth-child(2) > p.my-0.resolution-in-wish-list_121
     
     // Send AJAX post to remove_from_wish_list in views.py of wish app
     $.ajax({
@@ -383,10 +332,6 @@ $(document).on("click", ".remove-item-wish-list", function() {
     });
 });
 
-
-
-
-console.log("Incr/Decr JS loaded");
 
 // Change "Update Quantity" and "Remove Product" to "Update" and "Remove"
 // in middle size screens

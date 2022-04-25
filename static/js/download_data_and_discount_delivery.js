@@ -1,12 +1,8 @@
-console.log("Download data loaded")
+// This JavaScript function checks if the user has selected the option
+// to have the data downloaded and therefore avoid shipping costs
 
 $('#digital').change(function() {
     let status = $("#digital").is(':checked');
     console.log(status);
-    this.form.submit();
-    //if (status) {
-    //    $('#cancel_delivery_cost>label').html("Check this box to download the data and avoid shipment costs");
-    //} else {
-    //    $('#cancel_delivery_cost>label').html("Uncheck this box to receive the data in USB drives (delivery costs apply)");
-    //}    
+    this.form.submit();   
 });

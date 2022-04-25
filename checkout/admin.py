@@ -18,7 +18,7 @@ from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
-    """ 
+    """
     Class to visualize order line items in Django admin
     """
     model = OrderLineItem
@@ -26,7 +26,7 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    """ 
+    """
     Class to visualize orders in Django admin
     """
     inlines = (OrderLineItemAdminInline,)

@@ -13,10 +13,9 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from django_countries.fields import CountryField # To avoid user entering a
-                                                 # country in other format
-                                                 # than the ISO 3166 used
-                                                 # by Stripe
+# To avoid user entering a country in other format than the ISO 3166 used
+# by Stripe:
+from django_countries.fields import CountryField
 
 # INTERNAL:
 from products.models import Product
@@ -84,9 +83,12 @@ class Order(models.Model):
         """
         Update grand total and delivey costs each time a line item is added
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.DISCOUNT_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            self.delivery_cost = self.order_total * (
+                settings.STANDARD_DELIVERY_PERCENTAGE / 100
+                )
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
@@ -109,11 +111,36 @@ class OrderLineItem(models.Model):
     """
     Order Line Item Django Model
     """
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    product_resolution = models.CharField(max_length=8, null=True, blank=True) # High, medium and low
-    quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    order = models.ForeignKey(
+        Order,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE,
+        related_name='lineitems'
+    )
+    product = models.ForeignKey(
+        Product,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE
+    )
+    product_resolution = models.CharField(
+        max_length=8,
+        null=True,
+        blank=True
+    )  # High, medium and low
+    quantity = models.IntegerField(
+        null=False,
+        blank=False,
+        default=0
+    )
+    lineitem_total = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=False,
+        blank=False,
+        editable=False
+    )
 
     def save(self, *args, **kwargs):
         """

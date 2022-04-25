@@ -28,38 +28,36 @@ class TestCheckoutApp(unittest.TestCase):
     def setUp(self):
         print("setUp")
         self.test_data_for_order = Order(
-            'user_name',          # user_profile
-            '1',                  # order_number
-            2,                    # (Foreign key)
-            'full_test_name',     # full_name
-            'a@a.com',            # email
-            '12345',              # phone_number
-            'country_name',       # country
-            '98765',              # postcode
-            'city_name',          # town_or_city
-            'street_1',           # street_address1
-            'street_2',           # street_address2
-            'county_name',        # county
-            '2022-01-01',         # date
-            10,                   # delivery_cost
-            100,                  # order_total
-            110,                  # grand_total
-            'original_bag_name',  # original_ban
-            'AB12CD34'            # stripe_pid
+            'user_name',           # user_profile
+            '1',                   # order_number
+            2,                     # (Foreign key)
+            'full_test_name',      # full_name
+            'a@a.com',             # email
+            '12345',               # phone_number
+            'country_name',        # country
+            '98765',               # postcode
+            'city_name',           # town_or_city
+            'street_1',            # street_address1
+            'street_2',            # street_address2
+            'county_name',         # county
+            '2022-01-01',          # date
+            10,                    # delivery_cost
+            100,                   # order_total
+            110,                   # grand_total
+            'original_bag_name',   # original_ban
+            'AB12CD34'             # stripe_pid
         )
         self.test_data_for_order_line_item = OrderLineItem(
-            '1',                  # (Foreign key)
-            '1',                  # (Foreign key)
-            '1',                  # order
-            'product_resolution', # product_resolution
-            10,                   # quantity
-            20                    # lineitem_total
+            '1',                   # (Foreign key)
+            '1',                   # (Foreign key)
+            '1',                   # order
+            'product_resolution',  # product_resolution
+            10,                    # quantity
+            20                     # lineitem_total
         )
-
 
     def tearDown(self):
         print("tearDown")
-
 
     # Test of Order model return
     def test_order_model_return(self):
@@ -146,7 +144,7 @@ class TestCheckoutApp(unittest.TestCase):
         self.assertEqual(str(self.test_data_for_order.delivery_cost),
                          '10'
                          )
-                         
+
     def test_order_total_in_order_model(self):
         print("Testing order total in Order model")
         self.assertEqual(str(self.test_data_for_order.order_total),
@@ -174,9 +172,10 @@ class TestCheckoutApp(unittest.TestCase):
     # Test of OrderLineItem model elements
     def test_product_resolution_in_order_line_item_model(self):
         print("Testing order number in OrderLineItem model")
-        self.assertEqual(str(self.test_data_for_order_line_item.product_resolution),
-                         'product_resolution'
-                         )
+        self.assertEqual(str(
+            self.test_data_for_order_line_item.product_resolution),
+            'product_resolution'
+        )
 
     def test_quantity_in_order_line_item_model(self):
         print("Testing quantity in OrderLineItem model")
@@ -186,9 +185,10 @@ class TestCheckoutApp(unittest.TestCase):
 
     def test_lineitem_total_in_order_line_item_model(self):
         print("Testing line item total in OrderLineItem model")
-        self.assertEqual(str(self.test_data_for_order_line_item.lineitem_total),
-                         '20'
-                         )
+        self.assertEqual(
+            str(self.test_data_for_order_line_item.lineitem_total),
+            '20'
+        )
 
 
 if __name__ == '__main__':

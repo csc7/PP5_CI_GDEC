@@ -29,7 +29,7 @@ from checkout.webhook_handler import StripeWH_Handler
 def webhook(request):
     """
     Listen webhooks from Stripe
-    
+
     Parameters In: HTTP request object
 
     Parameters Out: event handler
@@ -58,15 +58,14 @@ def webhook(request):
         # Other errors
         return HttpResponse(content=e, status=400)
 
-    print("Success received webhook sent from Stripe!")
-
     # Set up a webhook handler
     handler = StripeWH_Handler(request)
 
     # Map webhook events to relevant handler functions
     event_map = {
         'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
-        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+        'payment_intent.payment_failed':
+            handler.handle_payment_intent_payment_failed,
     }
 
     # Get the webhook type from Stripe

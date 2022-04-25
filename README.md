@@ -1049,52 +1049,52 @@ The tool can be accessed with this link: http://pep8online.com .
 <details>
     <summary>admin.py</summary>
 
-![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-admin.PNG) 
 </details>
 <details>
     <summary>apps.py</summary>
 
-![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-apps.PNG) 
 </details>
 <details>
     <summary>forms.py</summary>
 
-![Evidence of file forms.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+![Evidence of file forms.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-forms.PNG) 
 </details>
 <details>
     <summary>models.py</summary>
 
-![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-models.PNG) 
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-models.PNG) 
 </details>
 <details>
     <summary>signals.py</summary>
 
-![Evidence of file signals.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
+![Evidence of file signals.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-signals.PNG) 
 </details>
 <details>
     <summary>tests.py</summary>
 
-![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-tests.PNG) 
 </details>
 <details>
     <summary>urls.py</summary>
 
-![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-urls.PNG) 
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-urls.PNG) 
 </details>
 <details>
     <summary>views.py</summary>
 
-![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-views.PNG) 
 </details>
 <details>
     <summary>webhook_handler.py</summary>
 
-![Evidence of file webhook_handler.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+![Evidence of file webhook_handler.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-webhook_handler.PNG) 
 </details>
 <details>
     <summary>webhooks.py</summary>
 
-![Evidence of file webhooks.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+![Evidence of file webhooks.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-checkout-webhooks.PNG) 
 </details>
 <br>
 

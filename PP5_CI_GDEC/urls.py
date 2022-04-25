@@ -35,7 +35,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-
+# Project URLs, they are the "base" URL for each app, the rest of URLs
+# resulting form each app are included in the URL files of each app
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),

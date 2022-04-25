@@ -54,13 +54,11 @@ class TestProductApp(unittest.TestCase):
             'Text in comment field',        # body
             '2022-01-01',                   # create on
             True,                           # active
-    
-        )
 
+        )
 
     def tearDown(self):
         print("tearDown")
-
 
     # Test of Category model return
     def test_category_model_return(self):
@@ -81,7 +79,6 @@ class TestProductApp(unittest.TestCase):
         self.assertEqual(str(self.test_data_for_category_model.friendly_name),
                          'category_friendly_name'
                          )
-
 
     # Test of Product model return
     def test_product_model_return(self):
@@ -137,19 +134,21 @@ class TestProductApp(unittest.TestCase):
         print("Testing image name in product model")
         self.assertEqual(str(self.test_data_for_product_model.image_name),
                          'product_image_name'
-                         )        
-               
+                         )
+
     def test_product_in_product_comment_model(self):
         print("Testing product in ProductComment model")
-        self.assertEqual(str(self.test_data_for_product_comment_model.product),
-                         'Vanuatu DEM'
-                         )
+        self.assertEqual(str(
+            self.test_data_for_product_comment_model.product),
+            'Vanuatu DEM'
+        )
 
     def test_rating_value_in_product_comment_model(self):
         print("Testing product rating value in ProductComment model")
-        self.assertEqual(str(self.test_data_for_product_comment_model.product_rating_value),
-                         '5'
-                         )
+        self.assertEqual(str(
+            self.test_data_for_product_comment_model.product_rating_value),
+            '5'
+        )
 
     def test_body_in_product_comment_model(self):
         print("Testing body in ProductComment model")
@@ -159,9 +158,10 @@ class TestProductApp(unittest.TestCase):
 
     def test_date_created_on_in_product_comment_model(self):
         print("Testing date created on in ProductComment model")
-        self.assertEqual(str(self.test_data_for_product_comment_model.created_on),
-                         '2022-01-01'
-                         )
+        self.assertEqual(str(
+            self.test_data_for_product_comment_model.created_on),
+            '2022-01-01'
+        )
 
     def test_active_comment_in_product_comment_model(self):
         print("Testing active comment in ProductComment model")

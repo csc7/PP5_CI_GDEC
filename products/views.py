@@ -12,7 +12,9 @@ Django views for the products app
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-# Import Lower function; https://stackoverflow.com/questions/31734993/lowercase-django-query, accessed on March 15th, 2022, at 11:55
+# Import Lower function;
+# https://stackoverflow.com/questions/31734993/lowercase-django-query,
+# accessed on March 15th, 2022, at 11:55
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -28,7 +30,7 @@ from checkout.models import OrderLineItem
 
 def all_products(request):
     """View for all products
-    
+
     Parameters In: HTTP request object
 
     Parameters Out: request object, template (products/products.html),
@@ -49,7 +51,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    
+
     # Check if there is a request to select products
     if request.GET:
 
@@ -65,7 +67,7 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)    
+            products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -77,28 +79,29 @@ def all_products(request):
             if not query:
                 messages.error(request, "Please enter a search criteria")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'    
+    current_sorting = f'{sort}_{direction}'
 
     # Read the first category and assign the corresponding product group
-    # title (based on top navigation menu). If no categories, then the 
+    # title (based on top navigation menu). If no categories, then the
     # query is for all products
     if (categories is None):
         title = "All Products"
         title_url = "?sort=name&direction=asc"
 
-    else:  
+    else:
         if (str(categories.first()) == 'dem' or
-                str(categories.first()) == 'gravimetry' or 
+                str(categories.first()) == 'gravimetry' or
                 str(categories.first()) == 'magnetometry' or
                 str(categories.first()) == 'resistivity'):
             title = "Digital Data"
             title_url = "?category=dem,gravimetry,magnetometry,resistivity"
         elif (str(categories.first()) == 'eia' or
-                str(categories.first()) == 'weather' or 
+                str(categories.first()) == 'weather' or
                 str(categories.first()) == 'geological_maps'):
             title = "Reports"
             title_url = "?category=eia,geological_maps,weather"
@@ -107,16 +110,17 @@ def all_products(request):
             title = "Training"
             title_url = "?category=courses,books"
         elif (str(categories.first()) == 'simulators' or
-                str(categories.first()) == 'data_processing' or 
+                str(categories.first()) == 'data_processing' or
                 str(categories.first()) == 'data_qc'):
             title = "Software"
             title_url = "?category=simulators,data_processing,data_qc"
         elif (str(categories.first()) == 'data_offers' or
-                str(categories.first()) == 'software_offers' or 
+                str(categories.first()) == 'software_offers' or
                 str(categories.first()) == 'training_offers' or
                 str(categories.first()) == 'report_offers'):
             title = "Offers"
-            title_url = "?category=data_offers,report_offers,training_offers,software_offers"
+            title_url = "?category=data_offers,report_offers,"\
+                "training_offers,software_offers"
         else:
             title = "All Products"
             title_url = "?sort=name&direction=asc"
@@ -139,9 +143,9 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-def pagination (request, items):
+def pagination(request, items):
     """View for all products
-    
+
     Parameters In: HTTP request object, selected products
     for Django pagination
 
@@ -152,14 +156,14 @@ def pagination (request, items):
     # https://docs.djangoproject.com/en/4.0/topics/pagination/,
     # accessed on April 15th, 2022, at 2:00
     page_number = request.GET.get('page')
-    paginator = Paginator(items, 12) # Show 12 contacts per page.
-    
+    paginator = Paginator(items, 12)  # Show 12 contacts per page.
+
     page_obj = paginator.get_page(page_number)
 
     # By Vitor Freitas, "paginator.page(page)", missing line for proper
     # pagination, and option to address no integers,
     # https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
-    # accessed on April 15th, 2022, at 2:00    
+    # accessed on April 15th, 2022, at 2:00
     try:
         items = paginator.page(page_number)
     except PageNotAnInteger:
@@ -183,8 +187,9 @@ def product_detail(request, product_id):
 
     user_has_commented = False
 
-    if (request.user.is_authenticated):        
-        if(ProductComment.objects.filter(product=product, user=request.user, active=True)  or request.user == None):
+    if (request.user.is_authenticated):
+        if(ProductComment.objects.filter(product=product, user=request.user,
+                                         active=True) or request.user is None):
             user_has_commented = True
 
     comment_form = ProductCommentForm(request.POST)
@@ -203,7 +208,7 @@ def product_detail(request, product_id):
 @login_required()
 def add_product(request):
     """ Add products to the store
-    
+
     Parameters In: HTTP request object
 
     Parameters Out: request object, template (products/add_product.html),
@@ -256,10 +261,13 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product successfully updated!')
-            
+
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to edit product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to edit product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -279,7 +287,7 @@ def edit_product(request, product_id):
 @login_required()
 def delete_product(request, product_id):
     """ Delete products of the store
-    
+
     Parameters In: HTTP request object, product ID
 
     Parameters Out: request object, redirect(reverse) URL to products
@@ -296,10 +304,12 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 # To add a comment feature:
-# copied and modified (except computation of product rating) 
+# copied and modified (except computation of product rating)
 # from https://djangocentral.com/creating-comments-system-with-django/,
 # Abhijeet Pal, Author and Editor in Chief @djangocentral,
 # on April 12th, 2022.
+
+
 def product_review(request, product_id):
     """
     Function to show product reviews
@@ -309,10 +319,7 @@ def product_review(request, product_id):
     Parameters Out: request object, redirect(reverse) URL to product details
     of product being commented
     """
-    #template_name = 'products/product_detail.html'
-    #product = get_object_or_404(Product, pk=product_id)
-    #comments = ProductComment.objects.filter(product=product,
-    #                                         active=True)
+
     new_comment = None
 
     # Comment posted
@@ -320,11 +327,11 @@ def product_review(request, product_id):
         product = get_object_or_404(Product, pk=product_id)
         comments = ProductComment.objects.filter(product=product,
                                                  active=True)
-        
+
         # Read comment form
         comment_form = ProductCommentForm(request.POST)
 
-        if comment_form.is_valid():  
+        if comment_form.is_valid():
 
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
@@ -337,10 +344,11 @@ def product_review(request, product_id):
             # Save the comment to the database
             new_comment.save()
 
-            context = {'product': product,
-                       'comments': comments,
-                       'new_comment': new_comment,
-                       'comment_form': comment_form,
+            context = {
+                'product': product,
+                'comments': comments,
+                'new_comment': new_comment,
+                'comment_form': comment_form,
             }
             messages.success(request, 'Comment sent!')
             return render(request, 'products/product_detail.html', context)
@@ -358,16 +366,16 @@ def product_review(request, product_id):
 @login_required()
 def delete_product_review(request, product_id, comment_id):
     """ Delete comment from product detilas
-    
+
     Parameters In: HTTP request object, product ID, comment ID
 
     Parameters Out: request object, redirect(reverse) URL to product details
-    of product being commented    
+    of product being commented
     """
 
     product = get_object_or_404(Product, pk=product_id)
     comments = ProductComment.objects.filter(product=product,
-                                                 active=True)
+                                             active=True)
 
     # Check if user is superuser
     if not request.user.is_superuser:
@@ -381,12 +389,12 @@ def delete_product_review(request, product_id, comment_id):
     product.save()
 
     messages.success(request, 'Comment deleted!')
-  
+
     return redirect(reverse('product_detail', args=[product_id]))
 
 
 # Compute Product Rating Value
-def compute_product_rating_value (product_id):
+def compute_product_rating_value(product_id):
     """
     This function computes the product rating value
     for each product
@@ -398,8 +406,10 @@ def compute_product_rating_value (product_id):
 
     # Read product and all comments
     product = get_object_or_404(Product, pk=product_id)
-    comments = ProductComment.objects.filter(product=product,
-                                                 active=True)
+    comments = ProductComment.objects.filter(
+        product=product,
+        active=True
+    )
 
     # Compute udated rate
     rate = 0
@@ -408,7 +418,7 @@ def compute_product_rating_value (product_id):
         rate = rate + (comment.product_rating_value)
         i = i+1
     if i == 0:
-        rate = product.rating # If no comments, read default
+        rate = product.rating  # If no comments, read default
     else:
         rate = rate/i
 

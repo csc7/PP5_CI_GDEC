@@ -26,7 +26,7 @@ class Category(models.Model):
     """
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -41,13 +41,23 @@ class Product(models.Model):
     """
     Django Product Model
     """
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     resolution = models.BooleanField(default=False, null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=True,
+        blank=True
+    )
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image_name = models.ImageField(null=True, blank=True)
 
@@ -56,7 +66,7 @@ class Product(models.Model):
 
 
 # To add a comment feature:
-# copied and modified (except RATING VALUES) 
+# copied and modified (except RATING VALUES)
 # from https://djangocentral.com/creating-comments-system-with-django/,
 # Abhijeet Pal, Author and Editor in Chief @djangocentral,
 # on April 12th, 2022.
@@ -80,7 +90,10 @@ class ProductComment(models.Model):
 
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    product_rating_value = models.IntegerField(choices=RATING_VALUES, default=5)
+    product_rating_value = models.IntegerField(
+        choices=RATING_VALUES,
+        default=5
+    )
 
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

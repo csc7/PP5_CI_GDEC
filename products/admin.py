@@ -18,7 +18,7 @@ from .models import Product, Category, ProductComment
 
 
 class ProductAdmin(admin.ModelAdmin):
-    """ 
+    """
     Class to visualize order products in Django admin
     """
     list_display = (
@@ -32,6 +32,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
@@ -40,12 +41,13 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 # To add a comment feature:
-# copied and modified from https://djangocentral.com/creating-comments-system-with-django/,
+# copied and modified from
+# https://djangocentral.com/creating-comments-system-with-django/,
 # Abhijeet Pal, Author and Editor in Chief @djangocentral,
 # on April 12th, 2022.
-#@admin.register(ProductComment)
+
 class ProductCommentAdmin(admin.ModelAdmin):
-    """ 
+    """
     Class to visualize comments line items in Django admin
     """
     list_display = ('user', 'body', 'created_on', 'active')

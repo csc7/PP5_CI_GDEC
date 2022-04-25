@@ -17,6 +17,7 @@ from .import views
 ###############################################################################
 
 
+# URLs resulting from the bag app
 urlpatterns = [
     path('', views.all_products, name='products'),
     # Specify integer for product_id URL to avoid "add/" (in the next URL)

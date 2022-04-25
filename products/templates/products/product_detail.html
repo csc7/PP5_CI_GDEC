@@ -11,11 +11,13 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Page background -->
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 text-center text-md-left offset-lg-2">
                 <div class="image-container my-5">
+                    <!-- Page for select product -->
                     {% if product.image_name %}
                         <a href="{{ product.image_name.url }}" target="blank">
                             <img class="card-img-top products-card" src="{{ product.image_name.url }}" alt="{{ product.name }}">
@@ -27,6 +29,7 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- Product details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container text-center text-md-left mb-5 mt-md-5 dark-blue-font">
                     <p class="mb-0">{{ product.name }}</p>
@@ -90,6 +93,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Links to other pages based on user authentication -->
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 mt-5">
                                     <span class="icon">
@@ -110,7 +114,6 @@
                                 </span>
                                 <span class="text-uppercase btn-outline-primary">View Wish List</span>
                             </a>
-                            <!--<button id="send-to-wish-list-button" formaction="{% url 'add_to_wish_list' product.id %}" class="btn btn-info rounded-0 text-uppercase mt-5 w-50">Add to Wish List</button>-->
                             <a href="" id="send-to-wish-list-button" class="btn btn-info rounded-0 text-uppercase mt-5 w-50"><span class="text-uppercase text-light btn-outline-primary">Add to Wish List</span></a>
                         </div>
                         {% else %}
@@ -121,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- REVIEWS -->
+            <!-- Reviews -->
             <div class="col-12 col-md-6 offset-md-3 bottom-marging-for-large-screens">
                 <div>
                     <h4 class="font-weight-bold dark-blue-font mt-4 text-left text-md-center">Product Reviews</h4>

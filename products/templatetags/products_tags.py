@@ -1,3 +1,6 @@
+# To properly show Django paginated products, if not included all pagination
+# links refer to "all products" page
+
 # Replace correct URL for filtered Django queries,
 # for first/previous/next/last pages
 # accessed on April 22nd, 2022, at 02:00, at

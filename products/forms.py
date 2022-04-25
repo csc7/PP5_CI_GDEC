@@ -19,7 +19,9 @@ from products.widgets import CustomClearableFileInput
 
 
 class ProductForm(forms.ModelForm):
-
+    """
+    Class for the product form
+    """
     class Meta:
         model = Product
         fields = ('category', 'sku', 'name', 'description', 'price', 'resolution', 'rating', 'image_name', )
@@ -32,7 +34,6 @@ class ProductForm(forms.ModelForm):
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
         
-
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-dark rounded-0'
@@ -43,6 +44,9 @@ class ProductForm(forms.ModelForm):
 # Abhijeet Pal, Author and Editor in Chief @djangocentral,
 # on April 12th, 2022.
 class ProductCommentForm(forms.ModelForm):
+    """
+    Class for the product comment form
+    """
     class Meta:
         model = ProductComment
         fields = ('body', 'product_rating_value')

@@ -17,8 +17,10 @@ from .models import Product, Category, ProductComment
 ###############################################################################
 
 
-# Register your models here.
 class ProductAdmin(admin.ModelAdmin):
+    """ 
+    Class to visualize order products in Django admin
+    """
     list_display = (
         'sku',
         'name',
@@ -43,6 +45,9 @@ class CategoryAdmin(admin.ModelAdmin):
 # on April 12th, 2022.
 #@admin.register(ProductComment)
 class ProductCommentAdmin(admin.ModelAdmin):
+    """ 
+    Class to visualize comments line items in Django admin
+    """
     list_display = ('user', 'body', 'created_on', 'active')
     list_filter = ('active', 'created_on')
     search_fields = ('user', 'email', 'body')
@@ -50,7 +55,6 @@ class ProductCommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(active=True)
-
 
 
 admin.site.register(Product, ProductAdmin)

@@ -21,7 +21,9 @@ from profiles.models import User
 # on March 2nd, 2022, at 16:00
 
 class Category(models.Model):
-
+    """
+    Django Category Model
+    """
     class Meta:
         verbose_name_plural = 'Categories'
         
@@ -36,6 +38,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Django Product Model
+    """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
@@ -56,7 +61,9 @@ class Product(models.Model):
 # Abhijeet Pal, Author and Editor in Chief @djangocentral,
 # on April 12th, 2022.
 class ProductComment(models.Model):
-
+    """
+    Django Product Comment Model
+    """
     class Meta:
         ordering = ['created_on']
 
@@ -78,7 +85,6 @@ class ProductComment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
-
 
     def __str__(self):
         return 'Comment {} by {}'.format(self.body, self.user)

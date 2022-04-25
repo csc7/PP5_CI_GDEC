@@ -27,14 +27,28 @@ from checkout.models import OrderLineItem
 
 
 def all_products(request):
-    """View for all products"""
+    """View for all products
+    
+    Parameters In: HTTP request object
 
+    Parameters Out: request object, template (products/products.html),
+    context variables:
+        'products',
+        'filter_char',
+        'search_term',
+        'current_categories',
+        'current_sorting',
+        'title_in_body',
+        'category_in_title_url',
+        'page_obj'
+    """
+
+    # Read product model and initialise search options
     products = Product.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
-
     
     # Check if there is a request to select products
     if request.GET:
@@ -67,9 +81,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
-
-    
+    current_sorting = f'{sort}_{direction}'    
 
     # Read the first category and assign the corresponding product group
     # title (based on top navigation menu). If no categories, then the 
@@ -112,7 +124,7 @@ def all_products(request):
     # Pagination
     page_obj, products = pagination(request, products)
 
-
+    # Context to return
     context = {
         'products': products,
         'filter_char': "?",
@@ -128,6 +140,13 @@ def all_products(request):
 
 
 def pagination (request, items):
+    """View for all products
+    
+    Parameters In: HTTP request object, selected products
+    for Django pagination
+
+    Parameters Out: page object with selected products paginated
+    """
 
     # Pagination by Django Documentaiton:
     # https://docs.djangoproject.com/en/4.0/topics/pagination/,
@@ -183,7 +202,14 @@ def product_detail(request, product_id):
 # Use Django login decorator to access this view
 @login_required()
 def add_product(request):
-    """ Add products to the store """
+    """ Add products to the store
+    
+    Parameters In: HTTP request object
+
+    Parameters Out: request object, template (products/add_product.html),
+    context variables:
+        'form'
+    """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -252,7 +278,12 @@ def edit_product(request, product_id):
 # Use Django login decorator to access this view
 @login_required()
 def delete_product(request, product_id):
-    """ Delete products of the store """
+    """ Delete products of the store
+    
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: request object, redirect(reverse) URL to products
+    """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -262,9 +293,7 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
 
-
     return redirect(reverse('products'))
-
 
 # To add a comment feature:
 # copied and modified (except computation of product rating) 
@@ -273,7 +302,12 @@ def delete_product(request, product_id):
 # on April 12th, 2022.
 def product_review(request, product_id):
     """
-    Function
+    Function to show product reviews
+
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: request object, redirect(reverse) URL to product details
+    of product being commented
     """
     #template_name = 'products/product_detail.html'
     #product = get_object_or_404(Product, pk=product_id)
@@ -287,15 +321,10 @@ def product_review(request, product_id):
         comments = ProductComment.objects.filter(product=product,
                                                  active=True)
         
-
+        # Read comment form
         comment_form = ProductCommentForm(request.POST)
 
-        if comment_form.is_valid():
-
-            
-
-            #comment_form.user = request.user
-            
+        if comment_form.is_valid():  
 
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
@@ -307,10 +336,6 @@ def product_review(request, product_id):
 
             # Save the comment to the database
             new_comment.save()
-
-            #product.rating = compute_product_rating_value(product_id)
-            #product.save()
-            
 
             context = {'product': product,
                        'comments': comments,
@@ -332,11 +357,19 @@ def product_review(request, product_id):
 # Use Django login decorator to access this view
 @login_required()
 def delete_product_review(request, product_id, comment_id):
-    """ Delete comment from product detilas """
+    """ Delete comment from product detilas
+    
+    Parameters In: HTTP request object, product ID, comment ID
+
+    Parameters Out: request object, redirect(reverse) URL to product details
+    of product being commented    
+    """
+
     product = get_object_or_404(Product, pk=product_id)
     comments = ProductComment.objects.filter(product=product,
                                                  active=True)
 
+    # Check if user is superuser
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('product_detail', args=[product_id]))
@@ -357,11 +390,18 @@ def compute_product_rating_value (product_id):
     """
     This function computes the product rating value
     for each product
+
+    Parameters In: product ID
+
+    Parameters Out: product updated rate
     """
+
+    # Read product and all comments
     product = get_object_or_404(Product, pk=product_id)
     comments = ProductComment.objects.filter(product=product,
                                                  active=True)
 
+    # Compute udated rate
     rate = 0
     i = 0
     for comment in comments:

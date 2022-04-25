@@ -1007,40 +1007,45 @@ The tool can be accessed with this link: http://pep8online.com .
 </details>
 <br>
 
-- **Instructions App**
+- **Bag App**
 <details>
     <summary>admin.py</summary>
 
-![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-instructions-admin.PNG) 
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-admin.PNG) 
 </details>
 <details>
     <summary>apps.py</summary>
 
-![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-instructions-apps.PNG) 
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-apps.PNG) 
+</details>
+<details>
+    <summary>contexts.py</summary>
+
+![Evidence of file contexts.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-contexts.PNG) 
 </details>
 <details>
     <summary>models.py</summary>
 
-![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-instructions-models.PNG) 
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-models.PNG) 
 </details>
 <details>
     <summary>tests.py</summary>
 
-![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-instructions-tests.PNG) 
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-tests.PNG) 
 </details>
 <details>
     <summary>urls.py</summary>
 
-![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-instructions-urls.PNG) 
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-urls.PNG) 
 </details>
 <details>
     <summary>views.py</summary>
 
-![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-instructions-views.PNG) 
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-bag-views.PNG) 
 </details>
 <br>
 
-- **Weather App**
+- **Checkout App**
 <details>
     <summary>admin.py</summary>
 
@@ -1052,9 +1057,19 @@ The tool can be accessed with this link: http://pep8online.com .
 ![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
 </details>
 <details>
+    <summary>forms.py</summary>
+
+![Evidence of file forms.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
     <summary>models.py</summary>
 
 ![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-models.PNG) 
+</details>
+<details>
+    <summary>signals.py</summary>
+
+![Evidence of file signals.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
 </details>
 <details>
     <summary>tests.py</summary>
@@ -1071,9 +1086,19 @@ The tool can be accessed with this link: http://pep8online.com .
 
 ![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
 </details>
+<details>
+    <summary>webhook_handler.py</summary>
+
+![Evidence of file webhook_handler.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+</details>
+<details>
+    <summary>webhooks.py</summary>
+
+![Evidence of file webhooks.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+</details>
 <br>
 
-- **Blog App**
+- **Contact App**
 <details>
     <summary>admin.py</summary>
 
@@ -1111,7 +1136,7 @@ The tool can be accessed with this link: http://pep8online.com .
 </details>
 <br>
 
-- **Contact App**
+- **Home App**
 <details>
     <summary>admin.py</summary>
 
@@ -1121,11 +1146,6 @@ The tool can be accessed with this link: http://pep8online.com .
     <summary>apps.py</summary>
 
 ![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-apps.PNG) 
-</details>
-<details>
-    <summary>forms.py</summary>
-
-![Evidence of file forms.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-forms.PNG) 
 </details>
 <details>
     <summary>models.py</summary>
@@ -1147,8 +1167,139 @@ The tool can be accessed with this link: http://pep8online.com .
 
 ![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-contact-views.PNG) 
 </details>
+<br>
 
+- **Products App**
+<details>
+    <summary>admin.py</summary>
 
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+</details>
+<details>
+    <summary>apps.py</summary>
+
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
+    <summary>forms.py</summary>
+
+![Evidence of file forms.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
+    <summary>models.py</summary>
+
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-models.PNG) 
+</details>
+<details>
+    <summary>tests.py</summary>
+
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
+</details>
+<details>
+    <summary>urls.py</summary>
+
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-urls.PNG) 
+</details>
+<details>
+    <summary>views.py</summary>
+
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+</details>
+<details>
+    <summary>widgets.py</summary>
+
+![Evidence of file widgets.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+</details>
+<br>
+
+- **Profiles App**
+<details>
+    <summary>admin.py</summary>
+
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+</details>
+<details>
+    <summary>apps.py</summary>
+
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
+    <summary>forms.py</summary>
+
+![Evidence of file forms.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
+    <summary>models.py</summary>
+
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-models.PNG) 
+</details>
+<details>
+    <summary>tests.py</summary>
+
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
+</details>
+<details>
+    <summary>urls.py</summary>
+
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-urls.PNG) 
+</details>
+<details>
+    <summary>views.py</summary>
+
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+</details>
+<br>
+
+- **Wish App**
+<details>
+    <summary>admin.py</summary>
+
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+</details>
+<details>
+    <summary>apps.py</summary>
+
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
+    <summary>contexts.py</summary>
+
+![Evidence of file contexts.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+</details>
+<details>
+    <summary>models.py</summary>
+
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-models.PNG) 
+</details>
+<details>
+    <summary>tests.py</summary>
+
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
+</details>
+<details>
+    <summary>urls.py</summary>
+
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-urls.PNG) 
+</details>
+<details>
+    <summary>views.py</summary>
+
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+</details>
+<br>
+
+- **Tools**
+<details>
+    <summary>build_csv_and_json.py</summary>
+
+![Evidence of file build_csv_and_json.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+</details>
+<details>
+    <summary>products_database_generation_for_QGIS.py</summary>
+
+![Evidence of file products_database_generation_for_QGIS.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+</details>
+<br>
 
 #### [Back to Index](#index)
 

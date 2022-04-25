@@ -20,7 +20,6 @@ from products.models import Product
 ###############################################################################
 
 
-
 def bag_contents(request):
     """
     This function computes the grand total amount based on the products
@@ -58,7 +57,6 @@ def bag_contents(request):
         else:
             cancel_delivery_cost_factor = 1
 
-
     # Initialize bag item and costs amounts
     bag_items = []
     order_total = 0
@@ -66,10 +64,10 @@ def bag_contents(request):
     bag = request.session.get('bag', {})
 
     # Iterate elements in the bag, accounting for item, quantity, product
-    # and, if applies, resolution 
+    # and, if applies, resolution
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
-            
+
             product = get_object_or_404(Product, pk=item_id)
             order_total += item_data * product.price
             order_product_count += item_data
@@ -80,7 +78,9 @@ def bag_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for resolution, quantity in item_data['items_by_resolution'].items():
+            for (resolution, quantity) in (
+                    item_data['items_by_resolution'].items()
+                    ):
                 order_total += quantity * product.price
                 order_product_count += quantity
                 bag_items.append({
@@ -92,17 +92,21 @@ def bag_contents(request):
 
     # Compute grand total
     if order_total < settings.DISCOUNT_THRESHOLD:
-        delivery = order_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+        delivery = order_total * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE/100
+        )
         delivery = delivery * cancel_delivery_cost_factor
         discount = 0
         delta_for_discount = Decimal(settings.DISCOUNT_THRESHOLD) - order_total
-        
+
     else:
-        delivery = order_total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+        delivery = order_total * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE/100
+        )
         delivery = delivery * cancel_delivery_cost_factor
         discount = order_total * Decimal(settings.DISCOUNT_PERCENTAGE/100)
         delta_for_discount = 0
-        
+
     grand_total = order_total + delivery - discount
 
     # Return context to bag template

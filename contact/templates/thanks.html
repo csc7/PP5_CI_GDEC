@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Thank you page, including date, full name and message sent -->
 <div class="overlay-world"></div>
 <div class="container" id="thanks-div-1">
     <div class="row">
         <div class="col-12 dark-blue-font">
+            <!-- User information and message -->
             <p>
                 <strong>
                 Thanks {{ form_data.name }} {{ form_data.surname }} ({{ form_data.email }}) for contacting us.
@@ -16,6 +18,7 @@
 <div class="container" id="thanks-div-2">
     <div class="row">
         <div class="col-12 dark-blue-font">
+            <!-- Date and time -->
             <p>
                 This is the text you have just sent (on {{ form_data.date }}, at{{ form_data.time }}):
             </p>

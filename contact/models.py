@@ -10,7 +10,7 @@ from django.db import models
 
 class DataFromContactForm(models.Model):
     """
-    A contact form class for the data of the contact form
+    Django model for a contact form
     Primary key (id field) automatically added my Django
     """
     date = models.DateField(max_length=200)

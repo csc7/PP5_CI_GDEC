@@ -9,7 +9,6 @@ Django models for the home app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.db import models
 
 # INTERNAL:
 

@@ -17,8 +17,6 @@ from .models import Order, OrderLineItem
 ###############################################################################
 
 
-# Register your models here.
-
 class OrderLineItemAdminInline(admin.TabularInline):
     """ 
     Class to visualize order line items in Django admin

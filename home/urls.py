@@ -17,6 +17,7 @@ from .import views
 ###############################################################################
 
 
+# URLs resulting from the bag app
 urlpatterns = [
     path('', views.index, name='home'),
     path('gdpr_privacy_policy/', views.gdpr_privacy_policy,

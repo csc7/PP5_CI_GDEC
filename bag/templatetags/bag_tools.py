@@ -21,6 +21,12 @@ register = template.Library()
 
 @register.filter(name="calc_subtotal")
 def calc_subtotal(price, quantity):
-    """ Compute total per item (subtotal) """
+    """ Compute total per item (subtotal)
+    
+    Parameters In: price and quantity
+
+    Parameters Out: subtotal (price*quantity)
+
+    """
 
     return price * quantity

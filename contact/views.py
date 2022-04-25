@@ -22,14 +22,19 @@ def get_contact_page(request):
     """
     View for the Contact page
     Process of contact form
+    
+    Parameters In: HTTP request object
+
+    Parameters Out: request to contact.html and form
     """
-    # if this is a POST request we need to process the form data
+
+    # If this is a POST request we need to process the form data
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
+        # Create a form instance and populate it with data from the request:
         form = ContactForm(request.POST)
-        # check whether it's valid:
+        # Check whether it's valid:
         if form.is_valid():
-            # process the data in form.cleaned_data as required
+            # Process the data in form.cleaned_data as required
             record = DataFromContactForm(date = datetime.datetime.now().date(),
                                          time = datetime.datetime.now().time(),
                                          full_name = form.cleaned_data['full_name'],
@@ -38,11 +43,10 @@ def get_contact_page(request):
                                              'description']
                                         )
             record.save()
-            # redirect to a new URL:
-
+            # Redirect to a new URL:
             return HttpResponseRedirect('thanks/')
 
-    # if a GET (or any other method) we'll create a blank form
+    # If a GET (or any other method) we'll create a blank form
     else:
         form = ContactForm()
     
@@ -52,8 +56,13 @@ def get_contact_page(request):
 def get_thanks_page(request):
     """
     View for "thank-you" page after sending a contact form
+
+    Parameters In: HTTP request object
+
+    Parameters Out: request to thanks.html and context variable with form data
     """
+
     context = {
-                'form_data': DataFromContactForm.objects.all().order_by('-id')[0]
-              }   
+        'form_data': DataFromContactForm.objects.all().order_by('-id')[0]
+    }   
     return render(request, 'thanks.html', context)

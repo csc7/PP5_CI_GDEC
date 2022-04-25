@@ -197,7 +197,6 @@ Automation & Email Platform, https://mailchimp.com) */
     margin-bottom: 5px;
     border: 2px solid #007bff;
     background-color: transparent;
-    /* border: 1px solid transparent; */
     border-radius: 0.25rem;
 }    
 
@@ -207,12 +206,18 @@ Automation & Email Platform, https://mailchimp.com) */
 
 .carousel-inner {
     position: fixed;
-    bottom: 200px;
+    bottom: 275px;
 }
 
 .carousel-indicators {
     position: fixed;
-    bottom: 180px;
+    bottom: 255px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    position: fixed;
+    bottom: 270px;
 }
 
 
@@ -454,12 +459,18 @@ accessed on March 3rd, 2022, at 04:27.
 
     .carousel-inner {
         position: fixed;
-        top: calc(100vh - 450px);
+        top: calc(100vh - 500px);
     }
     
     .carousel-indicators {
         position: absolute;
-        top: calc(100vh - 400px);
+        top: calc(100vh - 380px);
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        position: fixed;
+        top: calc(100vh - 490px);
     }
 
     /* BAG */
@@ -596,6 +607,7 @@ increase the height of the header */
         color: red;
         height: 400px;;
     }
+    
 
     /* CHECKOUT */
 
@@ -628,6 +640,12 @@ increase the height of the header */
     
     .carousel-indicators {
         position: relative;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        position: relative;
+        top: calc(100vh - 510px);
     }
 
 }

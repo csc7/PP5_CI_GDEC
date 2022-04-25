@@ -1,4 +1,19 @@
+###############################################################################
+
+"""
+Python apps file for the Django profiles app
+"""
+
+###############################################################################
+
+# IMPORTED RESOURCES #
+
+# EXTERNAL:
 from django.apps import AppConfig
+
+# INTERNAL:
+
+###############################################################################
 
 
 class ProfilesConfig(AppConfig):

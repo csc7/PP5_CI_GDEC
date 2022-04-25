@@ -24,7 +24,6 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile()
         exclude = ('user',)
-        
 
     def __init__(self, *args, **kwargs):
         """
@@ -32,7 +31,7 @@ class UserProfileForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        placeholders = {            
+        placeholders = {
             'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',
             'default_town_or_city': 'Town or City',
@@ -54,6 +53,8 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].label = 'Street Address 1'
             if field == 'default_street_address2':
                 self.fields[field].label = 'Street Address 2'
-            # Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string,
+            # Capitalize first letter of each word:
+            # https://stackoverflow.com/questions/1549641/
+            # how-can-i-capitalize-the-first-letter-of-each-word-in-a-string,
             # accessed on April 14th, 2022, at 01:54
             self.fields[field].label = self.fields[field].label.title()

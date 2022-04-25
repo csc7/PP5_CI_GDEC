@@ -25,7 +25,7 @@ from django.contrib.auth.decorators import login_required
 @login_required()
 def profile(request):
     """ Display User Profile
-    
+
     Parameters In: HTTP request object
 
     Parameters Out: request object, template to profiles/profile.html, and
@@ -33,7 +33,7 @@ def profile(request):
         'form',
         'orders',
         'do_not_show_bag_in_toast'
-    
+
     """
 
     # Read profile
@@ -56,10 +56,10 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'do_not_show_bag_in_toast': True # To avoid showing bag in success
-                                         # message after updating profile
-                                         # details, variable sent to success
-                                         # message toast
+        'do_not_show_bag_in_toast': True  # To avoid showing bag in success
+                                          # message after updating profile
+                                          # details, variable sent to success
+                                          # message toast
     }
 
     return render(request, template, context)
@@ -77,7 +77,7 @@ def order_history(request, order_number):
             'form',
             'from_profile'
     """
-    
+
     # Read order
     order = get_object_or_404(Order, order_number=order_number)
 

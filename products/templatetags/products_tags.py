@@ -18,6 +18,4 @@ def querystring_replace(request, key, value):
     """
     query_dict = request.GET.copy()
     query_dict[key] = value
-    print("NEW URL")
-    print(query_dict.urlencode())
     return "?"+query_dict.urlencode()

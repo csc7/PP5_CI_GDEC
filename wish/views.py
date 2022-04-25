@@ -93,48 +93,40 @@ def add_to_wish_list(request, item_id):
             or resolution.lower() == 'low'):
 
         try:
-            print("Trying to update quantity of product with resolution")
             update_wish_item = WishList.objects.get(user_profile=profile,
                                         product=product,
                                         product_resolution=resolution
                                         )
         except:
-            print("Product not in wish list")
             new_wish_item = WishList.objects.create(user_profile=profile,
                                             product=product,
                                             product_resolution=resolution,
                                             quantity=quantity,
                                             lineitem_total=line_item_total)
-            print("Wish list record for product with resolution created")
             new_wish_item.save()
             messages.success(request, 'Product added to the wish list')
 
         else:
             update_wish_item.quantity = quantity
-            print("Quantity of existing product with resolution updated")
             update_wish_item.save()
             messages.success(request, 'Product updated in wish list')
 
     else:
 
         try:
-            print("Trying to update quantity of product with no resolution")
             update_wish_item = WishList.objects.get(user_profile=profile,
                                         product=product,
                                         )
         except:
-            print("Product not in wish list")
             new_wish_item = WishList.objects.create(user_profile=profile,
                                             product=product,
                                             quantity=quantity,
                                             lineitem_total=line_item_total)
-            print("Wish list record of product with no resolution created")
             new_wish_item.save()
             messages.success(request, 'Product added to the wish list')
 
         else:
             update_wish_item.quantity = quantity
-            print("Quantity of existing of product with no resolution updated")
             update_wish_item.save()
             messages.success(request, 'Product updated in wish list')
     
@@ -160,9 +152,6 @@ def adjust_wish_list(request):
         resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
     quantity = json.dumps(request.POST.get('quantity'))[1:-1]
-    print(resolution)
-    print(ajax_id)
-    print(quantity)
 
     # Read wish list content
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -209,8 +198,6 @@ def remove_from_wish_list(request):
     else:
         resolution = json.dumps(request.POST.get('resolution'))[1:-1].lower()
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
-    print(resolution)
-    print(ajax_id)
 
     # Try to delete product with resolution, if not possible it means
     # the product does not have it

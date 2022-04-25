@@ -400,6 +400,7 @@ accessed on March 3rd, 2022, at 04:27.
 
 #contact-form-container {
     margin-top: 200px;
+    padding-bottom: 250px;
 }
 
 /* THANK YOU */
@@ -488,6 +489,11 @@ accessed on March 3rd, 2022, at 04:27.
 
     /* PROFILE */
     #profile-and-history-container {
+        padding-bottom: 0;
+    }
+
+    /* CONTACT */
+    #contact-form-container {
         padding-bottom: 0;
     }
 
@@ -679,6 +685,13 @@ increase the height of the header */
     @keyframes slide {
         100% {transform: translate(-400%);}
         0% {transform: translate(100%);}
+    }
+
+    /* CONTACT */
+
+    #send-contact-form-button,
+    #go-to-home-contact-form-button {
+        width: 100%!important;
     }
 
 }

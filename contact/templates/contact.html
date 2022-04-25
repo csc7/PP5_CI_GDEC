@@ -37,8 +37,8 @@
             <!-- Request user to be authenticated to send a message -->
             {% if request.user.is_authenticated %}
                 <div>
-                    <button id="send-to-wish-list-button" class="btn btn-primary rounded-0 text-uppercase mt-5 w-25 float-right">Submit</button>
-                    <a href="{% url 'home' %}" class="btn btn-outline-primary rounded-0 mt-5 w-25 float-right">
+                    <button id="send-contact-form-button" class="btn btn-primary rounded-0 text-uppercase mt-5 w-25 float-right">Submit</button>
+                    <a href="{% url 'home' %}" id="go-to-home-contact-form-button" class="btn btn-outline-primary rounded-0 mt-5 w-25 float-right">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

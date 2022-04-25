@@ -40,7 +40,6 @@ for i in range (0, len(countries)):
     country_to_filter = "'" + countries[i] + "'"
     selected_country = vec_layer.selectByExpression(field_name + country_to_filter)
     selected_country = vec_layer.selectedFeatures()
-    #print(selected_country)
         
     #https://gis.stackexchange.com/questions/80292/creating-vector-layer-from-selected-features-with-pyqgis
     layer = iface.activeLayer()
@@ -51,7 +50,6 @@ for i in range (0, len(countries)):
     #https://gis.stackexchange.com/questions/80292/creating-vector-layer-from-selected-features-with-pyqgis
     current_layer = layer.materialize(QgsFeatureRequest().setFilterFids(layer.selectedFeatureIds()))
     #country_to_clip = QgsProject.instance().addMapLayer(current_layer)
-    #print(country_to_clip)
     
     #https://gis.stackexchange.com/questions/311919/saving-layer-as-shapefile-using-pyqgis
     QgsVectorFileWriter.writeAsVectorFormat(current_layer,'path_to_saving_directory/' + countries[i],'utf-8',driverName='ESRI Shapefile')

@@ -27,9 +27,17 @@ from profiles.models import UserProfile
 ###############################################################################
 
 
-# To check if the user has the "save info" box checked ruding payment
+# To check if the user has the "save info" box checked during payment
 @require_POST
 def cache_checkout_data(request):
+    """View for the purchasing bag
+    This function check if the user has the "save info" box checked
+    during payment
+
+    Parameters In: HTTP request object
+
+    Parameters Out: HttpResponse onbject (200 or 500)
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -45,11 +53,20 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
-
 def checkout(request):
     """
     View for the checkout page
+
+    Parameters In: HTTP request object
+
+    Parameters Out: request, template (checkout/checkout.html),
+    context variables:
+        'order_form',
+        'stripe_public_key',
+        'client_secret'
     """
+
+    # Read Stripe keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -67,7 +84,10 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
+
+        # Check if form is valid, process it, and inform user
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
             order = order_form.save(commit=False) # Avoid multiple 
                                                   # savings with commit=False
@@ -155,7 +175,7 @@ def checkout(request):
         messages.warning(request, 'Missing Stripe public key. \
             Check if it is set in your environment.')
    
-    
+    # Variables to return
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -165,15 +185,24 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     """
     View for a success checkout
+
+    Parameters In: HTTP request object, order number
+
+    Parameters Out: request, template (checkout/checkout_success.html),
+    context variables:
+        'order'
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
+    # Save purshcase if user is authenticated
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
+
         # Add user profile to order
         order.user_profile = profile
         order.save()
@@ -192,6 +221,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
+    # Inform user of the success order
     messages.success(request, f'Order successfully processed!\
         Order number: {order_number}\
         A confirmation e-mail is being sent to {order.email}.')
@@ -199,6 +229,7 @@ def checkout_success(request, order_number):
     if 'bag' in request.session:
         del request.session['bag']
 
+    # Variables to return
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,

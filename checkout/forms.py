@@ -19,7 +19,7 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
     """
-    Order Form Class
+    Order form class
     """
     class Meta:
         model = Order

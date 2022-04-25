@@ -503,6 +503,7 @@ The development of the project employed the following languages, software, frame
 - ##### **JSHint (version 2.13.0)**
 - ##### **JavaScript AJAX**
 - ##### **WAVE Web Accessibility Evaluation Tool**
+- ##### **Coverage.py 6.3.2
 - ##### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
 - ##### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
 - ##### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
@@ -2164,6 +2165,10 @@ ___
 
     - Bootstrap Carousel, https://getbootstrap.com/docs/4.0/components/carousel/, copied and modified on March 25th, 2022, at 00:30.
 
+- Coverage.py:
+
+    To show the coverage of the Django test files; https://coverage.readthedocs.io/en/6.3.2/.
+
 - Django-allauth: version 0.41.0, https://django-allauth.readthedocs.io/, installed on February 25th, 2022.
 
 - Django Documentation:
@@ -2173,6 +2178,8 @@ ___
     - To limit field content to specific values, https://docs.djangoproject.com/en/4.0/ref/models/fields/, accessed on April 12th, 2022.
 
     - Pagination by Django Documentaiton: https://docs.djangoproject.com/en/4.0/topics/pagination/, accessed on April 15th, 2022, at 2:00.
+
+    - To show coverage of test files: https://docs.djangoproject.com/en/4.0/topics/testing/advanced/.
 
 - Djangocentral:
 

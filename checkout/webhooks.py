@@ -29,6 +29,10 @@ from checkout.webhook_handler import StripeWH_Handler
 def webhook(request):
     """
     Listen webhooks from Stripe
+    
+    Parameters In: HTTP request object
+
+    Parameters Out: event handler
     """
 
     # Setup
@@ -76,20 +80,3 @@ def webhook(request):
     response = event_handler(event)
 
     return response
-
-
-
-#    # Handle the event
-#    if event.type == 'payment_intent.succeeded':
-#        payment_intent = event.data.object # contains a stripe.PaymentIntent
-#        # Then define and call a method to handle the successful payment intent.
-#        # handle_payment_intent_succeeded(payment_intent)
-#    elif event.type == 'payment_method.attached':
-#        payment_method = event.data.object # contains a stripe.PaymentMethod
-#        # Then define and call a method to handle the successful attachment of a PaymentMethod.
-#        # handle_payment_method_attached(payment_method)
-#        # ... handle other event types
-#    else:
-#        print('Unhandled event type {}'.format(event.type))
-#
-#        return HttpResponse(status=200)

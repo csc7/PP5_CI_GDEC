@@ -25,9 +25,10 @@ from profiles.models import UserProfile
 ###############################################################################
 
 
-# Create your models here.
-
 class Order(models.Model):
+    """
+    Order Django Model
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile,
@@ -105,6 +106,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Order Line Item Django Model
+    """
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     product_resolution = models.CharField(max_length=8, null=True, blank=True) # High, medium and low

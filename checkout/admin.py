@@ -21,7 +21,7 @@ from .models import Order, OrderLineItem
 
 class OrderLineItemAdminInline(admin.TabularInline):
     """ 
-
+    Class to visualize order line items in Django admin
     """
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
@@ -29,7 +29,7 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
 class OrderAdmin(admin.ModelAdmin):
     """ 
-
+    Class to visualize orders in Django admin
     """
     inlines = (OrderLineItemAdminInline,)
 
@@ -48,5 +48,6 @@ class OrderAdmin(admin.ModelAdmin):
                     'grand_total',)
 
     ordering = ('-date',)
+
 
 admin.site.register(Order, OrderAdmin)

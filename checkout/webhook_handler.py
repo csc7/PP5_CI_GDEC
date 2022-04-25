@@ -92,7 +92,7 @@ class StripeWH_Handler:
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
-
+        # Try to process order 4 times
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -166,10 +166,12 @@ class StripeWH_Handler:
                 return HttpResponse(content=f'Webhook received: \
                     {event["type"]} | ERROR: {e}', status=500)
 
+        # Send confirmation e-mail
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Order \
                 created by webhook', status=200)
+
 
     def handle_payment_intent_payment_failed(self, event):
         """

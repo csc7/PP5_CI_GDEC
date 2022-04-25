@@ -19,6 +19,9 @@ from .models import WishList
 
 # Register your models here.
 class WishListAdmin(admin.ModelAdmin):
+    """ 
+    Class to visualize wish lists in Django admin
+    """
     list_display = (
         'user_profile',
         'product',

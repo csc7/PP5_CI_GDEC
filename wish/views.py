@@ -26,35 +26,44 @@ from bag.templatetags.bag_tools import calc_subtotal
 
 # Wish list view
 def view_wish_list(request):
-    """View for the wish list"""
+    """View for the wish list
+    
+    Parameters In: HTTP request object
+
+    Parameters Out: request object, template (wish/wish_list.html) and
+    context variables:
+        'products_in_wish_orders',
+        'products_to_label_in_wish_list'
+    """
 
     profile = get_object_or_404(UserProfile, user=request.user)
     wish_list_items = WishList.objects.filter(user_profile=profile)
 
     user_orders = profile.orders.all()
-    #products_in_wish_orders = OrderLineItem.objects.filter(order=user_orders)
     products_in_wish_orders = OrderLineItem.objects.all()
     products_to_label_in_wish_list = products_in_wish_orders.values_list('product_id', flat=True)
     
-    #print(wish_list_items.values())
-
     context = {
         'products_in_wish_orders': wish_list_items.order_by('-id'),
         'products_to_label_in_wish_list': products_to_label_in_wish_list,
     }
-
-    #if request.user.is_authenticated:
-        #order = get_object_or_404(Order, order_number=order_number)
-        # Add user profile to order
-        #order.save()
 
     return render(request, 'wish/wish_list.html', context)
 
 
 # View for adding products to the wish list
 def add_to_wish_list(request, item_id):
-    """ Add items to the wish list """
-    resolution = None# Just check that AJAX post does not add "\n" at the end (last character)
+    """ Add items to the wish list
+    
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: redirect URL to wish list
+
+    """
+
+    resolution = None
+
+    # Just check that AJAX post does not add "\n" at the end (last character)
     # is an "n", remember AJAX post inclue quotes ("") so first and last
     # characters need to be removed ([1:1] below)
     if (json.dumps(request.POST.get('resolution'))[-2].lower() == 'n'):
@@ -65,19 +74,10 @@ def add_to_wish_list(request, item_id):
     item_id = ajax_id
 
     redirect_url = json.dumps(request.POST.get('redirect_url'))[1:-1]
-    quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])
-    
-
-    #wish_list = request.session.get('wish_list', {})
+    quantity = int(json.dumps(request.POST.get('quantity'))[1:-1])   
 
     # Read product being added
-    product = get_object_or_404(Product, pk=item_id)    
-
-    # Initialize resolution and check if product has already one
-    #resolution = None
-    #if 'product_resolution' in request.POST:
-    #    resolution = request.POST['product_resolution']
-    #    print(resolution)
+    product = get_object_or_404(Product, pk=item_id)
 
     # Read user profile
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -87,13 +87,6 @@ def add_to_wish_list(request, item_id):
     #redirect_url = request.POST.get('redirect_url')
     line_item_total = calc_subtotal(product.price, quantity)
     items_in_wish_list = WishList.objects.filter(user_profile=profile)
-
-    print(items_in_wish_list.values_list('product', flat=True))
-    print("OKOKOKOKOK")
-    print(resolution)
-    print(ajax_id)
-    print(redirect_url)
-    print(quantity)
 
     if (resolution.lower() == 'high'
             or resolution.lower() == 'medium'
@@ -122,7 +115,6 @@ def add_to_wish_list(request, item_id):
             update_wish_item.save()
             messages.success(request, 'Product updated in wish list')
 
-
     else:
 
         try:
@@ -145,85 +137,19 @@ def add_to_wish_list(request, item_id):
             print("Quantity of existing of product with no resolution updated")
             update_wish_item.save()
             messages.success(request, 'Product updated in wish list')
-
-
-    #i = 0
-    #for j in items_in_wish_list.values_list('product', flat=True):
-    #    if str(j) == item_id:
-    #        i = i + 1
-    #print(i)
-    ## Create or update new wish item
-    ##if product.id in items_in_wish_list.values_list('product', flat=True):
-    #if (i != 0 and (resolution.lower() == 'high'
-    #        or resolution.lower() == 'medium'
-    #        or resolution.lower() == 'low')):
-#
-    #    print("PRODUCT IN WISH LIST")
-    #    
-    #    # Try if there are more than one resolution already, else read
-    #    # the only product (with a specific ID) in the wish list
-#
-    #    existent_wish_items = WishList.objects.filter(
-    #        product=product.id,
-    #        user_profile=profile,
-    #        product_resolution=resolution
-    #        )
-    #    print(existent_wish_items.values(''))
-#
-    #    
-    #    existent_wish_item_quantity = int(existent_wish_item.quantity)
-    #    existent_wish_item_resolution = existent_wish_item.product_resolution
-    #    #existent_wish_item_resolution = existent_wish_item.values_list(
-    #    #        'product_resolution', flat=True
-    #    #)
-    #    print("AJAX RESOLUTION: " + resolution)
-    #    print("IN WISH LIST RESOLUTION: " + existent_wish_item_resolution)
-    #    print(existent_wish_item_quantity)
-    #    print("-----")
-    #    #existent_wish_item_quantity = int(request.POST.get('quantity'))
-    #    print(quantity)
-    #    print(existent_wish_item_quantity)
-    #    if (existent_wish_item_resolution == resolution and 
-    #            existent_wish_item_quantity == quantity):
-    #        # Record exists
-    #        print("Nothing to update, product already in the wish list.")
-    #    elif (existent_wish_item_resolution == resolution):
-    #        print("Trying to update quantity")
-    #        update_wish_item = WishList.objects.get(user_profile=profile,
-    #                                    product=product,
-    #                                    product_resolution=resolution
-    #                                    )
-    #        update_wish_item.quantity = quantity
-    #        print("Quantity of existing product updated")
-    #        update_wish_item.save()
-    #    else:
-    #        print("Trying to create")
-    #        # Update record
-    #        # new_wish_item_quantity = int(request.POST.get('quantity'))
-    #        #new_wish_item_resolution = request.POST.get('product_resolution')
-    #        new_wish_item = WishList.objects.create(user_profile=profile,
-    #                                    product=product,
-    #                                    product_resolution=resolution,
-    #                                    quantity=quantity,
-    #                                    lineitem_total=line_item_total
-    #                                    )
-    #        print("Record updated")
-    #else:
-    #    # Check if it exists, otherwise create it
-    #    new_wish_item = WishList.objects.create(user_profile=profile,
-    #                                    product=product,
-    #                                    product_resolution=resolution,
-    #                                    quantity=quantity,
-    #                                    lineitem_total=line_item_total)
-    #    print("Record created")
-    #    new_wish_item.save()
     
     return redirect(redirect_url)
 
 
 # View for updating the wish list
 def adjust_wish_list(request):
-    """Adjust the quantity of items in the wish list"""
+    """Adjust the quantity of items in the wish list
+    
+    Parameters In: HTTP request object
+
+    Parameters Out: HttpResponse (200 or 500)
+    
+    """
 
     # Just check that AJAX post does not add "\n" at the end (last character)
     # is an "n", remember AJAX post inclue quotes ("") so first and last
@@ -238,19 +164,14 @@ def adjust_wish_list(request):
     print(ajax_id)
     print(quantity)
 
-
     # Read wish list content
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    # Read values
-    #resolution = temp_reading.values_list('product_resolution', flat=True)[0]
-
-    #quantity = int(request.POST.get('quantity'))
-    #print(quantity)
-
+    # If product has resolution, read and compute it
     if (resolution == 'low' or resolution == 'medium' or 
                 resolution == 'high'):
-    # Get record and update
+    
+        # Get record and update
         wish_item_to_update = WishList.objects.get(user_profile=profile,
                                         product=ajax_id,
                                         product_resolution=resolution)
@@ -260,21 +181,26 @@ def adjust_wish_list(request):
         messages.success(request, 'Product updated in wish list')
         #wish_item_to_update.resolution = resolution
 
-
     else:
         wish_item_to_update = WishList.objects.get(user_profile=profile,
                                         product=ajax_id)
+        
         # Update record
         wish_item_to_update.quantity = quantity
         wish_item_to_update.save()
         messages.success(request, 'Product updated in wish list')
 
-    #return redirect(reverse('view_wish_list'))
     return HttpResponse(status=200)
 
 
 def remove_from_wish_list(request):
-    """Remove items from the wish_list"""
+    """Remove items from the wish_list
+    
+    Parameters In: HTTP request object
+
+    Parameters Out: HttpResponse (200 or 500)
+    
+    """
     # Just check that AJAX post does not add "\n" at the end (last character)
     # is an "n", remember AJAX post inclue quotes ("") so first and last
     # characters need to be removed ([1:1] below)
@@ -285,6 +211,9 @@ def remove_from_wish_list(request):
     ajax_id = json.dumps(request.POST.get('itemId'))[1:-1]
     print(resolution)
     print(ajax_id)
+
+    # Try to delete product with resolution, if not possible it means
+    # the product does not have it
     try:
         # Read wish list content
         profile = get_object_or_404(UserProfile, user=request.user)
@@ -309,8 +238,6 @@ def remove_from_wish_list(request):
         messages.success(request, 'Product deleted from wish list')
 
         return HttpResponse(status=200)
-        #return redirect(reverse('view_wish_list'))
-        #return render(request, 'wish/wish_list.html')
 
     # Show an error if item cannot be removed.
     # Alert user with Django message.

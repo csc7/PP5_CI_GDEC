@@ -24,14 +24,20 @@ def wish_list_contents(request):
     """
     This function computes the quantities and price per item
     in the wish list
+
+    Parameters In: HTTP request object, product ID
+
+    Parameters Out: context variables to wish list template:
+        'wish_list_items_',
+        'total_',
+        'product_count_'
     """
 
     # Initialize wish list items and costs amounts
     wish_list_items = []
     total = 0
     product_count = 0
-    wish_list = request.session.get('wish_list', {})
-    
+    wish_list = request.session.get('wish_list', {})    
 
     # Iterate elements in the bag, accounting for item, quantity, product
     # and, if applies, resolution 
@@ -58,7 +64,6 @@ def wish_list_contents(request):
                     'resolution': resolution,
                 })
   
-
     # Return context to bag template
     context = {
         'wish_list_items_': wish_list_items,

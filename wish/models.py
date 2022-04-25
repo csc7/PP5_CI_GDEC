@@ -24,6 +24,9 @@ from profiles.models import UserProfile
 # Create your models here.
 
 class WishList(models.Model):
+    """
+    Django Wish List Model
+    """
     user_profile = models.ForeignKey(
         UserProfile,
         on_delete=models.SET_NULL,

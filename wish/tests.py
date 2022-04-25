@@ -40,7 +40,6 @@ class TestWishListApp(unittest.TestCase):
     def tearDown(self):
         print("tearDown")
 
-
     # Test of WishList model return
     def test_wish_list_model_return(self):
         print("Testing the return of wish list model instantiation")
@@ -78,8 +77,6 @@ class TestWishListApp(unittest.TestCase):
         self.assertEqual(str(self.test_data_for_wish_list_model.lineitem_total),
                          '22.33'
                          )
-
-
 
 
 if __name__ == '__main__':

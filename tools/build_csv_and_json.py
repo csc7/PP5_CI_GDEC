@@ -254,7 +254,6 @@ for file in glob.glob("media/*.png"):
         report_files_found += 1
 
 
-    # ****
     # Write several variables to file
     # https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file
     # Accessed on March 2nd, 2022, at 01:03
@@ -273,14 +272,8 @@ for file in glob.glob("media/*.png"):
                       png_file_name)
                    )
 
-    ## Last record, no comma
-    #if file_paths_found == total_files:
-    #    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
-    #                    % (file_paths_found, model, sku, name_title,
-    #                       description, price, fk,
-    #                       png_file_path, png_file_name))
-    # Include comma for all other records
-    #else:
+    # Last record, no comma.
+    # Include comma for all other records.
     json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
                         % (file_paths_found, model, sku, name_title,
                            description, price, resolution, fk,
@@ -336,7 +329,6 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
                       png_file_path,
                       png_file_name)
                    )
-
 
 
 # Add 10 courses to products

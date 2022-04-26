@@ -69,7 +69,7 @@
                                     <img class="card-img-top img-fluid image-position" src="{{ MEDIA_URL }}noimage.PNG" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
-                                <div id="product-title-in-card" class="card-body pb-0">
+                                <div id="product-title-in-card_{{ product.id }}" class="card-body pb-0 product-title-in-card">
                                     <a href="{% url 'product_detail' product.id %}">
                                         <p class="mb-0 text-center">{{ product.name }}</p>
                                     </a>

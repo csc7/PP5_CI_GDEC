@@ -259,7 +259,7 @@ accessed on March 3rd, 2022, at 04:27.
     object-fit: contain;
 }
 
-#product-title-in-card {
+.product-title-in-card {
     height: 70px;
 }
 

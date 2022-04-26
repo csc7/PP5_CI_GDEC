@@ -17,7 +17,7 @@ from . import views
 ###############################################################################
 
 
-# URLs resulting from the bag app
+# URLs resulting from the wish app
 urlpatterns = [
     path('', views.view_wish_list, name='view_wish_list'),
     path('add_to_wish_list/<item_id>/',

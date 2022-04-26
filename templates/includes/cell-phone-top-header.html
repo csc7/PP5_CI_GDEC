@@ -22,14 +22,14 @@
     </div>
 </li>
 <li class="list-inline-item dropdown pl-2">
-    <a class="nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link d-block d-md-none" href="#" id="user-options-cell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <!-- Font Awesome Icon -->
             <div><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
             <p class="my-0 d-none d-sm-block">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0" aria-labelledby="user-options-cell">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>

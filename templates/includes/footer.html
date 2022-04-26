@@ -74,27 +74,27 @@
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="sign-up-link-in-footer" href="{% url 'products' %}?category=dem,gravimetry,magnetometry,resistivity" class="my-0 py-0 text-light"
+                    <a id="digital-data-link-in-footer" href="{% url 'products' %}?category=dem,gravimetry,magnetometry,resistivity" class="my-0 py-0 text-light"
                     aria-label="Sign Up in the Geophysical Data E-Commerce Website (it opens in a new tab)">Digital Data</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="sign-in-link-in-footer" href="{% url 'products' %}?category=eia,geological_maps,weather" class="my-0 py-0 text-light"
+                    <a id="reports-link-in-footer" href="{% url 'products' %}?category=eia,geological_maps,weather" class="my-0 py-0 text-light"
                     aria-label="Sign In in the Geophysical Data E-Commerce Website (it opens in a new tab)">Reports</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="privacy-link-in-footer" href="{% url 'products' %}?category=courses,books" class="my-0 py-0 text-light"
+                    <a id="training-link-in-footer" href="{% url 'products' %}?category=courses,books" class="my-0 py-0 text-light"
                     aria-label="Go to the Privacy Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Training</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="cookies-link-in-footer" href="{% url 'products' %}?category=simulators,data_processing,data_qc" class="my-0 py-0 text-light"
+                    <a id="software-link-in-footer" href="{% url 'products' %}?category=simulators,data_processing,data_qc" class="my-0 py-0 text-light"
                     aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Software</a>
                 </div>
                 <div class="col-12 text-center text-md-left">
                     <!-- Font Awesome Icon -->
-                    <a id="cookies-link-in-footer" href="{% url 'products' %}?category=data_offers,report_offers,training_offers,software_offers" class="my-0 py-0 text-light"
+                    <a id="offers-link-in-footer" href="{% url 'products' %}?category=data_offers,report_offers,training_offers,software_offers" class="my-0 py-0 text-light"
                     aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Offers</a>
                 </div>
             </div>
@@ -111,23 +111,23 @@
                     {% if request.user.is_superuser %}
                         <div class="col-12 text-center text-md-left">
                             <!-- Font Awesome Icon -->
-                            <a id="sign-up-link-in-footer" href="{% url 'add_product' %}" class="my-0 py-0 text-light"
+                            <a id="product-management-link-in-footer" href="{% url 'add_product' %}" class="my-0 py-0 text-light"
                             aria-label="Go to Product Management in the Geophysical Data E-Commerce Website">Product Management</a>
                         </div>
                     {% endif %}
                     <div class="col-12 text-center text-md-left">
                         <!-- Font Awesome Icon -->
-                        <a id="sign-up-link-in-footer" href="{% url 'profile' %}" class="my-0 py-0 text-light"
+                        <a id="my-profile-link-in-footer" href="{% url 'profile' %}" class="my-0 py-0 text-light"
                         aria-label="Go to my Profile in the Geophysical Data E-Commerce Website">My Profile</a>
                     </div>
                     <div class="col-12 text-center text-md-left">
                         <!-- Font Awesome Icon -->
-                        <a id="sign-up-link-in-footer" href="{% url 'view_wish_list' %}" class="my-0 py-0 text-light"
+                        <a id="my-wish-list-link-in-footer" href="{% url 'view_wish_list' %}" class="my-0 py-0 text-light"
                         aria-label="Go to my My Wish List in the Geophysical Data E-Commerce Website">My Wish List</a>
                     </div>
                     <div class="col-12 text-center text-md-left">
                         <!-- Font Awesome Icon -->
-                        <a id="sign-in-link-in-footer" href="{% url 'account_logout' %}" class="my-0 py-0 text-light"
+                        <a id="log-out-link-in-footer" href="{% url 'account_logout' %}" class="my-0 py-0 text-light"
                         aria-label="Log Out of the Geophysical Data E-Commerce Website">Log Out</a>
                     </div>
                 {% else %}
@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-12 text-center text-md-left">
                         <!-- Font Awesome Icon -->
-                        <a id="sign-in-link-in-footer" href="{% url 'account_login' %}" class="my-0 py-0 text-light"
+                        <a id="log-in-link-in-footer" href="{% url 'account_login' %}" class="my-0 py-0 text-light"
                         aria-label="Log In into the Geophysical Data E-Commerce Website">Log In</a>
                     </div>
                 {% endif %}
@@ -169,7 +169,7 @@
                     </p>
                     
                 </div>
-                <div id="div-for-sign-up-for-newsletter-form" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                <div id="div-for-sign-up-for-newsletter-form-1" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
                     <!-- MAILCHIMP */
                     Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
                     Automation & Email Platform, https://mailchimp.com);
@@ -203,7 +203,7 @@
                         Powered by <span><a class="text-white" href="http://eepurl.com/hYYIJX" title="Mailchimp - email marketing made easy and fun" rel="noopener" target="_blank"><u>Mailchimp</u></a></span>
                     </p>
                 </div>
-                <div id="div-for-sign-up-for-newsletter-form" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                <div id="div-for-sign-up-for-newsletter-form-2" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                         <input type="text" name="b_0d5a7a481825cdc6a8cea5aea_00935812af" tabindex="-1" value="">

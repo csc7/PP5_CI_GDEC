@@ -550,7 +550,7 @@ increase the height of the header */
     }
 
     footer {
-        height: 357px;
+        height: 397px;
     }
 
     #div-for-privacy-link-in-footer, #div-for-cookies-link-in-footer {
@@ -558,7 +558,7 @@ increase the height of the header */
         padding-top: 0;
     }
     
-    #div-for-sign-up-for-newsletter-form {
+    #div-for-sign-up-for-newsletter-form-1 {
         position: absolute;
         bottom: 40px;
     }
@@ -628,7 +628,7 @@ increase the height of the header */
         position: relative;
     }
 
-    #div-for-sign-up-for-newsletter-form {
+    #div-for-sign-up-for-newsletter-form-1 {
         position: static;
         bottom: 22px;
     }

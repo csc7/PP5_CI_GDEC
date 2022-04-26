@@ -9,17 +9,18 @@
 // Disable +/- buttons outside 1-99 range
 function handleEnableDisable(itemId) {
     var currentValue;
-    if ($(window).width() < 768) {
-        currentValue = parseInt($(`#ss_id_qty_${itemId}`).val());
-    } else {
-        currentValue = parseInt($(`#ls_id_qty_${itemId}`).val());
-    }
-    
     var minusDisabled = currentValue < 2;
     var plusDisabled = currentValue > 98;
-    $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-    $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-
+    if ($(window).width() < 768) {
+        currentValue = parseInt($(`#ss_id_qty_${itemId}`).val());
+        $(`#ss_decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#ss_increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    } else {
+        currentValue = parseInt($(`#ls_id_qty_${itemId}`).val());
+        $(`#ls_decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#ls_increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+    
     //$(`#decrement-qty_${itemId}_low`).prop('disabled', minusDisabled);
     //$(`#decrement-qty_${itemId}_medium`).prop('disabled', minusDisabled);
     //$(`#decrement-qty_${itemId}_high`).prop('disabled', minusDisabled);

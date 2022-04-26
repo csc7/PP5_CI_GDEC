@@ -849,33 +849,74 @@ The following tools were used to validate the **files of the website**:
 <br>
 
 ### **HTML Files**
-https://validator.w3.org/ was used to validate the new HTML files (those not being part of the Django framework). To test them, unique HTML files base+index, base+weather, base+blog and base+contact were created. The files were validated and accepted only when errors were related to control characters.
+https://validator.w3.org/ was used to validate the new HTML files. Pages were rendered to get the HTML code (otherwise Django templates would alone would give errors). When possible (where pages do not require log-in), the page link was tested in the validator.
 
-Errors corrected using this service:
+<details>
+    <summary>Home (index.html)</summary>
 
-- **base.html**:
-    - Id body for body tag changed as it needs to have a different name; corrected after using the validator.
+![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
+</details>
+<details>
+    <summary>Home (index.html), direct URL input</summary>
 
-<br>
+![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home-2.PNG) 
+</details>
+<details>
+    <summary>bag.html</summary>
 
-- **Instructions Page (index.html)**:
-    - All images were missing the "alt" attribute; they were added after using the validator.
+![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag.PNG) 
+</details>
+<details>
+    <summary>checkout.html</summary>
 
-<br>
+![Evidence of no errors in the checkout HTML file](docs/validation/validation-html-validator-w3-org-checkout.PNG) 
+</details>
+<details>
+    <summary>checkout_success.html</summary>
 
-- **Weather Page**:
-    - Duplicated id ("s-d-o-4") identified, one of the changed to "s-d-o-5" after using the validator.
-    - Table headers "th" were not included in a "tr" tag; included after using the validator.
+![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-html-validator-w3-org-checkout-success.PNG) 
+</details>
+<details>
+    <summary>contact.html</summary>
 
-<br>
+![Evidence of no errors in the contact HTML file](docs/validation/validation-html-validator-w3-org-contact.PNG) 
+</details>
+<details>
+    <summary>thanks.html</summary>
 
-- **Blog Page**:
-    - Image was missing the "alt" attribute; added after using the validator.
+![Evidence of no errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+</details>
+<details>
+    <summary>add_product.html</summary>
 
-<br>
+![Evidence of no errors in the add-product HTML file](docs/validation/validation-html-validator-w3-org-product-add.PNG) 
+</details>
+<details>
+    <summary>edit_product.html</summary>
 
-- **Contact Page**:
-    - No errors found.
+![Evidence of no errors in the edit-product HTML file](docs/validation/validation-html-validator-w3-org-edit-product.PNG) 
+</details>
+<details>
+    <summary>product_details.html</summary>
+
+![Evidence of no errors in the product-details HTML file](docs/validation/validation-html-validator-w3-org-product-details.PNG) 
+</details>
+<details>
+    <summary>products.html</summary>
+
+![Evidence of no errors in the products HTML file](docs/validation/validation-html-validator-w3-org-products.PNG) 
+</details>
+<details>
+    <summary>profile.html</summary>
+
+![Evidence of no errors in the profile HTML file](docs/validation/validation-html-validator-w3-org-profile.PNG) 
+</details>
+<details>
+    <summary>wish_list.html</summary>
+
+![Evidence of no errors in the wish-list HTML file](docs/validation/validation-html-validator-w3-org-wish-list.PNG) 
+</details>
+
 
 
 #### [Back to Index](#index)

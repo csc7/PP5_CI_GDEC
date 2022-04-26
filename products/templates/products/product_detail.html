@@ -119,18 +119,15 @@
                         {% else %}
                         <p class="font-weight-bold mt-4 mb-4">Log in to view your wish list <span><a href="{% url 'account_login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
                         {% endif %}
-                    </form>
-                    
+                    </form>                    
                 </div>
             </div>
-
             <!-- Reviews -->
             <div class="col-12 col-md-6 offset-md-3 bottom-marging-for-large-screens">
                 <div>
                     <h4 class="font-weight-bold dark-blue-font mt-4 text-left text-md-center">Product Reviews</h4>
                     <hr>
                 </div>
-
                 <div>                                        
                     <div>
                         <!-- Comments 
@@ -158,10 +155,8 @@
                                 </div>
                             {% endif %}
                             <hr>
-                        {% endfor %}
-                        
+                        {% endfor %}                        
                     </div>  
-
                     <div>           
                         {% if new_comment %}
                             <div class="alert alert-success" role="alert">
@@ -189,7 +184,6 @@
         </div>        
     </div>
 {% endblock %}
-
 
 {% block postloadjs %}
 {{ block.super }}

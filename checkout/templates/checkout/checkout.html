@@ -26,7 +26,6 @@
             <hr>
         </div>
     </div>
-
     <!-- Order Summary -->
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
@@ -74,7 +73,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-12 col-lg-6 bottom-marging-for-large-screens">
             <p class="text-muted">Please complete your order below</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -114,7 +112,6 @@
                     <!-- Client secret to get payment intent ID in the view -->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
-
                 <div class="submit-button text-right mt-5 mb-2">                    
                     <a href="{% url 'view_bag' %}" class="btn btn-outline-primary rounded-0">
                         <span class="icon">
@@ -143,7 +140,7 @@
     <h1 class="text-light loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-        </span>
+        </span>Processing Payment
     </h1>    
 </div>
 {% endblock %}
@@ -155,6 +152,5 @@
     {{ client_secret|json_script:"id_client_secret"}}
     <!-- This page javascript file -->
     <script src="{% static 'js/stripe_elements.js' %}"></script>
-
 {% endblock %}
 

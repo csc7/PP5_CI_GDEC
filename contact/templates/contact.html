@@ -13,27 +13,24 @@
             <hr>
         </div>
     </div>
-
     <form action="{% url 'contact' %}" method="post" class="mx-0 px-0">
         <!-- Django Token -->
         {% csrf_token %}
-        <fieldset class="rounded mx-0 mb-5">
-            
-                <div id="form-left-1" class="col-12 mx-0 px-0">
-                    {{ form.full_name.errors }}
-                    {{ form.full_name | as_crispy_field }}
-                </div>
-                <!-- E-mail -->
-                <div id="form-left-3" id="e-mail-contact" class="col-12 mx-0 px-0">
-                    {{ form.email.errors }}
-                    {{ form.email | as_crispy_field  }}
-                </div>
-                <!-- Description -->
-                <div id="form-right-1" class="col-12 mx-0 px-0">
-                    {{ form.description.errors }}
-                    {{ form.description | as_crispy_field  }}
-                </div>
-
+        <fieldset class="rounded mx-0 mb-5">            
+            <div id="form-left-1" class="col-12 mx-0 px-0">
+                {{ form.full_name.errors }}
+                {{ form.full_name | as_crispy_field }}
+            </div>
+            <!-- E-mail -->
+            <div id="form-left-3" class="col-12 mx-0 px-0">
+                {{ form.email.errors }}
+                {{ form.email | as_crispy_field  }}
+            </div>
+            <!-- Description -->
+            <div id="form-right-1" class="col-12 mx-0 px-0">
+                {{ form.description.errors }}
+                {{ form.description | as_crispy_field  }}
+            </div>
             <!-- Request user to be authenticated to send a message -->
             {% if request.user.is_authenticated %}
                 <div>
@@ -48,9 +45,7 @@
             {% else %}
                 <p class="font-weight-bold mt-4 mb-4 dark-blue-font text-right">Log in to use the form <span><a href="{% url 'account_login' %}" class="btn btn-primary rounded-0">Log In</a></span></p>
             {% endif %}
-        </fieldset>
-        
-        
+        </fieldset>       
     </form>
 </div>
 

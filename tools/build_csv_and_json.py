@@ -1,4 +1,4 @@
-2###############################################################################
+###############################################################################
 
 # Load images or products in /media folder and run this program to generate the
 # products database
@@ -9,7 +9,6 @@
 import os
 import glob
 import random
-
 
 # INTERNAL:
 
@@ -211,7 +210,6 @@ for file in glob.glob("media/*.png"):
         # Count files in this category
         magnetometry_files_found += 1
 
-
     # If first characters in file name are "rep", then it is an image
     # for a report
     if name[0:3] == 'rep':
@@ -253,7 +251,6 @@ for file in glob.glob("media/*.png"):
         # Count files in this category
         report_files_found += 1
 
-
     # Write several variables to file
     # https://stackoverflow.com/questions/16822016/write-multiple-variables-to-a-file
     # Accessed on March 2nd, 2022, at 01:03
@@ -274,10 +271,13 @@ for file in glob.glob("media/*.png"):
 
     # Last record, no comma.
     # Include comma for all other records.
-    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
-                        % (file_paths_found, model, sku, name_title,
-                           description, price, resolution, fk,
-                           png_file_path, png_file_name))
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s",' +
+                    '"name":"%s","description":"%s","price":%s,' +
+                    '"resolution":"%s","category":%s,"rating":5,' +
+                    '"image_url":"%s","image_name":"%s"}},'
+                    % (file_paths_found, model, sku, name_title,
+                       description, price, resolution, fk,
+                       png_file_path, png_file_name))
 
 
 # Add 10 books to products
@@ -293,13 +293,13 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     serial_number = '000' + str(i)
     year = str(random.randint(1970, 2022))
     sku = (year + 'BKS' + serial_number[-4:] +
-               country[0:3]).upper()
+           country[0:3]).upper()
     name_title = 'Book Name'
     description = 'This book contains '
     if ((i == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
-            fk = 15
-            is_last_arrival_index += 1
+            (is_last_arrival_index < last_arrivals_items)):
+        fk = 15
+        is_last_arrival_index += 1
     else:
         fk = 9
     resolution = False
@@ -310,10 +310,13 @@ for i in range(file_paths_found + 1, file_paths_found + total_books + 1):
     png_file_path = ''
     png_file_name = 'file_name'
 
-    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
-                        % (i, model, sku, name_title,
-                           description, price, resolution, fk,
-                           png_file_path, png_file_name))
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s",' +
+                    '"description":"%s","price":%s,"resolution":"%s",' +
+                    '"category":%s,"rating":5,"image_url":"%s",' +
+                    '"image_name":"%s"}},'
+                    % (i, model, sku, name_title,
+                       description, price, resolution, fk,
+                       png_file_path, png_file_name))
 
     country = 'N/A'
     rating = ' '
@@ -337,21 +340,21 @@ is_last_arrival = []
 is_last_arrival_index = 0
 last_arrivals_items = 3
 for i in range(1, last_arrivals_items):
-    is_last_arrival.append(random.randint(file_paths_found + total_books + 1, 
-                                          file_paths_found + total_books + 
+    is_last_arrival.append(random.randint(file_paths_found + total_books + 1,
+                                          file_paths_found + total_books +
                                           total_courses + 1))
-for i in range(file_paths_found + total_books + 1, file_paths_found
-               + total_books + total_courses + 1):
+for i in range(file_paths_found + total_books + 1, file_paths_found +
+               total_books + total_courses + 1):
     serial_number = '000' + str(i)
     year = str(random.randint(1970, 2022))
     sku = (year + 'COU' + serial_number[-4:] +
-               country[0:3]).upper()
+           country[0:3]).upper()
     name_title = 'Course Name'
     description = 'This course is designated to train '
     if ((i == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
-            fk = 15
-            is_last_arrival_index += 1
+            (is_last_arrival_index < last_arrivals_items)):
+        fk = 15
+        is_last_arrival_index += 1
     else:
         fk = 10
     resolution = False
@@ -362,10 +365,13 @@ for i in range(file_paths_found + total_books + 1, file_paths_found
     png_file_path = ''
     png_file_name = 'file_name'
 
-    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
-                        % (i, model, sku, name_title,
-                           description, price, resolution, fk,
-                           png_file_path, png_file_name))
+    json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s",' +
+                    '"name":"%s","description":"%s","price":%s,' +
+                    '"resolution":"%s","category":%s,"rating":5,' +
+                    '"image_url":"%s","image_name":"%s"}},'
+                    % (i, model, sku, name_title,
+                       description, price, resolution, fk,
+                       png_file_path, png_file_name))
 
     country = 'N/A'
     rating = ' '
@@ -390,22 +396,22 @@ is_last_arrival_index = 0
 last_arrivals_items = 4
 for i in range(1, last_arrivals_items):
     is_last_arrival.append(random.randint(file_paths_found + total_books +
-                                          total_courses + 1, 
-                                          file_paths_found + total_books + 
+                                          total_courses + 1,
+                                          file_paths_found + total_books +
                                           total_courses + total_software + 1))
-for i in range(file_paths_found + total_books + total_courses + 1, 
+for i in range(file_paths_found + total_books + total_courses + 1,
                file_paths_found + total_books + total_courses +
                total_software + 1):
     serial_number = '000' + str(i)
     year = str(random.randint(1970, 2022))
     sku = (year + 'COU' + serial_number[-4:] +
-               country[0:3]).upper()
+           country[0:3]).upper()
     name_title = 'Software Name'
     description = 'This software package is a fundamental tool for '
     if ((i == is_last_arrival[is_last_arrival_index]) and
-                (is_last_arrival_index < last_arrivals_items)):
-            fk = 16
-            is_last_arrival_index += 1
+            (is_last_arrival_index < last_arrivals_items)):
+        fk = 16
+        is_last_arrival_index += 1
     else:
         fk = random.randint(11, 13)
     price = format(random.uniform(500, 800), '.2f')
@@ -415,17 +421,22 @@ for i in range(file_paths_found + total_books + total_courses + 1,
     png_file_path = ''
     png_file_name = 'file_name'
 
-
     # No "comma" in last record
     if i == file_paths_found + total_books + total_courses + total_software:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}}'
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s",' +
+                        '"name":"%s","description":"%s","price":%s,' +
+                        '"resolution":"%s","category":%s,"rating":5,' +
+                        '"image_url":"%s","image_name":"%s"}}'
                         % (i, model, sku, name_title,
                            description, price, resolution, fk,
                            png_file_path, png_file_name))
-    
-    #Include comma for all other records, as before
+
+    # Include comma for all other records, as before
     else:
-        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s","name":"%s","description":"%s","price":%s,"resolution":"%s","category":%s,"rating":5,"image_url":"%s","image_name":"%s"}},'
+        json_file.write('{"pk":%s,"model":"%s","fields":{"sku":"%s",' +
+                        '"name":"%s","description":"%s","price":%s,' +
+                        '"resolution":"%s","category":%s,"rating":5,' +
+                        '"image_url":"%s","image_name":"%s"}},'
                         % (i, model, sku, name_title,
                            description, price, resolution, fk,
                            png_file_path, png_file_name))
@@ -444,13 +455,6 @@ for i in range(file_paths_found + total_books + total_courses + 1,
                       png_file_path,
                       png_file_name)
                    )
-
-
-
-
-
-
-
 
 # Close the CSV file
 csv_file.close()
@@ -507,12 +511,16 @@ json_file.write('[')
 for i in range(0, len(cats)):
     # If last record, do not include comma
     if i == len(cats)-1:
-        json_file.write('{"pk":%s,"model":%s,"fields":{"name":"%s","friendly_name":"%s"}}'
-                        % (i+1, cats_model, cats[i], cats_friendly[i]))
+        json_file.write(
+            '{"pk":%s,"model":%s,"fields":{"name":"%s","friendly_name":"%s"}}'
+            % (i+1, cats_model, cats[i], cats_friendly[i])
+        )
     # Include comma for all other records
     else:
-        json_file.write('{"pk":%s,"model":%s,"fields":{"name":"%s","friendly_name":"%s"}},'
-                        % (i+1, cats_model, cats[i], cats_friendly[i]))
+        json_file.write(
+            '{"pk":%s,"model":%s,"fields":{"name":"%s","friendly_name":"%s"}},'
+            % (i+1, cats_model, cats[i], cats_friendly[i])
+        )
 # Write last character of JSON format
 json_file.write(']')
 # Close the file

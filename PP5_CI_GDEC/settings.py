@@ -37,11 +37,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-2glapt69bmym1vm5nt34m#j2&d(--%e&#af(d*=4$3rtxwd6cb'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = 1
 
 ALLOWED_HOSTS = [
@@ -110,9 +109,9 @@ TEMPLATES = [
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
-                'crispy_forms.templatetags.crispy_forms_field',                
+                'crispy_forms.templatetags.crispy_forms_field',
             ]
-            
+
         },
     },
 ]
@@ -156,23 +155,23 @@ else:
     }
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+  {
+   'NAME':
+   'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+  },
+  {
+   'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+  },
+  {
+   'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+  },
+  {
+   'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+  },
 ]
 
 
@@ -224,7 +223,7 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-    
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -244,7 +243,7 @@ STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # For development:
-#if 'DEVELOPMENT' in os.environ:
+# if 'DEVELOPMENT' in os.environ:
 if DEBUG == 1:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'gdec@gdectestexample.com'
@@ -258,6 +257,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-
-

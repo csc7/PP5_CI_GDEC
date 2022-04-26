@@ -72,7 +72,9 @@ Then, free images were downloaded from Pexels (please see Credit section for det
 
 A Python file was created to build CSV and JSON structures for the Products and Category models (with fields matching their fields, including the name and URL of the images). This file, "build_csv_and_json.py" (in the "/tools" folder in the project root directory), saves the CSV file in the same "/tools" folder and the JSON file in the "/fixtures" folder of the products Django app.
 
-Since the JSON file in already in the "/fixtures" folder, the data can be loaded into the Django models using the following commands (in this order, since the products are related to categories and therefore the latter must be defined before):
+**The file build_csc_and_json.py must run with only the images in the project "/media" folder, with image names starting with the following names (otherwise the program will not work, as it would be reading other file names and therefore the "if" statements should be modified): digital elevation models, gravimetry, resistivity and/or magnetometry. Run it before adding other files to the "/media" folder, or change the name of the folder in the Python file.**
+
+Since the JSON file is already in the "/fixtures" folder, the data can be loaded into the Django models using the following commands (in this order, since the products are related to categories and therefore the latter must be defined before):
 
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
@@ -988,22 +990,22 @@ The tool can be accessed with this link: http://pep8online.com .
 <details>
     <summary>asgi.py</summary>
 
-![Evidence of file asgi.py validated with http://pep8online.com/ ](docs/validation/validation-python-django-asgi.PNG) 
+![Evidence of file asgi.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-asgi.PNG) 
 </details>
 <details>
     <summary>settings.py</summary>
 
-![Evidence of file settings.py validated with http://pep8online.com/ ](docs/validation/validation-python-django-settings.PNG) 
+![Evidence of file settings.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-settings.PNG) 
 </details>
 <details>
     <summary>urls.py</summary>
 
-![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-django-urls.PNG) 
+![Evidence of file urls.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-urls.PNG) 
 </details>
 <details>
     <summary>wsgi.py</summary>
 
-![Evidence of file wsgi.py validated with http://pep8online.com/ ](docs/validation/validation-python-django-wsgi.PNG) 
+![Evidence of file wsgi.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-wsgi.PNG) 
 </details>
 <br>
 
@@ -1292,12 +1294,12 @@ The tool can be accessed with this link: http://pep8online.com .
 <details>
     <summary>build_csv_and_json.py</summary>
 
-![Evidence of file build_csv_and_json.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+![Evidence of file build_csv_and_json.py validated with http://pep8online.com/ ](media/validation-python-pep-8-build_csv_and_json.PNG) 
 </details>
 <details>
     <summary>products_database_generation_for_QGIS.py</summary>
 
-![Evidence of file products_database_generation_for_QGIS.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+![Evidence of file products_database_generation_for_QGIS.py validated with http://pep8online.com/ ](media/validation-python-pep-8-products_database_generation_for_QGIS.PNG) 
 </details>
 <br>
 

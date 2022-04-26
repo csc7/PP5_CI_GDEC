@@ -425,6 +425,11 @@ accessed on March 3rd, 2022, at 04:27.
 
 }
 
+/* WISH LIST */
+#wish-list-content {
+    min-height: 550px;
+}
+
 
 /* ************* */
 /* MEDIA QUERIES */
@@ -782,5 +787,10 @@ increase the height of the header */
     #shopping-bag-content {
         margin-bottom: 700px;
     }
+
+    /* WISH LIST */
+    #wish-list-content {
+    min-height: 1250px;
+}
 
 }

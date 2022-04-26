@@ -1,7 +1,7 @@
 <!-- Copied and modified from Code Institute "Boutique Ado" project on March 1st, 2022, at 13:26 -->
 <div class="mx-auto px-auto">
-    <ul id="cell-phone-icons">
-        <li class="list-inline-item mx-auto">
+    <ul id="cell-phone-icons" class="mx-auto px-0">
+        <li class="list-inline-item px-auto">
             <a class="nav-link d-block d-md-none px-0" href="#" id="cell-phone-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-search fa-lg"></i></div>
@@ -23,7 +23,7 @@
                 </form>
             </div>
         </li>
-        <li class="list-inline-item dropdown pl-2 mx-auto">
+        <li class="list-inline-item dropdown px-auto">
             <a class="nav-link d-block d-md-none" href="#" id="user-options-cell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <!-- Font Awesome Icon -->
@@ -45,7 +45,7 @@
             </div>
         </li>
         {% if request.user.is_authenticated %}
-        <li class="list-inline-item my-auto py-1 pl-md-0 mx-auto">
+        <li class="list-inline-item my-auto py-1 pl-md-0 px-auto">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none" href="{% url 'view_wish_list' %}">
                 <div class="text-center text-primary">
                     <!-- Font Awesome Icon -->
@@ -55,7 +55,7 @@
             </a>
         </li>
         {% endif %}
-        <li class="list-inline-item px-0 mx-auto">
+        <li class="list-inline-item px-0 px-auto">
             <a class="{% if grand_total %}text-primary font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none px-0" href="{% url 'view_bag' %}">
                 <div class="text-center">
                     <!-- Font Awesome Icon -->

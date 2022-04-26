@@ -23,7 +23,7 @@
                 </form>
             </div>
         </li>
-        <li class="list-inline-item dropdown px-auto">
+        <li class="list-inline-item dropdown px-0">
             <a class="nav-link d-block d-md-none" href="#" id="user-options-cell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <!-- Font Awesome Icon -->
@@ -45,7 +45,7 @@
             </div>
         </li>
         {% if request.user.is_authenticated %}
-        <li class="list-inline-item my-auto py-1 pl-md-0 px-auto">
+        <li class="list-inline-item my-auto py-1 pl-md-0 px-0">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none" href="{% url 'view_wish_list' %}">
                 <div class="text-center text-primary">
                     <!-- Font Awesome Icon -->
@@ -55,7 +55,7 @@
             </a>
         </li>
         {% endif %}
-        <li class="list-inline-item px-0 px-auto">
+        <li class="list-inline-item px-0">
             <a class="{% if grand_total %}text-primary font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none px-0" href="{% url 'view_bag' %}">
                 <div class="text-center">
                     <!-- Font Awesome Icon -->

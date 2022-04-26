@@ -237,6 +237,10 @@ Automation & Email Platform, https://mailchimp.com) */
     width: 15%;
 }
 
+#shopping-bag-content {
+    min-height: 550px;
+}
+
 
 /* PRODUCTS */
 
@@ -789,7 +793,8 @@ increase the height of the header */
     }
 
     /* WISH LIST */
-    #wish-list-content {
+    #wish-list-content,
+    #shopping-bag-content {
     min-height: 1250px;
 }
 

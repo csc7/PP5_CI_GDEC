@@ -37,8 +37,8 @@
                             <!-- Product details -->
                             <tr class="d-none d-md-table-row">
                                 <!-- Product details -->
-                                <th scope="col">Product Info</th>
-                                <th scope="col"></th>
+                                <th scope="col" class="w-25">Product Info</th>
+                                <th scope="col" class="w-25"></th>
                                 <th scope="col" class="text-center">Price</th>
                                 <th scope="col" class="text-center">Quantity</th>
                                 <th scope="col" class="text-center">Subtotal</th>
@@ -57,7 +57,7 @@
                                     </a>
                                     {% endif %}
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 w-25">
                                     <!-- Include resolution if applicable -->
                                     <a href="{% url 'product_detail' item.product.id %}">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -71,38 +71,37 @@
                                 </td>
                                 <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price }}</p>
-                                </td>
-                                
+                                </td>                                
                                 <td class="py-3 quantity-control-width text-center">
                                     <!-- Update wish list if requested -->                                    
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.product.id }}" id="large_screen_wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
-                                                        <span>
-                                                            <i class="fas fa-minus fa-sm"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                {% if item.product_resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
-                                                {% endif %}
-                                                <input class="form-control form-control-sm qty_input text-center" type="number"
-                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
-                                                    id="ls_id_qty_{{ item.product.id }}">
-                                                <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.product.id }}" id="large_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
-                                                        <span>
-                                                            <i class="fas fa-plus fa-sm"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>                                                
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-primary rounded-0"
+                                                    data-item_id="{{ item.product.id }}" id="large_screen_wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
                                             </div>
-                                        </div>                                   
-                                        <a class="update-link-wish-list text-info w-100 text-center float-right" id="update-from-wish-list-large-screen_{{ item.product.id }}"><small>Update Quantity</small></a>
-                                        <a class="remove-item-wish-list text-danger w-100 text-center float-right" id="remove-from-wish-list-large-screen_{{ item.product.id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
+                                            {% if item.product_resolution %}
+                                                <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
+                                            {% endif %}
+                                            <input class="form-control form-control-sm qty_input text-center" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
+                                                id="ls_id_qty_{{ item.product.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-primary rounded-0"
+                                                    data-item_id="{{ item.product.id }}" id="large_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>                                                
+                                        </div>
+                                    </div>                                   
+                                    <a class="update-link-wish-list text-info w-100 text-center float-right" id="update-from-wish-list-large-screen_{{ item.product.id }}"><small>Update Quantity</small></a>
+                                    <a class="remove-item-wish-list text-danger w-100 text-center float-right" id="remove-from-wish-list-large-screen_{{ item.product.id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
                                 </td>
                                 <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -182,25 +181,25 @@
                             </tr>
                             <tr class="d-table-row d-md-none">
                                 <td class="py-3 text-center" colspan="5">
-                                        <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-75">Add to Bag</button>
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        <hr>  
+                                    <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-75">Add to Bag</button>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <hr>  
                                 </td>                                
                             </tr>                      
                         </table>
                     </form>
                     {% endfor %}
-                    <table class="float-right">                   
+                    <table class="mx-auto float-lg-right">                   
                         <tr class="pb-5">
                             <!-- Buttons to check out or keep shopping -->
                             <td colspan="1" class="text-right pb-5">
-                                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg mt-1">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="{% url 'view_bag' %}" class="btn btn-primary rounded-0 btn-lg">
+                                <a href="{% url 'view_bag' %}" class="btn btn-primary rounded-0 btn-lg mt-1 mr-0 mr-sm-1">
                                     <span class="text-uppercase">View Bag</span>
                                 </a>
                             </td>

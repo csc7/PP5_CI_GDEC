@@ -97,6 +97,7 @@ def add_to_wish_list(request, item_id):
                 product=product,
                 product_resolution=resolution
             )
+
         except:
             new_wish_item = WishList.objects.create(
                 user_profile=profile,
@@ -111,7 +112,7 @@ def add_to_wish_list(request, item_id):
         else:
             update_wish_item.quantity = quantity
             update_wish_item.save()
-            messages.success(request, 'Product updated in wish list')
+            messages.success(request, 'Quantity updated in wish list')
 
     else:
 
@@ -120,6 +121,7 @@ def add_to_wish_list(request, item_id):
                 user_profile=profile,
                 product=product,
             )
+
         except:
             new_wish_item = WishList.objects.create(
                 user_profile=profile,
@@ -133,9 +135,10 @@ def add_to_wish_list(request, item_id):
         else:
             update_wish_item.quantity = quantity
             update_wish_item.save()
-            messages.success(request, 'Product updated in wish list')
+            messages.success(request, 'Quantity updated in wish list')
 
-    return redirect(redirect_url)
+    #return redirect(redirect_url)
+    return HttpResponse(status=200)
 
 
 # View for updating the wish list

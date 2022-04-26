@@ -29,8 +29,10 @@
             {% if products_in_wish_orders %}
                 <div class="table-responsive rounded mb-5">
                     <!-- Products table, repeat rows and but show only one of them based on screen size -->
-                    <table class="table table-sm table-borderless dark-blue-font">                   
-                        {% for item in products_in_wish_orders %}
+                    {% for item in products_in_wish_orders %}
+                    <form id="form-wish-list_{{ item.product.id }}" class="form update-form-wish-list" method="POST">
+                    {% csrf_token %}
+                        <table class="table table-sm table-borderless dark-blue-font">            
                             <!-- Table for medium size (and larger) screens -->
                             <!-- Product details -->
                             <tr class="d-none d-md-table-row">
@@ -41,7 +43,7 @@
                                 <th scope="col" class="text-center">Quantity</th>
                                 <th scope="col" class="text-center">Subtotal</th>
                                 <th scope="col"></th>
-                            </tr>
+                            </tr>                            
                             <tr class="d-none d-md-table-row">
                                 <td class="p-3 w-25">
                                     <!-- Assign image to product or default "no-image" in database -->
@@ -70,15 +72,14 @@
                                 <td class="py-3 text-center">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
-                                <form id="form-wish-list-large-screen" class="form update-form-wish-list" method="POST">
-                                {% csrf_token %}
+                                
                                 <td class="py-3 quantity-control-width text-center">
                                     <!-- Update wish list if requested -->                                    
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.product.id }}" id="wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                        data-item_id="{{ item.product.id }}" id="large_screen_wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -89,10 +90,10 @@
                                                 {% endif %}
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
-                                                    id="id_qty_{{ item.product.id }}">
+                                                    id="ls_id_qty_{{ item.product.id }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.product.id }}" id="wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                        data-item_id="{{ item.product.id }}" id="large_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
@@ -111,10 +112,10 @@
                                         <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-100">Add to Bag</button>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     </div>
-                                </td>
-                                </form>
-                            
+                                </td>                               
                             </tr>
+                        </table>                   
+                        <table>
                             <!-- Table for small size screens -->
                             <tr class="d-table-row d-md-none">
                                 <!-- Product details -->
@@ -142,22 +143,18 @@
                                 <td class="py-3" rowspan="2">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
-                            </tr>
-                            <form id="form-wish-list-small-screen" class="form update-form-wish-list" method="POST">
-                                {% csrf_token %}
+                            </tr>                            
                             <tr class="d-table-row d-md-none">
                                 <td class="py-3 w-25" colspan="2">
                                     <p class="my-0">${{ item.product.price }}</p>
-                                </td>
-                                
+                                </td>                                
                                 <td class="py-3 w-75" colspan="2">
-                                    <!-- Update wish list if requested -->
-                                    
+                                    <!-- Update wish list if requested -->                                    
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.product.id }}" id="wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                        data-item_id="{{ item.product.id }}" id="small_screen_wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -165,10 +162,10 @@
                                                 </div>
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
-                                                    id="id_qty_{{ item.product.id }}">
+                                                    id="ss_id_qty_{{ item.product.id }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
-                                                        data-item_id="{{ item.product.id }}" id="wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                        data-item_id="{{ item.product.id }}" id="small_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
@@ -178,26 +175,25 @@
                                                     <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
                                                 {% endif %}
                                             </div>
-                                        </div>
-                                    
+                                        </div>                                    
                                     <a class="update-link-wish-list text-info w-100 text-center float-right" id="update-from-wish-list-small-screen_{{ item.product.id }}"><small>Update Quantity</small></a>
                                     <a class="remove-item-wish-list text-danger w-100 text-center float-right" id="remove-from-wish-list-small-screen_{{ item.product.id }}" data-product_resolution="{{ item.resolution }}"><small>Remove Product</small></a>
                                 </td>
                             </tr>
                             <tr class="d-table-row d-md-none">
-                                <td class="py-3 text-center" colspan="6">
+                                <td class="py-3 text-center" colspan="5">
                                         <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-75">Add to Bag</button>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                         <hr>  
                                 </td>                                
-                            </tr>
-                        </form>
-                        
-                        {% endfor %}                        
-                        
+                            </tr>                      
+                        </table>
+                    </form>
+                    {% endfor %}
+                    <table class="float-right">                   
                         <tr class="pb-5">
                             <!-- Buttons to check out or keep shopping -->
-                            <td colspan="6" class="text-right pb-5">
+                            <td colspan="1" class="text-right pb-5">
                                 <a href="{% url 'products' %}" class="btn btn-outline-primary rounded-0 btn-lg">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -209,7 +205,7 @@
                                 </a>
                             </td>
                         </tr>
-                    </table>
+                    </table>                    
                 </div>
             {% else %}
                 <!-- Inform the user if there are no items in the wish list -->

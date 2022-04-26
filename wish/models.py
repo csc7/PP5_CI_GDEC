@@ -34,11 +34,26 @@ class WishList(models.Model):
         blank=True,
         related_name='user_wishlist'
     )
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    product_resolution = models.CharField(max_length=8, null=True, blank=True) # High, medium and low
+    product = models.ForeignKey(
+        Product,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE
+    )
+    product_resolution = models.CharField(
+        max_length=8,
+        null=True,
+        blank=True
+    )  # High, medium and low
     quantity = models.IntegerField(null=False, blank=False, default=0)
     # Just to show current price
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineitem_total = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=False,
+        blank=False,
+        editable=False
+    )
 
     def __str__(self):
         return f'Wish list for {self.user_profile}'

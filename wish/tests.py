@@ -62,9 +62,10 @@ class TestWishListApp(unittest.TestCase):
 
     def test_product_resolution_in_wish_list_model(self):
         print("Testing user profile in wish list model")
-        self.assertEqual(str(self.test_data_for_wish_list_model.product_resolution),
-                         'High'
-                         )
+        self.assertEqual(str(
+            self.test_data_for_wish_list_model.product_resolution),
+            'High'
+        )
 
     def test_quantity_in_wish_list_model(self):
         print("Testing user profile in wish list model")
@@ -74,9 +75,10 @@ class TestWishListApp(unittest.TestCase):
 
     def test_line_item_total_in_wish_list_model(self):
         print("Testing user profile in wish list model")
-        self.assertEqual(str(self.test_data_for_wish_list_model.lineitem_total),
-                         '22.33'
-                         )
+        self.assertEqual(str(
+            self.test_data_for_wish_list_model.lineitem_total),
+            '22.33'
+        )
 
 
 if __name__ == '__main__':

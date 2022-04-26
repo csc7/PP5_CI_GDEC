@@ -1134,11 +1134,6 @@ The tool can be accessed with this link: http://pep8online.com .
 
 ![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-contact-views.PNG) 
 </details>
-<details>
-    <summary>widgets.py</summary>
-
-![Evidence of file widgets.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-contact-widgets.PNGG) 
-</details>
 <br>
 
 - **Home App**
@@ -1259,37 +1254,37 @@ The tool can be accessed with this link: http://pep8online.com .
 <details>
     <summary>admin.py</summary>
 
-![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-admin.PNG) 
+![Evidence of file admin.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-admin.PNG) 
 </details>
 <details>
     <summary>apps.py</summary>
 
-![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+![Evidence of file apps.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-apps.PNG) 
 </details>
 <details>
     <summary>contexts.py</summary>
 
-![Evidence of file contexts.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-apps.PNG) 
+![Evidence of file contexts.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-contexts.PNG) 
 </details>
 <details>
     <summary>models.py</summary>
 
-![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-models.PNG) 
+![Evidence of file models.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-models.PNG) 
 </details>
 <details>
     <summary>tests.py</summary>
 
-![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-tests.PNG) 
+![Evidence of file tests.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-tests.PNG) 
 </details>
 <details>
     <summary>urls.py</summary>
 
-![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-urls.PNG) 
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-urls.PNG) 
 </details>
 <details>
     <summary>views.py</summary>
 
-![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-weather-views.PNG) 
+![Evidence of file views.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-wish-views.PNG) 
 </details>
 <br>
 

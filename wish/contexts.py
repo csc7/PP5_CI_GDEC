@@ -19,7 +19,6 @@ from products.models import Product
 ###############################################################################
 
 
-
 def wish_list_contents(request):
     """
     This function computes the quantities and price per item
@@ -37,13 +36,13 @@ def wish_list_contents(request):
     wish_list_items = []
     total = 0
     product_count = 0
-    wish_list = request.session.get('wish_list', {})    
+    wish_list = request.session.get('wish_list', {})
 
     # Iterate elements in the bag, accounting for item, quantity, product
-    # and, if applies, resolution 
+    # and, if applies, resolution
     for item_id, item_data in wish_list.items():
         if isinstance(item_data, int):
-            
+
             product = get_object_or_404(Product, pk=item_id)
             total += item_data * product.price
             product_count += item_data
@@ -54,7 +53,9 @@ def wish_list_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for resolution, quantity in item_data['items_by_resolution'].items():
+            for (resolution, quantity) in (
+                    item_data['items_by_resolution'].items()
+                    ):
                 total += quantity * product.price
                 product_count += quantity
                 wish_list_items.append({
@@ -63,7 +64,7 @@ def wish_list_contents(request):
                     'product': product,
                     'resolution': resolution,
                 })
-  
+
     # Return context to bag template
     context = {
         'wish_list_items_': wish_list_items,

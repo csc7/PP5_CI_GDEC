@@ -69,7 +69,8 @@
                 {% else %} col-md-4 col-lg-4 {% endif %} my-auto py-1 py-md-0">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
-                            <input class="form-control border-primary rounded-0" type="text" name="q" placeholder="Search our site">
+                            <input id="search-input" class="form-control border-primary rounded-0" type="text" name="q" placeholder="Search our site">
+                            <label for="search-input"></label>
                             <div class="input-group-append">
                                 <button class="form-control btn border-primary rounded-0" type="submit">
                                     <span class="icon">

@@ -1389,7 +1389,7 @@ The tool can be accessed with this link: http://pep8online.com .
 
 
 ### **Accessibility**
-https://wave.webaim.org/ was used to validate accessibility. Although there are warnings, all pages contain zero errors, except for the special case when the wish list contains the same product with two different resolutions, where the validator presents multiple form labels.
+https://wave.webaim.org/ was used to validate accessibility. Although there are warnings, all pages contain zero errors, except for the special case when the wish list contains the same product with two different resolutions, where the validator presents multiple form labels. Please see bugs section for more details.
 
 Pages were tested with thier URLs, directly in the we web page address input in at https://wave.webaim.org/, or throught the Wave plugin for Chrome when authentification was needed. Please check evidence below:
 

@@ -38,11 +38,11 @@
                             <tr class="d-none d-md-table-row">
                                 <!-- Product details -->
                                 <th scope="col" class="w-25">Product Info</th>
-                                <th scope="col" class="w-25"></th>
+                                <th scope="col" class="w-25" hidden> Product Details</th>
                                 <th scope="col" class="text-center">Price</th>
                                 <th scope="col" class="text-center">Quantity</th>
                                 <th scope="col" class="text-center">Subtotal</th>
-                                <th scope="col"></th>
+                                <th scope="col" hidden>Add to Bag</th>
                             </tr>                            
                             <tr class="d-none d-md-table-row">
                                 <td class="p-3 w-25">
@@ -79,6 +79,9 @@
                                             <div class="input-group-prepend">
                                                 <button class="decrement-qty btn btn-sm btn-primary rounded-0"
                                                     data-item_id="{{ item.product.id }}" id="large_screen_wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                    <span hidden>
+                                                        Decrement Quantity Button
+                                                    </span>
                                                     <span>
                                                         <i class="fas fa-minus fa-sm"></i>
                                                     </span>
@@ -95,6 +98,9 @@
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                     data-item_id="{{ item.product.id }}" id="large_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                    <span hidden>
+                                                        Increment Quantity Button
+                                                    </span>
                                                     <span>
                                                         <i class="fas fa-plus fa-sm"></i>
                                                     </span>
@@ -118,13 +124,13 @@
                             </tr>
                         </table>                   
                         <table>
-                            <!-- Table for small size screens -->
+                            <!-- Table for small size screens -->                            
                             <tr class="d-table-row d-md-none">
                                 <!-- Product details -->
                                 <th scope="col">Product Info</th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
+                                <th scope="col" hidden>Product Details</th>
+                                <th scope="col" hidden>Price</th>
+                                <th scope="col" hidden>Quantity</th>
                                 <th scope="col">Subtotal</th>
                             </tr>
                             <tr class="d-table-row d-md-none">
@@ -157,6 +163,9 @@
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.product.id }}" id="small_screen_wish_decrement-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                        <span hidden>
+                                                            Decrement Quantity Button
+                                                        </span>
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -169,6 +178,9 @@
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.product.id }}" id="small_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
+                                                        <span hidden>
+                                                            Increment Quantity Button
+                                                        </span>
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>

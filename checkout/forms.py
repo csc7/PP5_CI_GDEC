@@ -10,6 +10,7 @@ Django forms for the checkout app
 
 # EXTERNAL:
 from django import forms
+from crispy_forms.helper import FormHelper
 
 # INTERNAL:
 from .models import Order
@@ -50,8 +51,9 @@ class OrderForm(forms.ModelForm):
             if field != 'country':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
+                    self.fields[field].label = f'{placeholders[field]}'
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False
+

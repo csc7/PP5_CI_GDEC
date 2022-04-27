@@ -36,7 +36,7 @@
                             <tr class="d-none d-md-table-row">
                                 <!-- Product details -->
                                 <th scope="col">Product Info</th>
-                                <th scope="col"></th>
+                                <th scope="col" hidden>Product Details</th>
                                 <th scope="col" class="text-center">Price</th>
                                 <th scope="col" class="text-center">Quantity</th>
                                 <th scope="col" class="text-center">Subtotal</th>
@@ -74,6 +74,9 @@
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="ls_decrement-qty_{{ item.item_id }}_{{ item.resolution }}">
+                                                        <span hidden>
+                                                            Decrement Button
+                                                        </span>
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -86,6 +89,9 @@
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="ls_increment-qty_{{ item.item_id }}_{{ item.resolution }}">
+                                                        <span hidden>
+                                                            Increment Button
+                                                        </span>
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>
@@ -110,9 +116,9 @@
                             <tr class="d-table-row d-md-none">
                                 <!-- Product details -->
                                 <th scope="col">Product Info</th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
+                                <th scope="col" hidden>Product Details</th>
+                                <th scope="col" hidden>Price</th>
+                                <th scope="col" hidden>Quantity</th>
                                 <th scope="col">Subtotal</th>
                             </tr>
                             <tr class="d-table-row d-md-none">
@@ -147,6 +153,9 @@
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="ss_decrement-qty_{{ item.item_id }}_{{ item.resolution }}">
+                                                        <span hidden>
+                                                            Decrement Button
+                                                        </span>
                                                         <span>
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </span>
@@ -159,6 +168,9 @@
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="ss_increment-qty_{{ item.item_id }}_{{ item.resolution }}">
+                                                        <span hidden>
+                                                            Increment Button
+                                                        </span>
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>

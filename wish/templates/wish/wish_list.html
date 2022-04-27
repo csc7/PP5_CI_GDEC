@@ -37,7 +37,7 @@
                             <!-- Product details -->
                             <tr class="d-none d-md-table-row">
                                 <!-- Product details -->
-                                <th scope="col" class="w-25">Product Info</th>
+                                <th scope="col" class="w-25" colspan="2">Product Info</th>
                                 <th scope="col" class="w-25" hidden> Product Details</th>
                                 <th scope="col" class="text-center">Price</th>
                                 <th scope="col" class="text-center">Quantity</th>
@@ -127,14 +127,14 @@
                             <!-- Table for small size screens -->                            
                             <tr class="d-table-row d-md-none">
                                 <!-- Product details -->
-                                <th scope="col">Product Info</th>
+                                <th scope="col" colspan="4">Product Info</th>
                                 <th scope="col" hidden>Product Details</th>
                                 <th scope="col" hidden>Price</th>
                                 <th scope="col" hidden>Quantity</th>
                                 <th scope="col">Subtotal</th>
                             </tr>
                             <tr class="d-table-row d-md-none">
-                                <td class="p-3 w-50" colspan="2">
+                                <td class="p-3 w-50" colspan="1">
                                     <!-- Assign image to product or default "no-image" in database -->
                                     {% if item.product.image_name %}
                                     <img class="img-fluid rounded bag-image" src="{{ item.product.image_name.url }}" alt="{{ item.product.name }}">
@@ -142,23 +142,23 @@
                                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.PNG" alt="{{ item.product.name }}">
                                     {% endif %}
                                 </td>
-                                <td class="py-3 w-50" colspan="2">
+                                <td class="py-3 w-50" colspan="1">
                                     <!-- Include resolution if applicable -->
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.product_resolution|upper }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
-                                <td class="py-3" rowspan="2">
+                                <td class="py-3 text-right" colspan="3">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>                            
                             <tr class="d-table-row d-md-none">
-                                <td class="py-3 w-25" colspan="2">
+                                <td class="pl-3" colspan="1">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>                                
-                                <td class="py-3 w-75" colspan="2">
+                                <td class="py-3 w-75" colspan="4">
                                     <!-- Update wish list if requested -->                                    
-                                        <div class="form-group">
+                                        <div class="form-group w-50 m-auto">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-primary rounded-0"

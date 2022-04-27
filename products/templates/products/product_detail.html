@@ -49,7 +49,7 @@
                     {% if request.user.is_superuser %}
                        <small class="ml-3">
                            <a href="{% url 'edit_product' product.id %}">Edit</a>
-                           <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                           <a class="text-danger delete-product-from-database" href="{% url 'delete_product' product.id %}">Delete</a>
                        </small>
                     {% endif %}
                     <p class="mt-3 dark-blue-font">{{ product.description }}</p>
@@ -159,7 +159,7 @@
                             {% if request.user.is_superuser %}
                                 <div>
                                     <small class="ml-3">
-                                        <a class="text-danger" href="{% url 'delete_product_review' product.id comment.id %}">Delete Comment</a>                                        
+                                        <a class="text-danger delete-product-from-database" href="{% url 'delete_product_review' product.id comment.id %}">Delete Comment</a>                                        
                                     </small>
                                 </div>
                             {% endif %}

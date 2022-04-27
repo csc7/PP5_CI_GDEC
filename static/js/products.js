@@ -28,3 +28,11 @@ $('#sort-selector').change(function() {
         window.location.replace(currentUrl);
     }
 });
+
+
+// Alert superuser before deleting a product
+$('.delete-product-from-database').click(function(){
+    return confirm('\nThis will delete the product or comment' +
+        ' from the database.\n\nClick "Ok" to confirm and delete;' +
+        ' or click "Cancel" to avoid any change.');
+});

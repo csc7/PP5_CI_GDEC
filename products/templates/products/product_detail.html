@@ -82,6 +82,7 @@
                                         <input class="form-control qty_input text-center" type="number"
                                             name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}"
                                             id="id_qty_{{ product.id }}">
+                                        <label for="id_qty_{{ product.id }}" hidden>Quantity</label>
                                         <div class="input-group-append">
                                             <button class="increment-qty-prod-det btn btn-primary rounded-0"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
@@ -101,9 +102,11 @@
                                     </span>
                                     <span class="text-uppercase btn-outline-primary">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5 w-50" value="Add to Bag">
+                                <input id="keep-shoppint-in-product-details" type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5 w-50" value="Add to Bag">
+                                <label for="keep-shoppint-in-product-details" hidden>Keep Shopping</label>
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input id="redirect-url-in-product-details_{{ product.id }}" type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <label for="redirect-url-in-product-details_{{ product.id }}" hidden>Redirect URL</label>
                             {% endwith %}
                         </div>
                         {% if request.user.is_authenticated %}

@@ -85,11 +85,13 @@
                                                 </button>
                                             </div>
                                             {% if item.product_resolution %}
-                                                <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
+                                                <input id="ls_prod_res_{{ item.product.id }}" type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
+                                                <label for="ls_prod_res_{{ item.product.id }}" hidden>Product Resolution</label>
                                             {% endif %}
                                             <input class="form-control form-control-sm qty_input text-center" type="number"
                                                 name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
                                                 id="ls_id_qty_{{ item.product.id }}">
+                                            <label for="ls_id_qty_{{ item.product.id }}" hidden>Quantity</label>
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                     data-item_id="{{ item.product.id }}" id="large_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
@@ -109,7 +111,8 @@
                                 <td class="py-3">
                                     <div class="">
                                         <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-100">Add to Bag</button>
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        <input id="ls_redirect_url_{{ item.product.id }}" type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        <label for="ls_redirect_url_{{ item.product.id }}" hidden>Redirect URL</label>
                                     </div>
                                 </td>                               
                             </tr>
@@ -162,6 +165,7 @@
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
                                                     id="ss_id_qty_{{ item.product.id }}">
+                                                <label for="ss_id_qty_{{ item.product.id }}" hidden>Quantity</label>
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.product.id }}" id="small_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
@@ -171,7 +175,8 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
+                                                    <input id="ss_prod_res_{{ item.product.id }}" type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
+                                                    <label for="ss_prod_res_{{ item.product.id }}" hidden>Product Resolution</label>
                                                 {% endif %}
                                             </div>
                                         </div>                                    
@@ -182,7 +187,8 @@
                             <tr class="d-table-row d-md-none">
                                 <td class="py-3 text-center" colspan="5">
                                     <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-75">Add to Bag</button>
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <input id="ss_redirect_url_{{ item.product.id }}" type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <label for="ss_redirect_url_{{ item.product.id }}" hidden>Redirect URL</label>
                                     <hr>  
                                 </td>                                
                             </tr>                      

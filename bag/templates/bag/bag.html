@@ -82,6 +82,7 @@
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
                                                     id="ls_id_qty_{{ item.item_id }}_{{ item.resolution }}">
+                                                <label for="ls_id_qty_{{ item.item_id }}_{{ item.resolution }}" hidden>Quantity Input Control</label>
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="ls_increment-qty_{{ item.item_id }}_{{ item.resolution }}">
@@ -91,7 +92,8 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.product.resolution }}">
+                                                    <input id="bag_ls_id_qty_{{ item.item_id }}_{{ item.resolution }}" type="hidden" name="product_resolution" value="{{ item.product.resolution }}">
+                                                    <label for="bag_ls_id_qty_{{ item.item_id }}_{{ item.resolution }}" hidden>Product Resolution</label>
                                                 {% endif %}
                                             </div>
                                             
@@ -153,6 +155,7 @@
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
                                                     id="ss_id_qty_{{ item.item_id }}_{{ item.resolution }}">
+                                                <label for="ss_id_qty_{{ item.item_id }}_{{ item.resolution }}" hidden>Quantity Input Control</label>
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="ss_increment-qty_{{ item.item_id }}_{{ item.resolution }}">
@@ -162,7 +165,8 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                    <input id="bag_ss_id_qty_{{ item.item_id }}_{{ item.resolution }}" type="hidden" name="product_resolution" value="{{ item.resolution }}">
+                                                    <label for="bag_ss_id_qty_{{ item.item_id }}_{{ item.resolution }}" hidden>Product Resolution</label>
                                                 {% endif %}
                                             </div>
                                         </div>

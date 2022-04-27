@@ -1401,7 +1401,6 @@ Pages were tested with thier URLs, directly in the we web page address input in 
 ![Evidence of no accessibility errors in the home HTML file](docs/validation/validation-accessibility-with-wave-home.PNG) 
 </details>
 <details>
-<details>
     <summary>Home (index.html, logged in)</summary>
 
 ![Evidence of no accessibility errors in the home HTML file](docs/validation/validation-accessibility-with-wave-home-logged-in.PNG) 
@@ -1553,18 +1552,54 @@ Google Lighthouse (used in Google, Microsoft Edge and Firefox) were used to eval
 ___
 # **11 . Testing**
 
-## **Testing of Python files with unittest**
+## **Automatic Testing of Python files with unittest and coverage.py**
 
-The data model and Python files were tested with unittest; it was used to test the assignation of values to the fields of each table of the data model.
+The data models and some Python files were tested with unittest. Coverage.py was used to measure the coverage of these automatic tests.
 
-31 tests were written and succesfully executed in 0.005 seconds.
+52 tests were written and succesfully executed in 0.347 seconds. Please see below screenshots of the testing and coverage, the fourth and last links contain the summary.
 
 <details>
-    <summary>Screenshot of unittest result</summary>
+    <summary>Screenshot 1 of unittest resuts</summary>
 
-![unittest Image 1](docs/features-and-evidence/python-testing.PNG)
-![unittest Image 2](docs/features-and-evidence/python-testing-2.PNG)
+![unittest Image 1](docs/validation/testing-automatic-unittest-1.PNG)
 </details>
+
+<details>
+    <summary>Screenshot 2 of unittest results</summary>
+
+![unittest Image 2](docs/validation/testing-automatic-unittest-2.PNG)
+</details>
+
+<details>
+    <summary>Screenshot 3 of unittest results</summary>
+
+![unittest Image 3](docs/validation/testing-automatic-unittest-3.PNG)
+</details>
+
+<details>
+    <summary>Screenshot 4 of unittest results with summary</summary>
+
+![unittest Image 4](docs/validation/testing-automatic-unittest-4-summary.PNG)
+</details>
+
+<details>
+    <summary>Screenshot 1 of coverage results</summary>
+
+![coverage.py Image 1](docs/validation/testing-automatic-coverage-1.PNG)
+</details>
+
+<details>
+    <summary>Screenshot 2 of coverage results</summary>
+
+![coverage.py Image 2](docs/validation/testing-automatic-coverage-2.PNG)
+</details>
+
+<details>
+    <summary>Screenshot 3 of coverage results, with summary</summary>
+
+![coverage.py Image 3](docs/validation/testing-automatic-coverage-3-summary.PNG)
+</details>
+
 
 <br><br>
 ## [Back to Index](#index)

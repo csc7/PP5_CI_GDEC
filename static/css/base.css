@@ -707,6 +707,33 @@ increase the height of the header */
         width: 100%!important;
     }
 
+    /* NAVIGATION MENU FOR CELLS */
+
+
+}
+
+
+/* SCREEN SIZE BELOW 405px */
+
+@media screen and (max-width: 450px) {
+
+    /* NAVIGATION MENU FOR CELLS */
+    .cell-phone-nav-button {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+
+/* SCREEN SIZE BELOW 350px */
+
+@media screen and (max-width: 350px) {
+
+    /* NAVIGATION MENU FOR CELLS */
+    .cell-phone-nav-button {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
 

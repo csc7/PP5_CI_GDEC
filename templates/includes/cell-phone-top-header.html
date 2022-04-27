@@ -2,15 +2,15 @@
 <div class="mx-auto px-auto">
     <ul id="cell-phone-icons" class="mx-auto px-0">
         <li class="list-inline-item py-0 px-auto">
-            <a class="nav-link d-block d-md-none px-0" href="#" id="cell-phone-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link d-block d-md-none pl-0" href="#" id="cell-phone-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
-                    <div><i class="fas fa-search fa-lg"></i></div>
+                    <div class="cell-phone-nav-button"><i class="fas fa-search fa-lg"></i></div>
                     <p class="my-0 d-none d-sm-block">Search</p>
                 </div>
             </a>
             <div class="dropdown-menu border-0 w-100 px-0 rounded-0 my-0" aria-labelledby="cell-phone-search">
                 <form class="form" method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
+                    <div class="input-group w-100 mx-2">
                         <input id="search-field-on-cell-phones" class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
                         <label for="search-field-on-cell-phones" hidden>Search Field in Cell Phone</label>
                         <div class="input-group-append">
@@ -31,7 +31,7 @@
             <a class="nav-link d-block d-md-none" href="#" id="user-options-cell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <!-- Font Awesome Icon -->
-                    <div><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
+                    <div class="cell-phone-nav-button"><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
                     <p class="my-0 d-none d-sm-block">My Account</p>
                 </div>
             </a>
@@ -53,7 +53,7 @@
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none" href="{% url 'view_wish_list' %}">
                 <div class="text-center text-primary">
                     <!-- Font Awesome Icon -->
-                    <div><i class="fa fa-list" aria-hidden="true"></i></div>
+                    <div class="cell-phone-nav-button"><i class="fa fa-list" aria-hidden="true"></i></div>
                     <p class="my-0 d-none d-sm-block">My Wish List</p>
                 </div>
             </a>
@@ -63,7 +63,7 @@
             <a class="{% if grand_total %}text-primary font-weight-bold{% else %}{% endif %} nav-link d-block d-md-none px-0" href="{% url 'view_bag' %}">
                 <div class="text-center">
                     <!-- Font Awesome Icon -->
-                    <div><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
+                    <div class="cell-phone-nav-button"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
                     <p class="my-0 d-none d-sm-block">
                         {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}

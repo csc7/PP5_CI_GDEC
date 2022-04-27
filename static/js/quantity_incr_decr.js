@@ -21,8 +21,6 @@ if (parseInt($('.qty_input').val()) <=1) {
 };
     
 
-
-
 // Disable +/- buttons outside 1-99 range
 function handleEnableDisable(itemId) {
     var currentValue;
@@ -118,7 +116,6 @@ $('.increment-qty-prod-det').click(function(e) {
         itemIdPlus = $(this).parents().siblings('div').children('button');
         $(itemIdPlus).prop('disabled',false);
     }
-
 });
 
 
@@ -144,7 +141,6 @@ $('.decrement-qty').click(function(e) {
         itemId2 = $(this).closest('td').find('button')[0];
         $(`#${itemId2.id}`).prop('disabled',true);
     }
-
 });
 
 

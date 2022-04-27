@@ -18,18 +18,18 @@
 {% block content %}
 <!-- Page background -->
 <div class="overlay"></div>
-<div class="container mb-2">
+<div class="container mb-2 dark-blue-font">
     <div class="row">
         <div class="col">
             <!-- Page Title -->
-            <h2 class="mt-4 mb-4">Checkout</h2>
+            <h2 class="mt-4 mb-4 dark-blue-font">Checkout</h2>
             <hr>
         </div>
     </div>
     <!-- Order Summary -->
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary ({{ product_count }})</p>
+            <p class="text-muted">Order Summary ({{ order_product_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -40,7 +40,7 @@
             </div>
             {% for item in bag_items %}
                 <div class="row">
-                    <div class="col-2 mb-1">
+                    <div class="col-2 mb-1 dark-blue-font">
                         <a href="{% url 'product_detail' item.product.id %}">
                             {% if item.product.image_name %}
                                 <img class="w-100" src="{{ item.product.image_name.url }}" alt="Image for {{ product.name }}">
@@ -54,19 +54,19 @@
                         <p class="my-0 small">Resolution: {% if item.product.resolution %}{{ item.resolution|upper }}{% else %}N/A{% endif %}</p>
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="col-3 text-right dark-blue-font">
                         <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>
             {% endfor %}
             <hr class="my-0">
             <div class="row text-dark text-right">
-                <div class="col-7 offset-2">
+                <div class="col-7 offset-2 dark-blue-font">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
                     <p class="my-0">Grand Total:</p>
                 </div>
-                <div class="col-3">
+                <div class="col-3 dark-blue-font">
                     <p class="my-0">${{ total | floatformat:2 }}</p>
                     <p class="my-0">${{ delivery | floatformat:2 }}</p>
                     <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
@@ -77,13 +77,13 @@
             <p class="text-muted">Please complete your order below</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-dark px-2 w-auto">Details</legend>
+                <fieldset class="rounded px-3 mb-5 dark-blue-font">
+                    <legend class="fieldset-label dark-blue-font px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-dark px-2 w-auto">Delivery</legend>
+                <fieldset class="rounded px-3 mb-5 dark-blue-font">
+                    <legend class="fieldset-label dark-blue-font px-2 w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -104,7 +104,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-dark px-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label dark-blue-font px-2 w-auto">Payment</legend>
                     <!-- Stripe Card Element -->
                     <div class="mb-3" id="card-element"></div>
                     <!-- Display Form Errors -->

@@ -1389,32 +1389,103 @@ The tool can be accessed with this link: http://pep8online.com .
 
 
 ### **Accessibility**
-https://wave.webaim.org/ was used to validate accessibility. Although there are warnings, all pages contain zero errors. Please check evidence below:
+https://wave.webaim.org/ was used to validate accessibility. Although there are warnings, all pages contain zero errors, except for the special case when the wish list contains the same product with two different resolutions, where the validator presents multiple form labels.
+
+Pages were tested with thier URLs, directly in the we web page address input in at https://wave.webaim.org/, or throught the Wave plugin for Chrome when authentification was needed. Please check evidence below:
+
+
 
 <details>
-    <summary>Instructions Page</summary>
+    <summary>Home (index.html)</summary>
 
-![Evidence of no accessibility errors in the Instructions (index) HTML file](docs/validation/validation-accessibility-instructions.PNG) 
+![Evidence of no accessibility errors in the home HTML file](docs/validation/validation-accessibility-with-wave-home.PNG) 
 </details>
-
 <details>
-    <summary>Weather Page</summary>
-
-![Evidence of no accessibility errors in the Weather HTML file](docs/validation/validation-accessibility-weather.PNG) 
-</details>
-
 <details>
-    <summary>Blog Page</summary>
+    <summary>Home (index.html, logged in)</summary>
 
-![Evidence of no accessibility errors in the Blog HTML file](docs/validation/validation-accessibility-blog.PNG) 
+![Evidence of no accessibility errors in the home HTML file](docs/validation/validation-accessibility-with-wave-home-logged-in.PNG) 
 </details>
-
 <details>
-    <summary>Contact Page</summary>
+    <summary>bag.html</summary>
 
-![Evidence of no accessibility errors in the Contact HTML file](docs/validation/validation-accessibility-contact.PNG) 
+![Evidence of no accessibility errors in the bag HTML file](docs/validation/validation-accessibility-with-wave-bag.PNG) 
 </details>
+<details>
+    <summary>checkout.html (logged in)</summary>
 
+![Evidence of no accessibility errors in the checkout HTML file](docs/validation/validation-accessibility-with-wave-checkout-logged-in.PNG) 
+</details>
+<details>
+    <summary>checkout_success.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the home checkout-success HTML file](docs/validation/validation-accessibility-with-wave-checkout-success-logged-in.PNG) 
+</details>
+<details>
+    <summary>contact.html</summary>
+
+![Evidence of no accessibility errors in the contact HTML file](docs/validation/validation-accessibility-with-wave-contact.PNG) 
+</details>
+<details>
+    <summary>contact.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the contact HTML file](docs/validation/validation-accessibility-with-wave-contact-logged-in.PNG) 
+</details>
+<details>
+    <summary>thanks.html</summary>
+
+![Evidence of no accessibility errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+</details>
+<details>
+    <summary>thanks.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the thanks HTML file](docs/validation/validation-accessibility-with-wave-thank-you-logged-in.PNG) 
+</details>
+<details>
+    <summary>add_product.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the add-product HTML file](docs/validation/validation-accessibility-with-wave-add-product-logged-in.PNG) 
+</details>
+<details>
+    <summary>edit_product.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the edit-product HTML file](docs/validation/validation-accessibility-with-wave-edit-product-logged-in.PNG) 
+</details>
+<details>
+    <summary>product_details.html</summary>
+
+![Evidence of no accessibility errors in the product-details HTML file](docs/validation/validation-accessibility-with-wave-product-details.PNG) 
+</details>
+<details>
+    <summary>product_details.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the product-details HTML file](docs/validation/validation-accessibility-with-wave-product-details-logged-in.PNG) 
+</details>
+<details>
+    <summary>products.html</summary>
+
+![Evidence of no accessibility errors in the products HTML file](docs/validation/validation-accessibility-with-wave-products.PNG) 
+</details>
+<details>
+    <summary>products.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the products HTML file](docs/validation/validation-accessibility-with-wave-products-logged-in.PNG) 
+</details>
+<details>
+    <summary>profile.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the profile HTML file](docs/validation/validation-accessibility-with-wave-profile-logged-in.PNG) 
+</details>
+<details>
+    <summary>wish_list.html</summary>
+
+![Evidence of no accessibility errors in the wish-list HTML file](docs/validation/validation-accessibility-with-wave-wish-logged-in.PNG) 
+</details>
+<details>
+    <summary>wish_list.html (logged in)</summary>
+
+![Evidence of no accessibility errors in the wish-list HTML file](docs/validation/validation-accessibility-with-wave-wish-list-logged-in.PNG) 
+</details>
 
 
 #### [Back to Index](#index)

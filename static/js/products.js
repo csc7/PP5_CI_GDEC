@@ -1,11 +1,12 @@
-// This Javascript function returns to top of page when clicking on the arrow bottom right
+// This Javascript function returns to top of page when clicking
+// on the arrow bottom right
 
 // Copied and modified from Code Institute "Boutique Ado" project
 
 
 $('.go-to-top-button-link').click(function(e) {
-    window.scrollTo(0,0)
-})
+    window.scrollTo(0,0);
+});
 
 $('#sort-selector').change(function() {
     var selector = $(this);
@@ -26,4 +27,4 @@ $('#sort-selector').change(function() {
 
         window.location.replace(currentUrl);
     }
-})
+});

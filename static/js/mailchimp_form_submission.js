@@ -68,7 +68,7 @@ $("#mc-embedded-subscribe-form").submit(function(e) {
         $("#div-for-newsletter-in-footer > div > div > div:nth-child(4) > p").css("text-align", "left");
         $("#mce-success-response").css("text-align", "left");
         $("#mce-error-response").css("text-align", "left");
-    };
+    }
     $("#div-for-newsletter-in-footer > div > div > div:nth-child(4) > p").css("padding-left", "10px");
 
 });
@@ -80,7 +80,6 @@ function validateEMail(eMailAddress) {
     var numberOfAtSign = 0;
     var numberOfDots = 0;
     var numberOfOtherCharacters = 0;
-    var allCharacters = '@.0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
     //Basic validation of e-mail address before hiding it
     var eMailString = eMailAddress;

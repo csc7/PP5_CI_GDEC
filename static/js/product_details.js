@@ -1,4 +1,5 @@
-// This JavaScript function shows and hide the button to make comments in the product details
+// This JavaScript function shows and hide the button to make comments
+// in the product details
 
 
 // Show comment form in product details
@@ -19,30 +20,22 @@ $('#comment-form-button').click(function() {
 // on the clicked button
 
 $('#send-to-wish-list-button').click(function() {
-    //$('#add-product-form').attr('action', '{% url "add_to_wish_list" product.id %}');
-    //$("form").submit();
-    //var page_id = document.getElementById("add-product-form").options.selectedIndex;
 
-    itemId = $(this).closest('form').attr('action');
+    var itemId = $(this).closest('form').attr('action');
     itemId = itemId.split('add/')[1].slice(0, -1);
-    resolution = $(this).closest('form').find('select').val();
-
-    console.log(itemId);
-    console.log(resolution);
-    
+    var resolution = $(this).closest('form').find('select').val();
+   
     var url=`/wish_list/add_to_wish_list/${itemId}/`;
-    console.log(url);
 
     var redirect_url = `/products/${itemId}`;
-    console.log(redirect_url);
 
-    quantity = $(this).closest('form').find('.qty_input').val();
-    console.log(quantity);
+    var quantity = $(this).closest('form').find('.qty_input').val();
+
+    var csrfToken;
 
     $.ajax({
         type: 'POST',        
         url: url,
-        //dataType: 'json',
         data: {
             'csrfmiddlewaretoken': csrfToken,
             'itemId': itemId,

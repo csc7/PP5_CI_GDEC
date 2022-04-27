@@ -8,7 +8,9 @@
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
-var elements = stripe.elements( // Inclusion of Google fonts based on https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working, accessed on March 18th, 2022, at 6:20.
+var elements = stripe.elements( // Inclusion of Google fonts based on 
+                                // https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working,
+                                // accessed on March 18th, 2022, at 6:20.
     {
         fonts: [
           {
@@ -96,7 +98,6 @@ form.addEventListener('submit', function(ev) {
             shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
-                //email: $.trim(form.email.value),
                 address:{
                     line1: $.trim(form.street_address1.value),
                     line2: $.trim(form.street_address2.value),
@@ -128,7 +129,7 @@ form.addEventListener('submit', function(ev) {
     }).fail(function() { // Reload page if payment fails (when view sends a 404),
                          // without charging the user
         location.reload();
-    })
+    });
 
 
 });

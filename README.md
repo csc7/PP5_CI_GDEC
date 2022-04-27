@@ -990,29 +990,68 @@ No warnings
 https://jshint.com/ was used to validate the JavaScript files.
 Please check the parameters used for validation and evidence below:
 
+Parameters:
 <details>
     <summary>Parameters used for JavaScript validation in JSHint version 2.13.3</summary>
 
-![Parameters used for JavaScript validation in JSHint version 2.13](docs/validation/validation-js-move-configuration.PNG) 
+![Parameters used for JavaScript validation in JSHint version 2.13](docs/validation/validation-js-parameters.PNG) 
+</details>
+
+Files:
+<details>
+    <summary>To enable/disable country name in forms: country_field_in_profile.js</summary>
+
+![Evidence of no errors country_field_in_profile.js JavaScript file](docs/validation/validation-js-country_field_in_profile.PNG)
 </details>
 
 <details>
-    <summary>Weather Page (weather.js JavaScript file). Please note that google is an external variable from Google</summary>
+    <summary>To cancel delivery: download_data_and_discount_delivery.js</summary>
 
-![Evidence of no errors weather.js JavaScript file](docs/validation/validation-js-weather.PNG)
+![Evidence of no errors and warnings in the download_data_and_discount_delivery.js JavaScript file](docs/validation/validation-js-download_data_and_discount_delivery.PNG) 
 </details>
 
 <details>
-    <summary>File for moving the content down (move-content-hamburger.js)</summary>
+    <summary>To register in the Mailchimp newsletter: mailchimp_form_submission.js</summary>
 
-![Evidence of no errors and warnings in the move-content-hamburger.js JavaScript file](docs/validation/validation-js-move-content.PNG) 
+![Evidence of no errors and warnings in the mailchimp_form_submission.js JavaScript file](docs/validation/validation-js-mailchimp_form_submission.PNG)
 </details>
 
 <details>
-    <summary>File for checking the loading of the site (index.js JavaScript file)</summary>
+    <summary>To let Django admin the name of the image that is going to be changed: notify_image_change_in_admin.js</summary>
 
-![Evidence of no errors and warnings in the index.js JavaScript file](docs/validation/validation-js-index.PNG)
+![Evidence of no errors and warnings in the notify_image_change_in_admin.js JavaScript file](docs/validation/validation-js-notify_image_change_in_admin.PNG)
 </details>
+
+<details>
+    <summary>To control buttons and form in product details: product_details.js</summary>
+
+![Evidence of no errors and warnings in the product_details.js JavaScript file](docs/validation/validation-js-product-details.PNG)
+</details>
+
+<details>
+    <summary>To sort and go to top of page in products: product.js</summary>
+
+![Evidence of no errors and warnings in the product.js JavaScript file](docs/validation/validation-js-products.PNG)
+</details>
+
+<details>
+    <summary>To control increase/decrease buttons: quantity_incr_decr.js</summary>
+
+![Evidence of no errors and warnings in the quantity_incr_decr.js JavaScript file](docs/validation/validation-js-quantity_incr_decr.PNG)
+</details>
+
+<details>
+    <summary>To show Django toasts: show_messages.js</summary>
+
+![Evidence of no errors and warnings in the show_messages.js JavaScript file](docs/validation/validation-js-show-messages.PNG)
+</details>
+
+<details>
+    <summary>To deal with process payment: stripe_elements.js</summary>
+
+![Evidence of no errors and warnings in the stripe_elements.js JavaScript file](docs/validation/validation-js-stripe_elements.PNG)
+</details>
+
 
 
 #### [Back to Index](#index)

@@ -32,6 +32,12 @@ html {
     margin-bottom: 250px;
 }
 
+/* White background in read-only quantity input fields */
+.qty_input {
+    background-color: white!important;
+}
+
+
 /* HEADER */
 
 #main-header {

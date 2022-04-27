@@ -6,11 +6,28 @@
 // ".remove-item-wish-list"
 
 
+// Check if input values in product details and wish list are between accepted
+// limits when loading the page and disable control buttons if they are not.
+// No need to do this in the bag, as the bag is built from the previous pages when
+// adding products.
+if (parseInt($('.decrement-qty-prod-det').closest('div').siblings('input').val()) <=1) {
+    $('.decrement-qty-prod-det').prop('disabled', true);
+};
+if (parseInt($('.decrement-qty-prod-det').closest('div').siblings('input').val()) >=98) {
+    $('.increment-qty-prod-det').prop('disabled', true);
+};
+if (parseInt($('.qty_input').val()) <=1) {
+    $('.decrement-qty').prop('disabled', true);
+};
+    
+
+
+
 // Disable +/- buttons outside 1-99 range
 function handleEnableDisable(itemId) {
     var currentValue;
-    var minusDisabled = currentValue < 2;
-    var plusDisabled = currentValue > 98;
+    var minusDisabled = currentValue <= 2;
+    var plusDisabled = currentValue >= 98;
     if ($(window).width() < 768) {
         currentValue = parseInt($(`#ss_id_qty_${itemId}`).val());
         $(`#ss_decrement-qty_${itemId}`).prop('disabled', minusDisabled);
@@ -86,7 +103,7 @@ $('.decrement-qty-prod-det').click(function(e) {
 // Increment quantity in product details only
 $('.increment-qty-prod-det').click(function(e) {
     e.preventDefault();
-    var closestInput = $(this).closest('div').prev();
+    var closestInput = $(this).closest('div').prev().prev();
     
     var currentValue = parseInt($(closestInput).val());
     $(closestInput).val(currentValue + 1);
@@ -165,7 +182,7 @@ $('.update-link').click(function(e) {
         url=`adjust/${itemId}/`;
     }
 
-    var csrfToken;
+    //var csrfToken;
 
     $.ajax({
     type: 'POST',        
@@ -211,7 +228,7 @@ $('.remove-item').click(function(e) {
         url=`remove/${itemId}/`;
     }
 
-    var csrfToken;
+    //var csrfToken;
     
     // Send AJAX post to remove_from_wish_list in views.py of wish app
     $.ajax({
@@ -261,8 +278,8 @@ $('.update-link-wish-list').click(function(e) {
         resolution = resolutionText.split(' ')[1];
     }
 
-    var csrfToken;
-
+    //var csrfToken;
+    
     // Send AJAX post to adjust_wish_list in views.py of wish app, with ID and resolution
     $.ajax({
     type: 'POST',        
@@ -306,8 +323,8 @@ $(document).on("click", ".remove-item-wish-list", function() {
         resolution = resolutionText.split(' ')[1];
     }
 
-    var csrfToken;
-    
+    //var csrfToken;
+
     // Send AJAX post to remove_from_wish_list in views.py of wish app
     $.ajax({
         type: 'POST',        

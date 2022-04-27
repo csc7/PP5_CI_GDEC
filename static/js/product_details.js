@@ -31,7 +31,7 @@ $('#send-to-wish-list-button').click(function() {
 
     var quantity = $(this).closest('form').find('.qty_input').val();
 
-    var csrfToken;
+    //var csrfToken;
 
     $.ajax({
         type: 'POST',        

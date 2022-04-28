@@ -559,14 +559,28 @@ It is in the header, fixed on all pages to facilitate navigation, and responsive
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Images</summary>
+    <summary>Fixed Navigation Menu for Desktop Image</summary>
 
 ![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
-![Fixed Navigation Menu for Tablets Image](docs/features-and-evidence/fixed-navigation-menu-tablet.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Tablet Image</summary>
+
+
+![Fixed Navigation Menu for Tablet Image](docs/features-and-evidence/fixed-navigation-menu-tablet.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Cell Phones Image</summary>
+
 ![Fixed Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell.PNG)
-![Fixed Navigation Menu for Cell Phones Image, expanded](docs/features-and-evidence/fixed-navigation-menu-cell-expanded.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu, expanded, for Cell Phones Image</summary>
+
+![Fixed Navigation Menu, Expanded, for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell-expanded.PNG)
 </details>
 <br>
+
 
 - ### **Banner with latest news**
 
@@ -576,11 +590,23 @@ It separates the fixed navigation menu and the body of the site, and shows adver
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Images</summary>
+    <summary>Banner with Latest News for Desktop Image</summary>
 
 ![Banner with Latest News for Desktop Image](docs/features-and-evidence/banner-with-latest-news-desktop.PNG)
+</details>
+<details>
+    <summary>Banner with Latest News for Tablets Image</summary>
+
 ![Banner with Latest News for Tablets Image](docs/features-and-evidence/banner-with-latest-news-tablet.PNG)
+</details>
+<details>
+    <summary>Banner with Latest News for Cell Phones Image</summary>
+
 ![Banner with Latest News for Cell Phones Image](docs/features-and-evidence/banner-with-latest-news-cell.PNG)
+</details>
+<details>
+    <summary>Banner with Latest News for Cell Phones Image, expanded</summary>
+
 ![Banner with Latest News for Cell Phones Image, expanded](docs/features-and-evidence/banner-with-latest-news-cell-expanded.PNGG)
 </details>
 <br>
@@ -1544,7 +1570,11 @@ Pages were tested with thier URLs, directly in the we web page address input in 
 
 ![Evidence of no accessibility errors in the 404 page HTML file](docs/validation/validation-accessibility-with-wave-404.PNG) 
 </details>
+<details>
+    <summary>404.html, direct URL input</summary>
 
+![Evidence of no accessibility errors in the 404 page HTML file, direct URL input](docs/validation/validation-accessibility-with-wave-404-direct-URL-input.PNG) 
+</details>
 
 #### [Back to Index](#index)
 
@@ -1749,13 +1779,28 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Organize the structure of the site with a fixed navigation menu and footer that includes almost all pages of the site | Navigat to any page of the site from these two features, except to the pages that require a previous step (e.g., adding items to the bag) | Works as expected | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Organize the structure of the site with a fixed navigation menu and footer that includes almost all pages of the site | Navigate to any page of the site from these two features, except to the pages that require a previous step (e.g., adding items to the bag) | Site is fully accessible from top navigation menu and footer; works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Instructions Page Top Image](docs/features-and-evidence/instructions-page-top.PNG)
-![Instructions Page Bottom Image](docs/features-and-evidence/instructions-page-bottom.PNG)
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Tablet Image</summary>
+
+
+![Fixed Navigation Menu for Tablet Image](docs/features-and-evidence/fixed-navigation-menu-tablet.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Cell Phones Image</summary>
+
+![Fixed Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu, expanded, for Cell Phones Image</summary>
+
+![Fixed Navigation Menu, Expanded, for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell-expanded.PNG)
 </details>
 <br><br>
 
@@ -1766,10 +1811,34 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Desktop example: Home</summary>
 
-![Instructions Page Top Image](docs/features-and-evidence/instructions-page-top.PNG)
-![Instructions Page Bottom Image](docs/features-and-evidence/instructions-page-bottom.PNG)
+![Desktop example, Home, Image](docs/features-and-evidence/home-page-desktop.PNG)
+</details>
+<details>
+    <summary>Desktop example: Products</summary>
+
+![Desktop example, Products, Image](docs/features-and-evidence/products.PNG)
+</details>
+<details>
+    <summary>Tablet example: Products</summary>
+
+![Tablet example, Products, Image](docs/features-and-evidence/products-tablet.PNG)
+</details>
+<details>
+    <summary>Tablet example: Bag</summary>
+
+![Tablet example, Bag, Image](docs/features-and-evidence/bag-tablet.PNG)
+</details>
+<details>
+    <summary>Cell phone example: Products</summary>
+
+![Cell phone example, Products, Image](docs/features-and-evidence/products-cell.PNG)
+</details>
+<details>
+    <summary>Cell phone example: Wish List</summary>
+
+![Cell phone example, Wish List, Image](docs/features-and-evidence/wish-list-cell.PNG)
 </details>
 <br><br>
 
@@ -1781,9 +1850,19 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Registration (sign-up)<br>Pop-up status messages<br> | Use Django confirmation page to inform the user of a successgul sign-up | Show a successful message on a page after signing up | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Registration, Step 1</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Registration, Step 1, Image](docs/features-and-evidence/sign-up-registration-1.jpg) 
+</details>
+<details>
+    <summary>Registration, Step 2</summary>
+
+![Registration, Step 2, Image](docs/features-and-evidence/sign-up-registration-2.jpg) 
+</details>
+<details>
+    <summary>Registration, Step 3, Confirmation</summary>
+
+![Registration, Step 3, Confirmation](docs/features-and-evidence/sign-up-registration-3.jpg) 
 </details>
 <br><br>
 
@@ -1795,9 +1874,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Contact form<br>Footer<br> | Implement a contact form in a separated page, give contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form Link in Footer</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form Link in Footer](docs/features-and-evidence/footer-desktop-contact-form-link.jpg) 
+</details>
+<details>
+    <summary>Contact Form</summary>
+
+![Contact Form](docs/features-and-evidence/contact-form.PNG) 
 </details>
 <br><br>
 
@@ -1809,9 +1893,23 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Footer<br> | Include access links to account in fixed navigation menu and footer | Access sign-in page from these features | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Access Log-in from Top Navigation Menu</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Access Log-in from Navigation Menu](docs/features-and-evidence/log-in-from-top-nav-desktop.PNG) 
+</details>
+<details>
+    <summary>Access Log-in from Top Navigation Menu (Smaller Screens)</summary>
+
+![Access Log-in from Navigation Menu (Smaller Screens)](docs/features-and-evidence/log-in-from-top-nav-cell.PNG) 
+</details><details>
+    <summary>Access Log-in from Footer</summary>
+
+![Access Log-in from Footer](docs/features-and-evidence/log-in-from-footer-desktop.PNG) 
+</details>
+<details>
+    <summary>Access Log-in from Footer (Smaller Screens)</summary>
+
+![Access Log-in from Footer (Smaller Screens)](docs/features-and-evidence/log-in-from-footer-cell.PNG) 
 </details>
 <br><br>
 

@@ -9,12 +9,9 @@ Testing for the checkout app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.test import TestCase
-from django.db import models
-from datetime import datetime
+import unittest
 
 # INTERNAL:
-import unittest
 from .models import Order, OrderLineItem
 
 ###############################################################################

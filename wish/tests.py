@@ -9,9 +9,6 @@ Testing for the wish list app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.test import TestCase
-from django.db import models
-from datetime import datetime
 
 # INTERNAL:
 import unittest

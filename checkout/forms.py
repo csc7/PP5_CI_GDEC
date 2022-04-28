@@ -10,7 +10,6 @@ Django forms for the checkout app
 
 # EXTERNAL:
 from django import forms
-from crispy_forms.helper import FormHelper
 
 # INTERNAL:
 from .models import Order

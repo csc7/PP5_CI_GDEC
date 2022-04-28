@@ -23,7 +23,6 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # INTERNAL:
 from .models import Product, Category, ProductComment
 from .forms import ProductForm, ProductCommentForm
-from checkout.models import OrderLineItem
 
 ###############################################################################
 

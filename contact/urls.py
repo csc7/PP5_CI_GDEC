@@ -3,7 +3,7 @@
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.urls import include, path
+from django.urls import path
 
 # INTERNAL:
 from contact import views

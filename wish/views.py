@@ -9,7 +9,7 @@ Django views for the wish list app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render
 from django.shortcuts import HttpResponse, get_object_or_404
 from django.contrib import messages
 import json

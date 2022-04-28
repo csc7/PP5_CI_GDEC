@@ -9,7 +9,7 @@ Django views for the checkout app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
 # INTERNAL:

@@ -1510,56 +1510,128 @@ Pages were tested with thier URLs, directly in the we web page address input in 
 
 
 ### **Performance**
-Google Lighthouse (used in Google, Microsoft Edge and Firefox) were used to evaluate the performance of the pages. Please check the results below:
+Google Lighthouse (in Google Chrome) was used to evaluate the performance of the pages. Please check the results below:
 
 <details>
-    <summary>Instructions Page for Cell Phones(67)</summary>
+    <summary>Home for cell phones</summary>
 
-![Evidence of no accessibility errors in the Instructions (index) HTML file](docs/validation/validation-performance-instructions-cell-phone.PNG) 
+![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
 </details>
-
 <details>
-    <summary>Instructions Page for Desktop (85)</summary>
+    <summary>Home for desktop</summary>
 
-![Evidence of no accessibility errors in the Instructions (index) HTML file](docs/validation/validation-performance-instructions-desktop.PNG) 
+![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
 </details>
-
 <details>
-    <summary>Weather Page for Cell Phones(50)</summary>
+    <summary>Bag for cell phones</summary>
 
-![Evidence of no accessibility errors in the Weather HTML file](docs/validation/validation-performance-weather-cell-phone.PNG)
+![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag.PNG) 
 </details>
-
 <details>
-    <summary>Weather Page for Desktop (79)</summary>
+    <summary>Bag for for desktop</summary>
 
-![Evidence of no accessibility errors in the Weather HTML file](docs/validation/validation-performance-weather-desktop.PNG)
+![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag.PNG) 
 </details>
-
 <details>
-    <summary>Blog Page for Cell Phones(64)</summary>
+    <summary>Checkout for cell phones</summary>
 
-![Evidence of no accessibility errors in the Blog HTML file](docs/validation/validation-performance-blog-cell-phone.PNG) 
+![Evidence of no errors in the checkout HTML file](docs/validation/validation-html-validator-w3-org-checkout.PNG) 
 </details>
-
 <details>
-    <summary>Blog Page for Desktop (90)</summary>
+    <summary>Checkout for desktop</summary>
 
-![Evidence of no accessibility errors in the Blog HTML file](docs/validation/validation-performance-blog-desktop.PNG) 
+![Evidence of no errors in the checkout HTML file](docs/validation/validation-html-validator-w3-org-checkout.PNG) 
 </details>
-
 <details>
-    <summary>Contact Page for Cell Phones(74)</summary>
+    <summary>Success Checkout for cell phones</summary>
 
-![Evidence of no accessibility errors in the Contact HTML file](docs/validation/validation-performance-contact-cell-phone.PNG) 
+![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-html-validator-w3-org-checkout-success.PNG) 
 </details>
-
 <details>
-    <summary>Contact Page for Desktop (93)</summary>
+    <summary>Success Checkout for desktop</summary>
 
-![Evidence of no accessibility errors in the Contact HTML file](docs/validation/validation-performance-contact-desktop.PNG) 
+![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-html-validator-w3-org-checkout-success.PNG) 
 </details>
+<details>
+    <summary>Contact for cell phones</summary>
 
+![Evidence of no errors in the contact HTML file](docs/validation/validation-html-validator-w3-org-contact.PNG) 
+</details>
+<details>
+    <summary>Contact for desktop</summary>
+
+![Evidence of no errors in the contact HTML file](docs/validation/validation-html-validator-w3-org-contact.PNG) 
+</details>
+<details>
+    <summary>Thank You Page for cell phones</summary>
+
+![Evidence of no errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+</details>
+<details>
+    <summary>Thank You Page for desktop</summary>
+
+![Evidence of no errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+</details>
+<details>
+    <summary>Add Product for cell phones</summary>
+
+![Evidence of no errors in the add-product HTML file](docs/validation/validation-html-validator-w3-org-product-add.PNG) 
+</details>
+<details>
+    <summary>Add Product for desktop</summary>
+
+![Evidence of no errors in the add-product HTML file](docs/validation/validation-html-validator-w3-org-product-add.PNG) 
+</details>
+<details>
+    <summary>Edit Product for cell phones</summary>
+
+![Evidence of no errors in the edit-product HTML file](docs/validation/validation-html-validator-w3-org-edit-product.PNG) 
+</details>
+<details>
+    <summary>Edit Product for desktop</summary>
+
+![Evidence of no errors in the edit-product HTML file](docs/validation/validation-html-validator-w3-org-edit-product.PNG) 
+</details>
+<details>
+    <summary>Product Details for cell phones</summary>
+
+![Evidence of no errors in the product-details HTML file](docs/validation/validation-html-validator-w3-org-product-details.PNG) 
+</details>
+<details>
+    <summary>Product Details for desktop</summary>
+
+![Evidence of no errors in the product-details HTML file](docs/validation/validation-html-validator-w3-org-product-details.PNG) 
+</details>
+<details>
+    <summary>Products for cell phones</summary>
+
+![Evidence of no errors in the products HTML file](docs/validation/validation-html-validator-w3-org-products.PNG) 
+</details>
+<details>
+    <summary>Products for desktop</summary>
+
+![Evidence of no errors in the products HTML file](docs/validation/validation-html-validator-w3-org-products.PNG) 
+</details>
+<details>
+    <summary>Profile for cell phones</summary>
+
+![Evidence of no errors in the profile HTML file](docs/validation/validation-html-validator-w3-org-profile.PNG) 
+</details>
+<details>
+    <summary>Profile for desktop</summary>
+
+![Evidence of no errors in the profile HTML file](docs/validation/validation-html-validator-w3-org-profile.PNG) 
+</details>
+<details>
+    <summary>Wish List for cell phones</summary>
+
+![Evidence of no errors in the wish-list HTML file](docs/validation/validation-html-validator-w3-org-wish-list.PNG) 
+</details>
+<details>
+    <summary>Wish List for desktop</summary>
+
+![Evidence of no errors in the wish-list HTML file](docs/validation/validation-html-validator-w3-org-wish-list.PNG) 
+</details>
 
 
 <br><br>
@@ -1573,7 +1645,9 @@ ___
 
 The data models and some Python files were tested with unittest. Coverage.py was used to measure the coverage of these automatic tests.
 
-52 tests were written and succesfully executed in 0.347 seconds. Please see below screenshots of the testing and coverage, the fourth and last links contain the summary.
+Coverage of 49% was achieved, with 52 tests succesfully executed in 0.347 seconds.
+
+Please see below screenshots of the testing and coverage, the fourth and last links contain the summary.
 
 <details>
     <summary>Screenshot 1 of unittest resuts</summary>

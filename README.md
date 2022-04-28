@@ -542,6 +542,12 @@ The features of the site are the following ones:
 
 This pages are accessible from a fixed navigation menu on top and a footer, and several pop-up messages are included to inform the user of their interactions with the site.
 
+In the second half of the project, two more features were added to improve the user experience and feedback reception:
+
+- Comments
+- Wish list
+
+
 
 Details of these features, including the user story they cover, are the following:
 
@@ -553,12 +559,12 @@ It is in the header, fixed on all pages to facilitate navigation, and responsive
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Check Images</summary>
 
 ![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
 ![Fixed Navigation Menu for Tablets Image](docs/features-and-evidence/fixed-navigation-menu-tablet.PNG)
-![Fixed Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell-1.PNG)
-![Fixed Expanded Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell-2.PNG)
+![Fixed Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell.PNG)
+![Fixed Navigation Menu for Cell Phones Image, expanded](docs/features-and-evidence/fixed-navigation-menu-cell-expanded.PNG)
 </details>
 <br>
 
@@ -572,10 +578,10 @@ It separates the fixed navigation menu and the body of the site, and shows adver
 <details>
     <summary>Check Images</summary>
 
-![Instructions Page Top Image](docs/features-and-evidence/instructions-page-top.PNG)
-
-![Instructions Page Bottom Image](docs/features-and-evidence/instructions-page-bottom.PNG)
-
+![Banner with Latest News for Desktop Image](docs/features-and-evidence/banner-with-latest-news-desktop.PNG)
+![Banner with Latest News for Tablets Image](docs/features-and-evidence/banner-with-latest-news-tablet.PNG)
+![Banner with Latest News for Cell Phones Image](docs/features-and-evidence/banner-with-latest-news-cell.PNG)
+![Banner with Latest News for Cell Phones Image, expanded](docs/features-and-evidence/banner-with-latest-news-cell-expanded.PNGG)
 </details>
 <br>
 
@@ -588,12 +594,21 @@ It is the welcome page, with a world map image and advertising messages in a Boo
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Images</summary>
+    <summary>Check Home Page Desktop Image</summary>
 
-![Instructions Page Top Image](docs/features-and-evidence/instructions-page-top.PNG)
+![Home Page Image for Desktop](docs/features-and-evidence/home-page-desktop.PNG)
+</details>
 
-![Instructions Page Bottom Image](docs/features-and-evidence/instructions-page-bottom.PNG)
+<details>
+    <summary>Check Home Page Tablet Image</summary>
 
+![Home Page Image for Tablet](docs/features-and-evidence/home-page-tablet.PNG)
+</details>
+
+<details>
+    <summary>Check Home Page Cell Image</summary>
+
+![Home Page Image for Cell](docs/features-and-evidence/home-page-cell.PNG)
 </details>
 <br>
 
@@ -607,11 +622,18 @@ Products appear after selecting categories or searching in the fixed navigation 
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Check Home Page Desktop Image</summary>
 
-![Weather App Image](docs/features-and-evidence/weather-page.PNG)
-
+![Products Page](ddocs/features-and-evidence/products.PNG)
 </details>
+
+<details>
+    <summary>Products Image</summary>
+
+![Products Management Page](docs/features-and-evidence/products-management.PNG)
+</details>
+
+
 <br>
 
 - ### **Product details ((with product administration for the site owner)**
@@ -622,9 +644,9 @@ It can accessed by cliking on a specific product; it provides detailed informati
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Product Details Image</summary>
 
-![Blog App Image](docs/features-and-evidence/blog-page.PNG)
+![Product Details Image](docs/features-and-evidence/product-details.PNG)
 
 </details>
 <br>
@@ -638,9 +660,9 @@ It can be accessed through the icot in the fixed navigation menu, top right, and
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Bag Page Image</summary>
 
-![Contact App Image](docs/features-and-evidence/contact-page.PNG)
+![Bap Page Image](docs/features-and-evidence/bag.PNG)
 
 </details>
 <br>
@@ -655,9 +677,9 @@ It is presented when the user/shopper finishes the purchase process and is ready
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Checkout Image</summary>
 
-![Footer Image](docs/features-and-evidence/footer.PNG)
+![Checkout Page Image](docs/features-and-evidence/checkout.PNG)
 
 </details>
 <br>
@@ -671,9 +693,9 @@ It is the payment process for the e-commerce, poweverd by Stripe.
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Stripe Payment Image</summary>
 
-![Footer Image](docs/features-and-evidence/footer.PNG)
+![Payment Process Image](docs/features-and-evidence/Stripe-payment.PNG)
 
 </details>
 <br>
@@ -687,9 +709,9 @@ It is presented after a successful payment carried out by the user/shopper.
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Checkout Success Image</summary>
 
-![Footer Image](docs/features-and-evidence/footer.PNG)
+![Checkout Success Image](docs/features-and-evidence/checkout-success.PNG)
 
 </details>
 <br>
@@ -703,9 +725,15 @@ They are Django complementary tools and pages to have sigh-in and sign-out optio
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Sign-in Page Image</summary>
 
-![Footer Image](docs/features-and-evidence/footer.PNG)
+![Sign-in Image](docs/features-and-evidence/log-in.PNG)
+
+</details>
+<details>
+    <summary>Sign-out Page Image</summary>
+
+![Sign-out Image](docs/features-and-evidence/log-out.PNG)
 
 </details>
 <br>
@@ -720,11 +748,10 @@ They are Django complementary tools and pages to have a sign-up option for users
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Sign-up Image</summary>
 
-![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
-![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
-![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+![Registration Sign-In Images](docs/features-and-evidence/sign-up.PNG)
+
 </details>
 
 <br><br>
@@ -741,11 +768,9 @@ It is a page that shows the user information and history order after selected th
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Profile with history order on the right</summary>
 
-![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
-![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
-![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+![Profile and History Order Image](docs/features-and-evidence/profile.PNG)
 </details>
 
 <br><br>
@@ -761,11 +786,10 @@ It is a contact form in a separate page, accessible from the footer, that gives 
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Contact Form Image</summary>
 
-![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
-![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
-![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+![Contact Form Image](docs/features-and-evidence/contact-form.PNG)
+
 </details>
 
 <br><br>
@@ -781,11 +805,11 @@ They are Django complementary tools and pages to have a sign-up option for users
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Footer Images</summary>
 
-![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
-![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
-![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+![Footer for Desktop Image](docs/features-and-evidence/footer-desktop.PNG)
+![Footer for Tablet Image](docs/features-and-evidence/footer-tablet.PNG)
+![Footer for Cell Image](docs/features-and-evidence/footer-cell.PNG)
 </details>
 
 <br><br>
@@ -821,11 +845,17 @@ They are Django complementary messages that informs the user, with pop-ups, that
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>Pop-up Status Message Images</summary>
 
-![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
-![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
-![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+![Pop-up Status Message Image 1](docs/features-and-evidence/success-toast-1.PNG)
+![Pop-up Status Message Image 2](docs/features-and-evidence/success-toast-2.PNG)
+![Pop-up Status Message Image 3](docs/features-and-evidence/success-toast-3.PNG)
+![Pop-up Status Message Image 4](docs/features-and-evidence/success-toast-4.PNG)
+![Pop-up Status Message Image 5](docs/features-and-evidence/success-toast-5.PNG)
+![Pop-up Status Message Image 6](docs/features-and-evidence/success-toast-6.PNG)
+![Pop-up Status Message Image 7](docs/features-and-evidence/alert-toast-1.PNG)
+
+
 </details>
 
 <br><br>
@@ -1081,6 +1111,8 @@ Files:
 PEP8 was used to check the files written in Python, with "All right" results.
 
 The tool can be accessed with this link: http://pep8online.com .
+
+Flake8 (command: python3 -m flake8) was run to eliminate the loading of unused libraries.
 
 
 - **Django Project Files**

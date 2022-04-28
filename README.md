@@ -1513,124 +1513,124 @@ Pages were tested with thier URLs, directly in the we web page address input in 
 Google Lighthouse (in Google Chrome) was used to evaluate the performance of the pages. Please check the results below:
 
 <details>
-    <summary>Home for cell phones</summary>
+    <summary>Home for cell phones (79)</summary>
 
-![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
+![Evidence of no errors in the home HTML file](docs/validation/validation-performance-home-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Home for desktop</summary>
+    <summary>Home for desktop (88)</summary>
 
-![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
+![Evidence of no errors in the home HTML file](docs/validation/validation-performance-home-desktop.PNG) 
 </details>
 <details>
-    <summary>Bag for cell phones</summary>
+    <summary>Bag for cell phones (78)</summary>
 
-![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag.PNG) 
+![Evidence of no errors in the bag HTML file](docs/validation/validation-performance-bag-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Bag for for desktop</summary>
+    <summary>Bag for for desktop (96)</summary>
 
-![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag.PNG) 
+![Evidence of no errors in the bag HTML file](docs/validation/validation-performance-bag-desktop.PNG) 
 </details>
 <details>
-    <summary>Checkout for cell phones</summary>
+    <summary>Checkout for cell phones (72)</summary>
 
-![Evidence of no errors in the checkout HTML file](docs/validation/validation-html-validator-w3-org-checkout.PNG) 
+![Evidence of no errors in the checkout HTML file](docs/validation/validation-performance-checkout-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Checkout for desktop</summary>
+    <summary>Checkout for desktop (89)</summary>
 
-![Evidence of no errors in the checkout HTML file](docs/validation/validation-html-validator-w3-org-checkout.PNG) 
+![Evidence of no errors in the checkout HTML file](docs/validation/validation-performance-checkout-desktop.PNG) 
 </details>
 <details>
-    <summary>Success Checkout for cell phones</summary>
+    <summary>Success Checkout for cell phones (69)</summary>
 
-![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-html-validator-w3-org-checkout-success.PNG) 
+![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-performance-success-checkout-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Success Checkout for desktop</summary>
+    <summary>Success Checkout for desktop (95)</summary>
 
-![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-html-validator-w3-org-checkout-success.PNG) 
+![Evidence of no errors in the home checkout-success HTML file](docs/validation/validation-performance-success-checkout-desktop.PNG) 
 </details>
 <details>
-    <summary>Contact for cell phones</summary>
+    <summary>Contact for cell phones (75)</summary>
 
-![Evidence of no errors in the contact HTML file](docs/validation/validation-html-validator-w3-org-contact.PNG) 
+![Evidence of no errors in the contact HTML file](docs/validation/validation-performance-contact-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Contact for desktop</summary>
+    <summary>Contact for desktop (92)</summary>
 
-![Evidence of no errors in the contact HTML file](docs/validation/validation-html-validator-w3-org-contact.PNG) 
+![Evidence of no errors in the contact HTML file](docs/validation/validation-performance-contact-desktop.PNG) 
 </details>
 <details>
-    <summary>Thank You Page for cell phones</summary>
+    <summary>Thank You Page for cell phones (79)</summary>
 
-![Evidence of no errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+![Evidence of no errors in the thanks HTML file](docs/validation/validation-performance-thank-you-page-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Thank You Page for desktop</summary>
+    <summary>Thank You Page for desktop (96)</summary>
 
-![Evidence of no errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+![Evidence of no errors in the thanks HTML file](docs/validation/validation-performance-thank-you-page-desktop.PNG) 
 </details>
 <details>
-    <summary>Add Product for cell phones</summary>
+    <summary>Add Product for cell phones (79)</summary>
 
-![Evidence of no errors in the add-product HTML file](docs/validation/validation-html-validator-w3-org-product-add.PNG) 
+![Evidence of no errors in the add-product HTML file](docs/validation/validation-performance-add-product-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Add Product for desktop</summary>
+    <summary>Add Product for desktop (97)</summary>
 
-![Evidence of no errors in the add-product HTML file](docs/validation/validation-html-validator-w3-org-product-add.PNG) 
+![Evidence of no errors in the add-product HTML file](docs/validation/validation-performance-add-product-desktop.PNG) 
 </details>
 <details>
-    <summary>Edit Product for cell phones</summary>
+    <summary>Edit Product for cell phones (78)</summary>
 
-![Evidence of no errors in the edit-product HTML file](docs/validation/validation-html-validator-w3-org-edit-product.PNG) 
+![Evidence of no errors in the edit-product HTML file](docs/validation/validation-performance-edit-product-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Edit Product for desktop</summary>
+    <summary>Edit Product for desktop (95)</summary>
 
-![Evidence of no errors in the edit-product HTML file](docs/validation/validation-html-validator-w3-org-edit-product.PNG) 
+![Evidence of no errors in the edit-product HTML file](docs/validation/validation-performance-edit-product-desktop.PNG) 
 </details>
 <details>
-    <summary>Product Details for cell phones</summary>
+    <summary>Product Details for cell phones (62)</summary>
 
-![Evidence of no errors in the product-details HTML file](docs/validation/validation-html-validator-w3-org-product-details.PNG) 
+![Evidence of no errors in the product-details HTML file](docs/validation/validation-performance-product-details-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Product Details for desktop</summary>
+    <summary>Product Details for desktop (82)</summary>
 
-![Evidence of no errors in the product-details HTML file](docs/validation/validation-html-validator-w3-org-product-details.PNG) 
+![Evidence of no errors in the product-details HTML file](docs/validation/validation-performance-product-details-desktop.PNG) 
 </details>
 <details>
-    <summary>Products for cell phones</summary>
+    <summary>Products for cell phones (77)</summary>
 
-![Evidence of no errors in the products HTML file](docs/validation/validation-html-validator-w3-org-products.PNG) 
+![Evidence of no errors in the products HTML file](docs/validation/validation-performance-products-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Products for desktop</summary>
+    <summary>Products for desktop (91)</summary>
 
-![Evidence of no errors in the products HTML file](docs/validation/validation-html-validator-w3-org-products.PNG) 
+![Evidence of no errors in the products HTML file](docs/validation/validation-performance-products-desktop.PNG) 
 </details>
 <details>
-    <summary>Profile for cell phones</summary>
+    <summary>Profile for cell phones (76)</summary>
 
-![Evidence of no errors in the profile HTML file](docs/validation/validation-html-validator-w3-org-profile.PNG) 
+![Evidence of no errors in the profile HTML file](docs/validation/validation-performance-profile-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Profile for desktop</summary>
+    <summary>Profile for desktop (84)</summary>
 
-![Evidence of no errors in the profile HTML file](docs/validation/validation-html-validator-w3-org-profile.PNG) 
+![Evidence of no errors in the profile HTML file](docs/validation/validation-performance-profile-desktop.PNG) 
 </details>
 <details>
-    <summary>Wish List for cell phones</summary>
+    <summary>Wish List for cell phones (77)</summary>
 
-![Evidence of no errors in the wish-list HTML file](docs/validation/validation-html-validator-w3-org-wish-list.PNG) 
+![Evidence of no errors in the wish-list HTML file](docs/validation/validation-performance-wish-list-cell-phone.PNG) 
 </details>
 <details>
-    <summary>Wish List for desktop</summary>
+    <summary>Wish List for desktop (96)</summary>
 
-![Evidence of no errors in the wish-list HTML file](docs/validation/validation-html-validator-w3-org-wish-list.PNG) 
+![Evidence of no errors in the wish-list HTML file](docs/validation/validation-performance-wish-list-desktop.PNG) 
 </details>
 
 

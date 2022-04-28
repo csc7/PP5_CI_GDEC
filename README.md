@@ -1886,7 +1886,7 @@ The following are testing of User Stories previously described above:
 <br><br>
 
 
-5. As a user, I want to have access to my account easily, so I can quickly sign in.
+5. As a user, I want to have access to my account easily, so I can quickly log in.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
@@ -1924,9 +1924,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user story 4, implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form Link in Footer</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form Link in Footer](docs/features-and-evidence/footer-desktop-contact-form-link.jpg) 
+</details>
+<details>
+    <summary>Contact Form</summary>
+
+![Contact Form](docs/features-and-evidence/contact-form.PNG) 
 </details>
 <br><br>
 
@@ -1938,23 +1943,53 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br> | Include a fixed navigation menu on top, in the header of pages, with links to main parts of the site | Navigate to the selected sites, without using the back button, without scrolling down, and without manually editing the URL  | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Tablet Image</summary>
+
+
+![Fixed Navigation Menu for Tablet Image](docs/features-and-evidence/fixed-navigation-menu-tablet.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Cell Phones Image</summary>
+
+![Fixed Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu, expanded, for Cell Phones Image</summary>
+
+![Fixed Navigation Menu, Expanded, for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell-expanded.PNG)
 </details>
 <br><br>
 
 
-8. As a returning user, I want to have access to my account easily, so I can quickly sign in.
+8. As a returning user, I want to have access to my account easily, so I can quickly log in.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
 | Fixed navigation menu<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Footer<br> | Include access links to account in fixed navigation menu and footer | Access sign-in page from these features | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Access Log-in from Top Navigation Menu</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Access Log-in from Navigation Menu](docs/features-and-evidence/log-in-from-top-nav-desktop.PNG) 
+</details>
+<details>
+    <summary>Access Log-in from Top Navigation Menu (Smaller Screens)</summary>
+
+![Access Log-in from Navigation Menu (Smaller Screens)](docs/features-and-evidence/log-in-from-top-nav-cell.PNG) 
+</details><details>
+    <summary>Access Log-in from Footer</summary>
+
+![Access Log-in from Footer](docs/features-and-evidence/log-in-from-footer-desktop.PNG) 
+</details>
+<details>
+    <summary>Access Log-in from Footer (Smaller Screens)</summary>
+
+![Access Log-in from Footer (Smaller Screens)](docs/features-and-evidence/log-in-from-footer-cell.PNG) 
 </details>
 <br><br>
 
@@ -1966,9 +2001,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user stories 4 and 6, implement a contact form in a separated page and add contact options in the footer | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form Link in Footer</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form Link in Footer](docs/features-and-evidence/footer-desktop-contact-form-link.jpg) 
+</details>
+<details>
+    <summary>Contact Form</summary>
+
+![Contact Form](docs/features-and-evidence/contact-form.PNG) 
 </details>
 <br><br>
 
@@ -1980,9 +2020,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>404 page<br>Pop-up status messages<br> | Use a Django confirmation page to inform the user if sending the contact form is successful | Show a successful page after sending the form | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form Confirmation</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form Confirmation](docs/features-and-evidence/contact-form-confirmation.PNG) 
 </details>
 <br><br>
 
@@ -1994,9 +2034,29 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br> | ... | ... | ... | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Recover Forgotten Password, Step 1</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Recover Forgotten Password, Step 1, Image](docs/features-and-evidence/forgot-password-1.PNG) 
+</details>
+<details>
+    <summary>Recover Forgotten Password, Step 2</summary>
+
+![Recover Forgotten Password, Step 2, Image](docs/features-and-evidence/forgot-password-2.PNG) 
+</details>
+<details>
+    <summary>Recover Forgotten Password, Step 3, Confirmation</summary>
+
+![Recover Forgotten Password, Step 3, Confirmation](docs/features-and-evidence/forgot-password-3.PNG) 
+</details>
+<details>
+    <summary>Recover Forgotten Password, Step 4, Confirmation</summary>
+
+![Recover Forgotten Password, Step 4, Confirmation](docs/features-and-evidence/forgot-password-4.PNG) 
+</details>
+<details>
+    <summary>Recover Forgotten Password, Step 5, Confirmation</summary>
+
+![Recover Forgotten Password, Step 5, Confirmation](docs/features-and-evidence/forgot-password-5.PNG) 
 </details>
 <br><br>
 
@@ -2008,9 +2068,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Profile with history order<br> | Store orders and link them to the user profile that originated it | Show purchase history in profile | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Purchase History</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/profile-with-purchase-history.jpg) 
 </details>
 <br><br>
 

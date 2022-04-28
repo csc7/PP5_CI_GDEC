@@ -951,6 +951,11 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 
 ![Evidence of no errors in the wish-list HTML file](docs/validation/validation-html-validator-w3-org-wish-list.PNG) 
 </details>
+<details>
+    <summary>404.html</summary>
+
+![Evidence of no errors in the 404 page HTML file](docs/validation/validation-html-validator-w3-org-404.PNG) 
+</details>
 
 
 
@@ -1533,6 +1538,11 @@ Pages were tested with thier URLs, directly in the we web page address input in 
     <summary>wish_list.html (logged in)</summary>
 
 ![Evidence of no accessibility errors in the wish-list HTML file](docs/validation/validation-accessibility-with-wave-wish-list-logged-in.PNG) 
+</details>
+<details>
+    <summary>404.html</summary>
+
+![Evidence of no accessibility errors in the 404 page HTML file](docs/validation/validation-accessibility-with-wave-404.PNG) 
 </details>
 
 

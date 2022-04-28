@@ -137,7 +137,6 @@ def add_to_wish_list(request, item_id):
             update_wish_item.save()
             messages.success(request, 'Quantity updated in wish list')
 
-    #return redirect(redirect_url)
     return HttpResponse(status=200)
 
 

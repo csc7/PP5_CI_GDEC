@@ -12,13 +12,13 @@
 // adding products.
 if (parseInt($('.decrement-qty-prod-det').closest('div').siblings('input').val()) <=1) {
     $('.decrement-qty-prod-det').prop('disabled', true);
-};
+}
 if (parseInt($('.decrement-qty-prod-det').closest('div').siblings('input').val()) >=98) {
     $('.increment-qty-prod-det').prop('disabled', true);
-};
+}
 if (parseInt($('.qty_input').val()) <=1) {
     $('.decrement-qty').prop('disabled', true);
-};
+}
     
 
 // Disable +/- buttons outside 1-99 range

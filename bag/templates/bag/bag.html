@@ -98,8 +98,9 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input id="bag_ls_id_qty_{{ item.item_id }}_{{ item.resolution }}" type="hidden" name="product_resolution" value="{{ item.product.resolution }}">
-                                                    <label for="bag_ls_id_qty_{{ item.item_id }}_{{ item.resolution }}" hidden>Product Resolution</label>
+                                                    <input id="bag_ls_id_qty_{{ item.item_id }}_{{ item.resolution }}" type="hidden"
+                                                        name="product_resolution" value="{{ item.product.resolution }}"
+                                                        aria-labelledby="bag_ls_id_qty_{{ item.item_id }}_{{ item.resolution }}">
                                                 {% endif %}
                                             </div>
                                             
@@ -177,8 +178,9 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input id="bag_ss_id_qty_{{ item.item_id }}_{{ item.resolution }}" type="hidden" name="product_resolution" value="{{ item.resolution }}">
-                                                    <label for="bag_ss_id_qty_{{ item.item_id }}_{{ item.resolution }}" hidden>Product Resolution</label>
+                                                    <input id="bag_ss_id_qty_{{ item.item_id }}_{{ item.resolution }}" type="hidden"
+                                                        name="product_resolution" value="{{ item.resolution }}"
+                                                        aria-labelledby="bag_ss_id_qty_{{ item.item_id }}_{{ item.resolution }}">
                                                 {% endif %}
                                             </div>
                                         </div>

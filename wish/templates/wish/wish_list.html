@@ -38,7 +38,7 @@
                             <tr class="d-none d-md-table-row">
                                 <!-- Product details -->
                                 <th scope="col" class="w-25" colspan="2">Product Info</th>
-                                <th scope="col" class="w-25" hidden> Product Details</th>
+                                <th scope="col" class="w-25" hidden>Product Details</th>
                                 <th scope="col" class="text-center">Price</th>
                                 <th scope="col" class="text-center">Quantity</th>
                                 <th scope="col" class="text-center">Subtotal</th>
@@ -57,7 +57,7 @@
                                     </a>
                                     {% endif %}
                                 </td>
-                                <td class="py-3 w-25">
+                                <td class="py-3 w-25" colspan="2">
                                     <!-- Include resolution if applicable -->
                                     <a href="{% url 'product_detail' item.product.id %}">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -88,13 +88,14 @@
                                                 </button>
                                             </div>
                                             {% if item.product_resolution %}
-                                                <input id="ls_prod_res_{{ item.product.id }}" type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
-                                                <label for="ls_prod_res_{{ item.product.id }}" hidden>Product Resolution</label>
+                                                <input id="ls_prod_res_{{ item.product.id }}" type="hidden"
+                                                    name="product_resolution" value="{{ item.product_resolution }}"
+                                                    aria-labelledby="ls_prod_res_{{ item.product.id }}">
                                             {% endif %}
                                             <input class="form-control form-control-sm qty_input text-center" type="number"
                                                 name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
-                                                id="ls_id_qty_{{ item.product.id }}" readonly="readonly">
-                                            <label for="ls_id_qty_{{ item.product.id }}" hidden>Quantity</label>
+                                                id="ls_id_qty_{{ item.product.id }}" readonly="readonly"
+                                                aria-labelledby="ls_id_qty_{{ item.product.id }}">
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                     data-item_id="{{ item.product.id }}" id="large_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
@@ -117,8 +118,9 @@
                                 <td class="py-3">
                                     <div class="">
                                         <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-100">Add to Bag</button>
-                                        <input id="ls_redirect_url_{{ item.product.id }}" type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        <label for="ls_redirect_url_{{ item.product.id }}" hidden>Redirect URL</label>
+                                        <input id="ls_redirect_url_{{ item.product.id }}" type="hidden"
+                                            name="redirect_url" value="{{ request.path }}"
+                                            aria-labelledby="ls_redirect_url_{{ item.product.id }}">
                                     </div>
                                 </td>                               
                             </tr>
@@ -127,7 +129,7 @@
                             <!-- Table for small size screens -->                            
                             <tr class="d-table-row d-md-none">
                                 <!-- Product details -->
-                                <th scope="col" colspan="4">Product Info</th>
+                                <th scope="col" colspan="2">Product</th>
                                 <th scope="col" hidden>Product Details</th>
                                 <th scope="col" hidden>Price</th>
                                 <th scope="col" hidden>Quantity</th>
@@ -147,8 +149,12 @@
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0">Resolution: {% if item.product.resolution %}{{ item.product_resolution|upper }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    <p></p>
+                                    {% if item.product.id in products_to_label_in_wish_list %}
+                                        <p class="text-info"><strong>Buy it again!</strong></p>
+                                    {% endif %}  
                                 </td>
-                                <td class="py-3 text-right" colspan="3">
+                                <td class="py-3 text-right" colspan="4">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>                            
@@ -156,7 +162,7 @@
                                 <td class="pl-3" colspan="1">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>                                
-                                <td class="py-3 w-75" colspan="4">
+                                <td class="py-3 w-75" colspan="5">
                                     <!-- Update wish list if requested -->                                    
                                         <div class="form-group w-50 m-auto">
                                             <div class="input-group">
@@ -173,8 +179,8 @@
                                                 </div>
                                                 <input class="form-control form-control-sm qty_input text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
-                                                    id="ss_id_qty_{{ item.product.id }}" readonly="readonly">
-                                                <label for="ss_id_qty_{{ item.product.id }}" hidden>Quantity</label>
+                                                    id="ss_id_qty_{{ item.product.id }}" readonly="readonly"
+                                                    aria-labelledby="ss_id_qty_{{ item.product.id }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-primary rounded-0"
                                                         data-item_id="{{ item.product.id }}" id="small_screen_wish_increment-qty_{{ item.product.id }}_{{ item.product_resolution }}">
@@ -187,8 +193,9 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.resolution %}
-                                                    <input id="ss_prod_res_{{ item.product.id }}" type="hidden" name="product_resolution" value="{{ item.product_resolution }}">
-                                                    <label for="ss_prod_res_{{ item.product.id }}" hidden>Product Resolution</label>
+                                                    <input id="ss_prod_res_{{ item.product.id }}" type="hidden"
+                                                        name="product_resolution" value="{{ item.product_resolution }}"
+                                                        aria-labelledby="ss_prod_res_{{ item.product.id }}">
                                                 {% endif %}
                                             </div>
                                         </div>                                    
@@ -197,10 +204,11 @@
                                 </td>
                             </tr>
                             <tr class="d-table-row d-md-none">
-                                <td class="py-3 text-center" colspan="5">
+                                <td class="py-3 text-center" colspan="6">
                                     <button type="submit" formaction="{% url 'add_to_bag' item.product.id %}" class="btn btn-primary rounded-0 text-uppercase w-75">Add to Bag</button>
-                                    <input id="ss_redirect_url_{{ item.product.id }}" type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    <label for="ss_redirect_url_{{ item.product.id }}" hidden>Redirect URL</label>
+                                    <input id="ss_redirect_url_{{ item.product.id }}" type="hidden"
+                                        name="redirect_url" value="{{ request.path }}"
+                                        aria-labelledby="ss_redirect_url_{{ item.product.id }}">
                                     <hr>  
                                 </td>                                
                             </tr>                      

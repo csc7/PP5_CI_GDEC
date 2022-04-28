@@ -867,6 +867,11 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 ![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag.PNG) 
 </details>
 <details>
+    <summary>bag.html, direct URL input</summary>
+
+![Evidence of no errors in the bag HTML file](docs/validation/validation-html-validator-w3-org-bag-2.PNG) 
+</details>
+<details>
     <summary>checkout.html</summary>
 
 ![Evidence of no errors in the checkout HTML file](docs/validation/validation-html-validator-w3-org-checkout.PNG) 
@@ -1029,6 +1034,12 @@ Files:
 </details>
 
 <details>
+    <summary>To control buttons and form in product details: product_details.js, with no definition for the CSRFToken</summary>
+
+![Evidence of no errors and warnings in the product_details.js JavaScript file](docs/validation/validation-js-product-details-2.PNG)
+</details>
+
+<details>
     <summary>To sort and go to top of page in products: product.js</summary>
 
 ![Evidence of no errors and warnings in the product.js JavaScript file](docs/validation/validation-js-products.PNG)
@@ -1038,6 +1049,12 @@ Files:
     <summary>To control increase/decrease buttons: quantity_incr_decr.js</summary>
 
 ![Evidence of no errors and warnings in the quantity_incr_decr.js JavaScript file](docs/validation/validation-js-quantity_incr_decr.PNG)
+</details>
+
+<details>
+    <summary>To control increase/decrease buttons: quantity_incr_decr.js, with no definition for the CSRFToken</summary>
+
+![Evidence of no errors and warnings in the quantity_incr_decr.js JavaScript file](docs/validation/validation-js-quantity_incr_decr-2.PNG)
 </details>
 
 <details>

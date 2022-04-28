@@ -111,8 +111,9 @@
                                 <input id="keep-shoppint-in-product-details" type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5 w-50" value="Add to Bag">
                                 <label for="keep-shoppint-in-product-details" hidden>Keep Shopping</label>
                             </div>
-                            <input id="redirect-url-in-product-details_{{ product.id }}" type="hidden" name="redirect_url" value="{{ request.path }}">
-                            <label for="redirect-url-in-product-details_{{ product.id }}" hidden>Redirect URL</label>
+                            <input id="redirect-url-in-product-details_{{ product.id }}" type="hidden"
+                                name="redirect_url" value="{{ request.path }}"
+                                aria-labelledby="redirect-url-in-product-details_{{ product.id }}">
                             {% endwith %}
                         </div>
                         {% if request.user.is_authenticated %}

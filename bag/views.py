@@ -109,8 +109,9 @@ def add_to_bag(request, item_id):
             )
         else:
             bag[item_id] = quantity
-            messages.success(request, f'{product.name} added to the bag',
-            extra_tags='show_bag_in_toast'
+            messages.success(
+                request, f'{product.name} added to the bag',
+                extra_tags='show_bag_in_toast'
             )
 
     # Add bag to current session

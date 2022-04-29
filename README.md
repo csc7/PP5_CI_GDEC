@@ -2085,9 +2085,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | Create a data model where products are viewed in the body of a unique page according to a specific selection | Show all products in a page (in the body) according to the selection and/or sort in the fixed navigation menu | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Products Page</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/products-to-buy.PNG) 
 </details>
 <br><br>
 
@@ -2099,9 +2099,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | Create a view with product details after clicking on the product itself  | Show product details in a different page/view | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Product Details</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/product-details-to-buy.PNG) 
 </details>
 <br><br>
 
@@ -2113,9 +2113,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Bag page<br>Checkout page<br> | Create a bag app to show the current shopping cart, with a link in the fixed navigation menu | Show shopping cart in a different page/view | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Shopping Bag, top</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Shopping Bag, top](docs/features-and-evidence/shopping-bag-top.PNG) 
+</details>
+<details>
+    <summary>Shopping Bag, bottom</summary>
+
+![Shopping Bag, bottom](docs/features-and-evidence/shopping-bag-bottom.PNG) 
 </details>
 <br><br>
 
@@ -2127,9 +2132,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Bag page<br> | Compute total of bag and return it to the view containing the fixed navigation menu | Show spent amount, at all times, in fixed navigation menu | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Permanent Spending Amount</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Permanent Spending Amount](docs/features-and-evidence/spending-amount.PNG) 
 </details>
 <br><br>
 
@@ -2141,9 +2146,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br> | Include a link/list item element to special offers in the fixed navigation menu | Access special offers after cliking on this link/list item element of the menu | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Easy Access for Offers</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Easy Access for Offers](docs/features-and-evidence/Esri-map.PNG) 
+</details>
+<details>
+    <summary>Easy Access for Offers in Checkout</summary>
+
+![Easy Access for Offers in Checkout](docs/features-and-evidence/checkout-success-with-offers-button.jpg) 
 </details>
 <br><br>
 
@@ -2155,9 +2165,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br> | Include a search field in the fixed navigation menu that looks for products (according to the search criteria) in the backend and return the results to the products page | Show products related to the search criteria | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Search Field for Desktop</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Search Field for Desktop](docs/features-and-evidence/search-field-desktop.jpg) 
+</details>
+<details>
+    <summary>Search Field for Smaller Screens</summary>
+
+![Search Field for Smaller Screens](docs/features-and-evidence/search-field-smaller-screens.PNG) 
 </details>
 <br><br>
 
@@ -2169,9 +2184,34 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Products (with product administration for the site owner)<br> | Include links/list item elements in the fixed navigation menu that filter the data in the backend according to categories (previously created) and return the result to the products page/view | Show products related to the selected category in the menu | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Products by Categories</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Products by Categories](docs/features-and-evidence/find-products-by-category-1.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Digital Data</summary>
+
+![Products by Categories, Digital Data](docs/features-and-evidence/find-products-by-category-2.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Reports</summary>
+
+![Products by Categories, Reports](docs/features-and-evidence/find-products-by-category-3.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Training</summary>
+
+![Products by Categories, Training](docs/features-and-evidence/find-products-by-category-4.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Software</summary>
+
+![Products by Categories, Software](docs/features-and-evidence/find-products-by-category-5.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Offers</summary>
+
+![Products by Categories, Offers](docs/features-and-evidence/find-products-by-category-6.PNG) 
 </details>
 <br><br>
 
@@ -2183,9 +2223,24 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br> | Compute total of bag and return it to the view containing the fixed navigation menu | Show spent amount, at all times, in fixed navigation menu | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Visible Prices in the Bag</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Visible Prices in the Bag](docs/features-and-evidence/bag-tablet-prices.jpg) 
+</details>
+<details>
+    <summary>Visible Prices in the Product Details</summary>
+
+![Visible Prices in the Product Details](docs/features-and-evidence/product-details-prices.PNG) 
+</details>
+<details>
+    <summary>Visible Prices in the Wish List</summary>
+
+![Visible Prices in the Wish List](docs/features-and-evidence/wish-list-prices.jpg) 
+</details>
+<details>
+    <summary>Visible Prices in Products</summary>
+
+![Visible Prices in Products](docs/features-and-evidence/products-prices.PNG) 
 </details>
 <br><br>
 

@@ -37,8 +37,8 @@
                             <!-- Product details -->
                             <tr class="d-none d-md-table-row">
                                 <!-- Product details -->
-                                <th scope="col" class="w-25" colspan="2">Product Info</th>
-                                <th scope="col" class="w-25" hidden>Product Details</th>
+                                <th scope="col" class="w-25">Product Info</th>
+                                <th scope="col" class="w-25">Details</th>
                                 <th scope="col" class="text-center">Price</th>
                                 <th scope="col" class="text-center">Quantity</th>
                                 <th scope="col" class="text-center">Subtotal</th>
@@ -57,7 +57,7 @@
                                     </a>
                                     {% endif %}
                                 </td>
-                                <td class="py-3 w-25" colspan="2">
+                                <td class="py-3 w-25" colspan="1">
                                     <!-- Include resolution if applicable -->
                                     <a href="{% url 'product_detail' item.product.id %}">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>

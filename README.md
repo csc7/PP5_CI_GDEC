@@ -901,11 +901,55 @@ They are Django complementary messages that informs the user, with pop-ups, that
 ![Pop-up Status Message Image 6](docs/features-and-evidence/success-toast-6.PNG)
 ![Pop-up Status Message Image 7](docs/features-and-evidence/alert-toast-1.PNG)
 
-
 </details>
 
 <br><br>
 ## [Back to Index](#index)
+
+
+
+- ### **Product Comments**
+
+It allows users to comment products below its product details.
+
+<details>
+    <summary>Check Product Comments Image</summary>
+
+![Product Comments Image](docs/features-and-evidence/product-reviews.PNG)
+</details>
+
+
+<br><br>
+## [Back to Index](#index)
+
+
+
+- ### **Wish List**
+
+It allows users to save products they like or are interested in for future purchases.
+
+<details>
+    <summary>Check Wish List Desktop Image</summary>
+
+![Wish List Desktop Image](docs/features-and-evidence/wish-list.PNG)
+</details>
+
+<details>
+    <summary>Check Wish List Tablet Image</summary>
+
+![Wish List Tablet Image](docs/features-and-evidence/wish-list-tablet.PNG)
+</details>
+
+<details>
+    <summary>Check Wish List Cell Image</summary>
+
+![Wish List Cell Image](docs/features-and-evidence/wish-list-cell.PNG)
+</details>
+
+<br><br>
+## [Back to Index](#index)
+
+
 <br><br>
 
 

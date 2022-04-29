@@ -6,7 +6,7 @@
 #### [*Site Live Link*](https://pp5-ci-gdec.herokuapp.com/) (https://pp5-ci-gdec.herokuapp.com/)
 
 
-### [1. Project Goals](#1--project-goals)
+### [1. Project Goals](#1--e-commerce-project-goals)
 ### [2. Considerations](#2--considerations)
 ### [3. Project Board](#3--project-board)
 ### [4. User Experience](#4--user-experience)
@@ -219,6 +219,7 @@ User stories are divided into the following three groups:
 ## [Back to Index](#index)
 <br><br>
 
+
 ___
 # **5 . Data Model**
 
@@ -325,7 +326,6 @@ The following are the tables involved in the relational model and the field type
     - **Product Resolution:** char
     - **Quantity:** integer
     - **Line Item Total:** decimal
-
 <br>
 ## [Back to Index](#index)
 <br><br>
@@ -451,9 +451,11 @@ Please check the PDFs files for each case in the following links:
 
 ![Desktop Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
 </details>
+<br>
+<details>
+    <summary>Tablet Wireframe Image for Home Page</summary>
 
-
-![Tablet Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-Tablet-instructions.PNG)
+![Tablet Wireframe Image for Home Page](docs/wireframes/wireframe-wqcs-Tablet-instructions.PNG)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Products Page</summary>
@@ -510,9 +512,9 @@ Please check the PDFs files for each case in the following links:
 
 ![Tablet Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
 </details>
-
-
 <br>
+<details>
+    <summary>Tablet Wireframe Image for 404 Page</summary>
 
 ![Cell Phone Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-instructions.PNG)
 </details>
@@ -572,7 +574,7 @@ Please check the PDFs files for each case in the following links:
 ![Cell Phone Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
 </details>
 
-<br>
+<br><br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -1125,7 +1127,7 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 
 <br>
 
-[Rendered HTML for Home](hdocs/rendered-html-for-validation/rendered-html-for-validation-home.html)
+[Rendered HTML for Home](https://github.com/csc7/PP5_CI_GDEC/tree/main/docs/rendered-html-for-validation/rendered-html-for-validation-home.html)
 
 [Rendered HTML for Bag](docs/rendered-html-for-validation/rendered-html-for-validation-bag.html)
 
@@ -1872,7 +1874,6 @@ Google Lighthouse (in Google Chrome) was used to evaluate the performance of the
 
 ![Evidence of no errors in the wish-list HTML file](docs/validation/validation-performance-wish-list-desktop.PNG) 
 </details>
-
 <br>
 ## [Back to Index](#index)
 <br><br>
@@ -1930,8 +1931,8 @@ Please see below screenshots of the testing and coverage, the fourth and last li
 ![coverage.py Image 3](docs/validation/testing-automatic-coverage-3-summary.PNG)
 </details>
 
-<br>
-## [Back to Index](#index)
+<br><br>
+#### [Back to Index](#index)
 <br><br>
 
 ### **Testing of User Stories**
@@ -2692,8 +2693,10 @@ The following are testing of User Stories previously described above:
 
 ![Developer's Repositories](https://github.com/csc7) 
 
-<br><br>
 
+<br>
+## [Back to Index](#index)
+<br><br>
 
 
 ___
@@ -2843,9 +2846,7 @@ The page below was built in Facebook with the aim of interacting with potential 
 
 As mentioned before, the above strategies should be carried out with a paid strategy, focusing the expenditures (which might not be necessarily high but constant through time) in geopysical exhibitions (like EAGE or SEG among many others), and on those news or science websites that could caught the atention of authorities (since these kind of data are usually used by them.)
 
-
-
-
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -2862,7 +2863,6 @@ Bugs that required more time and specific solutions were the following ones:
 | Accessibility validation presents multiple form labels when there is a repeated product in the wish list, with different resolutions. The issue arises because the model assigns the same product ID (since it considers a boolean field for the resolution, rather than a text one as the wish list does (for "high", "medium" and "low"). Therefore, in the template "for" loop, repeated labels are generated, since they are generated from the IDs of the products. The same reason has caused issues when adding or updating quantities in the wish list or the bag. | The quantities where solved with AJAX posts that read the resolution. A more robust solution would be to refactor the Product model, migrating its resoltuion field from boolean to text (so it would be able to identify the three resolutions separately) |
 | Increment and decrement controls to update the quantities in the wish list and bag stopped working after validation and refactoring. The issue was caused by the reorganization of the HTML elements, since JavaScript access these controls through element positioning in the page (not through specific ID or classes)sadfsdf | The issue was solved by assigning the correct relative position of the increment and decrement controls in the page. |
 | Commented products did not show the user the label of being already commented (whey they have done so). | The issue was solved by rendering the proper relation in the HTML template, through a varaible, after defining the proper data relation in the backend to identify a comment to both a specific product and user. |
-
 <br>
 ## [Back to Index](#index)
 <br><br>
@@ -3061,12 +3061,12 @@ In settings.py file, you can set the DEBUG variables as follows if you want to c
 
 
 <details>
-    <summary>GitHub Pages Screenshot</summary>
+    <summary>Heroku Deployment Screenshot</summary>
 
 ![Deployment on Heroku Image](docs/features-and-evidence/heroku-deployment.PNG) 
 </details>
 
-<br>
+<br><br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -3413,8 +3413,7 @@ ___
 
     - Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
 
-
-<br>
+<br><br>
 ## [Back to Index](#index)
 <br><br>
 

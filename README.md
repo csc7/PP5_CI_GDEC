@@ -1,7 +1,6 @@
 # **GDEC - Geophysical Data E-Commerce (Site Under Construction)**
-<br><br>
 #### **This project is about an e-commerce for geophysical data. It is a FICTITIOUS SITE where the user will be able to buy geophysical data that comprises digital elevation models, gravimetry, resistivity and magnetometry data; along with training, books and software products. Data and products are FICTITIOUS. The project is part of the Code Institute Full-Stack Software Development program.**
-<br><br>
+<br>
 
 # **Index**
 #### [*Site Live Link*](https://pp5-ci-gdec.herokuapp.com/) (https://pp5-ci-gdec.herokuapp.com/)
@@ -43,12 +42,10 @@
 
 ___
 # **1 . E-commerce Project Goals**
-The goal of the project is to develop an e-commerce for geophysical data, where users can find and buy digital elevation models, gravimetry, resistivity and magnetometry data; along with reports, training (courses and books) and software products. In addition, users can register in the site to track their purchases, contact the site owner and/or developer, navigate to social network sites of the e-commerce, filter and search products, and pay the products through Stripe.
+The goal of the project is to develop an e-commerce for geophysical data, where users can find and buy digital elevation models, gravimetry, resistivity and magnetometry data; along with reports, training (courses and books) and software products. In addition, users can register in the site to track their purchases, contact the site owner and/or developer (also available without having an account), navigate to social network sites of the e-commerce, filter and search products, store them in a wish list, comment them, and pay them using Stripe's payment processing platform.
 
-In addition, besides products and users, it is expected to provide a proper management for the site owner, registering order information and history, administration tasks like product updates and interaction with users.
-
-
-<br><br>
+In addition, it is expected to provide a proper management for the site owner, registering order information and history, and administrating tasks like product updates and interaction with users.
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -61,8 +58,7 @@ pip3 install -r requirements.txt
 
 Please keep in mind that the interaction with the database and corresponding display of data is slow, it might take several seconds until the data is displayed.
 
-
-## **Generation of the products of the site**
+### **Generation of the products of the site**
 
 As stated at the begining, the site is a **fictitious** e-commerce. To generate the products, the Natural Earth quick start kit" (50m raster) was downloaded from Natural Earth's website https://www.naturalearthdata.com/downloads/. This kit contains a planisphere from where QGIS was used to filter it by countries, by running the file "products_database_generation_for_QGIS.py" (in the "/tools" folder in the project root directory) in the Python console of QGIS.
 
@@ -72,18 +68,15 @@ Then, free images were downloaded from Pexels (please see Credit section for det
 
 A Python file was created to build CSV and JSON structures for the Products and Category models (with fields matching their fields, including the name and URL of the images). This file, "build_csv_and_json.py" (in the "/tools" folder in the project root directory), saves the CSV file in the same "/tools" folder and the JSON file in the "/fixtures" folder of the products Django app.
 
-**The file build_csc_and_json.py must run with only the images in the project "/media" folder, with image names starting with the following names (otherwise the program will not work, as it would be reading other file names and therefore the "if" statements should be modified): digital elevation models, gravimetry, resistivity and/or magnetometry. Run it before adding other files to the "/media" folder, or change the name of the folder in the Python file.**
+**The file build_csc_and_json.py must run in the project "/media" folder, with this folder containing only the images, and with image names starting with the following names: digital elevation models, gravimetry, resistivity and/or magnetometry (otherwise the program will not work, as it would be reading other file names and therefore the "if" statements should be modified). Run it before adding other files to the "/media" folder, or change the name of the folder in the Python file, or modify the "if" statements to read other names.**
 
-Since the JSON file is already in the "/fixtures" folder, the data can be loaded into the Django models using the following commands (in this order, since the products are related to categories and therefore the latter must be defined before):
+Since the generated JSON file is already in the "/fixtures" folder, the data can then be loaded into the Django models using the following commands (in this order, since the products are related to categories and therefore the latter must be defined before):
 
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
-
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
-
 
 
 ___
@@ -92,8 +85,7 @@ ___
 A project board was created in GitHub to help on the planning and follow-up of the work when developing the site; it can be observed [here](https://github.com/csc7/PP5_CI_GDEC/projects/1) (https://github.com/csc7/PP5_CI_GDEC/projects/1).
 
 In addition, issues can directly be found [here](https://github.com/csc7/PP5_CI_GDEC/issues) (https://github.com/csc7/PP5_CI_GDEC/issues)
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -112,8 +104,9 @@ UX has been addressed around Jesse James Garrett's process and its five planes:
     - Home page (act as welcome page).
     - Fixed navigation bar on top that allows searching and filtering products for display and buy.
     - A page showing the selected or filtered products.
-    - A page for details of a specific product when selected, giving the option to buy it.
+    - A page for details of a specific product when selected, giving the option to buy and comment it.
     - A bag page with selected products to buy.
+    - A wish list page.
     - A checkout page showing the products the user is about to buy, with the final price to pay, linking with the payment method (e.g., Stripe).
     - Footer, showing the main structure of the website and giving access to the social networks of the e-commerce and a field for the user to sign up in the newsletter of the e-commerce (to help on marketing), a contact form, contact information, and general data protection regulation requirements.
     - A profile page, including the option to show the purchase history of the user.
@@ -124,10 +117,11 @@ UX has been addressed around Jesse James Garrett's process and its five planes:
     - Sign-out page.
     - 404 page to let the user know of any error while loading the site.
 - **SKELETON**: the information and products are accessed through a fixed navigation menu on top of the pages and a footer.
-- **SURFACE**: the website is based on a contrast of different tonalities of blue for the header and footer, white for body, and fonts in strong dark blue; with red banners (the top one including advertising messages) separating the fixed navigation menu, the body and the footer.
+- **SURFACE**: the website is based on a contrast of different tonalities of blue for the header and footer, light blue for body, and fonts in strong dark blue; with red banners (the top one including advertising messages) separating the fixed navigation menu, the body and the footer.
 
+#### [Back to Index](#index)
 
-## **User Goals**
+### **User Goals**
 - To easily find and buy products (geophyical data, and training and software products).
 - To find an interactive website.
 - To navigate through a responsive website.
@@ -138,7 +132,7 @@ UX has been addressed around Jesse James Garrett's process and its five planes:
 
 #### [Back to Index](#index)
 
-## **Site Owner Goals**
+### **Site Owner Goals**
 - To sell geophyical data, and training and software products.
 - To promote different products.
 - To have the website helping on the marketing of the e-commerce (e.g., linking to contact information and options, social networks, and giving the option to sign up for a newsletter).
@@ -148,13 +142,14 @@ UX has been addressed around Jesse James Garrett's process and its five planes:
 - To provide a responsive website.
 - To give users the chance to contact the site administrator, owner and/or developer.
 
-## **Developer Goals**
+#### [Back to Index](#index)
+
+### **Developer Goals**
 - To provide a scalable e-commerce website to show my current development capabilities.
 
 #### [Back to Index](#index)
-<br>
 
-## **User Stories**
+### **User Stories**
 User stories are divided into the following three groups:
 
 - ### **First time users**
@@ -200,16 +195,16 @@ User stories are divided into the following three groups:
 - ### **Developer**
 33. As developer, along with other points of this section, I want to show my work and give the option to users to contact me if they wish.
 
-
 #### [Back to Index](#index)
 
-## **User Requirements and Expectations**
+### **User Requirements and Expectations**
 - A home page.
 - A responsive navigation throughout the website.
 - A fixed navigation top that allows searching and filtering products for display and buy.
 - A page showing the selected or filtered products.
 - A page for details of a specific product when selected, giving the option to buy it.
 - A bag page with selected products to buy.
+- A wish list page storing products for a later purchase.
 - A checkout page, showing the final price to pay and linking with the payment method (e.g., Stripe).
 - A Footer, showing the main structure of the website and giving access to the social networks of the e-commerce and a field for the user to sign up in the newsletter of the e-commerce (to help on marketing), a contact form, contact information, and general data protection regulation requirements.
 - A profile page with purchase history.
@@ -219,13 +214,9 @@ User stories are divided into the following three groups:
 - A Sign-up page.
 - A Sign-out page.
 - A 404 page.
-
-
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
-
 
 ___
 # **5 . Data Model**

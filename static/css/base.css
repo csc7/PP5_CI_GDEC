@@ -516,6 +516,11 @@ accessed on March 3rd, 2022, at 04:27.
         padding-bottom: 0;
     }
 
+    /* ALLAUTH FORMS AND PAGES */
+    .min-height-authentication-page {
+        min-height: 700px;
+    }
+
 }
 
 
@@ -671,6 +676,11 @@ increase the height of the header */
     .carousel-control-prev-icon {
         position: relative;
         top: calc(100vh - 510px);
+    }
+
+    /* ALLAUTH FORMS AND PAGES */
+    .min-height-authentication-page {
+        min-height: 700px;
     }
 
 }

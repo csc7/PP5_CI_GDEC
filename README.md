@@ -2698,8 +2698,7 @@ The following are testing of User Stories previously described above:
 ___
 # 12 . Marketing Strategy
 
-## SEO Analysis
-
+### SEO Analysis
 
 The search engine optimization is focused on Google search engine since it accounts for more than 90% of user searches.
 
@@ -2777,8 +2776,6 @@ Just to have an idea and assign a quantification to the selection, the "Volume" 
 ![SEO Analysis](docs/features-and-evidence/SEO_Analysis_Ordered.PNG) 
 </details>
 <br><br>
-
-
 As it can be observed, the following keywords produce high volume of searches with a focus in our e-commerce nature:
 "DEM books", "DEM data", "DEM software", "DEM training", "Geophysical data".
 
@@ -2796,7 +2793,7 @@ Also, after analyzing "Geophysical" with wordtracker.com, it is observer a great
 Therefore, the final keywords for the projects are the following 18 ones:
 "DEM books", "DEM data", "DEM software", "DEM training", "Geophysical data", "Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books", "DEM", "Geophysical".
 
-On the other hand, keyworkd staffing was also carried out when possible, for example, in headings and "<strong>" tags. Social links include the attibute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the descritpion of the e-commerce and these 17 keyworkds.
+On the other hand, keyworkd staffing was also carried out when possible, for example, in headings and "strong" tags. Social links include the attibute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the descritpion of the e-commerce and these 17 keyworkds.
 
 Finally, we include the sitemap.xml (in the root folder) to increase the chances of a higher rank in search engines and help them on finding relevant content, and a robots.txt to "tell" them where "not to navigate" (which simoultaneously increase the ranking of the site since they consider a site that contains a file like this of goog quality).
 
@@ -2812,7 +2809,6 @@ Reference: Code Institue, SEO lessons.
 </details>
 <br><br>
 
-
 <details>
     <summary>wordtracker.com analysis for "Geophysical" keyword</summary>
 
@@ -2820,8 +2816,7 @@ Reference: Code Institue, SEO lessons.
 </details>
 <br><br>
 
-
-## Organic Growth with Social Media (Facebook and LinkedIn)
+### Organic Growth with Social Media (Facebook and LinkedIn)
 
 Since the e-commerce is oriented to a professional and specialized community, the organic growth (which should simoultaneously be considered with organic growth) is suitable for LinkedIn. This social network makes possible the interaction with users and allow them to take training related to the products of the GDEC e-commerce. This social network seems to be very suitable for universities and research institutions that use these kind of data.
 
@@ -2843,8 +2838,7 @@ The page below was built in Facebook with the aim of interacting with potential 
 </details>
 <br><br>
 
-
-## Paid Marketing
+### Paid Marketing
 
 As mentioned before, the above strategies should be carried out with a paid strategy, focusing the expenditures (which might not be necessarily high but constant through time) in geopysical exhibitions (like EAGE or SEG among many others), and on those news or science websites that could caught the atention of authorities (since these kind of data are usually used by them.)
 
@@ -2868,8 +2862,7 @@ Bugs that required more time and specific solutions were the following ones:
 | Increment and decrement controls to update the quantities in the wish list and bag stopped working after validation and refactoring. The issue was caused by the reorganization of the HTML elements, since JavaScript access these controls through element positioning in the page (not through specific ID or classes)sadfsdf | The issue was solved by assigning the correct relative position of the increment and decrement controls in the page. |
 | Commented products did not show the user the label of being already commented (whey they have done so). | The issue was solved by rendering the proper relation in the HTML template, through a varaible, after defining the proper data relation in the backend to identify a comment to both a specific product and user. |
 
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -2884,9 +2877,9 @@ The fully deployed program, accessible by anyone, is found [here](https://pp5-ci
 
 Follow these steps to deploy the content of this project:
 
-1 - Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
+**1 -** Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
 
-2 - Add Postgres resource to the Heroku app (in Heroku website, "Resources", "add-ons"), where a "Hobby Dev - Free" plan is enough.
+**2** - Add Postgres resource to the Heroku app (in Heroku website, "Resources", "add-ons"), where a "Hobby Dev - Free" plan is enough.
 
 3 - In Gitpod (or your development environment), install dj_database_url with this command:
 pip3 install dj_database_url

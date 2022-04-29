@@ -2829,14 +2829,14 @@ The page below was built in Facebook with the aim of interacting with potential 
 
 ![GDEC Facebook Page Image](docs/features-and-evidence/Facebook_Page.png) 
 </details>
-<br><br>
+<br>
 
 <details>
     <summary>GDEC Facebook Page</summary>
 
 ![GDEC Facebook Page PDF](docs/features-and-evidence/Facebook_Page.pdf) 
 </details>
-<br><br>
+<br>
 
 ### Paid Marketing
 
@@ -2877,24 +2877,23 @@ The fully deployed program, accessible by anyone, is found [here](https://pp5-ci
 
 Follow these steps to deploy the content of this project:
 
-**1 -** Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
+**1** - Create a Heroku app in Heroku website (more intuitive process, selecting "create new app") or using the CLI in Gitpod if you manage the commands for this and use this development environment.
 
 **2** - Add Postgres resource to the Heroku app (in Heroku website, "Resources", "add-ons"), where a "Hobby Dev - Free" plan is enough.
 
-3 - In Gitpod (or your development environment), install dj_database_url with this command:
+**3** - In Gitpod (or your development environment), install dj_database_url with this command:
 pip3 install dj_database_url
 
-4 - In Gitpod (or your development environment), install psycopg2-binary with this command:
+**4** - In Gitpod (or your development environment), install psycopg2-binary with this command:
 pip3 install psycopg2-binary
 
-5 - Freeze the environment requirements:
+**5** - Freeze the environment requirements:
 pip3 freeze > requirements.txt
 
-6 - Add/Import the following line/pakage in your settings.py file (on top of the file, with other "import" commands):
+**6** - Add/Import the following line/pakage in your settings.py file (on top of the file, with other "import" commands):
 import dj_database_url
 
-
-7 - In settings.py update the DATABASES variable to the following lines, so the database is read from the local repository in not set up in Heroku;
+**7** - In settings.py update the DATABASES variable to the following lines, so the database is read from the local repository in not set up in Heroku;
 from:
 DATABASES = {
         'default': {
@@ -2915,8 +2914,7 @@ else
         }
     }
 
-
-8 - Connect to Heroku database and run migrations with the following commands:
+**8** - Connect to Heroku database and run migrations with the following commands:
 
 If you want to verify that effectively all migrations need to be run, execute
 python3 manage.py showmigrations
@@ -2924,7 +2922,7 @@ python3 manage.py showmigrations
 Then migrate:
 python3 manage.py migrate
 
-9 - Load/Import database (categories and products):
+**9** - Load/Import database (categories and products):
 a) If you use the database of this repository, use the following commands (in this order, since products depends on categories):
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
@@ -2938,38 +2936,35 @@ Credits: Code Institute:
  - Then use this command to load your data from the db.json file into postgres:
 ./manage.py loaddata db.json
 
-10 - Create superuser in Heroku:
+**10** - Create superuser in Heroku:
 python3 manage.py createsuperuser
 
-11 - Install gunicorn to work as a webserver:
+**11** - Install gunicorn to work as a webserver:
 pip3 install gunicorn
 
-12 - Again, freeze the environment requirements:
+**12** - Again, freeze the environment requirements:
 pip3 freeze > requirements.txt
 
-
-13 - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
+**13** - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
 web: gunicorn your_app_name.wsgi:application
 
-14 - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
+**14** - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
 heroku login (it will require to log in through a different browser)
 or
 heroku login -i (to log in directly in the Gitpod CLI)
 
-15 - OPTIONAL: Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process, in case you want to look the website before deploying in Amazon Web Services):
+**15** - OPTIONAL: Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process, in case you want to look the website before deploying in Amazon Web Services):
 heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
 
-16 - Ensure ALLOWED_HOSTS variable in settings.py file is set as follows:
+**16** - Ensure ALLOWED_HOSTS variable in settings.py file is set as follows:
 ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost']
 
-
-
-17 - Create a SECRET_KEY, e.g., using https://miniwebtool.com/django-secret-key-generator/.
+**17** - Create a SECRET_KEY, e.g., using https://miniwebtool.com/django-secret-key-generator/.
 Then assig a SECRET_KEY value in Config Vars of the Settings section in Heroku.
 Then, in settings.py file, ensure SECRET_KEY variable is set as follows:
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-18 - Crease Amazon Web Services account (if needed) and S3 bucket.
+**18** - Crease Amazon Web Services account (if needed) and S3 bucket.
 Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off public access" disables (accepting warning message below), and then set the following variables:
  * Properties tab: Static website hosting, using it to host a website, incidating index.html and error.html in the index and error documents.
  * Permissions tab:
@@ -2991,7 +2986,7 @@ Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off 
  * Buccket Policy: click on "Policy Generator" at the bottom and, in the new page, select "S3 Bucket Policy" as the type of policy, assing a start ("*") to "Principal" to allow all of them, "GetObject" in "Actions", paste the ARN of the bucket (found in the "Properties" of the bucket) in the corresponding field, generate policy, copy the resulting code in the "Bucket Policy" that originated this new page, and save.
  * Access Control List: enable "List objects" for "Everyone.
 
-19 - Add Amazon Web Services Identify and Access Management (IAM) to create a user to access the S3 bucket and apply the following changes:
+**19** - Add Amazon Web Services Identify and Access Management (IAM) to create a user to access the S3 bucket and apply the following changes:
  * Open IAM from AWS available services.
  * Go to "User Groups" (left), "Create group" (top right), assign a name (e.g., manage_your_app_name) and create (bottom).
  * Go to "Policies", "Create Policy", go to "JSON" tab, "Import managed policy", select "AmazonS3FullAccess", "Import". In the "Resource" field of the JSON structure, assign the ARN of your app as follows:
@@ -3006,35 +3001,35 @@ Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off 
  * "Add user to group", select the policy you have just created and click "Next: Tags", then "Next: Review" and finally "Create User".
  * IMPORTANT: AFTER ADDING THE USER TO THE GROUP, DOWLOAD THE .CSV FILE AS IT MIGHT NOT BE AVAILABLE LATER. The file is required for authentication for the Django app.
 
-20 - Install boto3 with the following command:
+**20** - Install boto3 with the following command:
 pip3 install boto3
 
-21 - Install django-storages with the following command:
+**21** - Install django-storages with the following command:
 pip3 install django-storages
 
-22 - Again, freeze the environment requirements:
+**22** - Again, freeze the environment requirements:
 pip3 freeze > requirements.txt
 
-23 - Add storages in INSTALLED APPS of settings.py:
+**23** - Add storages in INSTALLED APPS of settings.py:
 'storages',
 
-24 - Check that the variables of "if 'USE_AWS' in os.environ:" in settings.py correspond to your app name and AWS settings. Please note that you need to have defined the following variables in Config Vars of Heroku (in "Settings"):
+**24** - Check that the variables of "if 'USE_AWS' in os.environ:" in settings.py correspond to your app name and AWS settings. Please note that you need to have defined the following variables in Config Vars of Heroku (in "Settings"):
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 USE_AWS
 
 IMPORTANT: At this point, DISABLE_COLLECSTATICS of point 15 can be deleted if you opted for enabling it), so Django loads the static files from Amazon Web Services
 
-25 - Check that your "custom_storages.py" file is properly defined according to your app and AWS account.
+**25** - Check that your "custom_storages.py" file is properly defined according to your app and AWS account.
 
-26 - In the app bucket of your Amazon Web Services account create a folder named "media" (in the same level that the "static" folder is located)
+**26** - In the app bucket of your Amazon Web Services account create a folder named "media" (in the same level that the "static" folder is located)
 
-27 - Check that superuser e-mail in Django admin user interface is verified.
+**27** - Check that superuser e-mail in Django admin user interface is verified.
 
-28 - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and asign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
+**28** - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and asign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
 Ensure the variables match the names in the settings.py file.
 
-29 - Add automatic e-mail variables in Config Vars of Heroku (to send automatic e-mails from the app), EMAIL_HOST_PASS (password given by your e-mail service provider) and EMAIL_HOST_USER (the e-mail address from where e-mails are sent).
+**29** - Add automatic e-mail variables in Config Vars of Heroku (to send automatic e-mails from the app), EMAIL_HOST_PASS (password given by your e-mail service provider) and EMAIL_HOST_USER (the e-mail address from where e-mails are sent).
 
 Replace EMAIL_HOST in settings.py if you are using a different service provider than GMail.
 
@@ -3070,8 +3065,7 @@ In settings.py file, you can set the DEBUG variables as follows if you want to c
 ![Deployment on Heroku Image](docs/features-and-evidence/heroku-deployment.PNG) 
 </details>
 
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -3083,16 +3077,10 @@ ___
     - I have used the learning material in the course as a guide and reference.
 
     - "Boutique Ado" project: reference for building this PP5_CI_GDEC website/project, and provision of code as commented out in the code.
-        - ...
 
-    - ...Tutor Assistance: Django models in app_weather could not be migrated as ...
+    - Tutor Assistance, on several issues (e.g., contexts.py file).
 
-    - Tutor Assistance: ...
-
-    - Tutor Assistance: ..s.
-
-    - Not to include "bag_tools" (Python function based on a Django template) as app; Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28-->
-
+    - Not to include "bag_tools" (Python function based on a Django template) as app; Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28.
 
 - Balsamiq Wireframes: I have used it to create all the wireframes.
 
@@ -3131,11 +3119,6 @@ ___
 - ERD:
     - ERDPlus, to make the data model graph, https://erdplus.com/standalone 
 
-- ESRI:
-    - ...
-
-
-
 - Font Awesome:
 
     - Font Awesome Script / Kit, link copied on March 1st, 2022, 03:29 from Font Awesome personal account.
@@ -3154,19 +3137,15 @@ ___
 
     - Icon for Instagram: link copied on March 1st, 2022, 17:28 from https://fontawesome.com/v4/icon/instagram.
 
-    - Icon for the envelope (for sending e-mails): link copied on March 1st, 2022, 17:29 from https://fontawesome.com/v4/icon/envelope.
-
-
+    - Icon for the envelope (for sending e-mails): link copied on March 1st, 2022, 17:29 from https://fontawesome.com/v4/icon/envelope
 
 - Google:
 
     - Google Fonts: Play (Regular 400 and Bold 700) and Roboto (Regular 400), import code copied on March 1st, 2022, at 05:05.
 
-    - ...
-
 - Heroku:
 
-    - ...
+    - Deployment guides.
 
 - jQuery:
 
@@ -3174,10 +3153,7 @@ ___
 
 - Mailchimp:
 
-    - Sign-up of newsletter, generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com); later modified
-
-- MDN Web Docs Moz://a;
-    - ...
+    - Sign-up of newsletter, generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com); later modified.
 
 - Natural Earth:
 
@@ -3377,7 +3353,6 @@ ___
     pexels-arthouse-studio-4641210
     2022-03-15 at 13:59
 
-
 - Python unittest:
 
     - As reference for testing in Python: https://docs.python.org/3/library/unittest.html .
@@ -3385,8 +3360,6 @@ ___
 - QGIS:
 
     - QGIS 3.18, to create the fictitious maps for data, created on February 24th, 2022.
-
-
 
 - Stack Overflow:
 
@@ -3404,7 +3377,7 @@ ___
 
     - Inclusion of Google fonts in Stripe elements based on https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working, accessed on March 18th, 2022, at 6:20.
 
-    - Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string, accessed on April 14th, 2022, at 01:54
+    - Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string, accessed on April 14th, 2022, at 01:54.
 
     - To capitalize first letter in Django template: https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template,
     accessed on April 18th, at 15:35.
@@ -3428,10 +3401,6 @@ ___
 - StudyGyaan:
 
     - Definition based on this article: https://studygyaan.com/django/how-to-use-bootstrap-4-forms-with-django-crispy-forms#html-code, accessed on April 16th, 2022.
-    
-
-- W3C®. Copyright © 2021 W3C ® (MIT, ERCIM, Keio, Beihang):
-    - ...
 
 - W3Schools (Powered by W3.CSS), https://www.w3schools.com/:
 
@@ -3443,11 +3412,8 @@ ___
 
     - Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
 
-    
 
-
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -3458,12 +3424,10 @@ I would like to acknowledge and thank the following people for being part of thi
 - To my wife and family, for always supporting and helping.
 - Code Institute, for providing knowledge, guide, content and tools.
 - My mentor, Mo, for helping with very valuable guide and support.
-- Code Institute Tutor Assistance for helping when needed.
+- Code Institute Tutor Assistance for helping when needed, at any time.
 - Code Institute community in Slack for permanently being an online reference.
 - All the valuable information provided by the sources mentioned above in the credits.
 
 <br><br>
 ## [Back to Index](#index)
 <br><br>
-
-

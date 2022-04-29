@@ -261,7 +261,7 @@ The following are the tables involved in the relational model and the field type
     - **Delivery Cost:** decimal
     - **Order Total:** decimal
     - **Grand Total:** decimal
-    - **Original Bag:** text)
+    - **Original Bag:** text
     - **Stripe PID:** char
 
 - #### **ORDER LINE ITEM**
@@ -301,6 +301,16 @@ The following are the tables involved in the relational model and the field type
     - **Image URL:** URL
     - **Image Name:** image
 
+- #### **PRODUCT COMMENT**
+
+    - **ID:** integer, primary key
+    - **User:** integer, foreign key
+    - **Product:** integer, foreign key
+    - **Product Rating Value:** integer, foreign key
+    - **Body:** text
+    - **Created On:** date
+    - **Active:** boolean
+
 - #### **USER PROFILE**
 
     - **ID:** integer, primary key    
@@ -312,6 +322,16 @@ The following are the tables involved in the relational model and the field type
     - **Default County:** char
     - **Default Postcode:** char
     - **Default Country:** char
+
+- #### **WISH LIST**
+
+    - **ID:** integer, primary key    
+    - **User Profile:** integer, foreign key
+    - **Product:** integer, foreign key
+    - **Product Resolution:** char
+    - **Quantity:** integer
+    - **Line Item Total:** decimal
+
 
 
 

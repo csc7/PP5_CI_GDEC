@@ -221,11 +221,13 @@ User stories are divided into the following three groups:
 ___
 # **5 . Data Model**
 
-The e-commerce business model underlying the application is designed in such a way that a **"user"** (who is uniquely identified by ID) can buy **"products"** (that are also uniquely identified by ID and SKU) by sending a **"order"** (that is uniquely identified by ID and order number). Then, since an order can have many products, and simoutaneously a product can be requested by many orders, an **"order line item"** is created to uniquely relate a specific product to a specific order. This "order line item" divides the many-to-many relation between "order" and "product" in two one-to-many relations ("order-order line item" and "order line item-product").
+The e-commerce business model underlying the application is designed in such a way that a **"user"** (who is uniquely identified by ID) can buy **"products"** (that are also uniquely identified by ID and SKU) by sending a **"order"** (that is uniquely identified by ID and order number). Then, since an order can have many products, and simoutaneously a product can be requested by many orders, an **"order line item"** is created to uniquely relate a specific product to a specific order. This "order line item" divides the many-to-many relation between "order" and "product" in two one-to-many relations ("order-order line item" and "order line item-product"). **"Product comments"** can be added (related) to each product and to the user who comments
 
 Then, a **"category"** is created and related to the type of product in order to help on the search of them.
 
-Finally, a **"contact"** model is created, unrelated to the previous tables, to contact the site owner in any case, regardless of an order is issued or is not by a user.
+Additionally, a **"wish list"** allows users to strore products for a later purchase.
+
+Finally, a **"contact"** model is created, unrelated to the previous tables, to contact the site owner in any case, regardless of an order being issued or not being a user.
 
 The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are build with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 
@@ -234,7 +236,7 @@ The project database is built with PostgreSQL and deployed in Heroku platform. I
 
 The following are the tables involved in the relational model and the field types in each of them.
 
-- #### **ORDER**
+- ##### **ORDER**
 
     - **ID:** integer, primary key    
     - **Order Number:** char
@@ -255,7 +257,7 @@ The following are the tables involved in the relational model and the field type
     - **Original Bag:** text
     - **Stripe PID:** char
 
-- #### **ORDER LINE ITEM**
+- ##### **ORDER LINE ITEM**
 
     - **ID:** integer, primary key 
     - **Order:** integer, foreign key
@@ -264,7 +266,7 @@ The following are the tables involved in the relational model and the field type
     - **Quantity:** integer
     - **Line Item Total:** decimal
 
-- #### **CONTACT FORM**
+- ##### **CONTACT FORM**
 
     - **ID:** integer, primary key
     - **Date:** date
@@ -273,13 +275,13 @@ The following are the tables involved in the relational model and the field type
     - **E-mail:** e-mail
     - **Description:** char
 
-- #### **CATEGORY**
+- ##### **CATEGORY**
 
     - **ID:** integer, primary key
     - **Name:** char
     - **Friendly Name:** char
 
-- #### **PRODUCT**
+- ##### **PRODUCT**
 
     - **ID:** integer, primary key    
     - **Category:** integer, foreign key
@@ -292,7 +294,7 @@ The following are the tables involved in the relational model and the field type
     - **Image URL:** URL
     - **Image Name:** image
 
-- #### **PRODUCT COMMENT**
+- ##### **PRODUCT COMMENT**
 
     - **ID:** integer, primary key
     - **User:** integer, foreign key
@@ -302,7 +304,7 @@ The following are the tables involved in the relational model and the field type
     - **Created On:** date
     - **Active:** boolean
 
-- #### **USER PROFILE**
+- ##### **USER PROFILE**
 
     - **ID:** integer, primary key    
     - **User:** char
@@ -314,7 +316,7 @@ The following are the tables involved in the relational model and the field type
     - **Default Postcode:** char
     - **Default Country:** char
 
-- #### **WISH LIST**
+- ##### **WISH LIST**
 
     - **ID:** integer, primary key    
     - **User Profile:** integer, foreign key
@@ -323,10 +325,7 @@ The following are the tables involved in the relational model and the field type
     - **Quantity:** integer
     - **Line Item Total:** decimal
 
-
-
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -335,19 +334,17 @@ ___
 
 The design was planned to cover screen sizes from 320x568px to 1920x1370px.
 
-## **Colours**
+### **Colours**
 Colours are based on different tonalities of blue for header (fixed navigation menu) and footer, contrasting with a white background for the body (where products and all other content appear). The header (fixed navigation menu) and body, as well as body and footer, are separated by a red banners (the top one containing moving messages with white fonts).
 
 #### [Back to Index](#index)
-<br>
 
-## **Fonts**
+### **Fonts**
 Google fonts (please see credits section below) were implemented on the website; Play (Regular 400 and Bold 700) and Roboto (Regular 400). Play is used for the body; Sans-serif font is used as a back-up in case the previous font cannot be loaded.
 
 #### [Back to Index](#index)
-<br>
 
-## **Structure**
+### **Structure**
 
 The website consists of a header with fixed navigation menu on top, a body and the a footer. It is designed to navigate the e-commerce from the header and footer, having them always available. The header is fixed, while the footer is fixed only for screens whose wide is greater than 992px, so it does not use space from the body in smaller screen sizes. There are two banners separating the header and body, and the body and footer. The one below the header contains moving messages to advertise special features of the e-commerce at all times.
 
@@ -358,32 +355,32 @@ The metadata also includes the following description: "Code Institute Student Mi
 
 Wireframes were developed at the beginning of the project to have a first structure of the e-commerce site and analyse eventual changes. Please see section 7, Wireframes, for images about these wireframes.
 
-- ### **Header**
+- ##### **Header**
 
 In order to achieve the goals related to an easy navigation and finding of products, a fixed navigation menu in the header is implemented, which also contributes on accessibility to the main parts of the e-commerce and on responsiveness.In the same area.
 The logo of the e-commerce is placed to the left, in the middle there are a search field on top and the navigation menu below, and on the right two icons can be found that link to the account sign-in/sign-up/sign-out and bag.
 
-- ### **Top banner**
+- ##### **Top banner**
 
 It is a thin section (height of 25px), from side to side of the screen, in red colour, that separates the header/fixed navigation menu on top from the body. It contains moving messages to advertise special features of the e-commerce at all times.
 
 
-- ### **Body**
+- ##### **Body**
 
 The products are displayed in this area, from where the products details can be accessed by clicking on the product itself and displayed in the same body.
 
 The body also holds the pages for the bag, the checkout, the success checkout, sign-in, sign-up, sign-out, profile, contact form and 404 pages.
 <br>
     
-- ### **Top banner**
+- ##### **Top banner**
 
 It is another thin section (height of 25px), from side to side of the screen, in red colour, that separates the body from the footer.
 
 
-- ### **Footer**
+- ##### **Footer**
 
 The footer contains links contact information of the e-commerce on the left (below the e-commerce logo), a contact form, social media links, links to product categories, links to account sign-in/sign-up/sign-out, General Data Protection Regulation (GDPR) information about the privacy policy and cookies, and an area on the right to sign up for the e-commerce newsletter.
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -394,66 +391,187 @@ Wireframes were developed in order to gather goals, user stories, requirements a
 Please check the PDFs files for each case in the following links:
 
 <details>
-    <summary>Desktop Wireframe Image for Instructions Page</summary>
+    <summary>Desktop Wireframe Image for Home Page</summary>
 
-![Desktop Wireframe Image for Instructions App/Page](docs/wireframes/wireframe-wqcs-desktop-instructions.PNG)
+![Desktop Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-desktop-instructions.PNG)
 </details>
 <details>
-    <summary>Desktop Wireframe Image for Weather Page</summary>
+    <summary>Desktop Wireframe Image for Products Page</summary>
 
-![Desktop Wireframe Image for Weather App/Page](docs/wireframes/wireframe-wqcs-desktop-weather.PNG)
+![Desktop Wireframe Image for Products Page](docs/wireframes/wireframe-wqcs-desktop-weather.PNG)
 </details>
 <details>
-    <summary>Desktop Wireframe Image for Blog Page</summary>
+    <summary>Desktop Wireframe Image for Product Details Page</summary>
 
-![Desktop Wireframe Image for Blog App/Page](docs/wireframes/wireframe-wqcs-desktop-blog.PNG)
+![Desktop Wireframe Image for Product Details Page](docs/wireframes/wireframe-wqcs-desktop-blog.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Profile Page</summary>
+
+![Desktop Wireframe Image for Profile App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Wish List Page</summary>
+
+![Desktop Wireframe Image for Wish List App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Bag Page</summary>
+
+![Desktop Wireframe Image for Bag App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Checkout Page</summary>
+
+![Desktop Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Contact Page</summary>
 
 ![Desktop Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
 </details>
-
 <details>
-    <summary>Tablet Wireframe Image for Instructions Page</summary>
+    <summary>Desktop Wireframe Image for Thank You Page</summary>
 
-![Tablet Wireframe Image for Instructions App/Page](docs/wireframes/wireframe-wqcs-tablet-instructions.PNG)
+![Desktop Wireframe Image for Thank You Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
 </details>
 <details>
-    <summary>Tablet Wireframe Image for Weather Page</summary>
+    <summary>Desktop Wireframe Image for Add Product Page</summary>
 
-![Tablet Wireframe Image for Weather App/Page](docs/wireframes/wireframe-wqcs-tablet-weather.PNG)
+![Desktop Wireframe Image for Add Product Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
 </details>
 <details>
-    <summary>Tablet Wireframe Image for Blog Page</summary>
+    <summary>Desktop Wireframe Image for Edit Product Page</summary>
 
-![Tablet Wireframe Image for Blog App/Page](docs/wireframes/wireframe-wqcs-tablet-blog.PNG)
+![Desktop Wireframe Image for Edit Product Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for 404 Page</summary>
+
+![Desktop Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+</details>
+
+
+![Tablet Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-Tablet-instructions.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Products Page</summary>
+
+![Tablet Wireframe Image for Products Page](docs/wireframes/wireframe-wqcs-Tablet-weather.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Product Details Page</summary>
+
+![Tablet Wireframe Image for Product Details Page](docs/wireframes/wireframe-wqcs-Tablet-blog.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Profile Page</summary>
+
+![Tablet Wireframe Image for Profile App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Wish List Page</summary>
+
+![Tablet Wireframe Image for Wish List App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Bag Page</summary>
+
+![Tablet Wireframe Image for Bag App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Checkout Page</summary>
+
+![Tablet Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Contact Page</summary>
 
-![Tablet Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-tablet-contact.PNG)
+![Tablet Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
 </details>
 <details>
-    <summary>Cell Wireframe Image for Instructions and Weather Pages</summary>
+    <summary>Tablet Wireframe Image for Thank You Page</summary>
 
-![Tablet Wireframe Image for Instructions and Weather Page](docs/wireframes/wireframe-cell-instructions-weather-pages.PNG)
+![Tablet Wireframe Image for Thank You Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
 </details>
 <details>
-    <summary>Cell Wireframe Image for Blog and Contact Pages</summary>
+    <summary>Tablet Wireframe Image for Add Product Page</summary>
 
-![Tablet Wireframe Image for Blog and Contact Page](docs/wireframes/wireframe-cell-blog-contact-pages.PNG)
+![Tablet Wireframe Image for Add Product Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for Edit Product Page</summary>
+
+![Tablet Wireframe Image for Edit Product Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+</details>
+<details>
+    <summary>Tablet Wireframe Image for 404 Page</summary>
+
+![Tablet Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
 </details>
 
 
 <br>
 
-[PDF File for Desktop Wireframe](docs/wireframes/wireframe-wqcs-desktop.pdf)
+![Cell Phone Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-instructions.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Products Page</summary>
 
-[PDF File for Tablet Wireframe](docs/wireframes/wireframe-wqcs-tablet.pdf)
+![Cell Phone Wireframe Image for Products Page](docs/wireframes/wireframe-wqcs-Cell Phone-weather.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Product Details Page</summary>
 
-[PDF File for Cell Wireframe](docs/wireframes/wireframe-wqcs-cell.pdf)
-<br><br>
+![Cell Phone Wireframe Image for Product Details Page](docs/wireframes/wireframe-wqcs-Cell Phone-blog.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Profile Page</summary>
+
+![Cell Phone Wireframe Image for Profile App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Wish List Page</summary>
+
+![Cell Phone Wireframe Image for Wish List App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Bag Page</summary>
+
+![Cell Phone Wireframe Image for Bag App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Checkout Page</summary>
+
+![Cell Phone Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Contact Page</summary>
+
+![Cell Phone Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Thank You Page</summary>
+
+![Cell Phone Wireframe Image for Thank You Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Add Product Page</summary>
+
+![Cell Phone Wireframe Image for Add Product Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for Edit Product Page</summary>
+
+![Cell Phone Wireframe Image for Edit Product Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Cell Phone Wireframe Image for 404 Page</summary>
+
+![Cell Phone Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+
+<br>
 ## [Back to Index](#index)
 <br><br>
 
@@ -462,72 +580,69 @@ ___
 
 The development of the project employed the following languages, software, frameworks, applications and tools:
 
-## **Languages**
-- #### **HTML**
-- #### **CSS**
-- #### **JavaScript**
-- #### **Python**
+### **Languages**
+##### **HTML**
+##### **CSS**
+##### **JavaScript**
+##### **Python**
 
 #### [Back to Index](#index)
 
-## **Software, Frameworks, Applications and Other Tools**
-- ##### **jQuery**
-- ##### **GitHub**
-- ##### **Gitpod**
-- ##### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
-- ##### **Django 3.2**
-- ##### **django-allauth 0.41.0**
-- ##### **dj-database-url (v0.5.0)
-- ##### **django-allauth (v0.41.0)
-- ##### **django-countries (v7.3.2)
-- ##### **django-crispy-forms (v1.14.0)
-- ##### **django-storages (v1.12.3)
-- ##### **PostgreSQL**
-- ##### **Font Awesome (v4)**
-- ##### **Bootstrap (v4.0)**
-- ##### **unittest**
-- ##### **asgiref (v3.5.0)
-- ##### **backports.zoneinfo (v0.2.1)
-- ##### **boto3 (v1.21.33)
-- ##### **botocore (v1.24.33)
-- ##### **gunicorn (v20.1.0)
-- ##### **jmespath (v1.0.0)
-- ##### **oauthlib (v3.2.0)
-- ##### **Pillow (v9.0.1)
-- ##### **psycopg2-binary (v2.9.3)
-- ##### **python3-openid (v3.2.0)
-- ##### **pytz (v2021.3)
-- ##### **requests-oauthlib (v1.3.1)
-- ##### **s3transfer (v0.5.2)
-- ##### **sqlparse (v0.4.2)
-- ##### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
-- ##### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
-- ##### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
-- ##### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
-- ##### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
-- ##### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
-- ##### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
-- ##### **ERDPlus (to make the data model graph)**
-- ##### **Google Fonts**
-- ##### **Stripe**
-- ##### **stripe (v2.67.0)
-- ##### **W3C Markup Validation Service**
-- ##### **W3C CSS Validation Service**
-- ##### **JSHint (version 2.13.0)**
-- ##### **JavaScript AJAX**
-- ##### **WAVE Web Accessibility Evaluation Tool**
-- ##### **Coverage.py 6.3.2
-- ##### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
-- ##### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
-- ##### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
-- ##### **Firefox, 96.0.3, 64-bit (and its development tool)**
-- ##### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
-
-
-<br><br>
+### **Software, Frameworks, Applications and Other Tools**
+##### **jQuery**
+##### **GitHub**
+##### **Gitpod**
+##### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
+##### **Django 3.2**
+##### **django-allauth 0.41.0**
+##### **dj-database-url (v0.5.0)
+##### **django-allauth (v0.41.0)
+##### **django-countries (v7.3.2)
+##### **django-crispy-forms (v1.14.0)
+##### **django-storages (v1.12.3)
+##### **PostgreSQL**
+##### **Font Awesome (v4)**
+##### **Bootstrap (v4.0)**
+##### **unittest**
+##### **asgiref (v3.5.0)
+##### **backports.zoneinfo (v0.2.1)
+##### **boto3 (v1.21.33)
+##### **botocore (v1.24.33)
+##### **gunicorn (v20.1.0)
+##### **jmespath (v1.0.0)
+##### **oauthlib (v3.2.0)
+##### **Pillow (v9.0.1)
+##### **psycopg2-binary (v2.9.3)
+##### **python3-openid (v3.2.0)
+##### **pytz (v2021.3)
+##### **requests-oauthlib (v1.3.1)
+##### **s3transfer (v0.5.2)
+##### **sqlparse (v0.4.2)
+##### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
+##### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
+##### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
+##### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
+##### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
+##### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
+##### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
+##### **ERDPlus (to make the data model graph)**
+##### **Google Fonts**
+##### **Stripe**
+##### **stripe (v2.67.0)
+##### **W3C Markup Validation Service**
+##### **W3C CSS Validation Service**
+##### **JSHint (version 2.13.0)**
+##### **JavaScript AJAX**
+##### **WAVE Web Accessibility Evaluation Tool**
+##### **Coverage.py 6.3.2
+##### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
+##### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
+##### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
+##### **Firefox, 96.0.3, 64-bit (and its development tool)**
+##### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
+<br>
 ## [Back to Index](#index)
 <br><br>
-
 
 
 ___
@@ -1039,11 +1154,9 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 </details>
 
 
-
 #### [Back to Index](#index)
 
 <br>
-
 
 ### **CSS File**
 https://jigsaw.w3.org/css-validator/ was used to validate the CSS file.

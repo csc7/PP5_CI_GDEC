@@ -34,10 +34,11 @@
 ### [11. Testing](#11--testing)
 - #### [Testing of Python Files with unittest](#testing-of-python-files-with-unittest-1)
 - #### [Testing of User Stories](#testing-of-user-stories-1)
-### [12. Bugs](#12--bugs)
-### [13. Deployment](#13--deployment)
-### [14. Credits](#14--credits)
-### [15. Acknowledgements](#15--acknowledgements)
+### [12. Marketing Strategy](#12--marketing-strategy)
+### [13. Bugs](#13--bugs)
+### [14. Deployment](#14--deployment)
+### [15. Credits](#15--credits)
+### [16. Acknowledgements](#16--acknowledgements)
 <br>
 
 ___
@@ -581,65 +582,65 @@ ___
 The development of the project employed the following languages, software, frameworks, applications and tools:
 
 ### **Languages**
-##### **HTML**
-##### **CSS**
-##### **JavaScript**
-##### **Python**
+ - ##### **HTML**
+ - ##### **CSS**
+ - ##### **JavaScript**
+ - ##### **Python**
 
 #### [Back to Index](#index)
 
 ### **Software, Frameworks, Applications and Other Tools**
-##### **jQuery**
-##### **GitHub**
-##### **Gitpod**
-##### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
-##### **Django 3.2**
-##### **django-allauth 0.41.0**
-##### **dj-database-url (v0.5.0)
-##### **django-allauth (v0.41.0)
-##### **django-countries (v7.3.2)
-##### **django-crispy-forms (v1.14.0)
-##### **django-storages (v1.12.3)
-##### **PostgreSQL**
-##### **Font Awesome (v4)**
-##### **Bootstrap (v4.0)**
-##### **unittest**
-##### **asgiref (v3.5.0)
-##### **backports.zoneinfo (v0.2.1)
-##### **boto3 (v1.21.33)
-##### **botocore (v1.24.33)
-##### **gunicorn (v20.1.0)
-##### **jmespath (v1.0.0)
-##### **oauthlib (v3.2.0)
-##### **Pillow (v9.0.1)
-##### **psycopg2-binary (v2.9.3)
-##### **python3-openid (v3.2.0)
-##### **pytz (v2021.3)
-##### **requests-oauthlib (v1.3.1)
-##### **s3transfer (v0.5.2)
-##### **sqlparse (v0.4.2)
-##### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
-##### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
-##### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
-##### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
-##### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
-##### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
-##### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
-##### **ERDPlus (to make the data model graph)**
-##### **Google Fonts**
-##### **Stripe**
-##### **stripe (v2.67.0)
-##### **W3C Markup Validation Service**
-##### **W3C CSS Validation Service**
-##### **JSHint (version 2.13.0)**
-##### **JavaScript AJAX**
-##### **WAVE Web Accessibility Evaluation Tool**
-##### **Coverage.py 6.3.2
-##### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
-##### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
-##### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
-##### **Firefox, 96.0.3, 64-bit (and its development tool)**
-##### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
+ - ##### **jQuery**
+ - ##### **GitHub**
+ - ##### **Gitpod**
+ - ##### **QGIS 3.18 Zürich** (RUN tools/build_csv_and_json.py from inside the project directory)
+ - ##### **Django 3.2**
+ - ##### **django-allauth 0.41.0**
+ - ##### **dj-database-url (v0.5.0)
+ - ##### **django-allauth (v0.41.0)
+ - ##### **django-countries (v7.3.2)
+ - ##### **django-crispy-forms (v1.14.0)
+ - ##### **django-storages (v1.12.3)
+ - ##### **PostgreSQL**
+ - ##### **Font Awesome (v4)**
+ - ##### **Bootstrap (v4.0)**
+ - ##### **unittest**
+ - ##### **asgiref (v3.5.0)
+ - ##### **backports.zoneinfo (v0.2.1)
+ - ##### **boto3 (v1.21.33)
+ - ##### **botocore (v1.24.33)
+ - ##### **gunicorn (v20.1.0)
+ - ##### **jmespath (v1.0.0)
+ - ##### **oauthlib (v3.2.0)
+ - ##### **Pillow (v9.0.1)
+ - ##### **psycopg2-binary (v2.9.3)
+ - ##### **python3-openid (v3.2.0)
+ - ##### **pytz (v2021.3)
+ - ##### **requests-oauthlib (v1.3.1)
+ - ##### **s3transfer (v0.5.2)
+ - ##### **sqlparse (v0.4.2)
+ - ##### https://miniwebtool.com/django-secret-key-generator/ (to generate Django secret keys)
+ - ##### https://www.privacypolicygenerator.info/ (to ellaborate the General Data Protection Regulation, GDPR, page)
+ - ##### https://www.wordtracker.com/ (to analyze volume and competitors of SEO keywords)
+ - ##### https://jsonformatter.org/ (to inspect JSON structures for the product and category data)
+ - ##### https://www.xml-sitemaps.com/ (to generate sitemap.xml file)
+ - ##### Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com
+ - ##### **Balsamiq Wireframes (v4.2.4, Editor Version 2.6.0)**
+ - ##### **ERDPlus (to make the data model graph)**
+ - ##### **Google Fonts**
+ - ##### **Stripe**
+ - ##### **stripe (v2.67.0)
+ - ##### **W3C Markup Validation Service**
+ - ##### **W3C CSS Validation Service**
+ - ##### **JSHint (version 2.13.0)**
+ - ##### **JavaScript AJAX**
+ - ##### **WAVE Web Accessibility Evaluation Tool**
+ - ##### **Coverage.py 6.3.2
+ - ##### **Google Lighthouse (used in Google, Microsoft Edge and Firefox)**
+ - ##### **Google Chrome, version 97.0.4692.71, Official Build, 64-bit (and its development tool)**
+ - ##### **Microsoft Edge, version 97.0.1072.62, Official build, 64-bit (and its development tool)**
+ - ##### **Firefox, 96.0.3, 64-bit (and its development tool)**
+ - ##### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
 <br>
 ## [Back to Index](#index)
 <br><br>
@@ -2762,20 +2763,20 @@ Just to have an idea and assign a quantification to the selection, the "Volume" 
 | Gravimetry software           |                 4,890,000 | Science, service provider in first page                                                          |                     3|         15                            |
 | Resistivity software          |                11,000,000 | Service providers from first page                                                                |                     3|         33                            |
 
-
+<br>
 <details>
     <summary>SEO Analysis</summary>
 
 ![SEO Analysis](docs/features-and-evidence/SEO_Analysis.PNG) 
 </details>
-<br><br>
+<br>
 
 <details>
     <summary>SEO Analysis (Ordered)</summary>
 
 ![SEO Analysis](docs/features-and-evidence/SEO_Analysis_Ordered.PNG) 
 </details>
-<br><br>
+<br>
 As it can be observed, the following keywords produce high volume of searches with a focus in our e-commerce nature:
 "DEM books", "DEM data", "DEM software", "DEM training", "Geophysical data".
 
@@ -2849,7 +2850,7 @@ As mentioned before, the above strategies should be carried out with a paid stra
 <br><br>
 
 ___
-# 12 . Bugs
+# 13 . Bugs
 
 Some bugs were related to design, positioning and tags of elements in the page, with variables in Django templates among them. Also, many minor bugs were solved just by assigning the correct property and/or by trial and error.
 
@@ -2867,7 +2868,7 @@ Bugs that required more time and specific solutions were the following ones:
 <br><br>
 
 ___
-# 13 . Deployment
+# 14 . Deployment
 
 The website was fully written in Gitpod, permanently tested in Gitpod terminal, and periodically deployed to GigHub Pages (in a main branch) and Heroku Platform (to handle backend languages). After first deployment, several updates have been carried out before the final version. These updates were implemented in the deployed website from Gitpod, just by using the "push" command for every commit (change) in the ongoing development. Amazon Web Services S3 is also implemented to contain the static files.
 
@@ -3070,7 +3071,7 @@ In settings.py file, you can set the DEBUG variables as follows if you want to c
 <br><br>
 
 ___
-# 14 . Credits
+# 15 . Credits
 
 - Code Institute:
 
@@ -3418,7 +3419,7 @@ ___
 <br><br>
 
 ___
-# 15 . Acknowledgements
+# 16 . Acknowledgements
 
 I would like to acknowledge and thank the following people for being part of this project and for helping me in the development of it:
 - To my wife and family, for always supporting and helping.

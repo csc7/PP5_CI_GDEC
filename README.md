@@ -2252,9 +2252,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br> | Add a field in the products model that activate a product feature related to the resolution (if applicable), giving the user the option to select it | Show the different available resolutions for the products (e.g., in a dropdown element), considering them as other product if a different resolution (than the one in the bag) is selected, updating the quantities in the bag accordingly | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Selection of Product Resolution</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Selection of Product Resolution](docs/features-and-evidence/selection-of-resolution.PNG) 
 </details>
 <br><br>
 
@@ -2263,12 +2263,17 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | Implement a payment method that is well known and secure | Process payments from users/shoppers | Works as expected | 
+| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | Implement a payment method that is well known and secure | Process payments from users/shoppers | Stripe payments implemented, Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Stripe Payment Process right after Purchasing</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Stripe Payment Process right after Purchasing](docs/features-and-evidence/Stripe-payment.PNG) 
+</details>
+<details>
+    <summary>Stripe Payment Process right after Purchasing, Success Checkout</summary>
+
+![Stripe Payment Process right after Purchasing, Success Checkout](docs/features-and-evidence/checkout-success.PNG) 
 </details>
 <br><br>
 

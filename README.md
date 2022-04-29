@@ -989,6 +989,7 @@ They are Django complementary messages that informs the user, with pop-ups, that
 </details>
 
 
+
 - ### **Product Comments**
 
 It allows users to comment products below its product details.
@@ -998,6 +999,7 @@ It allows users to comment products below its product details.
 
 ![Product Comments Image](docs/features-and-evidence/product-reviews.PNG)
 </details>
+
 
 
 
@@ -1045,7 +1047,7 @@ The following tools were used to validate the **files of the website**:
 https://validator.w3.org/ was used to validate the new HTML files. Pages were rendered to get the HTML code (otherwise Django templates would alone would give errors). When possible (where pages do not require log-in), the page link was tested in the validator.
 
 <details>
-    <summary>Home (index.html) [here](https://github.com/csc7/PP5_CI_GDEC/projects/1) </summary>
+    <summary>Home (index.html)  </summary>
 
 ![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
 </details>
@@ -1120,10 +1122,40 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 ![Evidence of no errors in the 404 page HTML file](docs/validation/validation-html-validator-w3-org-404.PNG) 
 </details>
 
+<br>
+
+[Rendered HTML for Home](hdocs/rendered-html-for-validation/rendered-html-for-validation-home.html)
+
+[Rendered HTML for Bag](docs/rendered-html-for-validation/rendered-html-for-validation-bag.html)
+
+[Rendered HTML for Checkout](/docs/rendered-html-for-validation/rendered-html-for-validation-checkout.html)
+
+[Rendered HTML for Checkout Success](/docs/rendered-html-for-validation/rendered-html-for-validation-checkout-success.html)
+
+[Rendered HTML for Contact](/docs/rendered-html-for-validation/rendered-html-for-validation-contact.html)
+
+[Rendered HTML for Thanks](docs/rendered-html-for-validation/rendered-html-for-validation-thank-you.html)
+
+[Rendered HTML for Add Product](/docs/rendered-html-for-validation/rendered-html-for-validation-product-add.html)
+
+[Rendered HTML for Edit Product](/docs/rendered-html-for-validation/rendered-html-for-validation-edit-product.html)
+
+[Rendered HTML for Product Details](/docs/rendered-html-for-validation/rendered-html-for-validation-product-details.html)
+
+[Rendered HTML for Products](/docs/rendered-html-for-validation/rendered-html-for-validation-products.html)
+
+[Rendered HTML for Profile](/docs/rendered-html-for-validation/rendered-html-for-validation-profile.html)
+
+[Rendered HTML for Wish List](/docs/rendered-html-for-validation/rendered-html-for-validation-wish.html)
+
+[Rendered HTML for 404 Page](/docs/rendered-html-for-validation/rendered-html-for-404.html)
+
+
+
+<br>
 
 #### [Back to Index](#index)
 
-<br>
 
 ### **CSS File**
 https://jigsaw.w3.org/css-validator/ was used to validate the CSS file.
@@ -1840,15 +1872,14 @@ Google Lighthouse (in Google Chrome) was used to evaluate the performance of the
 ![Evidence of no errors in the wish-list HTML file](docs/validation/validation-performance-wish-list-desktop.PNG) 
 </details>
 
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
 ___
 # **11 . Testing**
 
-## **Automatic Testing of Python files with unittest and coverage.py**
+### **Automatic Testing of Python files with unittest and coverage.py**
 
 The data models and some Python files were tested with unittest. Coverage.py was used to measure the coverage of these automatic tests.
 
@@ -1898,14 +1929,13 @@ Please see below screenshots of the testing and coverage, the fourth and last li
 ![coverage.py Image 3](docs/validation/testing-automatic-coverage-3-summary.PNG)
 </details>
 
-
-<br><br>
+<br>
 ## [Back to Index](#index)
 <br><br>
 
-## **Testing of User Stories**
+### **Testing of User Stories**
 
-- ### **First time users**
+- ##### **First time users**
 
 The following are testing of User Stories previously described above:
 <br><br>
@@ -2049,7 +2079,7 @@ The following are testing of User Stories previously described above:
 <br><br>
 
 
-- ### **Returning users**
+- ##### **Returning users**
 
 
 6. As a returning user, I want to be able to contact the site administrator and/or owner and/or developer, so I can send feedback to them.
@@ -2211,7 +2241,7 @@ The following are testing of User Stories previously described above:
 
 
 
-- ### **Shoppers**
+- ##### **Shoppers**
 
 13. As a shopper, I want to have the products to buy visible (without many details so I can see more), so I can select them for purchase.
 
@@ -2413,7 +2443,7 @@ The following are testing of User Stories previously described above:
 <br><br>
 
 
-- ### **Site Owner**
+- ##### **Site Owner**
 
 23. As owner, I want to provide an introductory page, so users know what can be found in the website and what can be purchased.
 
@@ -2648,7 +2678,7 @@ The following are testing of User Stories previously described above:
 <br><br>
 
 
-- ### **Developer**
+- ##### **Developer**
 
 33. As developer, along with other points of this section, I want to show my work and give the option to users to contact me if they wish.
 

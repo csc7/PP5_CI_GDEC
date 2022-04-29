@@ -1,0 +1,989 @@
+<!-- BASE HTML FOR THE PROJECT -->
+
+<!-- Started from Bootstrap starter template: https://getbootstrap.com/docs/4.4/getting-started/introduction/, copied on March 1st, 2020, at 00:10, and later modified. -->
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+
+        
+        <!-- Required meta tags -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- From Code Institute "Project - Boutique Ado", copie on February 28th, 2022, at 23:59 -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Code Institute Student Milestone Project 5, an e-commerce application that sells
+            digital elevation models, gravimetry, magnetometry and resistivity data; along with training, books and software
+            for data acquisition and processing.">
+        <meta name="keywords" content="DEM books, DEM data, DEM software, DEM training, Geophysical data, Buy DEM data, 
+            Geophysical book, Buy Resistivity data, Gravimetry data, Buy Gravimetry data, Resistivity books, Buy Magnetometry data,
+            Magnetometry software, Gravimetry books, Buy geophysical data, Magnetometry books, DEM, Geophysical,
+            Code Institute, software development, full-stack course, milestone project">
+        
+
+        
+        
+
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="/static/css/base.css">
+
+        <!-- MAILCHIMP */
+        Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
+        Automation & Email Platform, https://mailchimp.com) -->
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
+        <!--End mc_embed_signup-->
+        
+        
+
+        
+        
+
+        
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+
+        
+        
+
+        <title>GDEC </title>
+        <link rel="shortcut icon" href="/static/images/gdec-icon.PNG"/> 
+    </head>
+    <body>
+        <header id="main-header" class="container-fluid fixed-top">
+            <div id="topnav" class="row d-none pt-sm-2 d-md-flex">
+                <div class="col-12  col-md-3 col-lg-3 
+                 my-auto py-1 py-lg-0 text-center text-md-left">
+                    <a href="/" class="nav-link">
+                        <!-- Font Awesome Icon as logo -->
+                        <h2 class="logo-front my-0"><i class="fa fa-paw" aria-hidden="true"></i><strong> GDEC</strong></h2>
+                    </a>
+                </div>
+                <div class="col-12  col-md-3 col-lg-4 
+                 my-auto py-1 py-md-0">
+                    <form method="GET" action="/products/">
+                        <div class="input-group w-100">
+                            <input class="form-control border-primary rounded-0" type="text" name="q" placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control btn border-primary rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search text-primary"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12  col-md-6 col-lg-5 
+                 my-auto py-1 py-md-0">
+                    <ul class="list-inline list-unstyled text-center text-md-right my-0">
+                        <li class="list-inline-item dropdown pr-lg-0">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <!-- Font Awesome Icon -->
+                                    <div><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                
+                                    
+                                        <a href="/products/add/" class="dropdown-item">Product Management</a>
+                                    
+                                    <a href="/profile/" class="dropdown-item">My Profile</a>
+                                    <a href="/accounts/logout/" class="dropdown-item">Log Out</a>
+                                
+                            </div>
+                        </li>
+                        
+                        <li class="list-inline-item my-auto py-1 pl-md-0">
+                            <a class="text-info font-weight-bold nav-link" href="/wish_list/">
+                                <div class="text-center text-primary">
+                                    <!-- Font Awesome Icon -->
+                                    <div><i class="fa fa-list" aria-hidden="true"></i></div>
+                                    <p class="my-0">My Wish List</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="list-inline-item my-auto py-1 pl-md-0">
+                            <a class="text-info font-weight-bold nav-link" href="/bag/">
+                                <div class="text-center">
+                                    <!-- Font Awesome Icon -->
+                                    <div><i class="fa fa-shopping-cart fa-lg text-primary" aria-hidden="true"></i></div>
+                                    <p class="my-0 text-primary">
+                                        
+                                            $237.15
+                                        
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-light mx-auto w-100">
+                    <button class="navbar-toggler mt-0 px-0 py-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Copied and modified from Code Institute "Boutique Ado" project on March 1st, 2022, at 13:26 -->
+<div class="mx-auto px-auto">
+    <ul id="cell-phone-icons" class="mx-auto px-0">
+        <li class="list-inline-item py-0 px-auto">
+            <a class="nav-link d-block d-md-none px-0" href="#" id="cell-phone-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fas fa-search fa-lg"></i></div>
+                    <p class="my-0 d-none d-sm-block">Search</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0 w-100 px-0 rounded-0 my-0" aria-labelledby="cell-phone-search">
+                <form class="form" method="GET" action="/products/">
+                    <div class="input-group w-100">
+                        <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn border rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <li class="list-inline-item dropdown py-0 px-0">
+            <a class="nav-link d-block d-md-none" href="#" id="user-options-cell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <!-- Font Awesome Icon -->
+                    <div><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
+                    <p class="my-0 d-none d-sm-block">My Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options-cell">
+                
+                    
+                        <a href="/products/add/" class="dropdown-item">Product Management</a>
+                    
+                    <a href="/profile/" class="dropdown-item">My Profile</a>
+                    <a href="/accounts/logout/" class="dropdown-item">Logout</a>
+                
+            </div>
+        </li>
+        
+        <li class="list-inline-item my-auto py-0 pl-md-0 px-0">
+            <a class="text-info font-weight-bold nav-link d-block d-md-none" href="/wish_list/">
+                <div class="text-center text-primary">
+                    <!-- Font Awesome Icon -->
+                    <div><i class="fa fa-list" aria-hidden="true"></i></div>
+                    <p class="my-0 d-none d-sm-block">My Wish List</p>
+                </div>
+            </a>
+        </li>
+        
+        <li class="list-inline-item py-0 px-0">
+            <a class="text-primary font-weight-bold nav-link d-block d-md-none px-0" href="/bag/">
+                <div class="text-center">
+                    <!-- Font Awesome Icon -->
+                    <div><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
+                    <p class="my-0 d-none d-sm-block">
+                        
+                            $237.15
+                        
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="log-in-status-header" class="col-12 d-md-none my-0">
+    <div>                    
+        <p class="text-center text-md-right my-0"><strong>Logged in as admin</strong></p>
+    </div>
+</div>
+
+
+
+                    <!-- Copied and modified from Code Institute "Boutique Ado" project on March 1st, 2022, at 13:32 -->
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="/" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="/products/?sort=name&direction=asc" class="dropdown-item text-primary">By Country</a>
+                <a href="/products/?sort=category&direction=asc" class="dropdown-item text-primary">By Category</a>
+                <a href="/products/?sort=price&direction=asc" class="dropdown-item text-primary">By Price</a>
+                <a href="/products/?sort=name&direction=asc" class="dropdown-item text-primary">All Products</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="dems-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Digital Data
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="dems-link">
+                <a href="/products/?category=dem" class="dropdown-item text-primary">Digital Elevation Models</a>
+                <a href="/products/?category=gravimetry" class="dropdown-item text-primary">Gravimetry</a>
+                <a href="/products/?category=magnetometry" class="dropdown-item text-primary">Magnetometry</a>
+                <a href="/products/?category=resistivity" class="dropdown-item text-primary">Resistivity</a>
+                <a href="/products/?category=dem,gravimetry,magnetometry,resistivity" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="gravimetry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reports
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="gravimetry-link">
+                <a href="/products/?category=eia" class="dropdown-item text-primary">Environmental Impact Assessments</a>
+                <a href="/products/?category=geological_maps" class="dropdown-item text-primary">Geological Maps</a>
+                <a href="/products/?category=weather" class="dropdown-item text-primary">Weather Information</a>
+                <a href="/products/?category=eia,geological_maps,weather" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="resistivity-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Training
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="resistivity-link">
+                <a href="/products/?category=courses" class="dropdown-item text-primary">Courses</a>
+                <a href="/products/?category=books" class="dropdown-item text-primary">Books</a>
+                <a href="/products/?category=courses,books" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="magnetometry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Software
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="magnetometry-link">
+                <a href="/products/?category=simulators" class="dropdown-item text-primary">Simulators</a>
+                <a href="/products/?category=data_processing" class="dropdown-item text-primary">Data Processing</a>
+                <a href="/products/?category=data_qc" class="dropdown-item text-primary">Data QC</a>
+                <a href="/products/?category=simulators,data_processing,data_qc" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="last-arrivals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Offers
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="last-arrivals-link">
+                <a href="/products/?category=data_offers" class="dropdown-item text-primary">Vintage Data</a>                
+                <a href="/products/?category=report_offers" class="dropdown-item text-primary">Special Reports</a>
+                <a href="/products/?category=training_offers" class="dropdown-item text-primary">Classic Training</a>
+                <a href="/products/?category=software_offers" class="dropdown-item text-primary">Software Previous Versions</a>
+                <a href="/products/?category=data_offers,report_offers,training_offers,software_offers" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+    </ul>
+</div>
+                </nav>
+            </div>
+            <div id="footer-body-separator" class="row text-center text-white bg-danger">
+                <div class="col-12 col-md-8 order-2 order-md-1 bg-danger">
+                    <!-- Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
+                    Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
+                    accessed on March 16th, 2022, at 3:20. -->
+                    <div class="col-12 bg-danger my-0 holder">
+                        <div class="my-auto last-news">
+                            <div class="row" id="banner-div">
+                                <div class="col-4">
+                                    <h5>Discount of 20% for orders over $500!</h5>
+                                </div>
+                                <div class="col-4">
+                                    <h5>Our deliveries include insurance</h5>
+                                </div>
+                                <div class="col-4">
+                                    <h5>Download data and cancel delivery costs!</h5>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>        
+                </div>
+                
+                <div id="log-in-status-banner" class="d-none d-md-inline col-md-4 order-1 order-md-2 bg-danger my-0">
+                    <div class="col-12 bg-danger my-0 holder">
+                    
+                    <p class="text-center text-md-right"><strong>Logged in as admin</strong></p>
+                    </div>
+                </div>
+                       
+            </div>
+
+        </header>
+                
+        
+        
+        
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+
+
+        
+<!-- Page background -->
+<div class="overlay"></div>
+<div class="container mb-2 dark-blue-font">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <!-- Page Title -->
+            <h2 class="mb-4">Product Management</h2>
+            <h5 class="text-muted">Add Product</h5>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 bottom-marging-for-large-screens">
+            <!-- Include encoding type in the form as images might be loaded -->
+            <form method="POST" action="/products/add/" class="form mb-2" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="vFXrB8eFOj3Y9qA4KevTDzXzaexlrmvYHwoOGOZ89RJDJJVFwCVhVgwAfcSR13uK">
+                
+                    
+                        
+
+
+    
+    <div id="div_id_category" class="form-group">
+        
+            
+        <label for="id_category" class="">
+                Category
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <select name="category" class="border-dark rounded-0 select form-control" id="id_category">
+  <option value="1">DEM</option>
+
+  <option value="2">Gravimetry</option>
+
+  <option value="3">Resistivity</option>
+
+  <option value="4">Magnetometry</option>
+
+  <option value="5">Data Offers</option>
+
+  <option value="6">EIA</option>
+
+  <option value="7">Weather</option>
+
+  <option value="8">Geological Maps</option>
+
+  <option value="9">Books</option>
+
+  <option value="10">Courses</option>
+
+  <option value="11">Simulators</option>
+
+  <option value="12">Data Processing</option>
+
+  <option value="13">Data QC</option>
+
+  <option value="14">Report Offers</option>
+
+  <option value="15">Training Offers</option>
+
+  <option value="16">Software Offers</option>
+
+</select>
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        
+
+
+    
+    <div id="div_id_sku" class="form-group">
+        
+            
+        <label for="id_sku" class="">
+                Sku
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <input type="text" name="sku" maxlength="254" class="border-dark rounded-0 textinput textInput form-control" id="id_sku">
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        
+
+
+    
+    <div id="div_id_name" class="form-group">
+        
+            
+        <label for="id_name" class=" requiredField">
+                Name<span class="asteriskField">*</span>
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <input type="text" name="name" maxlength="254" class="border-dark rounded-0 textinput textInput form-control" required id="id_name">
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        
+
+
+    
+    <div id="div_id_description" class="form-group">
+        
+            
+        <label for="id_description" class=" requiredField">
+                Description<span class="asteriskField">*</span>
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <textarea name="description" cols="40" rows="10" class="border-dark rounded-0 textarea form-control" required id="id_description">
+</textarea>
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        
+
+
+    
+    <div id="div_id_price" class="form-group">
+        
+            
+        <label for="id_price" class=" requiredField">
+                Price<span class="asteriskField">*</span>
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <input type="number" name="price" step="0.01" class="border-dark rounded-0 numberinput form-control" required id="id_price">
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        
+
+
+    
+    <div id="div_id_resolution" class="form-group">
+        
+            
+        <label for="id_resolution" class="">
+                Resolution
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <select name="resolution" class="border-dark rounded-0 nullbooleanselect form-control" id="id_resolution">
+  <option value="unknown">Unknown</option>
+
+  <option value="true">Yes</option>
+
+  <option value="false" selected>No</option>
+
+</select>
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        
+
+
+    
+    <div id="div_id_rating" class="form-group">
+        
+            
+        <label for="id_rating" class="">
+                Rating
+            </label>
+        
+
+        
+
+        
+
+        
+            
+                <div>
+                    
+                        
+                            <input type="number" name="rating" step="0.01" class="border-dark rounded-0 numberinput form-control" id="id_rating">
+                        
+                    
+                    
+
+
+    
+
+
+
+
+    
+
+
+
+                </div>
+            
+        
+    </div>
+    
+
+
+                    
+                
+                    
+                        <!-- Template copied from Django GitHub on March 24th, 2022, at 18:31, from 
+https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html;
+later modified. 
+
+Used to improve the image view of products when managing/administering the
+database, based on an inherited class, ClearableFileInput(FileInput) of Django
+that is later customized below.
+-->
+
+
+
+    <p class="mt-4"><strong>Default "No Image" file, select an image to upload:</strong></p>
+
+<span class="btn rounded-0 dark-blue-font text-left ml-0 pl-0">
+    Select Image: <input type="file" name="image_name" accept="image/*" class="border-dark rounded-0" id="id_image_name">
+</span>
+<p class="text-danger" id="filename"><strong></strong></p>
+                    
+                
+                <div class="text-right">
+                    <a class="btn btn-outline-primary rounded-0" href="/products/">Cancel</a>
+                    <button class="btn btn-primary rounded-0" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+        <footer class="container-fluid bg-primary">            
+        <div class="row">
+    <div class="col-12 bg-danger">
+        <!-- Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
+        Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
+        accessed on March 16th, 2022, at 3:20. -->
+        <div class="col-12 bg-danger my-0 holder">          
+        </div>          
+    </div>            
+</div>
+
+<div class="row">
+    
+    <div id="div-for-address-in-footer" class="col-12 col-sm-4 col-md-3 col-lg-2 text-center px-0 mx-0 mt-1">
+        <a href="/" class="nav-link">
+            <!-- Font Awesome Icon as logo -->
+            <h4 class="logo-front text-center text-md-left text-light"><i class="fa fa-paw" aria-hidden="true"></i><strong> GDEC</strong></h4>
+        </a>
+        <p class="my-0 py-0 ml-3 text-center text-md-left text-light">Geophysical Data E-Commerce</p>
+        <p class="my-0 py-0 ml-3 text-center text-md-left text-light">email@email.com</p>
+        <p class="my-0 py-0 ml-3 text-center text-md-left text-light">+1234 5678 90</p>
+    </div>
+
+    <div id="div-for-contact-in-footer" class="col-12 col-sm-6 order-sm-4 col-md-5 order-md-2 col-lg-3 text-center px-0 mx-0 mt-1">
+        <h6 class="my-1 pt-3 pt-sm-0 text-center text-light"><strong>Contact</strong></h6>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 my-2">
+                    <a id="contact-link-in-footer" href="/contact/" class="my-0 py-0 text-left text-light"
+                        aria-label="Go to the Contact Form of the Geophysical Data E-Commerce Website (it does not open in a new tab)">Contact Form
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mx-0 px-0">
+                    <ul class="social-contact-links px-0 mx-0">
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce Facebook page (it opens in a new tab)"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce LinkedIn page (it opens in a new tab)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Visit the GGeophysical Data E-Commerce Twitter page (it opens in a new tab)"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce Instagram page (it opens in a new tab)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="mailto:information@fictitioustgcemail.com" target="_blank" rel="noopener"
+                                aria-label="Send an e-mail to the Geophysical Data E-Commerce (it opens in a new tab)"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <div id="div-for-products-in-footer" class="col-12 col-sm-4 order-sm-2 col-md-2 order-md-3 col-lg-2 px-0 mx-0 mt-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center text-md-left">
+                    <h6 class="my-1 py-0 text-light"><strong>Products</strong></h6>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="digital-data-link-in-footer" href="/products/?category=dem,gravimetry,magnetometry,resistivity" class="my-0 py-0 text-light"
+                    aria-label="Sign Up in the Geophysical Data E-Commerce Website (it opens in a new tab)">Digital Data</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="reports-link-in-footer" href="/products/?category=eia,geological_maps,weather" class="my-0 py-0 text-light"
+                    aria-label="Sign In in the Geophysical Data E-Commerce Website (it opens in a new tab)">Reports</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="training-link-in-footer" href="/products/?category=courses,books" class="my-0 py-0 text-light"
+                    aria-label="Go to the Privacy Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Training</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="software-link-in-footer" href="/products/?category=simulators,data_processing,data_qc" class="my-0 py-0 text-light"
+                    aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Software</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="offers-link-in-footer" href="/products/?category=data_offers,report_offers,training_offers,software_offers" class="my-0 py-0 text-light"
+                    aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Offers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div-for-website-in-footer" class="col-12 col-sm-4 order-sm-3 col-md-2 order-md-4 col-lg-2 px-0 mx-0 mt-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center text-md-left ">
+                    <h6 class="pt-3 pt-sm-0 my-1 py-0 text-light"><strong>Website</strong></h6>
+                </div>
+                
+                    
+                        <div class="col-12 text-center text-md-left">
+                            <!-- Font Awesome Icon -->
+                            <a id="product-management-link-in-footer" href="/products/add/" class="my-0 py-0 text-light"
+                            aria-label="Go to Product Management in the Geophysical Data E-Commerce Website">Product Management</a>
+                        </div>
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="my-profile-link-in-footer" href="/profile/" class="my-0 py-0 text-light"
+                        aria-label="Go to my Profile in the Geophysical Data E-Commerce Website">My Profile</a>
+                    </div>
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="my-wish-list-link-in-footer" href="/wish_list/" class="my-0 py-0 text-light"
+                        aria-label="Go to my My Wish List in the Geophysical Data E-Commerce Website">My Wish List</a>
+                    </div>
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="log-out-link-in-footer" href="/accounts/logout/" class="my-0 py-0 text-light"
+                        aria-label="Log Out of the Geophysical Data E-Commerce Website">Log Out</a>
+                    </div>
+                
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="privacy-link-in-footer" href="/gdpr_privacy_policy/" class="my-0 py-0 text-light"
+                    aria-label="Go to the Privacy Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Privacy</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="cookies-link-in-footer" href="/gdpr_cookies/" class="my-0 py-0 text-light"
+                    aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <div id="div-for-newsletter-in-footer" class="col-12 col-sm-6 order-sm-5 col-md-12 order-md-5 col-lg-3 text-center mx-0 px-0 mt-1 mt-sm-2 mt-lg-1">
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 ml-lg-0 pl-lg-0">
+                    <h6 class="mb-0 pt-3 pt-sm-0 p-md-2 my-lg-1 py-lg-0 text-center text-lg-left text-light"><strong>Newsletter</strong></h6>
+                </div>
+                <div id="div-for-newsletter-form-message" class="col-12 col-md-6 col-lg-12 ml-lg-0 pl-lg-0">
+                    <p class="pt-1 pt-sm-0 mb-0 p-md-3 p-lg-2 mt-lg-1 py-0 text-center text-md-right text-lg-left text-light">
+                       Sign up in our newsletter to receive our weekly news
+                    </p>
+                    
+                </div>
+                <div id="div-for-sign-up-for-newsletter-form-1" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                    <!-- MAILCHIMP */
+                    Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
+                    Automation & Email Platform, https://mailchimp.com);
+                    later modified -->
+                    <!-- Begin Mailchimp Signup Form -->
+                    <form action="https://gmail.us14.list-manage.com/subscribe/post?u=0d5a7a481825cdc6a8cea5aea&amp;id=00935812af"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div class="input-group w-100 pt-1 pt-sm-0">
+                            
+                            <input type="email" value="Enter e-mail address" name="EMAIL" class="required email form-control border-light rounded-0" id="mce-EMAIL" required>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <div class="input-group-append">
+                                <button id="Mailchimp-newsletter-button" class="form-control btn border-light rounded-0" type="button" name="subscribe" disabled="disabled">                                    
+                                    <span class="icon text-info">Sign Up
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>                    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 ml-lg-0 pl-lg-0 pr-lg-4">
+                    <p class="text-light pr-0">
+                        Powered by <span><a class="text-white" href="http://eepurl.com/hYYIJX" title="Mailchimp - email marketing made easy and fun" rel="noopener" target="_blank"><u>Mailchimp</u></a></span>
+                    </p>
+                </div>
+                <div id="div-for-sign-up-for-newsletter-form-2" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_0d5a7a481825cdc6a8cea5aea_00935812af" tabindex="-1" value="">
+                    </div>
+                
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>
+
+<!-- MAILCHIMP */
+Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
+Automation & Email Platform, https://mailchimp.com) -->
+<!-- Begin Mailchimp Signup Form -->
+<script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+<!-- This page javascript file -->
+<script src="/static/js/mailchimp_form_submission.js"></script>
+        </footer>
+
+       
+        
+    
+        
+        
+        <!-- Font Awesome Script / Kit
+        Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
+        <script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
+        <!-- This page javascript file -->
+        <script src="/static/js/quantity_incr_decr.js"></script>
+        <script src="/static/js/show_messages.js"></script>
+        
+        <!-- Stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
+        
+        
+    <!-- This page javascript file -->
+    <script src="/static/js/notify_image_change_in_admin.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1282 @@
+<!-- Structure based on Code Institute "Boutique Ado" project -->
+<!-- BASE HTML FOR THE PROJECT -->
+
+<!-- Started from Bootstrap starter template: https://getbootstrap.com/docs/4.4/getting-started/introduction/, copied on March 1st, 2020, at 00:10, and later modified. -->
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+
+        
+        <!-- Required meta tags -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- From Code Institute "Project - Boutique Ado", copie on February 28th, 2022, at 23:59 -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Code Institute Student Milestone Project 5, an e-commerce application that sells
+            digital elevation models, gravimetry, magnetometry and resistivity data; along with training, books and software
+            for data acquisition and processing.">
+        <meta name="keywords" content="DEM books, DEM data, DEM software, DEM training, Geophysical data, Buy DEM data, 
+            Geophysical book, Buy Resistivity data, Gravimetry data, Buy Gravimetry data, Resistivity books, Buy Magnetometry data,
+            Magnetometry software, Gravimetry books, Buy geophysical data, Magnetometry books, DEM, Geophysical,
+            Code Institute, software development, full-stack course, milestone project">
+        
+
+        
+        
+
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="/static/css/base.css">
+
+        <!-- MAILCHIMP */
+        Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
+        Automation & Email Platform, https://mailchimp.com) -->
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
+        <!--End mc_embed_signup-->
+        
+        
+
+        
+        
+
+        
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+
+        
+        
+
+        <title>GDEC </title>
+        <link rel="shortcut icon" href="/static/images/gdec-icon.PNG"/> 
+    </head>
+    <body>
+        <header id="main-header" class="container-fluid fixed-top">
+            <div id="topnav" class="row d-none pt-sm-2 d-md-flex">
+                <div class="col-12  col-md-3 col-lg-3 
+                 my-auto py-1 py-lg-0 text-center text-md-left">
+                    <a href="/" class="nav-link">
+                        <!-- Font Awesome Icon as logo -->
+                        <h2 class="logo-front my-0"><i class="fa fa-paw" aria-hidden="true"></i><strong> GDEC</strong></h2>
+                    </a>
+                </div>
+                <div class="col-12  col-md-3 col-lg-4 
+                 my-auto py-1 py-md-0">
+                    <form method="GET" action="/products/">
+                        <div class="input-group w-100">
+                            <input id="search-input" class="form-control border-primary rounded-0" type="text" name="q" placeholder="Search our site">
+                            <label for="search-input" hidden>Search Field for Products</label>
+                            <div class="input-group-append">
+                                <button class="form-control btn border-primary rounded-0" type="submit">
+                                    <span hidden>
+                                        Research Button
+                                    </span>
+                                    <span class="icon">
+                                        <i class="fas fa-search text-primary"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12  col-md-6 col-lg-5 
+                 my-auto py-1 py-md-0">
+                    <ul class="list-inline list-unstyled text-center text-md-right my-0">
+                        <li class="list-inline-item dropdown pr-lg-0">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <!-- Font Awesome Icon -->
+                                    <div><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                
+                                    
+                                        <a href="/products/add/" class="dropdown-item">Product Management</a>
+                                    
+                                    <a href="/profile/" class="dropdown-item">My Profile</a>
+                                    <a href="/accounts/logout/" class="dropdown-item">Log Out</a>
+                                
+                            </div>
+                        </li>
+                        
+                        <li class="list-inline-item my-auto py-1 pl-md-0">
+                            <a class="text-info font-weight-bold nav-link" href="/wish_list/">
+                                <div class="text-center text-primary">
+                                    <!-- Font Awesome Icon -->
+                                    <div><i class="fa fa-list" aria-hidden="true"></i></div>
+                                    <p class="my-0">My Wish List</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="list-inline-item my-auto py-1 pl-md-0">
+                            <a class="text-info font-weight-bold nav-link" href="/bag/">
+                                <div class="text-center">
+                                    <!-- Font Awesome Icon -->
+                                    <div><i class="fa fa-shopping-cart fa-lg text-primary" aria-hidden="true"></i></div>
+                                    <p class="my-0 text-primary">
+                                        
+                                            $104.40
+                                        
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-light mx-auto w-100">
+                    <button class="navbar-toggler mt-0 px-0 py-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span hidden>Toggle Button</span>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Copied and modified from Code Institute "Boutique Ado" project on March 1st, 2022, at 13:26 -->
+<div class="mx-auto px-auto">
+    <ul id="cell-phone-icons" class="mx-auto px-0">
+        <li class="list-inline-item py-0 px-auto">
+            <a class="nav-link d-block d-md-none pl-0" href="#" id="cell-phone-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div class="cell-phone-nav-button"><i class="fas fa-search fa-lg"></i></div>
+                    <p class="my-0 d-none d-sm-block">Search</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0 w-100 px-0 rounded-0 my-0" aria-labelledby="cell-phone-search">
+                <form class="form" method="GET" action="/products/">
+                    <div class="input-group w-100 mx-2">
+                        <input id="search-field-on-cell-phones" class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
+                        <label for="search-field-on-cell-phones" hidden>Search Field in Cell Phone</label>
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn border rounded-0" type="submit">
+                                <span hidden>
+                                    Research Button
+                                </span>
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <li class="list-inline-item dropdown py-0 px-0">
+            <a class="nav-link d-block d-md-none" href="#" id="user-options-cell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <!-- Font Awesome Icon -->
+                    <div class="cell-phone-nav-button"><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
+                    <p class="my-0 d-none d-sm-block">My Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options-cell">
+                
+                    
+                        <a href="/products/add/" class="dropdown-item">Product Management</a>
+                    
+                    <a href="/profile/" class="dropdown-item">My Profile</a>
+                    <a href="/accounts/logout/" class="dropdown-item">Logout</a>
+                
+            </div>
+        </li>
+        
+        <li class="list-inline-item my-auto py-0 pl-md-0 px-0">
+            <a class="text-info font-weight-bold nav-link d-block d-md-none" href="/wish_list/">
+                <div class="text-center text-primary">
+                    <!-- Font Awesome Icon -->
+                    <div class="cell-phone-nav-button"><i class="fa fa-list" aria-hidden="true"></i></div>
+                    <p class="my-0 d-none d-sm-block">My Wish List</p>
+                </div>
+            </a>
+        </li>
+        
+        <li class="list-inline-item py-0 px-0">
+            <a class="text-primary font-weight-bold nav-link d-block d-md-none px-0" href="/bag/">
+                <div class="text-center">
+                    <!-- Font Awesome Icon -->
+                    <div class="cell-phone-nav-button"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
+                    <p class="my-0 d-none d-sm-block">
+                        
+                            $104.40
+                        
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="log-in-status-header" class="col-12 d-md-none my-0">
+    <div>                    
+        <p class="text-center text-md-right my-0"><strong>Logged in as admin</strong></p>
+    </div>
+</div>
+
+
+
+                    <!-- Copied and modified from Code Institute "Boutique Ado" project on March 1st, 2022, at 13:32 -->
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="/" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="/products/?sort=name&direction=asc" class="dropdown-item text-primary">By Country</a>
+                <a href="/products/?sort=category&direction=asc" class="dropdown-item text-primary">By Category</a>
+                <a href="/products/?sort=price&direction=asc" class="dropdown-item text-primary">By Price</a>
+                <a href="/products/?sort=name&direction=asc" class="dropdown-item text-primary">All Products</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="dems-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Digital Data
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="dems-link">
+                <a href="/products/?category=dem" class="dropdown-item text-primary">Digital Elevation Models</a>
+                <a href="/products/?category=gravimetry" class="dropdown-item text-primary">Gravimetry</a>
+                <a href="/products/?category=magnetometry" class="dropdown-item text-primary">Magnetometry</a>
+                <a href="/products/?category=resistivity" class="dropdown-item text-primary">Resistivity</a>
+                <a href="/products/?category=dem,gravimetry,magnetometry,resistivity" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="gravimetry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reports
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="gravimetry-link">
+                <a href="/products/?category=eia" class="dropdown-item text-primary">Environmental Impact Assessments</a>
+                <a href="/products/?category=geological_maps" class="dropdown-item text-primary">Geological Maps</a>
+                <a href="/products/?category=weather" class="dropdown-item text-primary">Weather Information</a>
+                <a href="/products/?category=eia,geological_maps,weather" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="resistivity-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Training
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="resistivity-link">
+                <a href="/products/?category=courses" class="dropdown-item text-primary">Courses</a>
+                <a href="/products/?category=books" class="dropdown-item text-primary">Books</a>
+                <a href="/products/?category=courses,books" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="magnetometry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Software
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="magnetometry-link">
+                <a href="/products/?category=simulators" class="dropdown-item text-primary">Simulators</a>
+                <a href="/products/?category=data_processing" class="dropdown-item text-primary">Data Processing</a>
+                <a href="/products/?category=data_qc" class="dropdown-item text-primary">Data QC</a>
+                <a href="/products/?category=simulators,data_processing,data_qc" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mx-2 text-primary" href="#" id="last-arrivals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Offers
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="last-arrivals-link">
+                <a href="/products/?category=data_offers" class="dropdown-item text-primary">Vintage Data</a>                
+                <a href="/products/?category=report_offers" class="dropdown-item text-primary">Special Reports</a>
+                <a href="/products/?category=training_offers" class="dropdown-item text-primary">Classic Training</a>
+                <a href="/products/?category=software_offers" class="dropdown-item text-primary">Software Previous Versions</a>
+                <a href="/products/?category=data_offers,report_offers,training_offers,software_offers" class="dropdown-item text-primary">All</a>
+            </div>
+        </li>
+    </ul>
+</div>
+                </nav>
+            </div>
+            <div id="footer-body-separator" class="row text-center text-white bg-danger">
+                <div class="col-12 col-md-8 order-2 order-md-1 bg-danger">
+                    <!-- Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
+                    Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
+                    accessed on March 16th, 2022, at 3:20. -->
+                    <div class="col-12 bg-danger my-0 holder">
+                        <div class="my-auto last-news">
+                            <div class="row" id="banner-div">
+                                <div class="col-4">
+                                    <h5>Discount of 20% for orders over $500!</h5>
+                                </div>
+                                <div class="col-4">
+                                    <h5>Our deliveries include insurance</h5>
+                                </div>
+                                <div class="col-4">
+                                    <h5>Download data and cancel delivery costs!</h5>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>        
+                </div>
+                
+                <div id="log-in-status-banner" class="d-none d-md-inline col-md-4 order-1 order-md-2 bg-danger my-0">
+                    <div class="col-12 bg-danger my-0 holder">
+                    
+                    <p class="text-center text-md-right"><strong>Logged in as admin</strong></p>
+                    </div>
+                </div>
+                       
+            </div>
+
+        </header>
+                
+        
+        
+        
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+
+
+        
+    <!-- Page background -->
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3 dark-blue-font">
+                <!-- Page for selected category of products -->
+                <a href="/products/?sort=name&amp;direction=asc"><h2 class="dark-blue-font">All Products</h2></a>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div id="products-body" class="product-container col-10 offset-1 dark-blue-font">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <!-- Sort options -->
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-info">
+                                <option value="reset" >Sort by...</option>
+                                <option value="price_asc" >Price (low to high)</option>
+                                <option value="price_desc" >Price (high to low)</option>
+                                <option value="rating_asc" >Rating (low to high)</option>
+                                <option value="rating_desc" >Rating (high to low)</option>
+                                <option value="name_asc" selected>Name (A-Z)</option>
+                                <option value="name_desc" >Name (Z-A)</option>
+                                <option value="category_asc" >Category (A-Z)</option>
+                                <option value="category_desc" >Category (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="mt-3 text-center text-md-left small">
+                            
+                                <span class="mt-3 text-center text-md-left dark-blue-font"><a href="/products/">Products Home</a> | </span>
+                            
+                            12 Products of 324
+                        </p>
+                    </div>
+                </div>
+                <hr class="w-100 mt-0 mb-5">
+                <div class="row">
+                    <!-- Display of selected products -->
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/306">
+                                    <img class="card-img-top products-card image-position" src="/media/pexels-arthouse-studio-4641210.jpg" alt="Advanced Magnetometry">
+                                </a>
+                                
+                                <div id="product-title-in-card_306" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/306">
+                                        <p class="mb-0 text-center">Advanced Magnetometry</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$134.97</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=courses">
+                                                    <i class="fas fa-tag mr-1 "></i>Courses
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/306/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/306/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/298">
+                                    <img class="card-img-top products-card image-position" src="/media/pexels-martins-krastins-838981.jpg" alt="Advanced Structural Geology">
+                                </a>
+                                
+                                <div id="product-title-in-card_298" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/298">
+                                        <p class="mb-0 text-center">Advanced Structural Geology</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$29.04</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=books">
+                                                    <i class="fas fa-tag mr-1 "></i>Books
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/298/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/298/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/300">
+                                    <img class="card-img-top products-card image-position" src="/media/pexels-mengliu-di-3064079.jpg" alt="Advanced Velocity Modelling">
+                                </a>
+                                
+                                <div id="product-title-in-card_300" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/300">
+                                        <p class="mb-0 text-center">Advanced Velocity Modelling</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$39.13</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=books">
+                                                    <i class="fas fa-tag mr-1 "></i>Books
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/300/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/300/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                        
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/1">
+                                    <img class="card-img-top products-card image-position" src="/media/digital_elevation_model_for_Afghanistan.png" alt="Afghanistan DEM">
+                                </a>
+                                
+                                <div id="product-title-in-card_1" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/1">
+                                        <p class="mb-0 text-center">Afghanistan DEM</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$70.38</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=dem">
+                                                    <i class="fas fa-tag mr-1 "></i>DEM
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/1/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/1/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                        
+                            <div class="col-12 d-none d-xl-block mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/167">
+                                    <img class="card-img-top products-card image-position" src="/media/report_for_Afghanistan.png" alt="Afghanistan Geological Map">
+                                </a>
+                                
+                                <div id="product-title-in-card_167" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/167">
+                                        <p class="mb-0 text-center">Afghanistan Geological Map</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$83.38</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=geological_maps">
+                                                    <i class="fas fa-tag mr-1 "></i>Geological Maps
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/167/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/167/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/52">
+                                    <img class="card-img-top products-card image-position" src="/media/gravimetry_for_Afghanistan.png" alt="Afghanistan Gravimetry">
+                                </a>
+                                
+                                <div id="product-title-in-card_52" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/52">
+                                        <p class="mb-0 text-center">Afghanistan Gravimetry</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$101.41</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=gravimetry">
+                                                    <i class="fas fa-tag mr-1 "></i>Gravimetry
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/52/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/52/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/112">
+                                    <img class="card-img-top products-card image-position" src="/media/magnetometry_for_Afghanistan.png" alt="Afghanistan Magnetometry">
+                                </a>
+                                
+                                <div id="product-title-in-card_112" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/112">
+                                        <p class="mb-0 text-center">Afghanistan Magnetometry</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$70.56</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=magnetometry">
+                                                    <i class="fas fa-tag mr-1 "></i>Magnetometry
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/112/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/112/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/53">
+                                    <img class="card-img-top products-card image-position" src="/media/gravimetry_for_Albania.png" alt="Albania Gravimetry">
+                                </a>
+                                
+                                <div id="product-title-in-card_53" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/53">
+                                        <p class="mb-0 text-center">Albania Gravimetry</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$78.51</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=gravimetry">
+                                                    <i class="fas fa-tag mr-1 "></i>Gravimetry
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/53/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/53/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                        
+                            <div class="col-12 d-none d-xl-block mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/54">
+                                    <img class="card-img-top products-card image-position" src="/media/gravimetry_for_Algeria.png" alt="Algeria Gravimetry">
+                                </a>
+                                
+                                <div id="product-title-in-card_54" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/54">
+                                        <p class="mb-0 text-center">Algeria Gravimetry</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$74.78</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=gravimetry">
+                                                    <i class="fas fa-tag mr-1 "></i>Gravimetry
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/54/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/54/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                        
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/245">
+                                    <img class="card-img-top products-card image-position" src="/media/resistivity_for_Algeria.png" alt="Algeria Resistivity">
+                                </a>
+                                
+                                <div id="product-title-in-card_245" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/245">
+                                        <p class="mb-0 text-center">Algeria Resistivity</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$85.79</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=resistivity">
+                                                    <i class="fas fa-tag mr-1 "></i>Resistivity
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/245/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/245/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/2">
+                                    <img class="card-img-top products-card image-position" src="/media/digital_elevation_model_for_Angola.png" alt="Angola DEM">
+                                </a>
+                                
+                                <div id="product-title-in-card_2" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/2">
+                                        <p class="mb-0 text-center">Angola DEM</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$70.19</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=dem">
+                                                    <i class="fas fa-tag mr-1 "></i>DEM
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/2/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/2/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                        
+                                                
+                    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-50">
+                            <div class="card border-2 pt-2">
+                                
+                                <a href="/products/168">
+                                    <img class="card-img-top products-card image-position" src="/media/report_for_Angola.png" alt="Angola Environmental Impact Assessment">
+                                </a>
+                                
+                                <div id="product-title-in-card_168" class="card-body pb-0 product-title-in-card">
+                                    <a href="/products/168">
+                                        <p class="mb-0 text-center">Angola Environmental Impact Assessment</p>
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col text-center text-sm-left">
+                                            <p class="lead mb-0 text-center text-sm-left font-weight-bold">$93.77</p>
+                                            
+                                            <p class="small mt-1 mb-0 text-center text-sm-left">
+                                                <a class="text-muted" href="/products/?category=eia">
+                                                    <i class="fas fa-tag mr-1 "></i>EIA
+                                                </a>
+                                            </p>
+                                            
+                                            
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>5.00 / 5</small>
+                                            
+                                            
+                                                <small class="ml-3">
+                                                    <a href="/products/edit/168/">Edit</a>
+                                                    <a class="text-danger delete-product-from-database" href="/products/delete/168/">Delete</a>
+                                                </small>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Horizontal rule based on screen width -->
+                        
+                            <div class="col-12 d-sm-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                        
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-4 mt-4">
+                                <hr>
+                            </div>
+                        
+                        
+                            <div class="col-12 d-none d-xl-block mb-4 mt-4">
+                                <hr>
+                            </div>
+                                                
+                    
+                </div>
+            </div>
+            <!-- Pagination by Django Documentaiton:
+            https://docs.djangoproject.com/en/4.0/topics/pagination/,
+            accessed on April 15th, 2022, at 2:00, style modified later 
+        
+            Replace correct URL for filtered Django queries, for first/previous/next/last pages,
+            accessed on April 22nd, 2022, at 02:00, at
+            https://stackoverflow.com/questions/68820700/paginate-a-filter,
+            
+            -->
+            <div class="col-12 bottom-marging-for-large-screens text-center pt-4 pb-5 px-0">
+                <div class="row">
+                    <!-- https://stackoverflow.com/questions/68820700/paginate-a-filter -->
+                    
+                    
+                    <!-- If no previous, include empty divs to avoid a shift of page number in centre of row -->
+                    <div class="col-3 offset-0 col-sm-2 offset-sm-2 offset-md-1 offset-lg-3 col-lg-1 text-uppercase order-1">                        
+                    </div>
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-2">
+                    </div>
+                    
+                    <div class="col-12 col-md-2 col-lg-2 order-md-3 dark-blue-font order-5 px-0">
+                        Page 1 of 27
+                    </div>
+                    
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-3">                        
+                        <a href="?sort=name&amp;direction=asc&amp;page=2">next</a>
+                    </div>
+                    <div class="col-3 col-sm-2 col-lg-1 text-uppercase order-4"> 
+                        <a href="?sort=name&amp;direction=asc&amp;page=27" >last &raquo;</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-to-top-button shadow-sm rounded-0 border border-dark">
+        <a class="go-to-top-button-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>	
+    </div>
+
+
+        <footer class="container-fluid bg-primary">            
+        <div class="row">
+    <div class="col-12 bg-danger">
+        <!-- Use of marquee tag, https://www.w3schools.in/html-tutorial/marquee-tag/, accessed on March 16th, 2022, at 2:45.
+        Equivalent of marquee tag for HTML5, https://stackoverflow.com/questions/53632338/what-is-the-equivalent-of-marquee-tag-in-html5;
+        accessed on March 16th, 2022, at 3:20. -->
+        <div class="col-12 bg-danger my-0 holder">          
+        </div>          
+    </div>            
+</div>
+
+<div class="row">
+    
+    <div id="div-for-address-in-footer" class="col-12 col-sm-4 col-md-3 col-lg-2 text-center px-0 mx-0 mt-1">
+        <a href="/" class="nav-link">
+            <!-- Font Awesome Icon as logo -->
+            <h4 class="logo-front text-center text-md-left text-light"><i class="fa fa-paw" aria-hidden="true"></i><strong> GDEC</strong></h4>
+        </a>
+        <p class="my-0 py-0 ml-3 text-center text-md-left text-light">Geophysical Data E-Commerce</p>
+        <p class="my-0 py-0 ml-3 text-center text-md-left text-light">email@email.com</p>
+        <p class="my-0 py-0 ml-3 text-center text-md-left text-light">+1234 5678 90</p>
+    </div>
+
+    <div id="div-for-contact-in-footer" class="col-12 col-sm-6 order-sm-4 col-md-5 order-md-2 col-lg-3 text-center px-0 mx-0 mt-1">
+        <h6 class="my-1 pt-3 pt-sm-0 text-center text-light"><strong>Contact</strong></h6>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 my-2">
+                    <a id="contact-link-in-footer" href="/contact/" class="my-0 py-0 text-left text-light"
+                        aria-label="Go to the Contact Form of the Geophysical Data E-Commerce Website (it does not open in a new tab)">Contact Form
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mx-0 px-0">
+                    <ul class="social-contact-links px-0 mx-0">
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce Facebook page (it opens in a new tab)"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce LinkedIn page (it opens in a new tab)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Visit the GGeophysical Data E-Commerce Twitter page (it opens in a new tab)"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="https://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit the Geophysical Data E-Commerce Instagram page (it opens in a new tab)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <!-- Font Awesome Icon -->
+                            <a class="mx-1 mx-sm-2 mx-md-1 mx-lg-1 mx-xl-2 text-light" href="mailto:information@fictitioustgcemail.com" target="_blank" rel="noopener"
+                                aria-label="Send an e-mail to the Geophysical Data E-Commerce (it opens in a new tab)"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <div id="div-for-products-in-footer" class="col-12 col-sm-4 order-sm-2 col-md-2 order-md-3 col-lg-2 px-0 mx-0 mt-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center text-md-left">
+                    <h6 class="my-1 py-0 text-light"><strong>Products</strong></h6>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="digital-data-link-in-footer" href="/products/?category=dem,gravimetry,magnetometry,resistivity" class="my-0 py-0 text-light"
+                    aria-label="Sign Up in the Geophysical Data E-Commerce Website (it opens in a new tab)">Digital Data</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="reports-link-in-footer" href="/products/?category=eia,geological_maps,weather" class="my-0 py-0 text-light"
+                    aria-label="Sign In in the Geophysical Data E-Commerce Website (it opens in a new tab)">Reports</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="training-link-in-footer" href="/products/?category=courses,books" class="my-0 py-0 text-light"
+                    aria-label="Go to the Privacy Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Training</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="software-link-in-footer" href="/products/?category=simulators,data_processing,data_qc" class="my-0 py-0 text-light"
+                    aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Software</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="offers-link-in-footer" href="/products/?category=data_offers,report_offers,training_offers,software_offers" class="my-0 py-0 text-light"
+                    aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Offers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div-for-website-in-footer" class="col-12 col-sm-4 order-sm-3 col-md-2 order-md-4 col-lg-2 px-0 mx-0 mt-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center text-md-left ">
+                    <h6 class="pt-3 pt-sm-0 my-1 py-0 text-light"><strong>Website</strong></h6>
+                </div>
+                
+                    
+                        <div class="col-12 text-center text-md-left">
+                            <!-- Font Awesome Icon -->
+                            <a id="product-management-link-in-footer" href="/products/add/" class="my-0 py-0 text-light"
+                            aria-label="Go to Product Management in the Geophysical Data E-Commerce Website">Product Management</a>
+                        </div>
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="my-profile-link-in-footer" href="/profile/" class="my-0 py-0 text-light"
+                        aria-label="Go to my Profile in the Geophysical Data E-Commerce Website">My Profile</a>
+                    </div>
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="my-wish-list-link-in-footer" href="/wish_list/" class="my-0 py-0 text-light"
+                        aria-label="Go to my My Wish List in the Geophysical Data E-Commerce Website">My Wish List</a>
+                    </div>
+                    <div class="col-12 text-center text-md-left">
+                        <!-- Font Awesome Icon -->
+                        <a id="log-out-link-in-footer" href="/accounts/logout/" class="my-0 py-0 text-light"
+                        aria-label="Log Out of the Geophysical Data E-Commerce Website">Log Out</a>
+                    </div>
+                
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="privacy-link-in-footer" href="/gdpr_privacy_policy/" class="my-0 py-0 text-light"
+                    aria-label="Go to the Privacy Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Privacy</a>
+                </div>
+                <div class="col-12 text-center text-md-left">
+                    <!-- Font Awesome Icon -->
+                    <a id="cookies-link-in-footer" href="/gdpr_cookies/" class="my-0 py-0 text-light"
+                    aria-label="Go to the Cookies Policy of the Geophysical Data E-Commerce Website (it opens in a new tab)">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <div id="div-for-newsletter-in-footer" class="col-12 col-sm-6 order-sm-5 col-md-12 order-md-5 col-lg-3 text-center mx-0 px-0 mt-1 mt-sm-2 mt-lg-1">
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 ml-lg-0 pl-lg-0">
+                    <h6 class="mb-0 pt-3 pt-sm-0 p-md-2 my-lg-1 py-lg-0 text-center text-lg-left text-light"><strong>Newsletter</strong></h6>
+                </div>
+                <div id="div-for-newsletter-form-message" class="col-12 col-md-6 col-lg-12 ml-lg-0 pl-lg-0">
+                    <p class="pt-1 pt-sm-0 mb-0 p-md-3 p-lg-2 mt-lg-1 py-0 text-center text-md-right text-lg-left text-light">
+                       Sign up in our newsletter to receive our weekly news
+                    </p>
+                    
+                </div>
+                <div id="div-for-sign-up-for-newsletter-form-1" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                    <!-- MAILCHIMP */
+                    Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
+                    Automation & Email Platform, https://mailchimp.com);
+                    later modified -->
+                    <!-- Begin Mailchimp Signup Form -->
+                    <form action="https://gmail.us14.list-manage.com/subscribe/post?u=0d5a7a481825cdc6a8cea5aea&amp;id=00935812af"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div class="input-group w-100 pt-1 pt-sm-0">
+                            <input type="email" value="Enter e-mail address" name="EMAIL" class="required email form-control border-light rounded-0" id="mce-EMAIL" required>
+                            <!-- Hidden label added -->
+                            <label for="mce-EMAIL" hidden>Mailchimp Newsletter Registration</label>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <div class="input-group-append">
+                                <button id="Mailchimp-newsletter-button" class="form-control btn border-light rounded-0" type="button" name="subscribe" disabled="disabled">                                    
+                                    <span class="icon text-info">Sign Up
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>                    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 ml-lg-0 pl-lg-0 pr-lg-4">
+                    <p class="text-light pr-0">
+                        Powered by <span><a class="text-white" href="http://eepurl.com/hYYIJX" title="Mailchimp - email marketing made easy and fun" rel="noopener" target="_blank"><u>Mailchimp</u></a></span>
+                    </p>
+                </div>
+                <div id="div-for-sign-up-for-newsletter-form-2" class="col-12 col-md-6 col-lg-12 mt-md-1 ml-lg-1 pl-lg-1 mr-lg-4 pr-lg-4">
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_0d5a7a481825cdc6a8cea5aea_00935812af" tabindex="-1" value="" id="mailchimp-input">
+                        <!-- Hidden label and id attribute (in input above) added -->
+                        <label for="mailchimp-input" hidden>Mailchimp Input</label>
+                    </div>
+                
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>
+
+<!-- MAILCHIMP */
+Generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing,
+Automation & Email Platform, https://mailchimp.com) -->
+<!-- Begin Mailchimp Signup Form -->
+<script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+<!-- This page javascript file -->
+<script src="/static/js/mailchimp_form_submission.js"></script>
+        </footer>
+
+       
+        
+<!-- Font Awesome Script / Kit
+Link created on March 1st, 2022, 03:29 from Font Awesome personal account -->
+<script src="https://kit.fontawesome.com/80e4621b26.js" crossorigin="anonymous"></script>
+<!-- This page javascript file -->
+<script src="/static/js/products.js"></script>
+
+
+  </body>
+</html>

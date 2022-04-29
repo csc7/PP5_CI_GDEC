@@ -654,7 +654,7 @@ The features of the site are the following ones:
 
 - Home page
 - Products (with product administration for the site owner)
-- Product details ((with product administration for the site owner)
+- Product details (with product administration for the site owner and option to comment for users)
 - Bag page
 - Checkout page
 - Secure payment method
@@ -672,8 +672,6 @@ In the second half of the project, two more features were added to improve the u
 
 - Comments
 - Wish list
-
-
 
 Details of these features, including the user story they cover, are the following:
 
@@ -820,7 +818,6 @@ It can be accessed through the icot in the fixed navigation menu, top right, and
 <br>
 
 
-
 - ### **Checkout page**
 
 It is presented when the user/shopper finishes the purchase process and is ready to pay.
@@ -891,7 +888,6 @@ They are Django complementary tools and pages to have sigh-in and sign-out optio
 <br>
 
 
-
 - ### **Registration (sign-up)**
 
 They are Django complementary tools and pages to have a sign-up option for users. 
@@ -911,7 +907,6 @@ They are Django complementary tools and pages to have a sign-up option for users
 <br><br>
 
 
-
 - ### **Profile with history order**
 
 It is a page that shows the user information and history order after selected the option in the fixed navigation menu when the user is signed in. 
@@ -924,10 +919,6 @@ It is a page that shows the user information and history order after selected th
 
 ![Profile and History Order Image](docs/features-and-evidence/profile.PNG)
 </details>
-
-<br><br>
-## [Back to Index](#index)
-<br><br>
 
 
 - ### **Contact form**
@@ -943,10 +934,6 @@ It is a contact form in a separate page, accessible from the footer, that gives 
 ![Contact Form Image](docs/features-and-evidence/contact-form.PNG)
 
 </details>
-
-<br><br>
-## [Back to Index](#index)
-<br><br>
 
 
 - ### **Footer**
@@ -964,10 +951,6 @@ They are Django complementary tools and pages to have a sign-up option for users
 ![Footer for Cell Image](docs/features-and-evidence/footer-cell.PNG)
 </details>
 
-<br><br>
-## [Back to Index](#index)
-<br><br>
-
 
 - ### **404 page**
 
@@ -983,10 +966,6 @@ They are Django complementary tools and pages to have an error page that informs
 ![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
 ![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
 </details>
-
-<br><br>
-## [Back to Index](#index)
-<br><br>
 
 
 - ### **Pop-up status messages**
@@ -1009,10 +988,6 @@ They are Django complementary messages that informs the user, with pop-ups, that
 
 </details>
 
-<br><br>
-## [Back to Index](#index)
-
-
 
 - ### **Product Comments**
 
@@ -1023,10 +998,6 @@ It allows users to comment products below its product details.
 
 ![Product Comments Image](docs/features-and-evidence/product-reviews.PNG)
 </details>
-
-
-<br><br>
-## [Back to Index](#index)
 
 
 
@@ -1052,13 +1023,9 @@ It allows users to save products they like or are interested in for future purch
 ![Wish List Cell Image](docs/features-and-evidence/wish-list-cell.PNG)
 </details>
 
-<br><br>
+<br>
 ## [Back to Index](#index)
-
-
 <br><br>
-
-
 
 
 ___
@@ -1078,7 +1045,7 @@ The following tools were used to validate the **files of the website**:
 https://validator.w3.org/ was used to validate the new HTML files. Pages were rendered to get the HTML code (otherwise Django templates would alone would give errors). When possible (where pages do not require log-in), the page link was tested in the validator.
 
 <details>
-    <summary>Home (index.html)</summary>
+    <summary>Home (index.html) [here](https://github.com/csc7/PP5_CI_GDEC/projects/1) </summary>
 
 ![Evidence of no errors in the home HTML file](docs/validation/validation-html-validator-w3-org-home.PNG) 
 </details>

@@ -2287,14 +2287,26 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Home page<br> | Design the home page to give a quick overview of the e-commerce | Find the home page, giving the idea of the e-commerce and a few messages to give the user an idea of what can be found in the site | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Home Page Desktop Image</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Home Page Image for Desktop](docs/features-and-evidence/home-page-desktop.PNG)
+</details>
+
+<details>
+    <summary>Home Page Tablet Image</summary>
+
+![Home Page Image for Tablet](docs/features-and-evidence/home-page-tablet.PNG)
+</details>
+
+<details>
+    <summary>Home Page Cell Image</summary>
+
+![Home Page Image for Cell](docs/features-and-evidence/home-page-cell.PNG)
 </details>
 <br><br>
 
 
-24. As owner, I want to provide an easy process for registration, so I ensure a connection with a potential buyer.
+24. As owner, I want to provide an easy process for sign-up, so I ensure a connection with a potential buyer.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
@@ -2303,7 +2315,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Screenshot</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/easy-sign-up.PNG) 
 </details>
 <br><br>
 
@@ -2315,9 +2327,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br> | As user story 18, include a search field in the fixed navigation menu that looks for products (according to the search criteria) in the backend and return the results to the products page | Show products related to the search criteria | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Search Field for Desktop</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Search Field for Desktop](docs/features-and-evidence/search-field-desktop.jpg) 
+</details>
+<details>
+    <summary>Search Field for Smaller Screens</summary>
+
+![Search Field for Smaller Screens](docs/features-and-evidence/search-field-smaller-screens.PNG) 
 </details>
 <br><br>
 
@@ -2329,9 +2346,34 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Products (with product administration for the site owner)<br> | As user story 19, include links/list item elements in the fixed navigation menu that filter the data in the backend according to categories (previously created) and return the result to the products page/view | Show products related to the selected category in the menu | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Products by Categories</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Products by Categories](docs/features-and-evidence/find-products-by-category-1.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Digital Data</summary>
+
+![Products by Categories, Digital Data](docs/features-and-evidence/find-products-by-category-2.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Reports</summary>
+
+![Products by Categories, Reports](docs/features-and-evidence/find-products-by-category-3.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Training</summary>
+
+![Products by Categories, Training](docs/features-and-evidence/find-products-by-category-4.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Software</summary>
+
+![Products by Categories, Software](docs/features-and-evidence/find-products-by-category-5.PNG) 
+</details>
+<details>
+    <summary>Products by Categories, Offers</summary>
+
+![Products by Categories, Offers](docs/features-and-evidence/find-products-by-category-6.PNG) 
 </details>
 <br><br>
 
@@ -2343,9 +2385,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user stories 4; 6 and 9; implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form Link in Footer</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form Link in Footer](docs/features-and-evidence/footer-desktop-contact-form-link.jpg) 
+</details>
+<details>
+    <summary>Contact Form</summary>
+
+![Contact Form](docs/features-and-evidence/contact-form.PNG) 
 </details>
 <br><br>
 
@@ -2357,9 +2404,25 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br> | As user story 7, Include a fixed navigation menu on top, in the header of pages, with links to main parts of the site | Navigate to the selected sites, without using the back button, without scrolling down, and without manually editing the URL  | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Tablet Image</summary>
+
+
+![Fixed Navigation Menu for Tablet Image](docs/features-and-evidence/fixed-navigation-menu-tablet.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu for Cell Phones Image</summary>
+
+![Fixed Navigation Menu for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell.PNG)
+</details>
+<details>
+    <summary>Fixed Navigation Menu, expanded, for Cell Phones Image</summary>
+
+![Fixed Navigation Menu, Expanded, for Cell Phones Image](docs/features-and-evidence/fixed-navigation-menu-cell-expanded.PNG)
 </details>
 <br><br>
 
@@ -2371,9 +2434,14 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Contact form<br>Footer<br> | Similar to user stories 4; 6; 9 and 27; implement a contact form in a separated page, give as many as possible contact options in footer (which is available in all pages of the site) | Access contact form and other options directly from the footer | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form](docs/features-and-evidence/contact-form.PNG) 
+</details>
+<details>
+    <summary>Contact Options</summary>
+
+![Contact Options](docs/features-and-evidence/footer-contact-options.jpg) 
 </details>
 <br><br>
 
@@ -2385,9 +2453,34 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Similar to user story 2, use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Desktop example: Home</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Desktop example, Home, Image](docs/features-and-evidence/home-page-desktop.PNG)
+</details>
+<details>
+    <summary>Desktop example: Products</summary>
+
+![Desktop example, Products, Image](docs/features-and-evidence/products.PNG)
+</details>
+<details>
+    <summary>Tablet example: Products</summary>
+
+![Tablet example, Products, Image](docs/features-and-evidence/products-tablet.PNG)
+</details>
+<details>
+    <summary>Tablet example: Bag</summary>
+
+![Tablet example, Bag, Image](docs/features-and-evidence/bag-tablet.PNG)
+</details>
+<details>
+    <summary>Cell phone example: Products</summary>
+
+![Cell phone example, Products, Image](docs/features-and-evidence/products-cell.PNG)
+</details>
+<details>
+    <summary>Cell phone example: Wish List</summary>
+
+![Cell phone example, Wish List, Image](docs/features-and-evidence/wish-list-cell.PNG)
 </details>
 <br><br>
 
@@ -2399,9 +2492,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Pop-up status messages<br> | Similar to user story 10, use a Django confirmation page to inform the user if sending the contact form is successful | Show a successful page after sending the form | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Contact Form Confirmation</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![Contact Form Confirmation](docs/features-and-evidence/contact-form-confirmation.PNG) 
 </details>
 <br><br>
 
@@ -2413,9 +2506,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>404 page<br> | Use Django error page to inform the user if any action when navigating the site produces an error | Show an error message on a page after facing a problem, e.g., a broken URL | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>404 Page Showing Error Message</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
+![404 Page Showing Error Message](docs/features-and-evidence/404_page.PNG) 
 </details>
 <br><br>
 
@@ -2428,11 +2521,11 @@ The following are testing of User Stories previously described above:
 | --- | --- | --- | --- |
 | Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Implement all knowledge gathered so far in full-stack software development, with as many features as possible according to the Code Institute program time frame | Show as many full-stack software development capabilities as possible | Expecting results and feedback | 
 
-<details>
-    <summary>Screenshot</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/Esri-map.PNG) 
-</details>
+![Project Link](https://github.com/csc7/PP5_CI_GDEC)
+
+![Developer's Repositories](https://github.com/csc7) 
+
 <br><br>
 
 

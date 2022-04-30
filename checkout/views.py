@@ -101,6 +101,10 @@ def checkout(request):
 
             for item_id, item_data in bag.items():
                 try:
+                    # Ignore if item in bag is not a product and only reads
+                    # the selected delivery method
+                    if item_id == 'cancel_delivery_cost_factor':
+                        continue
                     product = Product.objects.get(id=item_id)
                     # if integer, then the item does not have resolution
                     if isinstance(item_data, int):
@@ -151,8 +155,15 @@ def checkout(request):
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
-
-        print (current_bag)
+ 
+        # Send selected delivery option to checkout success, since the
+        # cancellation of delivery costs is not automatically updated in the
+        # update_total function of the Order model
+        if current_bag['cancel_delivery_cost'] == 0:
+            print("Delivery is zero")
+            request.session['delivery_cost_applied'] = True
+        else:
+            request.session['delivery_cost_applied'] = False
         
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
@@ -207,8 +218,16 @@ def checkout_success(request, order_number):
     context variables:
         'order'
     """
-    save_info = request.session.get('save_info')
+    save_info = request.session.get('save_info')  
     order = get_object_or_404(Order, order_number=order_number)
+
+    # If selected delivery option is to cancel it, update delivery cost in the
+    # Order model, since the delivery cost is not automatically set to zero
+    # for this case in its update_total function
+    delivery_cost_applied = request.session.get('delivery_cost_applied')
+    if delivery_cost_applied == True:
+        order.delivery_cost = 0
+        order.grand_total = order.order_total - order.  discount  
 
     # Save purshcase if user is authenticated
     if request.user.is_authenticated:

@@ -82,7 +82,6 @@ def bag_contents(request):
 
 
         if isinstance(item_data, int):
-
             product = get_object_or_404(Product, pk=item_id)
             order_total += item_data * product.price
             order_product_count += item_data
@@ -121,9 +120,6 @@ def bag_contents(request):
         delivery = delivery * cancel_delivery_cost_factor
         discount = order_total * Decimal(settings.DISCOUNT_PERCENTAGE/100)
         delta_for_discount = 0
-
-    if cancel_delivery_cost:
-        delivery = 0
 
     grand_total = order_total + delivery - discount
   

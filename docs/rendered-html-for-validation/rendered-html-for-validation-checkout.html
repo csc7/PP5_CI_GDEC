@@ -124,7 +124,7 @@
                                     <div><i class="fa fa-shopping-cart fa-lg text-primary" aria-hidden="true"></i></div>
                                     <p class="my-0 text-primary">
                                         
-                                            $104.40
+                                            $11.82
                                         
                                     </p>
                                 </div>
@@ -182,7 +182,7 @@
                         <a href="/products/add/" class="dropdown-item">Product Management</a>
                     
                     <a href="/profile/" class="dropdown-item">My Profile</a>
-                    <a href="/accounts/logout/" class="dropdown-item">Logout</a>
+                    <a href="/accounts/logout/" class="dropdown-item">Log Out</a>
                 
             </div>
         </li>
@@ -204,7 +204,7 @@
                     <div class="cell-phone-nav-button"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></div>
                     <p class="my-0 d-none d-sm-block">
                         
-                            $104.40
+                            $11.82
                         
                     </p>
                 </div>
@@ -362,7 +362,7 @@
     <!-- Order Summary -->
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary (3)</p>
+            <p class="text-muted">Order Summary (1)</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -374,37 +374,19 @@
             
                 <div class="row">
                     <div class="col-2 mb-1 dark-blue-font">
-                        <a href="/products/98">
+                        <a href="/products/121">
                             
-                                <img class="w-100" src="/media/gravimetry_for_Norway.png" alt="Image for ">
+                                <img class="w-100" src="/media/magnetometry_for_Canada.png" alt="Image for ">
                             
                         </a>
                     </div>
                     <div class="col-7">
-                        <p class="my-0"><strong>Norway Gravimetry</strong></p>
+                        <p class="my-0"><strong>Canada Magnetometry</strong></p>
                         <p class="my-0 small">Resolution: HIGH</p>
-                        <p class="my-0 small text-muted">Qty: 2</p>
-                    </div>
-                    <div class="col-3 text-right dark-blue-font">
-                        <p class="my-0 small text-muted">$46.90</p>
-                    </div>
-                </div>
-            
-                <div class="row">
-                    <div class="col-2 mb-1 dark-blue-font">
-                        <a href="/products/311">
-                            
-                                <img class="w-100" src="/media/pexels-rachel-claire-4993089.jpg" alt="Image for ">
-                            
-                        </a>
-                    </div>
-                    <div class="col-7">
-                        <p class="my-0"><strong>Geology for Engineers</strong></p>
-                        <p class="my-0 small">Resolution: N/A</p>
                         <p class="my-0 small text-muted">Qty: 1</p>
                     </div>
                     <div class="col-3 text-right dark-blue-font">
-                        <p class="my-0 small text-muted">$48.01</p>
+                        <p class="my-0 small text-muted">$11.82</p>
                     </div>
                 </div>
             
@@ -413,19 +395,21 @@
                 <div class="col-7 offset-2 dark-blue-font">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
-                    <p class="my-0">Grand Total:</p>
+                    <p class="my-0">Discount:</p>
+                    <p class="my-0"><strong>Grand Total:</strong></p>
                 </div>
                 <div class="col-3 dark-blue-font">
-                    <p class="my-0">$</p>
-                    <p class="my-0">$9.49</p>
-                    <p class="my-0"><strong>$104.40</strong></p>
+                    <p class="my-0">$11.82</p>
+                    <p class="my-0">$0.00</p>
+                    <p class="my-0 text-danger">- $0.00</p>
+                    <p class="my-0"><strong>$11.82</strong></p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-lg-6 bottom-marging-for-large-screens">
             <p class="text-muted">Please complete your order below</p>
             <form action="/checkout/" method="POST" id="payment-form">
-                <input type="hidden" name="csrfmiddlewaretoken" value="kEWk1mzTvxTVjPTZUAT0xu8HvBjG0jtG6tEp2JrIJmLKNIbEYgzLiyJWLhrtrQx7">
+                <input type="hidden" name="csrfmiddlewaretoken" value="5IRAFreui89WJOZ2cKFOE0fBsbx9hX9UiztbKvZM9fgz4sTBAQ6TQeo6oBoGqC7Y">
                 <fieldset class="rounded px-3 mb-5 dark-blue-font">
                     <legend class="fieldset-label dark-blue-font px-2 w-auto">Details</legend>
                     
@@ -581,7 +565,7 @@
                 <div>
                     
                         
-                            <input type="text" name="street_address1" value="asdf" maxlength="80" placeholder="Street Address 1 *" class="stripe-style-input textinput textInput form-control" required id="id_street_address1">
+                            <input type="text" name="street_address1" value="Streetname Bvd." maxlength="80" placeholder="Street Address 1 *" class="stripe-style-input textinput textInput form-control" required id="id_street_address1">
                         
                     
                     
@@ -624,7 +608,7 @@
                 <div>
                     
                         
-                            <input type="text" name="street_address2" value="asdf" maxlength="80" placeholder="Street Address 2" class="stripe-style-input textinput textInput form-control" id="id_street_address2">
+                            <input type="text" name="street_address2" value="Street 2" maxlength="80" placeholder="Street Address 2" class="stripe-style-input textinput textInput form-control" id="id_street_address2">
                         
                     
                     
@@ -667,7 +651,7 @@
                 <div>
                     
                         
-                            <input type="text" name="town_or_city" value="asdf" maxlength="40" placeholder="Town or City *" class="stripe-style-input textinput textInput form-control" required id="id_town_or_city">
+                            <input type="text" name="town_or_city" value="Littletown" maxlength="40" placeholder="Town or City *" class="stripe-style-input textinput textInput form-control" required id="id_town_or_city">
                         
                     
                     
@@ -710,7 +694,7 @@
                 <div>
                     
                         
-                            <input type="text" name="county" value="asdf" maxlength="80" placeholder="County" class="stripe-style-input textinput textInput form-control" id="id_county">
+                            <input type="text" name="county" value="Cuntyname" maxlength="80" placeholder="County" class="stripe-style-input textinput textInput form-control" id="id_county">
                         
                     
                     
@@ -1333,7 +1317,7 @@
                     <!-- Display Form Errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     <!-- Client secret to get payment intent ID in the view -->
-                    <input type="hidden" value="pi_3KtLbdKQSNR7stGz0rnidgEW_secret_zEwEaRlrFPJ7vbmV1p1CbAJnV" name="client_secret">
+                    <input type="hidden" value="pi_3KuOszKQSNR7stGz13weZGTw_secret_KMJ2YQW8RaGz2abR770ecqH84" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-right mt-5 mb-2">                    
                     <a href="/bag/" class="btn btn-outline-primary rounded-0">
@@ -1352,7 +1336,7 @@
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
-                        <span>Your card will be charged <strong>$104.40</strong></span>
+                        <span>Your card will be charged <strong>$11.82</strong></span>
                     </p>
                 </div>
             </form>
@@ -1604,7 +1588,7 @@ Automation & Email Platform, https://mailchimp.com) -->
         
     <!-- Stripe -->
     <script id="id_stripe_public_key" type="application/json">"pk_test_51KeWodKQSNR7stGzcyjyUATjGt23SEWqFm9K1eratqYYrOPOL4sUOnTb3ARFgZVtBUjj3jhMKXQIBU0UIN6ztzNP00oZRG9e7Y"</script>
-    <script id="id_client_secret" type="application/json">"pi_3KtLbdKQSNR7stGz0rnidgEW_secret_zEwEaRlrFPJ7vbmV1p1CbAJnV"</script>
+    <script id="id_client_secret" type="application/json">"pi_3KuOszKQSNR7stGz13weZGTw_secret_KMJ2YQW8RaGz2abR770ecqH84"</script>
     <!-- This page javascript file -->
     <script src="/static/js/stripe_elements.js"></script>
 

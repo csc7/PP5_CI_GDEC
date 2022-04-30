@@ -2,7 +2,5 @@
 // to have the data downloaded and therefore avoid shipping costs
 
 $('#digital').change(function() {
-    var status = $("#digital").is(':checked');
-    console.log(status);
     this.form.submit();
 });

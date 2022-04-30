@@ -9,7 +9,7 @@ Django views for the bag app
 # IMPORTED RESOURCES #
 
 # EXTERNAL:
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect
 from django.shortcuts import HttpResponse, get_object_or_404
 from django.contrib import messages
 import re
@@ -17,7 +17,6 @@ import json
 
 # INTERNAL:
 from products.models import Product
-from bag.contexts import bag_contents
 
 ###############################################################################
 
@@ -33,12 +32,12 @@ def view_bag(request):
     Parameters Out: HTTP request object to bag/bag.html template
     """
 
-    # From Code Institute, Tutor Assistance, Sean Murphy, on 
+    # From Code Institute, Tutor Assistance, Sean Murphy, on
     # April 30th, 2022, at 12:29 PM
     if request.method == 'POST':
-        bag = request.session.get ('bag', {})
+        bag = request.session.get('bag', {})
 
-        if request.POST.get ('digital', False):
+        if request.POST.get('digital', False):
             bag['cancel_delivery_cost_factor'] = 1
 
         else:

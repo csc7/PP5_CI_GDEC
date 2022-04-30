@@ -1326,7 +1326,7 @@ Flake8 (command: python3 -m flake8) was run to eliminate the loading of unused l
 <details>
     <summary>settings.py</summary>
 
-![Evidence of file settings.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-settings.PNG) 
+![Evidence of file settings.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-pp5-ci-gdec-settings.PNG) 
 </details>
 <details>
     <summary>urls.py</summary>

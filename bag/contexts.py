@@ -44,7 +44,7 @@ def bag_contents(request):
     # Check if user has activated the option to receive the data
     # digitally and therefore cancel delivery costs
     if request.method == 'POST':
-        cancel_delivery_cost = request.POST.get('digital', False)      
+        cancel_delivery_cost = request.POST.get('digital', False)
         if cancel_delivery_cost:
             cancel_delivery_cost_factor = 0
         else:
@@ -62,24 +62,23 @@ def bag_contents(request):
     order_product_count = 0
     bag = request.session.get('bag', {})
 
-    # From Code Institute, Tutor Assistance, Sean Murphy, on 
+    # From Code Institute, Tutor Assistance, Sean Murphy, on
     # April 30th, 2022, at 12:29 PM
     cancel_delivery_cost_factor = 0
     cancel_delivery_cost = False
     # End from Code Institute
- 
+
     # Iterate elements in the bag, accounting for item, quantity, product
     # and, if applies, resolution
     for item_id, item_data in bag.items():
 
-        # From Code Institute, Tutor Assistance, Sean Murphy, on 
+        # From Code Institute, Tutor Assistance, Sean Murphy, on
         # April 30th, 2022, at 12:29 PM
         if item_id == 'cancel_delivery_cost_factor':
             cancel_delivery_cost_factor = 1
             cancel_delivery_cost = True
             continue
         # End from Code Institute
-
 
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
@@ -122,7 +121,7 @@ def bag_contents(request):
         delta_for_discount = 0
 
     grand_total = order_total + delivery - discount
-  
+
     # Return context to bag template
     context = {
         'bag_items': bag_items,

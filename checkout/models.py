@@ -94,7 +94,7 @@ class Order(models.Model):
 
         if self.order_total >= settings.DISCOUNT_THRESHOLD:
             self.discount = \
-                self.order_total * settings.DISCOUNT_PERCENTAGE / 100            
+                self.order_total * settings.DISCOUNT_PERCENTAGE / 100
         else:
             self.discount = 0
 

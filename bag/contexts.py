@@ -44,12 +44,11 @@ def bag_contents(request):
     # Check if user has activated the option to receive the data
     # digitally and therefore cancel delivery costs
     if request.method == 'POST':
-        cancel_delivery_cost = request.POST.get('digital', False)
+        cancel_delivery_cost = request.POST.get('digital', False)      
         if cancel_delivery_cost:
             cancel_delivery_cost_factor = 0
         else:
             cancel_delivery_cost_factor = 1
-
     else:
         cancel_delivery_cost = request.POST.get('digital', False)
         if cancel_delivery_cost:
@@ -62,7 +61,7 @@ def bag_contents(request):
     order_total = 0
     order_product_count = 0
     bag = request.session.get('bag', {})
-
+ 
     # Iterate elements in the bag, accounting for item, quantity, product
     # and, if applies, resolution
     for item_id, item_data in bag.items():

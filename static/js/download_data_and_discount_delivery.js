@@ -3,5 +3,20 @@
 
 $('#digital').change(function() {
     var status = $("#digital").is(':checked');
-    this.form.submit();   
+    console.log(status);
+    this.form.submit();
+
+    //$.ajax({
+    //type: 'POST',        
+    //url: '/bag/',
+    //data: {
+    //    'csrfmiddlewaretoken': csrfToken,
+    //    'status': status},
+    //success: function () {
+    //    //window.location = '/view_bag/';
+    //    $("#digital").load(location.href+" #digital>*","");
+    //}
+    //});
+
+
 });

@@ -17,6 +17,7 @@ import json
 
 # INTERNAL:
 from products.models import Product
+from bag.contexts import bag_contents
 
 ###############################################################################
 
@@ -31,8 +32,6 @@ def view_bag(request):
 
     Parameters Out: HTTP request object to bag/bag.html template
     """
-    
-    request.session['disco'] = 'disco'
 
     return render(request, 'bag/bag.html')
 

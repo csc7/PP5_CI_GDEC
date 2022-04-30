@@ -254,6 +254,7 @@ The following are the tables involved in the relational model and the field type
     - **County:** char
     - **Date:** date
     - **Delivery Cost:** decimal
+    - **Discount:** decimal
     - **Order Total:** decimal
     - **Grand Total:** decimal
     - **Original Bag:** text

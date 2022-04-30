@@ -31,7 +31,8 @@ from profiles.models import UserProfile
 # To check if the user has the "save info" box checked during payment
 @require_POST
 def cache_checkout_data(request):
-    """View for the purchasing bag
+    """
+    View for the purchasing bag
     This function check if the user has the "save info" box checked
     during payment
 

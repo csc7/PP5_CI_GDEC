@@ -41,7 +41,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ###############################################################################
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 0
+DEBUG = 1
 # SET TO 0 POR PRODUCTION!
 ###############################################################################
 
@@ -107,7 +107,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
-                'wish.contexts.wish_list_contents',
+                #'wish.contexts.wish_list_contents',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',

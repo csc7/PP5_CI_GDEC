@@ -33,6 +33,21 @@ def view_bag(request):
     Parameters Out: HTTP request object to bag/bag.html template
     """
 
+    # From Code Institute, Tutor Assistance, Sean Murphy, on 
+    # April 30th, 2022, at 12:29 PM
+    if request.method == 'POST':
+        bag = request.session.get ('bag', {})
+
+        if request.POST.get ('digital', False):
+            bag['cancel_delivery_cost_factor'] = 1
+
+        else:
+            if 'cancel_delivery_cost_factor' in bag:
+                del bag['cancel_delivery_cost_factor']
+
+        request.session['bag'] = bag
+    # End from Code Institute
+
     return render(request, 'bag/bag.html')
 
 

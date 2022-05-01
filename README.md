@@ -61,7 +61,7 @@ Please keep in mind that the interaction with the database and corresponding dis
 
 ### **Generation of the products of the site**
 
-As stated at the begining, the site is a **fictitious** e-commerce. To generate the products, the Natural Earth quick start kit" (50m raster) was downloaded from Natural Earth's website https://www.naturalearthdata.com/downloads/. This kit contains a planisphere from where QGIS was used to filter it by countries, by running the file "products_database_generation_for_QGIS.py" (in the "/tools" folder in the project root directory) in the Python console of QGIS.
+As stated at the beginning, the site is a **fictitious** e-commerce. To generate the products, the Natural Earth quick start kit" (50m raster) was downloaded from Natural Earth's website https://www.naturalearthdata.com/downloads/. This kit contains a planisphere from where QGIS was used to filter it by countries, by running the file "products_database_generation_for_QGIS.py" (in the "/tools" folder in the project root directory) in the Python console of QGIS.
 
 Once all countries were filtered, different scale colours were applied for them, one for each category (digital elevation models, gravimetry, resistivity and magnetometry data), to simulate different products. To simulate some "randomness" of the products, some products were randomly deleted (this way, not all countries have the same products).
 
@@ -96,10 +96,10 @@ ___
 UX has been addressed around Jesse James Garrett's process and its five planes:
 - **STRATEGY**: to develop an e-commerce website (product) that makes purchasing of geophysical data simple and intuitive.
 - **SCOPE**: the minimum viable product needs to include features that allow the user to know the following:
-    - Home page that act as staring point and welcome page for the site.
+    - Home page that acts as staring point and welcome page for the site.
     - A main navigation menu where, along with a footer, gives access to the main parts of the website, including registration and sign-in for users.
     - Images and the products with their associated price for purchasing.
-    - A method to pay the products; for instance, stripe.
+    - A method to pay the products, for instance, stripe.
     - A database that accounts for all the data in the website and allows interaction of the users with the products (purchase) and their accounts.
 - **STRUCTURE**: the information is structured as follows:
     - Home page (act as welcome page).
@@ -123,22 +123,22 @@ UX has been addressed around Jesse James Garrett's process and its five planes:
 #### [Back to Index](#index)
 
 ### **User Goals**
-- To easily find and buy products (geophyical data, and training and software products).
+- To easily find and buy products (geophysical data, and training and software products).
 - To find an interactive website.
 - To navigate through a responsive website.
 - To have the website accessible at all times through a fixed navigation menu and a footer.
-- To have an account in the website for future purchases or review of past purchases, giving the change to store personal data.
+- To have an account on the website for future purchases or review of past purchases, giving the change to store personal data.
 - To be able to contact the site administrator, owner and/or developer if desired.
 - To be informed of the events created when navigating the website as soon as they happen.
 
 #### [Back to Index](#index)
 
 ### **Site Owner Goals**
-- To sell geophyical data, and training and software products.
+- To sell geophysical data, and training and software products.
 - To promote different products.
 - To have the website helping on the marketing of the e-commerce (e.g., linking to contact information and options, social networks, and giving the option to sign up for a newsletter).
 - To capture clients.
-- To increase the amount of users interested in and buyint geophyical data, and training and software products.
+- To increase the number of users interested in and buying geophysical data, and training and software products.
 - To provide an interactive website.
 - To provide a responsive website.
 - To give users the chance to contact the site administrator, owner and/or developer.
@@ -182,7 +182,7 @@ User stories are divided into the following three groups:
 22. As a shopper, I want to have a secure payment method, so I can rest assured that the purchase procedure is safe.
 
 - ### **Site Owner**
-23. As owner, I want to provide an introductory page, so users know what can be found in the website and what can be purchased.
+23. As owner, I want to provide an introductory page, so users know what can be found on the website and what can be purchased.
 24. As owner, I want to provide an easy process for registration, so I ensure a connection with a potential buyer.
 25. As owner, I want to provide a search field for products on top, so I require users/shoppers the minimum possible time to find a product (and therefore reduce the risk of leaving).
 26. As owner, I want to organize products in categories, so users find an organized site and can find products easily.

@@ -690,7 +690,7 @@ It is in the header, fixed on all pages to facilitate navigation, and responsive
 <details>
     <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu-desktop.PNG)
 </details>
 <details>
     <summary>Fixed Navigation Menu for Tablet Image</summary>
@@ -736,7 +736,7 @@ It separates the fixed navigation menu and the body of the site, and shows adver
 <details>
     <summary>Banner with Latest News for Cell Phones Image, expanded</summary>
 
-![Banner with Latest News for Cell Phones Image, expanded](docs/features-and-evidence/banner-with-latest-news-cell-expanded.PNGG)
+![Banner with Latest News for Cell Phones Image, expanded](docs/features-and-evidence/banner-with-latest-news-cell-expanded.PNG)
 </details>
 <br>
 
@@ -779,7 +779,7 @@ Products appear after selecting categories or searching in the fixed navigation 
 <details>
     <summary>Check Home Page Desktop Image</summary>
 
-![Products Page](ddocs/features-and-evidence/products.PNG)
+![Products Page](docs/features-and-evidence/products.PNG)
 </details>
 
 <details>
@@ -831,11 +831,26 @@ It is presented when the user/shopper finishes the purchase process and is ready
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Checkout Image</summary>
+    <summary>Checkout Image 1</summary>
 
-![Checkout Page Image](docs/features-and-evidence/checkout.PNG)
+![Checkout Page Image 1](docs/features-and-evidence/checkout.PNG)
 
 </details>
+
+<details>
+    <summary>Checkout Image 2</summary>
+
+![Checkout Image 2](docs/features-and-evidence/payment-checkout.PNG)
+
+</details>
+
+<details>
+    <summary>Checkout Image - 2nd Page</summary>
+
+![Checkout Image - 2nd Page](docs/features-and-evidence/payment-checkout-2.PNG)
+
+</details>
+
 <br>
 
 
@@ -850,6 +865,27 @@ It is the payment process for the e-commerce, powered by Stripe.
     <summary>Stripe Payment Image</summary>
 
 ![Payment Process Image](docs/features-and-evidence/Stripe-payment.PNG)
+
+</details>
+
+<details>
+    <summary>Stripe Payment Image - Checkout</summary>
+
+![Stripe Payment Image - Checkout](docs/features-and-evidence/payment-checkout.PNG)
+
+</details>
+
+<details>
+    <summary>Stripe Payment Image - Checkout 2nd Page</summary>
+
+![Stripe Payment Image - Checkout 2nd Page](docs/features-and-evidence/payment-checkout-2.PNG)
+
+</details>
+
+<details>
+    <summary>Stripe Payment Image - Checkout Success</summary>
+
+![Stripe Payment Image - Checkout Success](docs/features-and-evidence/payment-success.PNG)
 
 </details>
 <br>
@@ -868,6 +904,14 @@ It is presented after a successful payment carried out by the user/shopper.
 ![Checkout Success Image](docs/features-and-evidence/checkout-success.PNG)
 
 </details>
+
+<details>
+    <summary>Checkout Success Image 2</summary>
+
+![Checkout Success Image 2](docs/features-and-evidence/payment-success.PNG)
+
+</details>
+
 <br>
 
 
@@ -907,9 +951,7 @@ They are Django complementary tools and pages to have a sign-up option for users
 
 </details>
 
-<br><br>
-## [Back to Index](#index)
-<br><br>
+<br>
 
 
 - ### **Profile with history order**
@@ -959,17 +1001,25 @@ They are Django complementary tools and pages to have a sign-up option for users
 
 - ### **404 page**
 
-They are Django complementary tools and pages to have an error page that informs the user that something has gone wrong (e.g., wrong address, broken URL). 
+It is a Django complementary tool and page that presents an error page informing the user that something has gone wrong (e.g., wrong address, broken URL). 
 
 *User Stories Addressed by this Feature: 1; 2; 10; 30; 32 and 33.*
 
 *Please check "11. Testing of User Stories" for more details.*
 <details>
-    <summary>Check Image</summary>
+    <summary>404 Page Image</summary>
 
-![Registration Sign-In Images](docs/features-and-evidence/sign-in.PNG)
-![Registration Sign-Up Images](docs/features-and-evidence/sign-up.PNG)
-![Registration Sign-Out Images](docs/features-and-evidence/sign-out.PNG)
+![404 Page Image for desktop](docs/features-and-evidence/404-page.PNG)
+</details>
+<details>
+    <summary>404 Page Image</summary>
+
+![404 Page Image for tablet](docs/features-and-evidence/404-page-tablet.PNG)
+</details>
+<details>
+    <summary>404 Page Image</summary>
+
+![404 Page Image for Cell Phones](docs/features-and-evidence/404-page-cell.PNG)
 </details>
 
 
@@ -1031,6 +1081,7 @@ It allows users to save products they like or are interested in for future purch
 </details>
 
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 

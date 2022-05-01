@@ -160,7 +160,6 @@ def checkout(request):
         # cancellation of delivery costs is not automatically updated in the
         # update_total function of the Order model
         if current_bag['cancel_delivery_cost'] == 0:
-            print("Delivery is zero")
             request.session['delivery_cost_applied'] = True
         else:
             request.session['delivery_cost_applied'] = False

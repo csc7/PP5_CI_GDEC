@@ -51,7 +51,6 @@ $("#mc-embedded-subscribe-form").submit(function(e) {
     $("#mce-error-response").css("font-size", "80%");
     $("#mce-error-response").css("padding-top", "3px");
 
-    console.log($("#mce-error-response"));
 
     // Do not display "Sing up for newsletter" message withing this widths as the height of the footer is not enough
     if ($(window).width() > 992 && $(window).width() < 1080) {
@@ -99,7 +98,7 @@ function validateEMail(eMailAddress) {
         }
         
     }
-    console.log(numberOfAtSign + ' ' + numberOfDots + ' ' + numberOfOtherCharacters + '' + eMailString[eMailString.length-1]);
+
     // There must be only one at sign, at least one dot, and no other characters
     // to validate the e-mail address
     if (numberOfAtSign == 1 && numberOfDots > 0 && numberOfOtherCharacters == 0 && eMailString[eMailString.length-1] !='.') {

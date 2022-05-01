@@ -235,7 +235,7 @@ Finally, a **"contact"** model is created, unrelated to the previous tables, to 
 
 The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are built with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 
-![Data Model Image](docs/data_model.PNG)
+![Data Model Image](docs/data-model.PNG)
 *Chart created with ERDPlus (https://erdplus.com/standalone).*
 
 The following are the tables involved in the relational model and the field types in each of them.

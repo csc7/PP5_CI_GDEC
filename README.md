@@ -395,63 +395,69 @@ Please check the PDFs files for each case in the following links:
 <details>
     <summary>Desktop Wireframe Image for Home Page</summary>
 
-![Desktop Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-desktop-instructions.PNG)
+![Desktop Wireframe Image for Home App/Page](docs/wireframes/wireframes-gdec-desktop-home.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Products Page</summary>
 
-![Desktop Wireframe Image for Products Page](docs/wireframes/wireframe-wqcs-desktop-weather.PNG)
+![Desktop Wireframe Image for Products Page](docs/wireframes/wireframes-gdec-desktop--products.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Product Details Page</summary>
 
-![Desktop Wireframe Image for Product Details Page](docs/wireframes/wireframe-wqcs-desktop-blog.PNG)
+![Desktop Wireframe Image for Product Details Page](docs/wireframes/wireframes-gdec-desktop-product-details.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Profile Page</summary>
 
-![Desktop Wireframe Image for Profile App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Profile App/Page](docs/wireframes/wireframes-gdec-desktop-my-profile.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Wish List Page</summary>
 
-![Desktop Wireframe Image for Wish List App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Wish List App/Page](docs/wireframes/wireframes-gdec-desktop-wish-list.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Bag Page</summary>
 
-![Desktop Wireframe Image for Bag App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Bag App/Page](docs/wireframes/wireframes-gdec-desktop-shopping-bag.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Checkout Page</summary>
 
-![Desktop Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Checkout App/Page](docs/wireframes/wireframes-gdec-desktop-checkout.png)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Success Checkout Page</summary>
+
+![Desktop Wireframe Image for Success Checkout App/Page](docs/wireframes/wireframes-gdec-desktop-checkout-success.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Contact Page</summary>
 
-![Desktop Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Contact App/Page](docs/wireframes/wireframes-gdec-desktop-contact.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Thank You Page</summary>
 
-![Desktop Wireframe Image for Thank You Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Thank You Page](docs/wireframes/wireframes-gdec-desktop-thank-you-page.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Add Product Page</summary>
 
-![Desktop Wireframe Image for Add Product Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Add Product Page](docs/wireframes/wireframes-gdec-desktop-add-product.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Edit Product Page</summary>
 
-![Desktop Wireframe Image for Edit Product Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for Edit Product Page](docs/wireframes/wireframes-gdec-desktop-edit-product.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for 404 Page</summary>
 
-![Desktop Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-desktop-contact.PNG)
+![Desktop Wireframe Image for 404 Page](docs/wireframes/wireframes-gdec-desktop-404-Page.png)
 </details>
+
 <br>
 <details>
     <summary>Tablet Wireframe Image for Home Page</summary>
@@ -466,12 +472,12 @@ Please check the PDFs files for each case in the following links:
 <details>
     <summary>Tablet Wireframe Image for Product Details Page</summary>
 
-![Tablet Wireframe Image for Product Details Page](docs/wireframes/wireframe-wqcs-Tablet-blog.PNG)
+![Tablet Wireframe Image for Product Details Page](docs/wireframes/wireframes-gdec-desktop-product-details.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Profile Page</summary>
 
-![Tablet Wireframe Image for Profile App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Profile App/Page](docs/wireframes/wireframes-gdec-desktop-my-profile.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Wish List Page</summary>
@@ -487,6 +493,11 @@ Please check the PDFs files for each case in the following links:
     <summary>Tablet Wireframe Image for Checkout Page</summary>
 
 ![Tablet Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Success Checkout Page</summary>
+
+![Desktop Wireframe Image for Success Checkout App/Page](docs/wireframes/wireframes-gdec-desktop-checkout.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Contact Page</summary>
@@ -548,6 +559,11 @@ Please check the PDFs files for each case in the following links:
     <summary>Cell Phone Wireframe Image for Checkout Page</summary>
 
 ![Cell Phone Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+</details>
+<details>
+    <summary>Desktop Wireframe Image for Success Checkout Page</summary>
+
+![Desktop Wireframe Image for Success Checkout App/Page](docs/wireframes/wireframes-gdec-desktop-checkout.png)
 </details>
 <details>
     <summary>Cell Phone Wireframe Image for Contact Page</summary>

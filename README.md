@@ -390,7 +390,8 @@ ___
 # **7 . Wireframes**
 
 Wireframes were developed in order to gather goals, user stories, requirements and expectations, and have the design references for desktop, tablet and mobile devices.
-Please check the PDFs files for each case in the following links:
+
+Please check the image files for each case in the following links:
 
 <details>
     <summary>Desktop Wireframe Image for Home Page</summary>
@@ -549,6 +550,24 @@ Please check the PDFs files for each case in the following links:
     <summary>Cell Phone Wireframe Image for Add Product, Edit Product and 404 Pages</summary>
 
 ![Cell Phone Wireframe Image for Add Product, Edit Product and 404 Pages](docs/wireframes/wireframes-gdec-cell-add-product-edit-product-404-page.png)
+</details>
+
+Please check the PDF files for each case in the following links:
+
+<details>
+    <summary>Desktop Wireframes PDF</summary>
+
+![Desktop Wireframes PDF](docs/wireframes/wireframes-gdec-desktop.pdf)
+</details>
+<details>
+    <summary>Tablet Wireframes PDF</summary>
+
+![Tablet Wireframes PDF](docs/wireframes/wireframes-gdec-tablet.pdf)
+</details>
+<details>
+    <summary>Cell Phone Wireframes PDF</summary>
+
+![Cell Phone Wireframes PDF](docs/wireframes/wireframes-gdec-cell.pdf)
 </details>
 
 

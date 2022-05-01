@@ -74,6 +74,7 @@ A Python file was created to build CSV and JSON structures for the Products and 
 Since the generated JSON file is already in the "/fixtures" folder, the data can then be loaded into the Django models using the following commands (in this order, since the products are related to categories and therefore the latter must be defined before):
 
 *python3 manage.py loaddata categories*
+
 *python3 manage.py loaddata products*
 <br>
 ## [Back to Index](#index)
@@ -215,6 +216,8 @@ User stories are divided into the following three groups:
 - A Sign-up page.
 - A Sign-out page.
 - A 404 page.
+
+
 <br>
 ## [Back to Index](#index)
 <br><br>

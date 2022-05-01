@@ -223,15 +223,15 @@ User stories are divided into the following three groups:
 ___
 # **5 . Data Model**
 
-The e-commerce business model underlying the application is designed in such a way that a **"user"** (who is uniquely identified by ID) can buy **"products"** (that are also uniquely identified by ID and SKU) by sending a **"order"** (that is uniquely identified by ID and order number). Then, since an order can have many products, and simoutaneously a product can be requested by many orders, an **"order line item"** is created to uniquely relate a specific product to a specific order. This "order line item" divides the many-to-many relation between "order" and "product" in two one-to-many relations ("order-order line item" and "order line item-product"). **"Product comments"** can be added (related) to each product and to the user who comments
+The e-commerce business model underlying the application is designed in such a way that a **"user"** (who is uniquely identified by ID) can buy **"products"** (that are also uniquely identified by ID and SKU) by sending a **"order"** (that is uniquely identified by ID and order number). Then, since an order can have many products, and simultaneously a product can be requested by many orders, an **"order line item"** is created to uniquely relate a specific product to a specific order. This "order line item" divides the many-to-many relation between "order" and "product" in two one-to-many relations ("order-order line item" and "order line item-product"). **"Product comments"** can be added (related) to each product and to the user who comments
 
 Then, a **"category"** is created and related to the type of product in order to help on the search of them.
 
-Additionally, a **"wish list"** allows users to strore products for a later purchase.
+Additionally, a **"wish list"** allows users to store products for a later purchase.
 
 Finally, a **"contact"** model is created, unrelated to the previous tables, to contact the site owner in any case, regardless of an order being issued or not being a user.
 
-The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are build with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
+The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are built with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 
 ![Data Model Image](docs/data_model.PNG)
 *Chart created with ERDPlus (https://erdplus.com/standalone).*
@@ -305,7 +305,7 @@ The following are the tables involved in the relational model and the field type
     - **Product Rating Value:** integer, foreign key
     - **Body:** text
     - **Created On:** date
-    - **Active:** boolean
+    - **Active:** Boolean
 
 - ##### **USER PROFILE**
 
@@ -337,7 +337,7 @@ ___
 The design was planned to cover screen sizes from 320x568px to 1920x1370px.
 
 ### **Colours**
-Colours are based on different tonalities of blue for header (fixed navigation menu) and footer, contrasting with a white background for the body (where products and all other content appear). The header (fixed navigation menu) and body, as well as body and footer, are separated by a red banners (the top one containing moving messages with white fonts).
+Colours are based on different tonalities of blue for header (fixed navigation menu) and footer, contrasting with a white background for the body (where products and all other content appear). The header (fixed navigation menu) and body, as well as body and footer, are separated by a red banner (the top one containing moving messages with white fonts).
 
 #### [Back to Index](#index)
 
@@ -348,7 +348,7 @@ Google fonts (please see credits section below) were implemented on the website;
 
 ### **Structure**
 
-The website consists of a header with fixed navigation menu on top, a body and the a footer. It is designed to navigate the e-commerce from the header and footer, having them always available. The header is fixed, while the footer is fixed only for screens whose wide is greater than 992px, so it does not use space from the body in smaller screen sizes. There are two banners separating the header and body, and the body and footer. The one below the header contains moving messages to advertise special features of the e-commerce at all times.
+The website consists of a header with fixed navigation menu on top, a body and a footer. It is designed to navigate the e-commerce from the header and footer, having them always available. The header is fixed, while the footer is fixed only for screens whose width is greater than 992px, so it does not use space from the body in smaller screen sizes. There are two banners separating the header and body, and the body and footer. The one below the header contains moving messages to advertise special features of the e-commerce at all times.
 
 The metadata in the head tag of the base HTML includes the following keywords to help search engines to find the website: "DEM books, DEM data, DEM software, DEM training, Geophysical data, Buy DEM data, Geophysical book, Buy Resistivity data, Gravimetry data, Buy Gravimetry data, Resistivity books, Buy Magnetometry data, Magnetometry software, Gravimetry books, Buy geophysical data, 
 Magnetometry books, DEM, Geophysical, Code Institute, software development, and full-stack course, milestone project".
@@ -359,7 +359,7 @@ Wireframes were developed at the beginning of the project to have a first struct
 
 - ##### **Header**
 
-In order to achieve the goals related to an easy navigation and finding of products, a fixed navigation menu in the header is implemented, which also contributes on accessibility to the main parts of the e-commerce and on responsiveness.In the same area.
+In order to achieve the goals related to an easy navigation and finding of products, a fixed navigation menu in the header is implemented, which also contributes on accessibility to the main parts of the e-commerce and on responsiveness. In the same area.
 The logo of the e-commerce is placed to the left, in the middle there are a search field on top and the navigation menu below, and on the right two icons can be found that link to the account sign-in/sign-up/sign-out and bag.
 
 - ##### **Top banner**
@@ -666,7 +666,7 @@ The features of the site are the following ones:
 - Footer
 - 404 page
 
-This pages are accessible from a fixed navigation menu on top and a footer, and several pop-up messages are included to inform the user of their interactions with the site.
+These pages are accessible from a fixed navigation menu on top and a footer, and several pop-up messages are included to inform the user of their interactions with the site.
 
 In the second half of the project, two more features were added to improve the user experience and feedback reception:
 
@@ -788,7 +788,7 @@ Products appear after selecting categories or searching in the fixed navigation 
 
 - ### **Product details ((with product administration for the site owner)**
 
-It can accessed by cliking on a specific product; it provides detailed information about it, including the price, short description and resolutions available if applicable. It also gives the site owner the option to edit it.
+It can be accessed by clicking on a specific product; it provides detailed information about it, including the price, short description and resolutions available if applicable. It also gives the site owner the option to edit it.
 
 *User Stories Addressed by this Feature: 1; 2; 13; 14; 20; 21; 30 and 33.*
 
@@ -804,7 +804,7 @@ It can accessed by cliking on a specific product; it provides detailed informati
 
 - ### **Bag page**
 
-It can be accessed through the icot in the fixed navigation menu, top right, and shows the current products being purchased/added to the bag.
+It can be accessed through the icon in the fixed navigation menu, top right, and shows the current products being purchased/added to the bag.
 
 *User Stories Addressed by this Feature: 1; 2; 15; 16; 20; 30 and 33.*
 
@@ -836,7 +836,7 @@ It is presented when the user/shopper finishes the purchase process and is ready
 
 - ### **Secure payment method**
 
-It is the payment process for the e-commerce, poweverd by Stripe.
+It is the payment process for the e-commerce, powered by Stripe.
 
 *User Stories Addressed by this Feature: 1; 2; 22; 30 and 33.*
 
@@ -1033,9 +1033,9 @@ It allows users to save products they like or are interested in for future purch
 ___
 # **10 . Validation**
 
-**Development tools** of **Google Chrome** (Version 97.0.4692.71, Official Build, 64-bit), **Microsoft Edge** (Version 97.0.1072.62, Official build, 64-bit) and **Firefox** (Version 96.0.3, 64-bit) have been used to test the behaviour of the website for screen sizes between 320x568px to 1920x1370px.
+**Development tools** of **Google Chrome** Version 100.0.4896.127 (Official Build, 64-bit), **Microsoft Edge** (Version 100.0.1185.44, Official build, 64-bit) and **Firefox** (Version 100.0.1185.44, Official build, 64-bit) have been used to test the behaviour of the website for screen sizes between 320x568px to 1920x1370px.
 
-The website was tested using these **browsers** and also **Microsoft Internet Explorer** (Version 2004, OS Build 19041.1415, Microsoft Corporation). **Samsung Internet** (version 15.0.2.47) was also used to test the website. In addition, some users have collaborated checking the website in the cell phones, mostly with **Android-based operating systems**.
+The website was tested using these **browsers**. In addition, some users have collaborated checking the website in the cell phones, mostly with **Android-based operating systems**.
 
 **Devices** used for testing and validation include Dell and Samsung cell phones. **Operative systems** include Windows 10 Enterprise (remote desktop), Windows 10 Pro and Android. **Processors** for desktop and laptops were Intel.
 
@@ -1044,7 +1044,7 @@ The following tools were used to validate the **files of the website**:
 <br>
 
 ### **HTML Files**
-https://validator.w3.org/ was used to validate the new HTML files. Pages were rendered to get the HTML code (otherwise Django templates would alone would give errors). When possible (where pages do not require log-in), the page link was tested in the validator.
+https://validator.w3.org/ was used to validate the new HTML files. Pages were rendered to get the HTML code (otherwise Django templates would alone give errors). When possible (where pages do not require log-in), the page link was tested in the validator.
 
 <details>
     <summary>Home (index.html)  </summary>
@@ -1638,7 +1638,7 @@ Flake8 (command: python3 -m flake8) was run to eliminate the loading of unused l
 ### **Accessibility**
 https://wave.webaim.org/ was used to validate accessibility. Although there are warnings, all pages contain zero errors, except for the special case when the wish list contains the same product with two different resolutions, where the validator presents multiple form labels. Please see bugs section for more details.
 
-Pages were tested with thier URLs, directly in the we web page address input in at https://wave.webaim.org/, or throught the Wave plugin for Chrome when authentification was needed. Please check evidence below:
+Pages were tested with their URLs, directly in the we web page address input in at https://wave.webaim.org/, or through the Wave plugin for Chrome when authentication was needed. Please check evidence below:
 
 
 
@@ -1882,7 +1882,7 @@ ___
 
 The data models and some Python files were tested with unittest. Coverage.py was used to measure the coverage of these automatic tests.
 
-Coverage of 49% was achieved, with 52 tests succesfully executed in 0.347 seconds.
+Coverage of 49% was achieved, with 52 tests successfully executed in 0.347 seconds.
 
 Please see below screenshots of the testing and coverage, the fourth and last links contain the summary.
 
@@ -1943,7 +1943,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Organize the structure of the site with a fixed navigation menu and footer that includes almost all pages of the site | Navigate to any page of the site from these two features, except to the pages that require a previous step (e.g., adding items to the bag) | Site is fully accessible from top navigation menu and footer; works as expected | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>Checkout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Organize the structure of the site with a fixed navigation menu and footer that includes almost all pages of the site | Navigate to any page of the site from these two features, except to the pages that require a previous step (e.g., adding items to the bag) | Site is fully accessible from top navigation menu and footer; works as expected | 
 
 <details>
     <summary>Fixed Navigation Menu for Desktop Image</summary>
@@ -1972,7 +1972,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>Checkout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
 
 <details>
     <summary>Desktop example: Home</summary>
@@ -2011,7 +2011,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Registration (sign-up)<br>Pop-up status messages<br> | Use Django confirmation page to inform the user of a successgul sign-up | Show a successful message on a page after signing up | Works as expected | 
+| Fixed navigation menu<br>Registration (sign-up)<br>Pop-up status messages<br> | Use Django confirmation page to inform the user of a successful sign-up | Show a successful message on a page after signing up | Works as expected | 
 
 <details>
     <summary>Registration, Step 1</summary>
@@ -2307,7 +2307,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br> | Include a link/list item element to special offers in the fixed navigation menu | Access special offers after cliking on this link/list item element of the menu | Works as expected | 
+| Fixed navigation menu<br> | Include a link/list item element to special offers in the fixed navigation menu | Access special offers after clicking on this link/list item element of the menu | Works as expected | 
 
 <details>
     <summary>Easy Access for Offers</summary>
@@ -2427,7 +2427,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | Implement a payment method that is well known and secure | Process payments from users/shoppers | Stripe payments implemented, Works as expected | 
+| Fixed navigation menu<br>Checkout page<br>Secure payment method<br>heckout success page<br> | Implement a payment method that is well known and secure | Process payments from users/shoppers | Stripe payments implemented; Works as expected | 
 
 <details>
     <summary>Stripe Payment Process right after Purchasing</summary>
@@ -2444,7 +2444,7 @@ The following are testing of User Stories previously described above:
 
 - ##### **Site Owner**
 
-23. As owner, I want to provide an introductory page, so users know what can be found in the website and what can be purchased.
+23. As owner, I want to provide an introductory page, so users know what can be found on the website and what can be purchased.
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
@@ -2614,7 +2614,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Similar to user story 2, use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>Checkout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Similar to user story 2, use Bootstrap and media queries to adapt the site design to all screen sizes | Show readable content, while keeping functionality and design, in all screen sizes  | Works as expected | 
 
 <details>
     <summary>Desktop example: Home</summary>
@@ -2683,7 +2683,7 @@ The following are testing of User Stories previously described above:
 
 | FEATURE | ACTION | EXPECTED RESULT | ACTUAL RESULT |
 | --- | --- | --- | --- |
-| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>heckout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Implement all knowledge gathered so far in full-stack software development, with as many features as possible according to the Code Institute program time frame | Show as many full-stack software development capabilities as possible | Expecting results and feedback | 
+| Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>Checkout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Implement all knowledge gathered so far in full-stack software development, with as many features as possible according to the Code Institute program time frame | Show as many full-stack software development capabilities as possible | Expecting results and feedback | 
 
 
 ![Project Link](https://github.com/csc7/PP5_CI_GDEC)
@@ -2703,9 +2703,9 @@ ___
 
 The search engine optimization is focused on Google search engine since it accounts for more than 90% of user searches.
 
-Basically, Google ellaborates a ranking of pages (according to the criteria being searched) and shows them in the result according to this ranking. Algorithms and human raters are used to position pages in these search resutls.
+Basically, Google elaborates a ranking of pages (according to the criteria being searched) and shows them in the result according to this ranking. Algorithms and human ratters are used to position pages in these search results.
 
-In order to have our page in the first results (user will usually not read after the first page of results), we need our page to be highly ranked in the resarch resutls.
+In order to have our page in the first results (user will usually not read after the first page of results), we need our page to be highly ranked in the research results.
 
 A way to do it is by including keywords, which can be short-tail (one or two words, highly ranking but giving a lot of "competitors") or long-tail (phrases, more specific to our products or page, but with less ranking). Therefore, the best solution might be considered that one that produces a high volume of results with low competition.
 
@@ -2718,7 +2718,7 @@ No e-commerce/service provider after first page= 2;
 No e-commerce/service provider in first page = 3;
 E-commerce after first page = 4
 E-commerce in first page = 5)
-Just to have an idea and assign a quantification to the selection, the "Volume" is multiplied by the "Quality Factor" (and divided by 1000000 to have smaller figures). This is a subjective approach, however the results are still interesting:
+Just to have an idea and assign a quantification to the selection, the "Volume" is multiplied by the "Quality Factor" (and divided by 1000000 to have smaller figures). This is a subjective approach; however the results are still interesting:
 
 | Keywords | Volume (from Google.com) | Content, general description (searching in Google.com) | "Quality Factor" | Volume x "Quality Factor" / 1000000 |
 | ---- | ---- | ---- | ---- | ---- |
@@ -2783,25 +2783,25 @@ As it can be observed, the following keywords produce high volume of searches wi
 Then, those with a "quality factor" of 5 (where an e-commerce appears in the first page of a Google search, since we are interested in promoting an e-commerce( are the following ones:
 "Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books".
 
-Also, it can be observed a clear trend for unique words like "DEM", "Geophysical", "Buy" and "Data", so they were analized as well.
+Also, it can be observed a clear trend for unique words like "DEM", "Geophysical", "Buy" and "Data", so they were analysed as well.
 
-After analyzing "DEM" with wordtracker.com, it is observed that it produces a high volume and good competition comparisson. Therefore "DEM" is also included as keyword.
+After analysing "DEM" with wordtracker.com, it is observed that it produces a high volume and good competition comparison. Therefore "DEM" is also included as keyword.
 
-Also, after analyzing "Geophysical" with wordtracker.com, it is observer a great score for volume and competition, achiving the first place in both for similar keyworkds.
+Also, after analysing "Geophysical" with wordtracker.com, it is observer a great score for volume and competition, achieving the first place in both for similar keywords.
 
 "Buy" and "Data" are not finally included in the keywords as they are too general.
 
 Therefore, the final keywords for the projects are the following 18 ones:
 "DEM books", "DEM data", "DEM software", "DEM training", "Geophysical data", "Buy DEM data", "Geophysical book", "Buy Resistivity data", "Gravimetry data", "Buy Gravimetry data", "Resistivity books", "Buy Magnetometry data", "Magnetometry software", "Gravimetry books", "Buy geophysical data", "Magnetometry books", "DEM", "Geophysical".
 
-On the other hand, keyworkd staffing was also carried out when possible, for example, in headings and "strong" tags. Social links include the attibute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the descritpion of the e-commerce and these 17 keyworkds.
+On the other hand, keyword staffing was also carried out when possible, for example, in headings and "strong" tags. Social links include the attribute "rel" with "noopener" in order to have search engines not including these links in their search rankings. Images include an "alt" attribute as descriptive for the image as possible (including a meaningful file name). In the metadata we include the description of the e-commerce and these 17 keywords.
 
-Finally, we include the sitemap.xml (in the root folder) to increase the chances of a higher rank in search engines and help them on finding relevant content, and a robots.txt to "tell" them where "not to navigate" (which simoultaneously increase the ranking of the site since they consider a site that contains a file like this of goog quality).
+Finally, we include the sitemap.xml (in the root folder) to increase the chances of a higher rank in search engines and help them on finding relevant content, and a robots.txt to "tell" them where "not to navigate" (which simultaneously increase the ranking of the site since they consider a site that contains a file like this of good quality).
 
 sitemap.xml: created using XML-Sitemaps.com
 robots.txt: tested with https://support.google.com/webmasters/answer/6062598?hl=en
 
-Reference: Code Institue, SEO lessons.
+Reference: Code Institute, SEO lessons.
 
 <details>
     <summary>wordtracker.com analysis for "DEM" keyword</summary>
@@ -2819,7 +2819,7 @@ Reference: Code Institue, SEO lessons.
 
 ### Organic Growth with Social Media (Facebook and LinkedIn)
 
-Since the e-commerce is oriented to a professional and specialized community, the organic growth (which should simoultaneously be considered with organic growth) is suitable for LinkedIn. This social network makes possible the interaction with users and allow them to take training related to the products of the GDEC e-commerce. This social network seems to be very suitable for universities and research institutions that use these kind of data.
+Since the e-commerce is oriented to a professional and specialized community, the organic growth (which should simultaneously be considered with organic growth) is suitable for LinkedIn. This social network makes possible the interaction with users and allow them to take training related to the products of the GDEC e-commerce. This social network seems to be very suitable for universities and research institutions that use these kind of data.
 
 Similarly, Facebook, achieves the same goal, with better perspective towards advertising and user interaction, and with a higher amount of users.
 
@@ -2841,7 +2841,7 @@ The page below was built in Facebook with the aim of interacting with potential 
 
 ### Paid Marketing
 
-As mentioned before, the above strategies should be carried out with a paid strategy, focusing the expenditures (which might not be necessarily high but constant through time) in geopysical exhibitions (like EAGE or SEG among many others), and on those news or science websites that could caught the atention of authorities (since these kind of data are usually used by them.)
+As mentioned before, the above strategies should be carried out with a paid strategy, focusing the expenditures (which might not be necessarily high but constant through time) in geophysical exhibitions (like EAGE or SEG among many others), and on those news or science websites that could caught the attention of authorities (since these kind of data are usually used by them).
 
 <br>
 ## [Back to Index](#index)
@@ -2857,9 +2857,9 @@ Bugs that required more time and specific solutions were the following ones:
 | Bug | Solution |
 | ---- | ---- |
 | It was not possible to keep the checkbox for cancelling the delivery cost activated, sending the form to the backend but deactivating it immediately after.  | The issue was caused by addressing the checkbox with both JavaScript and an "if" statement in the HTML template, strangely requiring an assignment of the "cancel_delivery_cost" twice, one row after the other, likely due to the time taken for the view to be loaded. The issue was solved by addressing the checkbox with an "if" statement only in the checkbox HTML tag. | 
-| Accessibility validation presents multiple form labels when there is a repeated product in the wish list, with different resolutions. The issue arises because the model assigns the same product ID (since it considers a boolean field for the resolution, rather than a text one as the wish list does (for "high", "medium" and "low"). Therefore, in the template "for" loop, repeated labels are generated, since they are generated from the IDs of the products. The same reason has caused issues when adding or updating quantities in the wish list or the bag. | The quantities where solved with AJAX posts that read the resolution. A more robust solution would be to refactor the Product model, migrating its resoltuion field from boolean to text (so it would be able to identify the three resolutions separately) |
-| Increment and decrement controls to update the quantities in the wish list and bag stopped working after validation and refactoring. The issue was caused by the reorganization of the HTML elements, since JavaScript access these controls through element positioning in the page (not through specific ID or classes)sadfsdf | The issue was solved by assigning the correct relative position of the increment and decrement controls in the page. |
-| Commented products did not show the user the label of being already commented (whey they have done so). | The issue was solved by rendering the proper relation in the HTML template, through a varaible, after defining the proper data relation in the backend to identify a comment to both a specific product and user. |
+| Accessibility validation presents multiple form labels when there is a repeated product in the wish list, with different resolutions. The issue arises because the model assigns the same product ID (since it considers a Boolean field for the resolution, rather than a text one as the wish list does (for "high", "medium" and "low"). Therefore, in the template "for" loop, repeated labels are generated, since they are generated from the IDs of the products. The same reason has caused issues when adding or updating quantities in the wish list or the bag. | The quantities were solved with AJAX posts that read the resolution. A more robust solution would be to refactor the Product model, migrating its resolution field from Boolean to text (so it would be able to identify the three resolutions separately). |
+| Increment and decrement controls to update the quantities in the wish list and bag stopped working after validation and refactoring. The issue was caused by the reorganization of the HTML elements, since JavaScript access these controls through element positioning in the page (not through specific ID or classes). | The issue was solved by assigning the correct relative position of the increment and decrement controls in the page. |
+| Commented products did not show the user the label of being already commented (whey they have done so). | The issue was solved by rendering the proper relation in the HTML template, through a variable, after defining the proper data relation in the backend to identify a comment to both a specific product and user. |
 <br>
 ## [Back to Index](#index)
 <br><br>
@@ -2925,10 +2925,10 @@ a) If you use the database of this repository, use the following commands (in th
 python3 manage.py loaddata categories
 python3 manage.py loaddata products
 
-b) If you manually create the database, please follow this steps:
+b) If you manually create the database, please follow these steps:
 Credits: Code Institute:
  - Make sure your manage.py file is connected to your mysql database
- - Use this command to backup your current database and load it into a db.json file:
+ - Use this command to back up your current database and load it into a db.json file:
 ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
  - Connect your manage.py file to your postgres database
  - Then use this command to load your data from the db.json file into postgres:
@@ -2943,7 +2943,7 @@ pip3 install gunicorn
 **12** - Again, freeze the environment requirements:
 pip3 freeze > requirements.txt
 
-**13** - Create Procfile (just create file and assign "Procfile" as name) in the project root directory, and include this line in it:
+**13** - Create Procfile (just create file and assign "Procfile" as name) in the project root directory and include this line in it:
 web: gunicorn your_app_name.wsgi:application
 
 **14** - Log in into Heroku from the Gitpod CLI with the following line, entering the required information:
@@ -2951,7 +2951,7 @@ heroku login (it will require to log in through a different browser)
 or
 heroku login -i (to log in directly in the Gitpod CLI)
 
-**15** - OPTIONAL: Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deplying (at this point of the process, in case you want to look the website before deploying in Amazon Web Services):
+**15** - OPTIONAL: Set DISABLE_COLLECTSTATIC to 1, so Heroku does not load static files when deploying (at this point of the process, in case you want to look the website before deploying in Amazon Web Services):
 heroku config:set DISABLE_COLLECTSTATIC=1 --app your_app_name
 
 **16** - Ensure ALLOWED_HOSTS variable in settings.py file is set as follows:
@@ -2964,7 +2964,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 **18** - Crease Amazon Web Services account (if needed) and S3 bucket.
 Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off public access" disables (accepting warning message below), and then set the following variables:
- * Properties tab: Static website hosting, using it to host a website, incidating index.html and error.html in the index and error documents.
+ * Properties tab: Static website hosting, using it to host a website, indicating index.html and error.html in the index and error documents.
  * Permissions tab:
     - CORS configuration (required to have access between Heroku and S3), copying these lines of code:
         [
@@ -2981,7 +2981,7 @@ Assign the bucket a name (e.g., your_app_name), with "ACLs enabled", "Block off 
               "ExposeHeaders": []
           }
         ]
- * Buccket Policy: click on "Policy Generator" at the bottom and, in the new page, select "S3 Bucket Policy" as the type of policy, assing a start ("*") to "Principal" to allow all of them, "GetObject" in "Actions", paste the ARN of the bucket (found in the "Properties" of the bucket) in the corresponding field, generate policy, copy the resulting code in the "Bucket Policy" that originated this new page, and save.
+ * Bucket Policy: click on "Policy Generator" at the bottom and, in the new page, select "S3 Bucket Policy" as the type of policy, assign a start ("*") to "Principal" to allow all of them, "GetObject" in "Actions", paste the ARN of the bucket (found in the "Properties" of the bucket) in the corresponding field, generate policy, copy the resulting code in the "Bucket Policy" that originated this new page, and save.
  * Access Control List: enable "List objects" for "Everyone.
 
 **19** - Add Amazon Web Services Identify and Access Management (IAM) to create a user to access the S3 bucket and apply the following changes:
@@ -3024,7 +3024,7 @@ IMPORTANT: At this point, DISABLE_COLLECSTATICS of point 15 can be deleted if yo
 
 **27** - Check that superuser e-mail in Django admin user interface is verified.
 
-**28** - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and asign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
+**28** - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and assign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
 Ensure the variables match the names in the settings.py file.
 
 **29** - Add automatic e-mail variables in Config Vars of Heroku (to send automatic e-mails from the app), EMAIL_HOST_PASS (password given by your e-mail service provider) and EMAIL_HOST_USER (the e-mail address from where e-mails are sent).
@@ -3051,7 +3051,7 @@ git add .
 git commit -m "Your update commit message"
 git push heroku main
 
-You can also set automatic deployments by going to Heroku website, "Deploy" section of your_app_name, and connecting to GitHub (after serching for your_app_name in the corresponding "Connect to GitHub" section and finally clicking on the "Enable Automatic Deploys" button at the bottom).
+You can also set automatic deployments by going to Heroku website, "Deploy" section of your_app_name, and connecting to GitHub (after searching for your_app_name in the corresponding "Connect to GitHub" section and finally clicking on the "Enable Automatic Deploys" button at the bottom).
 
 In settings.py file, you can set the DEBUG variables as follows if you want to control the debug mode from Heroku Config Vars:
 'DEVELOPMENT' in os.environ
@@ -3078,11 +3078,11 @@ ___
 
     - Tutor Assistance, on several issues (e.g., contexts.py file).
 
-    - Not to include "bag_tools" (Python function based on a Django template) as app; Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28.
+    - Not to include "bag_tools" (Python function based on a Django template) as app; Igor from Code Institute, on Slack, checked on March 16th, 2022, at 2:28.
 
     - Tutor Assistance, John, to solve Django toasts not showing up, on March 17th, 2022.
 
-    - Tuto Assistance, James, to solve the issue of the total in the shopping bag (with signals after adding/updating the bag), which showed correctly in back end but appeared as zero in HTML template.
+    - Tutor Assistance, James, to solve the issue of the total in the shopping bag (with signals after adding/updating the bag), which showed correctly in back end but appeared as zero in HTML template.
 
     - Tutor Assistance, Sean Murphy, to solve the issue of the cancelled delivery cost not appearing in the checkout page; on April 30th, 2022, at 12:29 PM.
 
@@ -3157,7 +3157,7 @@ ___
 
 - Mailchimp:
 
-    - Sign-up of newsletter, generated and copied on April 6th, 2022, at 3:10, in Mailchip account (Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com); later modified.
+    - Sign-up of newsletter, generated and copied on April 6th, 2022, at 3:10, in Mailchimp account (Mailchimp: Marketing Automation & Email Platform, https://mailchimp.com); later modified.
 
 - Natural Earth:
 

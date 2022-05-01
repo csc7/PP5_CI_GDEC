@@ -3080,6 +3080,12 @@ ___
 
     - Not to include "bag_tools" (Python function based on a Django template) as app; Igor from Code Insitute, on Slack, checked on March 16th, 2022, at 2:28.
 
+    - Tutor Assistance, John, to solve Django toasts not showing up, on March 17th, 2022.
+
+    - Tuto Assistance, James, to solve the issue of the total in the shopping bag (with signals after adding/updating the bag), which showed correctly in back end but appeared as zero in HTML template.
+
+    - Tutor Assistance, Sean Murphy, to solve the issue of the cancelled delivery cost not appearing in the checkout page; on April 30th, 2022, at 12:29 PM.
+
 - Balsamiq Wireframes: I have used it to create all the wireframes.
 
 - Jesse James Garrett's process for user experience.

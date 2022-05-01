@@ -3116,7 +3116,7 @@ IMPORTANT: At this point, DISABLE_COLLECSTATICS of point 15 can be deleted if yo
 
 **27** - Check that superuser e-mail in Django admin user interface is verified.
 
-**28** - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint" (https://pp5-ci-gdec.herokuapp.com/checkout/wh), selecting and adding all events. Finally, copy the signing secret of the webhook and assign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
+**28** - Add API keys (STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY) from Stripe to Config Vars in Heroku. Then, in your Stripe account (in "Developers" section, "Webhooks"), "Add endpoint", add the URL of the project, selecting and adding all events. Finally, copy the signing secret of the webhook and assign it to a STRIPE_WH_SECRET in the Config Vars of Heroku.
 Ensure the variables match the names in the settings.py file.
 
 **29** - Add automatic e-mail variables in Config Vars of Heroku (to send automatic e-mails from the app), EMAIL_HOST_PASS (password given by your e-mail service provider) and EMAIL_HOST_USER (the e-mail address from where e-mails are sent).
@@ -3152,7 +3152,7 @@ In settings.py file, you can set the DEBUG variables as follows if you want to c
 <details>
     <summary>Heroku Deployment Screenshot</summary>
 
-![Deployment on Heroku Image](docs/features-and-evidence/heroku-deployment.PNG) 
+![Deployment on Heroku Image](docs/features-and-evidence/heroku-deployment.png) 
 </details>
 
 <br><br>
@@ -3473,6 +3473,8 @@ ___
 
     - Inclusion of Google fonts in Stripe elements based on https://stackoverflow.com/questions/44915511/stripe-elements-google-web-font-not-working, accessed on March 18th, 2022, at 6:20.
 
+    - To render last items in a "for" loop in Django templates: https://stackoverflow.com/questions/68494568/how-to-display-latest-5-orders-by-using-for-loop-in-jinja-django; https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result; https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result; accessed on March 29th, 2022, at 14:30.
+
     - Capitalize first letter of each word: https://stackoverflow.com/questions/1549641/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string, accessed on April 14th, 2022, at 01:54.
 
     - To capitalize first letter in Django template: https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template,
@@ -3489,8 +3491,6 @@ ___
     - Core logic/payment flow: https://stripe.com/docs/payments/accept-a-payment.
 
     - CSS styles: https://stripe.com/docs/stripe-js; https://stripe.com/docs/payments/elements.
-
-    - To render last items in a "for" loop in Django templates: https://stackoverflow.com/questions/68494568/how-to-display-latest-5-orders-by-using-for-loop-in-jinja-django; https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result; https://stackoverflow.com/questions/36977773/how-to-reverse-a-for-loop-in-a-django-template-and-then-slice-the-result; accessed on March 29th, 2022, at 14:30.
 
     - To check if a form is submitted with jQuery: https://stackoverflow.com/questions/14969467/how-to-check-with-jquery-if-any-form-is-submitted, accessed on April 9th, 2022, at 15:30.
 

@@ -2366,7 +2366,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Easy Access for Offers</summary>
 
-![Easy Access for Offers](docs/features-and-evidence/Esri-map.PNG) 
+![Easy Access for Offers](docs/features-and-evidence/offers-at-all-times.PNG) 
 </details>
 <details>
     <summary>Easy Access for Offers in Checkout</summary>
@@ -2492,12 +2492,6 @@ The following are testing of User Stories previously described above:
     <summary>Stripe Payment Process right after Purchasing, Success Checkout</summary>
 
 ![Stripe Payment Process right after Purchasing, Success Checkout](docs/features-and-evidence/checkout-success.PNG) 
-</details>
-<details>
-    <summary>Stripe Payment Image</summary>
-
-![Payment Process Image](docs/features-and-evidence/Stripe-payment.PNG)
-
 </details>
 
 <details>

@@ -235,7 +235,7 @@ Finally, a **"contact"** model is created, unrelated to the previous tables, to 
 
 The project database is built with PostgreSQL and deployed in Heroku platform. Its tables or models are built with Django models and follows the models given by the Code Institute "I Think Therefore I Blog" project. The following chart shows the tables and data involved, and how they are related:
 
-![Data Model Image](docs/data-model.PNG)
+![Data Model Image](docs/data-model.png)
 *Chart created with ERDPlus (https://erdplus.com/standalone).*
 
 The following are the tables involved in the relational model and the field types in each of them.
@@ -330,6 +330,7 @@ The following are the tables involved in the relational model and the field type
     - **Quantity:** integer
     - **Line Item Total:** decimal
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 
@@ -555,7 +556,7 @@ Please check the image files for each case in the following links:
 </details>
 <br>
 Please check the PDF files for each case in the following links:
-
+<br>
 <details>
     <summary>Desktop Wireframes PDF</summary>
 
@@ -967,7 +968,7 @@ It is a page that shows the user information and history order after selected th
 ![Profile and History Order Image](docs/features-and-evidence/profile.PNG)
 </details>
 
-
+<br>
 - ### **Contact form**
 
 It is a contact form in a separate page, accessible from the footer, that gives the option to send a consultation to the site owner, without needing to buy and/or be signed in/up. Its goal is to receive feedback from as many sources as possible. 
@@ -982,6 +983,7 @@ It is a contact form in a separate page, accessible from the footer, that gives 
 
 </details>
 
+<br>
 
 - ### **Footer**
 
@@ -998,6 +1000,7 @@ They are Django complementary tools and pages to have a sign-up option for users
 ![Footer for Cell Image](docs/features-and-evidence/footer-cell.PNG)
 </details>
 
+<br>
 
 - ### **404 page**
 
@@ -1022,6 +1025,7 @@ It is a Django complementary tool and page that presents an error page informing
 ![404 Page Image for Cell Phones](docs/features-and-evidence/404-page-cell.PNG)
 </details>
 
+<br>
 
 - ### **Pop-up status messages**
 
@@ -1043,7 +1047,7 @@ They are Django complementary messages that informs the user, with pop-ups, that
 
 </details>
 
-
+<br>
 
 - ### **Product Comments**
 
@@ -1055,8 +1059,7 @@ It allows users to comment products below its product details.
 ![Product Comments Image](docs/features-and-evidence/product-reviews.PNG)
 </details>
 
-
-
+<br>
 
 - ### **Wish List**
 

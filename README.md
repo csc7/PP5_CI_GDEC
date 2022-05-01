@@ -554,7 +554,9 @@ Please check the image files for each case in the following links:
 
 ![Cell Phone Wireframe Image for Add Product, Edit Product and 404 Pages](docs/wireframes/wireframes-gdec-cell-add-product-edit-product-404-page.png)
 </details>
+
 <br>
+
 Please check the PDF files for each case in the following links:
 <br>
 <details>

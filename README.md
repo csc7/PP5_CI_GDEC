@@ -2002,7 +2002,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu-desktop.PNG)
 </details>
 <details>
     <summary>Fixed Navigation Menu for Tablet Image</summary>
@@ -2163,7 +2163,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu-desktop.PNG)
 </details>
 <details>
     <summary>Fixed Navigation Menu for Tablet Image</summary>
@@ -2288,7 +2288,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Purchase History</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/profile-with-purchase-history.jpg) 
+![Purchase History](docs/features-and-evidence/profile-with-purchase-history.jpg) 
 </details>
 <br><br>
 
@@ -2305,7 +2305,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Products Page</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/products-to-buy.PNG) 
+![Products Page](docs/features-and-evidence/products-to-buy.PNG) 
 </details>
 <br><br>
 
@@ -2319,7 +2319,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Product Details</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/product-details-to-buy.PNG) 
+![Product Details](docs/features-and-evidence/product-details-to-buy.PNG) 
 </details>
 <br><br>
 
@@ -2371,7 +2371,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Easy Access for Offers in Checkout</summary>
 
-![Easy Access for Offers in Checkout](docs/features-and-evidence/checkout-success-with-offers-button.jpg) 
+![Easy Access for Offers in Checkout](docs/features-and-evidence/checkout-success-with-offers-button.png) 
 </details>
 <br><br>
 
@@ -2493,6 +2493,33 @@ The following are testing of User Stories previously described above:
 
 ![Stripe Payment Process right after Purchasing, Success Checkout](docs/features-and-evidence/checkout-success.PNG) 
 </details>
+<details>
+    <summary>Stripe Payment Image</summary>
+
+![Payment Process Image](docs/features-and-evidence/Stripe-payment.PNG)
+
+</details>
+
+<details>
+    <summary>Stripe Payment Image - Checkout</summary>
+
+![Stripe Payment Image - Checkout](docs/features-and-evidence/payment-checkout.PNG)
+
+</details>
+
+<details>
+    <summary>Stripe Payment Image - Checkout 2nd Page</summary>
+
+![Stripe Payment Image - Checkout 2nd Page](docs/features-and-evidence/payment-checkout-2.PNG)
+
+</details>
+
+<details>
+    <summary>Stripe Payment Image - Checkout Success</summary>
+
+![Stripe Payment Image - Checkout Success](docs/features-and-evidence/payment-success.PNG)
+
+</details>
 <br><br>
 
 
@@ -2531,9 +2558,9 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Footer<br> | Include a Django app and page to easily register/sign up in the site if the user opts for this, with links to this option in the fixed navigation menu and footer | Access page for sign-up easily from menu and footer, with a few steps to achieve the task | Works as expected | 
 
 <details>
-    <summary>Screenshot</summary>
+    <summary>Easy Sign Up</summary>
 
-![Esri/ArcGIS Map to Pick Location](docs/features-and-evidence/easy-sign-up.PNG) 
+![Easy Sign Up](docs/features-and-evidence/easy-sign-up.PNG) 
 </details>
 <br><br>
 
@@ -2624,7 +2651,7 @@ The following are testing of User Stories previously described above:
 <details>
     <summary>Fixed Navigation Menu for Desktop Image</summary>
 
-![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu.PNG)
+![Fixed Navigation Menu for Desktop Image](docs/features-and-evidence/fixed-navigation-menu-desktop.PNG)
 </details>
 <details>
     <summary>Fixed Navigation Menu for Tablet Image</summary>
@@ -2724,9 +2751,19 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>404 page<br> | Use Django error page to inform the user if any action when navigating the site produces an error | Show an error message on a page after facing a problem, e.g., a broken URL | Works as expected | 
 
 <details>
-    <summary>404 Page Showing Error Message</summary>
+    <summary>404 Page Image</summary>
 
-![404 Page Showing Error Message](docs/features-and-evidence/404_page.PNG) 
+![404 Page Image for desktop](docs/features-and-evidence/404-page.PNG)
+</details>
+<details>
+    <summary>404 Page Image</summary>
+
+![404 Page Image for tablet](docs/features-and-evidence/404-page-tablet.PNG)
+</details>
+<details>
+    <summary>404 Page Image</summary>
+
+![404 Page Image for Cell Phones](docs/features-and-evidence/404-page-cell.PNG)
 </details>
 <br><br>
 
@@ -2740,12 +2777,13 @@ The following are testing of User Stories previously described above:
 | Fixed navigation menu<br>Banner with latest news<br>Home page<br>Products (with product administration for the site owner)<br>Product details (with product administration for the site owner)<br>Bag page<br>Checkout page<br>Secure payment method<br>Checkout success page<br>Site access (sign-in and sign-out)<br>Registration (sign-up)<br>Profile with history order<br>Contact form<br>Footer<br>404 page<br>Pop-up status messages<br> | Implement all knowledge gathered so far in full-stack software development, with as many features as possible according to the Code Institute program time frame | Show as many full-stack software development capabilities as possible | Expecting results and feedback | 
 
 
-![Project Link](https://github.com/csc7/PP5_CI_GDEC)
+[Project Link](https://github.com/csc7/PP5_CI_GDEC)
 
-![Developer's Repositories](https://github.com/csc7) 
+[Developer's Repositories](https://github.com/csc7) 
 
 
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 
@@ -2862,14 +2900,13 @@ Reference: Code Institute, SEO lessons.
 
 ![DEM Analysis with wordtracker](docs/features-and-evidence/wordtracker-com-for-dem.jpg) 
 </details>
-<br><br>
 
 <details>
     <summary>wordtracker.com analysis for "Geophysical" keyword</summary>
 
 ![DEM Analysis with wordtracker](docs/features-and-evidence/wordtracker-com-for-geophysical.jpg) 
 </details>
-<br><br>
+<br>
 
 ### Organic Growth with Social Media (Facebook and LinkedIn)
 
@@ -2884,12 +2921,11 @@ The page below was built in Facebook with the aim of interacting with potential 
 
 ![GDEC Facebook Page Image](docs/features-and-evidence/Facebook_Page.png) 
 </details>
-<br>
 
 <details>
     <summary>GDEC Facebook Page</summary>
 
-![GDEC Facebook Page PDF](docs/features-and-evidence/Facebook_Page.pdf) 
+[GDEC Facebook Page PDF](docs/features-and-evidence/Facebook_Page.pdf) 
 </details>
 <br>
 
@@ -2898,6 +2934,7 @@ The page below was built in Facebook with the aim of interacting with potential 
 As mentioned before, the above strategies should be carried out with a paid strategy, focusing the expenditures (which might not be necessarily high but constant through time) in geophysical exhibitions (like EAGE or SEG among many others), and on those news or science websites that could caught the attention of authorities (since these kind of data are usually used by them).
 
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 
@@ -2915,6 +2952,7 @@ Bugs that required more time and specific solutions were the following ones:
 | Increment and decrement controls to update the quantities in the wish list and bag stopped working after validation and refactoring. The issue was caused by the reorganization of the HTML elements, since JavaScript access these controls through element positioning in the page (not through specific ID or classes). | The issue was solved by assigning the correct relative position of the increment and decrement controls in the page. |
 | Commented products did not show the user the label of being already commented (whey they have done so). | The issue was solved by rendering the proper relation in the HTML template, through a variable, after defining the proper data relation in the backend to identify a comment to both a specific product and user. |
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 

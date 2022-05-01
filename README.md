@@ -216,9 +216,8 @@ User stories are divided into the following three groups:
 - A Sign-up page.
 - A Sign-out page.
 - A 404 page.
-
-
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 

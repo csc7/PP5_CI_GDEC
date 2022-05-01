@@ -1180,31 +1180,31 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 
 <br>
 
-[Rendered HTML for Home](https://github.com/csc7/PP5_CI_GDEC/tree/main/docs/rendered-html-for-validation/rendered-html-for-validation-home.html)
+[Rendered HTML for Home](https://github.com/csc7/PP5_CI_GDEC/tree/main/docs/rendered-html-for-validation/rendered-html-for-validation-home.txt)
 
-[Rendered HTML for Bag](docs/rendered-html-for-validation/rendered-html-for-validation-bag.html)
+[Rendered HTML for Bag](docs/rendered-html-for-validation/rendered-html-for-validation-bag.txt)
 
-[Rendered HTML for Checkout](/docs/rendered-html-for-validation/rendered-html-for-validation-checkout.html)
+[Rendered HTML for Checkout](/docs/rendered-html-for-validation/rendered-html-for-validation-checkout.txt)
 
-[Rendered HTML for Checkout Success](/docs/rendered-html-for-validation/rendered-html-for-validation-checkout-success.html)
+[Rendered HTML for Checkout Success](/docs/rendered-html-for-validation/rendered-html-for-validation-checkout-success.txt)
 
-[Rendered HTML for Contact](/docs/rendered-html-for-validation/rendered-html-for-validation-contact.html)
+[Rendered HTML for Contact](/docs/rendered-html-for-validation/rendered-html-for-validation-contact.txt)
 
-[Rendered HTML for Thanks](docs/rendered-html-for-validation/rendered-html-for-validation-thank-you.html)
+[Rendered HTML for Thanks](docs/rendered-html-for-validation/rendered-html-for-validation-thank-you.txt)
 
-[Rendered HTML for Add Product](/docs/rendered-html-for-validation/rendered-html-for-validation-product-add.html)
+[Rendered HTML for Add Product](/docs/rendered-html-for-validation/rendered-html-for-validation-product-add.txt)
 
-[Rendered HTML for Edit Product](/docs/rendered-html-for-validation/rendered-html-for-validation-edit-product.html)
+[Rendered HTML for Edit Product](/docs/rendered-html-for-validation/rendered-html-for-validation-edit-product.txt)
 
-[Rendered HTML for Product Details](/docs/rendered-html-for-validation/rendered-html-for-validation-product-details.html)
+[Rendered HTML for Product Details](/docs/rendered-html-for-validation/rendered-html-for-validation-product-details.txt)
 
-[Rendered HTML for Products](/docs/rendered-html-for-validation/rendered-html-for-validation-products.html)
+[Rendered HTML for Products](/docs/rendered-html-for-validation/rendered-html-for-validation-products.txt)
 
-[Rendered HTML for Profile](/docs/rendered-html-for-validation/rendered-html-for-validation-profile.html)
+[Rendered HTML for Profile](/docs/rendered-html-for-validation/rendered-html-for-validation-profile.txt)
 
-[Rendered HTML for Wish List](/docs/rendered-html-for-validation/rendered-html-for-validation-wish.html)
+[Rendered HTML for Wish List](/docs/rendered-html-for-validation/rendered-html-for-validation-wish.txt)
 
-[Rendered HTML for 404 Page](/docs/rendered-html-for-validation/rendered-html-for-404.html)
+[Rendered HTML for 404 Page](/docs/rendered-html-for-validation/rendered-html-for-404.txt)
 
 
 
@@ -1216,9 +1216,6 @@ https://validator.w3.org/ was used to validate the new HTML files. Pages were re
 ### **CSS File**
 https://jigsaw.w3.org/css-validator/ was used to validate the CSS file.
 
-http://jigsaw.w3.org/css-validator/validator$link
-or
-http://jigsaw.w3.org/css-validator/check/referer **(for HTML/XML document only)**
 
 Please check the evidence below:
 
@@ -1373,7 +1370,7 @@ Flake8 (command: python3 -m flake8) was run to eliminate the loading of unused l
 <details>
     <summary>asgi.py</summary>
 
-![Evidence of file asgi.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-asgi.PNG) 
+![Evidence of file asgi.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-pp5-ci-gdec-asgi.PNG) 
 </details>
 <details>
     <summary>settings.py</summary>
@@ -1383,12 +1380,12 @@ Flake8 (command: python3 -m flake8) was run to eliminate the loading of unused l
 <details>
     <summary>urls.py</summary>
 
-![Evidence of file urls.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-urls.PNG) 
+![Evidence of file urls.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-pp5-ci-gdec-urls.PNG) 
 </details>
 <details>
     <summary>wsgi.py</summary>
 
-![Evidence of file wsgi.py validated with http://pep8online.com/ ](media/validation-python-pep-8-pp5-ci-gdec-wsgi.PNG) 
+![Evidence of file wsgi.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-pp5-ci-gdec-wsgi.PNG) 
 </details>
 <br>
 
@@ -1677,12 +1674,12 @@ Flake8 (command: python3 -m flake8) was run to eliminate the loading of unused l
 <details>
     <summary>build_csv_and_json.py</summary>
 
-![Evidence of file build_csv_and_json.py validated with http://pep8online.com/ ](media/validation-python-pep-8-build_csv_and_json.PNG) 
+![Evidence of file build_csv_and_json.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-build_csv_and_json.PNG) 
 </details>
 <details>
     <summary>products_database_generation_for_QGIS.py</summary>
 
-![Evidence of file products_database_generation_for_QGIS.py validated with http://pep8online.com/ ](media/validation-python-pep-8-products_database_generation_for_QGIS.PNG) 
+![Evidence of file products_database_generation_for_QGIS.py validated with http://pep8online.com/ ](docs/validation/validation-python-pep-8-products_database_generation_for_QGIS.PNG) 
 </details>
 <br>
 
@@ -1736,7 +1733,7 @@ Pages were tested with their URLs, directly in the we web page address input in 
 <details>
     <summary>thanks.html</summary>
 
-![Evidence of no accessibility errors in the thanks HTML file](docs/validation/validation-html-validator-w3-org-thank-you.PNG) 
+![Evidence of no accessibility errors in the thanks HTML file](docs/validation/validation-accessibility-with-wave-404.PNG) 
 </details>
 <details>
     <summary>thanks.html (logged in)</summary>
@@ -1928,6 +1925,7 @@ Google Lighthouse (in Google Chrome) was used to evaluate the performance of the
 ![Evidence of no errors in the wish-list HTML file](docs/validation/validation-performance-wish-list-desktop.PNG) 
 </details>
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 

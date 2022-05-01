@@ -529,7 +529,7 @@ Please check the image files for each case in the following links:
 </details>
 <br>
 <details>
-    <summary>Tablet Wireframe Image for 404 Page</summary>
+    <summary>Cell Phone Wireframe Image for Home Page</summary>
 
 ![Cell Phone Wireframe Image for Home App/Page](docs/wireframes/wireframes-gdec-cell-home.png)
 </details>
@@ -553,23 +553,25 @@ Please check the image files for each case in the following links:
 
 ![Cell Phone Wireframe Image for Add Product, Edit Product and 404 Pages](docs/wireframes/wireframes-gdec-cell-add-product-edit-product-404-page.png)
 </details>
-
+<br>
 Please check the PDF files for each case in the following links:
 
 <details>
     <summary>Desktop Wireframes PDF</summary>
 
-![Desktop Wireframes PDF](docs/wireframes/wireframes-gdec-desktop.pdf)
+[Desktop Wireframes PDF](docs/wireframes/wireframes-gdec-desktop.pdf)
 </details>
+
 <details>
     <summary>Tablet Wireframes PDF</summary>
 
-![Tablet Wireframes PDF](docs/wireframes/wireframes-gdec-tablet.pdf)
+[Tablet Wireframes PDF](docs/wireframes/wireframes-gdec-tablet.pdf)
 </details>
+
 <details>
     <summary>Cell Phone Wireframes PDF</summary>
 
-![Cell Phone Wireframes PDF](docs/wireframes/wireframes-gdec-cell.pdf)
+[Cell Phone Wireframes PDF](docs/wireframes/wireframes-gdec-cell.pdf)
 </details>
 
 
@@ -643,6 +645,7 @@ The development of the project employed the following languages, software, frame
  - ##### **Firefox, 96.0.3, 64-bit (and its development tool)**
  - ##### **Microsoft Internet Explorer, version 2004, OS Build 19041.1415, Microsoft Corporation**
 <br>
+
 ## [Back to Index](#index)
 <br><br>
 

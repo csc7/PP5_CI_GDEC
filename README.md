@@ -528,68 +528,29 @@ Please check the PDFs files for each case in the following links:
 <details>
     <summary>Tablet Wireframe Image for 404 Page</summary>
 
-![Cell Phone Wireframe Image for Home App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-instructions.PNG)
+![Cell Phone Wireframe Image for Home App/Page](docs/wireframes/wireframes-gdec-cell-home.png)
 </details>
 <details>
-    <summary>Cell Phone Wireframe Image for Products Page</summary>
+    <summary>Cell Phone Wireframe Image for Products, Product Details and My Profile Pages</summary>
 
-![Cell Phone Wireframe Image for Products Page](docs/wireframes/wireframe-wqcs-Cell Phone-weather.PNG)
+![Cell Phone Wireframe Image for Products, Product Details and My Profile Pages](docs/wireframes/wireframes-gdec-cell-all-products-product-details-my-profile.png)
 </details>
 <details>
-    <summary>Cell Phone Wireframe Image for Product Details Page</summary>
+    <summary>Cell Phone Wireframe Image for Wish List, Bag and Checkout Pages</summary>
 
-![Cell Phone Wireframe Image for Product Details Page](docs/wireframes/wireframe-wqcs-Cell Phone-blog.PNG)
+![Cell Phone Wireframe Image for Wish List, Bag and Checkout Pages](docs/wireframes/wireframes-gdec-cell-wish-list-shopping-bag-checkout.png)
 </details>
 <details>
-    <summary>Cell Phone Wireframe Image for Profile Page</summary>
+    <summary>Cell Phone Wireframe Image for Success Checkout, Contact and Thank You Pages</summary>
 
-![Cell Phone Wireframe Image for Profile App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+![Cell Phone Wireframe Image for Success Checkout, Contact and Thank You Pages](docs/wireframes/wireframes-gdec-cell-checkout-success-contact-thank-you-page.png)
 </details>
 <details>
-    <summary>Cell Phone Wireframe Image for Wish List Page</summary>
+    <summary>Cell Phone Wireframe Image for Add Product, Edit Product and 404 Pages</summary>
 
-![Cell Phone Wireframe Image for Wish List App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
+![Cell Phone Wireframe Image for Add Product, Edit Product and 404 Pages](docs/wireframes/wireframes-gdec-cell-add-product-edit-product-404-page.png)
 </details>
-<details>
-    <summary>Cell Phone Wireframe Image for Bag Page</summary>
 
-![Cell Phone Wireframe Image for Bag App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
-<details>
-    <summary>Cell Phone Wireframe Image for Checkout Page</summary>
-
-![Cell Phone Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
-<details>
-    <summary>Desktop Wireframe Image for Success Checkout Page</summary>
-
-![Desktop Wireframe Image for Success Checkout App/Page](docs/wireframes/wireframes-gdec-desktop-checkout.png)
-</details>
-<details>
-    <summary>Cell Phone Wireframe Image for Contact Page</summary>
-
-![Cell Phone Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
-<details>
-    <summary>Cell Phone Wireframe Image for Thank You Page</summary>
-
-![Cell Phone Wireframe Image for Thank You Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
-<details>
-    <summary>Cell Phone Wireframe Image for Add Product Page</summary>
-
-![Cell Phone Wireframe Image for Add Product Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
-<details>
-    <summary>Cell Phone Wireframe Image for Edit Product Page</summary>
-
-![Cell Phone Wireframe Image for Edit Product Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
-<details>
-    <summary>Cell Phone Wireframe Image for 404 Page</summary>
-
-![Cell Phone Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-Cell Phone-contact.PNG)
-</details>
 
 <br><br>
 ## [Back to Index](#index)

@@ -462,67 +462,67 @@ Please check the PDFs files for each case in the following links:
 <details>
     <summary>Tablet Wireframe Image for Home Page</summary>
 
-![Tablet Wireframe Image for Home Page](docs/wireframes/wireframe-wqcs-Tablet-instructions.PNG)
+![Tablet Wireframe Image for Home Page](docs/wireframes/wireframes-gdec-tablet-home.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Products Page</summary>
 
-![Tablet Wireframe Image for Products Page](docs/wireframes/wireframe-wqcs-Tablet-weather.PNG)
+![Tablet Wireframe Image for Products Page](docs/wireframes/wireframes-gdec-tablet-products.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Product Details Page</summary>
 
-![Tablet Wireframe Image for Product Details Page](docs/wireframes/wireframes-gdec-desktop-product-details.png)
+![Tablet Wireframe Image for Product Details Page](docs/wireframes/wireframes-gdec-tablet-product-details.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Profile Page</summary>
 
-![Tablet Wireframe Image for Profile App/Page](docs/wireframes/wireframes-gdec-desktop-my-profile.png)
+![Tablet Wireframe Image for Profile App/Page](docs/wireframes/wireframes-gdec-tablet-my-profile.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Wish List Page</summary>
 
-![Tablet Wireframe Image for Wish List App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Wish List App/Page](docs/wireframes/wireframes-gdec-tablet-wish-list.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Bag Page</summary>
 
-![Tablet Wireframe Image for Bag App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Bag App/Page](docs/wireframes/wireframes-gdec-tablet-shopping-bag.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Checkout Page</summary>
 
-![Tablet Wireframe Image for Checkout App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Checkout App/Page](docs/wireframes/wireframes-gdec-tablet-checkout.png)
 </details>
 <details>
     <summary>Desktop Wireframe Image for Success Checkout Page</summary>
 
-![Desktop Wireframe Image for Success Checkout App/Page](docs/wireframes/wireframes-gdec-desktop-checkout.png)
+![Desktop Wireframe Image for Success Checkout App/Page](docs/wireframes/wireframes-gdec-tablet-checkout-success.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Contact Page</summary>
 
-![Tablet Wireframe Image for Contact App/Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Contact App/Page](docs/wireframes/wireframes-gdec-tablet-contact.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Thank You Page</summary>
 
-![Tablet Wireframe Image for Thank You Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Thank You Page](docs/wireframes/wireframes-gdec-tablet-thank-you-page.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Add Product Page</summary>
 
-![Tablet Wireframe Image for Add Product Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Add Product Page](docs/wireframes/wireframes-gdec-tablet-page-add-product.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for Edit Product Page</summary>
 
-![Tablet Wireframe Image for Edit Product Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for Edit Product Page](docs/wireframes/wireframes-gdec-tablet-edit-product.png)
 </details>
 <details>
     <summary>Tablet Wireframe Image for 404 Page</summary>
 
-![Tablet Wireframe Image for 404 /Page](docs/wireframes/wireframe-wqcs-Tablet-contact.PNG)
+![Tablet Wireframe Image for 404 Page](docs/wireframes/wireframes-gdec-tablet-404-page.png)
 </details>
 <br>
 <details>

@@ -2958,7 +2958,7 @@ Bugs that required more time and specific solutions were the following ones:
 ___
 # 14 . Deployment
 
-The website was fully written in Gitpod, permanently tested in Gitpod terminal, and periodically deployed to GigHub Pages (in a main branch) and Heroku Platform (to handle backend languages), **where if was migrated from in November 2022**. After first deployment, several updates have been carried out before the final version. These updates were implemented in the deployed website from Gitpod, just by using the "push" command for every commit (change) in the ongoing development. Amazon Web Services S3 is also implemented to contain the static files.
+The website was fully written in Gitpod, permanently tested in Gitpod terminal, and periodically deployed to GigHub Pages (in a main branch) and Heroku Platform (to handle backend languages), **where it was migrated from, to Render, in November 2022**. After first deployment, several updates have been carried out before the final version. These updates were implemented in the deployed website from Gitpod, just by using the "push" command for every commit (change) in the ongoing development. Amazon Web Services S3 is also implemented to contain the static files.
 
 The project repository can be forked from GitHub [here](https://github.com/csc7/PP5_CI_GDEC) (https://github.com/csc7/PP5_CI_GDEC), please check for the "Fork" button, top-right of the page, to achieve this task.
 

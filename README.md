@@ -3,7 +3,7 @@
 <br>
 
 # **Index**
-#### [*Site Live Link*](https://pp5-ci-gdec.herokuapp.com/) (https://pp5-ci-gdec.herokuapp.com/)
+#### [*Site Live Link*](https://pp5-ci-gdec.onrender.com) (https://pp5-ci-gdec.onrender.com)
 
 
 ### [1. Project Goals](#1--e-commerce-project-goals)
@@ -2962,7 +2962,7 @@ The website was fully written in Gitpod, permanently tested in Gitpod terminal, 
 
 The project repository can be forked from GitHub [here](https://github.com/csc7/PP5_CI_GDEC) (https://github.com/csc7/PP5_CI_GDEC), please check for the "Fork" button, top-right of the page, to achieve this task.
 
-The fully deployed program, accessible by anyone, is found [here](https://pp5-ci-gdec.herokuapp.com/), whose URL is https://pp5-ci-gdec.herokuapp.com/ . Its repository is found [here](https://github.com/csc7/PP5_CI_GDEC), whose URL is https://github.com/csc7/PP5_CI_GDEC.
+The fully deployed program, accessible by anyone, is found [here](https://pp5-ci-gdec.onrender.com), whose URL is https://pp5-ci-gdec.onrender.com.com/ . Its repository is found [here](https://github.com/csc7/PP5_CI_GDEC), whose URL is https://github.com/csc7/PP5_CI_GDEC.
 
 Follow these steps to deploy the content of this project:
 

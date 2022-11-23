@@ -4,4 +4,4 @@ Disallow: /bag/
 Disallow: /checkout/
 Disallow: /profile/
 Disallow: /admin/
-Sitemap: https://pp5-ci-gdec.herokuapp.com/sitemap.xml
+Sitemap: https://pp5-ci-gdec.onrender.com/sitemap.xml
